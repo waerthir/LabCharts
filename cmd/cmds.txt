@@ -1,0 +1,42 @@
+E:\TrashE\Miniconda3\envs\dag_env\python.exe src/download_items.py `
+--manifest data/ref/selected_manifest.json `
+--host 121.46.19.2 `
+--port 30102 `
+--username lijingyue `
+--key-file "C:\Users\waerthir\.ssh\id_ed25519" `
+--local-root data/download/cloud_items `
+--db-path data/download/cloud_items/sqlite/download_state.sqlite `
+--max-retries 3
+
+E:\TrashE\Miniconda3\envs\dag_env\python.exe src/count_word_frequency.py `
+--manifest data/ref/selected_manifest.json `
+--local-root data/download/cloud_items `
+--remote-prefix /home/lijingyue/LiangEnRui `
+--output-dir data/output/word_frequency
+
+E:\TrashE\Miniconda3\envs\dag_env\python.exe src/filter_word_frequency.py `
+--input-csv data/output/word_frequency/word_freq.csv `
+--output-csv data/output/word_frequency/word_freq_T202607_072217.csv `
+--remove-words figure,line,diagram,image,image1,abc
+
+E:\TrashE\Miniconda3\envs\dag_env\python.exe src/filter_word_frequency.py `
+--input-csv data/output/word_frequency/word_freq_T202607_072217.csv `
+--output-csv data/output/word_frequency/word_freq_T202607_072224.csv `
+--remove-words find,two,side,state,value,read,respectively,answer,certain,time,number,small,measure,right,along,known,arrows,three,place,total,four,calculate,during,placed,question,many,will,consider,located,type,object,determine,first,single,change,different,long,end,ignoring,present,degree,large,including,double,rest,left,involving,let,excluding,within,disregard,main,triple,solution,used,should,please,set,position,high,inside,conditions,note,relationship,input,source,assume,top,places
+
+E:\TrashE\Miniconda3\envs\dag_env\python.exe src/filter_word_frequency.py `
+--input-csv data/output/word_frequency/word_freq_T202607_072224.csv `
+--output-csv data/output/word_frequency/word_freq_T202607_072231.csv `
+--remove-words but,some,use,out,under,values,level,range,common,questions,negligible,closed,down,likely,they,starts,she,over,terms,exactly,off,data,made,bottom,represent,taken,directly,may,just,stage,difference,order,reaches,write,across,choose,due,amount,reason,times,per,applied,degrees,natural,turns,identical,lies,passing,zero,falls,group,material,information,picture,assuming,location,mainly,complete,relative,characteristics,big,formed,them,take,world,year
+
+E:\TrashE\Miniconda3\envs\dag_env\python.exe src/make_word_cloud.py `
+--input-csv data/output/word_frequency/word_freq_T202607_072231.csv `
+--output-image data/output/word_cloud/word_cloud.png `
+--weight-column count `
+--max-words 180 `
+--width 1800 `
+--height 1100 `
+--background-color white `
+--colormap viridis `
+--random-state 42 `
+--prefer-horizontal 0.9

@@ -1,0 +1,725 @@
+{
+  "pack_index": 4265,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision01447:mathvision__open_50ec6152ff1c3afb6adddd76__d6564a8ef1e1",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_50ec6152ff1c3afb6adddd76",
+    "source_problem_id": "open_50ec6152ff1c3afb6adddd76",
+    "problem_run_key": "mathvision__open_50ec6152ff1c3afb6adddd76__d6564a8ef1e1",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01447.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01447.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision01447.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01447.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "<image1>\n\nUsing only the paths and the directions shown, how many different routes are there from $ M$ to $ N$?",
+    "raw_answer_text": "6",
+    "open_variant_id": "open_50ec6152ff1c3afb6adddd76",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "Using only the paths and the directions shown, how many different routes are there from M to N?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "6",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_ab162f4124d23bde9fc62b38",
+        "problem_id": "prob_693139d32368133b8149c2c5",
+        "node_type": "answer_claim",
+        "canonical_value": "6",
+        "surface_forms": [
+          "6"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_a7231dbf1fefa3916b231fce"
+        ],
+        "evidence_refs": [
+          "asset_a7231dbf1fefa3916b231fce"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "6"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T03:55:42Z",
+        "updated_at": "2026-04-08T03:55:42Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_50ec6152ff1c3afb6adddd76",
+      "parent_problem_id": "prob_693139d32368133b8149c2c5",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "Using only the paths and the directions shown, how many different routes are there from M to N?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "6",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Using only the paths and the directions shown, how many different routes are there from M to N?",
+    "raw_answer": "6",
+    "raw_standard_answer": "6",
+    "resolved_question_text": "Using only the paths and the directions shown, how many different routes are there from M to N?",
+    "resolved_answer": "6",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The diagram shows a directed graph with labeled points M at the top, A and B in the middle, and D, C, N along the bottom. The arrows shown allow the moves M→A, M→B, B→A, A→D, A→C, B→C, B→N, D→C, and C→N. Reasoning: Count routes backward from N. There is 1 way from N to N, so ways(N)=1. Since C goes only to N, ways(C)=1. Since D goes only to C, ways(D)=1. From A, the allowed next moves are to D or C, so ways(A)=ways(D)+ways(C)=1+1=2. From B, the allowed next moves are to A, C, or N, so ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4. From M, the allowed next moves are to A or B, so ways(M)=ways(A)+ways(B)=2+4=6.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_50ec6152ff1c3afb6adddd76",
+      "problem_run_key": "mathvision__open_50ec6152ff1c3afb6adddd76__d6564a8ef1e1",
+      "question_text": "Using only the paths and the directions shown, how many different routes are there from M to N?",
+      "standard_answer": "6",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01447.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision01447.png"
+      ],
+      "initial_multi_solution_score": 0.2567,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the diagram as a directed graph with vertices M, A, B, C, D, and N. From the arrows in the image, record the allowed moves: M→A, M→B, B→A, A→D, A→C, B→C, B→N, D→C, and C→N. Then count paths by working backward from N: set ways(N)=1. Since C only goes to N, ways(C)=1; D only goes to C, ways(D)=1. A can go to D or C, so ways(A)=ways(D)+ways(C)=2. B can go to A, C, or N, so ways(B)=ways(A)+ways(C)+ways(N)=4. Finally, M can go to A or B, so ways(M)=ways(A)+ways(B)=2+4=6.",
+          "CoT_raw": "Image description: The diagram shows a directed graph with labeled points M at the top, A and B in the middle, and D, C, N along the bottom. The arrows shown allow the moves M→A, M→B, B→A, A→D, A→C, B→C, B→N, D→C, and C→N.\n\nReasoning: Count routes backward from N. There is 1 way from N to N, so ways(N)=1. Since C goes only to N, ways(C)=1. Since D goes only to C, ways(D)=1. From A, the allowed next moves are to D or C, so ways(A)=ways(D)+ways(C)=1+1=2. From B, the allowed next moves are to A, C, or N, so ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4. From M, the allowed next moves are to A or B, so ways(M)=ways(A)+ways(B)=2+4=6.",
+          "model_answer": "6",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "6",
+              "predicted_part": "6",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "Image description: The diagram shows a directed graph with labeled points M at the top, A and B in the middle, and D, C, N along the bottom. The arrows shown allow the moves M→A, M→B, B→A, A→D, A→C, B→C, B→N, D→C, and C→N.\n\nReasoning: Count routes backward from N. There is 1 way from N to N, so ways(N)=1. Since C goes only to N, ways(C)=1. Since D goes only to C, ways(D)=1. From A, the allowed next moves are to D or C, so ways(A)=ways(D)+ways(C)=1+1=2. From B, the allowed next moves are to A, C, or N, so ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4. From M, the allowed next moves are to A or B, so ways(M)=ways(A)+ways(B)=2+4=6.",
+          "answer_answer_check_final": "6",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revisions needed. The trace first describes the image, then reasons from the directed edges, follows the assigned backward-counting method, and reaches the standard answer 6.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "Image description: The diagram shows a directed graph with labeled points M at the top, A and B in the middle, and D, C, N along the bottom. The arrows shown allow the moves M→A, M→B, B→A, A→D, A→C, B→C, B→N, D→C, and C→N.\n\nReasoning: Count routes backward from N. There is 1 way from N to N, so ways(N)=1. Since C goes only to N, ways(C)=1. Since D goes only to C, ways(D)=1. From A, the allowed next moves are to D or C, so ways(A)=ways(D)+ways(C)=1+1=2. From B, the allowed next moves are to A, C, or N, so ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4. From M, the allowed next moves are to A or B, so ways(M)=ways(A)+ways(B)=2+4=6.",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the standard directed-graph dynamic programming/counting route, using the arrow directions to compute the number of possible continuations from each node.",
+            "image_role": "The image supplies the graph structure: labeled points M, A, B, C, D, N and the directed arrows between them, including the important horizontal arrow B→A and bottom arrows D→C and C→N.",
+            "text_role": "The text asks for the number of different routes from M to N using only the shown paths and directions, so it defines the counting task and restricts movement to directed arrows.",
+            "knowledge_role": "Use the path-counting rule for a directed acyclic graph: the number of routes from a node equals the sum of the numbers of routes from each node it can directly move to."
+          },
+          "solver_metadata": {
+            "cot_raw": "Image description: The diagram shows a directed graph with labeled points M at the top, A and B in the middle, and D, C, N along the bottom. The arrows shown allow the moves M→A, M→B, B→A, A→D, A→C, B→C, B→N, D→C, and C→N.\n\nReasoning: Count routes backward from N. There is 1 way from N to N, so ways(N)=1. Since C goes only to N, ways(C)=1. Since D goes only to C, ways(D)=1. From A, the allowed next moves are to D or C, so ways(A)=ways(D)+ways(C)=1+1=2. From B, the allowed next moves are to A, C, or N, so ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4. From M, the allowed next moves are to A or B, so ways(M)=ways(A)+ways(B)=2+4=6.",
+            "model_answer": "6",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2758,
+              "completion_tokens": 783,
+              "total_tokens": 3541,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 12.134,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revisions needed. The trace first describes the image, then reasons from the directed edges, follows the assigned backward-counting method, and reaches the standard answer 6.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 7.832
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 12.159,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 12,
+                "prompt_tokens": 33184,
+                "completion_tokens": 14076,
+                "total_tokens": 47260,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 230.048,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 7.858,
+              "usage_delta": {
+                "request_count": 17,
+                "successful_request_count": 17,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 17,
+                "requests_with_usage": 17,
+                "prompt_tokens": 46466,
+                "completion_tokens": 16609,
+                "total_tokens": 63075,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 274.733,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 10.995,
+          "usage_delta": {
+            "request_count": 7,
+            "successful_request_count": 3,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 7,
+            "requests_with_usage": 3,
+            "prompt_tokens": 7734,
+            "completion_tokens": 2506,
+            "total_tokens": 10240,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 40.916,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "2510",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01447.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_693139d32368133b8149c2c5",
+          "open_variant_count": 1,
+          "open_variant_id": "open_50ec6152ff1c3afb6adddd76",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 31.044,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 8547,
+        "completion_tokens": 1901,
+        "total_tokens": 10448,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 30.931,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "Using only the paths and the directions shown, how many different routes are there from M to N?",
+      "answer": "6",
+      "final_cot": "Image description: The diagram shows a directed graph with labeled points M at the top, A and B in the middle, and D, C, N along the bottom. The arrows shown allow the moves M→A, M→B, B→A, A→D, A→C, B→C, B→N, D→C, and C→N.\n\nReasoning: Count routes backward from N. There is 1 way from N to N, so ways(N)=1. Since C goes only to N, ways(C)=1. Since D goes only to C, ways(D)=1. From A, the allowed next moves are to D or C, so ways(A)=ways(D)+ways(C)=1+1=2. From B, the allowed next moves are to A, C, or N, so ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4. From M, the allowed next moves are to A or B, so ways(M)=ways(A)+ways(B)=2+4=6.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revisions needed. The trace first describes the image, then reasons from the directed edges, follows the assigned backward-counting method, and reaches the standard answer 6.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 7.832
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 2570,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01447.json",
+        "source_sample_filename": "mathvision01447.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01447.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T19:14:03Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_50ec6152ff1c3afb6adddd76",
+          "new_problem_id": "open_50ec6152ff1c3afb6adddd76",
+          "old_problem_run_key": "mathvision__open_50ec6152ff1c3afb6adddd76__d6564a8ef1e1",
+          "new_problem_run_key": "mathvision__open_50ec6152ff1c3afb6adddd76__d6564a8ef1e1",
+          "target_relpath": "math/mathvision/samples/mathvision01447.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_50ec6152ff1c3afb6adddd76",
+    "problem_run_key": "mathvision__open_50ec6152ff1c3afb6adddd76__d6564a8ef1e1",
+    "raw_question_text": "Using only the paths and the directions shown, how many different routes are there from M to N?",
+    "raw_answer": "6",
+    "raw_standard_answer": "6",
+    "resolved_question_text": "Using only the paths and the directions shown, how many different routes are there from M to N?",
+    "resolved_answer": "6",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The diagram shows a directed graph with labeled points M at the top, A and B in the middle, and D, C, N along the bottom. The arrows shown allow the moves M→A, M→B, B→A, A→D, A→C, B→C, B→N, D→C, and C→N.\n\nReasoning: Count routes backward from N. There is 1 way from N to N, so ways(N)=1. Since C goes only to N, ways(C)=1. Since D goes only to C, ways(D)=1. From A, the allowed next moves are to D or C, so ways(A)=ways(D)+ways(C)=1+1=2. From B, the allowed next moves are to A, C, or N, so ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4. From M, the allowed next moves are to A or B, so ways(M)=ways(A)+ways(B)=2+4=6.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The diagram shows a directed graph.",
+        "label": "perception",
+        "source": "The diagram shows a directed graph"
+      },
+      {
+        "claim_id": 2,
+        "claim": "Point M is at the top.",
+        "label": "perception",
+        "source": "with labeled points M at the top"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Points A and B are in the middle.",
+        "label": "perception",
+        "source": "A and B in the middle"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Points D, C, and N are along the bottom.",
+        "label": "perception",
+        "source": "D, C, N along the bottom"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The arrows allow the move M→A.",
+        "label": "perception",
+        "source": "The arrows shown allow the moves M→A"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The arrows allow the move M→B.",
+        "label": "perception",
+        "source": "M→B"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The arrows allow the move B→A.",
+        "label": "perception",
+        "source": "B→A"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The arrows allow the move A→D.",
+        "label": "perception",
+        "source": "A→D"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The arrows allow the move A→C.",
+        "label": "perception",
+        "source": "A→C"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The arrows allow the move B→C.",
+        "label": "perception",
+        "source": "B→C"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The arrows allow the move B→N.",
+        "label": "perception",
+        "source": "B→N"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The arrows allow the move D→C.",
+        "label": "perception",
+        "source": "D→C"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The arrows allow the move C→N.",
+        "label": "perception",
+        "source": "C→N"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Routes are counted backward from N.",
+        "label": "reasoning",
+        "source": "Count routes backward from N."
+      },
+      {
+        "claim_id": 15,
+        "claim": "ways(N)=1 because there is 1 way from N to N.",
+        "label": "reasoning",
+        "source": "There is 1 way from N to N, so ways(N)=1."
+      },
+      {
+        "claim_id": 16,
+        "claim": "C goes only to N.",
+        "label": "reasoning",
+        "source": "Since C goes only to N"
+      },
+      {
+        "claim_id": 17,
+        "claim": "ways(C)=1.",
+        "label": "reasoning",
+        "source": "ways(C)=1"
+      },
+      {
+        "claim_id": 18,
+        "claim": "D goes only to C.",
+        "label": "reasoning",
+        "source": "Since D goes only to C"
+      },
+      {
+        "claim_id": 19,
+        "claim": "ways(D)=1.",
+        "label": "reasoning",
+        "source": "ways(D)=1"
+      },
+      {
+        "claim_id": 20,
+        "claim": "From A, the allowed next moves are to D or C.",
+        "label": "reasoning",
+        "source": "From A, the allowed next moves are to D or C"
+      },
+      {
+        "claim_id": 21,
+        "claim": "ways(A)=ways(D)+ways(C)=1+1=2.",
+        "label": "reasoning",
+        "source": "ways(A)=ways(D)+ways(C)=1+1=2"
+      },
+      {
+        "claim_id": 22,
+        "claim": "From B, the allowed next moves are to A, C, or N.",
+        "label": "reasoning",
+        "source": "From B, the allowed next moves are to A, C, or N"
+      },
+      {
+        "claim_id": 23,
+        "claim": "ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4.",
+        "label": "reasoning",
+        "source": "ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4"
+      },
+      {
+        "claim_id": 24,
+        "claim": "From M, the allowed next moves are to A or B.",
+        "label": "reasoning",
+        "source": "From M, the allowed next moves are to A or B"
+      },
+      {
+        "claim_id": 25,
+        "claim": "ways(M)=ways(A)+ways(B)=2+4=6.",
+        "label": "reasoning",
+        "source": "ways(M)=ways(A)+ways(B)=2+4=6"
+      }
+    ],
+    "claim_count": 25,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The diagram shows a directed graph.",
+          "label": "perception",
+          "source": "The diagram shows a directed graph"
+        },
+        {
+          "claim_id": 2,
+          "claim": "Point M is at the top.",
+          "label": "perception",
+          "source": "with labeled points M at the top"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Points A and B are in the middle.",
+          "label": "perception",
+          "source": "A and B in the middle"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Points D, C, and N are along the bottom.",
+          "label": "perception",
+          "source": "D, C, N along the bottom"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The arrows allow the move M→A.",
+          "label": "perception",
+          "source": "The arrows shown allow the moves M→A"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The arrows allow the move M→B.",
+          "label": "perception",
+          "source": "M→B"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The arrows allow the move B→A.",
+          "label": "perception",
+          "source": "B→A"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The arrows allow the move A→D.",
+          "label": "perception",
+          "source": "A→D"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The arrows allow the move A→C.",
+          "label": "perception",
+          "source": "A→C"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The arrows allow the move B→C.",
+          "label": "perception",
+          "source": "B→C"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The arrows allow the move B→N.",
+          "label": "perception",
+          "source": "B→N"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The arrows allow the move D→C.",
+          "label": "perception",
+          "source": "D→C"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The arrows allow the move C→N.",
+          "label": "perception",
+          "source": "C→N"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Routes are counted backward from N.",
+          "label": "reasoning",
+          "source": "Count routes backward from N."
+        },
+        {
+          "claim_id": 15,
+          "claim": "ways(N)=1 because there is 1 way from N to N.",
+          "label": "reasoning",
+          "source": "There is 1 way from N to N, so ways(N)=1."
+        },
+        {
+          "claim_id": 16,
+          "claim": "C goes only to N.",
+          "label": "reasoning",
+          "source": "Since C goes only to N"
+        },
+        {
+          "claim_id": 17,
+          "claim": "ways(C)=1.",
+          "label": "reasoning",
+          "source": "ways(C)=1"
+        },
+        {
+          "claim_id": 18,
+          "claim": "D goes only to C.",
+          "label": "reasoning",
+          "source": "Since D goes only to C"
+        },
+        {
+          "claim_id": 19,
+          "claim": "ways(D)=1.",
+          "label": "reasoning",
+          "source": "ways(D)=1"
+        },
+        {
+          "claim_id": 20,
+          "claim": "From A, the allowed next moves are to D or C.",
+          "label": "reasoning",
+          "source": "From A, the allowed next moves are to D or C"
+        },
+        {
+          "claim_id": 21,
+          "claim": "ways(A)=ways(D)+ways(C)=1+1=2.",
+          "label": "reasoning",
+          "source": "ways(A)=ways(D)+ways(C)=1+1=2"
+        },
+        {
+          "claim_id": 22,
+          "claim": "From B, the allowed next moves are to A, C, or N.",
+          "label": "reasoning",
+          "source": "From B, the allowed next moves are to A, C, or N"
+        },
+        {
+          "claim_id": 23,
+          "claim": "ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4.",
+          "label": "reasoning",
+          "source": "ways(B)=ways(A)+ways(C)+ways(N)=2+1+1=4"
+        },
+        {
+          "claim_id": 24,
+          "claim": "From M, the allowed next moves are to A or B.",
+          "label": "reasoning",
+          "source": "From M, the allowed next moves are to A or B"
+        },
+        {
+          "claim_id": 25,
+          "claim": "ways(M)=ways(A)+ways(B)=2+4=6.",
+          "label": "reasoning",
+          "source": "ways(M)=ways(A)+ways(B)=2+4=6"
+        }
+      ],
+      "coverage_notes": "Applied the fix-severity merge for the duplicated N base case and compacted the over-split calculation chains for A, B, and M while preserving the supported claim order."
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T10:17:54Z",
+    "changed_target_fields": 2,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

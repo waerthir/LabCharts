@@ -1,0 +1,837 @@
+{
+  "pack_index": 3116,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "geography/geosqa:geosqa00231:geosqa__open_49f4ad970245c92d0af9a7e1__16e8f7ab043d",
+    "subject_dir": "geography",
+    "dataset_slug": "geosqa",
+    "problem_id": "open_49f4ad970245c92d0af9a7e1",
+    "source_problem_id": "open_49f4ad970245c92d0af9a7e1",
+    "problem_run_key": "geosqa__open_49f4ad970245c92d0af9a7e1__16e8f7ab043d",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 55.0,
+    "difficulty_level": "medium",
+    "weighted_accuracy": 0.45,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/geography/geosqa/samples/geosqa00231.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/geography/geosqa/samples/geosqa00231.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/geography/geosqa/samples/geosqa00231.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/geography/geosqa/artifacts/images/geosqa00231.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer_text": null,
+    "open_variant_id": "open_49f4ad970245c92d0af9a7e1",
+    "variant_index": 1,
+    "title": "GeoSQA Open-ended Question",
+    "split_role": "single",
+    "rewritten_question_text": "The following figure is a hemisphere schematic diagram, and a is the dusk line. <image1> At this time, what are the characteristics of the global date range?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "The whole globe belongs to the same day",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_862ee96ae461820becbb140e",
+        "problem_id": "prob_2d4380176da83b6e015e5cb7",
+        "node_type": "answer_claim",
+        "canonical_value": "The whole globe belongs to the same day",
+        "surface_forms": [
+          "The whole globe belongs to the same day"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_1d85a6081475da607c4a193b"
+        ],
+        "evidence_refs": [
+          "asset_1d85a6081475da607c4a193b"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "The whole globe belongs to the same day"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T23:11:26Z",
+        "updated_at": "2026-04-08T23:11:26Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_49f4ad970245c92d0af9a7e1",
+      "parent_problem_id": "prob_2d4380176da83b6e015e5cb7",
+      "variant_index": 1,
+      "title": "GeoSQA Open-ended Question",
+      "rewritten_question_text": "The following figure is a hemisphere schematic diagram, and a is the dusk line.\n\n<image1>\n\nAt this time, what are the characteristics of the global date range?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "The whole globe belongs to the same day",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "The following figure is a hemisphere schematic diagram, and a is the dusk line.\n\n<image1>\n\nAt this time, what are the characteristics of the global date range?",
+    "raw_answer": "The whole globe belongs to the same day",
+    "raw_standard_answer": "The whole globe belongs to the same day",
+    "resolved_question_text": "The following figure is a hemisphere schematic diagram, and a is the dusk line. <image1> At this time, what are the characteristics of the global date range?",
+    "resolved_answer": "The whole globe belongs to the same day",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: the figure is a hemisphere schematic diagram, where longitude lines, latitude lines, and land-sea outlines can be seen; the figure is marked with longitude positions such as 90° and 180°. Line a is located near the left side of the hemisphere and is a terminator line; the question stem clearly states that a is the dusk line; from the figure, the intersection of line a and the equator is approximately near 90°E. Then reason: the local time of the meridian where the dusk line intersects the equator is 18:00, so 90°E is approximately 18:00. The 180° meridian is 90° east of 90°E, and local time increases by 1 hour for every 15° eastward, so it increases by 6 hours; the local time at the 180° meridian is 24:00, that is, 0:00. There are two global date boundaries: one is the 180° meridian, and the other is the 0:00 meridian. At this time, the 0:00 meridian exactly coincides with the 180° meridian, and the two date boundaries coincide, so the globe is not divided into two date ranges, but belongs to the same day.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_49f4ad970245c92d0af9a7e1",
+      "problem_run_key": "geosqa__open_49f4ad970245c92d0af9a7e1__16e8f7ab043d",
+      "question_text": "The following figure is a hemisphere schematic diagram, and a is the dusk line.\n\n<image1>\n\nAt this time, what are the characteristics of the global date range?",
+      "standard_answer": "The whole globe belongs to the same day",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/geography/geosqa/artifacts/images/geosqa00231.png"
+      ],
+      "initial_multi_solution_score": 0.3467,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "先描述图中经线位置和a线位置。由题干知a为昏线，读图取其赤道交点约在90°E，经线90°E处为18时。180°经线位于其东侧90°，地方时增加6小时，为24时/0时。因此0时经线正好是180°经线，两个日期分界线重合，所以此时全球日期范围的特点是全球同属一天。",
+          "CoT_raw": "先描述图像：图中为一个半球示意图，能看到经线、纬线以及海陆轮廓；图中标有90°、180°等经线位置。a线位于半球左侧附近，为一条晨昏线，题干明确说明a为昏线；从图上读，a线与赤道的交点约在90°E附近。再推理：昏线与赤道交点所在经线的地方时为18时，因此90°E约为18时。180°经线位于90°E以东90°，地方时向东每15°增加1小时，所以增加6小时，180°经线地方时为24时，也就是0时。全球日期分界线有两条：一条是180°经线，另一条是0时经线。此时0时经线正好与180°经线重合，两条日期分界线重合，因此全球没有被分成两个日期范围，而是同属一天。",
+          "model_answer": "全球同属一天",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "全球同属一天",
+              "predicted_part": "全球同属一天",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中为一个半球示意图，能看到经线、纬线以及海陆轮廓；图中标有90°、180°等经线位置。a线位于半球左侧附近，为一条晨昏线，题干明确说明a为昏线；从图上读，a线与赤道的交点约在90°E附近。再推理：昏线与赤道交点所在经线的地方时为18时，因此90°E约为18时。180°经线位于90°E以东90°，地方时向东每15°增加1小时，所以增加6小时，180°经线地方时为24时，也就是0时。全球日期分界线有两条：一条是180°经线，另一条是0时经线。此时0时经线正好与180°经线重合，两条日期分界线重合，因此全球没有被分成两个日期范围，而是同属一天。",
+          "answer_answer_check_final": "全球同属一天",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理链整体可靠，先描述图像再推理，符合多模态顺序要求；结论与标准答案一致。可微调之处是明确说明图中赤道在该半球投影中的位置，以支撑“a线与赤道交点约在90°E”的读图依据，但不影响结论。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中为一个半球示意图，能看到经线、纬线以及海陆轮廓；图中标有90°、180°等经线位置。a线位于半球左侧附近，为一条晨昏线，题干明确说明a为昏线；从图上读，a线与赤道的交点约在90°E附近。再推理：昏线与赤道交点所在经线的地方时为18时，因此90°E约为18时。180°经线位于90°E以东90°，地方时向东每15°增加1小时，所以增加6小时，180°经线地方时为24时，也就是0时。全球日期分界线有两条：一条是180°经线，另一条是0时经线。此时0时经线正好与180°经线重合，两条日期分界线重合，因此全球没有被分成两个日期范围，而是同属一天。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "直接用昏线赤道交点的地方时计算0时经线，是最常规、可执行的路线。",
+            "image_role": "先观察图像：这是北半球俯视的半球经纬网，右侧标0°经线，左侧标180°经线，上方标90°经线；标注为a的昏线在图中与上方90°附近的赤道/边缘位置相联系。",
+            "text_role": "读取题干给出的关键信息“a为昏线”，以及问题询问“全球日期范围有何特点”。",
+            "knowledge_role": "昏线与赤道相交处地方时为18时；经度每相差15°地方时相差1小时，向东时间加；全球日期分界线是0时经线和180°经线，若二者重合则全球同属一天。"
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中为一个半球示意图，能看到经线、纬线以及海陆轮廓；图中标有90°、180°等经线位置。a线位于半球左侧附近，为一条晨昏线，题干明确说明a为昏线；从图上读，a线与赤道的交点约在90°E附近。再推理：昏线与赤道交点所在经线的地方时为18时，因此90°E约为18时。180°经线位于90°E以东90°，地方时向东每15°增加1小时，所以增加6小时，180°经线地方时为24时，也就是0时。全球日期分界线有两条：一条是180°经线，另一条是0时经线。此时0时经线正好与180°经线重合，两条日期分界线重合，因此全球没有被分成两个日期范围，而是同属一天。",
+            "model_answer": "全球同属一天",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2717,
+              "completion_tokens": 792,
+              "total_tokens": 3509,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 24.213,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理链整体可靠，先描述图像再推理，符合多模态顺序要求；结论与标准答案一致。可微调之处是明确说明图中赤道在该半球投影中的位置，以支撑“a线与赤道交点约在90°E”的读图依据，但不影响结论。",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.9,
+              "method_fidelity_score": 0.98,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 30.522
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 24.229,
+              "usage_delta": {
+                "request_count": 9,
+                "successful_request_count": 11,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 9,
+                "requests_with_usage": 11,
+                "prompt_tokens": 32301,
+                "completion_tokens": 9338,
+                "total_tokens": 41639,
+                "cached_tokens": 0,
+                "reasoning_tokens": 6561,
+                "total_request_seconds": 306.672,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 30.537,
+              "usage_delta": {
+                "request_count": 7,
+                "successful_request_count": 10,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 7,
+                "requests_with_usage": 10,
+                "prompt_tokens": 30377,
+                "completion_tokens": 7840,
+                "total_tokens": 38217,
+                "cached_tokens": 0,
+                "reasoning_tokens": 5240,
+                "total_request_seconds": 285.281,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "先根据图中a线的位置和题干“a为昏线”，判断图示昼夜半球的中心经线关系：0°经线处于昼半球中央附近，可视为地方时12时；它的对跖经线180°经线则为夜半球中央，即地方时0时。于是0时经线与国际日期变更线180°重合，全球没有被分成今日和昨日两块范围，结论为全球同属一天。",
+          "CoT_raw": "图像描述：图中是一个圆形半球示意图，内部有经纬线和大陆轮廓，边缘标有0°、90°、180°等经线方位；图中偏左有一条标注为a的晨昏分界线，题干明确说明a为昏线。推理：根据a线作为昏线的位置，可判断图示昼夜半球的中心经线关系：0°经线处于昼半球中央附近，可视为地方时12时；与0°经线相对的180°经线则位于夜半球中央，地方时为0时。全球日期分界主要由地方时0时经线和国际日期变更线即180°经线共同决定。此时0时经线与180°国际日期变更线重合，因此全球没有被分成“今日”和“昨日”两块日期范围，而是同属一个日期。",
+          "model_answer": "全球同属一天",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "全球同属一天",
+              "predicted_part": "全球同属一天",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个圆形半球示意图，内部有经纬线和大陆轮廓，边缘标有0°、90°、180°等经线方位；图中偏左有一条标注为a的晨昏分界线，题干明确说明a为昏线。推理：根据a线作为昏线的位置，可判断图示昼夜半球的中心经线关系：0°经线处于昼半球中央附近，可视为地方时12时；与0°经线相对的180°经线则位于夜半球中央，地方时为0时。全球日期分界主要由地方时0时经线和国际日期变更线即180°经线共同决定。此时0时经线与180°国际日期变更线重合，因此全球没有被分成“今日”和“昨日”两块日期范围，而是同属一个日期。",
+          "answer_answer_check_final": "全球同属一天",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "候选推理先描述图像再推理，符合多模态顺序要求；图像描述中的半球、经纬线、大陆轮廓、0°/90°/180°标注及a线位置基本可由图中观察到；随后依据题干“a为昏线”推断0°经线约为12时、180°经线约为0时，并得出0时经线与国际日期变更线重合、全球同属一天，符合标准答案和方法草案。无须实质修改。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个圆形半球示意图，内部有经纬线和大陆轮廓，边缘标有0°、90°、180°等经线方位；图中偏左有一条标注为a的晨昏分界线，题干明确说明a为昏线。推理：根据a线作为昏线的位置，可判断图示昼夜半球的中心经线关系：0°经线处于昼半球中央附近，可视为地方时12时；与0°经线相对的180°经线则位于夜半球中央，地方时为0时。全球日期分界主要由地方时0时经线和国际日期变更线即180°经线共同决定。此时0时经线与180°国际日期变更线重合，因此全球没有被分成“今日”和“昨日”两块日期范围，而是同属一个日期。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "弱 distinct：不先计算昏线交点到180°的6小时差，而是先由昏线确定昼半球/夜半球的中心经线，再用正午—午夜相对关系推出0时经线。",
+            "image_role": "先观察图像：圆形半球图上有0°、90°、180°等经线标注，a线为昼夜分界的一段；结合图中经线布局，可判断0°经线与180°经线互为相对经线。",
+            "text_role": "读取题干说明a是昏线，并明确问题要求判断此时全球日期范围。",
+            "knowledge_role": "昏线是由昼入夜的界线；昼半球中央经线为地方时12时，正对的夜半球中央经线为地方时0时；日期只在0时经线与180°经线处分界，二者重合时无两个日期范围。"
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个圆形半球示意图，内部有经纬线和大陆轮廓，边缘标有0°、90°、180°等经线方位；图中偏左有一条标注为a的晨昏分界线，题干明确说明a为昏线。推理：根据a线作为昏线的位置，可判断图示昼夜半球的中心经线关系：0°经线处于昼半球中央附近，可视为地方时12时；与0°经线相对的180°经线则位于夜半球中央，地方时为0时。全球日期分界主要由地方时0时经线和国际日期变更线即180°经线共同决定。此时0时经线与180°国际日期变更线重合，因此全球没有被分成“今日”和“昨日”两块日期范围，而是同属一个日期。",
+            "model_answer": "全球同属一天",
+            "method_following_score_self_report": 0.98,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2723,
+              "completion_tokens": 1811,
+              "total_tokens": 4534,
+              "cached_tokens": 0,
+              "reasoning_tokens": 1552
+            },
+            "_llm_elapsed_seconds": 46.414,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "候选推理先描述图像再推理，符合多模态顺序要求；图像描述中的半球、经纬线、大陆轮廓、0°/90°/180°标注及a线位置基本可由图中观察到；随后依据题干“a为昏线”推断0°经线约为12时、180°经线约为0时，并得出0时经线与国际日期变更线重合、全球同属一天，符合标准答案和方法草案。无须实质修改。",
+              "major_failures": [],
+              "extractability_score": 0.9,
+              "grounding_score": 0.85,
+              "method_fidelity_score": 0.95,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 21.005
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 46.424,
+              "usage_delta": {
+                "request_count": 8,
+                "successful_request_count": 11,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 8,
+                "requests_with_usage": 11,
+                "prompt_tokens": 32922,
+                "completion_tokens": 11492,
+                "total_tokens": 44414,
+                "cached_tokens": 0,
+                "reasoning_tokens": 8729,
+                "total_request_seconds": 335.918,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 21.019,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 3,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 3,
+                "requests_with_usage": 3,
+                "prompt_tokens": 9001,
+                "completion_tokens": 2127,
+                "total_tokens": 11128,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1344,
+                "total_request_seconds": 71.521,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 104.084,
+          "usage_delta": {
+            "request_count": 59,
+            "successful_request_count": 51,
+            "failed_request_count": 2,
+            "retry_count": 2,
+            "text_request_count": 0,
+            "multimodal_request_count": 59,
+            "requests_with_usage": 53,
+            "prompt_tokens": 156207,
+            "completion_tokens": 40170,
+            "total_tokens": 196377,
+            "cached_tokens": 0,
+            "reasoning_tokens": 22956,
+            "total_request_seconds": 1363.688,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "GeoSQA",
+        "dataset_slug": "geosqa",
+        "source_problem_id": "2314",
+        "subject": "地理",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/geography/geosqa/samples/geosqa00231.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_2d4380176da83b6e015e5cb7",
+          "open_variant_count": 1,
+          "open_variant_id": "open_49f4ad970245c92d0af9a7e1",
+          "open_variant_index": 1,
+          "open_variant_title": "GeoSQA 开放题",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 226.345,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 14499,
+        "completion_tokens": 8578,
+        "total_tokens": 23077,
+        "cached_tokens": 0,
+        "reasoning_tokens": 7072,
+        "total_request_seconds": 226.219,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "下图为半球示意图，a为昏线。\n\n<image1>\n\n此时全球日期范围有何特点？",
+      "answer": "The whole globe belongs to the same day",
+      "final_cot": "First describe the image: the figure is a hemisphere schematic diagram, where longitude lines, latitude lines, and land-sea outlines can be seen; the figure is marked with longitude positions such as 90° and 180°. Line a is located near the left side of the hemisphere and is a terminator line; the question stem clearly states that a is the dusk line; from the figure, the intersection of line a and the equator is approximately near 90°E. Then reason: the local time of the meridian where the dusk line intersects the equator is 18:00, so 90°E is approximately 18:00. The 180° meridian is 90° east of 90°E, and local time increases by 1 hour for every 15° eastward, so it increases by 6 hours; the local time at the 180° meridian is 24:00, that is, 0:00. There are two global date boundaries: one is the 180° meridian, and the other is the 0:00 meridian. At this time, the 0:00 meridian exactly coincides with the 180° meridian, and the two date boundaries coincide, so the globe is not divided into two date ranges, but belongs to the same day.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理链整体可靠，先描述图像再推理，符合多模态顺序要求；结论与标准答案一致。可微调之处是明确说明图中赤道在该半球投影中的位置，以支撑“a线与赤道交点约在90°E”的读图依据，但不影响结论。",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.9,
+          "method_fidelity_score": 0.98,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 30.522
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "候选推理先描述图像再推理，符合多模态顺序要求；图像描述中的半球、经纬线、大陆轮廓、0°/90°/180°标注及a线位置基本可由图中观察到；随后依据题干“a为昏线”推断0°经线约为12时、180°经线约为0时，并得出0时经线与国际日期变更线重合、全球同属一天，符合标准答案和方法草案。无须实质修改。",
+          "major_failures": [],
+          "extractability_score": 0.9,
+          "grounding_score": 0.85,
+          "method_fidelity_score": 0.95,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 21.005
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_resume_openvariants_20260506T003434CST",
+        "processed_index": 2240,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "geography",
+        "dataset": "geosqa",
+        "relative_dataset": "geography/geosqa",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/geography/geosqa/samples/geosqa00231.json",
+        "source_sample_filename": "geosqa00231.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/geography/geosqa/samples/geosqa00231.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.events.jsonl",
+        "written_at": "2026-05-06T03:48:35Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:18Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_49f4ad970245c92d0af9a7e1",
+          "new_problem_id": "open_49f4ad970245c92d0af9a7e1",
+          "old_problem_run_key": "geosqa__open_49f4ad970245c92d0af9a7e1__16e8f7ab043d",
+          "new_problem_run_key": "geosqa__open_49f4ad970245c92d0af9a7e1__16e8f7ab043d",
+          "target_relpath": "geography/geosqa/samples/geosqa00231.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_49f4ad970245c92d0af9a7e1",
+    "problem_run_key": "geosqa__open_49f4ad970245c92d0af9a7e1__16e8f7ab043d",
+    "raw_question_text": "The following figure is a hemisphere schematic diagram, and a is the dusk line.\n\n<image1>\n\nAt this time, what are the characteristics of the global date range?",
+    "raw_answer": "The whole globe belongs to the same day",
+    "raw_standard_answer": "The whole globe belongs to the same day",
+    "resolved_question_text": "The following figure is a hemisphere schematic diagram, and a is the dusk line. <image1> At this time, what are the characteristics of the global date range?",
+    "resolved_answer": "The whole globe belongs to the same day",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: the figure is a hemisphere schematic diagram, where longitude lines, latitude lines, and land-sea outlines can be seen; the figure is marked with longitude positions such as 90° and 180°. Line a is located near the left side of the hemisphere and is a terminator line; the question stem clearly states that a is the dusk line; from the figure, the intersection of line a and the equator is approximately near 90°E. Then reason: the local time of the meridian where the dusk line intersects the equator is 18:00, so 90°E is approximately 18:00. The 180° meridian is 90° east of 90°E, and local time increases by 1 hour for every 15° eastward, so it increases by 6 hours; the local time at the 180° meridian is 24:00, that is, 0:00. There are two global date boundaries: one is the 180° meridian, and the other is the 0:00 meridian. At this time, the 0:00 meridian exactly coincides with the 180° meridian, and the two date boundaries coincide, so the globe is not divided into two date ranges, but belongs to the same day.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure is a hemisphere schematic diagram.",
+        "label": "perception",
+        "source": "The figure is a hemisphere schematic diagram"
+      },
+      {
+        "claim_id": 2,
+        "claim": "Longitude lines can be seen in the figure.",
+        "label": "perception",
+        "source": "Longitude lines, latitude lines, and land-sea outlines can be seen"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Latitude lines can be seen in the figure.",
+        "label": "perception",
+        "source": "Longitude lines, latitude lines, and land-sea outlines can be seen"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Land-sea outlines can be seen in the figure.",
+        "label": "perception",
+        "source": "Longitude lines, latitude lines, and land-sea outlines can be seen"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The figure is marked with the 90° meridian position.",
+        "label": "perception",
+        "source": "The figure is marked with longitude positions such as 90° and 180°"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The figure is marked with the 180° meridian position.",
+        "label": "perception",
+        "source": "The figure is marked with longitude positions such as 90° and 180°"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Line a is located near the left side of the hemisphere.",
+        "label": "perception",
+        "source": "Line a is located near the left side of the hemisphere"
+      },
+      {
+        "claim_id": 8,
+        "claim": "Line a is a terminator line.",
+        "label": "perception",
+        "source": "Is a terminator line"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The question stem clearly states that a is the dusk line.",
+        "label": "perception",
+        "source": "The question stem clearly states that a is the dusk line"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The intersection of line a and the equator is approximately near 90°E.",
+        "label": "perception",
+        "source": "Reading from the figure, the intersection of line a and the equator is approximately near 90°E"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The local time of the meridian where the dusk line intersects the equator is 18:00.",
+        "label": "knowledge",
+        "source": "The local time of the meridian where the dusk line intersects the equator is 18:00"
+      },
+      {
+        "claim_id": 12,
+        "claim": "90°E is approximately 18:00.",
+        "label": "reasoning",
+        "source": "Therefore 90°E is approximately 18:00"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The 180° meridian is 90° east of 90°E.",
+        "label": "reasoning",
+        "source": "The 180° meridian is 90° east of 90°E"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Local time increases by 1 hour for every 15° eastward.",
+        "label": "knowledge",
+        "source": "Local time increases by 1 hour for every 15° eastward"
+      },
+      {
+        "claim_id": 15,
+        "claim": "From 90°E to the 180° meridian, local time increases by 6 hours.",
+        "label": "reasoning",
+        "source": "So it increases by 6 hours"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The local time at the 180° meridian is 24:00.",
+        "label": "reasoning",
+        "source": "The local time at the 180° meridian is 24:00"
+      },
+      {
+        "claim_id": 17,
+        "claim": "24:00 is also 0:00.",
+        "label": "knowledge",
+        "source": "That is, 0:00"
+      },
+      {
+        "claim_id": 18,
+        "claim": "There are two global date boundaries.",
+        "label": "knowledge",
+        "source": "There are two global date boundaries"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The 180° meridian is one global date boundary.",
+        "label": "knowledge",
+        "source": "One is the 180° meridian"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The 0:00 meridian is one global date boundary.",
+        "label": "knowledge",
+        "source": "The other is the 0:00 meridian"
+      },
+      {
+        "claim_id": 21,
+        "claim": "At this time, the 0:00 meridian exactly coincides with the 180° meridian.",
+        "label": "reasoning",
+        "source": "At this time, the 0:00 meridian exactly coincides with the 180° meridian"
+      },
+      {
+        "claim_id": 22,
+        "claim": "At this time, the two date boundaries coincide.",
+        "label": "reasoning",
+        "source": "The two date boundaries coincide"
+      },
+      {
+        "claim_id": 23,
+        "claim": "At this time, the whole globe belongs to the same day.",
+        "label": "reasoning",
+        "source": "But belongs to the same day"
+      }
+    ],
+    "claim_count": 23,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure is a hemisphere schematic diagram.",
+          "label": "perception",
+          "source": "The figure is a hemisphere schematic diagram"
+        },
+        {
+          "claim_id": 2,
+          "claim": "Longitude lines can be seen in the figure.",
+          "label": "perception",
+          "source": "Longitude lines, latitude lines, and land-sea outlines can be seen"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Latitude lines can be seen in the figure.",
+          "label": "perception",
+          "source": "Longitude lines, latitude lines, and land-sea outlines can be seen"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Land-sea outlines can be seen in the figure.",
+          "label": "perception",
+          "source": "Longitude lines, latitude lines, and land-sea outlines can be seen"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The figure is marked with the 90° meridian position.",
+          "label": "perception",
+          "source": "The figure is marked with longitude positions such as 90° and 180°"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The figure is marked with the 180° meridian position.",
+          "label": "perception",
+          "source": "The figure is marked with longitude positions such as 90° and 180°"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Line a is located near the left side of the hemisphere.",
+          "label": "perception",
+          "source": "Line a is located near the left side of the hemisphere"
+        },
+        {
+          "claim_id": 8,
+          "claim": "Line a is a terminator line.",
+          "label": "perception",
+          "source": "Is a terminator line"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The question stem clearly states that a is the dusk line.",
+          "label": "perception",
+          "source": "The question stem clearly states that a is the dusk line"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The intersection of line a and the equator is approximately near 90°E.",
+          "label": "perception",
+          "source": "Reading from the figure, the intersection of line a and the equator is approximately near 90°E"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The local time of the meridian where the dusk line intersects the equator is 18:00.",
+          "label": "knowledge",
+          "source": "The local time of the meridian where the dusk line intersects the equator is 18:00"
+        },
+        {
+          "claim_id": 12,
+          "claim": "90°E is approximately 18:00.",
+          "label": "reasoning",
+          "source": "Therefore 90°E is approximately 18:00"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The 180° meridian is 90° east of 90°E.",
+          "label": "reasoning",
+          "source": "The 180° meridian is 90° east of 90°E"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Local time increases by 1 hour for every 15° eastward.",
+          "label": "knowledge",
+          "source": "Local time increases by 1 hour for every 15° eastward"
+        },
+        {
+          "claim_id": 15,
+          "claim": "From 90°E to the 180° meridian, local time increases by 6 hours.",
+          "label": "reasoning",
+          "source": "So it increases by 6 hours"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The local time at the 180° meridian is 24:00.",
+          "label": "reasoning",
+          "source": "The local time at the 180° meridian is 24:00"
+        },
+        {
+          "claim_id": 17,
+          "claim": "24:00 is also 0:00.",
+          "label": "knowledge",
+          "source": "That is, 0:00"
+        },
+        {
+          "claim_id": 18,
+          "claim": "There are two global date boundaries.",
+          "label": "knowledge",
+          "source": "There are two global date boundaries"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The 180° meridian is one global date boundary.",
+          "label": "knowledge",
+          "source": "One is the 180° meridian"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The 0:00 meridian is one global date boundary.",
+          "label": "knowledge",
+          "source": "The other is the 0:00 meridian"
+        },
+        {
+          "claim_id": 21,
+          "claim": "At this time, the 0:00 meridian exactly coincides with the 180° meridian.",
+          "label": "reasoning",
+          "source": "At this time, the 0:00 meridian exactly coincides with the 180° meridian"
+        },
+        {
+          "claim_id": 22,
+          "claim": "At this time, the two date boundaries coincide.",
+          "label": "reasoning",
+          "source": "The two date boundaries coincide"
+        },
+        {
+          "claim_id": 23,
+          "claim": "At this time, the whole globe belongs to the same day.",
+          "label": "reasoning",
+          "source": "But belongs to the same day"
+        }
+      ],
+      "coverage_notes": "已按fix级别问题删除与最终结论近重复的原第23条，保留更直接的最终结论；no_fix问题未作修改。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:19Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/geography/geosqa/02483_geography_geosqa_open_49f4ad970245c92d0af9a7e1_68c6311659.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/geography/geosqa/03116_geography_geosqa_open_49f4ad970245c92d0af9a7e1_68c6311659.json"
+  }
+}

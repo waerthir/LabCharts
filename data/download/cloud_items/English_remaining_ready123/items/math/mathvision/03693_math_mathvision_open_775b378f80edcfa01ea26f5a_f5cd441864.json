@@ -1,0 +1,733 @@
+{
+  "pack_index": 3693,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00365:mathvision__open_775b378f80edcfa01ea26f5a__89406db38917",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_775b378f80edcfa01ea26f5a",
+    "source_problem_id": "open_775b378f80edcfa01ea26f5a",
+    "problem_run_key": "mathvision__open_775b378f80edcfa01ea26f5a__89406db38917",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00365.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00365.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00365.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00365.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?\n<image1>",
+    "raw_answer_text": "8",
+    "open_variant_id": "open_775b378f80edcfa01ea26f5a",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "8",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_6109fb099cbbc0af05549bb3",
+        "problem_id": "prob_746670874831404a86b52a74",
+        "node_type": "answer_claim",
+        "canonical_value": "8",
+        "surface_forms": [
+          "8"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_71bf17e8f6455f171cb3a2d3"
+        ],
+        "evidence_refs": [
+          "asset_71bf17e8f6455f171cb3a2d3"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "8"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-05T12:55:01Z",
+        "updated_at": "2026-04-05T12:55:01Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_775b378f80edcfa01ea26f5a",
+      "parent_problem_id": "prob_746670874831404a86b52a74",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "8",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?",
+    "raw_answer": "8",
+    "raw_standard_answer": "8",
+    "resolved_question_text": "Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?",
+    "resolved_answer": "8",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The figure is a schematic diagram of a polyhedron; the visible faces are composed of triangular faces and shaded quadrilateral faces, the shaded quadrilaterals correspond to the square faces in the problem, and the unshaded pointed regions correspond to triangular faces, matching the description in the problem that “each face is a triangle or a square.” Then reason: Let the number of triangular faces be T. The problem gives that there are 6 squares, and each square is adjacent to 4 triangles, so counting from the square side, there are 6 × 4 = 24 common edges between squares and triangles. On the other hand, each triangle is adjacent to 3 squares, so counting the same batch of common edges from the triangle side gives 3T edges. The two counting methods count the same type of adjacent edges, therefore 3T = 24, solving gives T = 8. Final answer: 8",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_775b378f80edcfa01ea26f5a",
+      "problem_run_key": "mathvision__open_775b378f80edcfa01ea26f5a__89406db38917",
+      "question_text": "Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?",
+      "standard_answer": "8",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00365.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00365.png"
+      ],
+      "initial_multi_solution_score": 0.3467,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First describe the image as a polyhedron whose visible faces are shaded square faces and triangular faces, matching the text statement that all faces are triangles or squares. Let T be the number of triangular faces. From the text, there are 6 square faces, and each square borders 4 triangles, so counting square-triangle borders from the square side gives 6 × 4 = 24 such borders. Each triangle borders 3 squares, so counting the same borders from the triangle side gives 3T. Equate 3T = 24 and solve T = 8.",
+          "CoT_raw": "先描述图像：图中是一个多面体示意图，可见的面由三角形面和阴影的四边形面组成，阴影四边形对应题目中的正方形面，未阴影的尖形区域对应三角形面，符合题意中“每个面是三角形或正方形”的描述。\n\n再推理：设三角形面的数量为 T。题目给出正方形有 6 个，并且每个正方形都与 4 个三角形相邻，所以从正方形一侧数，正方形-三角形的公共边共有 6 × 4 = 24 条。另一方面，每个三角形与 3 个正方形相邻，所以从三角形一侧数同一批公共边共有 3T 条。两种数法数的是同一类相邻边，因此 3T = 24，解得 T = 8。\n\n最终答案：8",
+          "model_answer": "8",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "8",
+              "predicted_part": "8",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中是一个多面体示意图，可见的面由三角形面和阴影的四边形面组成，阴影四边形对应题目中的正方形面，未阴影的尖形区域对应三角形面，符合题意中“每个面是三角形或正方形”的描述。\n\n再推理：设三角形面的数量为 T。题目给出正方形有 6 个，并且每个正方形都与 4 个三角形相邻，所以从正方形一侧数，正方形-三角形的公共边共有 6 × 4 = 24 条。另一方面，每个三角形与 3 个正方形相邻，所以从三角形一侧数同一批公共边共有 3T 条。两种数法数的是同一类相邻边，因此 3T = 24，解得 T = 8。\n\n最终答案：8",
+          "answer_answer_check_final": "8",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理链符合题意、标准答案和方法草稿。图像描述先于推理，且只作了温和的可见特征描述：图中确为一个由三角形区域和阴影四边形区域构成的多面体示意图，可与题干中的三角形面和正方形面对应。双计数正方形-三角形公共边的步骤清楚可验证，最终答案与标准答案一致。无需实质性修改。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中是一个多面体示意图，可见的面由三角形面和阴影的四边形面组成，阴影四边形对应题目中的正方形面，未阴影的尖形区域对应三角形面，符合题意中“每个面是三角形或正方形”的描述。\n\n再推理：设三角形面的数量为 T。题目给出正方形有 6 个，并且每个正方形都与 4 个三角形相邻，所以从正方形一侧数，正方形-三角形的公共边共有 6 × 4 = 24 条。另一方面，每个三角形与 3 个正方形相邻，所以从三角形一侧数同一批公共边共有 3T 条。两种数法数的是同一类相邻边，因此 3T = 24，解得 T = 8。\n\n最终答案：8",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct double-counting route: count the same set of square-triangle adjacencies once by squares and once by triangles.",
+            "image_role": "Use the image to confirm the object is a polyhedron made of triangular and square faces, with square faces visually distinguishable from triangular faces.",
+            "text_role": "Use the given facts: each square borders 4 triangles, each triangle borders 3 squares, and there are 6 squares.",
+            "knowledge_role": "Use double counting of shared borders/incidences between two types of faces."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中是一个多面体示意图，可见的面由三角形面和阴影的四边形面组成，阴影四边形对应题目中的正方形面，未阴影的尖形区域对应三角形面，符合题意中“每个面是三角形或正方形”的描述。\n\n再推理：设三角形面的数量为 T。题目给出正方形有 6 个，并且每个正方形都与 4 个三角形相邻，所以从正方形一侧数，正方形-三角形的公共边共有 6 × 4 = 24 条。另一方面，每个三角形与 3 个正方形相邻，所以从三角形一侧数同一批公共边共有 3T 条。两种数法数的是同一类相邻边，因此 3T = 24，解得 T = 8。\n\n最终答案：8",
+            "model_answer": "8",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2764,
+              "completion_tokens": 606,
+              "total_tokens": 3370,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 12.819,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理链符合题意、标准答案和方法草稿。图像描述先于推理，且只作了温和的可见特征描述：图中确为一个由三角形区域和阴影四边形区域构成的多面体示意图，可与题干中的三角形面和正方形面对应。双计数正方形-三角形公共边的步骤清楚可验证，最终答案与标准答案一致。无需实质性修改。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 8.931
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 12.839,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 14,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 14,
+                "prompt_tokens": 37964,
+                "completion_tokens": 13293,
+                "total_tokens": 51257,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 269.842,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 8.953,
+              "usage_delta": {
+                "request_count": 11,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 11,
+                "requests_with_usage": 12,
+                "prompt_tokens": 28651,
+                "completion_tokens": 6694,
+                "total_tokens": 35345,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 147.878,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "First inspect the image as a face-adjacency structure: squares and triangles meet along edges, with no other face types shown. Model the polyhedron by a bipartite adjacency graph whose left vertices are square faces and whose right vertices are triangular faces; connect a square-vertex to a triangle-vertex when the corresponding faces share an edge. The text says every square-vertex has degree 4 and there are 6 such vertices, so the total degree on the square side is 24. It also says every triangle-vertex has degree 3, so if there are T triangle-vertices, the total degree on the triangle side is 3T. By the handshaking principle for bipartite graphs, the two side-degree sums are equal, so 24 = 3T and T = 8.",
+          "CoT_raw": "图像描述：图中展示的是一个多面体示意图，可见面由三角形和四边形组成；题目说明这些四边形面是正方形。图中各面沿边相接，适合把“正方形面与三角形面相邻”看作一种面邻接关系。\n\n推理：按指定方法，把多面体的面邻接关系建成二分图：左边顶点表示正方形面，右边顶点表示三角形面；若一个正方形和一个三角形共边，就连一条边。题目说每个正方形都邻接4个三角形，且共有6个正方形，所以正方形一侧的总度数是 6 × 4 = 24。题目又说每个三角形都邻接3个正方形。若三角形个数为 T，则三角形一侧的总度数是 3T。二分图中两侧总度数相等，因此 3T = 24，解得 T = 8。",
+          "model_answer": "8",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "8",
+              "predicted_part": "8",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中展示的是一个多面体示意图，可见面由三角形和四边形组成；题目说明这些四边形面是正方形。图中各面沿边相接，适合把“正方形面与三角形面相邻”看作一种面邻接关系。\n\n推理：按指定方法，把多面体的面邻接关系建成二分图：左边顶点表示正方形面，右边顶点表示三角形面；若一个正方形和一个三角形共边，就连一条边。题目说每个正方形都邻接4个三角形，且共有6个正方形，所以正方形一侧的总度数是 6 × 4 = 24。题目又说每个三角形都邻接3个正方形。若三角形个数为 T，则三角形一侧的总度数是 3T。二分图中两侧总度数相等，因此 3T = 24，解得 T = 8。",
+          "answer_answer_check_final": "8",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理过程与题目、图像和标准答案一致，且遵循了先描述图像、再进行推理的顺序。方法上正确使用二分图和度数双计数，最终答案为 8。无需实质性修改。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中展示的是一个多面体示意图，可见面由三角形和四边形组成；题目说明这些四边形面是正方形。图中各面沿边相接，适合把“正方形面与三角形面相邻”看作一种面邻接关系。\n\n推理：按指定方法，把多面体的面邻接关系建成二分图：左边顶点表示正方形面，右边顶点表示三角形面；若一个正方形和一个三角形共边，就连一条边。题目说每个正方形都邻接4个三角形，且共有6个正方形，所以正方形一侧的总度数是 6 × 4 = 24。题目又说每个三角形都邻接3个正方形。若三角形个数为 T，则三角形一侧的总度数是 3T。二分图中两侧总度数相等，因此 3T = 24，解得 T = 8。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is weakly distinct from the direct border count: it reframes the polyhedron as a bipartite face-adjacency graph and applies the graph handshaking lemma.",
+            "image_role": "Use the image to ground the graph model: the visible polyhedron has square and triangular faces joined edge-to-edge.",
+            "text_role": "Use the numerical degree information: 6 squares, square degree 4, triangle degree 3.",
+            "knowledge_role": "Use the handshaking lemma for bipartite graphs: the sum of degrees on one side equals the sum of degrees on the other side."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中展示的是一个多面体示意图，可见面由三角形和四边形组成；题目说明这些四边形面是正方形。图中各面沿边相接，适合把“正方形面与三角形面相邻”看作一种面邻接关系。\n\n推理：按指定方法，把多面体的面邻接关系建成二分图：左边顶点表示正方形面，右边顶点表示三角形面；若一个正方形和一个三角形共边，就连一条边。题目说每个正方形都邻接4个三角形，且共有6个正方形，所以正方形一侧的总度数是 6 × 4 = 24。题目又说每个三角形都邻接3个正方形。若三角形个数为 T，则三角形一侧的总度数是 3T。二分图中两侧总度数相等，因此 3T = 24，解得 T = 8。",
+            "model_answer": "8",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2813,
+              "completion_tokens": 522,
+              "total_tokens": 3335,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 11.026,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理过程与题目、图像和标准答案一致，且遵循了先描述图像、再进行推理的顺序。方法上正确使用二分图和度数双计数，最终答案为 8。无需实质性修改。",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.9,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 11.868
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 11.046,
+              "usage_delta": {
+                "request_count": 15,
+                "successful_request_count": 16,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 15,
+                "requests_with_usage": 16,
+                "prompt_tokens": 45973,
+                "completion_tokens": 16287,
+                "total_tokens": 62260,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 351.935,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 11.888,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 13,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 13,
+                "prompt_tokens": 32081,
+                "completion_tokens": 6618,
+                "total_tokens": 38699,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 149.55,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 20.209,
+          "usage_delta": {
+            "request_count": 29,
+            "successful_request_count": 5,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 29,
+            "requests_with_usage": 5,
+            "prompt_tokens": 12602,
+            "completion_tokens": 4142,
+            "total_tokens": 16744,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 76.718,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "301",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00365.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_746670874831404a86b52a74",
+          "open_variant_count": 1,
+          "open_variant_id": "open_775b378f80edcfa01ea26f5a",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "requires_image_but_text_may_be_sufficient"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 64.965,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 14589,
+        "completion_tokens": 3020,
+        "total_tokens": 17609,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 64.828,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?",
+      "answer": "8",
+      "final_cot": "First describe the image: The figure is a schematic diagram of a polyhedron; the visible faces are composed of triangular faces and shaded quadrilateral faces, the shaded quadrilaterals correspond to the square faces in the problem, and the unshaded pointed regions correspond to triangular faces, matching the description in the problem that “each face is a triangle or a square.”\n\nThen reason: Let the number of triangular faces be T. The problem gives that there are 6 squares, and each square is adjacent to 4 triangles, so counting from the square side, there are 6 × 4 = 24 common edges between squares and triangles. On the other hand, each triangle is adjacent to 3 squares, so counting the same batch of common edges from the triangle side gives 3T edges. The two counting methods count the same type of adjacent edges, therefore 3T = 24, solving gives T = 8.\n\nFinal answer: 8",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理链符合题意、标准答案和方法草稿。图像描述先于推理，且只作了温和的可见特征描述：图中确为一个由三角形区域和阴影四边形区域构成的多面体示意图，可与题干中的三角形面和正方形面对应。双计数正方形-三角形公共边的步骤清楚可验证，最终答案与标准答案一致。无需实质性修改。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 8.931
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理过程与题目、图像和标准答案一致，且遵循了先描述图像、再进行推理的顺序。方法上正确使用二分图和度数双计数，最终答案为 8。无需实质性修改。",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.9,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 11.868
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1488,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00365.json",
+        "source_sample_filename": "mathvision00365.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00365.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T13:27:35Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_775b378f80edcfa01ea26f5a",
+          "new_problem_id": "open_775b378f80edcfa01ea26f5a",
+          "old_problem_run_key": "mathvision__open_775b378f80edcfa01ea26f5a__89406db38917",
+          "new_problem_run_key": "mathvision__open_775b378f80edcfa01ea26f5a__89406db38917",
+          "target_relpath": "math/mathvision/samples/mathvision00365.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_775b378f80edcfa01ea26f5a",
+    "problem_run_key": "mathvision__open_775b378f80edcfa01ea26f5a__89406db38917",
+    "raw_question_text": "Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?",
+    "raw_answer": "8",
+    "raw_standard_answer": "8",
+    "resolved_question_text": "Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?",
+    "resolved_answer": "8",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The figure is a schematic diagram of a polyhedron; the visible faces are composed of triangular faces and shaded quadrilateral faces, the shaded quadrilaterals correspond to the square faces in the problem, and the unshaded pointed regions correspond to triangular faces, matching the description in the problem that “each face is a triangle or a square.”\n\nThen reason: Let the number of triangular faces be T. The problem gives that there are 6 squares, and each square is adjacent to 4 triangles, so counting from the square side, there are 6 × 4 = 24 common edges between squares and triangles. On the other hand, each triangle is adjacent to 3 squares, so counting the same batch of common edges from the triangle side gives 3T edges. The two counting methods count the same type of adjacent edges, therefore 3T = 24, solving gives T = 8.\n\nFinal answer: 8",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure is a schematic diagram of a polyhedron.",
+        "label": "perception",
+        "source": "The figure is a schematic diagram of a polyhedron"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The visible faces are composed of triangular faces and shaded quadrilateral faces.",
+        "label": "perception",
+        "source": "The visible faces are composed of triangular faces and shaded quadrilateral faces"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The shaded quadrilaterals correspond to the square faces in the problem.",
+        "label": "perception",
+        "source": "The shaded quadrilaterals correspond to the square faces in the problem"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The unshaded pointed regions correspond to triangular faces.",
+        "label": "perception",
+        "source": "The unshaded pointed regions correspond to triangular faces"
+      },
+      {
+        "claim_id": 5,
+        "claim": "Let the number of triangular faces be T.",
+        "label": "reasoning",
+        "source": "Let the number of triangular faces be T"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The problem gives that there are 6 squares.",
+        "label": "perception",
+        "source": "The problem gives that there are 6 squares"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Each square is adjacent to 4 triangles.",
+        "label": "perception",
+        "source": "Each square is adjacent to 4 triangles"
+      },
+      {
+        "claim_id": 8,
+        "claim": "Counting from the square side, the common edges of square-triangle total 24.",
+        "label": "reasoning",
+        "source": "Counting from the square side, the common edges of square-triangle total 6 × 4 = 24"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Each triangle is adjacent to 3 squares.",
+        "label": "perception",
+        "source": "Each triangle is adjacent to 3 squares"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Counting the same batch of common edges from the triangle side gives 3T.",
+        "label": "reasoning",
+        "source": "Counting the same batch of common edges from the triangle side gives 3T"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The two counting methods count the same type of adjacent edges.",
+        "label": "reasoning",
+        "source": "The two counting methods count the same type of adjacent edges"
+      },
+      {
+        "claim_id": 12,
+        "claim": "3T = 24。",
+        "label": "reasoning",
+        "source": "Therefore 3T = 24"
+      },
+      {
+        "claim_id": 13,
+        "claim": "T = 8。",
+        "label": "reasoning",
+        "source": "Solving gives T = 8"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The final answer is 8.",
+        "label": "reasoning",
+        "source": "Final answer: 8"
+      }
+    ],
+    "claim_count": 14,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure is a schematic diagram of a polyhedron.",
+          "label": "perception",
+          "source": "The figure is a schematic diagram of a polyhedron"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The visible faces are composed of triangular faces and shaded quadrilateral faces.",
+          "label": "perception",
+          "source": "The visible faces are composed of triangular faces and shaded quadrilateral faces"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The shaded quadrilaterals correspond to the square faces in the problem.",
+          "label": "perception",
+          "source": "The shaded quadrilaterals correspond to the square faces in the problem"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The unshaded pointed regions correspond to triangular faces.",
+          "label": "perception",
+          "source": "The unshaded pointed regions correspond to triangular faces"
+        },
+        {
+          "claim_id": 5,
+          "claim": "Let the number of triangular faces be T.",
+          "label": "reasoning",
+          "source": "Let the number of triangular faces be T"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The problem gives that there are 6 squares.",
+          "label": "perception",
+          "source": "The problem gives that there are 6 squares"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Each square is adjacent to 4 triangles.",
+          "label": "perception",
+          "source": "Each square is adjacent to 4 triangles"
+        },
+        {
+          "claim_id": 8,
+          "claim": "Counting from the square side, the common edges of square-triangle total 24.",
+          "label": "reasoning",
+          "source": "Counting from the square side, the common edges of square-triangle total 6 × 4 = 24"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Each triangle is adjacent to 3 squares.",
+          "label": "perception",
+          "source": "Each triangle is adjacent to 3 squares"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Counting the same batch of common edges from the triangle side gives 3T.",
+          "label": "reasoning",
+          "source": "Counting the same batch of common edges from the triangle side gives 3T"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The two counting methods count the same type of adjacent edges.",
+          "label": "reasoning",
+          "source": "The two counting methods count the same type of adjacent edges"
+        },
+        {
+          "claim_id": 12,
+          "claim": "3T = 24。",
+          "label": "reasoning",
+          "source": "Therefore 3T = 24"
+        },
+        {
+          "claim_id": 13,
+          "claim": "T = 8。",
+          "label": "reasoning",
+          "source": "Solving gives T = 8"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The final answer is 8.",
+          "label": "reasoning",
+          "source": "Final answer: 8"
+        }
+      ],
+      "coverage_notes": "All explicit image-description observations, given conditions, double-counting setup, calculations, equation, solution, and final answer from the final_cot are covered."
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T09:19:15Z",
+    "changed_target_fields": 57,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

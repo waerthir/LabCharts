@@ -1,0 +1,760 @@
+{
+  "pack_index": 4381,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00590:mathvision__open_cff69ac43e46c7715a2f80e3__a986d7ccd5c2",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_cff69ac43e46c7715a2f80e3",
+    "source_problem_id": "open_cff69ac43e46c7715a2f80e3",
+    "problem_run_key": "mathvision__open_cff69ac43e46c7715a2f80e3__a986d7ccd5c2",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00590.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00590.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00590.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00590.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "What is the minimum number of dots that must be taken away from the picture so that no three of the remaining dots lie on a straight line?\n<image1>",
+    "raw_answer_text": "3",
+    "open_variant_id": "open_cff69ac43e46c7715a2f80e3",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "What is the minimum number of dots that must be taken away from the picture so that no three of the remaining dots lie on a straight line?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "3",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_a7df16a7da63e3485933cd99",
+        "problem_id": "prob_ead1f300547c2d7f1501b78e",
+        "node_type": "answer_claim",
+        "canonical_value": "3",
+        "surface_forms": [
+          "3"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_ebfd696b109c43b77f988430"
+        ],
+        "evidence_refs": [
+          "asset_ebfd696b109c43b77f988430"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "3"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T03:47:20Z",
+        "updated_at": "2026-04-06T03:47:20Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_cff69ac43e46c7715a2f80e3",
+      "parent_problem_id": "prob_ead1f300547c2d7f1501b78e",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "What is the minimum number of dots that must be taken away from the picture so that no three of the remaining dots lie on a straight line?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "3",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the minimum number of dots that must be taken away from the picture so that no three of the remaining dots lie on a straight line?",
+    "raw_answer": "3",
+    "raw_standard_answer": "3",
+    "resolved_question_text": "What is the minimum number of dots that must be taken away from the picture so that no three of the remaining dots lie on a straight line?",
+    "resolved_answer": "3",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: In the attached figure there are 9 black dots, arranged into a regular 3×3 square array, that is, the upper, middle, and lower three rows each have 3 dots, the left, middle, and right three columns each have 3 dots, and the two main diagonals also each contain 3 dots. Reasoning: The problem requires taking away as few dots as possible, so that among the remaining dots there are no arbitrary 3 dots collinear. In this 3×3 dot array, there originally are altogether 8 lines containing 3 dots: 3 rows, 3 columns, and 2 main diagonals. Therefore dots must be taken away to break these 8 three-dot lines. First explain that taking away 2 dots is not enough. The center dot is on 4 three-dot lines, namely the middle row, middle column, and two diagonals; a corner dot is on 3 three-dot lines; an edge-middle dot is on 2 three-dot lines. When any two dots are chosen, because the number of three-dot lines they cover has overlap, at most they still cannot cover all 8 lines. For example, the center dot plus a corner dot at most covers 4+3−1=6 lines; the center dot plus an edge-middle dot at most covers 4+2−1=5 lines; two non-center dots also cannot cover 8 lines. So taking away only 2 dots cannot break all three-dot lines. Then explain that taking away 3 dots can do it. For example, take away the center dot and the two opposite corner dots on the same diagonal, such as the upper-left corner, the center dot, and the lower-right corner. In this way every row and every column has at least one dot missing, and the two diagonals are also both broken, so among the remaining dots there are no 3 dots collinear. Therefore at least 3 dots need to be taken away.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_cff69ac43e46c7715a2f80e3",
+      "problem_run_key": "mathvision__open_cff69ac43e46c7715a2f80e3__a986d7ccd5c2",
+      "question_text": "What is the minimum number of dots that must be taken away from the picture so that no three of the remaining dots lie on a straight line?",
+      "standard_answer": "3",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00590.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00590.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Describe the picture as a 3-by-3 square array of 9 dots. From the question, interpret the task as removing as few dots as possible so that every straight line that originally contains 3 dots is broken. List the 3-dot straight lines visible in the grid: the 3 rows, the 3 columns, and the 2 main diagonals, for 8 total. Show that 2 removals cannot be enough because no pair of dots can intersect all 8 of these lines: the center lies on 4 such lines, a corner on 3, and a side-middle dot on 2, with overlaps preventing any pair from covering all 8. Then give a 3-dot removal that works, such as removing the center dot and two opposite corner dots on one diagonal. This breaks every row, every column, and both diagonals, leaving no three remaining dots collinear. Therefore the minimum is 3.",
+          "CoT_raw": "图像描述：附图中有 9 个黑点，排成一个规则的 3×3 方阵，即上、中、下三行各 3 个点，左、中、右三列各 3 个点，并且两条主对角线也各含 3 个点。\n\n推理：题目要求拿走尽可能少的点，使剩下的点中没有任意 3 点共线。在这个 3×3 点阵中，原来含有 3 个点的直线共有 8 条：3 行、3 列、2 条主对角线。因此必须拿走点来打断这 8 条三点直线。\n\n先说明拿走 2 个点不够。中心点在 4 条三点直线上，即中行、中列和两条对角线；角点在 3 条三点直线上；边中点在 2 条三点直线上。任取两个点时，它们覆盖的三点直线数量由于有重叠，最多也不能覆盖全部 8 条。例如中心点加一个角点最多覆盖 4+3−1=6 条；中心点加边中点最多覆盖 4+2−1=5 条；两个非中心点也覆盖不到 8 条。所以只拿走 2 个点不可能打断所有三点直线。\n\n再说明拿走 3 个点可以做到。例如拿走中心点以及同一条对角线上的两个相对角点，如左上角、中心点、右下角。这样每一行、每一列都至少少了一个点，两条对角线也都被打断，因此剩下的点中没有 3 点共线。\n\n所以最少需要拿走 3 个点。",
+          "model_answer": "3",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "3",
+              "predicted_part": "3",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：附图中有 9 个黑点，排成一个规则的 3×3 方阵，即上、中、下三行各 3 个点，左、中、右三列各 3 个点，并且两条主对角线也各含 3 个点。\n\n推理：题目要求拿走尽可能少的点，使剩下的点中没有任意 3 点共线。在这个 3×3 点阵中，原来含有 3 个点的直线共有 8 条：3 行、3 列、2 条主对角线。因此必须拿走点来打断这 8 条三点直线。\n\n先说明拿走 2 个点不够。中心点在 4 条三点直线上，即中行、中列和两条对角线；角点在 3 条三点直线上；边中点在 2 条三点直线上。任取两个点时，它们覆盖的三点直线数量由于有重叠，最多也不能覆盖全部 8 条。例如中心点加一个角点最多覆盖 4+3−1=6 条；中心点加边中点最多覆盖 4+2−1=5 条；两个非中心点也覆盖不到 8 条。所以只拿走 2 个点不可能打断所有三点直线。\n\n再说明拿走 3 个点可以做到。例如拿走中心点以及同一条对角线上的两个相对角点，如左上角、中心点、右下角。这样每一行、每一列都至少少了一个点，两条对角线也都被打断，因此剩下的点中没有 3 点共线。\n\n所以最少需要拿走 3 个点。",
+          "answer_answer_check_final": "3",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace correctly describes the image first, then reasons from the 3-by-3 dot array, lists the relevant 3-dot lines, argues that 2 removals cannot cover all such lines, and provides a valid 3-dot removal matching the standard answer. The lower-bound case for two non-center points could be slightly more explicit, but it is not a fatal issue.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：附图中有 9 个黑点，排成一个规则的 3×3 方阵，即上、中、下三行各 3 个点，左、中、右三列各 3 个点，并且两条主对角线也各含 3 个点。\n\n推理：题目要求拿走尽可能少的点，使剩下的点中没有任意 3 点共线。在这个 3×3 点阵中，原来含有 3 个点的直线共有 8 条：3 行、3 列、2 条主对角线。因此必须拿走点来打断这 8 条三点直线。\n\n先说明拿走 2 个点不够。中心点在 4 条三点直线上，即中行、中列和两条对角线；角点在 3 条三点直线上；边中点在 2 条三点直线上。任取两个点时，它们覆盖的三点直线数量由于有重叠，最多也不能覆盖全部 8 条。例如中心点加一个角点最多覆盖 4+3−1=6 条；中心点加边中点最多覆盖 4+2−1=5 条；两个非中心点也覆盖不到 8 条。所以只拿走 2 个点不可能打断所有三点直线。\n\n再说明拿走 3 个点可以做到。例如拿走中心点以及同一条对角线上的两个相对角点，如左上角、中心点、右下角。这样每一行、每一列都至少少了一个点，两条对角线也都被打断，因此剩下的点中没有 3 点共线。\n\n所以最少需要拿走 3 个点。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is a direct hitting-set/line-breaking route: enumerate all 3-dot lines, prove a lower bound by coverage of lines, and prove attainability by an explicit removal set.",
+            "image_role": "Read that the visual consists of 9 black dots arranged as a regular 3-by-3 grid, so the relevant 3-dot lines are rows, columns, and the two long diagonals.",
+            "text_role": "Read that the required output is the minimum number of dots to take away so that no three remaining dots lie on one straight line.",
+            "knowledge_role": "Use the rule that a forbidden 3-dot line is eliminated if at least one dot on it is removed; also use basic grid geometry to identify all 3-point lines and a minimal hitting-set argument."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：附图中有 9 个黑点，排成一个规则的 3×3 方阵，即上、中、下三行各 3 个点，左、中、右三列各 3 个点，并且两条主对角线也各含 3 个点。\n\n推理：题目要求拿走尽可能少的点，使剩下的点中没有任意 3 点共线。在这个 3×3 点阵中，原来含有 3 个点的直线共有 8 条：3 行、3 列、2 条主对角线。因此必须拿走点来打断这 8 条三点直线。\n\n先说明拿走 2 个点不够。中心点在 4 条三点直线上，即中行、中列和两条对角线；角点在 3 条三点直线上；边中点在 2 条三点直线上。任取两个点时，它们覆盖的三点直线数量由于有重叠，最多也不能覆盖全部 8 条。例如中心点加一个角点最多覆盖 4+3−1=6 条；中心点加边中点最多覆盖 4+2−1=5 条；两个非中心点也覆盖不到 8 条。所以只拿走 2 个点不可能打断所有三点直线。\n\n再说明拿走 3 个点可以做到。例如拿走中心点以及同一条对角线上的两个相对角点，如左上角、中心点、右下角。这样每一行、每一列都至少少了一个点，两条对角线也都被打断，因此剩下的点中没有 3 点共线。\n\n所以最少需要拿走 3 个点。",
+            "model_answer": "3",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2637,
+              "completion_tokens": 1471,
+              "total_tokens": 4108,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 26.594,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace correctly describes the image first, then reasons from the 3-by-3 dot array, lists the relevant 3-dot lines, argues that 2 removals cannot cover all such lines, and provides a valid 3-dot removal matching the standard answer. The lower-bound case for two non-center points could be slightly more explicit, but it is not a fatal issue.",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 21.524
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 26.604,
+              "usage_delta": {
+                "request_count": 18,
+                "successful_request_count": 20,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 18,
+                "requests_with_usage": 20,
+                "prompt_tokens": 51592,
+                "completion_tokens": 14457,
+                "total_tokens": 66049,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 332.534,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 21.532,
+              "usage_delta": {
+                "request_count": 11,
+                "successful_request_count": 15,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 11,
+                "requests_with_usage": 15,
+                "prompt_tokens": 39735,
+                "completion_tokens": 11817,
+                "total_tokens": 51552,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 272.39,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 24.054,
+          "usage_delta": {
+            "request_count": 21,
+            "successful_request_count": 9,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 21,
+            "requests_with_usage": 9,
+            "prompt_tokens": 25800,
+            "completion_tokens": 6676,
+            "total_tokens": 32476,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 149.32,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1051",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00590.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_ead1f300547c2d7f1501b78e",
+          "open_variant_count": 1,
+          "open_variant_id": "open_cff69ac43e46c7715a2f80e3",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "geometry_specific_verification_depends_on_visual_configuration",
+            "image_not_inspected_directly"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 72.214,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 8338,
+        "completion_tokens": 3823,
+        "total_tokens": 12161,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 72.156,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the minimum number of dots that must be taken away from the picture so that no three of the remaining dots lie on a straight line?",
+      "answer": "3",
+      "final_cot": "Image description: In the attached figure there are 9 black dots, arranged into a regular 3×3 square array, that is, the upper, middle, and lower three rows each have 3 dots, the left, middle, and right three columns each have 3 dots, and the two main diagonals also each contain 3 dots.\n\nReasoning: The problem requires taking away as few dots as possible, so that among the remaining dots there are no arbitrary 3 dots collinear. In this 3×3 dot array, there originally are altogether 8 lines containing 3 dots: 3 rows, 3 columns, and 2 main diagonals. Therefore dots must be taken away to break these 8 three-dot lines.\n\nFirst explain that taking away 2 dots is not enough. The center dot is on 4 three-dot lines, namely the middle row, middle column, and two diagonals; a corner dot is on 3 three-dot lines; an edge-middle dot is on 2 three-dot lines. When any two dots are chosen, because the number of three-dot lines they cover has overlap, at most they still cannot cover all 8 lines. For example, the center dot plus a corner dot at most covers 4+3−1=6 lines; the center dot plus an edge-middle dot at most covers 4+2−1=5 lines; two non-center dots also cannot cover 8 lines. So taking away only 2 dots cannot break all three-dot lines.\n\nThen explain that taking away 3 dots can do it. For example, take away the center dot and the two opposite corner dots on the same diagonal, such as the upper-left corner, the center dot, and the lower-right corner. In this way every row and every column has at least one dot missing, and the two diagonals are also both broken, so among the remaining dots there are no 3 dots collinear.\n\nTherefore at least 3 dots need to be taken away.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace correctly describes the image first, then reasons from the 3-by-3 dot array, lists the relevant 3-dot lines, argues that 2 removals cannot cover all such lines, and provides a valid 3-dot removal matching the standard answer. The lower-bound case for two non-center points could be slightly more explicit, but it is not a fatal issue.",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 21.524
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1713,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00590.json",
+        "source_sample_filename": "mathvision00590.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00590.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T14:37:01Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_cff69ac43e46c7715a2f80e3",
+          "new_problem_id": "open_cff69ac43e46c7715a2f80e3",
+          "old_problem_run_key": "mathvision__open_cff69ac43e46c7715a2f80e3__a986d7ccd5c2",
+          "new_problem_run_key": "mathvision__open_cff69ac43e46c7715a2f80e3__a986d7ccd5c2",
+          "target_relpath": "math/mathvision/samples/mathvision00590.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_cff69ac43e46c7715a2f80e3",
+    "problem_run_key": "mathvision__open_cff69ac43e46c7715a2f80e3__a986d7ccd5c2",
+    "raw_question_text": "What is the minimum number of dots that must be taken away from the picture so that no three of the remaining dots lie on a straight line?",
+    "raw_answer": "3",
+    "raw_standard_answer": "3",
+    "resolved_question_text": "What is the minimum number of dots that must be taken away from the picture so that no three of the remaining dots lie on a straight line?",
+    "resolved_answer": "3",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: In the attached figure there are 9 black dots, arranged into a regular 3×3 square array, that is, the upper, middle, and lower three rows each have 3 dots, the left, middle, and right three columns each have 3 dots, and the two main diagonals also each contain 3 dots.\n\nReasoning: The problem requires taking away as few dots as possible, so that among the remaining dots there are no arbitrary 3 dots collinear. In this 3×3 dot array, there originally are altogether 8 lines containing 3 dots: 3 rows, 3 columns, and 2 main diagonals. Therefore dots must be taken away to break these 8 three-dot lines.\n\nFirst explain that taking away 2 dots is not enough. The center dot is on 4 three-dot lines, namely the middle row, middle column, and two diagonals; a corner dot is on 3 three-dot lines; an edge-middle dot is on 2 three-dot lines. When any two dots are chosen, because the number of three-dot lines they cover has overlap, at most they still cannot cover all 8 lines. For example, the center dot plus a corner dot at most covers 4+3−1=6 lines; the center dot plus an edge-middle dot at most covers 4+2−1=5 lines; two non-center dots also cannot cover 8 lines. So taking away only 2 dots cannot break all three-dot lines.\n\nThen explain that taking away 3 dots can do it. For example, take away the center dot and the two opposite corner dots on the same diagonal, such as the upper-left corner, the center dot, and the lower-right corner. In this way every row and every column has at least one dot missing, and the two diagonals are also both broken, so among the remaining dots there are no 3 dots collinear.\n\nTherefore at least 3 dots need to be taken away.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "There are 9 black dots in the attached figure.",
+        "label": "perception",
+        "source": "There are 9 black dots in the attached figure"
+      },
+      {
+        "claim_id": 2,
+        "claim": "These 9 black dots are arranged into a regular 3×3 square array.",
+        "label": "perception",
+        "source": "Arranged into a regular 3×3 square array"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The upper, middle, and lower three rows each have 3 dots.",
+        "label": "perception",
+        "source": "The upper, middle, and lower three rows each have 3 dots"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The left, middle, and right three columns each have 3 dots.",
+        "label": "perception",
+        "source": "The left, middle, and right three columns each have 3 dots"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The two main diagonals each contain 3 dots.",
+        "label": "perception",
+        "source": "The two main diagonals also each contain 3 dots"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The problem requires taking away as few dots as possible.",
+        "label": "perception",
+        "source": "The problem requires taking away as few points as possible"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The problem requires that among the remaining points there are no arbitrary 3 points collinear.",
+        "label": "perception",
+        "source": "make it so that among the remaining points there are no arbitrary 3 points collinear"
+      },
+      {
+        "claim_id": 8,
+        "claim": "In this 3×3 dot array, there were originally 8 lines containing 3 points.",
+        "label": "reasoning",
+        "source": "There were originally 8 lines containing 3 points"
+      },
+      {
+        "claim_id": 9,
+        "claim": "These 8 three-point lines consist of 3 rows, 3 columns, and 2 main diagonals.",
+        "label": "reasoning",
+        "source": "3 rows, 3 columns, 2 main diagonals"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Points must be taken away to break these 8 three-point lines.",
+        "label": "reasoning",
+        "source": "Therefore points must be taken away to break these 8 three-point lines"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The center point is on 4 three-point lines.",
+        "label": "reasoning",
+        "source": "The center point is on 4 three-point lines"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The 4 three-point lines on which the center point lies are the middle row, the middle column, and the two diagonals.",
+        "label": "reasoning",
+        "source": "namely the middle row, the middle column, and the two diagonals"
+      },
+      {
+        "claim_id": 13,
+        "claim": "A corner point is on 3 three-point lines.",
+        "label": "reasoning",
+        "source": "A corner point is on 3 three-point lines"
+      },
+      {
+        "claim_id": 14,
+        "claim": "An edge midpoint is on 2 three-point lines.",
+        "label": "reasoning",
+        "source": "An edge midpoint is on 2 three-point lines"
+      },
+      {
+        "claim_id": 15,
+        "claim": "When any two points are chosen, the number of three-point lines they cover will have overlap.",
+        "label": "reasoning",
+        "source": "When any two points are chosen, the number of three-point lines they cover has overlap"
+      },
+      {
+        "claim_id": 16,
+        "claim": "Any two points at most cannot cover all 8 three-point lines.",
+        "label": "reasoning",
+        "source": "At most they also cannot cover all 8 lines"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The center point plus one corner point can cover at most 6 three-point lines.",
+        "label": "reasoning",
+        "source": "The center point plus one corner point can cover at most 4+3−1=6 lines"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The center point plus a side midpoint can cover at most 5 three-point lines.",
+        "label": "reasoning",
+        "source": "The center point plus a side midpoint can cover at most 4+2−1=5 lines"
+      },
+      {
+        "claim_id": 19,
+        "claim": "Two non-center points cannot cover 8 three-point lines.",
+        "label": "reasoning",
+        "source": "Two non-center points also cannot cover 8 lines"
+      },
+      {
+        "claim_id": 20,
+        "claim": "Taking away only 2 points cannot possibly break all three-point lines.",
+        "label": "reasoning",
+        "source": "So taking away only 2 points cannot possibly break all three-point lines"
+      },
+      {
+        "claim_id": 21,
+        "claim": "Taking away 3 points can do it.",
+        "label": "reasoning",
+        "source": "Then explain that taking away 3 points can do it"
+      },
+      {
+        "claim_id": 22,
+        "claim": "One can take away the center point and the two opposite corner points on the same diagonal.",
+        "label": "reasoning",
+        "source": "For example, take away the center point and the two opposite corner points on the same diagonal"
+      },
+      {
+        "claim_id": 23,
+        "claim": "The upper-left corner, center point, and lower-right corner are a feasible example of points to take away.",
+        "label": "reasoning",
+        "source": "Such as the upper-left corner, center point, and lower-right corner"
+      },
+      {
+        "claim_id": 24,
+        "claim": "In this way, every row has at least one point missing.",
+        "label": "reasoning",
+        "source": "In this way, each row and each column has at least one point fewer."
+      },
+      {
+        "claim_id": 25,
+        "claim": "In this way, each column has at least one point fewer.",
+        "label": "reasoning",
+        "source": "In this way, each row and each column has at least one point fewer."
+      },
+      {
+        "claim_id": 26,
+        "claim": "In this way, both diagonals are broken.",
+        "label": "reasoning",
+        "source": "Both diagonals are also broken."
+      },
+      {
+        "claim_id": 27,
+        "claim": "After taking away 3 points in this way, among the remaining points there are no 3 collinear points.",
+        "label": "reasoning",
+        "source": "Therefore, among the remaining points there are no 3 collinear points."
+      },
+      {
+        "claim_id": 28,
+        "claim": "At least 3 points need to be taken away.",
+        "label": "reasoning",
+        "source": "So at least 3 points need to be taken away."
+      }
+    ],
+    "claim_count": 28,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "There are 9 black dots in the attached figure.",
+          "label": "perception",
+          "source": "There are 9 black dots in the attached figure"
+        },
+        {
+          "claim_id": 2,
+          "claim": "These 9 black dots are arranged into a regular 3×3 square array.",
+          "label": "perception",
+          "source": "Arranged into a regular 3×3 square array"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The upper, middle, and lower three rows each have 3 dots.",
+          "label": "perception",
+          "source": "The upper, middle, and lower three rows each have 3 dots"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The left, middle, and right three columns each have 3 dots.",
+          "label": "perception",
+          "source": "The left, middle, and right three columns each have 3 dots"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The two main diagonals each contain 3 dots.",
+          "label": "perception",
+          "source": "The two main diagonals also each contain 3 dots"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The problem requires taking away as few dots as possible.",
+          "label": "perception",
+          "source": "The problem requires taking away as few points as possible"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The problem requires that among the remaining points there are no arbitrary 3 points collinear.",
+          "label": "perception",
+          "source": "make it so that among the remaining points there are no arbitrary 3 points collinear"
+        },
+        {
+          "claim_id": 8,
+          "claim": "In this 3×3 dot array, there were originally 8 lines containing 3 points.",
+          "label": "reasoning",
+          "source": "There were originally 8 lines containing 3 points"
+        },
+        {
+          "claim_id": 9,
+          "claim": "These 8 three-point lines consist of 3 rows, 3 columns, and 2 main diagonals.",
+          "label": "reasoning",
+          "source": "3 rows, 3 columns, 2 main diagonals"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Points must be taken away to break these 8 three-point lines.",
+          "label": "reasoning",
+          "source": "Therefore points must be taken away to break these 8 three-point lines"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The center point is on 4 three-point lines.",
+          "label": "reasoning",
+          "source": "The center point is on 4 three-point lines"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The 4 three-point lines on which the center point lies are the middle row, the middle column, and the two diagonals.",
+          "label": "reasoning",
+          "source": "namely the middle row, the middle column, and the two diagonals"
+        },
+        {
+          "claim_id": 13,
+          "claim": "A corner point is on 3 three-point lines.",
+          "label": "reasoning",
+          "source": "A corner point is on 3 three-point lines"
+        },
+        {
+          "claim_id": 14,
+          "claim": "An edge midpoint is on 2 three-point lines.",
+          "label": "reasoning",
+          "source": "An edge midpoint is on 2 three-point lines"
+        },
+        {
+          "claim_id": 15,
+          "claim": "When any two points are chosen, the number of three-point lines they cover will have overlap.",
+          "label": "reasoning",
+          "source": "When any two points are chosen, the number of three-point lines they cover has overlap"
+        },
+        {
+          "claim_id": 16,
+          "claim": "Any two points at most cannot cover all 8 three-point lines.",
+          "label": "reasoning",
+          "source": "At most they also cannot cover all 8 lines"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The center point plus one corner point can cover at most 6 three-point lines.",
+          "label": "reasoning",
+          "source": "The center point plus one corner point can cover at most 4+3−1=6 lines"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The center point plus a side midpoint can cover at most 5 three-point lines.",
+          "label": "reasoning",
+          "source": "The center point plus a side midpoint can cover at most 4+2−1=5 lines"
+        },
+        {
+          "claim_id": 19,
+          "claim": "Two non-center points cannot cover 8 three-point lines.",
+          "label": "reasoning",
+          "source": "Two non-center points also cannot cover 8 lines"
+        },
+        {
+          "claim_id": 20,
+          "claim": "Taking away only 2 points cannot possibly break all three-point lines.",
+          "label": "reasoning",
+          "source": "So taking away only 2 points cannot possibly break all three-point lines"
+        },
+        {
+          "claim_id": 21,
+          "claim": "Taking away 3 points can do it.",
+          "label": "reasoning",
+          "source": "Then explain that taking away 3 points can do it"
+        },
+        {
+          "claim_id": 22,
+          "claim": "One can take away the center point and the two opposite corner points on the same diagonal.",
+          "label": "reasoning",
+          "source": "For example, take away the center point and the two opposite corner points on the same diagonal"
+        },
+        {
+          "claim_id": 23,
+          "claim": "The upper-left corner, center point, and lower-right corner are a feasible example of points to take away.",
+          "label": "reasoning",
+          "source": "Such as the upper-left corner, center point, and lower-right corner"
+        },
+        {
+          "claim_id": 24,
+          "claim": "In this way, every row has at least one point missing.",
+          "label": "reasoning",
+          "source": "In this way, each row and each column has at least one point fewer."
+        },
+        {
+          "claim_id": 25,
+          "claim": "In this way, each column has at least one point fewer.",
+          "label": "reasoning",
+          "source": "In this way, each row and each column has at least one point fewer."
+        },
+        {
+          "claim_id": 26,
+          "claim": "In this way, both diagonals are broken.",
+          "label": "reasoning",
+          "source": "Both diagonals are also broken."
+        },
+        {
+          "claim_id": 27,
+          "claim": "After taking away 3 points in this way, among the remaining points there are no 3 collinear points.",
+          "label": "reasoning",
+          "source": "Therefore, among the remaining points there are no 3 collinear points."
+        },
+        {
+          "claim_id": 28,
+          "claim": "At least 3 points need to be taken away.",
+          "label": "reasoning",
+          "source": "So at least 3 points need to be taken away."
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题删除重复的原 claim 11，并对其余 claims 保持不变后重新顺序编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:28Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/08747_math_mathvision_open_cff69ac43e46c7715a2f80e3_8c34392955.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04381_math_mathvision_open_cff69ac43e46c7715a2f80e3_8c34392955.json"
+  }
+}

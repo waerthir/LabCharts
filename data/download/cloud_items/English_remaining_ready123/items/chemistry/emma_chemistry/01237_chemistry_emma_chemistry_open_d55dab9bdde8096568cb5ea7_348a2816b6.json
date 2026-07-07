@@ -1,0 +1,683 @@
+{
+  "pack_index": 1237,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00531:emma_chemistry__open_d55dab9bdde8096568cb5ea7__6e7baff440fd",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_d55dab9bdde8096568cb5ea7",
+    "source_problem_id": "open_d55dab9bdde8096568cb5ea7",
+    "problem_run_key": "emma_chemistry__open_d55dab9bdde8096568cb5ea7__6e7baff440fd",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 70.0,
+    "difficulty_level": "medium_high",
+    "weighted_accuracy": 0.3,
+    "wrong_models": [
+      "gpt55_high",
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [],
+    "pending_reasons": [],
+    "pending_judge_count": 0,
+    "gpt55_high_correct": "False",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00531.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00531.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00531.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00531.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Please choose the SMILES expression of the transition-state structure shown in the image, ignoring the arrows. <image_1>",
+    "raw_answer_text": "CCC1C(C)C12C=CC=CC2=O",
+    "open_variant_id": "open_d55dab9bdde8096568cb5ea7",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "CCC1C(C)C12C=CC=CC2=O",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_da98cebd7977b433fd231b9a",
+        "problem_id": "prob_95e18ab85ece1197716af125",
+        "node_type": "answer_claim",
+        "canonical_value": "CCC1C(C)C12C=CC=CC2=O",
+        "surface_forms": [
+          "CCC1C(C)C12C=CC=CC2=O"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_efec9a6c85b324a67ea2038d"
+        ],
+        "evidence_refs": [
+          "asset_efec9a6c85b324a67ea2038d"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "CCC1C(C)C12C=CC=CC2=O"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T04:55:45Z",
+        "updated_at": "2026-04-08T04:55:45Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_d55dab9bdde8096568cb5ea7",
+      "parent_problem_id": "prob_95e18ab85ece1197716af125",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "CCC1C(C)C12C=CC=CC2=O",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "CCC1C(C)C12C=CC=CC2=O",
+    "raw_standard_answer": "CCC1C(C)C12C=CC=CC2=O",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "CCC1C(C)C12C=CC=CC2=O",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: In the lower-left part of the figure is a cyclohexadienone skeleton; the carbonyl O in the upper left is visible, and there are two C=C double bonds in the ring; the right side is connected to a saturated three-membered ring/cyclopropane part, and bears an upper methyl and a lower-right alkyl substituent. The figure also has curved arrows and position labels such as α, β, δ, etc.; according to the problem statement, these are not written into the SMILES as atoms or bonds. Reasoning: After ignoring the curved arrows and non-atom labels, only the heavy-atom skeleton is retained. According to the specified method, writing starts from the terminal carbon of the ethyl substituent on the lower-right cyclopropane carbon, giving `CCC1`. Next, proceed along the saturated three-membered ring to the adjacent upper carbon, and write the methyl on that carbon as a branch `C(C)`. Then go to the shared bridgehead/connection carbon, close the three-membered ring with the number `1`, and at the same time open the cyclohexadienone ring with the number `2`, giving `C12`. Finally, write along the six-membered cyclohexadienone part as `C=CC=CC2=O`. Splicing the parts together gives `CCC1C(C)C12C=CC=CC2=O`.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_d55dab9bdde8096568cb5ea7",
+      "problem_run_key": "emma_chemistry__open_d55dab9bdde8096568cb5ea7__6e7baff440fd",
+      "question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "standard_answer": "CCC1C(C)C12C=CC=CC2=O",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00531.png",
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/crops/emmachemistry00531.png"
+      ],
+      "initial_multi_solution_score": 0.2657,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Redraw the heavy-atom graph from the image after removing the curved arrows and non-atom labels. Start the SMILES at the terminal carbon of the ethyl substituent on the lower/right cyclopropane carbon, giving `CCC1`. Move around the saturated three-membered ring to the adjacent upper carbon and add its methyl branch as `C(C)`. Then go to the shared junction carbon, close the cyclopropane with digit `1`, and open the cyclohexadienone ring with digit `2`, giving `C12`. Finally traverse the six-membered cyclohexadienone portion as `C=CC=CC2=O`. Concatenating these pieces yields `CCC1C(C)C12C=CC=CC2=O`.",
+          "CoT_raw": "图像描述：图中下方偏左是一个环己二烯酮骨架，可见左上方的羰基 O，环内有两个 C=C 双键；右侧连着一个饱和三元环/环丙烷部分，并带有上方甲基和右下方烷基取代。图中还有弯曲箭头以及 α、β、δ 等位置标注，这些按题意不作为原子或键来写入 SMILES。\n推理：忽略弯曲箭头和非原子标注后，只保留重原子骨架。按指定方法，从右下方环丙烷碳上的乙基取代基末端碳开始书写，得到 `CCC1`。接着沿饱和三元环到相邻上方碳，并把该碳上的甲基作为支链写成 `C(C)`。再到共享的桥头/连接碳，用数字 `1` 闭合三元环，同时用数字 `2` 开启环己二烯酮环，得到 `C12`。最后沿六元环己二烯酮部分书写为 `C=CC=CC2=O`。拼接各部分得到 `CCC1C(C)C12C=CC=CC2=O`。",
+          "model_answer": "CCC1C(C)C12C=CC=CC2=O",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "CCC1C(C)C12C=CC=CC2=O",
+              "predicted_part": "CCC1C(C)C12C=CC=CC2=O",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中下方偏左是一个环己二烯酮骨架，可见左上方的羰基 O，环内有两个 C=C 双键；右侧连着一个饱和三元环/环丙烷部分，并带有上方甲基和右下方烷基取代。图中还有弯曲箭头以及 α、β、δ 等位置标注，这些按题意不作为原子或键来写入 SMILES。\n推理：忽略弯曲箭头和非原子标注后，只保留重原子骨架。按指定方法，从右下方环丙烷碳上的乙基取代基末端碳开始书写，得到 `CCC1`。接着沿饱和三元环到相邻上方碳，并把该碳上的甲基作为支链写成 `C(C)`。再到共享的桥头/连接碳，用数字 `1` 闭合三元环，同时用数字 `2` 开启环己二烯酮环，得到 `C12`。最后沿六元环己二烯酮部分书写为 `C=CC=CC2=O`。拼接各部分得到 `CCC1C(C)C12C=CC=CC2=O`。",
+          "answer_answer_check_final": "CCC1C(C)C12C=CC=CC2=O",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace passes. It first describes the image and then reasons, ignores arrows and non-atom Greek labels as required, follows the assigned SMILES construction method, and ends with the standard answer. Minor note: the image description calls the lower-right substituent only an “alkyl” group, while the reasoning correctly specifies it as ethyl; no revision needed.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中下方偏左是一个环己二烯酮骨架，可见左上方的羰基 O，环内有两个 C=C 双键；右侧连着一个饱和三元环/环丙烷部分，并带有上方甲基和右下方烷基取代。图中还有弯曲箭头以及 α、β、δ 等位置标注，这些按题意不作为原子或键来写入 SMILES。\n推理：忽略弯曲箭头和非原子标注后，只保留重原子骨架。按指定方法，从右下方环丙烷碳上的乙基取代基末端碳开始书写，得到 `CCC1`。接着沿饱和三元环到相邻上方碳，并把该碳上的甲基作为支链写成 `C(C)`。再到共享的桥头/连接碳，用数字 `1` 闭合三元环，同时用数字 `2` 开启环己二烯酮环，得到 `C12`。最后沿六元环己二烯酮部分书写为 `C=CC=CC2=O`。拼接各部分得到 `CCC1C(C)C12C=CC=CC2=O`。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct graph-to-SMILES route: read the heavy-atom connectivity and bond orders from the drawing, discard only the curved arrows/annotation labels, then encode the resulting molecular graph. It is the natural single-solution method for this problem.",
+            "image_role": "Use the image to identify the underlying skeletal structure: a cyclohexadienone ring with a carbonyl oxygen and two C=C bonds, fused/connected to a saturated three-membered ring on the right. The right-hand small ring has an upper carbon bearing a methyl substituent and a lower/right carbon bearing an ethyl substituent. The curved mechanistic arrows and Greek labels are ignored; hydrogens are treated implicitly in the SMILES.",
+            "text_role": "Use the question text to know the requested output is a SMILES expression and that the arrows in the transition-state drawing must be ignored.",
+            "knowledge_role": "Apply skeletal-structure conventions, implicit hydrogens, SMILES branch notation, ring-closure numbering, and bond-order notation. Encode the ketone as `C=O`, the two alkene bonds as `C=C`, the methyl branch as `(C)`, and use ring digits to close the cyclopropane and cyclohexadienone rings."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中下方偏左是一个环己二烯酮骨架，可见左上方的羰基 O，环内有两个 C=C 双键；右侧连着一个饱和三元环/环丙烷部分，并带有上方甲基和右下方烷基取代。图中还有弯曲箭头以及 α、β、δ 等位置标注，这些按题意不作为原子或键来写入 SMILES。\n推理：忽略弯曲箭头和非原子标注后，只保留重原子骨架。按指定方法，从右下方环丙烷碳上的乙基取代基末端碳开始书写，得到 `CCC1`。接着沿饱和三元环到相邻上方碳，并把该碳上的甲基作为支链写成 `C(C)`。再到共享的桥头/连接碳，用数字 `1` 闭合三元环，同时用数字 `2` 开启环己二烯酮环，得到 `C12`。最后沿六元环己二烯酮部分书写为 `C=CC=CC2=O`。拼接各部分得到 `CCC1C(C)C12C=CC=CC2=O`。",
+            "model_answer": "CCC1C(C)C12C=CC=CC2=O",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2619,
+              "completion_tokens": 1350,
+              "total_tokens": 3969,
+              "cached_tokens": 0,
+              "reasoning_tokens": 990
+            },
+            "_llm_elapsed_seconds": 33.953,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace passes. It first describes the image and then reasons, ignores arrows and non-atom Greek labels as required, follows the assigned SMILES construction method, and ends with the standard answer. Minor note: the image description calls the lower-right substituent only an “alkyl” group, while the reasoning correctly specifies it as ethyl; no revision needed.",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 32.737
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 33.966,
+              "usage_delta": {
+                "request_count": 2,
+                "successful_request_count": 3,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 2,
+                "requests_with_usage": 3,
+                "prompt_tokens": 8754,
+                "completion_tokens": 3599,
+                "total_tokens": 12353,
+                "cached_tokens": 0,
+                "reasoning_tokens": 2787,
+                "total_request_seconds": 93.417,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 32.748,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 3,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 3,
+                "requests_with_usage": 3,
+                "prompt_tokens": 8220,
+                "completion_tokens": 3935,
+                "total_tokens": 12155,
+                "cached_tokens": 0,
+                "reasoning_tokens": 3164,
+                "total_request_seconds": 104.011,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 70.634,
+          "usage_delta": {
+            "request_count": 19,
+            "successful_request_count": 18,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 19,
+            "requests_with_usage": 18,
+            "prompt_tokens": 50800,
+            "completion_tokens": 19899,
+            "total_tokens": 70699,
+            "cached_tokens": 0,
+            "reasoning_tokens": 14183,
+            "total_request_seconds": 488.461,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "723",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00531.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_95e18ab85ece1197716af125",
+          "open_variant_count": 1,
+          "open_variant_id": "open_d55dab9bdde8096568cb5ea7",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": [
+            "chemical_structure_interpretation",
+            "transition_state_diagram_domain_specific"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 137.373,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 8392,
+        "completion_tokens": 5591,
+        "total_tokens": 13983,
+        "cached_tokens": 0,
+        "reasoning_tokens": 4661,
+        "total_request_seconds": 137.304,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "answer": "CCC1C(C)C12C=CC=CC2=O",
+      "final_cot": "Image description: In the lower-left part of the figure is a cyclohexadienone skeleton; the carbonyl O in the upper left is visible, and there are two C=C double bonds in the ring; the right side is connected to a saturated three-membered ring/cyclopropane part, and bears an upper methyl and a lower-right alkyl substituent. The figure also has curved arrows and position labels such as α, β, δ, etc.; according to the problem statement, these are not written into the SMILES as atoms or bonds.\nReasoning: After ignoring the curved arrows and non-atom labels, only the heavy-atom skeleton is retained. According to the specified method, writing starts from the terminal carbon of the ethyl substituent on the lower-right cyclopropane carbon, giving `CCC1`. Next, proceed along the saturated three-membered ring to the adjacent upper carbon, and write the methyl on that carbon as a branch `C(C)`. Then go to the shared bridgehead/connection carbon, close the three-membered ring with the number `1`, and at the same time open the cyclohexadienone ring with the number `2`, giving `C12`. Finally, write along the six-membered cyclohexadienone part as `C=CC=CC2=O`. Splicing the parts together gives `CCC1C(C)C12C=CC=CC2=O`.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace passes. It first describes the image and then reasons, ignores arrows and non-atom Greek labels as required, follows the assigned SMILES construction method, and ends with the standard answer. Minor note: the image description calls the lower-right substituent only an “alkyl” group, while the reasoning correctly specifies it as ethyl; no revision needed.",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 32.737
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 532,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00531.json",
+        "source_sample_filename": "emmachemistry00531.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00531.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T07:54:59Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:34Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_95e18ab85ece1197716af125",
+          "new_problem_id": "open_d55dab9bdde8096568cb5ea7",
+          "old_problem_run_key": "emma_chemistry__prob_95e18ab85ece1197716af125__da7919877dec",
+          "new_problem_run_key": "emma_chemistry__open_d55dab9bdde8096568cb5ea7__6e7baff440fd",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00531.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_d55dab9bdde8096568cb5ea7",
+          "new_problem_id": "open_d55dab9bdde8096568cb5ea7",
+          "old_problem_run_key": "emma_chemistry__open_d55dab9bdde8096568cb5ea7__6e7baff440fd",
+          "new_problem_run_key": "emma_chemistry__open_d55dab9bdde8096568cb5ea7__6e7baff440fd",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00531.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_d55dab9bdde8096568cb5ea7",
+    "problem_run_key": "emma_chemistry__open_d55dab9bdde8096568cb5ea7__6e7baff440fd",
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "CCC1C(C)C12C=CC=CC2=O",
+    "raw_standard_answer": "CCC1C(C)C12C=CC=CC2=O",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "CCC1C(C)C12C=CC=CC2=O",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: In the lower-left part of the figure is a cyclohexadienone skeleton; the carbonyl O in the upper left is visible, and there are two C=C double bonds in the ring; the right side is connected to a saturated three-membered ring/cyclopropane part, and bears an upper methyl and a lower-right alkyl substituent. The figure also has curved arrows and position labels such as α, β, δ, etc.; according to the problem statement, these are not written into the SMILES as atoms or bonds.\nReasoning: After ignoring the curved arrows and non-atom labels, only the heavy-atom skeleton is retained. According to the specified method, writing starts from the terminal carbon of the ethyl substituent on the lower-right cyclopropane carbon, giving `CCC1`. Next, proceed along the saturated three-membered ring to the adjacent upper carbon, and write the methyl on that carbon as a branch `C(C)`. Then go to the shared bridgehead/connection carbon, close the three-membered ring with the number `1`, and at the same time open the cyclohexadienone ring with the number `2`, giving `C12`. Finally, write along the six-membered cyclohexadienone part as `C=CC=CC2=O`. Splicing the parts together gives `CCC1C(C)C12C=CC=CC2=O`.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "In the lower-left part of the figure is a cyclohexadienone skeleton.",
+        "label": "perception",
+        "source": "In the lower-left part of the figure is a cyclohexadienone skeleton"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The carbonyl O in the upper left is visible in the figure.",
+        "label": "perception",
+        "source": "The carbonyl O in the upper left is visible"
+      },
+      {
+        "claim_id": 3,
+        "claim": "There are two C=C double bonds in the ring.",
+        "label": "perception",
+        "source": "There are two C=C double bonds in the ring"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The right side is connected to a saturated three-membered ring/cyclopropane part.",
+        "label": "perception",
+        "source": "The right side is connected to a saturated three-membered ring/cyclopropane part"
+      },
+      {
+        "claim_id": 5,
+        "claim": "This structure bears an upper methyl substituent.",
+        "label": "perception",
+        "source": "And bears an upper methyl"
+      },
+      {
+        "claim_id": 6,
+        "claim": "This structure bears a lower-right alkyl substituent.",
+        "label": "perception",
+        "source": "And a lower-right alkyl substituent"
+      },
+      {
+        "claim_id": 7,
+        "claim": "There are also curved arrows in the figure.",
+        "label": "perception",
+        "source": "There are also curved arrows in the figure"
+      },
+      {
+        "claim_id": 8,
+        "claim": "There are also position labels such as α, β, δ, etc. in the figure.",
+        "label": "perception",
+        "source": "And position labels such as α, β, δ, etc."
+      },
+      {
+        "claim_id": 9,
+        "claim": "According to the problem statement, curved arrows are not written into the SMILES as atoms or bonds.",
+        "label": "reasoning",
+        "source": "According to the problem statement, these are not written into the SMILES as atoms or bonds"
+      },
+      {
+        "claim_id": 10,
+        "claim": "According to the problem statement, position labels such as α, β, δ, etc. are not written into the SMILES as atoms or bonds.",
+        "label": "reasoning",
+        "source": "According to the problem statement, these are not written into the SMILES as atoms or bonds"
+      },
+      {
+        "claim_id": 11,
+        "claim": "After ignoring the curved arrows and non-atom labels, only the heavy-atom skeleton is retained.",
+        "label": "reasoning",
+        "source": "After ignoring the curved arrows and non-atom labels, only the heavy-atom skeleton is retained"
+      },
+      {
+        "claim_id": 12,
+        "claim": "Writing starts from the terminal carbon of the ethyl substituent on the lower-right cyclopropane carbon.",
+        "label": "reasoning",
+        "source": "Writing starts from the terminal carbon of the ethyl substituent on the lower-right cyclopropane carbon"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Starting from this starting point gives `CCC1`.",
+        "label": "reasoning",
+        "source": "Gives `CCC1`"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Next, proceed along the saturated three-membered ring to the adjacent upper carbon.",
+        "label": "reasoning",
+        "source": "Next, proceed along the saturated three-membered ring to the adjacent upper carbon"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The methyl on the adjacent upper carbon is written as a branch `C(C)`.",
+        "label": "reasoning",
+        "source": "And the methyl on that carbon is written as a branch `C(C)`"
+      },
+      {
+        "claim_id": 16,
+        "claim": "Then go to the shared bridgehead/connection carbon.",
+        "label": "reasoning",
+        "source": "Then go to the shared bridgehead/connection carbon"
+      },
+      {
+        "claim_id": 17,
+        "claim": "Close the three-membered ring with the number `1`.",
+        "label": "reasoning",
+        "source": "Close the three-membered ring with the number `1`"
+      },
+      {
+        "claim_id": 18,
+        "claim": "Open the cyclohexadienone ring with the number `2`.",
+        "label": "reasoning",
+        "source": "At the same time open the cyclohexadienone ring with the number `2`"
+      },
+      {
+        "claim_id": 19,
+        "claim": "This step gives `C12`.",
+        "label": "reasoning",
+        "source": "Gives `C12`"
+      },
+      {
+        "claim_id": 20,
+        "claim": "Finally, write along the six-membered cyclohexadienone part as `C=CC=CC2=O`.",
+        "label": "reasoning",
+        "source": "Finally, write along the six-membered cyclohexadienone part as `C=CC=CC2=O`"
+      },
+      {
+        "claim_id": 21,
+        "claim": "Splicing the parts together gives `CCC1C(C)C12C=CC=CC2=O`.",
+        "label": "reasoning",
+        "source": "Splicing the parts together gives `CCC1C(C)C12C=CC=CC2=O`"
+      }
+    ],
+    "claim_count": 21,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "In the lower-left part of the figure is a cyclohexadienone skeleton.",
+          "label": "perception",
+          "source": "In the lower-left part of the figure is a cyclohexadienone skeleton"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The carbonyl O in the upper left is visible in the figure.",
+          "label": "perception",
+          "source": "The carbonyl O in the upper left is visible"
+        },
+        {
+          "claim_id": 3,
+          "claim": "There are two C=C double bonds in the ring.",
+          "label": "perception",
+          "source": "There are two C=C double bonds in the ring"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The right side is connected to a saturated three-membered ring/cyclopropane part.",
+          "label": "perception",
+          "source": "The right side is connected to a saturated three-membered ring/cyclopropane part"
+        },
+        {
+          "claim_id": 5,
+          "claim": "This structure bears an upper methyl substituent.",
+          "label": "perception",
+          "source": "And bears an upper methyl"
+        },
+        {
+          "claim_id": 6,
+          "claim": "This structure bears a lower-right alkyl substituent.",
+          "label": "perception",
+          "source": "And a lower-right alkyl substituent"
+        },
+        {
+          "claim_id": 7,
+          "claim": "There are also curved arrows in the figure.",
+          "label": "perception",
+          "source": "There are also curved arrows in the figure"
+        },
+        {
+          "claim_id": 8,
+          "claim": "There are also position labels such as α, β, δ, etc. in the figure.",
+          "label": "perception",
+          "source": "And position labels such as α, β, δ, etc."
+        },
+        {
+          "claim_id": 9,
+          "claim": "According to the problem statement, curved arrows are not written into the SMILES as atoms or bonds.",
+          "label": "reasoning",
+          "source": "According to the problem statement, these are not written into the SMILES as atoms or bonds"
+        },
+        {
+          "claim_id": 10,
+          "claim": "According to the problem statement, position labels such as α, β, δ, etc. are not written into the SMILES as atoms or bonds.",
+          "label": "reasoning",
+          "source": "According to the problem statement, these are not written into the SMILES as atoms or bonds"
+        },
+        {
+          "claim_id": 11,
+          "claim": "After ignoring the curved arrows and non-atom labels, only the heavy-atom skeleton is retained.",
+          "label": "reasoning",
+          "source": "After ignoring the curved arrows and non-atom labels, only the heavy-atom skeleton is retained"
+        },
+        {
+          "claim_id": 12,
+          "claim": "Writing starts from the terminal carbon of the ethyl substituent on the lower-right cyclopropane carbon.",
+          "label": "reasoning",
+          "source": "Writing starts from the terminal carbon of the ethyl substituent on the lower-right cyclopropane carbon"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Starting from this starting point gives `CCC1`.",
+          "label": "reasoning",
+          "source": "Gives `CCC1`"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Next, proceed along the saturated three-membered ring to the adjacent upper carbon.",
+          "label": "reasoning",
+          "source": "Next, proceed along the saturated three-membered ring to the adjacent upper carbon"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The methyl on the adjacent upper carbon is written as a branch `C(C)`.",
+          "label": "reasoning",
+          "source": "And the methyl on that carbon is written as a branch `C(C)`"
+        },
+        {
+          "claim_id": 16,
+          "claim": "Then go to the shared bridgehead/connection carbon.",
+          "label": "reasoning",
+          "source": "Then go to the shared bridgehead/connection carbon"
+        },
+        {
+          "claim_id": 17,
+          "claim": "Close the three-membered ring with the number `1`.",
+          "label": "reasoning",
+          "source": "Close the three-membered ring with the number `1`"
+        },
+        {
+          "claim_id": 18,
+          "claim": "Open the cyclohexadienone ring with the number `2`.",
+          "label": "reasoning",
+          "source": "At the same time open the cyclohexadienone ring with the number `2`"
+        },
+        {
+          "claim_id": 19,
+          "claim": "This step gives `C12`.",
+          "label": "reasoning",
+          "source": "Gives `C12`"
+        },
+        {
+          "claim_id": 20,
+          "claim": "Finally, write along the six-membered cyclohexadienone part as `C=CC=CC2=O`.",
+          "label": "reasoning",
+          "source": "Finally, write along the six-membered cyclohexadienone part as `C=CC=CC2=O`"
+        },
+        {
+          "claim_id": 21,
+          "claim": "Splicing the parts together gives `CCC1C(C)C12C=CC=CC2=O`.",
+          "label": "reasoning",
+          "source": "Splicing the parts together gives `CCC1C(C)C12C=CC=CC2=O`"
+        }
+      ],
+      "coverage_notes": "已按 final_cot 的原始顺序覆盖图像描述、忽略标注的处理、SMILES 书写步骤和最终答案。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:17Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/00767_chemistry_emma_chemistry_open_d55dab9bdde8096568cb5ea7_348a2816b6.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/01237_chemistry_emma_chemistry_open_d55dab9bdde8096568cb5ea7_348a2816b6.json"
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "pack_index": 1625,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "circuit/eee_bench:eeebench00003:open_aa76fca8d51b78308dc91d04",
+    "subject_dir": "circuit",
+    "dataset_slug": "eee_bench",
+    "problem_id": "open_aa76fca8d51b78308dc91d04",
+    "source_problem_id": "open_aa76fca8d51b78308dc91d04",
+    "problem_run_key": null,
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench00003.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench00003.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/circuit/eee_bench/samples/eeebench00003.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench00003.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Hint: Please answer the question requiring a floating-point number with one decimal place and provide the final value, e.g., 1.2, 1.3, 1.4, at the end. \nQuestion: Determine the DC voltage at point \"B\" in the circuit, ignoring any \"loading\" effects of the transistor’s base current on the voltage divider, as shown in the figure. The DC voltage at point \"B\" is ______VDC.",
+    "raw_answer_text": "1.3",
+    "open_variant_id": "open_aa76fca8d51b78308dc91d04",
+    "variant_index": 1,
+    "title": "EEE-Bench open-ended question",
+    "split_role": "single",
+    "rewritten_question_text": "Determine the DC voltage at point \"B\" in the circuit, ignoring any \"loading\" effects of the transistor’s base current on the voltage divider, as shown in the figure. The DC voltage at point \"B\" is ______ VDC.",
+    "expected_answer_type": "numeric",
+    "expected_answer": "1.3",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_a167cbdadb2498b06b63cb3a",
+        "problem_id": "prob_02d7fb2114daeae9e9d7ba9e",
+        "node_type": "answer_claim",
+        "canonical_value": "1.3",
+        "surface_forms": [
+          "1.3"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_affd028fa8c4433619a55a35"
+        ],
+        "evidence_refs": [
+          "asset_affd028fa8c4433619a55a35"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "1.3"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-05-01T21:45:14Z",
+        "updated_at": "2026-05-01T21:45:14Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_aa76fca8d51b78308dc91d04",
+      "parent_problem_id": "prob_02d7fb2114daeae9e9d7ba9e",
+      "variant_index": 1,
+      "title": "EEE-Bench open-ended question",
+      "rewritten_question_text": "Determine the DC voltage at point \"B\" in the circuit, ignoring any \"loading\" effects of the transistor’s base current on the voltage divider, as shown in the figure. The DC voltage at point \"B\" is ______ VDC.",
+      "expected_answer_type": "numeric",
+      "expected_answer": "1.3",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "Determine the DC voltage at point \"B\" in the circuit, ignoring any \"loading\" effects of the transistor’s base current on the voltage divider, as shown in the figure. The DC voltage at point \"B\" is ______ VDC.",
+    "resolved_answer": "1.3",
+    "resolved_from_fallback": true,
+    "final_cot": "Image description: In the attached figure, point B is the middle node of the bias voltage-divider network; above it, it is connected through an 81 kΩ resistor to the power rail labeled VCC = +12 VDC, and below it, it is connected through a 10 kΩ resistor to ground. To the left, point B is connected through a 47 µF capacitor to input node A, and to the right, it is connected through a 33 kΩ resistor to the transistor base. Reasoning: When performing DC analysis, the 47 µF coupling capacitor is regarded as an open circuit, so the left-side input network does not affect point B. The problem asks to ignore the loading effect of the transistor base current on the voltage divider, so the branch through 33 kΩ to the base also does not change the divided voltage value. Therefore, the voltage at point B is determined by the unloaded voltage divider composed of 81 kΩ and 10 kΩ: V_B = 12 V × 10 kΩ / (81 kΩ + 10 kΩ) = 12 × 10 / 91 = 1.3187 V, approximately 1.3 VDC.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "id": "open_aa76fca8d51b78308dc91d04",
+      "final_cot": "Image description: In the attached figure, point B is the middle node of the bias voltage-divider network; above it, it is connected through an 81 kΩ resistor to the power rail labeled VCC = +12 VDC, and below it, it is connected through a 10 kΩ resistor to ground. To the left, point B is connected through a 47 µF capacitor to input node A, and to the right, it is connected through a 33 kΩ resistor to the transistor base.\nReasoning: When performing DC analysis, the 47 µF coupling capacitor is regarded as an open circuit, so the left-side input network does not affect point B. The problem asks to ignore the loading effect of the transistor base current on the voltage divider, so the branch through 33 kΩ to the base also does not change the divided voltage value. Therefore, the voltage at point B is determined by the unloaded voltage divider composed of 81 kΩ and 10 kΩ: V_B = 12 V × 10 kΩ / (81 kΩ + 10 kΩ) = 12 × 10 / 91 = 1.3187 V, approximately 1.3 VDC.",
+      "difficulty_score": 25.0
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_aa76fca8d51b78308dc91d04",
+    "problem_run_key": null,
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "Determine the DC voltage at point \"B\" in the circuit, ignoring any \"loading\" effects of the transistor’s base current on the voltage divider, as shown in the figure. The DC voltage at point \"B\" is ______ VDC.",
+    "resolved_answer": "1.3",
+    "resolved_from_fallback": true,
+    "final_cot": "Image description: In the attached figure, point B is the middle node of the bias voltage-divider network; above it, it is connected through an 81 kΩ resistor to the power rail labeled VCC = +12 VDC, and below it, it is connected through a 10 kΩ resistor to ground. To the left, point B is connected through a 47 µF capacitor to input node A, and to the right, it is connected through a 33 kΩ resistor to the transistor base.\nReasoning: When performing DC analysis, the 47 µF coupling capacitor is regarded as an open circuit, so the left-side input network does not affect point B. The problem asks to ignore the loading effect of the transistor base current on the voltage divider, so the branch through 33 kΩ to the base also does not change the divided voltage value. Therefore, the voltage at point B is determined by the unloaded voltage divider composed of 81 kΩ and 10 kΩ: V_B = 12 V × 10 kΩ / (81 kΩ + 10 kΩ) = 12 × 10 / 91 = 1.3187 V, approximately 1.3 VDC.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "In the attached figure, point B is the middle node of the bias voltage-divider network.",
+        "label": "perception",
+        "source": "In the attached figure, point B is the middle node of the bias voltage-divider network"
+      },
+      {
+        "claim_id": 2,
+        "claim": "Above point B, it is connected through an 81 kΩ resistor to the power rail labeled VCC = +12 VDC.",
+        "label": "perception",
+        "source": "Above it, it is connected through an 81 kΩ resistor to the power rail labeled VCC = +12 VDC"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Below point B, it is connected through a 10 kΩ resistor to ground.",
+        "label": "perception",
+        "source": "Below, it is connected through a 10 kΩ resistor to ground"
+      },
+      {
+        "claim_id": 4,
+        "claim": "To the left, point B is connected through a 47 µF capacitor to input node A.",
+        "label": "perception",
+        "source": "To the left, point B is connected through a 47 µF capacitor to input node A"
+      },
+      {
+        "claim_id": 5,
+        "claim": "To the right, point B is connected through a 33 kΩ resistor to the transistor base.",
+        "label": "perception",
+        "source": "To the right, it is connected through a 33 kΩ resistor to the transistor base"
+      },
+      {
+        "claim_id": 6,
+        "claim": "In this DC analysis, the 47 µF coupling capacitor is regarded as an open circuit.",
+        "label": "reasoning",
+        "source": "When performing DC analysis, the 47 µF coupling capacitor is regarded as an open circuit"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The left-side input network does not affect point B.",
+        "label": "reasoning",
+        "source": "Therefore, the left-side input network does not affect point B"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The problem requires ignoring the loading effect of the transistor base current on the voltage divider.",
+        "label": "reasoning",
+        "source": "The problem requires ignoring the loading effect of the transistor base current on the voltage divider"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The branch through 33 kΩ to the base does not change the divided voltage value.",
+        "label": "reasoning",
+        "source": "Therefore the branch through 33 kΩ to the base also does not change the divided voltage value"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The voltage at point B is determined by the no-load voltage divider composed of 81 kΩ and 10 kΩ.",
+        "label": "reasoning",
+        "source": "Thus the voltage at point B is determined by the no-load voltage divider composed of 81 kΩ and 10 kΩ"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The voltage at point B is calculated as 12 V × 10 kΩ / (81 kΩ + 10 kΩ).",
+        "label": "reasoning",
+        "source": "V_B = 12 V × 10 kΩ / (81 kΩ + 10 kΩ)"
+      },
+      {
+        "claim_id": 12,
+        "claim": "12 × 10 / 91 = 1.3187 V。",
+        "label": "reasoning",
+        "source": "= 12 × 10 / 91 = 1.3187 V"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The voltage at point B is approximately 1.3 VDC.",
+        "label": "reasoning",
+        "source": "approximately 1.3 VDC"
+      }
+    ],
+    "claim_count": 13,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "In the attached figure, point B is the middle node of the bias voltage-divider network.",
+          "label": "perception",
+          "source": "In the attached figure, point B is the middle node of the bias voltage-divider network"
+        },
+        {
+          "claim_id": 2,
+          "claim": "Above point B, it is connected through an 81 kΩ resistor to the power rail labeled VCC = +12 VDC.",
+          "label": "perception",
+          "source": "Above it, it is connected through an 81 kΩ resistor to the power rail labeled VCC = +12 VDC"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Below point B, it is connected through a 10 kΩ resistor to ground.",
+          "label": "perception",
+          "source": "Below, it is connected through a 10 kΩ resistor to ground"
+        },
+        {
+          "claim_id": 4,
+          "claim": "To the left, point B is connected through a 47 µF capacitor to input node A.",
+          "label": "perception",
+          "source": "To the left, point B is connected through a 47 µF capacitor to input node A"
+        },
+        {
+          "claim_id": 5,
+          "claim": "To the right, point B is connected through a 33 kΩ resistor to the transistor base.",
+          "label": "perception",
+          "source": "To the right, it is connected through a 33 kΩ resistor to the transistor base"
+        },
+        {
+          "claim_id": 6,
+          "claim": "In this DC analysis, the 47 µF coupling capacitor is regarded as an open circuit.",
+          "label": "reasoning",
+          "source": "When performing DC analysis, the 47 µF coupling capacitor is regarded as an open circuit"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The left-side input network does not affect point B.",
+          "label": "reasoning",
+          "source": "Therefore, the left-side input network does not affect point B"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The problem requires ignoring the loading effect of the transistor base current on the voltage divider.",
+          "label": "reasoning",
+          "source": "The problem requires ignoring the loading effect of the transistor base current on the voltage divider"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The branch through 33 kΩ to the base does not change the divided voltage value.",
+          "label": "reasoning",
+          "source": "Therefore the branch through 33 kΩ to the base also does not change the divided voltage value"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The voltage at point B is determined by the no-load voltage divider composed of 81 kΩ and 10 kΩ.",
+          "label": "reasoning",
+          "source": "Thus the voltage at point B is determined by the no-load voltage divider composed of 81 kΩ and 10 kΩ"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The voltage at point B is calculated as 12 V × 10 kΩ / (81 kΩ + 10 kΩ).",
+          "label": "reasoning",
+          "source": "V_B = 12 V × 10 kΩ / (81 kΩ + 10 kΩ)"
+        },
+        {
+          "claim_id": 12,
+          "claim": "12 × 10 / 91 = 1.3187 V。",
+          "label": "reasoning",
+          "source": "= 12 × 10 / 91 = 1.3187 V"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The voltage at point B is approximately 1.3 VDC.",
+          "label": "reasoning",
+          "source": "approximately 1.3 VDC"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题将 claim 8 从 perception 改为 reasoning，其余 claim 保持不变。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/circuit/eee_bench/06065_circuit_eee_bench_open_aa76fca8d51b78308dc91d04_b281e6bc72.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/circuit/eee_bench/01625_circuit_eee_bench_open_aa76fca8d51b78308dc91d04_b281e6bc72.json"
+  }
+}

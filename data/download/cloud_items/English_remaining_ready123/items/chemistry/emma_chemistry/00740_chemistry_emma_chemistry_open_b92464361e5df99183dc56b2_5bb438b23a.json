@@ -1,0 +1,825 @@
+{
+  "pack_index": 740,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00293:emma_chemistry__open_b92464361e5df99183dc56b2__da51959ae83e",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_b92464361e5df99183dc56b2",
+    "source_problem_id": "open_b92464361e5df99183dc56b2",
+    "problem_run_key": "emma_chemistry__open_b92464361e5df99183dc56b2__da51959ae83e",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00293.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00293.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00293.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00293.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "How many chirality centers does the following molecule have? <image_1>",
+    "raw_answer_text": "5",
+    "open_variant_id": "open_b92464361e5df99183dc56b2",
+    "variant_index": 1,
+    "title": "EMMA-Chemistry open-ended question",
+    "split_role": "single",
+    "rewritten_question_text": "How many chirality centers does the following molecule have? <image_1>",
+    "expected_answer_type": "numeric",
+    "expected_answer": "5",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_dbeb352b55a97ff3a28d67af",
+        "problem_id": "prob_53d7653088e14878c331065d",
+        "node_type": "answer_claim",
+        "canonical_value": "5",
+        "surface_forms": [
+          "5"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_1981462137c8ba29d5e0e061"
+        ],
+        "evidence_refs": [
+          "asset_1981462137c8ba29d5e0e061"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "5"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T13:32:15Z",
+        "updated_at": "2026-04-08T13:32:15Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_b92464361e5df99183dc56b2",
+      "parent_problem_id": "prob_53d7653088e14878c331065d",
+      "variant_index": 1,
+      "title": "EMMA-Chemistry open-ended question",
+      "rewritten_question_text": "How many chirality centers does the following molecule have? <image_1>",
+      "expected_answer_type": "numeric",
+      "expected_answer": "5",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "How many chirality centers does the following molecule have? <image_1>",
+    "raw_answer": "5",
+    "raw_standard_answer": "5",
+    "resolved_question_text": "How many chirality centers does the following molecule have? <image_1>",
+    "resolved_answer": "5",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows a polycyclic fused/bridged-ring skeleton molecule. On the left there is an aromatic ring containing a phenolic hydroxyl group, at the top there is a tertiary amine fragment connected to N-CH3, on the right there is a ring containing a double bond, near the bottom there is an ether oxygen bridge and a saturated carbon bearing OH; several wedge/dashed bonds are also drawn in the structure to indicate stereochemistry, including the position connected to N above, the position bearing H on the right, the position bearing H below, and the position bearing OH at the lower right. Reasoning: According to the skeleton structure, first exclude all sp2 atoms, including the left aromatic-ring carbons and the right alkene carbons; also exclude the methyl carbon, heteroatoms N/O, and atoms that are clearly CH2 or do not have four different substituent paths. Among the remaining saturated tetrahedral candidates, the four substituents need to be compared along the ring paths. Five chiral centers can be confirmed: 1) the saturated carbon at the top connected to N and shown with a wedge bond, whose four directions respectively lead to N-CH3, different bridged-ring paths, and hydrogen/another ring path, with different substituent environments; 2) the central bridgehead/ring junction carbon, although H is not explicitly drawn, as a bridged-ring fused carbon its four ring paths are different, therefore it is a chiral center; 3) the saturated C-H carbon on the right bearing a wedge H, whose two connected ring paths are not equivalent, and which has H and another substituent path; 4) the saturated C-H carbon below bearing a wedge H, connected to different substituents such as the ether oxygen/aromatic-ring direction and the right-ring direction; 5) the saturated carbon at the lower right bearing a dashed OH, connected to OH, H, and two different ring paths. The other saturated positions do not have four different substituents or do not constitute stable chiral centers. Therefore the total number is 5.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_b92464361e5df99183dc56b2",
+      "problem_run_key": "emma_chemistry__open_b92464361e5df99183dc56b2__da51959ae83e",
+      "question_text": "How many chirality centers does the following molecule have? <image_1>",
+      "standard_answer": "5",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00293.png",
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/crops/emmachemistry00293.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First transcribe the skeletal structure from the image and mark all non-sp2 saturated atoms. For each candidate atom, compare the four substituents around it by following the ring paths; a fused/bridged ring carbon can be chiral even without an explicitly drawn H if its four paths are different. Count the five candidates whose different substituent paths are confirmed: the top N-attached stereocenter, the central bridgehead/ring-junction stereocenter, the right-side C-H stereocenter marked with a wedge, the lower C-H stereocenter marked with a wedge, and the OH-bearing carbon shown with dashed stereochemistry. Reject the aromatic/alkene carbons, methylenes, methyl group, heteroatoms, and nonstereogenic junctions. The resulting count is 5.",
+          "CoT_raw": "图像描述：图中是一种多环稠合/桥环骨架分子。左侧有一个含酚羟基的芳香环，顶部有一个连接到 N-CH3 的三级胺片段，右侧有一个含双键的环，底部附近有醚氧桥以及一个带 OH 的饱和碳；结构中还画出了若干楔形/虚线键表示立体化学，包括上方连接 N 的位置、右侧带 H 的位置、下方带 H 的位置，以及右下带 OH 的位置。推理：按骨架结构先排除所有 sp2 原子，包括左侧芳香环碳和右侧烯烃碳；也排除甲基碳、杂原子 N/O，以及明显为 CH2 或没有四个不同取代路径的原子。剩余饱和四面体候选中，需要沿环路径比较四个取代基。可确认有五个手性中心：1）顶部与 N 相连、以楔形键显示的饱和碳，其四个方向分别通向 N-CH3、桥环不同路径及氢/另一环路径，取代环境不同；2）中央桥头/环 junction 碳，虽然未显式画 H，但作为桥环稠合碳的四条环路径不同，因此为手性中心；3）右侧带楔形 H 的饱和 C-H 碳，连接的两个环路径不等同，且有 H 和另一取代路径；4）下方带楔形 H 的饱和 C-H 碳，连接到醚氧/芳环方向和右环方向等不同取代基；5）右下方带虚线 OH 的饱和碳，连接 OH、H 以及两个不同的环路径。其余饱和位置没有四个不同取代基或不构成稳定手性中心。因此总数为 5。",
+          "model_answer": "5",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "5",
+              "predicted_part": "5",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一种多环稠合/桥环骨架分子。左侧有一个含酚羟基的芳香环，顶部有一个连接到 N-CH3 的三级胺片段，右侧有一个含双键的环，底部附近有醚氧桥以及一个带 OH 的饱和碳；结构中还画出了若干楔形/虚线键表示立体化学，包括上方连接 N 的位置、右侧带 H 的位置、下方带 H 的位置，以及右下带 OH 的位置。推理：按骨架结构先排除所有 sp2 原子，包括左侧芳香环碳和右侧烯烃碳；也排除甲基碳、杂原子 N/O，以及明显为 CH2 或没有四个不同取代路径的原子。剩余饱和四面体候选中，需要沿环路径比较四个取代基。可确认有五个手性中心：1）顶部与 N 相连、以楔形键显示的饱和碳，其四个方向分别通向 N-CH3、桥环不同路径及氢/另一环路径，取代环境不同；2）中央桥头/环 junction 碳，虽然未显式画 H，但作为桥环稠合碳的四条环路径不同，因此为手性中心；3）右侧带楔形 H 的饱和 C-H 碳，连接的两个环路径不等同，且有 H 和另一取代路径；4）下方带楔形 H 的饱和 C-H 碳，连接到醚氧/芳环方向和右环方向等不同取代基；5）右下方带虚线 OH 的饱和碳，连接 OH、H 以及两个不同的环路径。其余饱和位置没有四个不同取代基或不构成稳定手性中心。因此总数为 5。",
+          "answer_answer_check_final": "5",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace passes. It describes the molecule before reasoning, follows the assigned method, rejects sp2 atoms/heteroatoms/methyl/methylene positions, and identifies the same five chirality centers as the standard answer. Minor improvement: the first stereocenter description could be phrased less ambiguously by explicitly naming its four attached groups/paths rather than saying “氢/另一环路径,” but this does not affect correctness.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一种多环稠合/桥环骨架分子。左侧有一个含酚羟基的芳香环，顶部有一个连接到 N-CH3 的三级胺片段，右侧有一个含双键的环，底部附近有醚氧桥以及一个带 OH 的饱和碳；结构中还画出了若干楔形/虚线键表示立体化学，包括上方连接 N 的位置、右侧带 H 的位置、下方带 H 的位置，以及右下带 OH 的位置。推理：按骨架结构先排除所有 sp2 原子，包括左侧芳香环碳和右侧烯烃碳；也排除甲基碳、杂原子 N/O，以及明显为 CH2 或没有四个不同取代路径的原子。剩余饱和四面体候选中，需要沿环路径比较四个取代基。可确认有五个手性中心：1）顶部与 N 相连、以楔形键显示的饱和碳，其四个方向分别通向 N-CH3、桥环不同路径及氢/另一环路径，取代环境不同；2）中央桥头/环 junction 碳，虽然未显式画 H，但作为桥环稠合碳的四条环路径不同，因此为手性中心；3）右侧带楔形 H 的饱和 C-H 碳，连接的两个环路径不等同，且有 H 和另一取代路径；4）下方带楔形 H 的饱和 C-H 碳，连接到醚氧/芳环方向和右环方向等不同取代基；5）右下方带虚线 OH 的饱和碳，连接 OH、H 以及两个不同的环路径。其余饱和位置没有四个不同取代基或不构成稳定手性中心。因此总数为 5。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Direct structural audit of every possible stereogenic atom in the drawn skeletal formula; this is the natural single reliable route for this molecule-counting question.",
+            "image_role": "Use the image to read the fused morphinan-like molecule: aromatic ring on the left, alkene-containing six-membered ring on the right, ether bridge, N-methyl tertiary amine, and wedge/dashed stereochemical bonds at several saturated ring carbons. Locate the saturated tetrahedral atoms, especially the top carbon bonded to N, the central bridge/junction carbon, the right-ring carbon bearing wedged H, the lower ring carbon bearing wedged H, and the carbon bearing OH shown with dashed stereochemistry.",
+            "text_role": "Read the prompt as asking only for the numeric count of chirality centers in the displayed molecule.",
+            "knowledge_role": "Apply the chirality-center rule: count tetrahedral sp3 atoms attached to four different substituent paths. Exclude sp2 atoms in the aromatic ring and alkene, CH2/CH3 atoms with duplicate hydrogens, oxygen atoms, and the tertiary amine nitrogen because amine inversion means it is not counted as a stable chirality center here."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一种多环稠合/桥环骨架分子。左侧有一个含酚羟基的芳香环，顶部有一个连接到 N-CH3 的三级胺片段，右侧有一个含双键的环，底部附近有醚氧桥以及一个带 OH 的饱和碳；结构中还画出了若干楔形/虚线键表示立体化学，包括上方连接 N 的位置、右侧带 H 的位置、下方带 H 的位置，以及右下带 OH 的位置。推理：按骨架结构先排除所有 sp2 原子，包括左侧芳香环碳和右侧烯烃碳；也排除甲基碳、杂原子 N/O，以及明显为 CH2 或没有四个不同取代路径的原子。剩余饱和四面体候选中，需要沿环路径比较四个取代基。可确认有五个手性中心：1）顶部与 N 相连、以楔形键显示的饱和碳，其四个方向分别通向 N-CH3、桥环不同路径及氢/另一环路径，取代环境不同；2）中央桥头/环 junction 碳，虽然未显式画 H，但作为桥环稠合碳的四条环路径不同，因此为手性中心；3）右侧带楔形 H 的饱和 C-H 碳，连接的两个环路径不等同，且有 H 和另一取代路径；4）下方带楔形 H 的饱和 C-H 碳，连接到醚氧/芳环方向和右环方向等不同取代基；5）右下方带虚线 OH 的饱和碳，连接 OH、H 以及两个不同的环路径。其余饱和位置没有四个不同取代基或不构成稳定手性中心。因此总数为 5。",
+            "model_answer": "5",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2716,
+              "completion_tokens": 1005,
+              "total_tokens": 3721,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 24.797,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace passes. It describes the molecule before reasoning, follows the assigned method, rejects sp2 atoms/heteroatoms/methyl/methylene positions, and identifies the same five chirality centers as the standard answer. Minor improvement: the first stereocenter description could be phrased less ambiguously by explicitly naming its four attached groups/paths rather than saying “氢/另一环路径,” but this does not affect correctness.",
+              "major_failures": [],
+              "extractability_score": 0.92,
+              "grounding_score": 0.9,
+              "method_fidelity_score": 0.98,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 18.207
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 24.814,
+              "usage_delta": {
+                "request_count": 7,
+                "successful_request_count": 9,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 7,
+                "requests_with_usage": 9,
+                "prompt_tokens": 26509,
+                "completion_tokens": 9929,
+                "total_tokens": 36438,
+                "cached_tokens": 2304,
+                "reasoning_tokens": 7246,
+                "total_request_seconds": 242.06,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 18.225,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 4,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 4,
+                "prompt_tokens": 12430,
+                "completion_tokens": 4901,
+                "total_tokens": 17331,
+                "cached_tokens": 0,
+                "reasoning_tokens": 3334,
+                "total_request_seconds": 118.324,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 25.226,
+          "usage_delta": {
+            "request_count": 7,
+            "successful_request_count": 7,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 7,
+            "requests_with_usage": 7,
+            "prompt_tokens": 20487,
+            "completion_tokens": 8335,
+            "total_tokens": 28822,
+            "cached_tokens": 0,
+            "reasoning_tokens": 5901,
+            "total_request_seconds": 206.318,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "1166",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00293.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_53d7653088e14878c331065d",
+          "open_variant_count": 1,
+          "open_variant_id": "open_b92464361e5df99183dc56b2",
+          "open_variant_index": 1,
+          "open_variant_title": "EMMA-Chemistry 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 68.289,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 8821,
+        "completion_tokens": 2607,
+        "total_tokens": 11428,
+        "cached_tokens": 0,
+        "reasoning_tokens": 1548,
+        "total_request_seconds": 68.199,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "How many chirality centers does the following molecule have? <image_1>",
+      "answer": "5",
+      "final_cot": "Image description: The figure shows a polycyclic fused/bridged-ring skeleton molecule. On the left there is an aromatic ring containing a phenolic hydroxyl group, at the top there is a tertiary amine fragment connected to N-CH3, on the right there is a ring containing a double bond, near the bottom there is an ether oxygen bridge and a saturated carbon bearing OH; several wedge/dashed bonds are also drawn in the structure to indicate stereochemistry, including the position connected to N above, the position bearing H on the right, the position bearing H below, and the position bearing OH at the lower right. Reasoning: According to the skeleton structure, first exclude all sp2 atoms, including the left aromatic-ring carbons and the right alkene carbons; also exclude the methyl carbon, heteroatoms N/O, and atoms that are clearly CH2 or do not have four different substituent paths. Among the remaining saturated tetrahedral candidates, the four substituents need to be compared along the ring paths. Five chiral centers can be confirmed: 1) the saturated carbon at the top connected to N and shown with a wedge bond, whose four directions respectively lead to N-CH3, different bridged-ring paths, and hydrogen/another ring path, with different substituent environments; 2) the central bridgehead/ring junction carbon, although H is not explicitly drawn, as a bridged-ring fused carbon its four ring paths are different, therefore it is a chiral center; 3) the saturated C-H carbon on the right bearing a wedge H, whose two connected ring paths are not equivalent, and which has H and another substituent path; 4) the saturated C-H carbon below bearing a wedge H, connected to different substituents such as the ether oxygen/aromatic-ring direction and the right-ring direction; 5) the saturated carbon at the lower right bearing a dashed OH, connected to OH, H, and two different ring paths. The other saturated positions do not have four different substituents or do not constitute stable chiral centers. Therefore the total number is 5.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace passes. It describes the molecule before reasoning, follows the assigned method, rejects sp2 atoms/heteroatoms/methyl/methylene positions, and identifies the same five chirality centers as the standard answer. Minor improvement: the first stereocenter description could be phrased less ambiguously by explicitly naming its four attached groups/paths rather than saying “氢/另一环路径,” but this does not affect correctness.",
+          "major_failures": [],
+          "extractability_score": 0.92,
+          "grounding_score": 0.9,
+          "method_fidelity_score": 0.98,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 18.207
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 294,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00293.json",
+        "source_sample_filename": "emmachemistry00293.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00293.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T06:41:38Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:33Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_53d7653088e14878c331065d",
+          "new_problem_id": "open_b92464361e5df99183dc56b2",
+          "old_problem_run_key": "emma_chemistry__prob_53d7653088e14878c331065d__9127ca560bb0",
+          "new_problem_run_key": "emma_chemistry__open_b92464361e5df99183dc56b2__da51959ae83e",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00293.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_b92464361e5df99183dc56b2",
+          "new_problem_id": "open_b92464361e5df99183dc56b2",
+          "old_problem_run_key": "emma_chemistry__open_b92464361e5df99183dc56b2__da51959ae83e",
+          "new_problem_run_key": "emma_chemistry__open_b92464361e5df99183dc56b2__da51959ae83e",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00293.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_b92464361e5df99183dc56b2",
+    "problem_run_key": "emma_chemistry__open_b92464361e5df99183dc56b2__da51959ae83e",
+    "raw_question_text": "How many chirality centers does the following molecule have? <image_1>",
+    "raw_answer": "5",
+    "raw_standard_answer": "5",
+    "resolved_question_text": "How many chirality centers does the following molecule have? <image_1>",
+    "resolved_answer": "5",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows a polycyclic fused/bridged-ring skeleton molecule. On the left there is an aromatic ring containing a phenolic hydroxyl group, at the top there is a tertiary amine fragment connected to N-CH3, on the right there is a ring containing a double bond, near the bottom there is an ether oxygen bridge and a saturated carbon bearing OH; several wedge/dashed bonds are also drawn in the structure to indicate stereochemistry, including the position connected to N above, the position bearing H on the right, the position bearing H below, and the position bearing OH at the lower right. Reasoning: According to the skeleton structure, first exclude all sp2 atoms, including the left aromatic-ring carbons and the right alkene carbons; also exclude the methyl carbon, heteroatoms N/O, and atoms that are clearly CH2 or do not have four different substituent paths. Among the remaining saturated tetrahedral candidates, the four substituents need to be compared along the ring paths. Five chiral centers can be confirmed: 1) the saturated carbon at the top connected to N and shown with a wedge bond, whose four directions respectively lead to N-CH3, different bridged-ring paths, and hydrogen/another ring path, with different substituent environments; 2) the central bridgehead/ring junction carbon, although H is not explicitly drawn, as a bridged-ring fused carbon its four ring paths are different, therefore it is a chiral center; 3) the saturated C-H carbon on the right bearing a wedge H, whose two connected ring paths are not equivalent, and which has H and another substituent path; 4) the saturated C-H carbon below bearing a wedge H, connected to different substituents such as the ether oxygen/aromatic-ring direction and the right-ring direction; 5) the saturated carbon at the lower right bearing a dashed OH, connected to OH, H, and two different ring paths. The other saturated positions do not have four different substituents or do not constitute stable chiral centers. Therefore the total number is 5.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure shows a molecule with a polycyclic fused/bridged ring skeleton.",
+        "label": "perception",
+        "source": "The figure shows a molecule with a polycyclic fused/bridged ring skeleton"
+      },
+      {
+        "claim_id": 2,
+        "claim": "On the left side there is an aromatic ring containing a phenolic hydroxyl group.",
+        "label": "perception",
+        "source": "On the left side there is an aromatic ring containing a phenolic hydroxyl group"
+      },
+      {
+        "claim_id": 3,
+        "claim": "At the top there is a tertiary amine fragment connected to N-CH3.",
+        "label": "perception",
+        "source": "At the top there is a tertiary amine fragment connected to N-CH3"
+      },
+      {
+        "claim_id": 4,
+        "claim": "On the right side there is a ring containing a double bond.",
+        "label": "perception",
+        "source": "On the right side there is a ring containing a double bond"
+      },
+      {
+        "claim_id": 5,
+        "claim": "Near the bottom there is an ether oxygen bridge.",
+        "label": "perception",
+        "source": "Near the bottom there is an ether oxygen bridge and a saturated carbon bearing OH"
+      },
+      {
+        "claim_id": 6,
+        "claim": "Near the bottom there is a saturated carbon bearing OH.",
+        "label": "perception",
+        "source": "Near the bottom there is an ether oxygen bridge and a saturated carbon bearing OH"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Several wedge/dashed bonds are drawn in the structure to indicate stereochemistry.",
+        "label": "perception",
+        "source": "Several wedge/dashed bonds are also drawn in the structure to indicate stereochemistry"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The wedge/dashed bonds include the position above connected to N.",
+        "label": "perception",
+        "source": "Including the position above connected to N"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The wedge/dashed bonds include the position on the right bearing H.",
+        "label": "perception",
+        "source": "The position on the right bearing H"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The wedge/dashed bonds include the position below bearing H.",
+        "label": "perception",
+        "source": "the position below with H"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The wedge/dashed bond includes the position at the lower right with OH.",
+        "label": "perception",
+        "source": "the position at the lower right with OH"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The left-side aromatic ring carbon is excluded as a chiral center candidate.",
+        "label": "reasoning",
+        "source": "First exclude all sp2 atoms, including the left-side aromatic ring carbon"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The right-side alkene carbon is excluded as a chiral center candidate.",
+        "label": "reasoning",
+        "source": "First exclude all sp2 atoms, including the left-side aromatic ring carbon and the right-side alkene carbon"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The methyl carbon is excluded as a chiral center candidate.",
+        "label": "reasoning",
+        "source": "Also exclude the methyl carbon"
+      },
+      {
+        "claim_id": 15,
+        "claim": "Heteroatoms N/O are excluded as chiral center candidates.",
+        "label": "reasoning",
+        "source": "heteroatoms N/O"
+      },
+      {
+        "claim_id": 16,
+        "claim": "Atoms that are clearly CH2 are excluded as chiral center candidates.",
+        "label": "reasoning",
+        "source": "as well as those clearly CH2"
+      },
+      {
+        "claim_id": 17,
+        "claim": "Atoms without four different substituent paths are excluded as chiral center candidates.",
+        "label": "reasoning",
+        "source": "or atoms without four different substituent paths"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The remaining saturated tetrahedral candidates need to compare the four substituents along the ring paths.",
+        "label": "reasoning",
+        "source": "Among the remaining saturated tetrahedral candidates, the four substituents need to be compared along the ring paths"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The saturated carbon connected to N at the top and shown with a wedge bond is a chiral center.",
+        "label": "reasoning",
+        "source": "1) The saturated carbon at the top, connected to N and shown with a wedge bond, has its four directions leading respectively to N-CH3, different paths of the bridged ring, and hydrogen/another ring path, with different substitution environments"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The four directions of the saturated carbon at the top, connected to N and shown with a wedge bond, lead respectively to N-CH3, different paths of the bridged ring, and hydrogen/another ring path.",
+        "label": "reasoning",
+        "source": "Its four directions lead respectively to N-CH3, different paths of the bridged ring, and hydrogen/another ring path"
+      },
+      {
+        "claim_id": 21,
+        "claim": "The substitution environment of the saturated carbon at the top, connected to N and shown with a wedge bond, is different.",
+        "label": "reasoning",
+        "source": "The substitution environment is different"
+      },
+      {
+        "claim_id": 22,
+        "claim": "The central bridgehead/ring junction carbon is a chiral center.",
+        "label": "reasoning",
+        "source": "2) The central bridgehead/ring junction carbon, although H is not explicitly drawn, is a chiral center because the four ring paths as a bridged-ring fused carbon are different"
+      },
+      {
+        "claim_id": 23,
+        "claim": "The central bridgehead/ring junction carbon does not explicitly have H drawn.",
+        "label": "perception",
+        "source": "Although H is not explicitly drawn"
+      },
+      {
+        "claim_id": 24,
+        "claim": "The four ring paths of the central bridgehead/ring junction carbon as a bridged-ring fused carbon are different.",
+        "label": "reasoning",
+        "source": "As a bridged-ring fused carbon, the four ring paths are different"
+      },
+      {
+        "claim_id": 25,
+        "claim": "The saturated C-H carbon on the right with wedge-shaped H is a chiral center.",
+        "label": "reasoning",
+        "source": "3) The saturated C-H carbon on the right with wedge-shaped H has two connected ring paths that are not equivalent, and has H and another substitution path"
+      },
+      {
+        "claim_id": 26,
+        "claim": "The two ring paths connected to the saturated C-H carbon on the right with wedge-shaped H are not equivalent.",
+        "label": "reasoning",
+        "source": "The two connected ring paths are not equivalent"
+      },
+      {
+        "claim_id": 27,
+        "claim": "The saturated C-H carbon on the right with wedge-shaped H has H and another substitution path.",
+        "label": "perception",
+        "source": "And has H and another substitution path"
+      },
+      {
+        "claim_id": 28,
+        "claim": "The saturated C-H carbon below with wedge-shaped H is a chiral center.",
+        "label": "reasoning",
+        "source": "4) The saturated C-H carbon with a wedge-shaped H below is connected to different substituents such as the ether oxygen/aromatic ring direction and the right ring direction"
+      },
+      {
+        "claim_id": 29,
+        "claim": "The saturated C-H carbon with a wedge-shaped H below is connected to different substituents such as the ether oxygen/aromatic ring direction and the right ring direction.",
+        "label": "reasoning",
+        "source": "connected to different substituents such as the ether oxygen/aromatic ring direction and the right ring direction"
+      },
+      {
+        "claim_id": 30,
+        "claim": "The saturated carbon with a dashed OH at the lower right is a chiral center.",
+        "label": "reasoning",
+        "source": "5) The saturated carbon with a dashed OH at the lower right is connected to OH, H, and two different ring paths"
+      },
+      {
+        "claim_id": 31,
+        "claim": "The saturated carbon with a dashed OH at the lower right is connected to OH, H, and two different ring paths.",
+        "label": "reasoning",
+        "source": "connected to OH, H, and two different ring paths"
+      },
+      {
+        "claim_id": 32,
+        "claim": "The remaining saturated positions do not have four different substituents or do not constitute stable chiral centers.",
+        "label": "reasoning",
+        "source": "The remaining saturated positions do not have four different substituents or do not constitute stable chiral centers"
+      },
+      {
+        "claim_id": 33,
+        "claim": "The total number of chiral centers is 5.",
+        "label": "reasoning",
+        "source": "Therefore the total number is 5"
+      }
+    ],
+    "claim_count": 33,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure shows a molecule with a polycyclic fused/bridged ring skeleton.",
+          "label": "perception",
+          "source": "The figure shows a molecule with a polycyclic fused/bridged ring skeleton"
+        },
+        {
+          "claim_id": 2,
+          "claim": "On the left side there is an aromatic ring containing a phenolic hydroxyl group.",
+          "label": "perception",
+          "source": "On the left side there is an aromatic ring containing a phenolic hydroxyl group"
+        },
+        {
+          "claim_id": 3,
+          "claim": "At the top there is a tertiary amine fragment connected to N-CH3.",
+          "label": "perception",
+          "source": "At the top there is a tertiary amine fragment connected to N-CH3"
+        },
+        {
+          "claim_id": 4,
+          "claim": "On the right side there is a ring containing a double bond.",
+          "label": "perception",
+          "source": "On the right side there is a ring containing a double bond"
+        },
+        {
+          "claim_id": 5,
+          "claim": "Near the bottom there is an ether oxygen bridge.",
+          "label": "perception",
+          "source": "Near the bottom there is an ether oxygen bridge and a saturated carbon bearing OH"
+        },
+        {
+          "claim_id": 6,
+          "claim": "Near the bottom there is a saturated carbon bearing OH.",
+          "label": "perception",
+          "source": "Near the bottom there is an ether oxygen bridge and a saturated carbon bearing OH"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Several wedge/dashed bonds are drawn in the structure to indicate stereochemistry.",
+          "label": "perception",
+          "source": "Several wedge/dashed bonds are also drawn in the structure to indicate stereochemistry"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The wedge/dashed bonds include the position above connected to N.",
+          "label": "perception",
+          "source": "Including the position above connected to N"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The wedge/dashed bonds include the position on the right bearing H.",
+          "label": "perception",
+          "source": "The position on the right bearing H"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The wedge/dashed bonds include the position below bearing H.",
+          "label": "perception",
+          "source": "the position below with H"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The wedge/dashed bond includes the position at the lower right with OH.",
+          "label": "perception",
+          "source": "the position at the lower right with OH"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The left-side aromatic ring carbon is excluded as a chiral center candidate.",
+          "label": "reasoning",
+          "source": "First exclude all sp2 atoms, including the left-side aromatic ring carbon"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The right-side alkene carbon is excluded as a chiral center candidate.",
+          "label": "reasoning",
+          "source": "First exclude all sp2 atoms, including the left-side aromatic ring carbon and the right-side alkene carbon"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The methyl carbon is excluded as a chiral center candidate.",
+          "label": "reasoning",
+          "source": "Also exclude the methyl carbon"
+        },
+        {
+          "claim_id": 15,
+          "claim": "Heteroatoms N/O are excluded as chiral center candidates.",
+          "label": "reasoning",
+          "source": "heteroatoms N/O"
+        },
+        {
+          "claim_id": 16,
+          "claim": "Atoms that are clearly CH2 are excluded as chiral center candidates.",
+          "label": "reasoning",
+          "source": "as well as those clearly CH2"
+        },
+        {
+          "claim_id": 17,
+          "claim": "Atoms without four different substituent paths are excluded as chiral center candidates.",
+          "label": "reasoning",
+          "source": "or atoms without four different substituent paths"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The remaining saturated tetrahedral candidates need to compare the four substituents along the ring paths.",
+          "label": "reasoning",
+          "source": "Among the remaining saturated tetrahedral candidates, the four substituents need to be compared along the ring paths"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The saturated carbon connected to N at the top and shown with a wedge bond is a chiral center.",
+          "label": "reasoning",
+          "source": "1) The saturated carbon at the top, connected to N and shown with a wedge bond, has its four directions leading respectively to N-CH3, different paths of the bridged ring, and hydrogen/another ring path, with different substitution environments"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The four directions of the saturated carbon at the top, connected to N and shown with a wedge bond, lead respectively to N-CH3, different paths of the bridged ring, and hydrogen/another ring path.",
+          "label": "reasoning",
+          "source": "Its four directions lead respectively to N-CH3, different paths of the bridged ring, and hydrogen/another ring path"
+        },
+        {
+          "claim_id": 21,
+          "claim": "The substitution environment of the saturated carbon at the top, connected to N and shown with a wedge bond, is different.",
+          "label": "reasoning",
+          "source": "The substitution environment is different"
+        },
+        {
+          "claim_id": 22,
+          "claim": "The central bridgehead/ring junction carbon is a chiral center.",
+          "label": "reasoning",
+          "source": "2) The central bridgehead/ring junction carbon, although H is not explicitly drawn, is a chiral center because the four ring paths as a bridged-ring fused carbon are different"
+        },
+        {
+          "claim_id": 23,
+          "claim": "The central bridgehead/ring junction carbon does not explicitly have H drawn.",
+          "label": "perception",
+          "source": "Although H is not explicitly drawn"
+        },
+        {
+          "claim_id": 24,
+          "claim": "The four ring paths of the central bridgehead/ring junction carbon as a bridged-ring fused carbon are different.",
+          "label": "reasoning",
+          "source": "As a bridged-ring fused carbon, the four ring paths are different"
+        },
+        {
+          "claim_id": 25,
+          "claim": "The saturated C-H carbon on the right with wedge-shaped H is a chiral center.",
+          "label": "reasoning",
+          "source": "3) The saturated C-H carbon on the right with wedge-shaped H has two connected ring paths that are not equivalent, and has H and another substitution path"
+        },
+        {
+          "claim_id": 26,
+          "claim": "The two ring paths connected to the saturated C-H carbon on the right with wedge-shaped H are not equivalent.",
+          "label": "reasoning",
+          "source": "The two connected ring paths are not equivalent"
+        },
+        {
+          "claim_id": 27,
+          "claim": "The saturated C-H carbon on the right with wedge-shaped H has H and another substitution path.",
+          "label": "perception",
+          "source": "And has H and another substitution path"
+        },
+        {
+          "claim_id": 28,
+          "claim": "The saturated C-H carbon below with wedge-shaped H is a chiral center.",
+          "label": "reasoning",
+          "source": "4) The saturated C-H carbon with a wedge-shaped H below is connected to different substituents such as the ether oxygen/aromatic ring direction and the right ring direction"
+        },
+        {
+          "claim_id": 29,
+          "claim": "The saturated C-H carbon with a wedge-shaped H below is connected to different substituents such as the ether oxygen/aromatic ring direction and the right ring direction.",
+          "label": "reasoning",
+          "source": "connected to different substituents such as the ether oxygen/aromatic ring direction and the right ring direction"
+        },
+        {
+          "claim_id": 30,
+          "claim": "The saturated carbon with a dashed OH at the lower right is a chiral center.",
+          "label": "reasoning",
+          "source": "5) The saturated carbon with a dashed OH at the lower right is connected to OH, H, and two different ring paths"
+        },
+        {
+          "claim_id": 31,
+          "claim": "The saturated carbon with a dashed OH at the lower right is connected to OH, H, and two different ring paths.",
+          "label": "reasoning",
+          "source": "connected to OH, H, and two different ring paths"
+        },
+        {
+          "claim_id": 32,
+          "claim": "The remaining saturated positions do not have four different substituents or do not constitute stable chiral centers.",
+          "label": "reasoning",
+          "source": "The remaining saturated positions do not have four different substituents or do not constitute stable chiral centers"
+        },
+        {
+          "claim_id": 33,
+          "claim": "The total number of chiral centers is 5.",
+          "label": "reasoning",
+          "source": "Therefore the total number is 5"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题删除重复的原 claim 19，并将原 claim 21 的标签改为 reasoning；其余 claims 保持不变并顺序 renumber。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/05829_chemistry_emma_chemistry_open_b92464361e5df99183dc56b2_5bb438b23a.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/00740_chemistry_emma_chemistry_open_b92464361e5df99183dc56b2_5bb438b23a.json"
+  }
+}

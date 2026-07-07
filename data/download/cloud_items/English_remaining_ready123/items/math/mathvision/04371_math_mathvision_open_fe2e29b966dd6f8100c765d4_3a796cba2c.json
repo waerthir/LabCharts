@@ -1,0 +1,743 @@
+{
+  "pack_index": 4371,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00575:mathvision__open_fe2e29b966dd6f8100c765d4__3b54240e01c5",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_fe2e29b966dd6f8100c765d4",
+    "source_problem_id": "open_fe2e29b966dd6f8100c765d4",
+    "problem_run_key": "mathvision__open_fe2e29b966dd6f8100c765d4__3b54240e01c5",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00575.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00575.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00575.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00575.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "The diagram shows the net of a cube whose faces are numbered. Sascha adds the numbers that are on opposite faces of the cube. Which three results does he get?\n<image1>",
+    "raw_answer_text": "$4,6,11$",
+    "open_variant_id": "open_fe2e29b966dd6f8100c765d4",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "The diagram shows the net of a cube whose faces are numbered. Sascha adds the numbers that are on opposite faces of the cube. What three results does he get?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "$4,6,11$",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_6c7369fc6559a0babaa5dfdb",
+        "problem_id": "prob_e2974997f8288cb20b651a7e",
+        "node_type": "answer_claim",
+        "canonical_value": "$4,6,11$",
+        "surface_forms": [
+          "$4,6,11$"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_dc1963268fba024a7ec3671a"
+        ],
+        "evidence_refs": [
+          "asset_dc1963268fba024a7ec3671a"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "set",
+        "normalized_value": {
+          "answer": "$4,6,11$"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T05:11:58Z",
+        "updated_at": "2026-04-06T05:11:58Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_fe2e29b966dd6f8100c765d4",
+      "parent_problem_id": "prob_e2974997f8288cb20b651a7e",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "The diagram shows the net of a cube whose faces are numbered. Sascha adds the numbers that are on opposite faces of the cube. What three results does he get?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "$4,6,11$",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "The diagram shows the net of a cube whose faces are numbered. Sascha adds the numbers that are on opposite faces of the cube. What three results does he get?",
+    "raw_answer": "$4,6,11$",
+    "raw_standard_answer": "$4,6,11$",
+    "resolved_question_text": "The diagram shows the net of a cube whose faces are numbered. Sascha adds the numbers that are on opposite faces of the cube. What three results does he get?",
+    "resolved_answer": "$4,6,11$",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a cube net. One can directly see that in the middle there is a horizontal row of four squares, with the numbers from left to right being 1, 2, 3, 4 in order; the square numbered 5 is connected above 2; the square numbered 6 is connected below 3. Reasoning: When the net is folded into a cube, taking face 2 as the starting face, the horizontal strip will enclose the side faces of the cube. 1 and 3 are respectively on the left and right sides of 2, and after being folded up they become two opposite faces, so one pair of opposite faces is 1 and 3, with sum 1+3=4. When the horizontal strip continues folding, 4 will wrap around to the opposite side of 2, so 2 and 4 are opposite, with sum 2+4=6. The remaining two vertically connected faces, 5 and 6, will become the top face and bottom face of the cube, so they are opposite, with sum 5+6=11.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_fe2e29b966dd6f8100c765d4",
+      "problem_run_key": "mathvision__open_fe2e29b966dd6f8100c765d4__3b54240e01c5",
+      "question_text": "The diagram shows the net of a cube whose faces are numbered. Sascha adds the numbers that are on opposite faces of the cube. What three results does he get?",
+      "standard_answer": "$4,6,11$",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00575.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00575.png"
+      ],
+      "initial_multi_solution_score": 0.3467,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the net from the image as a horizontal strip of four squares labeled 1, 2, 3, 4 from left to right, with 5 attached above 2 and 6 attached below 3. Use 2 as a starting face and mentally fold the strip around the cube: 1 and 3 fold onto opposite side faces, and 4 folds around to the face opposite 2. The two remaining flaps, 5 above 2 and 6 below 3, become the top and bottom faces, so they are opposite. Add the opposite pairs: 1+3=4, 2+4=6, and 5+6=11.",
+          "CoT_raw": "图像描述：图中是一个立方体展开图。可以直接看到中间有一条水平的四个正方形，号码从左到右依次是 1、2、3、4；号码 5 的正方形连接在 2 的上方；号码 6 的正方形连接在 3 的下方。推理：按照展开图折成立方体时，以 2 号面作为起始面，水平条带会围成立方体的侧面。1 和 3 分别在 2 的左右两侧，折起后成为相对的两个面，所以一组相对面是 1 和 3，和为 1+3=4。水平条带继续折叠时，4 会绕到 2 的对面，所以 2 和 4 相对，和为 2+4=6。剩下的两个上下连接面 5 和 6 会成为立方体的顶面和底面，因此它们相对，和为 5+6=11。",
+          "model_answer": "4, 6, 11",
+          "is_answer_match": true,
+          "answer_match_reason": "The predicted answer lists the same three sums as the standard answer: 4, 6, and 11.",
+          "answer_match_part_results": [
+            {
+              "standard_part": "4,6,11",
+              "predicted_part": "4, 6, 11",
+              "is_equivalent": true,
+              "reason": "Identical values, with only formatting differences."
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个立方体展开图。可以直接看到中间有一条水平的四个正方形，号码从左到右依次是 1、2、3、4；号码 5 的正方形连接在 2 的上方；号码 6 的正方形连接在 3 的下方。推理：按照展开图折成立方体时，以 2 号面作为起始面，水平条带会围成立方体的侧面。1 和 3 分别在 2 的左右两侧，折起后成为相对的两个面，所以一组相对面是 1 和 3，和为 1+3=4。水平条带继续折叠时，4 会绕到 2 的对面，所以 2 和 4 相对，和为 2+4=6。剩下的两个上下连接面 5 和 6 会成为立方体的顶面和底面，因此它们相对，和为 5+6=11。",
+          "answer_answer_check_final": "4, 6, 11",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "The reasoning trace is faithful to the image, follows the required order of first describing the diagram and then reasoning, matches the assigned method draft, and reaches the standard answer 4, 6, 11. No revision is needed.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个立方体展开图。可以直接看到中间有一条水平的四个正方形，号码从左到右依次是 1、2、3、4；号码 5 的正方形连接在 2 的上方；号码 6 的正方形连接在 3 的下方。推理：按照展开图折成立方体时，以 2 号面作为起始面，水平条带会围成立方体的侧面。1 和 3 分别在 2 的左右两侧，折起后成为相对的两个面，所以一组相对面是 1 和 3，和为 1+3=4。水平条带继续折叠时，4 会绕到 2 的对面，所以 2 和 4 相对，和为 2+4=6。剩下的两个上下连接面 5 和 6 会成为立方体的顶面和底面，因此它们相对，和为 5+6=11。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is a direct physical/mental folding route, identifying opposite faces by imagining the cube being assembled from the pictured net.",
+            "image_role": "Provides the exact layout and labels: row 1-2-3-4, with 5 above 2 and 6 below 3.",
+            "text_role": "States that the diagram is a cube net and asks for the sums of numbers on opposite faces.",
+            "knowledge_role": "Uses the cube-net folding rule that a four-square strip wraps around the cube and the two remaining flaps become the remaining opposite faces."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个立方体展开图。可以直接看到中间有一条水平的四个正方形，号码从左到右依次是 1、2、3、4；号码 5 的正方形连接在 2 的上方；号码 6 的正方形连接在 3 的下方。推理：按照展开图折成立方体时，以 2 号面作为起始面，水平条带会围成立方体的侧面。1 和 3 分别在 2 的左右两侧，折起后成为相对的两个面，所以一组相对面是 1 和 3，和为 1+3=4。水平条带继续折叠时，4 会绕到 2 的对面，所以 2 和 4 相对，和为 2+4=6。剩下的两个上下连接面 5 和 6 会成为立方体的顶面和底面，因此它们相对，和为 5+6=11。",
+            "model_answer": "4, 6, 11",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2769,
+              "completion_tokens": 453,
+              "total_tokens": 3222,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 8.63,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "The reasoning trace is faithful to the image, follows the required order of first describing the diagram and then reasoning, matches the assigned method draft, and reaches the standard answer 4, 6, 11. No revision is needed.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 8.026
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 8.647,
+              "usage_delta": {
+                "request_count": 10,
+                "successful_request_count": 11,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 10,
+                "requests_with_usage": 11,
+                "prompt_tokens": 27620,
+                "completion_tokens": 9188,
+                "total_tokens": 36808,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 194.177,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 6.577,
+              "usage_delta": {
+                "request_count": 9,
+                "successful_request_count": 9,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 9,
+                "requests_with_usage": 9,
+                "prompt_tokens": 18867,
+                "completion_tokens": 5031,
+                "total_tokens": 23898,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 115.063,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 8.043,
+              "usage_delta": {
+                "request_count": 8,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 8,
+                "requests_with_usage": 12,
+                "prompt_tokens": 32205,
+                "completion_tokens": 7717,
+                "total_tokens": 39922,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 173.431,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Read the image as grid positions: face 2 is central, face 1 is one square left of 2, face 3 is one square right of 2, face 4 is one square right of 3, face 5 is above 2, and face 6 is below 3. Assign face 2 a reference normal direction. When folding across shared edges by 90 degrees, face 1 and face 3 receive opposite normal directions, so they are opposite. Continuing the fold along the strip, face 4 receives the normal opposite face 2, so 2 and 4 are opposite. Folding the vertical flaps gives face 5 and face 6 opposite normals, so they are opposite. Then compute the sums: 1+3=4, 2+4=6, 5+6=11.",
+          "CoT_raw": "Image description: The attached net shows four squares in a horizontal row labeled 1, 2, 3, 4 from left to right. A square labeled 5 is attached above the square labeled 2, and a square labeled 6 is attached below the square labeled 3.\n\nReasoning: Use face 2 as the reference central face. When the cube is folded, face 1 and face 3 fold up on opposite sides of face 2, so faces 1 and 3 are opposite. Continuing along the horizontal strip, face 4 folds to the side opposite face 2, so faces 2 and 4 are opposite. The vertical flaps then place face 5 opposite face 6. Therefore the sums of opposite faces are 1+3=4, 2+4=6, and 5+6=11.",
+          "model_answer": "4, 6, 11",
+          "is_answer_match": true,
+          "answer_match_reason": "The predicted answer lists the same three sums of opposite faces as the standard answer: 4, 6, and 11.",
+          "answer_match_part_results": [
+            {
+              "standard_part": "4,6,11",
+              "predicted_part": "4, 6, 11",
+              "is_equivalent": true,
+              "reason": "The values are identical, with only insignificant formatting differences."
+            }
+          ],
+          "CoT_answer_check_final": "Image description: The attached net shows four squares in a horizontal row labeled 1, 2, 3, 4 from left to right. A square labeled 5 is attached above the square labeled 2, and a square labeled 6 is attached below the square labeled 3.\n\nReasoning: Use face 2 as the reference central face. When the cube is folded, face 1 and face 3 fold up on opposite sides of face 2, so faces 1 and 3 are opposite. Continuing along the horizontal strip, face 4 folds to the side opposite face 2, so faces 2 and 4 are opposite. The vertical flaps then place face 5 opposite face 6. Therefore the sums of opposite faces are 1+3=4, 2+4=6, and 5+6=11.",
+          "answer_answer_check_final": "4, 6, 11",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace accurately describes the image first, then reasons according to the assigned folding method, identifies the correct opposite face pairs, and matches the standard answer.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "Image description: The attached net shows four squares in a horizontal row labeled 1, 2, 3, 4 from left to right. A square labeled 5 is attached above the square labeled 2, and a square labeled 6 is attached below the square labeled 3.\n\nReasoning: Use face 2 as the reference central face. When the cube is folded, face 1 and face 3 fold up on opposite sides of face 2, so faces 1 and 3 are opposite. Continuing along the horizontal strip, face 4 folds to the side opposite face 2, so faces 2 and 4 are opposite. The vertical flaps then place face 5 opposite face 6. Therefore the sums of opposite faces are 1+3=4, 2+4=6, and 5+6=11.",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is an analytic orientation/normal-vector method rather than a visual mental assembly; it tracks face directions after 90-degree folds to determine opposite pairs.",
+            "image_role": "Supplies the relative grid positions and labels needed to assign folding directions to each face.",
+            "text_role": "Clarifies that opposite faces of the folded cube must be paired and their labels added.",
+            "knowledge_role": "Uses the geometric rule that opposite cube faces have opposite outward normals after folding a valid cube net."
+          },
+          "solver_metadata": {
+            "cot_raw": "Image description: The attached net shows four squares in a horizontal row labeled 1, 2, 3, 4 from left to right. A square labeled 5 is attached above the square labeled 2, and a square labeled 6 is attached below the square labeled 3.\n\nReasoning: Use face 2 as the reference central face. When the cube is folded, face 1 and face 3 fold up on opposite sides of face 2, so faces 1 and 3 are opposite. Continuing along the horizontal strip, face 4 folds to the side opposite face 2, so faces 2 and 4 are opposite. The vertical flaps then place face 5 opposite face 6. Therefore the sums of opposite faces are 1+3=4, 2+4=6, and 5+6=11.",
+            "model_answer": "4, 6, 11",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2801,
+              "completion_tokens": 744,
+              "total_tokens": 3545,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 13.707,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace accurately describes the image first, then reasons according to the assigned folding method, identifies the correct opposite face pairs, and matches the standard answer.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 9.795
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 13.725,
+              "usage_delta": {
+                "request_count": 11,
+                "successful_request_count": 17,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 11,
+                "requests_with_usage": 17,
+                "prompt_tokens": 47812,
+                "completion_tokens": 17379,
+                "total_tokens": 65191,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 348.22,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 5.238,
+              "usage_delta": {
+                "request_count": 5,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 5,
+                "requests_with_usage": 5,
+                "prompt_tokens": 11506,
+                "completion_tokens": 3052,
+                "total_tokens": 14558,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 62.186,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 9.815,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 5,
+                "prompt_tokens": 10504,
+                "completion_tokens": 5204,
+                "total_tokens": 15708,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 105.042,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 24.903,
+          "usage_delta": {
+            "request_count": 16,
+            "successful_request_count": 16,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 16,
+            "requests_with_usage": 16,
+            "prompt_tokens": 38086,
+            "completion_tokens": 13876,
+            "total_tokens": 51962,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 269.842,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1120",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00575.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_e2974997f8288cb20b651a7e",
+          "open_variant_count": 1,
+          "open_variant_id": "open_fe2e29b966dd6f8100c765d4",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "moderate_image_readability",
+            "set_answer_order_may_vary"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 76.982,
+      "problem_usage": {
+        "request_count": 7,
+        "successful_request_count": 7,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 7,
+        "requests_with_usage": 7,
+        "prompt_tokens": 15958,
+        "completion_tokens": 3698,
+        "total_tokens": 19656,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 76.82,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "The diagram shows the net of a cube whose faces are numbered. Sascha adds the numbers that are on opposite faces of the cube. What three results does he get?",
+      "answer": "$4,6,11$",
+      "final_cot": "Image description: The figure is a cube net. One can directly see that in the middle there is a horizontal row of four squares, with the numbers from left to right being 1, 2, 3, 4 in order; the square numbered 5 is connected above 2; the square numbered 6 is connected below 3. Reasoning: When the net is folded into a cube, taking face 2 as the starting face, the horizontal strip will enclose the side faces of the cube. 1 and 3 are respectively on the left and right sides of 2, and after being folded up they become two opposite faces, so one pair of opposite faces is 1 and 3, with sum 1+3=4. When the horizontal strip continues folding, 4 will wrap around to the opposite side of 2, so 2 and 4 are opposite, with sum 2+4=6. The remaining two vertically connected faces, 5 and 6, will become the top face and bottom face of the cube, so they are opposite, with sum 5+6=11.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "The reasoning trace is faithful to the image, follows the required order of first describing the diagram and then reasoning, matches the assigned method draft, and reaches the standard answer 4, 6, 11. No revision is needed.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 8.026
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace accurately describes the image first, then reasons according to the assigned folding method, identifies the correct opposite face pairs, and matches the standard answer.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 9.795
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1698,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00575.json",
+        "source_sample_filename": "mathvision00575.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00575.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T14:26:05Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_fe2e29b966dd6f8100c765d4",
+          "new_problem_id": "open_fe2e29b966dd6f8100c765d4",
+          "old_problem_run_key": "mathvision__open_fe2e29b966dd6f8100c765d4__3b54240e01c5",
+          "new_problem_run_key": "mathvision__open_fe2e29b966dd6f8100c765d4__3b54240e01c5",
+          "target_relpath": "math/mathvision/samples/mathvision00575.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_fe2e29b966dd6f8100c765d4",
+    "problem_run_key": "mathvision__open_fe2e29b966dd6f8100c765d4__3b54240e01c5",
+    "raw_question_text": "The diagram shows the net of a cube whose faces are numbered. Sascha adds the numbers that are on opposite faces of the cube. What three results does he get?",
+    "raw_answer": "$4,6,11$",
+    "raw_standard_answer": "$4,6,11$",
+    "resolved_question_text": "The diagram shows the net of a cube whose faces are numbered. Sascha adds the numbers that are on opposite faces of the cube. What three results does he get?",
+    "resolved_answer": "$4,6,11$",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a cube net. One can directly see that in the middle there is a horizontal row of four squares, with the numbers from left to right being 1, 2, 3, 4 in order; the square numbered 5 is connected above 2; the square numbered 6 is connected below 3. Reasoning: When the net is folded into a cube, taking face 2 as the starting face, the horizontal strip will enclose the side faces of the cube. 1 and 3 are respectively on the left and right sides of 2, and after being folded up they become two opposite faces, so one pair of opposite faces is 1 and 3, with sum 1+3=4. When the horizontal strip continues folding, 4 will wrap around to the opposite side of 2, so 2 and 4 are opposite, with sum 2+4=6. The remaining two vertically connected faces, 5 and 6, will become the top face and bottom face of the cube, so they are opposite, with sum 5+6=11.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure is a cube net.",
+        "label": "perception",
+        "source": "The figure is a cube net."
+      },
+      {
+        "claim_id": 2,
+        "claim": "In the middle there is a horizontal row of four squares.",
+        "label": "perception",
+        "source": "In the middle there is a horizontal row of four squares"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The numbers of the four horizontal squares from left to right are 1, 2, 3, 4 in order.",
+        "label": "perception",
+        "source": "The numbers from left to right are 1, 2, 3, 4 in order"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The square numbered 5 is connected above 2.",
+        "label": "perception",
+        "source": "The square numbered 5 is connected above 2"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The square numbered 6 is connected below 3.",
+        "label": "perception",
+        "source": "The square numbered 6 is connected below 3"
+      },
+      {
+        "claim_id": 6,
+        "claim": "Use face number 2 as the starting face.",
+        "label": "reasoning",
+        "source": "Use face number 2 as the starting face"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The horizontal strip will enclose the side faces of the cube.",
+        "label": "reasoning",
+        "source": "The horizontal strip will enclose the side faces of the cube"
+      },
+      {
+        "claim_id": 8,
+        "claim": "One pair of opposite faces is 1 and 3.",
+        "label": "reasoning",
+        "source": "So one pair of opposite faces is 1 and 3"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The sum of 1 and 3 is 4.",
+        "label": "reasoning",
+        "source": "The sum is 1+3=4"
+      },
+      {
+        "claim_id": 10,
+        "claim": "When the horizontal strip continues to fold, 4 will wrap around to the opposite side of 2.",
+        "label": "reasoning",
+        "source": "When the horizontal strip continues to fold, 4 will wrap around to the opposite side of 2"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The sum of 2 and 4 is 6.",
+        "label": "reasoning",
+        "source": "The sum is 2+4=6"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The remaining two upper and lower connecting faces are 5 and 6.",
+        "label": "reasoning",
+        "source": "The remaining two upper and lower connecting faces 5 and 6"
+      },
+      {
+        "claim_id": 13,
+        "claim": "5 and 6 will become the top face and bottom face of the cube.",
+        "label": "reasoning",
+        "source": "will become the top face and bottom face of the cube"
+      },
+      {
+        "claim_id": 14,
+        "claim": "5 and 6 are opposite.",
+        "label": "reasoning",
+        "source": "Therefore they are opposite"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The sum of 5 and 6 is 11.",
+        "label": "reasoning",
+        "source": "The sum is 5+6=11"
+      }
+    ],
+    "claim_count": 15,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure is a cube net.",
+          "label": "perception",
+          "source": "The figure is a cube net."
+        },
+        {
+          "claim_id": 2,
+          "claim": "In the middle there is a horizontal row of four squares.",
+          "label": "perception",
+          "source": "In the middle there is a horizontal row of four squares"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The numbers of the four horizontal squares from left to right are 1, 2, 3, 4 in order.",
+          "label": "perception",
+          "source": "The numbers from left to right are 1, 2, 3, 4 in order"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The square numbered 5 is connected above 2.",
+          "label": "perception",
+          "source": "The square numbered 5 is connected above 2"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The square numbered 6 is connected below 3.",
+          "label": "perception",
+          "source": "The square numbered 6 is connected below 3"
+        },
+        {
+          "claim_id": 6,
+          "claim": "Use face number 2 as the starting face.",
+          "label": "reasoning",
+          "source": "Use face number 2 as the starting face"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The horizontal strip will enclose the side faces of the cube.",
+          "label": "reasoning",
+          "source": "The horizontal strip will enclose the side faces of the cube"
+        },
+        {
+          "claim_id": 8,
+          "claim": "One pair of opposite faces is 1 and 3.",
+          "label": "reasoning",
+          "source": "So one pair of opposite faces is 1 and 3"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The sum of 1 and 3 is 4.",
+          "label": "reasoning",
+          "source": "The sum is 1+3=4"
+        },
+        {
+          "claim_id": 10,
+          "claim": "When the horizontal strip continues to fold, 4 will wrap around to the opposite side of 2.",
+          "label": "reasoning",
+          "source": "When the horizontal strip continues to fold, 4 will wrap around to the opposite side of 2"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The sum of 2 and 4 is 6.",
+          "label": "reasoning",
+          "source": "The sum is 2+4=6"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The remaining two upper and lower connecting faces are 5 and 6.",
+          "label": "reasoning",
+          "source": "The remaining two upper and lower connecting faces 5 and 6"
+        },
+        {
+          "claim_id": 13,
+          "claim": "5 and 6 will become the top face and bottom face of the cube.",
+          "label": "reasoning",
+          "source": "will become the top face and bottom face of the cube"
+        },
+        {
+          "claim_id": 14,
+          "claim": "5 and 6 are opposite.",
+          "label": "reasoning",
+          "source": "Therefore they are opposite"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The sum of 5 and 6 is 11.",
+          "label": "reasoning",
+          "source": "The sum is 5+6=11"
+        }
+      ],
+      "coverage_notes": "已按 review 删除重复的原 claims 8 和 9，并对剩余 claims 顺序重新编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:28Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/08737_math_mathvision_open_fe2e29b966dd6f8100c765d4_3a796cba2c.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04371_math_mathvision_open_fe2e29b966dd6f8100c765d4_3a796cba2c.json"
+  }
+}

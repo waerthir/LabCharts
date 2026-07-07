@@ -1,0 +1,614 @@
+{
+  "pack_index": 2182,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "circuit/eee_bench:eeebench01073:eee_bench__open_04532d441309cd3c058a73c0__cf2a909f733d",
+    "subject_dir": "circuit",
+    "dataset_slug": "eee_bench",
+    "problem_id": "open_04532d441309cd3c058a73c0",
+    "source_problem_id": "open_04532d441309cd3c058a73c0",
+    "problem_run_key": "eee_bench__open_04532d441309cd3c058a73c0__cf2a909f733d",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 50.0,
+    "difficulty_level": "medium",
+    "weighted_accuracy": 0.5,
+    "wrong_models": [
+      "gpt55_high",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "False",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01073.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01073.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/circuit/eee_bench/samples/eeebench01073.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench01073.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In an ideal differential amplifier shown in the <image>, a large value of \\( R_E \\)",
+    "raw_answer_text": "decreases the common mode gain only.",
+    "open_variant_id": "open_04532d441309cd3c058a73c0",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "In the ideal differential amplifier shown in the image, what is the effect of a large value of \\(R_E\\) on the amplifier gains?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "decreases the common mode gain only.",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_cbddcf51e3520dc3e3a05ac3",
+        "problem_id": "prob_d1c89dccb921326840aec234",
+        "node_type": "answer_claim",
+        "canonical_value": "decreases the common mode gain only.",
+        "surface_forms": [
+          "decreases the common mode gain only."
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_0d62cd217bdd8c73a14bc541"
+        ],
+        "evidence_refs": [
+          "asset_0d62cd217bdd8c73a14bc541"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "decreases the common mode gain only."
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T19:36:48Z",
+        "updated_at": "2026-04-06T19:36:48Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_04532d441309cd3c058a73c0",
+      "parent_problem_id": "prob_d1c89dccb921326840aec234",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "In the ideal differential amplifier shown in the image, what is the effect of a large value of \\(R_E\\) on the amplifier gains?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "decreases the common mode gain only.",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the ideal differential amplifier shown in the image, what is the effect of a large value of \\(R_E\\) on the amplifier gains?",
+    "raw_answer": "decreases the common mode gain only.",
+    "raw_standard_answer": "decreases the common mode gain only.",
+    "resolved_question_text": "In the ideal differential amplifier shown in the image, what is the effect of a large value of \\(R_E\\) on the amplifier gains?",
+    "resolved_answer": "decreases the common mode gain only.",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a two-transistor differential amplifier. The collectors of the two transistors are each connected through an R_C to the V_CC above; the two input sources v1 and v2 are applied respectively to the bases of the left and right transistors; the emitters of the two transistors are connected below to the same node, and this common emitter node is then connected through an R_E to -V_EE. Therefore, R_E is the tail/emitter resistor shared by the two transistors, not the emitter resistor independently belonging to each half-circuit. Reasoning: For differential-mode input, v1 and v2 are equal in amplitude and opposite in phase. Since the circuit is left-right symmetric, the common emitter node approximately remains unmoved, so increasing the shared R_E basically has no effect on the ideal differential gain. For common-mode input, v1 and v2 change simultaneously in the same direction, and the common emitter node must also change along with them through R_E; the larger R_E is, the stronger the common-mode emitter negative feedback or degeneration effect is, making the common-mode output smaller. Therefore, a large R_E only reduces common-mode gain, and does not reduce differential-mode gain.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_04532d441309cd3c058a73c0",
+      "problem_run_key": "eee_bench__open_04532d441309cd3c058a73c0__cf2a909f733d",
+      "question_text": "In the ideal differential amplifier shown in the image, what is the effect of a large value of \\(R_E\\) on the amplifier gains?",
+      "standard_answer": "decreases the common mode gain only.",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench00792.png",
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/crops/eeebench00792.png"
+      ],
+      "initial_multi_solution_score": 0.3197,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First identify from the image that RE is the common tail/emitter resistor shared by both transistors, not a separate emitter resistor in each half. Then consider two gain definitions. With differential input, v1 and v2 are equal and opposite; by symmetry the shared emitter node remains nearly fixed, so increasing RE has essentially no effect on differential gain in the ideal amplifier. With common-mode input, v1 and v2 move together; the shared emitter node must move through RE, and a larger RE gives stronger common-emitter degeneration, making the common-mode output smaller. Therefore a large RE decreases only the common-mode gain.",
+          "CoT_raw": "图像描述：图中是一个双晶体管差分放大器。两个晶体管的集电极各自通过一个 R_C 接到上方的 V_CC；两个输入源 v1 和 v2 分别加到左右晶体管的基极；两个晶体管的发射极在下方连接到同一个节点，该公共发射极节点再通过一个 R_E 接到 -V_EE。因此，R_E 是两只晶体管共享的尾部/发射极电阻，不是每一半电路各自独立的发射极电阻。推理：对差模输入，v1 和 v2 等幅反相。由于电路左右对称，公共发射极节点近似保持不动，所以增大共享的 R_E 对理想差分增益基本没有影响。对共模输入，v1 和 v2 同时同向变化，公共发射极节点也必须通过 R_E 随之变化；R_E 越大，共模发射极负反馈或退化作用越强，使共模输出更小。因此，大的 R_E 只会降低共模增益，而不会降低差模增益。",
+          "model_answer": "A large R_E decreases the common-mode gain only; the differential gain is essentially unchanged.",
+          "is_answer_match": true,
+          "answer_match_reason": "The predicted answer states that a large R_E decreases only the common-mode gain and leaves the differential gain essentially unchanged, which matches the standard answer.",
+          "answer_match_part_results": [
+            {
+              "standard_part": "decreases the common mode gain only.",
+              "predicted_part": "A large R_E decreases the common-mode gain only; the differential gain is essentially unchanged.",
+              "is_equivalent": true,
+              "reason": "Both answers identify the same effect: only common-mode gain is reduced, not differential gain."
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个双晶体管差分放大器。两个晶体管的集电极各自通过一个 R_C 接到上方的 V_CC；两个输入源 v1 和 v2 分别加到左右晶体管的基极；两个晶体管的发射极在下方连接到同一个节点，该公共发射极节点再通过一个 R_E 接到 -V_EE。因此，R_E 是两只晶体管共享的尾部/发射极电阻，不是每一半电路各自独立的发射极电阻。推理：对差模输入，v1 和 v2 等幅反相。由于电路左右对称，公共发射极节点近似保持不动，所以增大共享的 R_E 对理想差分增益基本没有影响。对共模输入，v1 和 v2 同时同向变化，公共发射极节点也必须通过 R_E 随之变化；R_E 越大，共模发射极负反馈或退化作用越强，使共模输出更小。因此，大的 R_E 只会降低共模增益，而不会降低差模增益。",
+          "answer_answer_check_final": "A large R_E decreases the common-mode gain only; the differential gain is essentially unchanged.",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace passes. It first describes the image, correctly identifies R_E as the shared tail/emitter resistor, then reasons separately about differential-mode and common-mode inputs. The final conclusion matches the standard answer: a large R_E decreases only the common-mode gain, leaving ideal differential gain essentially unaffected.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个双晶体管差分放大器。两个晶体管的集电极各自通过一个 R_C 接到上方的 V_CC；两个输入源 v1 和 v2 分别加到左右晶体管的基极；两个晶体管的发射极在下方连接到同一个节点，该公共发射极节点再通过一个 R_E 接到 -V_EE。因此，R_E 是两只晶体管共享的尾部/发射极电阻，不是每一半电路各自独立的发射极电阻。推理：对差模输入，v1 和 v2 等幅反相。由于电路左右对称，公共发射极节点近似保持不动，所以增大共享的 R_E 对理想差分增益基本没有影响。对共模输入，v1 和 v2 同时同向变化，公共发射极节点也必须通过 R_E 随之变化；R_E 越大，共模发射极负反馈或退化作用越强，使共模输出更小。因此，大的 R_E 只会降低共模增益，而不会降低差模增益。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct small-signal symmetry route: it separates the visually shown differential pair into differential-mode and common-mode excitations and checks where the shared emitter resistor appears. It is the natural single solution for this concept question.",
+            "image_role": "Read the circuit as an ideal BJT differential amplifier: two matched transistors with equal collector resistors RC connected to VCC, their emitters tied together at a common node, and that node connected through RE to -VEE; the two base inputs are v1 and v2.",
+            "text_role": "Use the question’s phrase “ideal differential amplifier” and its request for the effect of a large RE on the amplifier gains, so the solver must compare differential gain versus common-mode gain rather than compute numeric values.",
+            "knowledge_role": "Use differential-pair half-circuit behavior. For differential-mode drive, the common emitter node is a virtual ac ground by symmetry, so the tail resistor RE carries little/no incremental differential signal and does not set the differential gain. For common-mode drive, both emitter currents vary in the same direction, so signal current flows through RE and produces emitter degeneration/negative feedback; increasing RE raises this feedback and reduces common-mode gain."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个双晶体管差分放大器。两个晶体管的集电极各自通过一个 R_C 接到上方的 V_CC；两个输入源 v1 和 v2 分别加到左右晶体管的基极；两个晶体管的发射极在下方连接到同一个节点，该公共发射极节点再通过一个 R_E 接到 -V_EE。因此，R_E 是两只晶体管共享的尾部/发射极电阻，不是每一半电路各自独立的发射极电阻。推理：对差模输入，v1 和 v2 等幅反相。由于电路左右对称，公共发射极节点近似保持不动，所以增大共享的 R_E 对理想差分增益基本没有影响。对共模输入，v1 和 v2 同时同向变化，公共发射极节点也必须通过 R_E 随之变化；R_E 越大，共模发射极负反馈或退化作用越强，使共模输出更小。因此，大的 R_E 只会降低共模增益，而不会降低差模增益。",
+            "model_answer": "A large R_E decreases the common-mode gain only; the differential gain is essentially unchanged.",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2744,
+              "completion_tokens": 629,
+              "total_tokens": 3373,
+              "cached_tokens": 0,
+              "reasoning_tokens": 306
+            },
+            "_llm_elapsed_seconds": 13.408,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace passes. It first describes the image, correctly identifies R_E as the shared tail/emitter resistor, then reasons separately about differential-mode and common-mode inputs. The final conclusion matches the standard answer: a large R_E decreases only the common-mode gain, leaving ideal differential gain essentially unaffected.",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.98,
+              "method_fidelity_score": 0.98,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 7.085
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 13.441,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 6,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 6,
+                "prompt_tokens": 19376,
+                "completion_tokens": 3691,
+                "total_tokens": 23067,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1692,
+                "total_request_seconds": 94.8,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 4.951,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 4,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 4,
+                "prompt_tokens": 10008,
+                "completion_tokens": 3085,
+                "total_tokens": 13093,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1733,
+                "total_request_seconds": 74.565,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 7.12,
+              "usage_delta": {
+                "request_count": 6,
+                "successful_request_count": 6,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 6,
+                "requests_with_usage": 6,
+                "prompt_tokens": 15163,
+                "completion_tokens": 3970,
+                "total_tokens": 19133,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1712,
+                "total_request_seconds": 77.065,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 10.676,
+          "usage_delta": {
+            "request_count": 13,
+            "successful_request_count": 7,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 13,
+            "requests_with_usage": 7,
+            "prompt_tokens": 18637,
+            "completion_tokens": 3747,
+            "total_tokens": 22384,
+            "cached_tokens": 0,
+            "reasoning_tokens": 2368,
+            "total_request_seconds": 80.461,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EEE-Bench",
+        "dataset_slug": "eee_bench",
+        "source_problem_id": "1254",
+        "subject": "电气电子工程领域",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01073.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_d1c89dccb921326840aec234",
+          "open_variant_count": 1,
+          "open_variant_id": "open_04532d441309cd3c058a73c0",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "standard_circuit_knowledge_may_reduce_true_image_dependence"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 36.23,
+      "problem_usage": {
+        "request_count": 4,
+        "successful_request_count": 4,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 4,
+        "requests_with_usage": 4,
+        "prompt_tokens": 9695,
+        "completion_tokens": 1570,
+        "total_tokens": 11265,
+        "cached_tokens": 0,
+        "reasoning_tokens": 605,
+        "total_request_seconds": 36.049,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the ideal differential amplifier shown in the image, what is the effect of a large value of \\(R_E\\) on the amplifier gains?",
+      "answer": "decreases the common mode gain only.",
+      "final_cot": "Image description: The figure is a two-transistor differential amplifier. The collectors of the two transistors are each connected through an R_C to the V_CC above; the two input sources v1 and v2 are applied respectively to the bases of the left and right transistors; the emitters of the two transistors are connected below to the same node, and this common emitter node is then connected through an R_E to -V_EE. Therefore, R_E is the tail/emitter resistor shared by the two transistors, not the emitter resistor independently belonging to each half-circuit. Reasoning: For differential-mode input, v1 and v2 are equal in amplitude and opposite in phase. Since the circuit is left-right symmetric, the common emitter node approximately remains unmoved, so increasing the shared R_E basically has no effect on the ideal differential gain. For common-mode input, v1 and v2 change simultaneously in the same direction, and the common emitter node must also change along with them through R_E; the larger R_E is, the stronger the common-mode emitter negative feedback or degeneration effect is, making the common-mode output smaller. Therefore, a large R_E only reduces common-mode gain, and does not reduce differential-mode gain.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace passes. It first describes the image, correctly identifies R_E as the shared tail/emitter resistor, then reasons separately about differential-mode and common-mode inputs. The final conclusion matches the standard answer: a large R_E decreases only the common-mode gain, leaving ideal differential gain essentially unaffected.",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.98,
+          "method_fidelity_score": 0.98,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 7.085
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_resume_openvariants_20260506T003434CST",
+        "processed_index": 1189,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "circuit",
+        "dataset": "eee_bench",
+        "relative_dataset": "circuit/eee_bench",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01073.json",
+        "source_sample_filename": "eeebench01073.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01073.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.events.jsonl",
+        "written_at": "2026-05-05T22:39:47Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:17Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_04532d441309cd3c058a73c0",
+          "new_problem_id": "open_04532d441309cd3c058a73c0",
+          "old_problem_run_key": "eee_bench__open_04532d441309cd3c058a73c0__dbc0a724b7b0",
+          "new_problem_run_key": "eee_bench__open_04532d441309cd3c058a73c0__cf2a909f733d",
+          "target_relpath": "circuit/eee_bench/samples/eeebench01073.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_04532d441309cd3c058a73c0",
+    "problem_run_key": "eee_bench__open_04532d441309cd3c058a73c0__cf2a909f733d",
+    "raw_question_text": "In the ideal differential amplifier shown in the image, what is the effect of a large value of \\(R_E\\) on the amplifier gains?",
+    "raw_answer": "decreases the common mode gain only.",
+    "raw_standard_answer": "decreases the common mode gain only.",
+    "resolved_question_text": "In the ideal differential amplifier shown in the image, what is the effect of a large value of \\(R_E\\) on the amplifier gains?",
+    "resolved_answer": "decreases the common mode gain only.",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a two-transistor differential amplifier. The collectors of the two transistors are each connected through an R_C to the V_CC above; the two input sources v1 and v2 are applied respectively to the bases of the left and right transistors; the emitters of the two transistors are connected below to the same node, and this common emitter node is then connected through an R_E to -V_EE. Therefore, R_E is the tail/emitter resistor shared by the two transistors, not the emitter resistor independently belonging to each half-circuit. Reasoning: For differential-mode input, v1 and v2 are equal in amplitude and opposite in phase. Since the circuit is left-right symmetric, the common emitter node approximately remains unmoved, so increasing the shared R_E basically has no effect on the ideal differential gain. For common-mode input, v1 and v2 change simultaneously in the same direction, and the common emitter node must also change along with them through R_E; the larger R_E is, the stronger the common-mode emitter negative feedback or degeneration effect is, making the common-mode output smaller. Therefore, a large R_E only reduces common-mode gain, and does not reduce differential-mode gain.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure is a two-transistor differential amplifier.",
+        "label": "perception",
+        "source": "The figure is a two-transistor differential amplifier."
+      },
+      {
+        "claim_id": 2,
+        "claim": "The collectors of the two transistors are each connected through an R_C to the V_CC above.",
+        "label": "perception",
+        "source": "The collectors of the two transistors are each connected through an R_C to the V_CC above"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The two input sources v1 and v2 are applied respectively to the bases of the left and right transistors.",
+        "label": "perception",
+        "source": "The two input sources v1 and v2 are applied respectively to the bases of the left and right transistors"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The emitters of the two transistors are connected below to the same node.",
+        "label": "perception",
+        "source": "The emitters of the two transistors are connected below to the same node"
+      },
+      {
+        "claim_id": 5,
+        "claim": "This common emitter node is connected through an R_E to -V_EE.",
+        "label": "perception",
+        "source": "This common emitter node is then connected through an R_E to -V_EE"
+      },
+      {
+        "claim_id": 6,
+        "claim": "R_E is the tail/emitter resistor shared by the two transistors.",
+        "label": "reasoning",
+        "source": "Therefore, R_E is the tail/emitter resistor shared by the two transistors"
+      },
+      {
+        "claim_id": 7,
+        "claim": "R_E is not the emitter resistor independently belonging to each half-circuit.",
+        "label": "reasoning",
+        "source": "Not the emitter resistor independently belonging to each half-circuit"
+      },
+      {
+        "claim_id": 8,
+        "claim": "For differential-mode input, v1 and v2 are equal in amplitude and opposite in phase.",
+        "label": "knowledge",
+        "source": "For differential-mode input, v1 and v2 are equal in amplitude and opposite in phase."
+      },
+      {
+        "claim_id": 9,
+        "claim": "The circuit is left-right symmetric.",
+        "label": "perception",
+        "source": "Since the circuit is left-right symmetric"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Under differential-mode input, the common emitter node approximately remains unmoved.",
+        "label": "reasoning",
+        "source": "The common emitter node approximately remains unmoved"
+      },
+      {
+        "claim_id": 11,
+        "claim": "Increasing the shared R_E basically has no effect on the ideal differential gain.",
+        "label": "reasoning",
+        "source": "So increasing the shared R_E basically has no effect on the ideal differential gain."
+      },
+      {
+        "claim_id": 12,
+        "claim": "For common-mode input, v1 and v2 change simultaneously in the same direction.",
+        "label": "knowledge",
+        "source": "For common-mode input, v1 and v2 change simultaneously in the same direction"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Under common-mode input, the common emitter node must change along with them through R_E.",
+        "label": "reasoning",
+        "source": "The common emitter node must also change along with them through R_E"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The larger R_E is, the stronger the common-mode emitter negative feedback or degeneration effect is.",
+        "label": "reasoning",
+        "source": "The larger R_E is, the stronger the common-mode emitter negative feedback or degeneration effect is"
+      },
+      {
+        "claim_id": 15,
+        "claim": "A stronger common-mode emitter negative feedback or degeneration effect makes the common-mode output smaller.",
+        "label": "reasoning",
+        "source": "Making the common-mode output smaller"
+      },
+      {
+        "claim_id": 16,
+        "claim": "A large R_E only reduces common-mode gain.",
+        "label": "reasoning",
+        "source": "Therefore, a large R_E only reduces common-mode gain"
+      }
+    ],
+    "claim_count": 16,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure is a two-transistor differential amplifier.",
+          "label": "perception",
+          "source": "The figure is a two-transistor differential amplifier."
+        },
+        {
+          "claim_id": 2,
+          "claim": "The collectors of the two transistors are each connected through an R_C to the V_CC above.",
+          "label": "perception",
+          "source": "The collectors of the two transistors are each connected through an R_C to the V_CC above"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The two input sources v1 and v2 are applied respectively to the bases of the left and right transistors.",
+          "label": "perception",
+          "source": "The two input sources v1 and v2 are applied respectively to the bases of the left and right transistors"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The emitters of the two transistors are connected below to the same node.",
+          "label": "perception",
+          "source": "The emitters of the two transistors are connected below to the same node"
+        },
+        {
+          "claim_id": 5,
+          "claim": "This common emitter node is connected through an R_E to -V_EE.",
+          "label": "perception",
+          "source": "This common emitter node is then connected through an R_E to -V_EE"
+        },
+        {
+          "claim_id": 6,
+          "claim": "R_E is the tail/emitter resistor shared by the two transistors.",
+          "label": "reasoning",
+          "source": "Therefore, R_E is the tail/emitter resistor shared by the two transistors"
+        },
+        {
+          "claim_id": 7,
+          "claim": "R_E is not the emitter resistor independently belonging to each half-circuit.",
+          "label": "reasoning",
+          "source": "Not the emitter resistor independently belonging to each half-circuit"
+        },
+        {
+          "claim_id": 8,
+          "claim": "For differential-mode input, v1 and v2 are equal in amplitude and opposite in phase.",
+          "label": "knowledge",
+          "source": "For differential-mode input, v1 and v2 are equal in amplitude and opposite in phase."
+        },
+        {
+          "claim_id": 9,
+          "claim": "The circuit is left-right symmetric.",
+          "label": "perception",
+          "source": "Since the circuit is left-right symmetric"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Under differential-mode input, the common emitter node approximately remains unmoved.",
+          "label": "reasoning",
+          "source": "The common emitter node approximately remains unmoved"
+        },
+        {
+          "claim_id": 11,
+          "claim": "Increasing the shared R_E basically has no effect on the ideal differential gain.",
+          "label": "reasoning",
+          "source": "So increasing the shared R_E basically has no effect on the ideal differential gain."
+        },
+        {
+          "claim_id": 12,
+          "claim": "For common-mode input, v1 and v2 change simultaneously in the same direction.",
+          "label": "knowledge",
+          "source": "For common-mode input, v1 and v2 change simultaneously in the same direction"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Under common-mode input, the common emitter node must change along with them through R_E.",
+          "label": "reasoning",
+          "source": "The common emitter node must also change along with them through R_E"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The larger R_E is, the stronger the common-mode emitter negative feedback or degeneration effect is.",
+          "label": "reasoning",
+          "source": "The larger R_E is, the stronger the common-mode emitter negative feedback or degeneration effect is"
+        },
+        {
+          "claim_id": 15,
+          "claim": "A stronger common-mode emitter negative feedback or degeneration effect makes the common-mode output smaller.",
+          "label": "reasoning",
+          "source": "Making the common-mode output smaller"
+        },
+        {
+          "claim_id": 16,
+          "claim": "A large R_E only reduces common-mode gain.",
+          "label": "reasoning",
+          "source": "Therefore, a large R_E only reduces common-mode gain"
+        }
+      ],
+      "coverage_notes": "已根据修复意见将所有乱码 claim 和 source 替换为 final_cot 中对应的正常中文文本；未处理任何 no_fix 项。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:18Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/circuit/eee_bench/01532_circuit_eee_bench_open_04532d441309cd3c058a73c0_546e0557db.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/circuit/eee_bench/02182_circuit_eee_bench_open_04532d441309cd3c058a73c0_546e0557db.json"
+  }
+}

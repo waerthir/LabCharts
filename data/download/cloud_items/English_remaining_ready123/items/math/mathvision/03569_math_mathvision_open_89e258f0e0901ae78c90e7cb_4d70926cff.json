@@ -1,0 +1,604 @@
+{
+  "pack_index": 3569,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00020:mathvision__open_89e258f0e0901ae78c90e7cb__45fa8b6b47ce",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_89e258f0e0901ae78c90e7cb",
+    "source_problem_id": "open_89e258f0e0901ae78c90e7cb",
+    "problem_run_key": "mathvision__open_89e258f0e0901ae78c90e7cb__45fa8b6b47ce",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00020.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00020.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00020.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00020.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "A hen lays white and brown eggs. Lisa takes six of them and puts them in a box as shown. The brown eggs are not allowed to touch each other. What is the maximum number of brown eggs Lisa can place in the box?\n<image1>",
+    "raw_answer_text": "3",
+    "open_variant_id": "open_89e258f0e0901ae78c90e7cb",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "A hen lays white and brown eggs. Lisa takes six of them and puts them in a box as shown. The brown eggs are not allowed to touch each other. What is the maximum number of brown eggs Lisa can place in the box?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "3",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_b531e5d3ae9e559a7186d4c8",
+        "problem_id": "prob_17cb127fcc0e9b44b6c48884",
+        "node_type": "answer_claim",
+        "canonical_value": "3",
+        "surface_forms": [
+          "3"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_04749757981a8d5d4e49321c"
+        ],
+        "evidence_refs": [
+          "asset_04749757981a8d5d4e49321c"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "3"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-04T12:49:42Z",
+        "updated_at": "2026-04-04T12:49:42Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_89e258f0e0901ae78c90e7cb",
+      "parent_problem_id": "prob_17cb127fcc0e9b44b6c48884",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "A hen lays white and brown eggs. Lisa takes six of them and puts them in a box as shown. The brown eggs are not allowed to touch each other. What is the maximum number of brown eggs Lisa can place in the box?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "3",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "A hen lays white and brown eggs. Lisa takes six of them and puts them in a box as shown. The brown eggs are not allowed to touch each other. What is the maximum number of brown eggs Lisa can place in the box?",
+    "raw_answer": "3",
+    "raw_standard_answer": "3",
+    "resolved_question_text": "A hen lays white and brown eggs. Lisa takes six of them and puts them in a box as shown. The brown eggs are not allowed to touch each other. What is the maximum number of brown eggs Lisa can place in the box?",
+    "resolved_answer": "3",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: On the left side of the image is a box for holding eggs, inside there are 6 circular egg positions, arranged in 2 rows and 3 columns; on the right side is a hen. The egg positions touch according to grid adjacency relationships: two adjacent egg positions in the same row will touch, and two vertically adjacent egg positions in the same column will also touch. Reasoning: brown eggs cannot touch each other, so in this 2×3 grid, choose as many mutually non-adjacent positions as possible. The upper-left, upper-right, and lower-middle 3 positions can be chosen; they are pairwise non-adjacent, so 3 is feasible. On the other hand, the two vertical positions in each column touch each other, so each column can hold at most 1 brown egg; there are 3 columns in total, so the maximum is not more than 3. Since 3 is feasible and it is impossible to exceed 3, the maximum number is 3.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_89e258f0e0901ae78c90e7cb",
+      "problem_run_key": "mathvision__open_89e258f0e0901ae78c90e7cb__45fa8b6b47ce",
+      "question_text": "A hen lays white and brown eggs. Lisa takes six of them and puts them in a box as shown. The brown eggs are not allowed to touch each other. What is the maximum number of brown eggs Lisa can place in the box?",
+      "standard_answer": "3",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00020.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00020.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First read the image as a 2-by-3 egg box: six circular egg positions arranged in two rows and three columns. Positions that share a side in this grid are touching: horizontal neighbors in the same row touch, and vertical neighbors in the same column touch. From the text, brown eggs may not touch each other, and the task is to maximize the number of brown positions. Model the six positions as a 2x3 grid graph and choose a largest set of non-adjacent cells. A checkerboard choice such as top-left, top-right, and bottom-middle gives 3 brown eggs with no touching. Four is impossible because in each of the three columns at most one egg can be brown, and trying to choose from all three columns already forces the checkerboard maximum; equivalently the largest independent set of a 2x3 grid is 3. Therefore the maximum is 3.",
+          "CoT_raw": "图像描述：图中左侧是一个装蛋的盒子，里面有 6 个圆形蛋位，排列成 2 行 3 列；右侧是一只母鸡。蛋位之间按网格相邻关系接触：同一行相邻的两个蛋位会接触，同一列上下相邻的两个蛋位也会接触。推理： brown eggs 不能互相接触，所以要在这个 2×3 网格中选尽可能多的互不相邻位置。可以选上排左、上排右、下排中这 3 个位置，它们两两不相邻，因此 3 个可行。另一方面，每一列上下两个位置互相接触，所以每列最多只能放 1 个 brown egg；一共有 3 列，因此最多不超过 3 个。既然 3 个可行且不可能超过 3 个，最大数是 3。",
+          "model_answer": "3",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "3",
+              "predicted_part": "3",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中左侧是一个装蛋的盒子，里面有 6 个圆形蛋位，排列成 2 行 3 列；右侧是一只母鸡。蛋位之间按网格相邻关系接触：同一行相邻的两个蛋位会接触，同一列上下相邻的两个蛋位也会接触。推理： brown eggs 不能互相接触，所以要在这个 2×3 网格中选尽可能多的互不相邻位置。可以选上排左、上排右、下排中这 3 个位置，它们两两不相邻，因此 3 个可行。另一方面，每一列上下两个位置互相接触，所以每列最多只能放 1 个 brown egg；一共有 3 列，因此最多不超过 3 个。既然 3 个可行且不可能超过 3 个，最大数是 3。",
+          "answer_answer_check_final": "3",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace is sound. It first describes the image, correctly identifies the 2×3 arrangement and side-touching adjacency, then models the problem as selecting non-adjacent cells. The construction of 3 brown eggs is valid, and the column-based upper bound proves no more than 3 are possible. No revision needed.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中左侧是一个装蛋的盒子，里面有 6 个圆形蛋位，排列成 2 行 3 列；右侧是一只母鸡。蛋位之间按网格相邻关系接触：同一行相邻的两个蛋位会接触，同一列上下相邻的两个蛋位也会接触。推理： brown eggs 不能互相接触，所以要在这个 2×3 网格中选尽可能多的互不相邻位置。可以选上排左、上排右、下排中这 3 个位置，它们两两不相邻，因此 3 个可行。另一方面，每一列上下两个位置互相接触，所以每列最多只能放 1 个 brown egg；一共有 3 列，因此最多不超过 3 个。既然 3 个可行且不可能超过 3 个，最大数是 3。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct graph/grid independent-set route, using the visual arrangement as a 2x3 adjacency grid and applying the no-touching rule to find the maximum.",
+            "image_role": "Read the box layout: six egg slots in two rows and three columns, with adjacent slots touching horizontally and vertically.",
+            "text_role": "Use the statement that Lisa places six eggs in the shown box and that brown eggs are not allowed to touch; identify the requested value as the maximum number of brown eggs.",
+            "knowledge_role": "Use the combinatorial rule that the maximum number of non-adjacent selected cells in a 2x3 grid is obtained by a checkerboard pattern, giving 3."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中左侧是一个装蛋的盒子，里面有 6 个圆形蛋位，排列成 2 行 3 列；右侧是一只母鸡。蛋位之间按网格相邻关系接触：同一行相邻的两个蛋位会接触，同一列上下相邻的两个蛋位也会接触。推理： brown eggs 不能互相接触，所以要在这个 2×3 网格中选尽可能多的互不相邻位置。可以选上排左、上排右、下排中这 3 个位置，它们两两不相邻，因此 3 个可行。另一方面，每一列上下两个位置互相接触，所以每列最多只能放 1 个 brown egg；一共有 3 列，因此最多不超过 3 个。既然 3 个可行且不可能超过 3 个，最大数是 3。",
+            "model_answer": "3",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 3253,
+              "completion_tokens": 765,
+              "total_tokens": 4018,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 19.064,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace is sound. It first describes the image, correctly identifies the 2×3 arrangement and side-touching adjacency, then models the problem as selecting non-adjacent cells. The construction of 3 brown eggs is valid, and the column-based upper bound proves no more than 3 are possible. No revision needed.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 15.518
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 19.122,
+              "usage_delta": {
+                "request_count": 16,
+                "successful_request_count": 19,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 16,
+                "requests_with_usage": 19,
+                "prompt_tokens": 56780,
+                "completion_tokens": 16648,
+                "total_tokens": 73428,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 335.274,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 15.574,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 14,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 14,
+                "prompt_tokens": 35697,
+                "completion_tokens": 7700,
+                "total_tokens": 43397,
+                "cached_tokens": 3328,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 186.594,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 13.988,
+          "usage_delta": {
+            "request_count": 14,
+            "successful_request_count": 13,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 14,
+            "requests_with_usage": 13,
+            "prompt_tokens": 37801,
+            "completion_tokens": 11052,
+            "total_tokens": 48853,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 222.297,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "54",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00020.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_17cb127fcc0e9b44b6c48884",
+          "open_variant_count": 1,
+          "open_variant_id": "open_89e258f0e0901ae78c90e7cb",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "spatial_contact_definition_may_depend_on_image_interpretation"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 48.703,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 10014,
+        "completion_tokens": 1965,
+        "total_tokens": 11979,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 48.509,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "A hen lays white and brown eggs. Lisa takes six of them and puts them in a box as shown. The brown eggs are not allowed to touch each other. What is the maximum number of brown eggs Lisa can place in the box?",
+      "answer": "3",
+      "final_cot": "Image description: On the left side of the image is a box for holding eggs, inside there are 6 circular egg positions, arranged in 2 rows and 3 columns; on the right side is a hen. The egg positions touch according to grid adjacency relationships: two adjacent egg positions in the same row will touch, and two vertically adjacent egg positions in the same column will also touch. Reasoning: brown eggs cannot touch each other, so in this 2×3 grid, choose as many mutually non-adjacent positions as possible. The upper-left, upper-right, and lower-middle 3 positions can be chosen; they are pairwise non-adjacent, so 3 is feasible. On the other hand, the two vertical positions in each column touch each other, so each column can hold at most 1 brown egg; there are 3 columns in total, so the maximum is not more than 3. Since 3 is feasible and it is impossible to exceed 3, the maximum number is 3.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace is sound. It first describes the image, correctly identifies the 2×3 arrangement and side-touching adjacency, then models the problem as selecting non-adjacent cells. The construction of 3 brown eggs is valid, and the column-based upper bound proves no more than 3 are possible. No revision needed.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 15.518
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1143,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00020.json",
+        "source_sample_filename": "mathvision00020.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00020.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T11:24:28Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_89e258f0e0901ae78c90e7cb",
+          "new_problem_id": "open_89e258f0e0901ae78c90e7cb",
+          "old_problem_run_key": "mathvision__open_89e258f0e0901ae78c90e7cb__45fa8b6b47ce",
+          "new_problem_run_key": "mathvision__open_89e258f0e0901ae78c90e7cb__45fa8b6b47ce",
+          "target_relpath": "math/mathvision/samples/mathvision00020.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_89e258f0e0901ae78c90e7cb",
+    "problem_run_key": "mathvision__open_89e258f0e0901ae78c90e7cb__45fa8b6b47ce",
+    "raw_question_text": "A hen lays white and brown eggs. Lisa takes six of them and puts them in a box as shown. The brown eggs are not allowed to touch each other. What is the maximum number of brown eggs Lisa can place in the box?",
+    "raw_answer": "3",
+    "raw_standard_answer": "3",
+    "resolved_question_text": "A hen lays white and brown eggs. Lisa takes six of them and puts them in a box as shown. The brown eggs are not allowed to touch each other. What is the maximum number of brown eggs Lisa can place in the box?",
+    "resolved_answer": "3",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: On the left side of the image is a box for holding eggs, inside there are 6 circular egg positions, arranged in 2 rows and 3 columns; on the right side is a hen. The egg positions touch according to grid adjacency relationships: two adjacent egg positions in the same row will touch, and two vertically adjacent egg positions in the same column will also touch. Reasoning: brown eggs cannot touch each other, so in this 2×3 grid, choose as many mutually non-adjacent positions as possible. The upper-left, upper-right, and lower-middle 3 positions can be chosen; they are pairwise non-adjacent, so 3 is feasible. On the other hand, the two vertical positions in each column touch each other, so each column can hold at most 1 brown egg; there are 3 columns in total, so the maximum is not more than 3. Since 3 is feasible and it is impossible to exceed 3, the maximum number is 3.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "On the left side of the image is a box for holding eggs.",
+        "label": "perception",
+        "source": "On the left side of the image is a box for holding eggs"
+      },
+      {
+        "claim_id": 2,
+        "claim": "Inside the box there are 6 circular egg positions.",
+        "label": "perception",
+        "source": "Inside there are 6 circular egg positions"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The 6 circular egg positions are arranged in 2 rows and 3 columns.",
+        "label": "perception",
+        "source": "Arranged in 2 rows and 3 columns"
+      },
+      {
+        "claim_id": 4,
+        "claim": "On the right side of the image is a hen.",
+        "label": "perception",
+        "source": "On the right side is a hen"
+      },
+      {
+        "claim_id": 5,
+        "claim": "Two adjacent egg positions in the same row will touch.",
+        "label": "perception",
+        "source": "Two adjacent egg positions in the same row will touch"
+      },
+      {
+        "claim_id": 6,
+        "claim": "Two vertically adjacent egg positions in the same column will also touch.",
+        "label": "perception",
+        "source": "Two vertically adjacent egg positions in the same column will also touch"
+      },
+      {
+        "claim_id": 7,
+        "claim": "brown eggs cannot touch each other.",
+        "label": "perception",
+        "source": "brown eggs cannot touch each other"
+      },
+      {
+        "claim_id": 8,
+        "claim": "It is necessary to choose as many mutually non-adjacent positions as possible in this 2×3 grid.",
+        "label": "reasoning",
+        "source": "So it is necessary to choose as many mutually non-adjacent positions as possible in this 2×3 grid"
+      },
+      {
+        "claim_id": 9,
+        "claim": "You can choose these 3 positions: upper row left, upper row right, and lower row middle.",
+        "label": "reasoning",
+        "source": "You can choose these 3 positions: upper row left, upper row right, and lower row middle"
+      },
+      {
+        "claim_id": 10,
+        "claim": "These 3 positions, upper row left, upper row right, and lower row middle, are pairwise non-adjacent.",
+        "label": "reasoning",
+        "source": "They are pairwise non-adjacent"
+      },
+      {
+        "claim_id": 11,
+        "claim": "Placing 3 brown eggs is feasible.",
+        "label": "reasoning",
+        "source": "Therefore 3 is feasible"
+      },
+      {
+        "claim_id": 12,
+        "claim": "At most only 1 brown egg can be placed in each column.",
+        "label": "reasoning",
+        "source": "So each column can contain at most 1 brown egg"
+      },
+      {
+        "claim_id": 13,
+        "claim": "There are 3 columns in total.",
+        "label": "perception",
+        "source": "There are 3 columns in total"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The number of brown eggs is at most no more than 3.",
+        "label": "reasoning",
+        "source": "Therefore at most no more than 3"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The maximum number is 3.",
+        "label": "reasoning",
+        "source": "The maximum number is 3"
+      }
+    ],
+    "claim_count": 15,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "On the left side of the image is a box for holding eggs.",
+          "label": "perception",
+          "source": "On the left side of the image is a box for holding eggs"
+        },
+        {
+          "claim_id": 2,
+          "claim": "Inside the box there are 6 circular egg positions.",
+          "label": "perception",
+          "source": "Inside there are 6 circular egg positions"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The 6 circular egg positions are arranged in 2 rows and 3 columns.",
+          "label": "perception",
+          "source": "Arranged in 2 rows and 3 columns"
+        },
+        {
+          "claim_id": 4,
+          "claim": "On the right side of the image is a hen.",
+          "label": "perception",
+          "source": "On the right side is a hen"
+        },
+        {
+          "claim_id": 5,
+          "claim": "Two adjacent egg positions in the same row will touch.",
+          "label": "perception",
+          "source": "Two adjacent egg positions in the same row will touch"
+        },
+        {
+          "claim_id": 6,
+          "claim": "Two vertically adjacent egg positions in the same column will also touch.",
+          "label": "perception",
+          "source": "Two vertically adjacent egg positions in the same column will also touch"
+        },
+        {
+          "claim_id": 7,
+          "claim": "brown eggs cannot touch each other.",
+          "label": "perception",
+          "source": "brown eggs cannot touch each other"
+        },
+        {
+          "claim_id": 8,
+          "claim": "It is necessary to choose as many mutually non-adjacent positions as possible in this 2×3 grid.",
+          "label": "reasoning",
+          "source": "So it is necessary to choose as many mutually non-adjacent positions as possible in this 2×3 grid"
+        },
+        {
+          "claim_id": 9,
+          "claim": "You can choose these 3 positions: upper row left, upper row right, and lower row middle.",
+          "label": "reasoning",
+          "source": "You can choose these 3 positions: upper row left, upper row right, and lower row middle"
+        },
+        {
+          "claim_id": 10,
+          "claim": "These 3 positions, upper row left, upper row right, and lower row middle, are pairwise non-adjacent.",
+          "label": "reasoning",
+          "source": "They are pairwise non-adjacent"
+        },
+        {
+          "claim_id": 11,
+          "claim": "Placing 3 brown eggs is feasible.",
+          "label": "reasoning",
+          "source": "Therefore 3 is feasible"
+        },
+        {
+          "claim_id": 12,
+          "claim": "At most only 1 brown egg can be placed in each column.",
+          "label": "reasoning",
+          "source": "So each column can contain at most 1 brown egg"
+        },
+        {
+          "claim_id": 13,
+          "claim": "There are 3 columns in total.",
+          "label": "perception",
+          "source": "There are 3 columns in total"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The number of brown eggs is at most no more than 3.",
+          "label": "reasoning",
+          "source": "Therefore at most no more than 3"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The maximum number is 3.",
+          "label": "reasoning",
+          "source": "The maximum number is 3"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题合并 claim 9-11，并删除与 claim 6、13、17 重复的原 claim 14、18、19；其余 claim 保持不变并重新编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T09:04:30Z",
+    "changed_target_fields": 65,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

@@ -1,0 +1,616 @@
+{
+  "pack_index": 4283,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00346:mathvision__open_6bc3e26152f94b0fa8b46655__e1544b4827b9",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_6bc3e26152f94b0fa8b46655",
+    "source_problem_id": "open_6bc3e26152f94b0fa8b46655",
+    "problem_run_key": "mathvision__open_6bc3e26152f94b0fa8b46655__e1544b4827b9",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00346.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00346.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00346.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00346.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Belinda is building squares with matches adding small squares that it already has built according to the schema of the figure. How many matches does she have to add to the 30th square to build the 31st?\n<image1>",
+    "raw_answer_text": "124",
+    "open_variant_id": "open_6bc3e26152f94b0fa8b46655",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "Belinda is building squares with matches, adding small squares to those already built according to the figure. How many matches does she have to add to the 30th square to build the 31st?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "124",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_9c6d59be322d2cb17a46267e",
+        "problem_id": "prob_69dd90c05033c6a3941eaded",
+        "node_type": "answer_claim",
+        "canonical_value": "124",
+        "surface_forms": [
+          "124"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_241753d17428600f05bd4118"
+        ],
+        "evidence_refs": [
+          "asset_241753d17428600f05bd4118"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "124"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-05T21:43:05Z",
+        "updated_at": "2026-04-05T21:43:05Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_6bc3e26152f94b0fa8b46655",
+      "parent_problem_id": "prob_69dd90c05033c6a3941eaded",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "Belinda is building squares with matches, adding small squares to those already built according to the figure. How many matches does she have to add to the 30th square to build the 31st?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "124",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Belinda is building squares with matches, adding small squares to those already built according to the figure. How many matches does she have to add to the 30th square to build the 31st?",
+    "raw_answer": "124",
+    "raw_standard_answer": "124",
+    "resolved_question_text": "Belinda is building squares with matches, adding small squares to those already built according to the figure. How many matches does she have to add to the 30th square to build the 31st?",
+    "resolved_answer": "124",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows square patterns built with matches; the one labeled 1 is a 1×1 small square; the one labeled 2 is a 2×2 small square grid composed of shared edges; the one labeled 3 is a 3×3 small square grid composed of shared edges. Therefore the nth figure can be regarded as an n×n small square grid. Reasoning: In an n×n grid, in the horizontal direction there are n+1 rows, each row has n matches, for a total of n(n+1) matches; in the vertical direction there are also n+1 columns, each column has n matches, for a total of n(n+1) matches. So the total number of matches is 2n(n+1). The number of matches that needs to be added to change from the 30th figure to the 31st figure is 2·31·32 - 2·30·31 = 1984 - 1860 = 124.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_6bc3e26152f94b0fa8b46655",
+      "problem_run_key": "mathvision__open_6bc3e26152f94b0fa8b46655__e1544b4827b9",
+      "question_text": "Belinda is building squares with matches, adding small squares to those already built according to the figure. How many matches does she have to add to the 30th square to build the 31st?",
+      "standard_answer": "124",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00346.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00346.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First describe the figure: the diagram labels stage 1 as a 1-by-1 matchstick square, stage 2 as a 2-by-2 grid of small squares sharing sides, and stage 3 as a 3-by-3 grid. Generalize that the nth figure is an n-by-n grid of small squares made from shared matches. Count total matches in an n-by-n grid as n horizontal matches in each of n+1 horizontal rows plus n vertical matches in each of n+1 vertical columns, giving 2n(n+1). Then the number added to go from the 30th to the 31st figure is total(31) - total(30) = 2·31·32 - 2·30·31 = 124.",
+          "CoT_raw": "图像描述：图中显示了用火柴搭成的正方形图案，标号1的是一个1×1的小正方形；标号2的是由共享边组成的2×2小正方形网格；标号3的是由共享边组成的3×3小正方形网格。因此第n个图形可看作n×n的小正方形网格。推理：在n×n网格中，水平方向有n+1行，每行有n根火柴，共n(n+1)根；竖直方向也有n+1列，每列有n根火柴，共n(n+1)根。所以总火柴数为2n(n+1)。从第30个图形变到第31个图形需要增加的火柴数为2·31·32 - 2·30·31 = 1984 - 1860 = 124。",
+          "model_answer": "124",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "124",
+              "predicted_part": "124",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中显示了用火柴搭成的正方形图案，标号1的是一个1×1的小正方形；标号2的是由共享边组成的2×2小正方形网格；标号3的是由共享边组成的3×3小正方形网格。因此第n个图形可看作n×n的小正方形网格。推理：在n×n网格中，水平方向有n+1行，每行有n根火柴，共n(n+1)根；竖直方向也有n+1列，每列有n根火柴，共n(n+1)根。所以总火柴数为2n(n+1)。从第30个图形变到第31个图形需要增加的火柴数为2·31·32 - 2·30·31 = 1984 - 1860 = 124。",
+          "answer_answer_check_final": "124",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace first describes the image, correctly identifies stages 1, 2, and 3 as 1×1, 2×2, and 3×3 shared-edge matchstick grids, then generalizes and computes the difference between the 31st and 30th total match counts. The final answer 124 matches the standard answer.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中显示了用火柴搭成的正方形图案，标号1的是一个1×1的小正方形；标号2的是由共享边组成的2×2小正方形网格；标号3的是由共享边组成的3×3小正方形网格。因此第n个图形可看作n×n的小正方形网格。推理：在n×n网格中，水平方向有n+1行，每行有n根火柴，共n(n+1)根；竖直方向也有n+1列，每列有n根火柴，共n(n+1)根。所以总火柴数为2n(n+1)。从第30个图形变到第31个图形需要增加的火柴数为2·31·32 - 2·30·31 = 1984 - 1860 = 124。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This uses a total-count formula for the whole nth grid and subtracts consecutive totals, rather than trying to count only the newly attached border directly.",
+            "image_role": "Read the visual pattern: figures labeled 1, 2, and 3 correspond to 1x1, 2x2, and 3x3 arrays of small matchstick squares with shared sides.",
+            "text_role": "Use the question text to identify that the required quantity is the number of matches added when moving specifically from the 30th square figure to the 31st.",
+            "knowledge_role": "Use the grid-counting rule that an n-by-n square grid has n(n+1) horizontal unit segments and n(n+1) vertical unit segments, so total matches are 2n(n+1)."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中显示了用火柴搭成的正方形图案，标号1的是一个1×1的小正方形；标号2的是由共享边组成的2×2小正方形网格；标号3的是由共享边组成的3×3小正方形网格。因此第n个图形可看作n×n的小正方形网格。推理：在n×n网格中，水平方向有n+1行，每行有n根火柴，共n(n+1)根；竖直方向也有n+1列，每列有n根火柴，共n(n+1)根。所以总火柴数为2n(n+1)。从第30个图形变到第31个图形需要增加的火柴数为2·31·32 - 2·30·31 = 1984 - 1860 = 124。",
+            "model_answer": "124",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2857,
+              "completion_tokens": 523,
+              "total_tokens": 3380,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 10.965,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace first describes the image, correctly identifies stages 1, 2, and 3 as 1×1, 2×2, and 3×3 shared-edge matchstick grids, then generalizes and computes the difference between the 31st and 30th total match counts. The final answer 124 matches the standard answer.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 10.058
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 10.981,
+              "usage_delta": {
+                "request_count": 10,
+                "successful_request_count": 11,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 10,
+                "requests_with_usage": 11,
+                "prompt_tokens": 25966,
+                "completion_tokens": 12180,
+                "total_tokens": 38146,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 257.561,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 10.075,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 5,
+                "prompt_tokens": 13630,
+                "completion_tokens": 3731,
+                "total_tokens": 17361,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 93.304,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 14.005,
+          "usage_delta": {
+            "request_count": 14,
+            "successful_request_count": 6,
+            "failed_request_count": 2,
+            "retry_count": 2,
+            "text_request_count": 0,
+            "multimodal_request_count": 14,
+            "requests_with_usage": 6,
+            "prompt_tokens": 18807,
+            "completion_tokens": 4775,
+            "total_tokens": 23582,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 353.279,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "741",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00346.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_69dd90c05033c6a3941eaded",
+          "open_variant_count": 1,
+          "open_variant_id": "open_6bc3e26152f94b0fa8b46655",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "Figure-defined pattern may be underspecified from text alone",
+            "metadata.image_paths does not match top-level image_paths"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 35.084,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 8848,
+        "completion_tokens": 1669,
+        "total_tokens": 10517,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 35.008,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "Belinda is building squares with matches, adding small squares to those already built according to the figure. How many matches does she have to add to the 30th square to build the 31st?",
+      "answer": "124",
+      "final_cot": "Image description: The figure shows square patterns built with matches; the one labeled 1 is a 1×1 small square; the one labeled 2 is a 2×2 small square grid composed of shared edges; the one labeled 3 is a 3×3 small square grid composed of shared edges. Therefore the nth figure can be regarded as an n×n small square grid. Reasoning: In an n×n grid, in the horizontal direction there are n+1 rows, each row has n matches, for a total of n(n+1) matches; in the vertical direction there are also n+1 columns, each column has n matches, for a total of n(n+1) matches. So the total number of matches is 2n(n+1). The number of matches that needs to be added to change from the 30th figure to the 31st figure is 2·31·32 - 2·30·31 = 1984 - 1860 = 124.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace first describes the image, correctly identifies stages 1, 2, and 3 as 1×1, 2×2, and 3×3 shared-edge matchstick grids, then generalizes and computes the difference between the 31st and 30th total match counts. The final answer 124 matches the standard answer.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 10.058
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1469,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00346.json",
+        "source_sample_filename": "mathvision00346.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00346.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T13:10:09Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_6bc3e26152f94b0fa8b46655",
+          "new_problem_id": "open_6bc3e26152f94b0fa8b46655",
+          "old_problem_run_key": "mathvision__open_6bc3e26152f94b0fa8b46655__e1544b4827b9",
+          "new_problem_run_key": "mathvision__open_6bc3e26152f94b0fa8b46655__e1544b4827b9",
+          "target_relpath": "math/mathvision/samples/mathvision00346.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_6bc3e26152f94b0fa8b46655",
+    "problem_run_key": "mathvision__open_6bc3e26152f94b0fa8b46655__e1544b4827b9",
+    "raw_question_text": "Belinda is building squares with matches, adding small squares to those already built according to the figure. How many matches does she have to add to the 30th square to build the 31st?",
+    "raw_answer": "124",
+    "raw_standard_answer": "124",
+    "resolved_question_text": "Belinda is building squares with matches, adding small squares to those already built according to the figure. How many matches does she have to add to the 30th square to build the 31st?",
+    "resolved_answer": "124",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows square patterns built with matches; the one labeled 1 is a 1×1 small square; the one labeled 2 is a 2×2 small square grid composed of shared edges; the one labeled 3 is a 3×3 small square grid composed of shared edges. Therefore the nth figure can be regarded as an n×n small square grid. Reasoning: In an n×n grid, in the horizontal direction there are n+1 rows, each row has n matches, for a total of n(n+1) matches; in the vertical direction there are also n+1 columns, each column has n matches, for a total of n(n+1) matches. So the total number of matches is 2n(n+1). The number of matches that needs to be added to change from the 30th figure to the 31st figure is 2·31·32 - 2·30·31 = 1984 - 1860 = 124.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure shows square patterns built with matches.",
+        "label": "perception",
+        "source": "The figure shows square patterns built with matches"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The one labeled 1 is a 1×1 small square.",
+        "label": "perception",
+        "source": "The one labeled 1 is a 1×1 small square"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The one labeled 2 is a 2×2 small square grid composed of shared edges.",
+        "label": "perception",
+        "source": "The one labeled 2 is a 2×2 small square grid composed of shared edges"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The one labeled 3 is a 3×3 small square grid composed of shared edges.",
+        "label": "perception",
+        "source": "The one labeled 3 is a 3×3 small square grid composed of shared edges"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The nth figure can be regarded as an n×n small square grid.",
+        "label": "reasoning",
+        "source": "Therefore the nth figure can be regarded as an n×n small square grid"
+      },
+      {
+        "claim_id": 6,
+        "claim": "In an n×n grid, in the horizontal direction there are n+1 rows.",
+        "label": "knowledge",
+        "source": "In an n×n grid, in the horizontal direction there are n+1 rows"
+      },
+      {
+        "claim_id": 7,
+        "claim": "In an n×n grid, in the horizontal direction, each row has n matchsticks.",
+        "label": "knowledge",
+        "source": "Each row has n matchsticks"
+      },
+      {
+        "claim_id": 8,
+        "claim": "In an n×n grid, in the horizontal direction, there are n(n+1) matchsticks in total.",
+        "label": "knowledge",
+        "source": "A total of n(n+1) matchsticks"
+      },
+      {
+        "claim_id": 9,
+        "claim": "In an n×n grid, in the vertical direction, there are n+1 columns.",
+        "label": "knowledge",
+        "source": "In the vertical direction there are also n+1 columns"
+      },
+      {
+        "claim_id": 10,
+        "claim": "In an n×n grid, in the vertical direction, each column has n matchsticks.",
+        "label": "knowledge",
+        "source": "Each column has n matchsticks"
+      },
+      {
+        "claim_id": 11,
+        "claim": "In an n×n grid, in the vertical direction, there are n(n+1) matchsticks in total.",
+        "label": "knowledge",
+        "source": "A total of n(n+1) matchsticks"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The total number of matchsticks in an n×n grid is 2n(n+1).",
+        "label": "knowledge",
+        "source": "So the total number of matchsticks is 2n(n+1)"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The number of matchsticks that need to be added to change from the 30th figure to the 31st figure is 2·31·32 - 2·30·31.",
+        "label": "reasoning",
+        "source": "The number of matchsticks that need to be added to change from the 30th figure to the 31st figure is 2·31·32 - 2·30·31"
+      },
+      {
+        "claim_id": 14,
+        "claim": "2·31·32 = 1984。",
+        "label": "reasoning",
+        "source": "2·31·32 - 2·30·31 = 1984 - 1860 = 124"
+      },
+      {
+        "claim_id": 15,
+        "claim": "2·30·31 = 1860。",
+        "label": "reasoning",
+        "source": "2·31·32 - 2·30·31 = 1984 - 1860 = 124"
+      },
+      {
+        "claim_id": 16,
+        "claim": "Changing from the 30th figure to the 31st figure requires adding 124 matchsticks.",
+        "label": "reasoning",
+        "source": "1984 - 1860 = 124"
+      }
+    ],
+    "claim_count": 16,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure shows square patterns built with matches.",
+          "label": "perception",
+          "source": "The figure shows square patterns built with matches"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The one labeled 1 is a 1×1 small square.",
+          "label": "perception",
+          "source": "The one labeled 1 is a 1×1 small square"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The one labeled 2 is a 2×2 small square grid composed of shared edges.",
+          "label": "perception",
+          "source": "The one labeled 2 is a 2×2 small square grid composed of shared edges"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The one labeled 3 is a 3×3 small square grid composed of shared edges.",
+          "label": "perception",
+          "source": "The one labeled 3 is a 3×3 small square grid composed of shared edges"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The nth figure can be regarded as an n×n small square grid.",
+          "label": "reasoning",
+          "source": "Therefore the nth figure can be regarded as an n×n small square grid"
+        },
+        {
+          "claim_id": 6,
+          "claim": "In an n×n grid, in the horizontal direction there are n+1 rows.",
+          "label": "knowledge",
+          "source": "In an n×n grid, in the horizontal direction there are n+1 rows"
+        },
+        {
+          "claim_id": 7,
+          "claim": "In an n×n grid, in the horizontal direction, each row has n matchsticks.",
+          "label": "knowledge",
+          "source": "Each row has n matchsticks"
+        },
+        {
+          "claim_id": 8,
+          "claim": "In an n×n grid, in the horizontal direction, there are n(n+1) matchsticks in total.",
+          "label": "knowledge",
+          "source": "A total of n(n+1) matchsticks"
+        },
+        {
+          "claim_id": 9,
+          "claim": "In an n×n grid, in the vertical direction, there are n+1 columns.",
+          "label": "knowledge",
+          "source": "In the vertical direction there are also n+1 columns"
+        },
+        {
+          "claim_id": 10,
+          "claim": "In an n×n grid, in the vertical direction, each column has n matchsticks.",
+          "label": "knowledge",
+          "source": "Each column has n matchsticks"
+        },
+        {
+          "claim_id": 11,
+          "claim": "In an n×n grid, in the vertical direction, there are n(n+1) matchsticks in total.",
+          "label": "knowledge",
+          "source": "A total of n(n+1) matchsticks"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The total number of matchsticks in an n×n grid is 2n(n+1).",
+          "label": "knowledge",
+          "source": "So the total number of matchsticks is 2n(n+1)"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The number of matchsticks that need to be added to change from the 30th figure to the 31st figure is 2·31·32 - 2·30·31.",
+          "label": "reasoning",
+          "source": "The number of matchsticks that need to be added to change from the 30th figure to the 31st figure is 2·31·32 - 2·30·31"
+        },
+        {
+          "claim_id": 14,
+          "claim": "2·31·32 = 1984。",
+          "label": "reasoning",
+          "source": "2·31·32 - 2·30·31 = 1984 - 1860 = 124"
+        },
+        {
+          "claim_id": 15,
+          "claim": "2·30·31 = 1860。",
+          "label": "reasoning",
+          "source": "2·31·32 - 2·30·31 = 1984 - 1860 = 124"
+        },
+        {
+          "claim_id": 16,
+          "claim": "Changing from the 30th figure to the 31st figure requires adding 124 matchsticks.",
+          "label": "reasoning",
+          "source": "1984 - 1860 = 124"
+        }
+      ],
+      "coverage_notes": "已覆盖图像描述、模式归纳、n×n网格火柴计数公式，以及第30到第31个图形的代入计算和最终答案。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:28Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/08649_math_mathvision_open_6bc3e26152f94b0fa8b46655_b836cd7c6a.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04283_math_mathvision_open_6bc3e26152f94b0fa8b46655_b836cd7c6a.json"
+  }
+}

@@ -1,0 +1,773 @@
+{
+  "pack_index": 3615,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/cmm_math:cmmmath00133:cmm_math__open_be60a015ae707c720ef10969__7d379c14aaf5",
+    "subject_dir": "math",
+    "dataset_slug": "cmm_math",
+    "problem_id": "open_be60a015ae707c720ef10969",
+    "source_problem_id": "open_be60a015ae707c720ef10969",
+    "problem_run_key": "cmm_math__open_be60a015ae707c720ef10969__7d379c14aaf5",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/cmm_math/samples/cmmmath00133.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/cmm_math/samples/cmmmath00133.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/cmm_math/samples/cmmmath00133.json",
+    "image_paths": []
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer_text": null,
+    "open_variant_id": "open_be60a015ae707c720ef10969",
+    "variant_index": 1,
+    "title": "CMM-Math open-ended question",
+    "split_role": "single",
+    "rewritten_question_text": "The solution set of the inequality $a x-b<0$ in $x$ is $(1,+\\infty)$, then the solution set of the inequality $(a x+b)(x-3)>0$ in $x$ is ( )",
+    "expected_answer_type": "set",
+    "expected_answer": "$(-1,3)$",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_f2e5518abca32305ada4ac4d",
+        "problem_id": "prob_7e4755a218fcc37692eeeee9",
+        "node_type": "answer_claim",
+        "canonical_value": "$(-1,3)$",
+        "surface_forms": [
+          "$(-1,3)$"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_444f5b2d643bcc30ba8c1027"
+        ],
+        "evidence_refs": [
+          "asset_444f5b2d643bcc30ba8c1027"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "set",
+        "normalized_value": {
+          "answer": "$(-1,3)$"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-03-27T15:51:09Z",
+        "updated_at": "2026-03-27T15:51:09Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_be60a015ae707c720ef10969",
+      "parent_problem_id": "prob_7e4755a218fcc37692eeeee9",
+      "variant_index": 1,
+      "title": "CMM-Math open-ended question",
+      "rewritten_question_text": "The solution set of the inequality $a x-b<0$ in $x$ is $(1,+\\infty)$, then the solution set of the inequality $(a x+b)(x-3)>0$ in $x$ is ( )",
+      "expected_answer_type": "set",
+      "expected_answer": "$(-1,3)$",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "The solution set of the inequality $a x-b<0$ in $x$ is $(1,+\\infty)$, then the solution set of the inequality $(a x+b)(x-3)>0$ in $x$ is ( )",
+    "raw_answer": "$(-1,3)$",
+    "raw_standard_answer": "$(-1,3)$",
+    "resolved_question_text": "The solution set of the inequality $a x-b<0$ in $x$ is $(1,+\\infty)$, then the solution set of the inequality $(a x+b)(x-3)>0$ in $x$ is ( )",
+    "resolved_answer": "$(-1,3)$",
+    "resolved_from_fallback": false,
+    "final_cot": "Read from the problem conditions: the solution set of the inequality ax-b<0 with respect to x is (1,+∞). The linear inequality ax-b<0 can be written as ax<b. If a>0, then the solution set should be x<b/a, which is a leftward interval and does not conform to (1,+∞); therefore it must be that a<0. Since a<0, when dividing both sides of ax<b by the negative number a, the inequality sign reverses, obtaining x>b/a. The given solution set is x>1, so b/a=1, namely b=a. Substitute b=a into the target inequality: (ax+b)(x-3)>0, obtaining (ax+a)(x-3)>0, namely a(x+1)(x-3)>0. Because a<0, after dividing by the negative number a, the inequality sign reverses, obtaining (x+1)(x-3)<0. The two zeros are -1 and 3; when the product of the quadratic factors is less than 0, x is between the two roots, so the solution set is (-1,3).",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_be60a015ae707c720ef10969",
+      "problem_run_key": "cmm_math__open_be60a015ae707c720ef10969__7d379c14aaf5",
+      "question_text": "The solution set of the inequality $a x-b<0$ in $x$ is $(1,+\\infty)$, then the solution set of the inequality $(a x+b)(x-3)>0$ in $x$ is ( )",
+      "standard_answer": "$(-1,3)$",
+      "images": [],
+      "initial_multi_solution_score": 0.4097,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "先从题面读取条件：不等式 ax-b<0 的解集为 (1,+∞)。对一次不等式按系数符号分析：若 a<0，则 ax-b<0 等价于 x>b/a，因此必须有 a<0 且 b/a=1，即 b=a。再把 b=a 代入目标不等式，得到 (ax+b)(x-3)=a(x+1)(x-3)>0。因为 a<0，两边除以负数时不等号反向，化为 (x+1)(x-3)<0。最后由二次因式符号法，两个零点为 -1 和 3，乘积小于 0 的区间是 (-1,3)。",
+          "CoT_raw": "从题面条件读出：关于 x 的不等式 ax-b<0 的解集为 (1,+∞)。一次不等式 ax-b<0 可写为 ax<b。若 a>0，则解集应为 x<b/a，是向左的区间，不符合 (1,+∞)；因此必须有 a<0。由于 a<0，ax<b 两边除以负数 a 时不等号反向，得到 x>b/a。题设解集为 x>1，所以 b/a=1，即 b=a。将 b=a 代入目标不等式：(ax+b)(x-3)>0，得到 (ax+a)(x-3)>0，即 a(x+1)(x-3)>0。因为 a<0，除以负数 a 后不等号反向，得到 (x+1)(x-3)<0。两个零点为 -1 和 3，二次因式乘积小于 0 时 x 在两根之间，所以解集为 (-1,3)。",
+          "model_answer": "(-1,3)",
+          "is_answer_match": true,
+          "answer_match_reason": "Predicted answer exactly matches the standard answer.",
+          "answer_match_part_results": [
+            {
+              "standard_part": "$(-1,3)$",
+              "predicted_part": "(-1,3)",
+              "is_equivalent": true,
+              "reason": "Both denote the same open interval from -1 to 3."
+            }
+          ],
+          "CoT_answer_check_final": "从题面条件读出：关于 x 的不等式 ax-b<0 的解集为 (1,+∞)。一次不等式 ax-b<0 可写为 ax<b。若 a>0，则解集应为 x<b/a，是向左的区间，不符合 (1,+∞)；因此必须有 a<0。由于 a<0，ax<b 两边除以负数 a 时不等号反向，得到 x>b/a。题设解集为 x>1，所以 b/a=1，即 b=a。将 b=a 代入目标不等式：(ax+b)(x-3)>0，得到 (ax+a)(x-3)>0，即 a(x+1)(x-3)>0。因为 a<0，除以负数 a 后不等号反向，得到 (x+1)(x-3)<0。两个零点为 -1 和 3，二次因式乘积小于 0 时 x 在两根之间，所以解集为 (-1,3)。",
+          "answer_answer_check_final": "(-1,3)",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理过程正确，结论与标准答案一致，且基本完全遵循方法草稿。题目不涉及图像信息，因此不存在未验证的视觉声明。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "从题面条件读出：关于 x 的不等式 ax-b<0 的解集为 (1,+∞)。一次不等式 ax-b<0 可写为 ax<b。若 a>0，则解集应为 x<b/a，是向左的区间，不符合 (1,+∞)；因此必须有 a<0。由于 a<0，ax<b 两边除以负数 a 时不等号反向，得到 x>b/a。题设解集为 x>1，所以 b/a=1，即 b=a。将 b=a 代入目标不等式：(ax+b)(x-3)>0，得到 (ax+a)(x-3)>0，即 a(x+1)(x-3)>0。因为 a<0，除以负数 a 后不等号反向，得到 (x+1)(x-3)<0。两个零点为 -1 和 3，二次因式乘积小于 0 时 x 在两根之间，所以解集为 (-1,3)。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "这是直接代数推导路线：先确定参数关系和符号，再代入化简目标不等式。",
+            "image_role": "若题目来自图片，只需读取图片中的文字公式：ax-b<0 的解集是 (1,+∞)，以及要求解 (ax+b)(x-3)>0；无其他图形信息。",
+            "text_role": "文本给出已知一次不等式的解集和待求不等式，是全部有效信息来源。",
+            "knowledge_role": "使用一次不等式解集与系数符号的关系、代入化简、负数乘除改变不等号方向、二次因式符号法。"
+          },
+          "solver_metadata": {
+            "cot_raw": "从题面条件读出：关于 x 的不等式 ax-b<0 的解集为 (1,+∞)。一次不等式 ax-b<0 可写为 ax<b。若 a>0，则解集应为 x<b/a，是向左的区间，不符合 (1,+∞)；因此必须有 a<0。由于 a<0，ax<b 两边除以负数 a 时不等号反向，得到 x>b/a。题设解集为 x>1，所以 b/a=1，即 b=a。将 b=a 代入目标不等式：(ax+b)(x-3)>0，得到 (ax+a)(x-3)>0，即 a(x+1)(x-3)>0。因为 a<0，除以负数 a 后不等号反向，得到 (x+1)(x-3)<0。两个零点为 -1 和 3，二次因式乘积小于 0 时 x 在两根之间，所以解集为 (-1,3)。",
+            "model_answer": "(-1,3)",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 1401,
+              "completion_tokens": 592,
+              "total_tokens": 1993,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 15.045,
+            "_llm_request_mode": "text",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理过程正确，结论与标准答案一致，且基本完全遵循方法草稿。题目不涉及图像信息，因此不存在未验证的视觉声明。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "text",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 6.85
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 15.046,
+              "usage_delta": {
+                "request_count": 14,
+                "successful_request_count": 17,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 13,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 17,
+                "prompt_tokens": 26365,
+                "completion_tokens": 10629,
+                "total_tokens": 36994,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 221.84,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 4.115,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 3,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 2,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 3,
+                "prompt_tokens": 5656,
+                "completion_tokens": 1247,
+                "total_tokens": 6903,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 30.188,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 6.852,
+              "usage_delta": {
+                "request_count": 6,
+                "successful_request_count": 7,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 6,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 7,
+                "prompt_tokens": 11668,
+                "completion_tokens": 5045,
+                "total_tokens": 16713,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 119.164,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "采用数轴/函数图像符号路线。由 ax-b<0 的解集是 x>1 可知直线 y=ax-b 在 x=1 处过零，即 a-b=0；且在 1 的右侧函数值为负，所以直线斜率 a<0，从而 b=a。接着看 ax+b：因为 b=a，所以 ax+b=a(x+1)，其零点为 x=-1，且由于 a<0，ax+b 在 -1 右侧为负、左侧为正。另一个因子 x-3 的零点是 3，且在 3 右侧为正、左侧为负。把两个零点 -1、3 标在数轴上，分区间检查两个因子的符号：在 (-∞,-1) 上为正×负<0，在 (-1,3) 上为负×负>0，在 (3,+∞) 上为负×正<0，因此目标不等式的解集为 (-1,3)。",
+          "CoT_raw": "由不等式 ax-b<0 的解集是 (1,+∞) 可知，线性函数 y=ax-b 的零点在 x=1，因此 a-b=0，即 b=a。又因为在 x>1 时 ax-b<0，说明直线在零点右侧取负值，所以斜率 a<0。于是 b=a，且 a<0。接着化简 ax+b=ax+a=a(x+1)，其零点为 x=-1。由于 a<0，所以 ax+b 在 x<-1 时为正，在 x>-1 时为负。另一个因子 x-3 的零点为 x=3，在 x<3 时为负，在 x>3 时为正。将 -1 和 3 标在数轴上分区间讨论：在 (-∞,-1) 上，(ax+b)(x-3)=正×负<0；在 (-1,3) 上，负×负>0；在 (3,+∞) 上，负×正<0。因为要求大于 0，且端点使某因子为 0 不取，所以解集为 (-1,3)。",
+          "model_answer": "(-1,3)",
+          "is_answer_match": true,
+          "answer_match_reason": "The predicted answer exactly matches the standard answer: (-1,3).",
+          "answer_match_part_results": [
+            {
+              "standard_part": "$(-1,3)$",
+              "predicted_part": "(-1,3)",
+              "is_equivalent": true,
+              "reason": "They denote the same open interval."
+            }
+          ],
+          "CoT_answer_check_final": "由不等式 ax-b<0 的解集是 (1,+∞) 可知，线性函数 y=ax-b 的零点在 x=1，因此 a-b=0，即 b=a。又因为在 x>1 时 ax-b<0，说明直线在零点右侧取负值，所以斜率 a<0。于是 b=a，且 a<0。接着化简 ax+b=ax+a=a(x+1)，其零点为 x=-1。由于 a<0，所以 ax+b 在 x<-1 时为正，在 x>-1 时为负。另一个因子 x-3 的零点为 x=3，在 x<3 时为负，在 x>3 时为正。将 -1 和 3 标在数轴上分区间讨论：在 (-∞,-1) 上，(ax+b)(x-3)=正×负<0；在 (-1,3) 上，负×负>0；在 (3,+∞) 上，负×正<0。因为要求大于 0，且端点使某因子为 0 不取，所以解集为 (-1,3)。",
+          "answer_answer_check_final": "(-1,3)",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理正确，结论与标准答案一致。候选推理完整遵循了方法草稿：先由原不等式解集推出零点和斜率符号，再化简 ax+b，最后用数轴分区间判断乘积符号。该题无图像依赖，不存在未验证的视觉 claim。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "由不等式 ax-b<0 的解集是 (1,+∞) 可知，线性函数 y=ax-b 的零点在 x=1，因此 a-b=0，即 b=a。又因为在 x>1 时 ax-b<0，说明直线在零点右侧取负值，所以斜率 a<0。于是 b=a，且 a<0。接着化简 ax+b=ax+a=a(x+1)，其零点为 x=-1。由于 a<0，所以 ax+b 在 x<-1 时为正，在 x>-1 时为负。另一个因子 x-3 的零点为 x=3，在 x<3 时为负，在 x>3 时为正。将 -1 和 3 标在数轴上分区间讨论：在 (-∞,-1) 上，(ax+b)(x-3)=正×负<0；在 (-1,3) 上，负×负>0；在 (3,+∞) 上，负×正<0。因为要求大于 0，且端点使某因子为 0 不取，所以解集为 (-1,3)。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "这是符号表/数轴路线：不主要通过整体化为二次不等式，而是分别判断两个一次因子的零点和符号，再用区间符号乘积求解。",
+            "image_role": "若有题图，仅读取其中的文字条件和公式；不依赖额外视觉图形。",
+            "text_role": "文本提供已知解集 (1,+∞)、原一次不等式 ax-b<0、目标乘积不等式 (ax+b)(x-3)>0。",
+            "knowledge_role": "使用一次函数过零点和正负区间的对应关系、斜率决定符号变化方向、数轴分区间符号乘法规则。"
+          },
+          "solver_metadata": {
+            "cot_raw": "由不等式 ax-b<0 的解集是 (1,+∞) 可知，线性函数 y=ax-b 的零点在 x=1，因此 a-b=0，即 b=a。又因为在 x>1 时 ax-b<0，说明直线在零点右侧取负值，所以斜率 a<0。于是 b=a，且 a<0。接着化简 ax+b=ax+a=a(x+1)，其零点为 x=-1。由于 a<0，所以 ax+b 在 x<-1 时为正，在 x>-1 时为负。另一个因子 x-3 的零点为 x=3，在 x<3 时为负，在 x>3 时为正。将 -1 和 3 标在数轴上分区间讨论：在 (-∞,-1) 上，(ax+b)(x-3)=正×负<0；在 (-1,3) 上，负×负>0；在 (3,+∞) 上，负×正<0。因为要求大于 0，且端点使某因子为 0 不取，所以解集为 (-1,3)。",
+            "model_answer": "(-1,3)",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 1460,
+              "completion_tokens": 696,
+              "total_tokens": 2156,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 16.006,
+            "_llm_request_mode": "text",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理正确，结论与标准答案一致。候选推理完整遵循了方法草稿：先由原不等式解集推出零点和斜率符号，再化简 ax+b，最后用数轴分区间判断乘积符号。该题无图像依赖，不存在未验证的视觉 claim。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "text",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 6.238
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 16.007,
+              "usage_delta": {
+                "request_count": 20,
+                "successful_request_count": 22,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 19,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 22,
+                "prompt_tokens": 32020,
+                "completion_tokens": 17873,
+                "total_tokens": 49893,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 429.584,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 3.51,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 3,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 5,
+                "prompt_tokens": 7191,
+                "completion_tokens": 4032,
+                "total_tokens": 11223,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 79.201,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 6.24,
+              "usage_delta": {
+                "request_count": 5,
+                "successful_request_count": 6,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 5,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 6,
+                "prompt_tokens": 10804,
+                "completion_tokens": 3607,
+                "total_tokens": 14411,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 77.494,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 22.066,
+          "usage_delta": {
+            "request_count": 35,
+            "successful_request_count": 35,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 34,
+            "multimodal_request_count": 1,
+            "requests_with_usage": 35,
+            "prompt_tokens": 50563,
+            "completion_tokens": 17312,
+            "total_tokens": 67875,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 382.388,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "CMM-Math",
+        "dataset_slug": "cmm_math",
+        "source_problem_id": "19876",
+        "subject": "math",
+        "requires_image": false,
+        "text_dominant": true,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/cmm_math/samples/cmmmath00133.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_7e4755a218fcc37692eeeee9",
+          "open_variant_count": 1,
+          "open_variant_id": "open_be60a015ae707c720ef10969",
+          "open_variant_index": 1,
+          "open_variant_title": "CMM-Math 开放题",
+          "expected_answer_type": "set",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 73.858,
+      "problem_usage": {
+        "request_count": 7,
+        "successful_request_count": 7,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 7,
+        "multimodal_request_count": 0,
+        "requests_with_usage": 7,
+        "prompt_tokens": 8849,
+        "completion_tokens": 3076,
+        "total_tokens": 11925,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 73.823,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "$x$ 的不等式 $a x-b<0$ 的解集是 $(1,+\\infty)$, 则关于 $x$ 的不等式 $(a x+b)(x-3)>0$ 的解集是( )",
+      "answer": "$(-1,3)$",
+      "final_cot": "Read from the problem conditions: the solution set of the inequality ax-b<0 with respect to x is (1,+∞). The linear inequality ax-b<0 can be written as ax<b. If a>0, then the solution set should be x<b/a, which is a leftward interval and does not conform to (1,+∞); therefore it must be that a<0. Since a<0, when dividing both sides of ax<b by the negative number a, the inequality sign reverses, obtaining x>b/a. The given solution set is x>1, so b/a=1, namely b=a. Substitute b=a into the target inequality: (ax+b)(x-3)>0, obtaining (ax+a)(x-3)>0, namely a(x+1)(x-3)>0. Because a<0, after dividing by the negative number a, the inequality sign reverses, obtaining (x+1)(x-3)<0. The two zeros are -1 and 3; when the product of the quadratic factors is less than 0, x is between the two roots, so the solution set is (-1,3).",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理过程正确，结论与标准答案一致，且基本完全遵循方法草稿。题目不涉及图像信息，因此不存在未验证的视觉声明。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "text",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 6.85
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理正确，结论与标准答案一致。候选推理完整遵循了方法草稿：先由原不等式解集推出零点和斜率符号，再化简 ax+b，最后用数轴分区间判断乘积符号。该题无图像依赖，不存在未验证的视觉 claim。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "text",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 6.238
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 235,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "cmm_math",
+        "relative_dataset": "math/cmm_math",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/cmm_math/samples/cmmmath00133.json",
+        "source_sample_filename": "cmmmath00133.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/cmm_math/samples/cmmmath00133.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T09:01:24Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_be60a015ae707c720ef10969",
+          "new_problem_id": "open_be60a015ae707c720ef10969",
+          "old_problem_run_key": "cmm_math__open_be60a015ae707c720ef10969__7d379c14aaf5",
+          "new_problem_run_key": "cmm_math__open_be60a015ae707c720ef10969__7d379c14aaf5",
+          "target_relpath": "math/cmm_math/samples/cmmmath00133.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_be60a015ae707c720ef10969",
+    "problem_run_key": "cmm_math__open_be60a015ae707c720ef10969__7d379c14aaf5",
+    "raw_question_text": "The solution set of the inequality $a x-b<0$ in $x$ is $(1,+\\infty)$, then the solution set of the inequality $(a x+b)(x-3)>0$ in $x$ is ( )",
+    "raw_answer": "$(-1,3)$",
+    "raw_standard_answer": "$(-1,3)$",
+    "resolved_question_text": "The solution set of the inequality $a x-b<0$ in $x$ is $(1,+\\infty)$, then the solution set of the inequality $(a x+b)(x-3)>0$ in $x$ is ( )",
+    "resolved_answer": "$(-1,3)$",
+    "resolved_from_fallback": false,
+    "final_cot": "Read from the problem conditions: the solution set of the inequality ax-b<0 with respect to x is (1,+∞). The linear inequality ax-b<0 can be written as ax<b. If a>0, then the solution set should be x<b/a, which is a leftward interval and does not conform to (1,+∞); therefore it must be that a<0. Since a<0, when dividing both sides of ax<b by the negative number a, the inequality sign reverses, obtaining x>b/a. The given solution set is x>1, so b/a=1, namely b=a. Substitute b=a into the target inequality: (ax+b)(x-3)>0, obtaining (ax+a)(x-3)>0, namely a(x+1)(x-3)>0. Because a<0, after dividing by the negative number a, the inequality sign reverses, obtaining (x+1)(x-3)<0. The two zeros are -1 and 3; when the product of the quadratic factors is less than 0, x is between the two roots, so the solution set is (-1,3).",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The problem conditions give that the solution set of the inequality ax-b<0 with respect to x is (1,+∞).",
+        "label": "perception",
+        "source": "The solution set of the inequality ax-b<0 with respect to x is (1,+∞)"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The linear inequality ax-b<0 can be written as ax<b.",
+        "label": "reasoning",
+        "source": "The linear inequality ax-b<0 can be written as ax<b"
+      },
+      {
+        "claim_id": 3,
+        "claim": "If a>0, then the solution set of ax<b should be x<b/a.",
+        "label": "knowledge",
+        "source": "If a>0, then the solution set should be x<b/a"
+      },
+      {
+        "claim_id": 4,
+        "claim": "x<b/a is an interval to the left.",
+        "label": "knowledge",
+        "source": "is a leftward interval"
+      },
+      {
+        "claim_id": 5,
+        "claim": "a>0 does not conform to the given solution set (1,+∞).",
+        "label": "reasoning",
+        "source": "Does not conform to (1,+∞)"
+      },
+      {
+        "claim_id": 6,
+        "claim": "It must have a<0.",
+        "label": "reasoning",
+        "source": "Therefore it must be that a<0"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Since a<0, when dividing both sides of ax<b by the negative number a, the inequality sign reverses.",
+        "label": "reasoning",
+        "source": "Since a<0, when dividing both sides of ax<b by the negative number a, the inequality sign reverses"
+      },
+      {
+        "claim_id": 8,
+        "claim": "From ax<b and a<0, x>b/a can be obtained.",
+        "label": "reasoning",
+        "source": "Obtain x>b/a"
+      },
+      {
+        "claim_id": 9,
+        "claim": "b/a=1。",
+        "label": "reasoning",
+        "source": "Therefore b/a=1"
+      },
+      {
+        "claim_id": 10,
+        "claim": "b=a。",
+        "label": "reasoning",
+        "source": "That is, b=a"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The target inequality is (ax+b)(x-3)>0.",
+        "label": "perception",
+        "source": "Target inequality: (ax+b)(x-3)>0"
+      },
+      {
+        "claim_id": 12,
+        "claim": "Substitute b=a into the target inequality, obtaining (ax+a)(x-3)>0.",
+        "label": "reasoning",
+        "source": "Substitute b=a into the target inequality: (ax+b)(x-3)>0, obtaining (ax+a)(x-3)>0"
+      },
+      {
+        "claim_id": 13,
+        "claim": "(ax+a)(x-3)>0 can be transformed into a(x+1)(x-3)>0.",
+        "label": "reasoning",
+        "source": "That is, a(x+1)(x-3)>0"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Because a<0, after dividing by the negative number a, the inequality sign reverses.",
+        "label": "reasoning",
+        "source": "Because a<0, after dividing by the negative number a, the inequality sign reverses"
+      },
+      {
+        "claim_id": 15,
+        "claim": "From a(x+1)(x-3)>0 and a<0, we can obtain (x+1)(x-3)<0.",
+        "label": "reasoning",
+        "source": "Obtain (x+1)(x-3)<0"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The two zeros of (x+1)(x-3) are -1 and 3.",
+        "label": "reasoning",
+        "source": "The two zeros are -1 and 3"
+      },
+      {
+        "claim_id": 17,
+        "claim": "When the product of the quadratic factors is less than 0, x is between the two roots.",
+        "label": "knowledge",
+        "source": "When the product of quadratic factors is less than 0, x is between the two roots"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The solution set of (x+1)(x-3)<0 is (-1,3).",
+        "label": "reasoning",
+        "source": "Therefore the solution set is (-1,3)"
+      }
+    ],
+    "claim_count": 18,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The problem conditions give that the solution set of the inequality ax-b<0 with respect to x is (1,+∞).",
+          "label": "perception",
+          "source": "The solution set of the inequality ax-b<0 with respect to x is (1,+∞)"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The linear inequality ax-b<0 can be written as ax<b.",
+          "label": "reasoning",
+          "source": "The linear inequality ax-b<0 can be written as ax<b"
+        },
+        {
+          "claim_id": 3,
+          "claim": "If a>0, then the solution set of ax<b should be x<b/a.",
+          "label": "knowledge",
+          "source": "If a>0, then the solution set should be x<b/a"
+        },
+        {
+          "claim_id": 4,
+          "claim": "x<b/a is an interval to the left.",
+          "label": "knowledge",
+          "source": "is a leftward interval"
+        },
+        {
+          "claim_id": 5,
+          "claim": "a>0 does not conform to the given solution set (1,+∞).",
+          "label": "reasoning",
+          "source": "Does not conform to (1,+∞)"
+        },
+        {
+          "claim_id": 6,
+          "claim": "It must have a<0.",
+          "label": "reasoning",
+          "source": "Therefore it must be that a<0"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Since a<0, when dividing both sides of ax<b by the negative number a, the inequality sign reverses.",
+          "label": "reasoning",
+          "source": "Since a<0, when dividing both sides of ax<b by the negative number a, the inequality sign reverses"
+        },
+        {
+          "claim_id": 8,
+          "claim": "From ax<b and a<0, x>b/a can be obtained.",
+          "label": "reasoning",
+          "source": "Obtain x>b/a"
+        },
+        {
+          "claim_id": 9,
+          "claim": "b/a=1。",
+          "label": "reasoning",
+          "source": "Therefore b/a=1"
+        },
+        {
+          "claim_id": 10,
+          "claim": "b=a。",
+          "label": "reasoning",
+          "source": "That is, b=a"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The target inequality is (ax+b)(x-3)>0.",
+          "label": "perception",
+          "source": "Target inequality: (ax+b)(x-3)>0"
+        },
+        {
+          "claim_id": 12,
+          "claim": "Substitute b=a into the target inequality, obtaining (ax+a)(x-3)>0.",
+          "label": "reasoning",
+          "source": "Substitute b=a into the target inequality: (ax+b)(x-3)>0, obtaining (ax+a)(x-3)>0"
+        },
+        {
+          "claim_id": 13,
+          "claim": "(ax+a)(x-3)>0 can be transformed into a(x+1)(x-3)>0.",
+          "label": "reasoning",
+          "source": "That is, a(x+1)(x-3)>0"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Because a<0, after dividing by the negative number a, the inequality sign reverses.",
+          "label": "reasoning",
+          "source": "Because a<0, after dividing by the negative number a, the inequality sign reverses"
+        },
+        {
+          "claim_id": 15,
+          "claim": "From a(x+1)(x-3)>0 and a<0, we can obtain (x+1)(x-3)<0.",
+          "label": "reasoning",
+          "source": "Obtain (x+1)(x-3)<0"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The two zeros of (x+1)(x-3) are -1 and 3.",
+          "label": "reasoning",
+          "source": "The two zeros are -1 and 3"
+        },
+        {
+          "claim_id": 17,
+          "claim": "When the product of the quadratic factors is less than 0, x is between the two roots.",
+          "label": "knowledge",
+          "source": "When the product of quadratic factors is less than 0, x is between the two roots"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The solution set of (x+1)(x-3)<0 is (-1,3).",
+          "label": "reasoning",
+          "source": "Therefore the solution set is (-1,3)"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题将 claim 2 的标签由 knowledge 修改为 reasoning；其余 claims 保持不变。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:27Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/cmm_math/08092_math_cmm_math_open_be60a015ae707c720ef10969_7a7794c1ab.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/cmm_math/03615_math_cmm_math_open_be60a015ae707c720ef10969_7a7794c1ab.json"
+  }
+}

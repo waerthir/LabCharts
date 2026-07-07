@@ -1,0 +1,790 @@
+{
+  "pack_index": 965,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00802:emma_chemistry__open_5f181fe0bf23e561c0d6ff1b__6ce2e97ee5e3",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_5f181fe0bf23e561c0d6ff1b",
+    "source_problem_id": "open_5f181fe0bf23e561c0d6ff1b",
+    "problem_run_key": "emma_chemistry__open_5f181fe0bf23e561c0d6ff1b__6ce2e97ee5e3",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00802.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00802.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00802.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00802.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "<image_1> In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "raw_answer_text": "11",
+    "open_variant_id": "open_5f181fe0bf23e561c0d6ff1b",
+    "variant_index": 1,
+    "title": "EMMA-Chemistry open-ended question",
+    "split_role": "single",
+    "rewritten_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen. Note: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "expected_answer_type": "numeric",
+    "expected_answer": "11",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_7f680cde8b2f5a27c3b7b2db",
+        "problem_id": "prob_eb9d9d89f6116b2959c6ff22",
+        "node_type": "answer_claim",
+        "canonical_value": "11",
+        "surface_forms": [
+          "11"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_56b2b5d16b7a3d9c2f8c553d"
+        ],
+        "evidence_refs": [
+          "asset_56b2b5d16b7a3d9c2f8c553d"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "11"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-07T18:50:31Z",
+        "updated_at": "2026-04-07T18:50:31Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_5f181fe0bf23e561c0d6ff1b",
+      "parent_problem_id": "prob_eb9d9d89f6116b2959c6ff22",
+      "variant_index": 1,
+      "title": "EMMA-Chemistry open-ended question",
+      "rewritten_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+      "expected_answer_type": "numeric",
+      "expected_answer": "11",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "raw_answer": "11",
+    "raw_standard_answer": "11",
+    "resolved_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen. Note: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "resolved_answer": "11",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: in the figure there is a six-membered carbon ring, with several curved arrows drawn inside the ring; the question requires ignoring the arrows. Two C=C double bonds can be seen on the ring, and the remaining ring edges are C-C single bonds. The same ring carbon at the upper right is connected to an OSiR3 substituent, and is also connected to an R' substituent. Then reason through the count: do not count hydrogen-related bonds, and do not expand the R groups. Counting by bond order, the four C-C single bonds in the ring count as 4, and the two C=C double bonds count as 2×2=4, so the subtotal inside the ring is 8. For the substituent part, according to the figure/structural formula encoding, count the three heavy-atom bonds C-O, O-Si, C-R', for a subtotal of 3. The total is 8+3=11.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_5f181fe0bf23e561c0d6ff1b",
+      "problem_run_key": "emma_chemistry__open_5f181fe0bf23e561c0d6ff1b__6ce2e97ee5e3",
+      "question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+      "standard_answer": "11",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00802.png",
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/crops/emmachemistry00802.png"
+      ],
+      "initial_multi_solution_score": 0.3697,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "From the image, disregard all arrows and count only non-H bonding. In the ring, count four C-C single bonds as 4 and two C=C double bonds as 4, giving 8 ring bonds. Then count the three heavy-atom substituent bonds shown/encoded: C-O, O-Si, and C-R'. Sum 8 + 3 = 11.",
+          "CoT_raw": "先描述图像：图中是一个六元碳环，环内画有若干弯箭头；题目要求忽略箭头。环上可见两个 C=C 双键，其余环边为 C-C 单键。右上方同一个环碳连接到 OSiR3 取代基，并且还连接到 R' 取代基。再推理计数：不计氢相关键，也不展开 R 基。按键级数计数，环中四个 C-C 单键计 4，两个 C=C 双键计 2×2=4，因此环内合计 8。取代基部分按图中/结构式编码计 C-O、O-Si、C-R' 三个重原子键，合计 3。总数为 8+3=11。",
+          "model_answer": "11",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "11",
+              "predicted_part": "11",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中是一个六元碳环，环内画有若干弯箭头；题目要求忽略箭头。环上可见两个 C=C 双键，其余环边为 C-C 单键。右上方同一个环碳连接到 OSiR3 取代基，并且还连接到 R' 取代基。再推理计数：不计氢相关键，也不展开 R 基。按键级数计数，环中四个 C-C 单键计 4，两个 C=C 双键计 2×2=4，因此环内合计 8。取代基部分按图中/结构式编码计 C-O、O-Si、C-R' 三个重原子键，合计 3。总数为 8+3=11。",
+          "answer_answer_check_final": "11",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace is consistent with the image, the standard answer, and the assigned method. It first describes the visual structure and arrows, then performs the counting. The counting treats double bonds by bond order as required by the standard answer: four single ring bonds = 4, two ring double bonds = 4, plus C-O, O-Si, and C-R' = 3, totaling 11. No revision needed.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中是一个六元碳环，环内画有若干弯箭头；题目要求忽略箭头。环上可见两个 C=C 双键，其余环边为 C-C 单键。右上方同一个环碳连接到 OSiR3 取代基，并且还连接到 R' 取代基。再推理计数：不计氢相关键，也不展开 R 基。按键级数计数，环中四个 C-C 单键计 4，两个 C=C 双键计 2×2=4，因此环内合计 8。取代基部分按图中/结构式编码计 C-O、O-Si、C-R' 三个重原子键，合计 3。总数为 8+3=11。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Direct visual inventory by bond order: this route classifies each drawn non-H bond as single or double and sums their bond-order contributions. It is distinct from a sigma-plus-pi correction approach because it starts from visible bond types rather than first counting atom-to-atom connections.",
+            "image_role": "Read the transition-state drawing: ignore the curved arrows; identify the six-membered ring with two C=C double bonds and four C-C single bonds, plus the substituent bonds from the substituted ring carbon to OSiR3 and to R'. Read the condensed substituent as containing an O-Si connection, but do not expand unspecified R/R' placeholders into additional hidden bonds.",
+            "text_role": "Use the question instructions to include single and double bonds in the total, exclude bonds involving hydrogen, disregard arrows, and consider all components shown in the transition-state structure.",
+            "knowledge_role": "Use skeletal/condensed chemical notation: vertices are carbons, a single line counts as 1 bond, a double bond counts as 2 bonds, and hydrogen bonds are excluded. Generic R groups are placeholders unless a bond to them is explicitly represented."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中是一个六元碳环，环内画有若干弯箭头；题目要求忽略箭头。环上可见两个 C=C 双键，其余环边为 C-C 单键。右上方同一个环碳连接到 OSiR3 取代基，并且还连接到 R' 取代基。再推理计数：不计氢相关键，也不展开 R 基。按键级数计数，环中四个 C-C 单键计 4，两个 C=C 双键计 2×2=4，因此环内合计 8。取代基部分按图中/结构式编码计 C-O、O-Si、C-R' 三个重原子键，合计 3。总数为 8+3=11。",
+            "model_answer": "11",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2464,
+              "completion_tokens": 747,
+              "total_tokens": 3211,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 18.726,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace is consistent with the image, the standard answer, and the assigned method. It first describes the visual structure and arrows, then performs the counting. The counting treats double bonds by bond order as required by the standard answer: four single ring bonds = 4, two ring double bonds = 4, plus C-O, O-Si, and C-R' = 3, totaling 11. No revision needed.",
+              "major_failures": [],
+              "extractability_score": 0.98,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 19.758
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 18.733,
+              "usage_delta": {
+                "request_count": 6,
+                "successful_request_count": 8,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 6,
+                "requests_with_usage": 8,
+                "prompt_tokens": 23500,
+                "completion_tokens": 5974,
+                "total_tokens": 29474,
+                "cached_tokens": 0,
+                "reasoning_tokens": 4085,
+                "total_request_seconds": 172.586,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 19.765,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 5,
+                "prompt_tokens": 14247,
+                "completion_tokens": 3551,
+                "total_tokens": 17798,
+                "cached_tokens": 0,
+                "reasoning_tokens": 2388,
+                "total_request_seconds": 89.463,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "First count the sigma framework among non-H atoms: six ring C-C connections plus C-O, O-Si, and C-R' gives 9 sigma bonds. Next add one extra bond for each double bond visible in the ring; there are two double bonds, so add 2 pi bonds. Total non-H bonds = 9 + 2 = 11.",
+          "CoT_raw": "图像描述：图中是一个六元碳环结构，环内可见两处双键；右上方环碳连有一个 OSiR3 取代基，并连有一个 R' 取代基。图中的弯箭头只表示电子移动，题目要求忽略箭头；氢相关键也不计入。\n推理计数：按非氢原子之间的 sigma 骨架先数，六元环有 6 条 C-C sigma 连接；取代部分有 C-O、O-Si、C-R' 共 3 条 sigma 键。因此 sigma 键总数为 6 + 3 = 9。环中可见 2 个双键，每个双键比单键多 1 条 pi 键，所以再加 2 条键。总非氢键数 = 9 + 2 = 11。",
+          "model_answer": "11",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "11",
+              "predicted_part": "11",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个六元碳环结构，环内可见两处双键；右上方环碳连有一个 OSiR3 取代基，并连有一个 R' 取代基。图中的弯箭头只表示电子移动，题目要求忽略箭头；氢相关键也不计入。\n推理计数：按非氢原子之间的 sigma 骨架先数，六元环有 6 条 C-C sigma 连接；取代部分有 C-O、O-Si、C-R' 共 3 条 sigma 键。因此 sigma 键总数为 6 + 3 = 9。环中可见 2 个双键，每个双键比单键多 1 条 pi 键，所以再加 2 条键。总非氢键数 = 9 + 2 = 11。",
+          "answer_answer_check_final": "11",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace first describes the image and then performs the bond-counting reasoning, matches the assigned method draft, ignores arrows and H bonds as instructed, and reaches the standard answer of 11.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个六元碳环结构，环内可见两处双键；右上方环碳连有一个 OSiR3 取代基，并连有一个 R' 取代基。图中的弯箭头只表示电子移动，题目要求忽略箭头；氢相关键也不计入。\n推理计数：按非氢原子之间的 sigma 骨架先数，六元环有 6 条 C-C sigma 连接；取代部分有 C-O、O-Si、C-R' 共 3 条 sigma 键。因此 sigma 键总数为 6 + 3 = 9。环中可见 2 个双键，每个双键比单键多 1 条 pi 键，所以再加 2 条键。总非氢键数 = 9 + 2 = 11。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Weakly distinct but honest: this route counts the heavy-atom sigma framework first and then adds extra pi-bond contributions for double bonds, rather than enumerating singles and doubles separately.",
+            "image_role": "Read the image as a heavy-atom skeleton: the ring has six atom-to-atom connections around it; the substituted ring carbon has connections to O and R'; the O is connected to Si in the OSiR3 label. Also note two double bonds in the ring, and ignore the curved arrows as non-bonding notation.",
+            "text_role": "Use the prompt to know that arrows are to be disregarded and that the requested total must include the contributions of single, double, and triple bonds while excluding hydrogen-involving bonds.",
+            "knowledge_role": "Apply the sigma/pi decomposition rule: every connected heavy-atom pair contributes one sigma bond, and each double bond contributes one additional pi bond. Do not count C-H or other H bonds; do not invent internal bonds inside generic R labels beyond the explicit/condensed connection needed for O-Si."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个六元碳环结构，环内可见两处双键；右上方环碳连有一个 OSiR3 取代基，并连有一个 R' 取代基。图中的弯箭头只表示电子移动，题目要求忽略箭头；氢相关键也不计入。\n推理计数：按非氢原子之间的 sigma 骨架先数，六元环有 6 条 C-C sigma 连接；取代部分有 C-O、O-Si、C-R' 共 3 条 sigma 键。因此 sigma 键总数为 6 + 3 = 9。环中可见 2 个双键，每个双键比单键多 1 条 pi 键，所以再加 2 条键。总非氢键数 = 9 + 2 = 11。",
+            "model_answer": "11",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2460,
+              "completion_tokens": 761,
+              "total_tokens": 3221,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 20.88,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace first describes the image and then performs the bond-counting reasoning, matches the assigned method draft, ignores arrows and H bonds as instructed, and reaches the standard answer of 11.",
+              "major_failures": [],
+              "extractability_score": 0.98,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 14.617
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 20.889,
+              "usage_delta": {
+                "request_count": 6,
+                "successful_request_count": 7,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 6,
+                "requests_with_usage": 7,
+                "prompt_tokens": 19018,
+                "completion_tokens": 6977,
+                "total_tokens": 25995,
+                "cached_tokens": 0,
+                "reasoning_tokens": 5758,
+                "total_request_seconds": 184.631,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 14.625,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 4,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 4,
+                "prompt_tokens": 11640,
+                "completion_tokens": 2826,
+                "total_tokens": 14466,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1908,
+                "total_request_seconds": 70.582,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 69.297,
+          "usage_delta": {
+            "request_count": 38,
+            "successful_request_count": 32,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 38,
+            "requests_with_usage": 32,
+            "prompt_tokens": 89153,
+            "completion_tokens": 32024,
+            "total_tokens": 121177,
+            "cached_tokens": 0,
+            "reasoning_tokens": 19727,
+            "total_request_seconds": 875.366,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "286",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00802.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "descriptive",
+          "parent_problem_id": "prob_eb9d9d89f6116b2959c6ff22",
+          "open_variant_count": 1,
+          "open_variant_id": "open_5f181fe0bf23e561c0d6ff1b",
+          "open_variant_index": 1,
+          "open_variant_title": "EMMA-Chemistry 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": [
+            "图像分辨率较小（224x140），细节若较密集可能影响精确计数。",
+            "过渡态化学图可能存在画法约定差异，某些键是否计入可能有轻微标注歧义。"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 143.35,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 13185,
+        "completion_tokens": 5571,
+        "total_tokens": 18756,
+        "cached_tokens": 0,
+        "reasoning_tokens": 4230,
+        "total_request_seconds": 143.23,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+      "answer": "11",
+      "final_cot": "First describe the image: in the figure there is a six-membered carbon ring, with several curved arrows drawn inside the ring; the question requires ignoring the arrows. Two C=C double bonds can be seen on the ring, and the remaining ring edges are C-C single bonds. The same ring carbon at the upper right is connected to an OSiR3 substituent, and is also connected to an R' substituent. Then reason through the count: do not count hydrogen-related bonds, and do not expand the R groups. Counting by bond order, the four C-C single bonds in the ring count as 4, and the two C=C double bonds count as 2×2=4, so the subtotal inside the ring is 8. For the substituent part, according to the figure/structural formula encoding, count the three heavy-atom bonds C-O, O-Si, C-R', for a subtotal of 3. The total is 8+3=11.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace is consistent with the image, the standard answer, and the assigned method. It first describes the visual structure and arrows, then performs the counting. The counting treats double bonds by bond order as required by the standard answer: four single ring bonds = 4, two ring double bonds = 4, plus C-O, O-Si, and C-R' = 3, totaling 11. No revision needed.",
+          "major_failures": [],
+          "extractability_score": 0.98,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 19.758
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace first describes the image and then performs the bond-counting reasoning, matches the assigned method draft, ignores arrows and H bonds as instructed, and reaches the standard answer of 11.",
+          "major_failures": [],
+          "extractability_score": 0.98,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 14.617
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 803,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00802.json",
+        "source_sample_filename": "emmachemistry00802.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00802.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T10:06:23Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:34Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_eb9d9d89f6116b2959c6ff22",
+          "new_problem_id": "open_5f181fe0bf23e561c0d6ff1b",
+          "old_problem_run_key": "emma_chemistry__prob_eb9d9d89f6116b2959c6ff22__9d81f8df9aa3",
+          "new_problem_run_key": "emma_chemistry__open_5f181fe0bf23e561c0d6ff1b__6ce2e97ee5e3",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00802.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_5f181fe0bf23e561c0d6ff1b",
+          "new_problem_id": "open_5f181fe0bf23e561c0d6ff1b",
+          "old_problem_run_key": "emma_chemistry__open_5f181fe0bf23e561c0d6ff1b__6ce2e97ee5e3",
+          "new_problem_run_key": "emma_chemistry__open_5f181fe0bf23e561c0d6ff1b__6ce2e97ee5e3",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00802.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_5f181fe0bf23e561c0d6ff1b",
+    "problem_run_key": "emma_chemistry__open_5f181fe0bf23e561c0d6ff1b__6ce2e97ee5e3",
+    "raw_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "raw_answer": "11",
+    "raw_standard_answer": "11",
+    "resolved_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen. Note: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "resolved_answer": "11",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: in the figure there is a six-membered carbon ring, with several curved arrows drawn inside the ring; the question requires ignoring the arrows. Two C=C double bonds can be seen on the ring, and the remaining ring edges are C-C single bonds. The same ring carbon at the upper right is connected to an OSiR3 substituent, and is also connected to an R' substituent. Then reason through the count: do not count hydrogen-related bonds, and do not expand the R groups. Counting by bond order, the four C-C single bonds in the ring count as 4, and the two C=C double bonds count as 2×2=4, so the subtotal inside the ring is 8. For the substituent part, according to the figure/structural formula encoding, count the three heavy-atom bonds C-O, O-Si, C-R', for a subtotal of 3. The total is 8+3=11.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "In the figure there is a six-membered carbon ring.",
+        "label": "perception",
+        "source": "In the figure there is a six-membered carbon ring"
+      },
+      {
+        "claim_id": 2,
+        "claim": "Several curved arrows are drawn inside the ring.",
+        "label": "perception",
+        "source": "Several curved arrows are drawn inside the ring"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The question requires ignoring the arrows.",
+        "label": "reasoning",
+        "source": "The problem requires ignoring the arrows"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Two C=C double bonds can be seen on the ring.",
+        "label": "perception",
+        "source": "Two C=C double bonds can be seen on the ring"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The remaining ring edges are C-C single bonds.",
+        "label": "perception",
+        "source": "The remaining ring edges are C-C single bonds"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The same ring carbon at the upper right is connected to an OSiR3 substituent.",
+        "label": "perception",
+        "source": "The same upper-right ring carbon is connected to an OSiR3 substituent"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The same upper-right ring carbon is connected to an R' substituent.",
+        "label": "perception",
+        "source": "And is also connected to an R' substituent"
+      },
+      {
+        "claim_id": 8,
+        "claim": "When counting, do not count hydrogen-related bonds.",
+        "label": "reasoning",
+        "source": "Do not count hydrogen-related bonds"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Do not expand the R group when counting.",
+        "label": "reasoning",
+        "source": "Also do not expand the R group"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Count by bond order.",
+        "label": "reasoning",
+        "source": "Count by bond order"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The four C-C single bonds in the ring count as 4.",
+        "label": "reasoning",
+        "source": "The four C-C single bonds in the ring count as 4"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The two C=C double bonds count as 4.",
+        "label": "reasoning",
+        "source": "The two C=C double bonds count as 2×2=4"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The total number of intra-ring bonds is 8.",
+        "label": "reasoning",
+        "source": "Therefore the intra-ring total is 8"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The substituent part contains a C-O heavy-atom bond.",
+        "label": "perception",
+        "source": "The substituent part, according to the drawing/structural formula encoding, counts three heavy-atom bonds: C-O, O-Si, and C-R'"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The substituent part contains an O-Si heavy-atom bond.",
+        "label": "perception",
+        "source": "The substituent part, according to the drawing/structural formula encoding, counts three heavy-atom bonds: C-O, O-Si, and C-R'"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The substituent part contains a C-R' heavy-atom bond.",
+        "label": "perception",
+        "source": "The substituent part, according to the drawing/structural formula encoding, counts three heavy-atom bonds: C-O, O-Si, and C-R'"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The total number of heavy-atom bonds in the substituent part is 3.",
+        "label": "reasoning",
+        "source": "Three heavy-atom bonds C-O, O-Si, C-R', totaling 3"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The total number of bonds is 11.",
+        "label": "reasoning",
+        "source": "The total number is 8+3=11"
+      }
+    ],
+    "claim_count": 18,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "In the figure there is a six-membered carbon ring.",
+          "label": "perception",
+          "source": "In the figure there is a six-membered carbon ring"
+        },
+        {
+          "claim_id": 2,
+          "claim": "Several curved arrows are drawn inside the ring.",
+          "label": "perception",
+          "source": "Several curved arrows are drawn inside the ring"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The question requires ignoring the arrows.",
+          "label": "reasoning",
+          "source": "The problem requires ignoring the arrows"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Two C=C double bonds can be seen on the ring.",
+          "label": "perception",
+          "source": "Two C=C double bonds can be seen on the ring"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The remaining ring edges are C-C single bonds.",
+          "label": "perception",
+          "source": "The remaining ring edges are C-C single bonds"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The same ring carbon at the upper right is connected to an OSiR3 substituent.",
+          "label": "perception",
+          "source": "The same upper-right ring carbon is connected to an OSiR3 substituent"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The same upper-right ring carbon is connected to an R' substituent.",
+          "label": "perception",
+          "source": "And is also connected to an R' substituent"
+        },
+        {
+          "claim_id": 8,
+          "claim": "When counting, do not count hydrogen-related bonds.",
+          "label": "reasoning",
+          "source": "Do not count hydrogen-related bonds"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Do not expand the R group when counting.",
+          "label": "reasoning",
+          "source": "Also do not expand the R group"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Count by bond order.",
+          "label": "reasoning",
+          "source": "Count by bond order"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The four C-C single bonds in the ring count as 4.",
+          "label": "reasoning",
+          "source": "The four C-C single bonds in the ring count as 4"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The two C=C double bonds count as 4.",
+          "label": "reasoning",
+          "source": "The two C=C double bonds count as 2×2=4"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The total number of intra-ring bonds is 8.",
+          "label": "reasoning",
+          "source": "Therefore the intra-ring total is 8"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The substituent part contains a C-O heavy-atom bond.",
+          "label": "perception",
+          "source": "The substituent part, according to the drawing/structural formula encoding, counts three heavy-atom bonds: C-O, O-Si, and C-R'"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The substituent part contains an O-Si heavy-atom bond.",
+          "label": "perception",
+          "source": "The substituent part, according to the drawing/structural formula encoding, counts three heavy-atom bonds: C-O, O-Si, and C-R'"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The substituent part contains a C-R' heavy-atom bond.",
+          "label": "perception",
+          "source": "The substituent part, according to the drawing/structural formula encoding, counts three heavy-atom bonds: C-O, O-Si, and C-R'"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The total number of heavy-atom bonds in the substituent part is 3.",
+          "label": "reasoning",
+          "source": "Three heavy-atom bonds C-O, O-Si, C-R', totaling 3"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The total number of bonds is 11.",
+          "label": "reasoning",
+          "source": "The total number is 8+3=11"
+        }
+      ],
+      "coverage_notes": "已按 review 中唯一 severity 为 fix 的问题，将 claim 3 的标签由 perception 改为 reasoning；其余 claims 保持不变。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/05676_chemistry_emma_chemistry_open_5f181fe0bf23e561c0d6ff1b_479f9ac6d1.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/00965_chemistry_emma_chemistry_open_5f181fe0bf23e561c0d6ff1b_479f9ac6d1.json"
+  }
+}

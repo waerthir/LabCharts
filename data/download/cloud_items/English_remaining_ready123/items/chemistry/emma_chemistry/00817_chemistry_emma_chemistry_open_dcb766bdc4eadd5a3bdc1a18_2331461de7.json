@@ -1,0 +1,636 @@
+{
+  "pack_index": 817,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00727:emma_chemistry__open_dcb766bdc4eadd5a3bdc1a18__917bbe9d031e",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_dcb766bdc4eadd5a3bdc1a18",
+    "source_problem_id": "open_dcb766bdc4eadd5a3bdc1a18",
+    "problem_run_key": "emma_chemistry__open_dcb766bdc4eadd5a3bdc1a18__917bbe9d031e",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00727.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00727.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00727.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00727.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Please choose the SMILES expression of the transition-state structure shown in the image, ignoring the arrows. <image_1>",
+    "raw_answer_text": "*C1=C([O-])Oc2ccccc2C1(C)O",
+    "open_variant_id": "open_dcb766bdc4eadd5a3bdc1a18",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_3c40e16f194bcb05556c248b",
+        "problem_id": "prob_d35ca7ed6d906bc08472231c",
+        "node_type": "answer_claim",
+        "canonical_value": "*C1=C([O-])Oc2ccccc2C1(C)O",
+        "surface_forms": [
+          "*C1=C([O-])Oc2ccccc2C1(C)O"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_015c47cff05b34e18b4f9b0c"
+        ],
+        "evidence_refs": [
+          "asset_015c47cff05b34e18b4f9b0c"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "*C1=C([O-])Oc2ccccc2C1(C)O"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T08:42:24Z",
+        "updated_at": "2026-04-08T08:42:24Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_dcb766bdc4eadd5a3bdc1a18",
+      "parent_problem_id": "prob_d35ca7ed6d906bc08472231c",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+    "raw_standard_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The drawing shows a fused bicyclic structure: a benzene ring fused to an oxygen-containing six-membered ring. Curved electron-flow arrows are present, but they are explicitly ignored. In the non-arrow structure, the right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent. The ring continues through an ether oxygen into the fused benzene ring. The lower fused saturated carbon bears a methyl group and an OH group. Reasoning: Per the assigned method, replace the R substituent with a wildcard atom '*'. Start at the wildcard-attached alkene carbon and open ring index 1: *C1. Encode the double bond to the carbon bearing the anionic oxygen branch: =C([O-]). Continue through the ring oxygen into the fused benzene as Oc2ccccc2. Close back to the saturated fused carbon with ring index 1 and include its branches methyl and hydroxyl as C1(C)O. This gives the SMILES *C1=C([O-])Oc2ccccc2C1(C)O.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_dcb766bdc4eadd5a3bdc1a18",
+      "problem_run_key": "emma_chemistry__open_dcb766bdc4eadd5a3bdc1a18__917bbe9d031e",
+      "question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "standard_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00727.png",
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/crops/emmachemistry00727.png"
+      ],
+      "initial_multi_solution_score": 0.2657,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First describe only the atoms and bonds in the drawing, explicitly discarding the curved electron-flow arrows. Convert the R substituent to a wildcard atom '*'. Start the SMILES at the wildcard-attached alkene carbon, open ring index 1, encode the C=C to the carbon bearing [O-], continue through the ring oxygen into the fused benzene as 'Oc2ccccc2', then close back to the saturated fused carbon carrying branches '(C)' and 'O'. This yields '*C1=C([O-])Oc2ccccc2C1(C)O'.",
+          "CoT_raw": "Image description: The drawing shows a fused bicyclic structure: a benzene ring fused to an oxygen-containing six-membered ring. Curved electron-flow arrows are present, but they are explicitly ignored. In the non-arrow structure, the right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent. The ring continues through an ether oxygen into the fused benzene ring. The lower fused saturated carbon bears a methyl group and an OH group.\nReasoning: Per the assigned method, replace the R substituent with a wildcard atom '*'. Start at the wildcard-attached alkene carbon and open ring index 1: *C1. Encode the double bond to the carbon bearing the anionic oxygen branch: =C([O-]). Continue through the ring oxygen into the fused benzene as Oc2ccccc2. Close back to the saturated fused carbon with ring index 1 and include its branches methyl and hydroxyl as C1(C)O. This gives the SMILES *C1=C([O-])Oc2ccccc2C1(C)O.",
+          "model_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "*C1=C([O-])Oc2ccccc2C1(C)O",
+              "predicted_part": "*C1=C([O-])Oc2ccccc2C1(C)O",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "Image description: The drawing shows a fused bicyclic structure: a benzene ring fused to an oxygen-containing six-membered ring. Curved electron-flow arrows are present, but they are explicitly ignored. In the non-arrow structure, the right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent. The ring continues through an ether oxygen into the fused benzene ring. The lower fused saturated carbon bears a methyl group and an OH group.\nReasoning: Per the assigned method, replace the R substituent with a wildcard atom '*'. Start at the wildcard-attached alkene carbon and open ring index 1: *C1. Encode the double bond to the carbon bearing the anionic oxygen branch: =C([O-]). Continue through the ring oxygen into the fused benzene as Oc2ccccc2. Close back to the saturated fused carbon with ring index 1 and include its branches methyl and hydroxyl as C1(C)O. This gives the SMILES *C1=C([O-])Oc2ccccc2C1(C)O.",
+          "answer_answer_check_final": "*C1=C([O-])Oc2ccccc2C1(C)O",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "The trace is faithful to the image, the standard answer, and the assigned method. It first describes the visible structure while explicitly ignoring the electron-flow arrows, then converts the depicted R substituent to a wildcard and constructs the SMILES in the prescribed order. The final SMILES exactly matches the standard answer. Minor caveat: the phrase \"right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent\" is chemically/visually acceptable for the chosen SMILES, though the drawing shows the O− as attached through the top-right carbon/oxygen-containing enolate-like portion; no revision is necessary.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "Image description: The drawing shows a fused bicyclic structure: a benzene ring fused to an oxygen-containing six-membered ring. Curved electron-flow arrows are present, but they are explicitly ignored. In the non-arrow structure, the right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent. The ring continues through an ether oxygen into the fused benzene ring. The lower fused saturated carbon bears a methyl group and an OH group.\nReasoning: Per the assigned method, replace the R substituent with a wildcard atom '*'. Start at the wildcard-attached alkene carbon and open ring index 1: *C1. Encode the double bond to the carbon bearing the anionic oxygen branch: =C([O-]). Continue through the ring oxygen into the fused benzene as Oc2ccccc2. Close back to the saturated fused carbon with ring index 1 and include its branches methyl and hydroxyl as C1(C)O. This gives the SMILES *C1=C([O-])Oc2ccccc2C1(C)O.",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Direct structure-to-SMILES transcription is the natural single route: it relies on reading the displayed skeletal formula and encoding that exact connectivity while treating R as a wildcard and ignoring curved arrows.",
+            "image_role": "Read the skeletal structure: a benzene ring fused to an O-containing six-member ring; the heterocycle has an internal C=C to a carbon bearing an exocyclic/attached negatively charged oxygen [O-]; the adjacent alkene carbon bears an R substituent; the fused saturated carbon bears both CH3 and OH; curved arrows are present but must be ignored.",
+            "text_role": "Use the question instruction that the requested output is the SMILES expression of the transition-state structure and that arrows should be ignored.",
+            "knowledge_role": "Use SMILES conventions: aromatic benzene is written as c2ccccc2; ring closures encode the fused six-member heterocycle; O in the ring is neutral 'O'; the negatively charged oxygen is '[O-]'; the unspecified R group is represented by wildcard '*'; branches encode [O-], methyl, and hydroxy substituents."
+          },
+          "solver_metadata": {
+            "cot_raw": "Image description: The drawing shows a fused bicyclic structure: a benzene ring fused to an oxygen-containing six-membered ring. Curved electron-flow arrows are present, but they are explicitly ignored. In the non-arrow structure, the right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent. The ring continues through an ether oxygen into the fused benzene ring. The lower fused saturated carbon bears a methyl group and an OH group.\nReasoning: Per the assigned method, replace the R substituent with a wildcard atom '*'. Start at the wildcard-attached alkene carbon and open ring index 1: *C1. Encode the double bond to the carbon bearing the anionic oxygen branch: =C([O-]). Continue through the ring oxygen into the fused benzene as Oc2ccccc2. Close back to the saturated fused carbon with ring index 1 and include its branches methyl and hydroxyl as C1(C)O. This gives the SMILES *C1=C([O-])Oc2ccccc2C1(C)O.",
+            "model_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2461,
+              "completion_tokens": 695,
+              "total_tokens": 3156,
+              "cached_tokens": 0,
+              "reasoning_tokens": 401
+            },
+            "_llm_elapsed_seconds": 28.446,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "The trace is faithful to the image, the standard answer, and the assigned method. It first describes the visible structure while explicitly ignoring the electron-flow arrows, then converts the depicted R substituent to a wildcard and constructs the SMILES in the prescribed order. The final SMILES exactly matches the standard answer. Minor caveat: the phrase \"right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent\" is chemically/visually acceptable for the chosen SMILES, though the drawing shows the O− as attached through the top-right carbon/oxygen-containing enolate-like portion; no revision is necessary.",
+              "major_failures": [],
+              "extractability_score": 0.94,
+              "grounding_score": 0.92,
+              "method_fidelity_score": 0.98,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 8.442
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 28.459,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 12,
+                "prompt_tokens": 32509,
+                "completion_tokens": 11711,
+                "total_tokens": 44220,
+                "cached_tokens": 0,
+                "reasoning_tokens": 6297,
+                "total_request_seconds": 372.599,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 8.454,
+              "usage_delta": {
+                "request_count": 9,
+                "successful_request_count": 7,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 9,
+                "requests_with_usage": 7,
+                "prompt_tokens": 19917,
+                "completion_tokens": 5696,
+                "total_tokens": 25613,
+                "cached_tokens": 0,
+                "reasoning_tokens": 3526,
+                "total_request_seconds": 187.898,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 25.669,
+          "usage_delta": {
+            "request_count": 11,
+            "successful_request_count": 3,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 11,
+            "requests_with_usage": 3,
+            "prompt_tokens": 8902,
+            "completion_tokens": 1594,
+            "total_tokens": 10496,
+            "cached_tokens": 0,
+            "reasoning_tokens": 801,
+            "total_request_seconds": 69.499,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "853",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00727.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_d35ca7ed6d906bc08472231c",
+          "open_variant_count": 1,
+          "open_variant_id": "open_dcb766bdc4eadd5a3bdc1a18",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": [
+            "chemical-notation-domain-specific",
+            "fine-grained-image-to-structure-matching"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 62.605,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 7892,
+        "completion_tokens": 1559,
+        "total_tokens": 9451,
+        "cached_tokens": 0,
+        "reasoning_tokens": 709,
+        "total_request_seconds": 62.542,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+      "final_cot": "Image description: The drawing shows a fused bicyclic structure: a benzene ring fused to an oxygen-containing six-membered ring. Curved electron-flow arrows are present, but they are explicitly ignored. In the non-arrow structure, the right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent. The ring continues through an ether oxygen into the fused benzene ring. The lower fused saturated carbon bears a methyl group and an OH group.\nReasoning: Per the assigned method, replace the R substituent with a wildcard atom '*'. Start at the wildcard-attached alkene carbon and open ring index 1: *C1. Encode the double bond to the carbon bearing the anionic oxygen branch: =C([O-]). Continue through the ring oxygen into the fused benzene as Oc2ccccc2. Close back to the saturated fused carbon with ring index 1 and include its branches methyl and hydroxyl as C1(C)O. This gives the SMILES *C1=C([O-])Oc2ccccc2C1(C)O.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "The trace is faithful to the image, the standard answer, and the assigned method. It first describes the visible structure while explicitly ignoring the electron-flow arrows, then converts the depicted R substituent to a wildcard and constructs the SMILES in the prescribed order. The final SMILES exactly matches the standard answer. Minor caveat: the phrase \"right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent\" is chemically/visually acceptable for the chosen SMILES, though the drawing shows the O− as attached through the top-right carbon/oxygen-containing enolate-like portion; no revision is necessary.",
+          "major_failures": [],
+          "extractability_score": 0.94,
+          "grounding_score": 0.92,
+          "method_fidelity_score": 0.98,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 8.442
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 728,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00727.json",
+        "source_sample_filename": "emmachemistry00727.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00727.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T09:16:02Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:34Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_d35ca7ed6d906bc08472231c",
+          "new_problem_id": "open_dcb766bdc4eadd5a3bdc1a18",
+          "old_problem_run_key": "emma_chemistry__prob_d35ca7ed6d906bc08472231c__a30171ef5bc3",
+          "new_problem_run_key": "emma_chemistry__open_dcb766bdc4eadd5a3bdc1a18__917bbe9d031e",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00727.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_dcb766bdc4eadd5a3bdc1a18",
+          "new_problem_id": "open_dcb766bdc4eadd5a3bdc1a18",
+          "old_problem_run_key": "emma_chemistry__open_dcb766bdc4eadd5a3bdc1a18__917bbe9d031e",
+          "new_problem_run_key": "emma_chemistry__open_dcb766bdc4eadd5a3bdc1a18__917bbe9d031e",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00727.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_dcb766bdc4eadd5a3bdc1a18",
+    "problem_run_key": "emma_chemistry__open_dcb766bdc4eadd5a3bdc1a18__917bbe9d031e",
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+    "raw_standard_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*C1=C([O-])Oc2ccccc2C1(C)O",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The drawing shows a fused bicyclic structure: a benzene ring fused to an oxygen-containing six-membered ring. Curved electron-flow arrows are present, but they are explicitly ignored. In the non-arrow structure, the right side contains an alkene carbon bearing an R substituent, adjacent by a double bond to a carbon bearing an O− substituent. The ring continues through an ether oxygen into the fused benzene ring. The lower fused saturated carbon bears a methyl group and an OH group.\nReasoning: Per the assigned method, replace the R substituent with a wildcard atom '*'. Start at the wildcard-attached alkene carbon and open ring index 1: *C1. Encode the double bond to the carbon bearing the anionic oxygen branch: =C([O-]). Continue through the ring oxygen into the fused benzene as Oc2ccccc2. Close back to the saturated fused carbon with ring index 1 and include its branches methyl and hydroxyl as C1(C)O. This gives the SMILES *C1=C([O-])Oc2ccccc2C1(C)O.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The drawing shows a fused bicyclic structure.",
+        "label": "perception",
+        "source": "The drawing shows a fused bicyclic structure"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The fused bicyclic structure includes a benzene ring fused to an oxygen-containing six-membered ring.",
+        "label": "perception",
+        "source": "a benzene ring fused to an oxygen-containing six-membered ring"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Curved electron-flow arrows are present.",
+        "label": "perception",
+        "source": "Curved electron-flow arrows are present"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The curved electron-flow arrows are ignored for this solution.",
+        "label": "reasoning",
+        "source": "but they are explicitly ignored"
+      },
+      {
+        "claim_id": 5,
+        "claim": "In the non-arrow structure, the right side contains an alkene carbon bearing an R substituent.",
+        "label": "perception",
+        "source": "the right side contains an alkene carbon bearing an R substituent"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The alkene carbon bearing an R substituent is adjacent by a double bond to a carbon bearing an O− substituent.",
+        "label": "perception",
+        "source": "adjacent by a double bond to a carbon bearing an O− substituent"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The ring continues through an ether oxygen into the fused benzene ring.",
+        "label": "perception",
+        "source": "The ring continues through an ether oxygen into the fused benzene ring"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The lower fused saturated carbon bears a methyl group.",
+        "label": "perception",
+        "source": "The lower fused saturated carbon bears a methyl group and an OH group"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The lower fused saturated carbon bears an OH group.",
+        "label": "perception",
+        "source": "The lower fused saturated carbon bears a methyl group and an OH group"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The R substituent is replaced with a wildcard atom '*'.",
+        "label": "reasoning",
+        "source": "replace the R substituent with a wildcard atom '*'"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The SMILES construction starts at the wildcard-attached alkene carbon.",
+        "label": "reasoning",
+        "source": "Start at the wildcard-attached alkene carbon"
+      },
+      {
+        "claim_id": 12,
+        "claim": "Opening ring index 1 at the wildcard-attached alkene carbon gives *C1.",
+        "label": "reasoning",
+        "source": "open ring index 1: *C1"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The double bond to the carbon bearing the anionic oxygen branch is encoded as =C([O-]).",
+        "label": "reasoning",
+        "source": "Encode the double bond to the carbon bearing the anionic oxygen branch: =C([O-])"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Continuing through the ring oxygen into the fused benzene is encoded as Oc2ccccc2.",
+        "label": "reasoning",
+        "source": "Continue through the ring oxygen into the fused benzene as Oc2ccccc2"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The structure closes back to the saturated fused carbon with ring index 1.",
+        "label": "reasoning",
+        "source": "Close back to the saturated fused carbon with ring index 1"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The saturated fused carbon's methyl and hydroxyl branches are included as C1(C)O.",
+        "label": "reasoning",
+        "source": "include its branches methyl and hydroxyl as C1(C)O"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The resulting SMILES is *C1=C([O-])Oc2ccccc2C1(C)O.",
+        "label": "reasoning",
+        "source": "This gives the SMILES *C1=C([O-])Oc2ccccc2C1(C)O"
+      }
+    ],
+    "claim_count": 17,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The drawing shows a fused bicyclic structure.",
+          "label": "perception",
+          "source": "The drawing shows a fused bicyclic structure"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The fused bicyclic structure includes a benzene ring fused to an oxygen-containing six-membered ring.",
+          "label": "perception",
+          "source": "a benzene ring fused to an oxygen-containing six-membered ring"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Curved electron-flow arrows are present.",
+          "label": "perception",
+          "source": "Curved electron-flow arrows are present"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The curved electron-flow arrows are ignored for this solution.",
+          "label": "reasoning",
+          "source": "but they are explicitly ignored"
+        },
+        {
+          "claim_id": 5,
+          "claim": "In the non-arrow structure, the right side contains an alkene carbon bearing an R substituent.",
+          "label": "perception",
+          "source": "the right side contains an alkene carbon bearing an R substituent"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The alkene carbon bearing an R substituent is adjacent by a double bond to a carbon bearing an O− substituent.",
+          "label": "perception",
+          "source": "adjacent by a double bond to a carbon bearing an O− substituent"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The ring continues through an ether oxygen into the fused benzene ring.",
+          "label": "perception",
+          "source": "The ring continues through an ether oxygen into the fused benzene ring"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The lower fused saturated carbon bears a methyl group.",
+          "label": "perception",
+          "source": "The lower fused saturated carbon bears a methyl group and an OH group"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The lower fused saturated carbon bears an OH group.",
+          "label": "perception",
+          "source": "The lower fused saturated carbon bears a methyl group and an OH group"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The R substituent is replaced with a wildcard atom '*'.",
+          "label": "reasoning",
+          "source": "replace the R substituent with a wildcard atom '*'"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The SMILES construction starts at the wildcard-attached alkene carbon.",
+          "label": "reasoning",
+          "source": "Start at the wildcard-attached alkene carbon"
+        },
+        {
+          "claim_id": 12,
+          "claim": "Opening ring index 1 at the wildcard-attached alkene carbon gives *C1.",
+          "label": "reasoning",
+          "source": "open ring index 1: *C1"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The double bond to the carbon bearing the anionic oxygen branch is encoded as =C([O-]).",
+          "label": "reasoning",
+          "source": "Encode the double bond to the carbon bearing the anionic oxygen branch: =C([O-])"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Continuing through the ring oxygen into the fused benzene is encoded as Oc2ccccc2.",
+          "label": "reasoning",
+          "source": "Continue through the ring oxygen into the fused benzene as Oc2ccccc2"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The structure closes back to the saturated fused carbon with ring index 1.",
+          "label": "reasoning",
+          "source": "Close back to the saturated fused carbon with ring index 1"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The saturated fused carbon's methyl and hydroxyl branches are included as C1(C)O.",
+          "label": "reasoning",
+          "source": "include its branches methyl and hydroxyl as C1(C)O"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The resulting SMILES is *C1=C([O-])Oc2ccccc2C1(C)O.",
+          "label": "reasoning",
+          "source": "This gives the SMILES *C1=C([O-])Oc2ccccc2C1(C)O"
+        }
+      ],
+      "coverage_notes": "All explicit structural observations and SMILES-construction steps from the final_cot are covered in order. No additional facts beyond the final_cot were added."
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/05906_chemistry_emma_chemistry_open_dcb766bdc4eadd5a3bdc1a18_2331461de7.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/00817_chemistry_emma_chemistry_open_dcb766bdc4eadd5a3bdc1a18_2331461de7.json"
+  }
+}

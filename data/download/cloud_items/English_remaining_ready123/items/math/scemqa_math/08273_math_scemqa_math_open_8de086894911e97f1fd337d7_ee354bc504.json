@@ -1,0 +1,618 @@
+{
+  "pack_index": 8273,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/scemqa_math:scemqamath00089:scemqa_math__open_8de086894911e97f1fd337d7__91baa9797982",
+    "subject_dir": "math",
+    "dataset_slug": "scemqa_math",
+    "problem_id": "open_8de086894911e97f1fd337d7",
+    "source_problem_id": "open_8de086894911e97f1fd337d7",
+    "problem_run_key": "scemqa_math__open_8de086894911e97f1fd337d7__91baa9797982",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/scemqa_math/samples/scemqamath00089.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/scemqa_math/samples/scemqamath00089.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/scemqa_math/samples/scemqamath00089.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/scemqa_math/artifacts/images/scemqamath00089.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Question: 449\nGiven the contingency table below, determine the expected frequency of cell 1, 3.",
+    "raw_answer_text": "116.7",
+    "open_variant_id": "open_8de086894911e97f1fd337d7",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "Given the contingency table below, determine the expected frequency of cell 1, 3.",
+    "expected_answer_type": "numeric",
+    "expected_answer": "116.7",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_f0d863b636e89149f96f8105",
+        "problem_id": "prob_dae480e615e22fed8c3543be",
+        "node_type": "answer_claim",
+        "canonical_value": "116.7",
+        "surface_forms": [
+          "116.7"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_e363db5a7dfb38246f250a3d"
+        ],
+        "evidence_refs": [
+          "asset_e363db5a7dfb38246f250a3d"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "116.7"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-13T05:19:22Z",
+        "updated_at": "2026-04-13T05:19:22Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_8de086894911e97f1fd337d7",
+      "parent_problem_id": "prob_dae480e615e22fed8c3543be",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "Given the contingency table below, determine the expected frequency of cell 1, 3.",
+      "expected_answer_type": "numeric",
+      "expected_answer": "116.7",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Given the contingency table below, determine the expected frequency of cell 1, 3.",
+    "raw_answer": "116.7",
+    "raw_standard_answer": "116.7",
+    "resolved_question_text": "Given the contingency table below, determine the expected frequency of cell 1, 3.",
+    "resolved_answer": "116.7",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a 3×3 contingency table, with column headings A′, B′, C′, and row headings A, B, C. The values in row A are 110, 120, 115; the values in row B are 100, 98, 101; the values in row C are 85, 82, 88. Reasoning: cell 1,3 represents the 1st row and 3rd column, namely the cell of row A and column C′. Calculate the expected frequency under the independence hypothesis: E(1,3) = 1st row total × 3rd column total / grand total. 1st row total = 110 + 120 + 115 = 345. 3rd column total = 115 + 101 + 88 = 304. Grand total = 345 + (100 + 98 + 101) + (85 + 82 + 88) = 345 + 299 + 255 = 899. Therefore E(1,3) = 345 × 304 / 899 ≈ 116.7.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_8de086894911e97f1fd337d7",
+      "problem_run_key": "scemqa_math__open_8de086894911e97f1fd337d7__91baa9797982",
+      "question_text": "Given the contingency table below, determine the expected frequency of cell 1, 3.",
+      "standard_answer": "116.7",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/scemqa_math/artifacts/images/scemqamath00089.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the contingency table from the image: columns are A′, B′, C′ and rows are A, B, C, with row A values 110, 120, 115; row B values 100, 98, 101; row C values 85, 82, 88. From the question text, interpret cell 1,3 as the entry in row 1 and column 3, i.e. row A and column C′. Compute the expected frequency under independence using E(row 1, column 3) = (row 1 total × column 3 total) / grand total. Row 1 total = 110 + 120 + 115 = 345; column 3 total = 115 + 101 + 88 = 304; grand total = 345 + 299 + 255 = 899. Then calculate 345 × 304 / 899 ≈ 116.7.",
+          "CoT_raw": "图像描述：图中是一个 3×3 列联表，列标题为 A′、B′、C′，行标题为 A、B、C。行 A 的数值为 110、120、115；行 B 的数值为 100、98、101；行 C 的数值为 85、82、88。\n\n推理：cell 1,3 表示第 1 行第 3 列，即行 A 与列 C′ 的单元格。计算独立性假设下的期望频数：E(1,3) = 第 1 行合计 × 第 3 列合计 / 总合计。第 1 行合计 = 110 + 120 + 115 = 345。第 3 列合计 = 115 + 101 + 88 = 304。总合计 = 345 + (100 + 98 + 101) + (85 + 82 + 88) = 345 + 299 + 255 = 899。因此 E(1,3) = 345 × 304 / 899 ≈ 116.7。",
+          "model_answer": "116.7",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "116.7",
+              "predicted_part": "116.7",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个 3×3 列联表，列标题为 A′、B′、C′，行标题为 A、B、C。行 A 的数值为 110、120、115；行 B 的数值为 100、98、101；行 C 的数值为 85、82、88。\n\n推理：cell 1,3 表示第 1 行第 3 列，即行 A 与列 C′ 的单元格。计算独立性假设下的期望频数：E(1,3) = 第 1 行合计 × 第 3 列合计 / 总合计。第 1 行合计 = 110 + 120 + 115 = 345。第 3 列合计 = 115 + 101 + 88 = 304。总合计 = 345 + (100 + 98 + 101) + (85 + 82 + 88) = 345 + 299 + 255 = 899。因此 E(1,3) = 345 × 304 / 899 ≈ 116.7。",
+          "answer_answer_check_final": "116.7",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace accurately describes the table, follows the required order of image description before reasoning, applies the expected-frequency formula correctly, and reaches the standard answer 116.7.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个 3×3 列联表，列标题为 A′、B′、C′，行标题为 A、B、C。行 A 的数值为 110、120、115；行 B 的数值为 100、98、101；行 C 的数值为 85、82、88。\n\n推理：cell 1,3 表示第 1 行第 3 列，即行 A 与列 C′ 的单元格。计算独立性假设下的期望频数：E(1,3) = 第 1 行合计 × 第 3 列合计 / 总合计。第 1 行合计 = 110 + 120 + 115 = 345。第 3 列合计 = 115 + 101 + 88 = 304。总合计 = 345 + (100 + 98 + 101) + (85 + 82 + 88) = 345 + 299 + 255 = 899。因此 E(1,3) = 345 × 304 / 899 ≈ 116.7。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct standard contingency-table expected-frequency route using marginal totals and the independence formula.",
+            "image_role": "Provides the full contingency table values and the row/column labels needed to identify row 1 and column 3.",
+            "text_role": "Specifies the target cell as cell 1,3 and asks for its expected frequency rather than the observed value.",
+            "knowledge_role": "Uses the chi-square contingency-table rule: expected frequency = row total times column total divided by grand total."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个 3×3 列联表，列标题为 A′、B′、C′，行标题为 A、B、C。行 A 的数值为 110、120、115；行 B 的数值为 100、98、101；行 C 的数值为 85、82、88。\n\n推理：cell 1,3 表示第 1 行第 3 列，即行 A 与列 C′ 的单元格。计算独立性假设下的期望频数：E(1,3) = 第 1 行合计 × 第 3 列合计 / 总合计。第 1 行合计 = 110 + 120 + 115 = 345。第 3 列合计 = 115 + 101 + 88 = 304。总合计 = 345 + (100 + 98 + 101) + (85 + 82 + 88) = 345 + 299 + 255 = 899。因此 E(1,3) = 345 × 304 / 899 ≈ 116.7。",
+            "model_answer": "116.7",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2882,
+              "completion_tokens": 576,
+              "total_tokens": 3458,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 9.815,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace accurately describes the table, follows the required order of image description before reasoning, applies the expected-frequency formula correctly, and reaches the standard answer 116.7.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 5.148
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 9.827,
+              "usage_delta": {
+                "request_count": 9,
+                "successful_request_count": 11,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 9,
+                "requests_with_usage": 11,
+                "prompt_tokens": 27573,
+                "completion_tokens": 5928,
+                "total_tokens": 33501,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 115.191,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 5.159,
+              "usage_delta": {
+                "request_count": 7,
+                "successful_request_count": 7,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 7,
+                "requests_with_usage": 7,
+                "prompt_tokens": 17319,
+                "completion_tokens": 3052,
+                "total_tokens": 20371,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 58.343,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 7.794,
+          "usage_delta": {
+            "request_count": 11,
+            "successful_request_count": 10,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 11,
+            "requests_with_usage": 10,
+            "prompt_tokens": 22582,
+            "completion_tokens": 5010,
+            "total_tokens": 27592,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 100.151,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "SCEMQA",
+        "dataset_slug": "scemqa_math",
+        "source_problem_id": "211",
+        "subject": "数学、物理、生物、化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/scemqa_math/samples/scemqamath00089.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_dae480e615e22fed8c3543be",
+          "open_variant_count": 1,
+          "open_variant_id": "open_8de086894911e97f1fd337d7",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": [
+            "answer inconsistency noted in asset registry issues: '3' vs provided answer_text '116.7'",
+            "metadata image path inconsistency noted in asset registry issues",
+            "source extraction issue: image field reportedly contained a PIL.Image object representation"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 22.804,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 8931,
+        "completion_tokens": 1347,
+        "total_tokens": 10278,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 22.746,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "Given the contingency table below, determine the expected frequency of cell 1, 3.",
+      "answer": "116.7",
+      "final_cot": "Image description: The figure is a 3×3 contingency table, with column headings A′, B′, C′, and row headings A, B, C. The values in row A are 110, 120, 115; the values in row B are 100, 98, 101; the values in row C are 85, 82, 88.\n\nReasoning: cell 1,3 represents the 1st row and 3rd column, namely the cell of row A and column C′. Calculate the expected frequency under the independence hypothesis: E(1,3) = 1st row total × 3rd column total / grand total. 1st row total = 110 + 120 + 115 = 345. 3rd column total = 115 + 101 + 88 = 304. Grand total = 345 + (100 + 98 + 101) + (85 + 82 + 88) = 345 + 299 + 255 = 899. Therefore E(1,3) = 345 × 304 / 899 ≈ 116.7.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace accurately describes the table, follows the required order of image description before reasoning, applies the expected-frequency formula correctly, and reaches the standard answer 116.7.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 5.148
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_skip_mmmath_25w_chatv1_keycfg_20260510T1103CST",
+        "processed_index": 90,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "scemqa_math",
+        "relative_dataset": "math/scemqa_math",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/scemqa_math/samples/scemqamath00089.json",
+        "source_sample_filename": "scemqamath00089.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/scemqa_math/samples/scemqamath00089.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_skip_mmmath_25w_chatv1_keycfg_20260510T1103CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_skip_mmmath_25w_chatv1_keycfg_20260510T1103CST.events.jsonl",
+        "written_at": "2026-05-10T03:09:31Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:22Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_8de086894911e97f1fd337d7",
+          "new_problem_id": "open_8de086894911e97f1fd337d7",
+          "old_problem_run_key": "scemqa_math__open_8de086894911e97f1fd337d7__91baa9797982",
+          "new_problem_run_key": "scemqa_math__open_8de086894911e97f1fd337d7__91baa9797982",
+          "target_relpath": "math/scemqa_math/samples/scemqamath00089.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_8de086894911e97f1fd337d7",
+    "problem_run_key": "scemqa_math__open_8de086894911e97f1fd337d7__91baa9797982",
+    "raw_question_text": "Given the contingency table below, determine the expected frequency of cell 1, 3.",
+    "raw_answer": "116.7",
+    "raw_standard_answer": "116.7",
+    "resolved_question_text": "Given the contingency table below, determine the expected frequency of cell 1, 3.",
+    "resolved_answer": "116.7",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a 3×3 contingency table, with column headings A′, B′, C′, and row headings A, B, C. The values in row A are 110, 120, 115; the values in row B are 100, 98, 101; the values in row C are 85, 82, 88.\n\nReasoning: cell 1,3 represents the 1st row and 3rd column, namely the cell of row A and column C′. Calculate the expected frequency under the independence hypothesis: E(1,3) = 1st row total × 3rd column total / grand total. 1st row total = 110 + 120 + 115 = 345. 3rd column total = 115 + 101 + 88 = 304. Grand total = 345 + (100 + 98 + 101) + (85 + 82 + 88) = 345 + 299 + 255 = 899. Therefore E(1,3) = 345 × 304 / 899 ≈ 116.7.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure is a 3×3 contingency table.",
+        "label": "perception",
+        "source": "The figure is a 3×3 contingency table"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The column headings are A′, B′, C′.",
+        "label": "perception",
+        "source": "The column headings are A′, B′, C′"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The row headings are A, B, C.",
+        "label": "perception",
+        "source": "The row headings are A, B, C"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The values in row A are 110, 120, 115.",
+        "label": "perception",
+        "source": "The values in row A are 110, 120, 115"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The values in row B are 100, 98, 101.",
+        "label": "perception",
+        "source": "The values in row B are 100, 98, 101"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The values in row C are 85, 82, 88.",
+        "label": "perception",
+        "source": "The values in row C are 85, 82, 88"
+      },
+      {
+        "claim_id": 7,
+        "claim": "cell 1,3 indicates row 1, column 3.",
+        "label": "reasoning",
+        "source": "cell 1,3 indicates row 1, column 3"
+      },
+      {
+        "claim_id": 8,
+        "claim": "cell 1,3 is the cell of row A and column C′.",
+        "label": "reasoning",
+        "source": "that is, the cell of row A and column C′"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The expected frequency formula under the independence assumption is E(1,3) = row 1 total × column 3 total / grand total.",
+        "label": "reasoning",
+        "source": "Calculate the expected frequency under the independence assumption: E(1,3) = row 1 total × column 3 total / grand total"
+      },
+      {
+        "claim_id": 10,
+        "claim": "row 1 total = 110 + 120 + 115 = 345.",
+        "label": "reasoning",
+        "source": "row 1 total = 110 + 120 + 115 = 345"
+      },
+      {
+        "claim_id": 11,
+        "claim": "column 3 total = 115 + 101 + 88 = 304.",
+        "label": "reasoning",
+        "source": "column 3 total = 115 + 101 + 88 = 304"
+      },
+      {
+        "claim_id": 12,
+        "claim": "Row B total is 299.",
+        "label": "reasoning",
+        "source": "(100 + 98 + 101)"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Row C total is 255.",
+        "label": "reasoning",
+        "source": "(85 + 82 + 88)"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Grand total = 345 + 299 + 255 = 899.",
+        "label": "reasoning",
+        "source": "Grand total = 345 + (100 + 98 + 101) + (85 + 82 + 88) = 345 + 299 + 255 = 899"
+      },
+      {
+        "claim_id": 15,
+        "claim": "E(1,3) = 345 × 304 / 899。",
+        "label": "reasoning",
+        "source": "Therefore E(1,3) = 345 × 304 / 899"
+      },
+      {
+        "claim_id": 16,
+        "claim": "E(1,3) ≈ 116.7。",
+        "label": "reasoning",
+        "source": "Therefore E(1,3) = 345 × 304 / 899 ≈ 116.7"
+      }
+    ],
+    "claim_count": 16,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure is a 3×3 contingency table.",
+          "label": "perception",
+          "source": "The figure is a 3×3 contingency table"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The column headings are A′, B′, C′.",
+          "label": "perception",
+          "source": "The column headings are A′, B′, C′"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The row headings are A, B, C.",
+          "label": "perception",
+          "source": "The row headings are A, B, C"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The values in row A are 110, 120, 115.",
+          "label": "perception",
+          "source": "The values in row A are 110, 120, 115"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The values in row B are 100, 98, 101.",
+          "label": "perception",
+          "source": "The values in row B are 100, 98, 101"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The values in row C are 85, 82, 88.",
+          "label": "perception",
+          "source": "The values in row C are 85, 82, 88"
+        },
+        {
+          "claim_id": 7,
+          "claim": "cell 1,3 indicates row 1, column 3.",
+          "label": "reasoning",
+          "source": "cell 1,3 indicates row 1, column 3"
+        },
+        {
+          "claim_id": 8,
+          "claim": "cell 1,3 is the cell of row A and column C′.",
+          "label": "reasoning",
+          "source": "that is, the cell of row A and column C′"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The expected frequency formula under the independence assumption is E(1,3) = row 1 total × column 3 total / grand total.",
+          "label": "reasoning",
+          "source": "Calculate the expected frequency under the independence assumption: E(1,3) = row 1 total × column 3 total / grand total"
+        },
+        {
+          "claim_id": 10,
+          "claim": "row 1 total = 110 + 120 + 115 = 345.",
+          "label": "reasoning",
+          "source": "row 1 total = 110 + 120 + 115 = 345"
+        },
+        {
+          "claim_id": 11,
+          "claim": "column 3 total = 115 + 101 + 88 = 304.",
+          "label": "reasoning",
+          "source": "column 3 total = 115 + 101 + 88 = 304"
+        },
+        {
+          "claim_id": 12,
+          "claim": "Row B total is 299.",
+          "label": "reasoning",
+          "source": "(100 + 98 + 101)"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Row C total is 255.",
+          "label": "reasoning",
+          "source": "(85 + 82 + 88)"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Grand total = 345 + 299 + 255 = 899.",
+          "label": "reasoning",
+          "source": "Grand total = 345 + (100 + 98 + 101) + (85 + 82 + 88) = 345 + 299 + 255 = 899"
+        },
+        {
+          "claim_id": 15,
+          "claim": "E(1,3) = 345 × 304 / 899。",
+          "label": "reasoning",
+          "source": "Therefore E(1,3) = 345 × 304 / 899"
+        },
+        {
+          "claim_id": 16,
+          "claim": "E(1,3) ≈ 116.7。",
+          "label": "reasoning",
+          "source": "Therefore E(1,3) = 345 × 304 / 899 ≈ 116.7"
+        }
+      ],
+      "coverage_notes": "已按 review 的 fix 操作将 claim 9 从 knowledge 改为 reasoning，其余 claim 保持不变。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-05T15:13:04Z",
+    "changed_target_fields": 59,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

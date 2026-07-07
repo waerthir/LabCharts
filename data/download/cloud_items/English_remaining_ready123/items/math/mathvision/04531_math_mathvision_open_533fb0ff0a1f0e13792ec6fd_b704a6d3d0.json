@@ -1,0 +1,876 @@
+{
+  "pack_index": 4531,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision01777:mathvision__open_533fb0ff0a1f0e13792ec6fd__d82db0ae8b03",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_533fb0ff0a1f0e13792ec6fd",
+    "source_problem_id": "open_533fb0ff0a1f0e13792ec6fd",
+    "problem_run_key": "mathvision__open_533fb0ff0a1f0e13792ec6fd__d82db0ae8b03",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01777.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01777.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision01777.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01777.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In $ \\triangle ABC$, we have $ \\angle C = 3 \\angle A$, $ a = 27$, and $ c = 48$. What is $ b$?\n\n<image1>",
+    "raw_answer_text": "$35$",
+    "open_variant_id": "open_533fb0ff0a1f0e13792ec6fd",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "In $\\triangle ABC$, we have $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is $b$?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "$35$",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_bfa3c9965d374779c849ccf5",
+        "problem_id": "prob_d9cea5847f85df55600d8eb6",
+        "node_type": "answer_claim",
+        "canonical_value": "$35$",
+        "surface_forms": [
+          "$35$"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_e992d44171f99eddf660678c"
+        ],
+        "evidence_refs": [
+          "asset_e992d44171f99eddf660678c"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "$35$"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T00:20:41Z",
+        "updated_at": "2026-04-08T00:20:41Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_533fb0ff0a1f0e13792ec6fd",
+      "parent_problem_id": "prob_d9cea5847f85df55600d8eb6",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "In $\\triangle ABC$, we have $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is $b$?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "$35$",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In $\\triangle ABC$, we have $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is $b$?",
+    "raw_answer": "$35$",
+    "raw_standard_answer": "$35$",
+    "resolved_question_text": "In $\\triangle ABC$, we have $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is $b$?",
+    "resolved_answer": "$35$",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: In the figure is triangle ABC, with A at the lower left, B at the lower right, and C above. Side AB is labeled c, side AC is labeled b, and side BC is labeled a, so the standard side labels are a=BC, b=AC, c=AB. Then reason: Let angle A = x, then angle C = 3x. It is known that a = 27, c = 48. By the sine rule, a/c = sin A/sin C, so 27/48 = sin x/sin 3x, therefore sin 3x/sin x = 16/9. Using the triple-angle formula sin 3x = 3 sin x - 4 sin^3 x, obtain sin 3x/sin x = 3 - 4 sin^2 x = 16/9. Thus 4 sin^2 x = 3 - 16/9 = 11/9, so sin^2 x = 11/36. Because in the triangle B = 180° - 4x > 0, x < 45°, and cos x is positive; therefore cos x = sqrt(1 - 11/36) = 5/6. Also B = 180° - A - C = 180° - 4x, so sin B = sin(180° - 4x) = sin 4x. By the sine rule, b/a = sin B/sin A = sin 4x/sin x. Using sin 4x = 4 sin x cos x cos 2x, and cos 2x = 1 - 2 sin^2 x = 1 - 2(11/36) = 7/18. Thus b/27 = sin 4x/sin x = 4 cos x cos 2x = 4(5/6)(7/18) = 35/27. Therefore b = 35. Final answer: 35",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_533fb0ff0a1f0e13792ec6fd",
+      "problem_run_key": "mathvision__open_533fb0ff0a1f0e13792ec6fd__d82db0ae8b03",
+      "question_text": "In $\\triangle ABC$, we have $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is $b$?",
+      "standard_answer": "$35$",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01777.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision01777.png"
+      ],
+      "initial_multi_solution_score": 0.3737,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Use the diagram only to confirm the standard side labels: side a is BC, side b is AC, and side c is AB. From the text, set A = x, C = 3x, a = 27, c = 48. By the Law of Sines, a/c = sin A/sin C, so 27/48 = sin x/sin 3x. Thus sin 3x/sin x = 16/9. Use sin 3x = 3 sin x - 4 sin^3 x to get 3 - 4 sin^2 x = 16/9, hence sin^2 x = 11/36 and cos x = 5/6. Since B = 180° - A - C = 180° - 4x, we have sin B = sin 4x. Again by the Law of Sines, b/a = sin B/sin A = sin 4x/sin x. Use sin 4x = 4 sin x cos x cos 2x and cos 2x = 1 - 2 sin^2 x = 7/18. Then b/27 = 4(5/6)(7/18) = 35/27, so b = 35.",
+          "CoT_raw": "先描述图像：图中是三角形 ABC，A 在左下方，B 在右下方，C 在上方。边 AB 标为 c，边 AC 标为 b，边 BC 标为 a，因此标准边标签为 a=BC、b=AC、c=AB。\n\n再推理：设角 A = x，则角 C = 3x。已知 a = 27，c = 48。由正弦定理，a/c = sin A/sin C，所以 27/48 = sin x/sin 3x，因此 sin 3x/sin x = 16/9。\n\n用三倍角公式 sin 3x = 3 sin x - 4 sin^3 x，得到 sin 3x/sin x = 3 - 4 sin^2 x = 16/9。于是 4 sin^2 x = 3 - 16/9 = 11/9，所以 sin^2 x = 11/36。因为三角形中 B = 180° - 4x > 0，所以 x < 45°，cos x 为正；因此 cos x = sqrt(1 - 11/36) = 5/6。\n\n又 B = 180° - A - C = 180° - 4x，所以 sin B = sin(180° - 4x) = sin 4x。由正弦定理，b/a = sin B/sin A = sin 4x/sin x。\n\n用 sin 4x = 4 sin x cos x cos 2x，且 cos 2x = 1 - 2 sin^2 x = 1 - 2(11/36) = 7/18。于是 b/27 = sin 4x/sin x = 4 cos x cos 2x = 4(5/6)(7/18) = 35/27。因此 b = 35。\n\n最终答案：35",
+          "model_answer": "35",
+          "is_answer_match": true,
+          "answer_match_reason": "The predicted answer is exactly 35, which matches the standard answer.",
+          "answer_match_part_results": [
+            {
+              "standard_part": "35",
+              "predicted_part": "35",
+              "is_equivalent": true,
+              "reason": "They are identical."
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中是三角形 ABC，A 在左下方，B 在右下方，C 在上方。边 AB 标为 c，边 AC 标为 b，边 BC 标为 a，因此标准边标签为 a=BC、b=AC、c=AB。\n\n再推理：设角 A = x，则角 C = 3x。已知 a = 27，c = 48。由正弦定理，a/c = sin A/sin C，所以 27/48 = sin x/sin 3x，因此 sin 3x/sin x = 16/9。\n\n用三倍角公式 sin 3x = 3 sin x - 4 sin^3 x，得到 sin 3x/sin x = 3 - 4 sin^2 x = 16/9。于是 4 sin^2 x = 3 - 16/9 = 11/9，所以 sin^2 x = 11/36。因为三角形中 B = 180° - 4x > 0，所以 x < 45°，cos x 为正；因此 cos x = sqrt(1 - 11/36) = 5/6。\n\n又 B = 180° - A - C = 180° - 4x，所以 sin B = sin(180° - 4x) = sin 4x。由正弦定理，b/a = sin B/sin A = sin 4x/sin x。\n\n用 sin 4x = 4 sin x cos x cos 2x，且 cos 2x = 1 - 2 sin^2 x = 1 - 2(11/36) = 7/18。于是 b/27 = sin 4x/sin x = 4 cos x cos 2x = 4(5/6)(7/18) = 35/27。因此 b = 35。\n\n最终答案：35",
+          "answer_answer_check_final": "35",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理过程与题目、图像和标准答案一致；先描述图像再推理，符合图像题 CoT 顺序要求。图像中的边标签 a=BC、b=AC、c=AB 与候选描述一致，后续正弦定理和三角恒等式推导也正确。无须修改。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中是三角形 ABC，A 在左下方，B 在右下方，C 在上方。边 AB 标为 c，边 AC 标为 b，边 BC 标为 a，因此标准边标签为 a=BC、b=AC、c=AB。\n\n再推理：设角 A = x，则角 C = 3x。已知 a = 27，c = 48。由正弦定理，a/c = sin A/sin C，所以 27/48 = sin x/sin 3x，因此 sin 3x/sin x = 16/9。\n\n用三倍角公式 sin 3x = 3 sin x - 4 sin^3 x，得到 sin 3x/sin x = 3 - 4 sin^2 x = 16/9。于是 4 sin^2 x = 3 - 16/9 = 11/9，所以 sin^2 x = 11/36。因为三角形中 B = 180° - 4x > 0，所以 x < 45°，cos x 为正；因此 cos x = sqrt(1 - 11/36) = 5/6。\n\n又 B = 180° - A - C = 180° - 4x，所以 sin B = sin(180° - 4x) = sin 4x。由正弦定理，b/a = sin B/sin A = sin 4x/sin x。\n\n用 sin 4x = 4 sin x cos x cos 2x，且 cos 2x = 1 - 2 sin^2 x = 1 - 2(11/36) = 7/18。于是 b/27 = sin 4x/sin x = 4 cos x cos 2x = 4(5/6)(7/18) = 35/27。因此 b = 35。\n\n最终答案：35",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route uses trigonometric angle identities together with the Law of Sines to determine the needed sine ratio directly from the angle relation.",
+            "image_role": "The image confirms the side-label convention: a is opposite A, b is opposite B, and c is opposite C.",
+            "text_role": "The text supplies the relation C = 3A and the numerical side lengths a = 27 and c = 48, and asks for b.",
+            "knowledge_role": "Uses the Law of Sines, the identities sin 3x = 3sin x - 4sin^3 x and sin 4x = 4sin x cos x cos 2x, and the triangle angle sum."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中是三角形 ABC，A 在左下方，B 在右下方，C 在上方。边 AB 标为 c，边 AC 标为 b，边 BC 标为 a，因此标准边标签为 a=BC、b=AC、c=AB。\n\n再推理：设角 A = x，则角 C = 3x。已知 a = 27，c = 48。由正弦定理，a/c = sin A/sin C，所以 27/48 = sin x/sin 3x，因此 sin 3x/sin x = 16/9。\n\n用三倍角公式 sin 3x = 3 sin x - 4 sin^3 x，得到 sin 3x/sin x = 3 - 4 sin^2 x = 16/9。于是 4 sin^2 x = 3 - 16/9 = 11/9，所以 sin^2 x = 11/36。因为三角形中 B = 180° - 4x > 0，所以 x < 45°，cos x 为正；因此 cos x = sqrt(1 - 11/36) = 5/6。\n\n又 B = 180° - A - C = 180° - 4x，所以 sin B = sin(180° - 4x) = sin 4x。由正弦定理，b/a = sin B/sin A = sin 4x/sin x。\n\n用 sin 4x = 4 sin x cos x cos 2x，且 cos 2x = 1 - 2 sin^2 x = 1 - 2(11/36) = 7/18。于是 b/27 = sin 4x/sin x = 4 cos x cos 2x = 4(5/6)(7/18) = 35/27。因此 b = 35。\n\n最终答案：35",
+            "model_answer": "35",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 1967,
+              "completion_tokens": 983,
+              "total_tokens": 2950,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 12.819,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理过程与题目、图像和标准答案一致；先描述图像再推理，符合图像题 CoT 顺序要求。图像中的边标签 a=BC、b=AC、c=AB 与候选描述一致，后续正弦定理和三角恒等式推导也正确。无须修改。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 7.857
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 12.854,
+              "usage_delta": {
+                "request_count": 7,
+                "successful_request_count": 7,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 7,
+                "requests_with_usage": 7,
+                "prompt_tokens": 16761,
+                "completion_tokens": 7050,
+                "total_tokens": 23811,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 120.007,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 3.359,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 5,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 3,
+                "requests_with_usage": 5,
+                "prompt_tokens": 13297,
+                "completion_tokens": 3395,
+                "total_tokens": 16692,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 190.857,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 7.892,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 4,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 3,
+                "requests_with_usage": 4,
+                "prompt_tokens": 11143,
+                "completion_tokens": 9107,
+                "total_tokens": 20250,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 152.504,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Use the diagram to identify the sides relative to the angles, then let b be unknown. From the text, a = 27, c = 48, and C = 3A. Apply the Law of Cosines to express cos A and cos C in terms of b: cos A = (b^2 + c^2 - a^2)/(2bc) = (b^2 + 1575)/(96b), and cos C = (a^2 + b^2 - c^2)/(2ab) = (b^2 - 1575)/(54b). Since C = 3A, impose cos C = cos 3A = 4cos^3 A - 3cos A. Substituting the two expressions gives an equation in b^2. With x = b^2, it simplifies to (x - 1225)(x - 5625)(x + 567) = 0. The positive candidates are b = 35 and b = 75, but b = 75 would make a + c = 27 + 48 = 75, a degenerate triangle. Therefore the valid triangle has b = 35.",
+          "CoT_raw": "图像描述：图中是三角形ABC，A在左下，B在右下，C在上方；边BC标为a，边AC标为b，边AB标为c。因此a是∠A的对边，b是∠B的对边，c是∠C的对边。推理：已知a=27，c=48，且∠C=3∠A，令未知边为b。由余弦定理，cos A = (b^2 + c^2 - a^2)/(2bc) = (b^2 + 48^2 - 27^2)/(2·b·48) = (b^2 + 1575)/(96b)。同理，cos C = (a^2 + b^2 - c^2)/(2ab) = (27^2 + b^2 - 48^2)/(2·27·b) = (b^2 - 1575)/(54b)。因为C=3A，所以cos C = cos(3A) = 4cos^3 A - 3cos A。代入上述两个表达式，并令x=b^2，可化简为(x - 1225)(x - 5625)(x + 567)=0。由于b^2必须为正，x=-567舍去；x=1225给出b=35，x=5625给出b=75。但b=75时，a+c=27+48=75，三角形退化，不符合有效三角形条件。因此b=35。",
+          "model_answer": "35",
+          "is_answer_match": true,
+          "answer_match_reason": "The predicted answer is exactly 35, matching the standard answer.",
+          "answer_match_part_results": [
+            {
+              "standard_part": "35",
+              "predicted_part": "35",
+              "is_equivalent": true,
+              "reason": "They are identical."
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是三角形ABC，A在左下，B在右下，C在上方；边BC标为a，边AC标为b，边AB标为c。因此a是∠A的对边，b是∠B的对边，c是∠C的对边。推理：已知a=27，c=48，且∠C=3∠A，令未知边为b。由余弦定理，cos A = (b^2 + c^2 - a^2)/(2bc) = (b^2 + 48^2 - 27^2)/(2·b·48) = (b^2 + 1575)/(96b)。同理，cos C = (a^2 + b^2 - c^2)/(2ab) = (27^2 + b^2 - 48^2)/(2·27·b) = (b^2 - 1575)/(54b)。因为C=3A，所以cos C = cos(3A) = 4cos^3 A - 3cos A。代入上述两个表达式，并令x=b^2，可化简为(x - 1225)(x - 5625)(x + 567)=0。由于b^2必须为正，x=-567舍去；x=1225给出b=35，x=5625给出b=75。但b=75时，a+c=27+48=75，三角形退化，不符合有效三角形条件。因此b=35。",
+          "answer_answer_check_final": "35",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "The reasoning trace is faithful to the image, the problem statement, the standard answer, and the assigned method draft. It first describes the diagram and then proceeds with the algebraic reasoning. No revision is necessary.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是三角形ABC，A在左下，B在右下，C在上方；边BC标为a，边AC标为b，边AB标为c。因此a是∠A的对边，b是∠B的对边，c是∠C的对边。推理：已知a=27，c=48，且∠C=3∠A，令未知边为b。由余弦定理，cos A = (b^2 + c^2 - a^2)/(2bc) = (b^2 + 48^2 - 27^2)/(2·b·48) = (b^2 + 1575)/(96b)。同理，cos C = (a^2 + b^2 - c^2)/(2ab) = (27^2 + b^2 - 48^2)/(2·27·b) = (b^2 - 1575)/(54b)。因为C=3A，所以cos C = cos(3A) = 4cos^3 A - 3cos A。代入上述两个表达式，并令x=b^2，可化简为(x - 1225)(x - 5625)(x + 567)=0。由于b^2必须为正，x=-567舍去；x=1225给出b=35，x=5625给出b=75。但b=75时，a+c=27+48=75，三角形退化，不符合有效三角形条件。因此b=35。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route avoids the Law of Sines and instead solves directly from the Law of Cosines plus the triple-angle formula for cosine, producing an algebraic equation for the unknown side.",
+            "image_role": "The image provides the correspondence between vertex angles and opposite side labels a, b, and c.",
+            "text_role": "The text provides the numerical side lengths a = 27, c = 48 and the angle condition C = 3A.",
+            "knowledge_role": "Uses the Law of Cosines, the cosine triple-angle identity cos 3A = 4cos^3 A - 3cos A, and the triangle inequality to discard the degenerate solution."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是三角形ABC，A在左下，B在右下，C在上方；边BC标为a，边AC标为b，边AB标为c。因此a是∠A的对边，b是∠B的对边，c是∠C的对边。推理：已知a=27，c=48，且∠C=3∠A，令未知边为b。由余弦定理，cos A = (b^2 + c^2 - a^2)/(2bc) = (b^2 + 48^2 - 27^2)/(2·b·48) = (b^2 + 1575)/(96b)。同理，cos C = (a^2 + b^2 - c^2)/(2ab) = (27^2 + b^2 - 48^2)/(2·27·b) = (b^2 - 1575)/(54b)。因为C=3A，所以cos C = cos(3A) = 4cos^3 A - 3cos A。代入上述两个表达式，并令x=b^2，可化简为(x - 1225)(x - 5625)(x + 567)=0。由于b^2必须为正，x=-567舍去；x=1225给出b=35，x=5625给出b=75。但b=75时，a+c=27+48=75，三角形退化，不符合有效三角形条件。因此b=35。",
+            "model_answer": "35",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 1944,
+              "completion_tokens": 1386,
+              "total_tokens": 3330,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 22.849,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "The reasoning trace is faithful to the image, the problem statement, the standard answer, and the assigned method draft. It first describes the diagram and then proceeds with the algebraic reasoning. No revision is necessary.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 7.831
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 22.882,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 8,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 8,
+                "prompt_tokens": 19983,
+                "completion_tokens": 8737,
+                "total_tokens": 28720,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 140.269,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 6.077,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 3,
+                "requests_with_usage": 5,
+                "prompt_tokens": 15624,
+                "completion_tokens": 4904,
+                "total_tokens": 20528,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 85.983,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 7.864,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 5,
+                "prompt_tokens": 14217,
+                "completion_tokens": 8001,
+                "total_tokens": 22218,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 121.653,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 42.249,
+          "usage_delta": {
+            "request_count": 33,
+            "successful_request_count": 37,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 33,
+            "requests_with_usage": 37,
+            "prompt_tokens": 127084,
+            "completion_tokens": 34612,
+            "total_tokens": 161696,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 621.406,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "2358",
+        "subject": "数学",
+        "requires_image": false,
+        "text_dominant": true,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01777.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_d9cea5847f85df55600d8eb6",
+          "open_variant_count": 1,
+          "open_variant_id": "open_533fb0ff0a1f0e13792ec6fd",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 103.22,
+      "problem_usage": {
+        "request_count": 7,
+        "successful_request_count": 7,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 7,
+        "requests_with_usage": 7,
+        "prompt_tokens": 13135,
+        "completion_tokens": 6230,
+        "total_tokens": 19365,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 102.924,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In $\\triangle ABC$, we have $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is $b$?",
+      "answer": "$35$",
+      "final_cot": "First describe the image: In the figure is triangle ABC, with A at the lower left, B at the lower right, and C above. Side AB is labeled c, side AC is labeled b, and side BC is labeled a, so the standard side labels are a=BC, b=AC, c=AB.\n\nThen reason: Let angle A = x, then angle C = 3x. It is known that a = 27, c = 48. By the sine rule, a/c = sin A/sin C, so 27/48 = sin x/sin 3x, therefore sin 3x/sin x = 16/9.\n\nUsing the triple-angle formula sin 3x = 3 sin x - 4 sin^3 x, obtain sin 3x/sin x = 3 - 4 sin^2 x = 16/9. Thus 4 sin^2 x = 3 - 16/9 = 11/9, so sin^2 x = 11/36. Because in the triangle B = 180° - 4x > 0, x < 45°, and cos x is positive; therefore cos x = sqrt(1 - 11/36) = 5/6.\n\nAlso B = 180° - A - C = 180° - 4x, so sin B = sin(180° - 4x) = sin 4x. By the sine rule, b/a = sin B/sin A = sin 4x/sin x.\n\nUsing sin 4x = 4 sin x cos x cos 2x, and cos 2x = 1 - 2 sin^2 x = 1 - 2(11/36) = 7/18. Thus b/27 = sin 4x/sin x = 4 cos x cos 2x = 4(5/6)(7/18) = 35/27. Therefore b = 35.\n\nFinal answer: 35",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理过程与题目、图像和标准答案一致；先描述图像再推理，符合图像题 CoT 顺序要求。图像中的边标签 a=BC、b=AC、c=AB 与候选描述一致，后续正弦定理和三角恒等式推导也正确。无须修改。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 7.857
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "The reasoning trace is faithful to the image, the problem statement, the standard answer, and the assigned method draft. It first describes the diagram and then proceeds with the algebraic reasoning. No revision is necessary.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 7.831
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 2900,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01777.json",
+        "source_sample_filename": "mathvision01777.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01777.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T20:48:07Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_533fb0ff0a1f0e13792ec6fd",
+          "new_problem_id": "open_533fb0ff0a1f0e13792ec6fd",
+          "old_problem_run_key": "mathvision__open_533fb0ff0a1f0e13792ec6fd__d82db0ae8b03",
+          "new_problem_run_key": "mathvision__open_533fb0ff0a1f0e13792ec6fd__d82db0ae8b03",
+          "target_relpath": "math/mathvision/samples/mathvision01777.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_533fb0ff0a1f0e13792ec6fd",
+    "problem_run_key": "mathvision__open_533fb0ff0a1f0e13792ec6fd__d82db0ae8b03",
+    "raw_question_text": "In $\\triangle ABC$, we have $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is $b$?",
+    "raw_answer": "$35$",
+    "raw_standard_answer": "$35$",
+    "resolved_question_text": "In $\\triangle ABC$, we have $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is $b$?",
+    "resolved_answer": "$35$",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: In the figure is triangle ABC, with A at the lower left, B at the lower right, and C above. Side AB is labeled c, side AC is labeled b, and side BC is labeled a, so the standard side labels are a=BC, b=AC, c=AB.\n\nThen reason: Let angle A = x, then angle C = 3x. It is known that a = 27, c = 48. By the sine rule, a/c = sin A/sin C, so 27/48 = sin x/sin 3x, therefore sin 3x/sin x = 16/9.\n\nUsing the triple-angle formula sin 3x = 3 sin x - 4 sin^3 x, obtain sin 3x/sin x = 3 - 4 sin^2 x = 16/9. Thus 4 sin^2 x = 3 - 16/9 = 11/9, so sin^2 x = 11/36. Because in the triangle B = 180° - 4x > 0, x < 45°, and cos x is positive; therefore cos x = sqrt(1 - 11/36) = 5/6.\n\nAlso B = 180° - A - C = 180° - 4x, so sin B = sin(180° - 4x) = sin 4x. By the sine rule, b/a = sin B/sin A = sin 4x/sin x.\n\nUsing sin 4x = 4 sin x cos x cos 2x, and cos 2x = 1 - 2 sin^2 x = 1 - 2(11/36) = 7/18. Thus b/27 = sin 4x/sin x = 4 cos x cos 2x = 4(5/6)(7/18) = 35/27. Therefore b = 35.\n\nFinal answer: 35",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure shows triangle ABC.",
+        "label": "perception",
+        "source": "The figure shows triangle ABC"
+      },
+      {
+        "claim_id": 2,
+        "claim": "A is at the lower left.",
+        "label": "perception",
+        "source": "A is at the lower left"
+      },
+      {
+        "claim_id": 3,
+        "claim": "B is at the lower right.",
+        "label": "perception",
+        "source": "B is at the lower right"
+      },
+      {
+        "claim_id": 4,
+        "claim": "C is above.",
+        "label": "perception",
+        "source": "C is above"
+      },
+      {
+        "claim_id": 5,
+        "claim": "Side AB is labeled as c.",
+        "label": "perception",
+        "source": "Side AB is labeled as c"
+      },
+      {
+        "claim_id": 6,
+        "claim": "Side AC is labeled as b.",
+        "label": "perception",
+        "source": "Side AC is labeled as b"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Side BC is labeled a.",
+        "label": "perception",
+        "source": "Side BC is labeled a"
+      },
+      {
+        "claim_id": 8,
+        "claim": "Let angle A = x.",
+        "label": "reasoning",
+        "source": "Let angle A = x"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Angle C = 3x.",
+        "label": "reasoning",
+        "source": "Then angle C = 3x"
+      },
+      {
+        "claim_id": 10,
+        "claim": "It is known that a = 27.",
+        "label": "perception",
+        "source": "It is known that a = 27, c = 48"
+      },
+      {
+        "claim_id": 11,
+        "claim": "It is known that c = 48.",
+        "label": "perception",
+        "source": "It is known that a = 27, c = 48"
+      },
+      {
+        "claim_id": 12,
+        "claim": "By the sine theorem, a/c = sin A/sin C.",
+        "label": "knowledge",
+        "source": "By the sine theorem, a/c = sin A/sin C"
+      },
+      {
+        "claim_id": 13,
+        "claim": "27/48 = sin x/sin 3x。",
+        "label": "reasoning",
+        "source": "So 27/48 = sin x/sin 3x"
+      },
+      {
+        "claim_id": 14,
+        "claim": "sin 3x/sin x = 16/9。",
+        "label": "reasoning",
+        "source": "Therefore sin 3x/sin x = 16/9"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The triple-angle formula is sin 3x = 3 sin x - 4 sin^3 x.",
+        "label": "knowledge",
+        "source": "Use the triple-angle formula sin 3x = 3 sin x - 4 sin^3 x"
+      },
+      {
+        "claim_id": 16,
+        "claim": "From sin 3x/sin x = 3 - 4 sin^2 x = 16/9, solving gives sin^2 x = 11/36.",
+        "label": "reasoning",
+        "source": "Obtain sin 3x/sin x = 3 - 4 sin^2 x = 16/9. Thus 4 sin^2 x = 3 - 16/9 = 11/9, so sin^2 x = 11/36."
+      },
+      {
+        "claim_id": 17,
+        "claim": "Because B = 180° - 4x > 0, x < 45° and cos x is positive, hence cos x = 5/6.",
+        "label": "reasoning",
+        "source": "Because in the triangle B = 180° - 4x > 0, x < 45°, and cos x is positive; therefore cos x = sqrt(1 - 11/36) = 5/6."
+      },
+      {
+        "claim_id": 18,
+        "claim": "B = 180° - A - C。",
+        "label": "knowledge",
+        "source": "Also B = 180° - A - C = 180° - 4x"
+      },
+      {
+        "claim_id": 19,
+        "claim": "sin B = sin(180° - 4x) = sin 4x。",
+        "label": "reasoning",
+        "source": "So sin B = sin(180° - 4x) = sin 4x"
+      },
+      {
+        "claim_id": 20,
+        "claim": "By the sine theorem, b/a = sin B/sin A.",
+        "label": "knowledge",
+        "source": "By the sine theorem, b/a = sin B/sin A = sin 4x/sin x"
+      },
+      {
+        "claim_id": 21,
+        "claim": "b/a = sin 4x/sin x。",
+        "label": "reasoning",
+        "source": "By the sine theorem, b/a = sin B/sin A = sin 4x/sin x"
+      },
+      {
+        "claim_id": 22,
+        "claim": "sin 4x = 4 sin x cos x cos 2x。",
+        "label": "knowledge",
+        "source": "Use sin 4x = 4 sin x cos x cos 2x"
+      },
+      {
+        "claim_id": 23,
+        "claim": "cos 2x = 1 - 2 sin^2 x。",
+        "label": "knowledge",
+        "source": "and cos 2x = 1 - 2 sin^2 x"
+      },
+      {
+        "claim_id": 24,
+        "claim": "cos 2x = 1 - 2(11/36) = 7/18。",
+        "label": "reasoning",
+        "source": "cos 2x = 1 - 2 sin^2 x = 1 - 2(11/36) = 7/18"
+      },
+      {
+        "claim_id": 25,
+        "claim": "Thus b/27 = sin 4x/sin x = 4(5/6)(7/18) = 35/27.",
+        "label": "reasoning",
+        "source": "Thus b/27 = sin 4x/sin x = 4 cos x cos 2x = 4(5/6)(7/18) = 35/27."
+      },
+      {
+        "claim_id": 26,
+        "claim": "b = 35。",
+        "label": "reasoning",
+        "source": "Therefore b = 35"
+      }
+    ],
+    "claim_count": 26,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure shows triangle ABC.",
+          "label": "perception",
+          "source": "The figure shows triangle ABC"
+        },
+        {
+          "claim_id": 2,
+          "claim": "A is at the lower left.",
+          "label": "perception",
+          "source": "A is at the lower left"
+        },
+        {
+          "claim_id": 3,
+          "claim": "B is at the lower right.",
+          "label": "perception",
+          "source": "B is at the lower right"
+        },
+        {
+          "claim_id": 4,
+          "claim": "C is above.",
+          "label": "perception",
+          "source": "C is above"
+        },
+        {
+          "claim_id": 5,
+          "claim": "Side AB is labeled as c.",
+          "label": "perception",
+          "source": "Side AB is labeled as c"
+        },
+        {
+          "claim_id": 6,
+          "claim": "Side AC is labeled as b.",
+          "label": "perception",
+          "source": "Side AC is labeled as b"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Side BC is labeled a.",
+          "label": "perception",
+          "source": "Side BC is labeled a"
+        },
+        {
+          "claim_id": 8,
+          "claim": "Let angle A = x.",
+          "label": "reasoning",
+          "source": "Let angle A = x"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Angle C = 3x.",
+          "label": "reasoning",
+          "source": "Then angle C = 3x"
+        },
+        {
+          "claim_id": 10,
+          "claim": "It is known that a = 27.",
+          "label": "perception",
+          "source": "It is known that a = 27, c = 48"
+        },
+        {
+          "claim_id": 11,
+          "claim": "It is known that c = 48.",
+          "label": "perception",
+          "source": "It is known that a = 27, c = 48"
+        },
+        {
+          "claim_id": 12,
+          "claim": "By the sine theorem, a/c = sin A/sin C.",
+          "label": "knowledge",
+          "source": "By the sine theorem, a/c = sin A/sin C"
+        },
+        {
+          "claim_id": 13,
+          "claim": "27/48 = sin x/sin 3x。",
+          "label": "reasoning",
+          "source": "So 27/48 = sin x/sin 3x"
+        },
+        {
+          "claim_id": 14,
+          "claim": "sin 3x/sin x = 16/9。",
+          "label": "reasoning",
+          "source": "Therefore sin 3x/sin x = 16/9"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The triple-angle formula is sin 3x = 3 sin x - 4 sin^3 x.",
+          "label": "knowledge",
+          "source": "Use the triple-angle formula sin 3x = 3 sin x - 4 sin^3 x"
+        },
+        {
+          "claim_id": 16,
+          "claim": "From sin 3x/sin x = 3 - 4 sin^2 x = 16/9, solving gives sin^2 x = 11/36.",
+          "label": "reasoning",
+          "source": "Obtain sin 3x/sin x = 3 - 4 sin^2 x = 16/9. Thus 4 sin^2 x = 3 - 16/9 = 11/9, so sin^2 x = 11/36."
+        },
+        {
+          "claim_id": 17,
+          "claim": "Because B = 180° - 4x > 0, x < 45° and cos x is positive, hence cos x = 5/6.",
+          "label": "reasoning",
+          "source": "Because in the triangle B = 180° - 4x > 0, x < 45°, and cos x is positive; therefore cos x = sqrt(1 - 11/36) = 5/6."
+        },
+        {
+          "claim_id": 18,
+          "claim": "B = 180° - A - C。",
+          "label": "knowledge",
+          "source": "Also B = 180° - A - C = 180° - 4x"
+        },
+        {
+          "claim_id": 19,
+          "claim": "sin B = sin(180° - 4x) = sin 4x。",
+          "label": "reasoning",
+          "source": "So sin B = sin(180° - 4x) = sin 4x"
+        },
+        {
+          "claim_id": 20,
+          "claim": "By the sine theorem, b/a = sin B/sin A.",
+          "label": "knowledge",
+          "source": "By the sine theorem, b/a = sin B/sin A = sin 4x/sin x"
+        },
+        {
+          "claim_id": 21,
+          "claim": "b/a = sin 4x/sin x。",
+          "label": "reasoning",
+          "source": "By the sine theorem, b/a = sin B/sin A = sin 4x/sin x"
+        },
+        {
+          "claim_id": 22,
+          "claim": "sin 4x = 4 sin x cos x cos 2x。",
+          "label": "knowledge",
+          "source": "Use sin 4x = 4 sin x cos x cos 2x"
+        },
+        {
+          "claim_id": 23,
+          "claim": "cos 2x = 1 - 2 sin^2 x。",
+          "label": "knowledge",
+          "source": "and cos 2x = 1 - 2 sin^2 x"
+        },
+        {
+          "claim_id": 24,
+          "claim": "cos 2x = 1 - 2(11/36) = 7/18。",
+          "label": "reasoning",
+          "source": "cos 2x = 1 - 2 sin^2 x = 1 - 2(11/36) = 7/18"
+        },
+        {
+          "claim_id": 25,
+          "claim": "Thus b/27 = sin 4x/sin x = 4(5/6)(7/18) = 35/27.",
+          "label": "reasoning",
+          "source": "Thus b/27 = sin 4x/sin x = 4 cos x cos 2x = 4(5/6)(7/18) = 35/27."
+        },
+        {
+          "claim_id": 26,
+          "claim": "b = 35。",
+          "label": "reasoning",
+          "source": "Therefore b = 35"
+        }
+      ],
+      "coverage_notes": "已按 review 中所有 severity 为 fix 的问题进行修复：删除重复的标准边标签与最终答案表述，合并过细的代数和三角化简步骤，并删除重复的 B = 180° - 4x 表述；其余 claim 保持原顺序与原语言。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T10:42:51Z",
+    "changed_target_fields": 87,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

@@ -1,0 +1,629 @@
+{
+  "pack_index": 1620,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "circuit/eee_bench:eeebench01130:eee_bench__open_172536244d469b5729679ac3__590c68d85cb5",
+    "subject_dir": "circuit",
+    "dataset_slug": "eee_bench",
+    "problem_id": "open_172536244d469b5729679ac3",
+    "source_problem_id": "open_172536244d469b5729679ac3",
+    "problem_run_key": "eee_bench__open_172536244d469b5729679ac3__590c68d85cb5",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01130.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01130.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/circuit/eee_bench/samples/eeebench01130.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench01130.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In the circuit shown in <image>, the 8255 chip would get selected for the range of addresses:",
+    "raw_answer_text": "F8H - FFH",
+    "open_variant_id": "open_172536244d469b5729679ac3",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "In the circuit shown, what is the range of addresses for which the 8255 chip gets selected?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "F8H - FFH",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_d0a19b4974928a159ba50c91",
+        "problem_id": "prob_e98363ba4f77919f68fdbaa4",
+        "node_type": "answer_claim",
+        "canonical_value": "F8H - FFH",
+        "surface_forms": [
+          "F8H - FFH"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_8ef90e17f7868e66e68c1c37"
+        ],
+        "evidence_refs": [
+          "asset_8ef90e17f7868e66e68c1c37"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "F8H - FFH"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-07T03:04:55Z",
+        "updated_at": "2026-04-07T03:04:55Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_172536244d469b5729679ac3",
+      "parent_problem_id": "prob_e98363ba4f77919f68fdbaa4",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "In the circuit shown, what is the range of addresses for which the 8255 chip gets selected?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "F8H - FFH",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the circuit shown, what is the range of addresses for which the 8255 chip gets selected?",
+    "raw_answer": "F8H - FFH",
+    "raw_standard_answer": "F8H - FFH",
+    "resolved_question_text": "In the circuit shown, what is the range of addresses for which the 8255 chip gets selected?",
+    "resolved_answer": "F8H - FFH",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: On the right side of the circuit diagram is an 8255 chip, and the chip select terminal of the chip is labeled as CS with an overline, that is, active-low /CS. The A1 and A0 pins of the 8255 are directly connected to the CPU address lines A1 and A0, and are used for internal register selection. On the left there are address lines labeled A7, A6, A5, A4, A3, and the IO/M control signal; these high-order address lines pass through a decoding gate with a small output inversion bubble and then connect to the /CS input of the 8255. Reasoning: When the output of this decoding gate is low level, the 8255 is selected, so when the decoded high-order address lines satisfy the condition of all being 1, /CS is valid. A1 and A0 only enter the 8255 for register selection; A2 is not decoded, so A2, A1, and A0 are all don't-care bits. Therefore the address template is A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx. Let xxx be the minimum 000, obtaining 11111000b = F8H; let xxx be the maximum 111, obtaining 11111111b = FFH. Therefore the address range in which the 8255 is selected is F8H to FFH.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_172536244d469b5729679ac3",
+      "problem_run_key": "eee_bench__open_172536244d469b5729679ac3__590c68d85cb5",
+      "question_text": "In the circuit shown, what is the range of addresses for which the 8255 chip gets selected?",
+      "standard_answer": "F8H - FFH",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench00849.png",
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/crops/eeebench00849.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First inspect the diagram to identify which CPU address lines are decoded for /CS and which go directly into the 8255. Note that A1 and A0 are direct 8255 register-select inputs, while the decoder asserts the active-low chip select when the upper address pattern is all 1s; A2 is not decoded. Form the address template as A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx. Then enumerate the minimum and maximum values of the three don't-care bits: 11111000b = F8H and 11111111b = FFH. Report the selected address range as F8H–FFH.",
+          "CoT_raw": "图像描述：电路图右侧是 8255 芯片，芯片的片选端标为带横线的 CS，即低有效 /CS。8255 的 A1 和 A0 引脚直接接到 CPU 地址线 A1、A0，用作内部寄存器选择。左侧有地址线标注 A7、A6、A5、A4、A3，以及 IO/M 控制信号；这些高位地址线经一个带输出反相小圆点的译码门后接到 8255 的 /CS 输入。推理：该译码门输出为低电平时选中 8255，因此在被译码的高位地址线满足全为 1 的条件时，/CS 有效。A1、A0 只是进入 8255 作寄存器选择；A2 没有被译码，因此 A2、A1、A0 都是 don't-care 位。于是地址模板为 A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx。令 xxx 最小为 000，得到 11111000b = F8H；令 xxx 最大为 111，得到 11111111b = FFH。所以 8255 被选中的地址范围是 F8H 到 FFH。",
+          "model_answer": "F8H - FFH",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "F8H - FFH",
+              "predicted_part": "F8H - FFH",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：电路图右侧是 8255 芯片，芯片的片选端标为带横线的 CS，即低有效 /CS。8255 的 A1 和 A0 引脚直接接到 CPU 地址线 A1、A0，用作内部寄存器选择。左侧有地址线标注 A7、A6、A5、A4、A3，以及 IO/M 控制信号；这些高位地址线经一个带输出反相小圆点的译码门后接到 8255 的 /CS 输入。推理：该译码门输出为低电平时选中 8255，因此在被译码的高位地址线满足全为 1 的条件时，/CS 有效。A1、A0 只是进入 8255 作寄存器选择；A2 没有被译码，因此 A2、A1、A0 都是 don't-care 位。于是地址模板为 A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx。令 xxx 最小为 000，得到 11111000b = F8H；令 xxx 最大为 111，得到 11111111b = FFH。所以 8255 被选中的地址范围是 F8H 到 FFH。",
+          "answer_answer_check_final": "F8H - FFH",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace passes. It first describes the image, then reasons from the decoded address lines. The selected range F8H–FFH matches the standard answer and the assigned method. Minor note: the trace could be slightly more explicit that IO/M only qualifies the cycle type and does not change the address range being asked for, but this omission does not affect correctness.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：电路图右侧是 8255 芯片，芯片的片选端标为带横线的 CS，即低有效 /CS。8255 的 A1 和 A0 引脚直接接到 CPU 地址线 A1、A0，用作内部寄存器选择。左侧有地址线标注 A7、A6、A5、A4、A3，以及 IO/M 控制信号；这些高位地址线经一个带输出反相小圆点的译码门后接到 8255 的 /CS 输入。推理：该译码门输出为低电平时选中 8255，因此在被译码的高位地址线满足全为 1 的条件时，/CS 有效。A1、A0 只是进入 8255 作寄存器选择；A2 没有被译码，因此 A2、A1、A0 都是 don't-care 位。于是地址模板为 A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx。令 xxx 最小为 000，得到 11111000b = F8H；令 xxx 最大为 111，得到 11111111b = FFH。所以 8255 被选中的地址范围是 F8H 到 FFH。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Direct address-decoder interpretation; uses the visible chip-select gate and the 8255 internal address pins to derive the decoded fixed address bits and resulting hexadecimal range.",
+            "image_role": "Read the circuit diagram: the 8255 block has active-low CS input, CPU address lines A1 and A0 connected to the 8255 A1 and A0 pins, and the chip-select line driven by a NAND-style decoder fed by the higher address lines shown at the left, effectively selecting when A7 through A3 are high for an I/O access; A2 is not used in the select logic.",
+            "text_role": "Use the question statement only to know the requested quantity: the address range for which the 8255 is selected.",
+            "knowledge_role": "Use 8255 addressing convention: A1,A0 select the internal ports/control register, while /CS must be asserted low for the chip; undecoded address bits are don't-cares. Convert the fixed high bits A7..A3 = 11111 with A2,A1,A0 varying from 000 to 111 into hexadecimal addresses: 11111000b to 11111111b = F8H to FFH."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：电路图右侧是 8255 芯片，芯片的片选端标为带横线的 CS，即低有效 /CS。8255 的 A1 和 A0 引脚直接接到 CPU 地址线 A1、A0，用作内部寄存器选择。左侧有地址线标注 A7、A6、A5、A4、A3，以及 IO/M 控制信号；这些高位地址线经一个带输出反相小圆点的译码门后接到 8255 的 /CS 输入。推理：该译码门输出为低电平时选中 8255，因此在被译码的高位地址线满足全为 1 的条件时，/CS 有效。A1、A0 只是进入 8255 作寄存器选择；A2 没有被译码，因此 A2、A1、A0 都是 don't-care 位。于是地址模板为 A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx。令 xxx 最小为 000，得到 11111000b = F8H；令 xxx 最大为 111，得到 11111111b = FFH。所以 8255 被选中的地址范围是 F8H 到 FFH。",
+            "model_answer": "F8H - FFH",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2908,
+              "completion_tokens": 851,
+              "total_tokens": 3759,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 16.602,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace passes. It first describes the image, then reasons from the decoded address lines. The selected range F8H–FFH matches the standard answer and the assigned method. Minor note: the trace could be slightly more explicit that IO/M only qualifies the cycle type and does not change the address range being asked for, but this omission does not affect correctness.",
+              "major_failures": [],
+              "extractability_score": 0.94,
+              "grounding_score": 0.9,
+              "method_fidelity_score": 0.97,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 13.616
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 16.638,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 12,
+                "prompt_tokens": 35153,
+                "completion_tokens": 12369,
+                "total_tokens": 47522,
+                "cached_tokens": 0,
+                "reasoning_tokens": 6823,
+                "total_request_seconds": 234.914,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 13.663,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 14,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 14,
+                "prompt_tokens": 41770,
+                "completion_tokens": 9428,
+                "total_tokens": 51198,
+                "cached_tokens": 0,
+                "reasoning_tokens": 5937,
+                "total_request_seconds": 188.074,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 19.468,
+          "usage_delta": {
+            "request_count": 10,
+            "successful_request_count": 6,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 10,
+            "requests_with_usage": 6,
+            "prompt_tokens": 17827,
+            "completion_tokens": 6511,
+            "total_tokens": 24338,
+            "cached_tokens": 0,
+            "reasoning_tokens": 3802,
+            "total_request_seconds": 118.664,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EEE-Bench",
+        "dataset_slug": "eee_bench",
+        "source_problem_id": "1587",
+        "subject": "电气电子工程领域",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01130.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_e98363ba4f77919f68fdbaa4",
+          "open_variant_count": 1,
+          "open_variant_id": "open_172536244d469b5729679ac3",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "circuit_image_content_not_directly available in text; multi-step estimate is partly inferred from question phrasing and metadata",
+            "image_quality_readability_score=0.79 suggests possible moderate visual-readability risk"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 49.805,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 9264,
+        "completion_tokens": 2419,
+        "total_tokens": 11683,
+        "cached_tokens": 0,
+        "reasoning_tokens": 1548,
+        "total_request_seconds": 49.648,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the circuit shown, what is the range of addresses for which the 8255 chip gets selected?",
+      "answer": "F8H - FFH",
+      "final_cot": "Image description: On the right side of the circuit diagram is an 8255 chip, and the chip select terminal of the chip is labeled as CS with an overline, that is, active-low /CS. The A1 and A0 pins of the 8255 are directly connected to the CPU address lines A1 and A0, and are used for internal register selection. On the left there are address lines labeled A7, A6, A5, A4, A3, and the IO/M control signal; these high-order address lines pass through a decoding gate with a small output inversion bubble and then connect to the /CS input of the 8255. Reasoning: When the output of this decoding gate is low level, the 8255 is selected, so when the decoded high-order address lines satisfy the condition of all being 1, /CS is valid. A1 and A0 only enter the 8255 for register selection; A2 is not decoded, so A2, A1, and A0 are all don't-care bits. Therefore the address template is A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx. Let xxx be the minimum 000, obtaining 11111000b = F8H; let xxx be the maximum 111, obtaining 11111111b = FFH. Therefore the address range in which the 8255 is selected is F8H to FFH.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace passes. It first describes the image, then reasons from the decoded address lines. The selected range F8H–FFH matches the standard answer and the assigned method. Minor note: the trace could be slightly more explicit that IO/M only qualifies the cycle type and does not change the address range being asked for, but this omission does not affect correctness.",
+          "major_failures": [],
+          "extractability_score": 0.94,
+          "grounding_score": 0.9,
+          "method_fidelity_score": 0.97,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 13.616
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_resume_openvariants_20260506T003434CST",
+        "processed_index": 1246,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "circuit",
+        "dataset": "eee_bench",
+        "relative_dataset": "circuit/eee_bench",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01130.json",
+        "source_sample_filename": "eeebench01130.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01130.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.events.jsonl",
+        "written_at": "2026-05-05T22:51:29Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:17Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_172536244d469b5729679ac3",
+          "new_problem_id": "open_172536244d469b5729679ac3",
+          "old_problem_run_key": "eee_bench__open_172536244d469b5729679ac3__84df92522c28",
+          "new_problem_run_key": "eee_bench__open_172536244d469b5729679ac3__590c68d85cb5",
+          "target_relpath": "circuit/eee_bench/samples/eeebench01130.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_172536244d469b5729679ac3",
+    "problem_run_key": "eee_bench__open_172536244d469b5729679ac3__590c68d85cb5",
+    "raw_question_text": "In the circuit shown, what is the range of addresses for which the 8255 chip gets selected?",
+    "raw_answer": "F8H - FFH",
+    "raw_standard_answer": "F8H - FFH",
+    "resolved_question_text": "In the circuit shown, what is the range of addresses for which the 8255 chip gets selected?",
+    "resolved_answer": "F8H - FFH",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: On the right side of the circuit diagram is an 8255 chip, and the chip select terminal of the chip is labeled as CS with an overline, that is, active-low /CS. The A1 and A0 pins of the 8255 are directly connected to the CPU address lines A1 and A0, and are used for internal register selection. On the left there are address lines labeled A7, A6, A5, A4, A3, and the IO/M control signal; these high-order address lines pass through a decoding gate with a small output inversion bubble and then connect to the /CS input of the 8255. Reasoning: When the output of this decoding gate is low level, the 8255 is selected, so when the decoded high-order address lines satisfy the condition of all being 1, /CS is valid. A1 and A0 only enter the 8255 for register selection; A2 is not decoded, so A2, A1, and A0 are all don't-care bits. Therefore the address template is A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx. Let xxx be the minimum 000, obtaining 11111000b = F8H; let xxx be the maximum 111, obtaining 11111111b = FFH. Therefore the address range in which the 8255 is selected is F8H to FFH.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "On the right side of the circuit diagram is an 8255 chip.",
+        "label": "perception",
+        "source": "On the right side of the circuit diagram is an 8255 chip"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The chip select terminal of the 8255 chip is labeled as CS with an overline.",
+        "label": "perception",
+        "source": "The chip select terminal of the chip is labeled as CS with an overline"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The chip select terminal of the 8255 is active-low /CS.",
+        "label": "perception",
+        "source": "That is, active-low /CS"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The A1 pin of the 8255 is directly connected to the CPU address line A1.",
+        "label": "perception",
+        "source": "The A1 and A0 pins of the 8255 are directly connected to the CPU address lines A1 and A0"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The A0 pin of the 8255 is directly connected to CPU address line A0.",
+        "label": "perception",
+        "source": "The A1 and A0 pins of the 8255 are directly connected to the CPU address lines A1 and A0"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The A1 and A0 of the 8255 are used for internal register selection.",
+        "label": "perception",
+        "source": "used for internal register selection"
+      },
+      {
+        "claim_id": 7,
+        "claim": "On the left side there are address lines labeled A7, A6, A5, A4, A3.",
+        "label": "perception",
+        "source": "On the left side there are address lines labeled A7, A6, A5, A4, A3"
+      },
+      {
+        "claim_id": 8,
+        "claim": "On the left side there is an IO/M control signal.",
+        "label": "perception",
+        "source": "and the IO/M control signal"
+      },
+      {
+        "claim_id": 9,
+        "claim": "These high-order address lines pass through a decoding gate with a small output-inversion bubble and then connect to the /CS input of the 8255.",
+        "label": "perception",
+        "source": "These high-order address lines pass through a decoding gate with a small output-inversion bubble and then connect to the /CS input of the 8255"
+      },
+      {
+        "claim_id": 10,
+        "claim": "When the output of this decoding gate is low level, the 8255 is selected.",
+        "label": "reasoning",
+        "source": "When the output of this decoding gate is low level, the 8255 is selected"
+      },
+      {
+        "claim_id": 11,
+        "claim": "When the decoded high-order address lines satisfy the condition of all being 1, /CS is active.",
+        "label": "reasoning",
+        "source": "Therefore, when the decoded high-order address lines satisfy the condition of all being 1, /CS is active"
+      },
+      {
+        "claim_id": 12,
+        "claim": "A2 is not decoded.",
+        "label": "reasoning",
+        "source": "A2 is not decoded"
+      },
+      {
+        "claim_id": 13,
+        "claim": "A2, A1, and A0 are all don't-care bits.",
+        "label": "reasoning",
+        "source": "Therefore A2, A1, and A0 are all don't-care bits"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The address template is A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx.",
+        "label": "reasoning",
+        "source": "Therefore the address template is A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx"
+      },
+      {
+        "claim_id": 15,
+        "claim": "Let xxx be minimum as 000, obtaining 11111000b = F8H.",
+        "label": "reasoning",
+        "source": "Let xxx be minimum as 000, obtaining 11111000b = F8H"
+      },
+      {
+        "claim_id": 16,
+        "claim": "Let xxx be maximum as 111, obtaining 11111111b = FFH.",
+        "label": "reasoning",
+        "source": "Let xxx be maximum as 111, obtaining 11111111b = FFH"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The address range in which the 8255 is selected is F8H to FFH.",
+        "label": "reasoning",
+        "source": "So the address range in which the 8255 is selected is F8H to FFH"
+      }
+    ],
+    "claim_count": 17,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "On the right side of the circuit diagram is an 8255 chip.",
+          "label": "perception",
+          "source": "On the right side of the circuit diagram is an 8255 chip"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The chip select terminal of the 8255 chip is labeled as CS with an overline.",
+          "label": "perception",
+          "source": "The chip select terminal of the chip is labeled as CS with an overline"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The chip select terminal of the 8255 is active-low /CS.",
+          "label": "perception",
+          "source": "That is, active-low /CS"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The A1 pin of the 8255 is directly connected to the CPU address line A1.",
+          "label": "perception",
+          "source": "The A1 and A0 pins of the 8255 are directly connected to the CPU address lines A1 and A0"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The A0 pin of the 8255 is directly connected to CPU address line A0.",
+          "label": "perception",
+          "source": "The A1 and A0 pins of the 8255 are directly connected to the CPU address lines A1 and A0"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The A1 and A0 of the 8255 are used for internal register selection.",
+          "label": "perception",
+          "source": "used for internal register selection"
+        },
+        {
+          "claim_id": 7,
+          "claim": "On the left side there are address lines labeled A7, A6, A5, A4, A3.",
+          "label": "perception",
+          "source": "On the left side there are address lines labeled A7, A6, A5, A4, A3"
+        },
+        {
+          "claim_id": 8,
+          "claim": "On the left side there is an IO/M control signal.",
+          "label": "perception",
+          "source": "and the IO/M control signal"
+        },
+        {
+          "claim_id": 9,
+          "claim": "These high-order address lines pass through a decoding gate with a small output-inversion bubble and then connect to the /CS input of the 8255.",
+          "label": "perception",
+          "source": "These high-order address lines pass through a decoding gate with a small output-inversion bubble and then connect to the /CS input of the 8255"
+        },
+        {
+          "claim_id": 10,
+          "claim": "When the output of this decoding gate is low level, the 8255 is selected.",
+          "label": "reasoning",
+          "source": "When the output of this decoding gate is low level, the 8255 is selected"
+        },
+        {
+          "claim_id": 11,
+          "claim": "When the decoded high-order address lines satisfy the condition of all being 1, /CS is active.",
+          "label": "reasoning",
+          "source": "Therefore, when the decoded high-order address lines satisfy the condition of all being 1, /CS is active"
+        },
+        {
+          "claim_id": 12,
+          "claim": "A2 is not decoded.",
+          "label": "reasoning",
+          "source": "A2 is not decoded"
+        },
+        {
+          "claim_id": 13,
+          "claim": "A2, A1, and A0 are all don't-care bits.",
+          "label": "reasoning",
+          "source": "Therefore A2, A1, and A0 are all don't-care bits"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The address template is A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx.",
+          "label": "reasoning",
+          "source": "Therefore the address template is A7 A6 A5 A4 A3 A2 A1 A0 = 11111xxx"
+        },
+        {
+          "claim_id": 15,
+          "claim": "Let xxx be minimum as 000, obtaining 11111000b = F8H.",
+          "label": "reasoning",
+          "source": "Let xxx be minimum as 000, obtaining 11111000b = F8H"
+        },
+        {
+          "claim_id": 16,
+          "claim": "Let xxx be maximum as 111, obtaining 11111111b = FFH.",
+          "label": "reasoning",
+          "source": "Let xxx be maximum as 111, obtaining 11111111b = FFH"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The address range in which the 8255 is selected is F8H to FFH.",
+          "label": "reasoning",
+          "source": "So the address range in which the 8255 is selected is F8H to FFH"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的意见删除原 claim 12 和 13，并将剩余 claims 顺序保留后重新编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T07:33:11Z",
+    "changed_target_fields": 71,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

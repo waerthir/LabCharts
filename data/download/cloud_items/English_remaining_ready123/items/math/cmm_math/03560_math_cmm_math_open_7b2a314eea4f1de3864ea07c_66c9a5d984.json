@@ -1,0 +1,790 @@
+{
+  "pack_index": 3560,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "math78_rebalance_20260616"
+  },
+  "metadata": {
+    "sample_id": "math/cmm_math:cmmmath00140:cmm_math__open_7b2a314eea4f1de3864ea07c__0a94d4a1fdae",
+    "subject_dir": "math",
+    "dataset_slug": "cmm_math",
+    "problem_id": "open_7b2a314eea4f1de3864ea07c",
+    "source_problem_id": "open_7b2a314eea4f1de3864ea07c",
+    "problem_run_key": "cmm_math__open_7b2a314eea4f1de3864ea07c__0a94d4a1fdae",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 100.0,
+    "difficulty_level": "high",
+    "weighted_accuracy": 0.0,
+    "wrong_models": [
+      "gpt55_high",
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [],
+    "pending_reasons": [],
+    "pending_judge_count": 0,
+    "gpt55_high_correct": "False",
+    "previously_translated": true,
+    "allready1_selection_stage": "gpt55_wrong_high"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/cmm_math/samples/cmmmath00140.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/cmm_math/samples/cmmmath00140.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/cmm_math/samples/cmmmath00140.json",
+    "image_paths": []
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer_text": null,
+    "open_variant_id": "open_7b2a314eea4f1de3864ea07c",
+    "variant_index": 1,
+    "title": "CMM-Math open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "If $x, y$ satisfy $\\left\\{\\begin{array}{l}x-y+3 \\geq 0, \\\\ x+y+1 \\geq 0, \\\\ x \\leq k,\\end{array}\\right.$",
+    "expected_answer_type": "numeric",
+    "expected_answer": "1",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_87cda4df26ee00ef32f7504b",
+        "problem_id": "prob_faf698091f521f348b4f28a2",
+        "node_type": "answer_claim",
+        "canonical_value": "1",
+        "surface_forms": [
+          "1"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_ddf3974dbd48e22d4475fe79"
+        ],
+        "evidence_refs": [
+          "asset_ddf3974dbd48e22d4475fe79"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "1"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-03-27T15:51:23Z",
+        "updated_at": "2026-03-27T15:51:23Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_7b2a314eea4f1de3864ea07c",
+      "parent_problem_id": "prob_faf698091f521f348b4f28a2",
+      "variant_index": 1,
+      "title": "CMM-Math open-ended problem",
+      "rewritten_question_text": "If $x, y$ satisfy $\\left\\{\\begin{array}{l}x-y+3 \\geq 0, \\\\ x+y+1 \\geq 0, \\\\ x \\leq k,\\end{array}\\right.$",
+      "expected_answer_type": "numeric",
+      "expected_answer": "1",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "If $x, y$ satisfy $\\left\\{\\begin{array}{l}x-y+3 \\geq 0, \\\\ x+y+1 \\geq 0, \\\\ x \\leq k,\\end{array}\\right.$",
+    "raw_answer": "1",
+    "raw_standard_answer": "1",
+    "resolved_question_text": "If $x, y$ satisfy $\\left\\{\\begin{array}{l}x-y+3 \\geq 0, \\\\ x+y+1 \\geq 0, \\\\ x \\leq k,\\end{array}\\right.$",
+    "resolved_answer": "1",
+    "resolved_from_fallback": false,
+    "final_cot": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k. First simplify them separately: from x-y+3≥0, obtain y≤x+3; from x+y+1≥0, obtain y≥-x-1; the third remains x≤k. To simultaneously satisfy the first two restrictions on y, the lower bound must not exceed the upper bound, that is, -x-1≤x+3. Solving gives -4≤2x, so x≥-2. Therefore the feasible region in the x direction must satisfy -2≤x≤k. If the feasible region is nonempty, then k≥-2 is necessary; when k=-2, the feasible region degenerates into the point (-2,1); when k>-2, the three vertices of the feasible region are the intersection point of the two slanted lines (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, namely (k,k+3), (k,-k-1). However, the current cleaned problem statement only gives the constraint conditions and lacks the complete target question and options, so the quantity sought cannot be uniquely determined from the problem statement itself. According to the specified method draft, when the actual target question is missing, the given standard answer/option label 1 should be reported.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_7b2a314eea4f1de3864ea07c",
+      "problem_run_key": "cmm_math__open_7b2a314eea4f1de3864ea07c__0a94d4a1fdae",
+      "question_text": "If $x, y$ satisfy $\\left\\{\\begin{array}{l}x-y+3 \\geq 0, \\\\ x+y+1 \\geq 0, \\\\ x \\leq k,\\end{array}\\right.$",
+      "standard_answer": "1",
+      "images": [],
+      "initial_multi_solution_score": 0.3377,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Algebraic feasible-region reduction. Read the three inequalities from the text and rewrite them as y≤x+3, y≥-x-1, and x≤k. Combine the first two by requiring -x-1≤x+3, giving x≥-2. Thus the region, if nonempty, has x in [-2,k], so it exists only when k≥-2; when k>-2 its vertices are (-2,1), (k,k+3), and (k,-k-1). After deriving this determinate information, compare it with the original multiple-choice options if available; in the cleaned prompt no actual target question is present, so the final reported answer must be the supplied standard answer/choice label 1.",
+          "CoT_raw": "读取题干中的三个不等式：x-y+3≥0，x+y+1≥0，x≤k。先分别化简：由 x-y+3≥0 得 y≤x+3；由 x+y+1≥0 得 y≥-x-1；第三个保持为 x≤k。要同时满足前两个关于 y 的限制，需要下界不超过上界，即 -x-1≤x+3。解得 -4≤2x，所以 x≥-2。因此可行域在 x 方向上必须满足 -2≤x≤k。若可行域非空，则必须 k≥-2；当 k=-2 时可行域退化为点 (-2,1)；当 k>-2 时，可行域的三个顶点为两条斜线交点 (-2,1)，以及直线 x=k 与 y=x+3、y=-x-1 的交点 (k,k+3)、(k,-k-1)。不过当前清洗后的题干只给出了约束条件，缺少完整的目标问题和选项，无法从题干本身唯一确定所求量。按照指定方法草案，在缺少实际目标问题时，应报告给定的标准答案/选项标签 1。",
+          "model_answer": "1",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "1",
+              "predicted_part": "1",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "读取题干中的三个不等式：x-y+3≥0，x+y+1≥0，x≤k。先分别化简：由 x-y+3≥0 得 y≤x+3；由 x+y+1≥0 得 y≥-x-1；第三个保持为 x≤k。要同时满足前两个关于 y 的限制，需要下界不超过上界，即 -x-1≤x+3。解得 -4≤2x，所以 x≥-2。因此可行域在 x 方向上必须满足 -2≤x≤k。若可行域非空，则必须 k≥-2；当 k=-2 时可行域退化为点 (-2,1)；当 k>-2 时，可行域的三个顶点为两条斜线交点 (-2,1)，以及直线 x=k 与 y=x+3、y=-x-1 的交点 (k,k+3)、(k,-k-1)。不过当前清洗后的题干只给出了约束条件，缺少完整的目标问题和选项，无法从题干本身唯一确定所求量。按照指定方法草案，在缺少实际目标问题时，应报告给定的标准答案/选项标签 1。",
+          "answer_answer_check_final": "1",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理过程忠实读取并化简了题干中的三个不等式，正确推出可行域非空条件及退化/非退化情形，并按照方法草案在题干缺失完整目标与选项时报告标准答案 1。可选的小改进是最后更明确写成“答案：1”。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k. First simplify them separately: from x-y+3≥0, obtain y≤x+3; from x+y+1≥0, obtain y≥-x-1; the third remains x≤k. To simultaneously satisfy the first two restrictions on y, the lower bound must not exceed the upper bound, that is, -x-1≤x+3. Solving gives -4≤2x, so x≥-2. Therefore the feasible region in the x direction must satisfy -2≤x≤k. If the feasible region is nonempty, then k≥-2 is necessary; when k=-2, the feasible region degenerates into the point (-2,1); when k>-2, the three vertices of the feasible region are the intersection point of the two slanted lines (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, namely (k,k+3), (k,-k-1). However, the current cleaned problem statement only gives the constraint conditions and lacks the complete target question and options, so the quantity sought cannot be uniquely determined from the problem statement itself. According to the specified method draft, when the actual target question is missing, the given standard answer/option label 1 should be reported.",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This uses direct inequality manipulation and endpoint/vertex computation. It is weakly distinct because the cleaned problem lacks the missing interrogative clause, so no route can independently force the numeric answer 1 without the answer key or original choices.",
+            "image_role": "No usable image information is present in the normalized context; this method does not rely on an image.",
+            "text_role": "The text supplies the complete inequality system x-y+3≥0, x+y+1≥0, x≤k.",
+            "knowledge_role": "Use linear-inequality algebra, feasibility of simultaneous upper/lower bounds on y, and vertex extraction for half-plane intersections."
+          },
+          "solver_metadata": {
+            "cot_raw": "读取题干中的三个不等式：x-y+3≥0，x+y+1≥0，x≤k。先分别化简：由 x-y+3≥0 得 y≤x+3；由 x+y+1≥0 得 y≥-x-1；第三个保持为 x≤k。要同时满足前两个关于 y 的限制，需要下界不超过上界，即 -x-1≤x+3。解得 -4≤2x，所以 x≥-2。因此可行域在 x 方向上必须满足 -2≤x≤k。若可行域非空，则必须 k≥-2；当 k=-2 时可行域退化为点 (-2,1)；当 k>-2 时，可行域的三个顶点为两条斜线交点 (-2,1)，以及直线 x=k 与 y=x+3、y=-x-1 的交点 (k,k+3)、(k,-k-1)。不过当前清洗后的题干只给出了约束条件，缺少完整的目标问题和选项，无法从题干本身唯一确定所求量。按照指定方法草案，在缺少实际目标问题时，应报告给定的标准答案/选项标签 1。",
+            "model_answer": "1",
+            "method_following_score_self_report": 0.96,
+            "possible_risk_flags": [
+              "题干缺少完整目标问题或选择项",
+              "最终答案依赖给定标准答案/选项标签，而不是由完整原题唯一推导"
+            ],
+            "_llm_usage": {
+              "prompt_tokens": 1440,
+              "completion_tokens": 704,
+              "total_tokens": 2144,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 12.354,
+            "_llm_request_mode": "text",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理过程忠实读取并化简了题干中的三个不等式，正确推出可行域非空条件及退化/非退化情形，并按照方法草案在题干缺失完整目标与选项时报告标准答案 1。可选的小改进是最后更明确写成“答案：1”。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "text",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 8.096
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 12.356,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 3,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 2,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 3,
+                "prompt_tokens": 5921,
+                "completion_tokens": 7841,
+                "total_tokens": 13762,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 147.426,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 8.098,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 4,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 2,
+                "multimodal_request_count": 2,
+                "requests_with_usage": 4,
+                "prompt_tokens": 8570,
+                "completion_tokens": 3343,
+                "total_tokens": 11913,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 68.825,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Geometric/coordinate-plane route. From the text, draw the boundary lines y=x+3, y=-x-1, and x=k. The first two lines intersect at (-2,1); the inequalities select the region between these two lines and to the left of the vertical line x=k. Inspecting the geometry shows that a bounded triangular feasible region occurs when the vertical line lies to the right of the intersection, i.e. k>-2, with the same three boundary intersection points. Match this geometric description to the original choices if they are present; because the cleaned prompt omits what is being asked, the only available final answer in the provided data is 1.",
+          "CoT_raw": "未提供可直接检查的附图，因此按题干文字在坐标平面中进行几何作图分析。边界直线分别为：由 x-y+3=0 得 y=x+3；由 x+y+1=0 得 y=-x-1；第三条边界为竖直直线 x=k。前两个不等式等价于 y≤x+3 且 y≥-x-1，所以可行点位于两条斜直线之间。两条斜直线交点满足 x+3=-x-1，得 2x=-4，x=-2，y=1，即交点为 (-2,1)。再加上 x≤k，表示取竖直线 x=k 左侧的部分。若要形成由三条边界围成的有界三角形，竖直线 x=k 必须在交点 (-2,1) 的右侧，即 k>-2；此时三条边界交出同一个三角形结构。由于当前清洗后的题干缺少完整提问和选项，按给定标准答案与方法草案，只能对应输出提供的数据答案 1。",
+          "model_answer": "1",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "1",
+              "predicted_part": "1",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "未提供可直接检查的附图，因此按题干文字在坐标平面中进行几何作图分析。边界直线分别为：由 x-y+3=0 得 y=x+3；由 x+y+1=0 得 y=-x-1；第三条边界为竖直直线 x=k。前两个不等式等价于 y≤x+3 且 y≥-x-1，所以可行点位于两条斜直线之间。两条斜直线交点满足 x+3=-x-1，得 2x=-4，x=-2，y=1，即交点为 (-2,1)。再加上 x≤k，表示取竖直线 x=k 左侧的部分。若要形成由三条边界围成的有界三角形，竖直线 x=k 必须在交点 (-2,1) 的右侧，即 k>-2；此时三条边界交出同一个三角形结构。由于当前清洗后的题干缺少完整提问和选项，按给定标准答案与方法草案，只能对应输出提供的数据答案 1。",
+          "answer_answer_check_final": "1",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理基本忠实于方法草案：先由题干文字列出三条边界线，正确转化两个不等式，求出两斜线交点为(-2,1)，并判断当x=k位于交点右侧即k>-2时形成有界三角形。候选也明确指出清洗后的题干缺少完整提问和选项，因此最终只能按标准答案输出1。需要注意的是，最终答案1并不是由当前残缺题干本身可独立推出的，而是依赖给定标准答案/方法草案；这一点候选已说明，因此不构成主要错误。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "No directly checkable attached figure is provided, so geometric construction analysis is carried out in the coordinate plane according to the wording of the problem statement. The boundary lines are respectively: from x-y+3=0, obtain y=x+3; from x+y+1=0, obtain y=-x-1; the third boundary is the vertical line x=k. The first two inequalities are equivalent to y≤x+3 and y≥-x-1, so feasible points are located between the two slanted lines. The intersection point of the two slanted lines satisfies x+3=-x-1, giving 2x=-4, x=-2, y=1, that is, the intersection point is (-2,1). Adding x≤k means taking the part to the left of the vertical line x=k. If a bounded triangle enclosed by the three boundaries is to be formed, the vertical line x=k must be to the right of the intersection point (-2,1), that is, k>-2; at this time the three boundaries intersect to form the same triangular structure. Since the current cleaned problem statement lacks the complete question and options, according to the given standard answer and method draft, it can only correspondingly output the provided data answer 1.",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route reasons by drawing/interpreting half-planes rather than algebraically eliminating y. It remains only weakly distinct because the final numeric answer cannot be derived from the truncated prompt alone.",
+            "image_role": "No image facts are available from the trusted context; any visual step is a solver-created sketch of the lines, not reading an external image.",
+            "text_role": "The text gives the three half-plane boundaries and inequality directions needed to construct the feasible region.",
+            "knowledge_role": "Use analytic-geometry rules for graphing linear inequalities, locating line intersections, and relating the vertical cutoff x=k to the shape/nonemptiness of the feasible region."
+          },
+          "solver_metadata": {
+            "cot_raw": "未提供可直接检查的附图，因此按题干文字在坐标平面中进行几何作图分析。边界直线分别为：由 x-y+3=0 得 y=x+3；由 x+y+1=0 得 y=-x-1；第三条边界为竖直直线 x=k。前两个不等式等价于 y≤x+3 且 y≥-x-1，所以可行点位于两条斜直线之间。两条斜直线交点满足 x+3=-x-1，得 2x=-4，x=-2，y=1，即交点为 (-2,1)。再加上 x≤k，表示取竖直线 x=k 左侧的部分。若要形成由三条边界围成的有界三角形，竖直线 x=k 必须在交点 (-2,1) 的右侧，即 k>-2；此时三条边界交出同一个三角形结构。由于当前清洗后的题干缺少完整提问和选项，按给定标准答案与方法草案，只能对应输出提供的数据答案 1。",
+            "model_answer": "1",
+            "method_following_score_self_report": 0.92,
+            "possible_risk_flags": [
+              "题干被截断，缺少完整问题目标或选项",
+              "最终答案依赖给定标准答案数据与方法草案中的说明"
+            ],
+            "_llm_usage": {
+              "prompt_tokens": 1424,
+              "completion_tokens": 856,
+              "total_tokens": 2280,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 18.097,
+            "_llm_request_mode": "text",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理基本忠实于方法草案：先由题干文字列出三条边界线，正确转化两个不等式，求出两斜线交点为(-2,1)，并判断当x=k位于交点右侧即k>-2时形成有界三角形。候选也明确指出清洗后的题干缺少完整提问和选项，因此最终只能按标准答案输出1。需要注意的是，最终答案1并不是由当前残缺题干本身可独立推出的，而是依赖给定标准答案/方法草案；这一点候选已说明，因此不构成主要错误。",
+              "major_failures": [],
+              "extractability_score": 0.92,
+              "grounding_score": 0.9,
+              "method_fidelity_score": 0.95,
+              "llm_request_mode": "text",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 19.238
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 18.098,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 2,
+                "multimodal_request_count": 2,
+                "requests_with_usage": 5,
+                "prompt_tokens": 10319,
+                "completion_tokens": 5273,
+                "total_tokens": 15592,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 121.216,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 19.239,
+              "usage_delta": {
+                "request_count": 2,
+                "successful_request_count": 2,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 1,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 2,
+                "prompt_tokens": 4439,
+                "completion_tokens": 1660,
+                "total_tokens": 6099,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 36.678,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 102.27,
+          "usage_delta": {
+            "request_count": 65,
+            "successful_request_count": 68,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 20,
+            "multimodal_request_count": 45,
+            "requests_with_usage": 68,
+            "prompt_tokens": 147532,
+            "completion_tokens": 57756,
+            "total_tokens": 205288,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 1251.747,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "CMM-Math",
+        "dataset_slug": "cmm_math",
+        "source_problem_id": "19897",
+        "subject": "math",
+        "requires_image": false,
+        "text_dominant": true,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/cmm_math/samples/cmmmath00140.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_faf698091f521f348b4f28a2",
+          "open_variant_count": 1,
+          "open_variant_id": "open_7b2a314eea4f1de3864ea07c",
+          "open_variant_index": 1,
+          "open_variant_title": "CMM-Math 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 160.097,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 5,
+        "multimodal_request_count": 0,
+        "requests_with_usage": 5,
+        "prompt_tokens": 7894,
+        "completion_tokens": 7392,
+        "total_tokens": 15286,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 160.049,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "若 $x, y$ 满足 $\\left\\{\\begin{array}{l}x-y+3 \\geq 0, \\\\ x+y+1 \\geq 0, \\\\ x \\leq k,\\end{array}\\right.$",
+      "answer": "1",
+      "final_cot": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k. First simplify them separately: from x-y+3≥0, obtain y≤x+3; from x+y+1≥0, obtain y≥-x-1; the third remains x≤k. To simultaneously satisfy the first two restrictions on y, the lower bound must not exceed the upper bound, that is, -x-1≤x+3. Solving gives -4≤2x, so x≥-2. Therefore the feasible region in the x direction must satisfy -2≤x≤k. If the feasible region is nonempty, then k≥-2 is necessary; when k=-2, the feasible region degenerates into the point (-2,1); when k>-2, the three vertices of the feasible region are the intersection point of the two slanted lines (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, namely (k,k+3), (k,-k-1). However, the current cleaned problem statement only gives the constraint conditions and lacks the complete target question and options, so the quantity sought cannot be uniquely determined from the problem statement itself. According to the specified method draft, when the actual target question is missing, the given standard answer/option label 1 should be reported.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理过程忠实读取并化简了题干中的三个不等式，正确推出可行域非空条件及退化/非退化情形，并按照方法草案在题干缺失完整目标与选项时报告标准答案 1。可选的小改进是最后更明确写成“答案：1”。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "text",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 8.096
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理基本忠实于方法草案：先由题干文字列出三条边界线，正确转化两个不等式，求出两斜线交点为(-2,1)，并判断当x=k位于交点右侧即k>-2时形成有界三角形。候选也明确指出清洗后的题干缺少完整提问和选项，因此最终只能按标准答案输出1。需要注意的是，最终答案1并不是由当前残缺题干本身可独立推出的，而是依赖给定标准答案/方法草案；这一点候选已说明，因此不构成主要错误。",
+          "major_failures": [],
+          "extractability_score": 0.92,
+          "grounding_score": 0.9,
+          "method_fidelity_score": 0.95,
+          "llm_request_mode": "text",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 19.238
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 242,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "cmm_math",
+        "relative_dataset": "math/cmm_math",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/cmm_math/samples/cmmmath00140.json",
+        "source_sample_filename": "cmmmath00140.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/cmm_math/samples/cmmmath00140.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T09:04:37Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_7b2a314eea4f1de3864ea07c",
+          "new_problem_id": "open_7b2a314eea4f1de3864ea07c",
+          "old_problem_run_key": "cmm_math__open_7b2a314eea4f1de3864ea07c__0a94d4a1fdae",
+          "new_problem_run_key": "cmm_math__open_7b2a314eea4f1de3864ea07c__0a94d4a1fdae",
+          "target_relpath": "math/cmm_math/samples/cmmmath00140.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_7b2a314eea4f1de3864ea07c",
+    "problem_run_key": "cmm_math__open_7b2a314eea4f1de3864ea07c__0a94d4a1fdae",
+    "raw_question_text": "If $x, y$ satisfy $\\left\\{\\begin{array}{l}x-y+3 \\geq 0, \\\\ x+y+1 \\geq 0, \\\\ x \\leq k,\\end{array}\\right.$",
+    "raw_answer": "1",
+    "raw_standard_answer": "1",
+    "resolved_question_text": "If $x, y$ satisfy $\\left\\{\\begin{array}{l}x-y+3 \\geq 0, \\\\ x+y+1 \\geq 0, \\\\ x \\leq k,\\end{array}\\right.$",
+    "resolved_answer": "1",
+    "resolved_from_fallback": false,
+    "final_cot": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k. First simplify them separately: from x-y+3≥0, obtain y≤x+3; from x+y+1≥0, obtain y≥-x-1; the third remains x≤k. To simultaneously satisfy the first two restrictions on y, the lower bound must not exceed the upper bound, that is, -x-1≤x+3. Solving gives -4≤2x, so x≥-2. Therefore the feasible region in the x direction must satisfy -2≤x≤k. If the feasible region is nonempty, then k≥-2 is necessary; when k=-2, the feasible region degenerates into the point (-2,1); when k>-2, the three vertices of the feasible region are the intersection point of the two slanted lines (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, namely (k,k+3), (k,-k-1). However, the current cleaned problem statement only gives the constraint conditions and lacks the complete target question and options, so the quantity sought cannot be uniquely determined from the problem statement itself. According to the specified method draft, when the actual target question is missing, the given standard answer/option label 1 should be reported.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "There is the inequality x-y+3≥0 in the problem statement.",
+        "label": "perception",
+        "source": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k."
+      },
+      {
+        "claim_id": 2,
+        "claim": "There is the inequality x+y+1≥0 in the problem statement.",
+        "label": "perception",
+        "source": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k."
+      },
+      {
+        "claim_id": 3,
+        "claim": "There is the inequality x≤k in the problem statement.",
+        "label": "perception",
+        "source": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k."
+      },
+      {
+        "claim_id": 4,
+        "claim": "From x-y+3≥0, it can be simplified to obtain y≤x+3.",
+        "label": "reasoning",
+        "source": "From x-y+3≥0, obtain y≤x+3"
+      },
+      {
+        "claim_id": 5,
+        "claim": "From x+y+1≥0, it can be simplified to obtain y≥-x-1.",
+        "label": "reasoning",
+        "source": "From x+y+1≥0, obtain y≥-x-1"
+      },
+      {
+        "claim_id": 6,
+        "claim": "To simultaneously satisfy the first two restrictions on y, the lower bound must not exceed the upper bound.",
+        "label": "reasoning",
+        "source": "To simultaneously satisfy the first two restrictions on y, the lower bound must not exceed the upper bound"
+      },
+      {
+        "claim_id": 7,
+        "claim": "In this problem, that the lower bound does not exceed the upper bound can be expressed as -x-1≤x+3.",
+        "label": "reasoning",
+        "source": "That is, -x-1≤x+3."
+      },
+      {
+        "claim_id": 8,
+        "claim": "From -x-1≤x+3, one can solve to get x≥-2.",
+        "label": "reasoning",
+        "source": "Solving gives -4≤2x, so x≥-2."
+      },
+      {
+        "claim_id": 9,
+        "claim": "The feasible region in the x direction must satisfy -2≤x≤k.",
+        "label": "reasoning",
+        "source": "Therefore, the feasible region in the x direction must satisfy -2≤x≤k."
+      },
+      {
+        "claim_id": 10,
+        "claim": "If the feasible region is nonempty, then k≥-2 must hold.",
+        "label": "reasoning",
+        "source": "If the feasible region is nonempty, then k≥-2 must hold"
+      },
+      {
+        "claim_id": 11,
+        "claim": "When k=-2, the feasible region degenerates into the point (-2,1).",
+        "label": "reasoning",
+        "source": "When k=-2, the feasible region degenerates into the point (-2,1)"
+      },
+      {
+        "claim_id": 12,
+        "claim": "When k>-2, one vertex of the feasible region is the intersection point of the two oblique lines, (-2,1).",
+        "label": "reasoning",
+        "source": "When k>-2, the three vertices of the feasible region are the intersection point of the two oblique lines, (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, (k,k+3) and (k,-k-1)."
+      },
+      {
+        "claim_id": 13,
+        "claim": "When k>-2, one vertex of the feasible region is the intersection point of the line x=k and y=x+3, (k,k+3).",
+        "label": "reasoning",
+        "source": "When k>-2, the three vertices of the feasible region are the intersection point of the two oblique lines, (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, (k,k+3) and (k,-k-1)."
+      },
+      {
+        "claim_id": 14,
+        "claim": "When k>-2, one vertex of the feasible region is the intersection point of the line x=k and y=-x-1, (k,-k-1).",
+        "label": "reasoning",
+        "source": "When k>-2, the three vertices of the feasible region are the intersection point of the two oblique lines, (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, (k,k+3) and (k,-k-1)."
+      },
+      {
+        "claim_id": 15,
+        "claim": "The current cleaned problem stem only gives the constraint conditions.",
+        "label": "perception",
+        "source": "However, the current cleaned problem stem only gives the constraint conditions"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The current cleaned problem stem lacks the complete target question and options.",
+        "label": "perception",
+        "source": "Lacking the complete target question and options"
+      },
+      {
+        "claim_id": 17,
+        "claim": "It is impossible to uniquely determine the required quantity from the problem stem itself.",
+        "label": "reasoning",
+        "source": "It is impossible to uniquely determine the required quantity from the problem stem itself."
+      },
+      {
+        "claim_id": 18,
+        "claim": "When the actual target question is missing, the given standard answer/option label 1 should be reported.",
+        "label": "reasoning",
+        "source": "According to the specified method draft, when the actual target question is missing, the given standard answer/option label 1 should be reported."
+      }
+    ],
+    "claim_count": 18,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "There is the inequality x-y+3≥0 in the problem statement.",
+          "label": "perception",
+          "source": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k."
+        },
+        {
+          "claim_id": 2,
+          "claim": "There is the inequality x+y+1≥0 in the problem statement.",
+          "label": "perception",
+          "source": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k."
+        },
+        {
+          "claim_id": 3,
+          "claim": "There is the inequality x≤k in the problem statement.",
+          "label": "perception",
+          "source": "Read the three inequalities in the problem statement: x-y+3≥0, x+y+1≥0, x≤k."
+        },
+        {
+          "claim_id": 4,
+          "claim": "From x-y+3≥0, it can be simplified to obtain y≤x+3.",
+          "label": "reasoning",
+          "source": "From x-y+3≥0, obtain y≤x+3"
+        },
+        {
+          "claim_id": 5,
+          "claim": "From x+y+1≥0, it can be simplified to obtain y≥-x-1.",
+          "label": "reasoning",
+          "source": "From x+y+1≥0, obtain y≥-x-1"
+        },
+        {
+          "claim_id": 6,
+          "claim": "To simultaneously satisfy the first two restrictions on y, the lower bound must not exceed the upper bound.",
+          "label": "reasoning",
+          "source": "To simultaneously satisfy the first two restrictions on y, the lower bound must not exceed the upper bound"
+        },
+        {
+          "claim_id": 7,
+          "claim": "In this problem, that the lower bound does not exceed the upper bound can be expressed as -x-1≤x+3.",
+          "label": "reasoning",
+          "source": "That is, -x-1≤x+3."
+        },
+        {
+          "claim_id": 8,
+          "claim": "From -x-1≤x+3, one can solve to get x≥-2.",
+          "label": "reasoning",
+          "source": "Solving gives -4≤2x, so x≥-2."
+        },
+        {
+          "claim_id": 9,
+          "claim": "The feasible region in the x direction must satisfy -2≤x≤k.",
+          "label": "reasoning",
+          "source": "Therefore, the feasible region in the x direction must satisfy -2≤x≤k."
+        },
+        {
+          "claim_id": 10,
+          "claim": "If the feasible region is nonempty, then k≥-2 must hold.",
+          "label": "reasoning",
+          "source": "If the feasible region is nonempty, then k≥-2 must hold"
+        },
+        {
+          "claim_id": 11,
+          "claim": "When k=-2, the feasible region degenerates into the point (-2,1).",
+          "label": "reasoning",
+          "source": "When k=-2, the feasible region degenerates into the point (-2,1)"
+        },
+        {
+          "claim_id": 12,
+          "claim": "When k>-2, one vertex of the feasible region is the intersection point of the two oblique lines, (-2,1).",
+          "label": "reasoning",
+          "source": "When k>-2, the three vertices of the feasible region are the intersection point of the two oblique lines, (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, (k,k+3) and (k,-k-1)."
+        },
+        {
+          "claim_id": 13,
+          "claim": "When k>-2, one vertex of the feasible region is the intersection point of the line x=k and y=x+3, (k,k+3).",
+          "label": "reasoning",
+          "source": "When k>-2, the three vertices of the feasible region are the intersection point of the two oblique lines, (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, (k,k+3) and (k,-k-1)."
+        },
+        {
+          "claim_id": 14,
+          "claim": "When k>-2, one vertex of the feasible region is the intersection point of the line x=k and y=-x-1, (k,-k-1).",
+          "label": "reasoning",
+          "source": "When k>-2, the three vertices of the feasible region are the intersection point of the two oblique lines, (-2,1), and the intersection points of the line x=k with y=x+3 and y=-x-1, (k,k+3) and (k,-k-1)."
+        },
+        {
+          "claim_id": 15,
+          "claim": "The current cleaned problem stem only gives the constraint conditions.",
+          "label": "perception",
+          "source": "However, the current cleaned problem stem only gives the constraint conditions"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The current cleaned problem stem lacks the complete target question and options.",
+          "label": "perception",
+          "source": "Lacking the complete target question and options"
+        },
+        {
+          "claim_id": 17,
+          "claim": "It is impossible to uniquely determine the required quantity from the problem stem itself.",
+          "label": "reasoning",
+          "source": "It is impossible to uniquely determine the required quantity from the problem stem itself."
+        },
+        {
+          "claim_id": 18,
+          "claim": "When the actual target question is missing, the given standard answer/option label 1 should be reported.",
+          "label": "reasoning",
+          "source": "According to the specified method draft, when the actual target question is missing, the given standard answer/option label 1 should be reported."
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题删除重复 claim，并合并过细的代数步骤；其余 claims 保持原顺序和原支持依据。"
+    }
+  },
+  "translation_metadata": {
+    "math78_to_chinese": {
+      "target_language": "Simplified Chinese",
+      "model": "gpt-5.5",
+      "reasoning_effort": "high",
+      "policy": "translate question, answer, all final_cot fields, and claims/source text; preserve formulas, variables, numbers, and units",
+      "translated_at": "2026-06-16T14:24:06Z",
+      "changed_target_fields": 0,
+      "candidate_target_fields": 0
+    },
+    "math78_to_english": {
+      "target_language": "English",
+      "model": "gpt-5.5",
+      "reasoning_effort": "high",
+      "policy": "translate question, answer, all final_cot fields, and claims/source text; preserve formulas, variables, numbers, and units",
+      "translated_at": "2026-06-16T14:34:15Z",
+      "changed_target_fields": 86,
+      "candidate_target_fields": 86
+    }
+  }
+}

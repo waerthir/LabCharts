@@ -1,0 +1,721 @@
+{
+  "pack_index": 797,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00640:emma_chemistry__open_108f668249d48a68086ed44f__6ff9baa0a9b7",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_108f668249d48a68086ed44f",
+    "source_problem_id": "open_108f668249d48a68086ed44f",
+    "problem_run_key": "emma_chemistry__open_108f668249d48a68086ed44f__6ff9baa0a9b7",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00640.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00640.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00640.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00640.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Please choose the SMILES expression of the transition-state structure shown in the image, ignoring the arrows. <image_1>",
+    "raw_answer_text": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+    "open_variant_id": "open_108f668249d48a68086ed44f",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_4022a2d991ac0f2751df659a",
+        "problem_id": "prob_b73f560d82a88cf72c2722ab",
+        "node_type": "answer_claim",
+        "canonical_value": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+        "surface_forms": [
+          "*OC(O)[C@@H](OC(*)=O)C(*)N"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_1a0efb02f0f5f22436ef788d"
+        ],
+        "evidence_refs": [
+          "asset_1a0efb02f0f5f22436ef788d"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "*OC(O)[C@@H](OC(*)=O)C(*)N"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T01:54:27Z",
+        "updated_at": "2026-04-08T01:54:27Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_108f668249d48a68086ed44f",
+      "parent_problem_id": "prob_b73f560d82a88cf72c2722ab",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+    "raw_standard_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows a reaction transition-state/mechanism structure with curved arrows; according to the problem statement, these arrows are not included in the skeleton. A central chiral carbon can be seen connected to the adjacent carbon on the left, an oxygen atom, and a CO2Me substituent indicated by a wedge. The adjacent carbon on the left is attached to NH2 and Ph. In the upper right there is a C(=O)Ph fragment, connected to the central chiral carbon through oxygen. In the figure, Ph and Me are both external organic abbreviation groups. Reasoning: According to the specified method, ignore the arrows, and replace external organic abbreviated substituents such as Ph or Me with wildcard connection points *. Starting from the wildcard group connected through oxygen to the upper acyl/hemiacetal carbon, write it as *OC(O). Continue through the chiral center in the figure, written with the specified stereochemistry as [C@@H]. This chiral center also has an acyloxy branch, corresponding to (OC(*)=O), where the external Ph/Me group on the carbonyl side is represented by *. Then continue along the main chain to the adjacent carbon, which bears one wildcard substituent and nitrogen, written as C(*)N. Combining gives the SMILES: *OC(O)[C@@H](OC(*)=O)C(*)N.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_108f668249d48a68086ed44f",
+      "problem_run_key": "emma_chemistry__open_108f668249d48a68086ed44f__6ff9baa0a9b7",
+      "question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "standard_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00640.png",
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/crops/emmachemistry00640.png"
+      ],
+      "initial_multi_solution_score": 0.2657,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the molecular skeleton from the image while discarding the arrows. Replace each abbreviated external organic group such as Ph or Me by a wildcard attachment '*'. Choose a traversal starting at the wildcard attached through oxygen to the upper acyl/hemiacetal carbon, write that fragment as *OC(O), continue through the stereocenter as [C@@H], add its acyloxy branch as (OC(*)=O), then continue to the adjacent carbon bearing wildcard substituent and nitrogen as C(*)N. This yields the SMILES *OC(O)[C@@H](OC(*)=O)C(*)N.",
+          "CoT_raw": "图像描述：图中显示一个带有弯曲箭头的反应过渡态/机理结构；按题意这些箭头不计入骨架。可见一个中心手性碳连接到左侧相邻碳、一个氧原子以及一个楔形表示的 CO2Me 取代基。左侧相邻碳连有 NH2 和 Ph。右上方有一个 C(=O)Ph 片段，并通过氧与中心手性碳相连。图中 Ph、Me 都是外部有机缩写基团。\n推理：按照指定方法，忽略箭头，并把 Ph 或 Me 这类外部有机缩写取代基替换为通配连接点 *。从通过氧连接到上方酰基/半缩醛碳的通配基开始，写作 *OC(O)。继续经过图中的手性中心，按指定立体化学写为 [C@@H]。该手性中心还有一个酰氧基支链，对应 (OC(*)=O)，其中羰基侧的 Ph/Me 外部基团用 * 表示。然后沿主链继续到相邻的碳，该碳带有一个通配取代基和氮，写为 C(*)N。合并得到 SMILES：*OC(O)[C@@H](OC(*)=O)C(*)N。",
+          "model_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+              "predicted_part": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中显示一个带有弯曲箭头的反应过渡态/机理结构；按题意这些箭头不计入骨架。可见一个中心手性碳连接到左侧相邻碳、一个氧原子以及一个楔形表示的 CO2Me 取代基。左侧相邻碳连有 NH2 和 Ph。右上方有一个 C(=O)Ph 片段，并通过氧与中心手性碳相连。图中 Ph、Me 都是外部有机缩写基团。\n推理：按照指定方法，忽略箭头，并把 Ph 或 Me 这类外部有机缩写取代基替换为通配连接点 *。从通过氧连接到上方酰基/半缩醛碳的通配基开始，写作 *OC(O)。继续经过图中的手性中心，按指定立体化学写为 [C@@H]。该手性中心还有一个酰氧基支链，对应 (OC(*)=O)，其中羰基侧的 Ph/Me 外部基团用 * 表示。然后沿主链继续到相邻的碳，该碳带有一个通配取代基和氮，写为 C(*)N。合并得到 SMILES：*OC(O)[C@@H](OC(*)=O)C(*)N。",
+          "answer_answer_check_final": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace passes. It first describes the image and then reasons, ignores the arrows as required, replaces Ph/Me external groups with wildcards, follows the assigned traversal, and gives the standard SMILES exactly. Minor improvement: clarify the mapping of the CO2Me and benzoyloxy fragments to the two SMILES fragments to avoid ambiguity, since the image labels one substituent as CO2Me while the branch is written as OC(*)=O.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中显示一个带有弯曲箭头的反应过渡态/机理结构；按题意这些箭头不计入骨架。可见一个中心手性碳连接到左侧相邻碳、一个氧原子以及一个楔形表示的 CO2Me 取代基。左侧相邻碳连有 NH2 和 Ph。右上方有一个 C(=O)Ph 片段，并通过氧与中心手性碳相连。图中 Ph、Me 都是外部有机缩写基团。\n推理：按照指定方法，忽略箭头，并把 Ph 或 Me 这类外部有机缩写取代基替换为通配连接点 *。从通过氧连接到上方酰基/半缩醛碳的通配基开始，写作 *OC(O)。继续经过图中的手性中心，按指定立体化学写为 [C@@H]。该手性中心还有一个酰氧基支链，对应 (OC(*)=O)，其中羰基侧的 Ph/Me 外部基团用 * 表示。然后沿主链继续到相邻的碳，该碳带有一个通配取代基和氮，写为 C(*)N。合并得到 SMILES：*OC(O)[C@@H](OC(*)=O)C(*)N。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Direct visual-to-SMILES transcription: this route reads the drawn connectivity and stereochemical wedge from the image, then encodes the substituent abbreviations with wildcard atoms. It is the natural single robust route for this problem.",
+            "image_role": "Inspect the structure and ignore all curved arrows. Read the connected atoms/groups: a left carbon bearing NH2 and Ph is bonded to a stereocenter; the stereocenter is bonded to an O-containing acyl/benzoyl transition-state fragment and to a CO2Me/ester substituent shown by a solid wedge; the upper carbonyl-like carbon is attached to O/OH and a Ph group. The wedge at the stereocenter determines the @@ stereochemical descriptor used in the SMILES.",
+            "text_role": "Use the text only to know the requested output format is a SMILES expression and that arrows in the transition-state drawing must be ignored.",
+            "knowledge_role": "Apply SMILES syntax rules: represent unspecified Ph/Me substituent attachment points by dummy wildcard atoms '*'; encode carbonyl/ester fragments as C(=O) and O-acyl connectivity; use bracketed chiral carbon [C@@H] for the stereocenter indicated by the solid wedge; omit reaction arrows because the prompt says to ignore them."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中显示一个带有弯曲箭头的反应过渡态/机理结构；按题意这些箭头不计入骨架。可见一个中心手性碳连接到左侧相邻碳、一个氧原子以及一个楔形表示的 CO2Me 取代基。左侧相邻碳连有 NH2 和 Ph。右上方有一个 C(=O)Ph 片段，并通过氧与中心手性碳相连。图中 Ph、Me 都是外部有机缩写基团。\n推理：按照指定方法，忽略箭头，并把 Ph 或 Me 这类外部有机缩写取代基替换为通配连接点 *。从通过氧连接到上方酰基/半缩醛碳的通配基开始，写作 *OC(O)。继续经过图中的手性中心，按指定立体化学写为 [C@@H]。该手性中心还有一个酰氧基支链，对应 (OC(*)=O)，其中羰基侧的 Ph/Me 外部基团用 * 表示。然后沿主链继续到相邻的碳，该碳带有一个通配取代基和氮，写为 C(*)N。合并得到 SMILES：*OC(O)[C@@H](OC(*)=O)C(*)N。",
+            "model_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 3125,
+              "completion_tokens": 888,
+              "total_tokens": 4013,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 20.592,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace passes. It first describes the image and then reasons, ignores the arrows as required, replaces Ph/Me external groups with wildcards, follows the assigned traversal, and gives the standard SMILES exactly. Minor improvement: clarify the mapping of the CO2Me and benzoyloxy fragments to the two SMILES fragments to avoid ambiguity, since the image labels one substituent as CO2Me while the branch is written as OC(*)=O.",
+              "major_failures": [],
+              "extractability_score": 0.92,
+              "grounding_score": 0.88,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 82.869
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 20.626,
+              "usage_delta": {
+                "request_count": 7,
+                "successful_request_count": 8,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 7,
+                "requests_with_usage": 8,
+                "prompt_tokens": 23713,
+                "completion_tokens": 5330,
+                "total_tokens": 29043,
+                "cached_tokens": 0,
+                "reasoning_tokens": 3350,
+                "total_request_seconds": 270.425,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 82.907,
+              "usage_delta": {
+                "request_count": 8,
+                "successful_request_count": 14,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 8,
+                "requests_with_usage": 14,
+                "prompt_tokens": 42947,
+                "completion_tokens": 14330,
+                "total_tokens": 57277,
+                "cached_tokens": 0,
+                "reasoning_tokens": 11496,
+                "total_request_seconds": 387.207,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 41.025,
+          "usage_delta": {
+            "request_count": 19,
+            "successful_request_count": 20,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 19,
+            "requests_with_usage": 20,
+            "prompt_tokens": 58904,
+            "completion_tokens": 20675,
+            "total_tokens": 79579,
+            "cached_tokens": 0,
+            "reasoning_tokens": 14540,
+            "total_request_seconds": 592.765,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "611",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00640.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_b73f560d82a88cf72c2722ab",
+          "open_variant_count": 1,
+          "open_variant_id": "open_108f668249d48a68086ed44f",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": [
+            "chemistry_domain_knowledge",
+            "image_only_core_signal",
+            "specialized_structure_notation"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 144.582,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 9958,
+        "completion_tokens": 5453,
+        "total_tokens": 15411,
+        "cached_tokens": 0,
+        "reasoning_tokens": 4528,
+        "total_request_seconds": 144.452,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+      "final_cot": "Image description: The figure shows a reaction transition state/mechanism structure with curved arrows; according to the problem statement, these arrows are not counted as part of the skeleton. A central chiral carbon can be seen connected to the adjacent carbon on the left, an oxygen atom, and a CO2Me substituent shown by a wedge. The adjacent carbon on the left is connected to NH2 and Ph. In the upper right there is a C(=O)Ph fragment, and it is connected to the central chiral carbon through oxygen. In the figure, Ph and Me are both external organic abbreviated groups.\nReasoning: According to the specified method, ignore the arrows, and replace external organic abbreviated substituents such as Ph or Me with wildcard connection points *. Starting from the wildcard group connected through oxygen to the upper acyl/hemiacetal carbon, write it as *OC(O). Continue through the chiral center in the figure, written according to the specified stereochemistry as [C@@H]. This chiral center also has an acyloxy branch, corresponding to (OC(*)=O), in which the external group Ph/Me on the carbonyl side is represented by *. Then continue along the main chain to the adjacent carbon, which bears a wildcard substituent and nitrogen, written as C(*)N. Combining gives the SMILES: *OC(O)[C@@H](OC(*)=O)C(*)N.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace passes. It first describes the image and then reasons, ignores the arrows as required, replaces Ph/Me external groups with wildcards, follows the assigned traversal, and gives the standard SMILES exactly. Minor improvement: clarify the mapping of the CO2Me and benzoyloxy fragments to the two SMILES fragments to avoid ambiguity, since the image labels one substituent as CO2Me while the branch is written as OC(*)=O.",
+          "major_failures": [],
+          "extractability_score": 0.92,
+          "grounding_score": 0.88,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 82.869
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 641,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00640.json",
+        "source_sample_filename": "emmachemistry00640.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00640.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T08:40:25Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:34Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_b73f560d82a88cf72c2722ab",
+          "new_problem_id": "open_108f668249d48a68086ed44f",
+          "old_problem_run_key": "emma_chemistry__prob_b73f560d82a88cf72c2722ab__575f228ded61",
+          "new_problem_run_key": "emma_chemistry__open_108f668249d48a68086ed44f__6ff9baa0a9b7",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00640.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_108f668249d48a68086ed44f",
+          "new_problem_id": "open_108f668249d48a68086ed44f",
+          "old_problem_run_key": "emma_chemistry__open_108f668249d48a68086ed44f__6ff9baa0a9b7",
+          "new_problem_run_key": "emma_chemistry__open_108f668249d48a68086ed44f__6ff9baa0a9b7",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00640.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_108f668249d48a68086ed44f",
+    "problem_run_key": "emma_chemistry__open_108f668249d48a68086ed44f__6ff9baa0a9b7",
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+    "raw_standard_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*OC(O)[C@@H](OC(*)=O)C(*)N",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows a reaction transition state/mechanism structure with curved arrows; according to the problem statement, these arrows are not counted as part of the skeleton. A central chiral carbon can be seen connected to the adjacent carbon on the left, an oxygen atom, and a CO2Me substituent shown by a wedge. The adjacent carbon on the left is connected to NH2 and Ph. In the upper right there is a C(=O)Ph fragment, and it is connected to the central chiral carbon through oxygen. In the figure, Ph and Me are both external organic abbreviated groups.\nReasoning: According to the specified method, ignore the arrows, and replace external organic abbreviated substituents such as Ph or Me with wildcard connection points *. Starting from the wildcard group connected through oxygen to the upper acyl/hemiacetal carbon, write it as *OC(O). Continue through the chiral center in the figure, written according to the specified stereochemistry as [C@@H]. This chiral center also has an acyloxy branch, corresponding to (OC(*)=O), in which the external group Ph/Me on the carbonyl side is represented by *. Then continue along the main chain to the adjacent carbon, which bears a wildcard substituent and nitrogen, written as C(*)N. Combining gives the SMILES: *OC(O)[C@@H](OC(*)=O)C(*)N.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure shows a reaction transition state/mechanism structure with curved arrows.",
+        "label": "perception",
+        "source": "The figure shows a reaction transition state/mechanism structure with curved arrows"
+      },
+      {
+        "claim_id": 2,
+        "claim": "According to the problem statement, these arrows are not counted as part of the skeleton.",
+        "label": "reasoning",
+        "source": "According to the problem statement, these arrows are not counted as part of the skeleton"
+      },
+      {
+        "claim_id": 3,
+        "claim": "A central chiral carbon can be seen connected to the adjacent carbon on the left.",
+        "label": "perception",
+        "source": "A central chiral carbon can be seen connected to the adjacent carbon on the left"
+      },
+      {
+        "claim_id": 4,
+        "claim": "A central chiral carbon can be seen connected to an oxygen atom.",
+        "label": "perception",
+        "source": "an oxygen atom"
+      },
+      {
+        "claim_id": 5,
+        "claim": "A central chiral carbon can be seen connected to a CO2Me substituent shown by a wedge.",
+        "label": "perception",
+        "source": "and a CO2Me substituent shown by a wedge"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The adjacent carbon on the left is connected to NH2.",
+        "label": "perception",
+        "source": "The adjacent carbon on the left is connected to NH2 and Ph"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The adjacent carbon on the left is connected to Ph.",
+        "label": "perception",
+        "source": "The adjacent carbon on the left is connected to NH2 and Ph"
+      },
+      {
+        "claim_id": 8,
+        "claim": "In the upper right there is a C(=O)Ph fragment.",
+        "label": "perception",
+        "source": "In the upper right there is a C(=O)Ph fragment"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The C(=O)Ph fragment in the upper right is connected to the central chiral carbon through oxygen.",
+        "label": "perception",
+        "source": "and is connected to the central chiral carbon through oxygen"
+      },
+      {
+        "claim_id": 10,
+        "claim": "In the figure, Ph is an external organic abbreviated group.",
+        "label": "perception",
+        "source": "In the figure, Ph and Me are both external organic abbreviated groups."
+      },
+      {
+        "claim_id": 11,
+        "claim": "In the figure, Me is an external organic abbreviated group.",
+        "label": "perception",
+        "source": "In the figure, Ph and Me are both external organic abbreviated groups."
+      },
+      {
+        "claim_id": 12,
+        "claim": "According to the specified method, external organic abbreviated substituents such as Ph or Me need to be replaced with wildcard connection points *.",
+        "label": "reasoning",
+        "source": "And replace external organic abbreviated substituents such as Ph or Me with wildcard connection points *."
+      },
+      {
+        "claim_id": 13,
+        "claim": "Start from the wildcard group connected through oxygen to the upper acyl/hemiacetal carbon.",
+        "label": "reasoning",
+        "source": "Start from the wildcard group connected through oxygen to the upper acyl/hemiacetal carbon"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The starting fragment is written as *OC(O).",
+        "label": "reasoning",
+        "source": "Written as *OC(O)"
+      },
+      {
+        "claim_id": 15,
+        "claim": "Continue through the chiral center in the figure.",
+        "label": "reasoning",
+        "source": "Continue through the chiral center in the figure"
+      },
+      {
+        "claim_id": 16,
+        "claim": "This chiral center is written as [C@@H] according to the specified stereochemistry.",
+        "label": "reasoning",
+        "source": "Written as [C@@H] according to the specified stereochemistry"
+      },
+      {
+        "claim_id": 17,
+        "claim": "This chiral center also has an acyloxy side chain.",
+        "label": "reasoning",
+        "source": "This chiral center also has an acyloxy side chain"
+      },
+      {
+        "claim_id": 18,
+        "claim": "This acyloxy side chain corresponds to (OC(*)=O).",
+        "label": "reasoning",
+        "source": "Corresponds to (OC(*)=O)"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The Ph/Me external group on the carbonyl side is represented by *.",
+        "label": "reasoning",
+        "source": "Among them, the Ph/Me external group on the carbonyl side is indicated by *"
+      },
+      {
+        "claim_id": 20,
+        "claim": "Then continue along the main chain to the adjacent carbon.",
+        "label": "reasoning",
+        "source": "Then continue along the main chain to the adjacent carbon"
+      },
+      {
+        "claim_id": 21,
+        "claim": "This adjacent carbon bears a wildcard substituent.",
+        "label": "reasoning",
+        "source": "This carbon bears a wildcard substituent and nitrogen"
+      },
+      {
+        "claim_id": 22,
+        "claim": "This adjacent carbon bears nitrogen.",
+        "label": "reasoning",
+        "source": "This carbon bears a wildcard substituent and nitrogen"
+      },
+      {
+        "claim_id": 23,
+        "claim": "This adjacent carbon is written as C(*)N.",
+        "label": "reasoning",
+        "source": "written as C(*)N"
+      },
+      {
+        "claim_id": 24,
+        "claim": "Combining gives the SMILES: *OC(O)[C@@H](OC(*)=O)C(*)N.",
+        "label": "reasoning",
+        "source": "Combining gives the SMILES: *OC(O)[C@@H](OC(*)=O)C(*)N"
+      }
+    ],
+    "claim_count": 24,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure shows a reaction transition state/mechanism structure with curved arrows.",
+          "label": "perception",
+          "source": "The figure shows a reaction transition state/mechanism structure with curved arrows"
+        },
+        {
+          "claim_id": 2,
+          "claim": "According to the problem statement, these arrows are not counted as part of the skeleton.",
+          "label": "reasoning",
+          "source": "According to the problem statement, these arrows are not counted as part of the skeleton"
+        },
+        {
+          "claim_id": 3,
+          "claim": "A central chiral carbon can be seen connected to the adjacent carbon on the left.",
+          "label": "perception",
+          "source": "A central chiral carbon can be seen connected to the adjacent carbon on the left"
+        },
+        {
+          "claim_id": 4,
+          "claim": "A central chiral carbon can be seen connected to an oxygen atom.",
+          "label": "perception",
+          "source": "an oxygen atom"
+        },
+        {
+          "claim_id": 5,
+          "claim": "A central chiral carbon can be seen connected to a CO2Me substituent shown by a wedge.",
+          "label": "perception",
+          "source": "and a CO2Me substituent shown by a wedge"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The adjacent carbon on the left is connected to NH2.",
+          "label": "perception",
+          "source": "The adjacent carbon on the left is connected to NH2 and Ph"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The adjacent carbon on the left is connected to Ph.",
+          "label": "perception",
+          "source": "The adjacent carbon on the left is connected to NH2 and Ph"
+        },
+        {
+          "claim_id": 8,
+          "claim": "In the upper right there is a C(=O)Ph fragment.",
+          "label": "perception",
+          "source": "In the upper right there is a C(=O)Ph fragment"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The C(=O)Ph fragment in the upper right is connected to the central chiral carbon through oxygen.",
+          "label": "perception",
+          "source": "and is connected to the central chiral carbon through oxygen"
+        },
+        {
+          "claim_id": 10,
+          "claim": "In the figure, Ph is an external organic abbreviated group.",
+          "label": "perception",
+          "source": "In the figure, Ph and Me are both external organic abbreviated groups."
+        },
+        {
+          "claim_id": 11,
+          "claim": "In the figure, Me is an external organic abbreviated group.",
+          "label": "perception",
+          "source": "In the figure, Ph and Me are both external organic abbreviated groups."
+        },
+        {
+          "claim_id": 12,
+          "claim": "According to the specified method, external organic abbreviated substituents such as Ph or Me need to be replaced with wildcard connection points *.",
+          "label": "reasoning",
+          "source": "And replace external organic abbreviated substituents such as Ph or Me with wildcard connection points *."
+        },
+        {
+          "claim_id": 13,
+          "claim": "Start from the wildcard group connected through oxygen to the upper acyl/hemiacetal carbon.",
+          "label": "reasoning",
+          "source": "Start from the wildcard group connected through oxygen to the upper acyl/hemiacetal carbon"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The starting fragment is written as *OC(O).",
+          "label": "reasoning",
+          "source": "Written as *OC(O)"
+        },
+        {
+          "claim_id": 15,
+          "claim": "Continue through the chiral center in the figure.",
+          "label": "reasoning",
+          "source": "Continue through the chiral center in the figure"
+        },
+        {
+          "claim_id": 16,
+          "claim": "This chiral center is written as [C@@H] according to the specified stereochemistry.",
+          "label": "reasoning",
+          "source": "Written as [C@@H] according to the specified stereochemistry"
+        },
+        {
+          "claim_id": 17,
+          "claim": "This chiral center also has an acyloxy side chain.",
+          "label": "reasoning",
+          "source": "This chiral center also has an acyloxy side chain"
+        },
+        {
+          "claim_id": 18,
+          "claim": "This acyloxy side chain corresponds to (OC(*)=O).",
+          "label": "reasoning",
+          "source": "Corresponds to (OC(*)=O)"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The Ph/Me external group on the carbonyl side is represented by *.",
+          "label": "reasoning",
+          "source": "Among them, the Ph/Me external group on the carbonyl side is indicated by *"
+        },
+        {
+          "claim_id": 20,
+          "claim": "Then continue along the main chain to the adjacent carbon.",
+          "label": "reasoning",
+          "source": "Then continue along the main chain to the adjacent carbon"
+        },
+        {
+          "claim_id": 21,
+          "claim": "This adjacent carbon bears a wildcard substituent.",
+          "label": "reasoning",
+          "source": "This carbon bears a wildcard substituent and nitrogen"
+        },
+        {
+          "claim_id": 22,
+          "claim": "This adjacent carbon bears nitrogen.",
+          "label": "reasoning",
+          "source": "This carbon bears a wildcard substituent and nitrogen"
+        },
+        {
+          "claim_id": 23,
+          "claim": "This adjacent carbon is written as C(*)N.",
+          "label": "reasoning",
+          "source": "written as C(*)N"
+        },
+        {
+          "claim_id": 24,
+          "claim": "Combining gives the SMILES: *OC(O)[C@@H](OC(*)=O)C(*)N.",
+          "label": "reasoning",
+          "source": "Combining gives the SMILES: *OC(O)[C@@H](OC(*)=O)C(*)N"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的要求删除与“忽略箭头/箭头不计入骨架”重复的原 claim 12，并保持其他 no_fix 项不变；其余 claim 顺序保留并重新连续编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/05886_chemistry_emma_chemistry_open_108f668249d48a68086ed44f_7f003aa27c.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/00797_chemistry_emma_chemistry_open_108f668249d48a68086ed44f_7f003aa27c.json"
+  }
+}

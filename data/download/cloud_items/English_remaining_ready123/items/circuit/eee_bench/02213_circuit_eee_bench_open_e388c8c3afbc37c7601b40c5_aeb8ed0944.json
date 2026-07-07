@@ -1,0 +1,723 @@
+{
+  "pack_index": 2213,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "circuit/eee_bench:eeebench01616:eee_bench__open_e388c8c3afbc37c7601b40c5__d2c1f189a18b",
+    "subject_dir": "circuit",
+    "dataset_slug": "eee_bench",
+    "problem_id": "open_e388c8c3afbc37c7601b40c5",
+    "source_problem_id": "open_e388c8c3afbc37c7601b40c5",
+    "problem_run_key": "eee_bench__open_e388c8c3afbc37c7601b40c5__d2c1f189a18b",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 50.0,
+    "difficulty_level": "medium",
+    "weighted_accuracy": 0.5,
+    "wrong_models": [
+      "gpt55_high",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "False",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01616.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01616.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/circuit/eee_bench/samples/eeebench01616.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench01616.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In the figure, the potential difference between points P and Q is",
+    "raw_answer_text": "-6 V",
+    "open_variant_id": "open_e388c8c3afbc37c7601b40c5",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "In the figure, what is the potential difference between points P and Q?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "-6 V",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_95fffb9d1483585d5ce53ac4",
+        "problem_id": "prob_af8a7ab04840e613d8342d55",
+        "node_type": "answer_claim",
+        "canonical_value": "-6 V",
+        "surface_forms": [
+          "-6 V"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_a2d87399fb33c634e50b37b6"
+        ],
+        "evidence_refs": [
+          "asset_a2d87399fb33c634e50b37b6"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "-6 V"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T05:39:03Z",
+        "updated_at": "2026-04-06T05:39:03Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_e388c8c3afbc37c7601b40c5",
+      "parent_problem_id": "prob_af8a7ab04840e613d8342d55",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "In the figure, what is the potential difference between points P and Q?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "-6 V",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the figure, what is the potential difference between points P and Q?",
+    "raw_answer": "-6 V",
+    "raw_standard_answer": "-6 V",
+    "resolved_question_text": "In the figure, what is the potential difference between points P and Q?",
+    "resolved_answer": "-6 V",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The left vertical wire of the circuit is the same node P, and the right vertical wire is the same node Q. At the top there is a 2 A current source, with the arrow pointing from P to Q. The middle upper node is denoted as A; it is connected to P through a 2Ω resistor and to Q through a 4Ω resistor. The middle lower node is denoted as B; it is connected to P through an 8Ω resistor and to Q through a 6Ω resistor. There is a 10 V voltage source between A and B, with the positive sign at the upper end in the figure, so the potential at end A is 10 V higher than that at end B. Reasoning: Let Q be the reference ground, V_Q = 0. From the polarity of the voltage source, V_A - V_B = 10. According to the specified method, write KCL at node P; the top current source is 2 A flowing from P to Q, that is, leaving P: ((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0. Write KCL for the supernode containing A and B: ((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0. After simplification, 5V_P - 4V_A - V_B = -16, 18V_A + 7V_B - 15V_P = 0, and V_A - V_B = 10. Solving gives V_B = -10.8 V, V_A = -0.8 V, V_P = -6 V. Because V_Q = 0, V_P - V_Q = -6 V.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_e388c8c3afbc37c7601b40c5",
+      "problem_run_key": "eee_bench__open_e388c8c3afbc37c7601b40c5__d2c1f189a18b",
+      "question_text": "In the figure, what is the potential difference between points P and Q?",
+      "standard_answer": "-6 V",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench01335.png",
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/crops/eeebench01335.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First describe the diagram to identify all nodes and component polarities. Set Q as ground. Denote the upper central node by A and the lower central node by B. From the image, impose V_A - V_B = 10 V because the vertical source has plus at A. Then write KCL at node P, counting the top current source as 2 A leaving P toward Q, and write KCL for the supernode containing A and B. Solve the resulting three linear equations for V_P. Since Q is the reference, the requested potential difference V_P - V_Q is the solved value, -6 V.",
+          "CoT_raw": "图像描述：电路左侧竖直导线为同一节点 P，右侧竖直导线为同一节点 Q。顶部有一个 2 A 电流源，箭头从 P 指向 Q。中间上方节点记为 A，它通过 2Ω 电阻接到 P，通过 4Ω 电阻接到 Q。中间下方节点记为 B，它通过 8Ω 电阻接到 P，通过 6Ω 电阻接到 Q。A 与 B 之间有一个 10 V 电压源，图中正号在上端，因此 A 端电位比 B 端高 10 V。\n推理：令 Q 为参考地，V_Q = 0。由电压源极性得 V_A - V_B = 10。按指定方法，在 P 节点列 KCL，顶部电流源为 2 A 从 P 流向 Q，即离开 P：((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0。对包含 A、B 的超节点列 KCL：((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0。整理得 5V_P - 4V_A - V_B = -16，18V_A + 7V_B - 15V_P = 0，且 V_A - V_B = 10。解得 V_B = -10.8 V，V_A = -0.8 V，V_P = -6 V。因为 V_Q = 0，所以 V_P - V_Q = -6 V。",
+          "model_answer": "-6 V",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "-6 V",
+              "predicted_part": "-6 V",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：电路左侧竖直导线为同一节点 P，右侧竖直导线为同一节点 Q。顶部有一个 2 A 电流源，箭头从 P 指向 Q。中间上方节点记为 A，它通过 2Ω 电阻接到 P，通过 4Ω 电阻接到 Q。中间下方节点记为 B，它通过 8Ω 电阻接到 P，通过 6Ω 电阻接到 Q。A 与 B 之间有一个 10 V 电压源，图中正号在上端，因此 A 端电位比 B 端高 10 V。\n推理：令 Q 为参考地，V_Q = 0。由电压源极性得 V_A - V_B = 10。按指定方法，在 P 节点列 KCL，顶部电流源为 2 A 从 P 流向 Q，即离开 P：((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0。对包含 A、B 的超节点列 KCL：((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0。整理得 5V_P - 4V_A - V_B = -16，18V_A + 7V_B - 15V_P = 0，且 V_A - V_B = 10。解得 V_B = -10.8 V，V_A = -0.8 V，V_P = -6 V。因为 V_Q = 0，所以 V_P - V_Q = -6 V。",
+          "answer_answer_check_final": "-6 V",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace is acceptable. It first describes the image and then reasons, matching the required multimodal order. The circuit structure, component values, current-source direction, voltage-source polarity, node definitions, KCL equations, algebraic simplification, and final result are consistent with the image, assigned method draft, and standard answer. Minor stylistic note: the P-node KCL equation could explicitly state it is using algebraic currents leaving P summing to zero, since this convention may look unusual, but the equation is correct.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：电路左侧竖直导线为同一节点 P，右侧竖直导线为同一节点 Q。顶部有一个 2 A 电流源，箭头从 P 指向 Q。中间上方节点记为 A，它通过 2Ω 电阻接到 P，通过 4Ω 电阻接到 Q。中间下方节点记为 B，它通过 8Ω 电阻接到 P，通过 6Ω 电阻接到 Q。A 与 B 之间有一个 10 V 电压源，图中正号在上端，因此 A 端电位比 B 端高 10 V。\n推理：令 Q 为参考地，V_Q = 0。由电压源极性得 V_A - V_B = 10。按指定方法，在 P 节点列 KCL，顶部电流源为 2 A 从 P 流向 Q，即离开 P：((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0。对包含 A、B 的超节点列 KCL：((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0。整理得 5V_P - 4V_A - V_B = -16，18V_A + 7V_B - 15V_P = 0，且 V_A - V_B = 10。解得 V_B = -10.8 V，V_A = -0.8 V，V_P = -6 V。因为 V_Q = 0，所以 V_P - V_Q = -6 V。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Uses direct modified nodal analysis with a supernode around the vertical 10 V voltage source; this is the most straightforward circuit-analysis route and does not depend on transformations or source conversion.",
+            "image_role": "Read the circuit topology and values from the image: points P and Q are the left and right main nodes; a 2 A current source on the top branch points from P toward Q; the middle branch has 2 Ω from P to the upper central node and 4 Ω from that node to Q; the lower branch has 8 Ω from P to the lower central node and 6 Ω from that node to Q; a 10 V source connects the two central nodes with the positive terminal at the upper central node.",
+            "text_role": "Use the question text only to determine the requested quantity: the potential difference between points P and Q, interpreted as V_P - V_Q.",
+            "knowledge_role": "Apply KCL, Ohm's law, and the voltage-source constraint. Choose Q as the 0 V reference. Let node voltages be V_P, V_A for the upper central node, and V_B for the lower central node. Use the source relation V_A - V_B = 10. Write KCL at P including the 2 A source from P to Q: (V_P - V_A)/2 + (V_P - V_B)/8 + 2 = 0. Write KCL for the A-B supernode: (V_A - V_P)/2 + V_A/4 + (V_B - V_P)/8 + V_B/6 = 0. Solve these equations to get V_P = -6 V relative to Q, so V_P - V_Q = -6 V."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：电路左侧竖直导线为同一节点 P，右侧竖直导线为同一节点 Q。顶部有一个 2 A 电流源，箭头从 P 指向 Q。中间上方节点记为 A，它通过 2Ω 电阻接到 P，通过 4Ω 电阻接到 Q。中间下方节点记为 B，它通过 8Ω 电阻接到 P，通过 6Ω 电阻接到 Q。A 与 B 之间有一个 10 V 电压源，图中正号在上端，因此 A 端电位比 B 端高 10 V。\n推理：令 Q 为参考地，V_Q = 0。由电压源极性得 V_A - V_B = 10。按指定方法，在 P 节点列 KCL，顶部电流源为 2 A 从 P 流向 Q，即离开 P：((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0。对包含 A、B 的超节点列 KCL：((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0。整理得 5V_P - 4V_A - V_B = -16，18V_A + 7V_B - 15V_P = 0，且 V_A - V_B = 10。解得 V_B = -10.8 V，V_A = -0.8 V，V_P = -6 V。因为 V_Q = 0，所以 V_P - V_Q = -6 V。",
+            "model_answer": "-6 V",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2833,
+              "completion_tokens": 1288,
+              "total_tokens": 4121,
+              "cached_tokens": 0,
+              "reasoning_tokens": 871
+            },
+            "_llm_elapsed_seconds": 21.344,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace is acceptable. It first describes the image and then reasons, matching the required multimodal order. The circuit structure, component values, current-source direction, voltage-source polarity, node definitions, KCL equations, algebraic simplification, and final result are consistent with the image, assigned method draft, and standard answer. Minor stylistic note: the P-node KCL equation could explicitly state it is using algebraic currents leaving P summing to zero, since this convention may look unusual, but the equation is correct.",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.97,
+              "method_fidelity_score": 0.98,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 18.097
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 21.471,
+              "usage_delta": {
+                "request_count": 16,
+                "successful_request_count": 17,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 16,
+                "requests_with_usage": 17,
+                "prompt_tokens": 42946,
+                "completion_tokens": 12903,
+                "total_tokens": 55849,
+                "cached_tokens": 0,
+                "reasoning_tokens": 7863,
+                "total_request_seconds": 251.642,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 18.222,
+              "usage_delta": {
+                "request_count": 17,
+                "successful_request_count": 16,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 17,
+                "requests_with_usage": 16,
+                "prompt_tokens": 46037,
+                "completion_tokens": 19185,
+                "total_tokens": 65222,
+                "cached_tokens": 0,
+                "reasoning_tokens": 13134,
+                "total_request_seconds": 371.072,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 20.985,
+          "usage_delta": {
+            "request_count": 9,
+            "successful_request_count": 9,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 9,
+            "requests_with_usage": 9,
+            "prompt_tokens": 25431,
+            "completion_tokens": 7902,
+            "total_tokens": 33333,
+            "cached_tokens": 0,
+            "reasoning_tokens": 3430,
+            "total_request_seconds": 151.868,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EEE-Bench",
+        "dataset_slug": "eee_bench",
+        "source_problem_id": "883",
+        "subject": "电气电子工程领域",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01616.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_af8a7ab04840e613d8342d55",
+          "open_variant_count": 1,
+          "open_variant_id": "open_e388c8c3afbc37c7601b40c5",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "diagram_content_not_visible_in_input",
+            "multi_step_depth_uncertain_without_figure"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 60.712,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 9138,
+        "completion_tokens": 3195,
+        "total_tokens": 12333,
+        "cached_tokens": 0,
+        "reasoning_tokens": 2113,
+        "total_request_seconds": 60.299,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the figure, what is the potential difference between points P and Q?",
+      "answer": "-6 V",
+      "final_cot": "Image description: The left vertical wire of the circuit is the same node P, and the right vertical wire is the same node Q. At the top there is a 2 A current source, with the arrow pointing from P to Q. The middle upper node is denoted as A; it is connected to P through a 2Ω resistor and to Q through a 4Ω resistor. The middle lower node is denoted as B; it is connected to P through an 8Ω resistor and to Q through a 6Ω resistor. There is a 10 V voltage source between A and B, with the positive sign at the upper end in the figure, so the potential at end A is 10 V higher than that at end B.\nReasoning: Let Q be the reference ground, V_Q = 0. From the polarity of the voltage source, V_A - V_B = 10. According to the specified method, write KCL at node P; the top current source is 2 A flowing from P to Q, that is, leaving P: ((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0. Write KCL for the supernode containing A and B: ((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0. After simplification, 5V_P - 4V_A - V_B = -16, 18V_A + 7V_B - 15V_P = 0, and V_A - V_B = 10. Solving gives V_B = -10.8 V, V_A = -0.8 V, V_P = -6 V. Because V_Q = 0, V_P - V_Q = -6 V.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace is acceptable. It first describes the image and then reasons, matching the required multimodal order. The circuit structure, component values, current-source direction, voltage-source polarity, node definitions, KCL equations, algebraic simplification, and final result are consistent with the image, assigned method draft, and standard answer. Minor stylistic note: the P-node KCL equation could explicitly state it is using algebraic currents leaving P summing to zero, since this convention may look unusual, but the equation is correct.",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.97,
+          "method_fidelity_score": 0.98,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 18.097
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_resume_openvariants_20260506T003434CST",
+        "processed_index": 1732,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "circuit",
+        "dataset": "eee_bench",
+        "relative_dataset": "circuit/eee_bench",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01616.json",
+        "source_sample_filename": "eeebench01616.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01616.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.events.jsonl",
+        "written_at": "2026-05-06T00:30:47Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:17Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_e388c8c3afbc37c7601b40c5",
+          "new_problem_id": "open_e388c8c3afbc37c7601b40c5",
+          "old_problem_run_key": "eee_bench__open_e388c8c3afbc37c7601b40c5__e2196aee54dd",
+          "new_problem_run_key": "eee_bench__open_e388c8c3afbc37c7601b40c5__d2c1f189a18b",
+          "target_relpath": "circuit/eee_bench/samples/eeebench01616.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_e388c8c3afbc37c7601b40c5",
+    "problem_run_key": "eee_bench__open_e388c8c3afbc37c7601b40c5__d2c1f189a18b",
+    "raw_question_text": "In the figure, what is the potential difference between points P and Q?",
+    "raw_answer": "-6 V",
+    "raw_standard_answer": "-6 V",
+    "resolved_question_text": "In the figure, what is the potential difference between points P and Q?",
+    "resolved_answer": "-6 V",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The left vertical wire of the circuit is the same node P, and the right vertical wire is the same node Q. At the top there is a 2 A current source, with the arrow pointing from P to Q. The middle upper node is denoted as A; it is connected to P through a 2Ω resistor and to Q through a 4Ω resistor. The middle lower node is denoted as B; it is connected to P through an 8Ω resistor and to Q through a 6Ω resistor. There is a 10 V voltage source between A and B, with the positive sign at the upper end in the figure, so the potential at end A is 10 V higher than that at end B.\nReasoning: Let Q be the reference ground, V_Q = 0. From the polarity of the voltage source, V_A - V_B = 10. According to the specified method, write KCL at node P; the top current source is 2 A flowing from P to Q, that is, leaving P: ((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0. Write KCL for the supernode containing A and B: ((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0. After simplification, 5V_P - 4V_A - V_B = -16, 18V_A + 7V_B - 15V_P = 0, and V_A - V_B = 10. Solving gives V_B = -10.8 V, V_A = -0.8 V, V_P = -6 V. Because V_Q = 0, V_P - V_Q = -6 V.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The left vertical wire of the circuit is the same node P.",
+        "label": "perception",
+        "source": "The left vertical wire of the circuit is the same node P"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The right vertical wire of the circuit is the same node Q.",
+        "label": "perception",
+        "source": "The right vertical wire is the same node Q"
+      },
+      {
+        "claim_id": 3,
+        "claim": "At the top there is a 2 A current source.",
+        "label": "perception",
+        "source": "At the top there is a 2 A current source"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The arrow of the top current source points from P to Q.",
+        "label": "perception",
+        "source": "The arrow points from P to Q"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The middle upper node is denoted as A.",
+        "label": "perception",
+        "source": "The middle upper node is denoted as A"
+      },
+      {
+        "claim_id": 6,
+        "claim": "A is connected to P through a 2Ω resistor.",
+        "label": "perception",
+        "source": "It is connected to P through a 2Ω resistor"
+      },
+      {
+        "claim_id": 7,
+        "claim": "A is connected to Q through a 4Ω resistor.",
+        "label": "perception",
+        "source": "Connected to Q through a 4Ω resistor"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The middle lower node is denoted as B.",
+        "label": "perception",
+        "source": "The middle lower node is denoted as B"
+      },
+      {
+        "claim_id": 9,
+        "claim": "B is connected to P through an 8Ω resistor.",
+        "label": "perception",
+        "source": "It is connected to P through an 8Ω resistor"
+      },
+      {
+        "claim_id": 10,
+        "claim": "B is connected to Q through a 6Ω resistor.",
+        "label": "perception",
+        "source": "Connected to Q through a 6Ω resistor"
+      },
+      {
+        "claim_id": 11,
+        "claim": "There is a 10 V voltage source between A and B.",
+        "label": "perception",
+        "source": "There is a 10 V voltage source between A and B"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The positive sign of the 10 V voltage source is at the upper end.",
+        "label": "perception",
+        "source": "In the figure the positive sign is at the upper end"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Let Q be the reference ground.",
+        "label": "reasoning",
+        "source": "Let Q be the reference ground"
+      },
+      {
+        "claim_id": 14,
+        "claim": "V_Q = 0。",
+        "label": "reasoning",
+        "source": "V_Q = 0"
+      },
+      {
+        "claim_id": 15,
+        "claim": "From the polarity of the voltage source, V_A - V_B = 10.",
+        "label": "reasoning",
+        "source": "From the polarity of the voltage source, V_A - V_B = 10"
+      },
+      {
+        "claim_id": 16,
+        "claim": "When writing KCL at node P, the top current source is 2 A flowing from P to Q.",
+        "label": "reasoning",
+        "source": "When writing KCL at node P, the top current source is 2 A flowing from P to Q"
+      },
+      {
+        "claim_id": 17,
+        "claim": "When writing KCL at node P, the top current source current leaves P.",
+        "label": "reasoning",
+        "source": "That is, leaving P"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The KCL equation for node P is ((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0.",
+        "label": "reasoning",
+        "source": "((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The supernode KCL equation containing A and B is ((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0.",
+        "label": "reasoning",
+        "source": "((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0"
+      },
+      {
+        "claim_id": 20,
+        "claim": "After simplifying the node P equation, obtain 5V_P - 4V_A - V_B = -16.",
+        "label": "reasoning",
+        "source": "After simplification, 5V_P - 4V_A - V_B = -16"
+      },
+      {
+        "claim_id": 21,
+        "claim": "After simplifying the supernode equation, obtain 18V_A + 7V_B - 15V_P = 0.",
+        "label": "reasoning",
+        "source": "18V_A + 7V_B - 15V_P = 0"
+      },
+      {
+        "claim_id": 22,
+        "claim": "Solving gives V_B = -10.8 V.",
+        "label": "reasoning",
+        "source": "Solving gives V_B = -10.8 V"
+      },
+      {
+        "claim_id": 23,
+        "claim": "Solving gives V_A = -0.8 V.",
+        "label": "reasoning",
+        "source": "V_A = -0.8 V"
+      },
+      {
+        "claim_id": 24,
+        "claim": "Solving gives V_P = -6 V.",
+        "label": "reasoning",
+        "source": "V_P = -6 V"
+      },
+      {
+        "claim_id": 25,
+        "claim": "Because V_Q = 0, V_P - V_Q = -6 V.",
+        "label": "reasoning",
+        "source": "Because V_Q = 0, V_P - V_Q = -6 V"
+      }
+    ],
+    "claim_count": 25,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The left vertical wire of the circuit is the same node P.",
+          "label": "perception",
+          "source": "The left vertical wire of the circuit is the same node P"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The right vertical wire of the circuit is the same node Q.",
+          "label": "perception",
+          "source": "The right vertical wire is the same node Q"
+        },
+        {
+          "claim_id": 3,
+          "claim": "At the top there is a 2 A current source.",
+          "label": "perception",
+          "source": "At the top there is a 2 A current source"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The arrow of the top current source points from P to Q.",
+          "label": "perception",
+          "source": "The arrow points from P to Q"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The middle upper node is denoted as A.",
+          "label": "perception",
+          "source": "The middle upper node is denoted as A"
+        },
+        {
+          "claim_id": 6,
+          "claim": "A is connected to P through a 2Ω resistor.",
+          "label": "perception",
+          "source": "It is connected to P through a 2Ω resistor"
+        },
+        {
+          "claim_id": 7,
+          "claim": "A is connected to Q through a 4Ω resistor.",
+          "label": "perception",
+          "source": "Connected to Q through a 4Ω resistor"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The middle lower node is denoted as B.",
+          "label": "perception",
+          "source": "The middle lower node is denoted as B"
+        },
+        {
+          "claim_id": 9,
+          "claim": "B is connected to P through an 8Ω resistor.",
+          "label": "perception",
+          "source": "It is connected to P through an 8Ω resistor"
+        },
+        {
+          "claim_id": 10,
+          "claim": "B is connected to Q through a 6Ω resistor.",
+          "label": "perception",
+          "source": "Connected to Q through a 6Ω resistor"
+        },
+        {
+          "claim_id": 11,
+          "claim": "There is a 10 V voltage source between A and B.",
+          "label": "perception",
+          "source": "There is a 10 V voltage source between A and B"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The positive sign of the 10 V voltage source is at the upper end.",
+          "label": "perception",
+          "source": "In the figure the positive sign is at the upper end"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Let Q be the reference ground.",
+          "label": "reasoning",
+          "source": "Let Q be the reference ground"
+        },
+        {
+          "claim_id": 14,
+          "claim": "V_Q = 0。",
+          "label": "reasoning",
+          "source": "V_Q = 0"
+        },
+        {
+          "claim_id": 15,
+          "claim": "From the polarity of the voltage source, V_A - V_B = 10.",
+          "label": "reasoning",
+          "source": "From the polarity of the voltage source, V_A - V_B = 10"
+        },
+        {
+          "claim_id": 16,
+          "claim": "When writing KCL at node P, the top current source is 2 A flowing from P to Q.",
+          "label": "reasoning",
+          "source": "When writing KCL at node P, the top current source is 2 A flowing from P to Q"
+        },
+        {
+          "claim_id": 17,
+          "claim": "When writing KCL at node P, the top current source current leaves P.",
+          "label": "reasoning",
+          "source": "That is, leaving P"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The KCL equation for node P is ((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0.",
+          "label": "reasoning",
+          "source": "((V_P - V_A)/2) + ((V_P - V_B)/8) + 2 = 0"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The supernode KCL equation containing A and B is ((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0.",
+          "label": "reasoning",
+          "source": "((V_A - V_P)/2) + (V_A/4) + ((V_B - V_P)/8) + (V_B/6) = 0"
+        },
+        {
+          "claim_id": 20,
+          "claim": "After simplifying the node P equation, obtain 5V_P - 4V_A - V_B = -16.",
+          "label": "reasoning",
+          "source": "After simplification, 5V_P - 4V_A - V_B = -16"
+        },
+        {
+          "claim_id": 21,
+          "claim": "After simplifying the supernode equation, obtain 18V_A + 7V_B - 15V_P = 0.",
+          "label": "reasoning",
+          "source": "18V_A + 7V_B - 15V_P = 0"
+        },
+        {
+          "claim_id": 22,
+          "claim": "Solving gives V_B = -10.8 V.",
+          "label": "reasoning",
+          "source": "Solving gives V_B = -10.8 V"
+        },
+        {
+          "claim_id": 23,
+          "claim": "Solving gives V_A = -0.8 V.",
+          "label": "reasoning",
+          "source": "V_A = -0.8 V"
+        },
+        {
+          "claim_id": 24,
+          "claim": "Solving gives V_P = -6 V.",
+          "label": "reasoning",
+          "source": "V_P = -6 V"
+        },
+        {
+          "claim_id": 25,
+          "claim": "Because V_Q = 0, V_P - V_Q = -6 V.",
+          "label": "reasoning",
+          "source": "Because V_Q = 0, V_P - V_Q = -6 V"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题删除原 claim 13、20、24，并保持其余受 final_cot 支持的感知与推理声明；随后顺序重编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:18Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/circuit/eee_bench/01563_circuit_eee_bench_open_e388c8c3afbc37c7601b40c5_aeb8ed0944.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/circuit/eee_bench/02213_circuit_eee_bench_open_e388c8c3afbc37c7601b40c5_aeb8ed0944.json"
+  }
+}

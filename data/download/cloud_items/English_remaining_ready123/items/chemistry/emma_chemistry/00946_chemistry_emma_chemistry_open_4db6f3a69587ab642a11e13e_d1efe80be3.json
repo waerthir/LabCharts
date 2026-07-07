@@ -1,0 +1,636 @@
+{
+  "pack_index": 946,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00572:emma_chemistry__open_4db6f3a69587ab642a11e13e__cccfdabe2206",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_4db6f3a69587ab642a11e13e",
+    "source_problem_id": "open_4db6f3a69587ab642a11e13e",
+    "problem_run_key": "emma_chemistry__open_4db6f3a69587ab642a11e13e__cccfdabe2206",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00572.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00572.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00572.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00572.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Please choose the SMILES expression of the transition-state structure shown in the image, ignoring the arrows. <image_1>",
+    "raw_answer_text": "*C(*)([O-])C[S+](C)(C)=O",
+    "open_variant_id": "open_4db6f3a69587ab642a11e13e",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "*C(*)([O-])C[S+](C)(C)=O",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_5ea6c768bf9126a9072a2310",
+        "problem_id": "prob_a25bea02c307c76b0fc23656",
+        "node_type": "answer_claim",
+        "canonical_value": "*C(*)([O-])C[S+](C)(C)=O",
+        "surface_forms": [
+          "*C(*)([O-])C[S+](C)(C)=O"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_64679604baf7d2d72207cc07"
+        ],
+        "evidence_refs": [
+          "asset_64679604baf7d2d72207cc07"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "*C(*)([O-])C[S+](C)(C)=O"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T05:20:22Z",
+        "updated_at": "2026-04-08T05:20:22Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_4db6f3a69587ab642a11e13e",
+      "parent_problem_id": "prob_a25bea02c307c76b0fc23656",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "*C(*)([O-])C[S+](C)(C)=O",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*C(*)([O-])C[S+](C)(C)=O",
+    "raw_standard_answer": "*C(*)([O-])C[S+](C)(C)=O",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*C(*)([O-])C[S+](C)(C)=O",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows a transition-state structure; after ignoring the curved arrows, on the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left; this adjacent carbon is further connected to sulfur. The sulfur atom on the left is labeled with a positive charge, is connected to one oxygen by a double bond, and is also connected to two methyl groups. Reasoning: According to molecular graph encoding, take the central carbon as the main branch atom, represent R and R1 with the wildcard *, write the negatively charged oxygen as [O-], and then connect along the adjacent carbon to the positively charged sulfoxide sulfur [S+]; on sulfur there are two methyl branches and it is connected to oxygen by a double bond. Therefore the SMILES is *C(*)([O-])C[S+](C)(C)=O.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_4db6f3a69587ab642a11e13e",
+      "problem_run_key": "emma_chemistry__open_4db6f3a69587ab642a11e13e__cccfdabe2206",
+      "question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "standard_answer": "*C(*)([O-])C[S+](C)(C)=O",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00572.png",
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/crops/emmachemistry00572.png"
+      ],
+      "initial_multi_solution_score": 0.2657,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the molecular graph from the image rather than the reaction arrows. Choose the central carbon bearing O−, R, R1, and the adjacent carbon-sulfur substituent as the main branching atom. Encode the two generic groups R and R1 as wildcard atoms attached to that central carbon, encode the negatively charged oxygen as [O-], then continue through the adjacent carbon to the sulfoxide sulfur. Encode the sulfur as [S+] with two methyl branches and a double-bonded oxygen. This yields the SMILES '*C(*)([O-])C[S+](C)(C)=O'.",
+          "CoT_raw": "图像描述：图中显示一个过渡态结构，忽略弯箭头后，右侧有一个中心碳连接 R、R1、一个带负电的氧 O−，以及左侧的相邻碳；该相邻碳再连接到硫。左侧硫原子标有正电荷，与一个氧双键相连，并且还连接两个甲基。推理：按照分子图编码，将中心碳作为主分支原子，R 和 R1 用通配符 * 表示，带负电氧写作 [O-]，然后沿相邻碳连接到带正电的亚砜硫 [S+]；硫上有两个甲基分支并与氧双键相连。因此 SMILES 为 *C(*)([O-])C[S+](C)(C)=O。",
+          "model_answer": "*C(*)([O-])C[S+](C)(C)=O",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "*C(*)([O-])C[S+](C)(C)=O",
+              "predicted_part": "*C(*)([O-])C[S+](C)(C)=O",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中显示一个过渡态结构，忽略弯箭头后，右侧有一个中心碳连接 R、R1、一个带负电的氧 O−，以及左侧的相邻碳；该相邻碳再连接到硫。左侧硫原子标有正电荷，与一个氧双键相连，并且还连接两个甲基。推理：按照分子图编码，将中心碳作为主分支原子，R 和 R1 用通配符 * 表示，带负电氧写作 [O-]，然后沿相邻碳连接到带正电的亚砜硫 [S+]；硫上有两个甲基分支并与氧双键相连。因此 SMILES 为 *C(*)([O-])C[S+](C)(C)=O。",
+          "answer_answer_check_final": "*C(*)([O-])C[S+](C)(C)=O",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace is faithful to the image, standard answer, and assigned method. It first describes the visual molecular graph and then reasons to the SMILES, correctly ignoring the arrows and mapping R/R1 to wildcard atoms, O− to [O-], and sulfoxide sulfur to [S+](C)(C)=O.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中显示一个过渡态结构，忽略弯箭头后，右侧有一个中心碳连接 R、R1、一个带负电的氧 O−，以及左侧的相邻碳；该相邻碳再连接到硫。左侧硫原子标有正电荷，与一个氧双键相连，并且还连接两个甲基。推理：按照分子图编码，将中心碳作为主分支原子，R 和 R1 用通配符 * 表示，带负电氧写作 [O-]，然后沿相邻碳连接到带正电的亚砜硫 [S+]；硫上有两个甲基分支并与氧双键相连。因此 SMILES 为 *C(*)([O-])C[S+](C)(C)=O。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Direct visual-to-SMILES transcription is the most natural and essentially single route for this problem; it uses the displayed connectivity and charges while ignoring the curved arrows as instructed.",
+            "image_role": "Inspect the structure: a central carbon bears R, R1, an O− substituent, and a carbon substituent leading to a positively charged sulfoxide sulfur. The sulfur is bonded to that carbon, two methyl groups, and double-bonded to oxygen, and is marked S+. Curved arrows are present but must be ignored.",
+            "text_role": "Use the question instruction to output a SMILES expression for the transition-state structure and specifically ignore the arrows in the drawing.",
+            "knowledge_role": "Use SMILES conventions: generic R/R1 substituents can be represented as wildcard atoms '*'; formal charges are written as [O-] and [S+]; methyl substituents on sulfur are written as (C)(C); sulfur double-bonded to oxygen is written [S+](C)(C)=O. Assemble branches from the central carbon to preserve the visual connectivity."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中显示一个过渡态结构，忽略弯箭头后，右侧有一个中心碳连接 R、R1、一个带负电的氧 O−，以及左侧的相邻碳；该相邻碳再连接到硫。左侧硫原子标有正电荷，与一个氧双键相连，并且还连接两个甲基。推理：按照分子图编码，将中心碳作为主分支原子，R 和 R1 用通配符 * 表示，带负电氧写作 [O-]，然后沿相邻碳连接到带正电的亚砜硫 [S+]；硫上有两个甲基分支并与氧双键相连。因此 SMILES 为 *C(*)([O-])C[S+](C)(C)=O。",
+            "model_answer": "*C(*)([O-])C[S+](C)(C)=O",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2555,
+              "completion_tokens": 768,
+              "total_tokens": 3323,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 21.479,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace is faithful to the image, standard answer, and assigned method. It first describes the visual molecular graph and then reasons to the SMILES, correctly ignoring the arrows and mapping R/R1 to wildcard atoms, O− to [O-], and sulfoxide sulfur to [S+](C)(C)=O.",
+              "major_failures": [],
+              "extractability_score": 0.98,
+              "grounding_score": 0.98,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 14.896
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 21.491,
+              "usage_delta": {
+                "request_count": 11,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 11,
+                "requests_with_usage": 12,
+                "prompt_tokens": 32899,
+                "completion_tokens": 8546,
+                "total_tokens": 41445,
+                "cached_tokens": 0,
+                "reasoning_tokens": 4637,
+                "total_request_seconds": 263.129,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 14.906,
+              "usage_delta": {
+                "request_count": 7,
+                "successful_request_count": 9,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 7,
+                "requests_with_usage": 9,
+                "prompt_tokens": 24758,
+                "completion_tokens": 6969,
+                "total_tokens": 31727,
+                "cached_tokens": 0,
+                "reasoning_tokens": 4410,
+                "total_request_seconds": 194.236,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 19.622,
+          "usage_delta": {
+            "request_count": 11,
+            "successful_request_count": 2,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 11,
+            "requests_with_usage": 2,
+            "prompt_tokens": 5784,
+            "completion_tokens": 976,
+            "total_tokens": 6760,
+            "cached_tokens": 0,
+            "reasoning_tokens": 320,
+            "total_request_seconds": 36.247,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "740",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00572.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_a25bea02c307c76b0fc23656",
+          "open_variant_count": 1,
+          "open_variant_id": "open_4db6f3a69587ab642a11e13e",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": [
+            "requires_image"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 56.05,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 8128,
+        "completion_tokens": 1943,
+        "total_tokens": 10071,
+        "cached_tokens": 0,
+        "reasoning_tokens": 1200,
+        "total_request_seconds": 55.982,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "answer": "*C(*)([O-])C[S+](C)(C)=O",
+      "final_cot": "Image description: The figure shows a transition-state structure; after ignoring the curved arrows, on the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left; this adjacent carbon is further connected to sulfur. The sulfur atom on the left is labeled with a positive charge, is connected to one oxygen by a double bond, and is also connected to two methyl groups. Reasoning: According to molecular graph encoding, take the central carbon as the main branch atom, represent R and R1 with the wildcard *, write the negatively charged oxygen as [O-], and then connect along the adjacent carbon to the positively charged sulfoxide sulfur [S+]; on sulfur there are two methyl branches and it is connected to oxygen by a double bond. Therefore the SMILES is *C(*)([O-])C[S+](C)(C)=O.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace is faithful to the image, standard answer, and assigned method. It first describes the visual molecular graph and then reasons to the SMILES, correctly ignoring the arrows and mapping R/R1 to wildcard atoms, O− to [O-], and sulfoxide sulfur to [S+](C)(C)=O.",
+          "major_failures": [],
+          "extractability_score": 0.98,
+          "grounding_score": 0.98,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 14.896
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 573,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00572.json",
+        "source_sample_filename": "emmachemistry00572.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00572.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T08:18:23Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:34Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_a25bea02c307c76b0fc23656",
+          "new_problem_id": "open_4db6f3a69587ab642a11e13e",
+          "old_problem_run_key": "emma_chemistry__prob_a25bea02c307c76b0fc23656__7c344be3b9bb",
+          "new_problem_run_key": "emma_chemistry__open_4db6f3a69587ab642a11e13e__cccfdabe2206",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00572.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_4db6f3a69587ab642a11e13e",
+          "new_problem_id": "open_4db6f3a69587ab642a11e13e",
+          "old_problem_run_key": "emma_chemistry__open_4db6f3a69587ab642a11e13e__cccfdabe2206",
+          "new_problem_run_key": "emma_chemistry__open_4db6f3a69587ab642a11e13e__cccfdabe2206",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00572.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_4db6f3a69587ab642a11e13e",
+    "problem_run_key": "emma_chemistry__open_4db6f3a69587ab642a11e13e__cccfdabe2206",
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*C(*)([O-])C[S+](C)(C)=O",
+    "raw_standard_answer": "*C(*)([O-])C[S+](C)(C)=O",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*C(*)([O-])C[S+](C)(C)=O",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows a transition-state structure; after ignoring the curved arrows, on the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left; this adjacent carbon is further connected to sulfur. The sulfur atom on the left is labeled with a positive charge, is connected to one oxygen by a double bond, and is also connected to two methyl groups. Reasoning: According to molecular graph encoding, take the central carbon as the main branch atom, represent R and R1 with the wildcard *, write the negatively charged oxygen as [O-], and then connect along the adjacent carbon to the positively charged sulfoxide sulfur [S+]; on sulfur there are two methyl branches and it is connected to oxygen by a double bond. Therefore the SMILES is *C(*)([O-])C[S+](C)(C)=O.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure shows a transition-state structure.",
+        "label": "perception",
+        "source": "The figure shows a transition-state structure"
+      },
+      {
+        "claim_id": 2,
+        "claim": "After ignoring the curved arrows, on the right there is a central carbon connected to R.",
+        "label": "perception",
+        "source": "On the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left"
+      },
+      {
+        "claim_id": 3,
+        "claim": "After ignoring the curved arrows, on the right there is a central carbon connected to R1.",
+        "label": "perception",
+        "source": "On the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left"
+      },
+      {
+        "claim_id": 4,
+        "claim": "After ignoring the curved arrows, on the right there is a central carbon connected to a negatively charged oxygen O−.",
+        "label": "perception",
+        "source": "On the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left"
+      },
+      {
+        "claim_id": 5,
+        "claim": "After ignoring the curved arrows, on the right there is a central carbon connected to the adjacent carbon on the left.",
+        "label": "perception",
+        "source": "On the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The adjacent carbon on the left is further connected to sulfur.",
+        "label": "perception",
+        "source": "This adjacent carbon is further connected to sulfur"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The sulfur atom on the left is labeled with a positive charge.",
+        "label": "perception",
+        "source": "The sulfur atom on the left is labeled with a positive charge"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The left sulfur atom is connected to one oxygen by a double bond.",
+        "label": "perception",
+        "source": "connected to one oxygen by a double bond"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The left sulfur atom is also connected to two methyl groups.",
+        "label": "perception",
+        "source": "also connected to two methyl groups"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Encode the central carbon as the main branch atom.",
+        "label": "reasoning",
+        "source": "According to the molecular graph encoding, use the central carbon as the main branch atom"
+      },
+      {
+        "claim_id": 11,
+        "claim": "R is represented by the wildcard *.",
+        "label": "reasoning",
+        "source": "R and R1 are represented by the wildcard *"
+      },
+      {
+        "claim_id": 12,
+        "claim": "R1 is represented by the wildcard *.",
+        "label": "reasoning",
+        "source": "R and R1 are represented by the wildcard *"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Negatively charged oxygen is written as [O-].",
+        "label": "reasoning",
+        "source": "Negatively charged oxygen is written as [O-]"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Connect along the adjacent carbon to the positively charged sulfoxide sulfur [S+].",
+        "label": "reasoning",
+        "source": "Then connect along the adjacent carbon to the positively charged sulfoxide sulfur [S+]"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The two methyl groups on sulfur are represented as two methyl branches.",
+        "label": "reasoning",
+        "source": "There are two methyl branches on sulfur"
+      },
+      {
+        "claim_id": 16,
+        "claim": "Sulfur connected to oxygen by a double bond is represented as =O.",
+        "label": "reasoning",
+        "source": "and connected to oxygen by a double bond"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The SMILES of this structure is *C(*)([O-])C[S+](C)(C)=O.",
+        "label": "reasoning",
+        "source": "Therefore the SMILES is *C(*)([O-])C[S+](C)(C)=O"
+      }
+    ],
+    "claim_count": 17,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure shows a transition-state structure.",
+          "label": "perception",
+          "source": "The figure shows a transition-state structure"
+        },
+        {
+          "claim_id": 2,
+          "claim": "After ignoring the curved arrows, on the right there is a central carbon connected to R.",
+          "label": "perception",
+          "source": "On the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left"
+        },
+        {
+          "claim_id": 3,
+          "claim": "After ignoring the curved arrows, on the right there is a central carbon connected to R1.",
+          "label": "perception",
+          "source": "On the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left"
+        },
+        {
+          "claim_id": 4,
+          "claim": "After ignoring the curved arrows, on the right there is a central carbon connected to a negatively charged oxygen O−.",
+          "label": "perception",
+          "source": "On the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left"
+        },
+        {
+          "claim_id": 5,
+          "claim": "After ignoring the curved arrows, on the right there is a central carbon connected to the adjacent carbon on the left.",
+          "label": "perception",
+          "source": "On the right there is a central carbon connected to R, R1, a negatively charged oxygen O−, and the adjacent carbon on the left"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The adjacent carbon on the left is further connected to sulfur.",
+          "label": "perception",
+          "source": "This adjacent carbon is further connected to sulfur"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The sulfur atom on the left is labeled with a positive charge.",
+          "label": "perception",
+          "source": "The sulfur atom on the left is labeled with a positive charge"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The left sulfur atom is connected to one oxygen by a double bond.",
+          "label": "perception",
+          "source": "connected to one oxygen by a double bond"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The left sulfur atom is also connected to two methyl groups.",
+          "label": "perception",
+          "source": "also connected to two methyl groups"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Encode the central carbon as the main branch atom.",
+          "label": "reasoning",
+          "source": "According to the molecular graph encoding, use the central carbon as the main branch atom"
+        },
+        {
+          "claim_id": 11,
+          "claim": "R is represented by the wildcard *.",
+          "label": "reasoning",
+          "source": "R and R1 are represented by the wildcard *"
+        },
+        {
+          "claim_id": 12,
+          "claim": "R1 is represented by the wildcard *.",
+          "label": "reasoning",
+          "source": "R and R1 are represented by the wildcard *"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Negatively charged oxygen is written as [O-].",
+          "label": "reasoning",
+          "source": "Negatively charged oxygen is written as [O-]"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Connect along the adjacent carbon to the positively charged sulfoxide sulfur [S+].",
+          "label": "reasoning",
+          "source": "Then connect along the adjacent carbon to the positively charged sulfoxide sulfur [S+]"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The two methyl groups on sulfur are represented as two methyl branches.",
+          "label": "reasoning",
+          "source": "There are two methyl branches on sulfur"
+        },
+        {
+          "claim_id": 16,
+          "claim": "Sulfur connected to oxygen by a double bond is represented as =O.",
+          "label": "reasoning",
+          "source": "and connected to oxygen by a double bond"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The SMILES of this structure is *C(*)([O-])C[S+](C)(C)=O.",
+          "label": "reasoning",
+          "source": "Therefore the SMILES is *C(*)([O-])C[S+](C)(C)=O"
+        }
+      ],
+      "coverage_notes": "已按原始顺序覆盖图像描述中的结构观察、SMILES 编码步骤以及最终 SMILES 结论。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/05657_chemistry_emma_chemistry_open_4db6f3a69587ab642a11e13e_d1efe80be3.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/00946_chemistry_emma_chemistry_open_4db6f3a69587ab642a11e13e_d1efe80be3.json"
+  }
+}

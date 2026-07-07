@@ -1,0 +1,392 @@
+{
+  "pack_index": 5447,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "physics/multi_physics:multiphysics00324:open_02c1c23ec2dd93c8a7f2790d",
+    "subject_dir": "physics",
+    "dataset_slug": "multi_physics",
+    "problem_id": "open_02c1c23ec2dd93c8a7f2790d",
+    "source_problem_id": "open_02c1c23ec2dd93c8a7f2790d",
+    "problem_run_key": null,
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/physics/multi_physics/samples/multiphysics00324.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/physics/multi_physics/samples/multiphysics00324.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/physics/multi_physics/samples/multiphysics00324.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/physics/multi_physics/artifacts/images/multiphysics00324.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Cars A and B travel on a straight and level lane. Their v–t graphs of motion are shown in the figure, in which A's graph is two identical arcs, and B's graph is a straight line, then which of the following statements is correct?",
+    "raw_answer_text": "BD",
+    "open_variant_id": "open_02c1c23ec2dd93c8a7f2790d",
+    "variant_index": 1,
+    "title": "Multi-Physics open-ended question 1",
+    "split_role": "part_1",
+    "rewritten_question_text": "According to the v-t graph in the figure, must cars A and B meet at t=4 s?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "They do not necessarily meet",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_d72c64ed7cf1be61831543a1",
+        "problem_id": "prob_bae5e357d159a57529ff158e",
+        "node_type": "answer_claim",
+        "canonical_value": "BD",
+        "surface_forms": [
+          "BD"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_2f81fa4e1148babcd04a72b5"
+        ],
+        "evidence_refs": [
+          "asset_2f81fa4e1148babcd04a72b5"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "BD"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T19:37:14Z",
+        "updated_at": "2026-04-08T19:37:14Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_02c1c23ec2dd93c8a7f2790d",
+      "parent_problem_id": "prob_bae5e357d159a57529ff158e",
+      "variant_index": 1,
+      "title": "Multi-Physics open-ended question 1",
+      "rewritten_question_text": "According to the v-t graph in the figure, must cars A and B meet at t=4 s?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "They do not necessarily meet",
+      "split_role": "part_1"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "According to the v-t graph in the figure, must cars A and B meet at t=4 s?",
+    "resolved_answer": "They do not necessarily meet",
+    "resolved_from_fallback": true,
+    "final_cot": "First describe the graph: The figure is a v-t graph, with the horizontal axis as t/s and the vertical axis as v/(m·s^-1). A's velocity graph starts from near t=0, v=0, gradually increases with time, and is about 2 m/s at t=4 s, with a shape of two identical arcs; B's velocity graph is a straight line decreasing from t=0, v=2 m/s to t=4 s, v=0. The two graphs intersect at about t=2 s, v=1 m/s. Then reason: the area under a v-t graph represents displacement, but to judge whether the two cars meet at t=4 s, it is necessary to compare their actual positions at t=4 s. It can be written as x_A(4)-x_B(4)=[x_A(0)-x_B(0)]+∫0^4[v_A(t)-v_B(t)]dt. The graph can at most give the displacements or displacement difference of the two cars from 0 to 4 s, and cannot give the initial position difference x_A(0)-x_B(0) of the two cars. The problem statement only says that the two cars move on the same straight line, and does not state the initial positions. Therefore, even if from the areas it is judged that the two cars have the same displacement from 0 to 4 s or the displacement difference can be found, it still cannot guarantee that the position difference at t=4 s is 0.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "id": "open_02c1c23ec2dd93c8a7f2790d",
+      "final_cot": "First describe the graph: The figure is a v-t graph, with the horizontal axis as t/s and the vertical axis as v/(m·s^-1). A's velocity graph starts from near t=0, v=0, gradually increases with time, and is about 2 m/s at t=4 s, with a shape of two identical arcs; B's velocity graph is a straight line decreasing from t=0, v=2 m/s to t=4 s, v=0. The two graphs intersect at about t=2 s, v=1 m/s.\nThen reason: the area under a v-t graph represents displacement, but to judge whether the two cars meet at t=4 s, it is necessary to compare their actual positions at t=4 s. It can be written as x_A(4)-x_B(4)=[x_A(0)-x_B(0)]+∫0^4[v_A(t)-v_B(t)]dt. The graph can at most give the displacements or displacement difference of the two cars from 0 to 4 s, and cannot give the initial position difference x_A(0)-x_B(0) of the two cars. The problem statement only says that the two cars move on the same straight line, and does not state the initial positions. Therefore, even if from the areas it is judged that the two cars have the same displacement from 0 to 4 s or the displacement difference can be found, it still cannot guarantee that the position difference at t=4 s is 0.",
+      "difficulty_score": 35.0
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_02c1c23ec2dd93c8a7f2790d",
+    "problem_run_key": null,
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "According to the v-t graph in the figure, must cars A and B meet at t=4 s?",
+    "resolved_answer": "They do not necessarily meet",
+    "resolved_from_fallback": true,
+    "final_cot": "First describe the graph: The figure is a v-t graph, with the horizontal axis as t/s and the vertical axis as v/(m·s^-1). A's velocity graph starts from near t=0, v=0, gradually increases with time, and is about 2 m/s at t=4 s, with a shape of two identical arcs; B's velocity graph is a straight line decreasing from t=0, v=2 m/s to t=4 s, v=0. The two graphs intersect at about t=2 s, v=1 m/s.\nThen reason: the area under a v-t graph represents displacement, but to judge whether the two cars meet at t=4 s, it is necessary to compare their actual positions at t=4 s. It can be written as x_A(4)-x_B(4)=[x_A(0)-x_B(0)]+∫0^4[v_A(t)-v_B(t)]dt. The graph can at most give the displacements or displacement difference of the two cars from 0 to 4 s, and cannot give the initial position difference x_A(0)-x_B(0) of the two cars. The problem statement only says that the two cars move on the same straight line, and does not state the initial positions. Therefore, even if from the areas it is judged that the two cars have the same displacement from 0 to 4 s or the displacement difference can be found, it still cannot guarantee that the position difference at t=4 s is 0.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure is a v-t graph.",
+        "label": "perception",
+        "source": "The figure is a v-t graph"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The horizontal axis is t/s.",
+        "label": "perception",
+        "source": "The horizontal axis is t/s"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The vertical axis is v/(m·s^-1).",
+        "label": "perception",
+        "source": "The vertical axis is v/(m·s^-1)"
+      },
+      {
+        "claim_id": 4,
+        "claim": "A's velocity graph starts from near t=0, v=0.",
+        "label": "perception",
+        "source": "A's velocity graph starts from near t=0, v=0"
+      },
+      {
+        "claim_id": 5,
+        "claim": "A's speed gradually increases with time.",
+        "label": "perception",
+        "source": "gradually increases with time"
+      },
+      {
+        "claim_id": 6,
+        "claim": "A's speed is about 2 m/s when t=4 s.",
+        "label": "perception",
+        "source": "is about 2 m/s when t=4 s"
+      },
+      {
+        "claim_id": 7,
+        "claim": "A's speed graph line shape is two identical circular arcs.",
+        "label": "perception",
+        "source": "the shape is two identical circular arcs"
+      },
+      {
+        "claim_id": 8,
+        "claim": "B's speed graph line is a straight line.",
+        "label": "perception",
+        "source": "B's speed graph line is a straight line descending from t=0, v=2 m/s to t=4 s, v=0"
+      },
+      {
+        "claim_id": 9,
+        "claim": "B's speed graph line descends from t=0, v=2 m/s to t=4 s, v=0.",
+        "label": "perception",
+        "source": "descends from t=0, v=2 m/s to t=4 s, v=0"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The two graph lines intersect at about t=2 s, v=1 m/s.",
+        "label": "perception",
+        "source": "the two graph lines intersect at about t=2 s, v=1 m/s"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The area under the v-t graph represents displacement.",
+        "label": "knowledge",
+        "source": "the area under the v-t graph represents displacement"
+      },
+      {
+        "claim_id": 12,
+        "claim": "To determine whether the two cars meet at t=4 s, it is necessary to compare their actual positions at t=4 s.",
+        "label": "reasoning",
+        "source": "but to determine whether the two cars meet at t=4 s, it is necessary to compare their actual positions at t=4 s"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The position difference between the two cars at t=4 s can be written as x_A(4)-x_B(4)=[x_A(0)-x_B(0)]+∫0^4[v_A(t)-v_B(t)]dt.",
+        "label": "reasoning",
+        "source": "can be written as x_A(4)-x_B(4)=[x_A(0)-x_B(0)]+∫0^4[v_A(t)-v_B(t)]dt"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The graph can at most give the displacements of the two cars from 0 to 4 s.",
+        "label": "reasoning",
+        "source": "The graph can at most give the displacements or displacement difference of the two cars from 0 to 4 s."
+      },
+      {
+        "claim_id": 15,
+        "claim": "The graph can at most give the displacement difference of the two cars from 0 to 4 s.",
+        "label": "reasoning",
+        "source": "The graph can at most give the displacements or displacement difference of the two cars from 0 to 4 s."
+      },
+      {
+        "claim_id": 16,
+        "claim": "The graph cannot give the initial position difference of the two cars x_A(0)-x_B(0).",
+        "label": "reasoning",
+        "source": "It cannot give the initial position difference of the two cars x_A(0)-x_B(0)."
+      },
+      {
+        "claim_id": 17,
+        "claim": "The stem only states that the two cars move on the same straight line.",
+        "label": "perception",
+        "source": "The stem only states that the two cars move on the same straight line."
+      },
+      {
+        "claim_id": 18,
+        "claim": "The stem does not state the initial positions.",
+        "label": "perception",
+        "source": "The initial positions are not stated."
+      },
+      {
+        "claim_id": 19,
+        "claim": "Judging from the area that the two cars have the same displacement from 0 to 4 s also cannot guarantee that the position difference is 0 at t=4 s.",
+        "label": "reasoning",
+        "source": "Even if judging from the area that the two cars have the same displacement from 0 to 4 s or that the displacement difference can be found, it cannot guarantee that the position difference is 0 at t=4 s."
+      },
+      {
+        "claim_id": 20,
+        "claim": "Finding the displacement difference of the two cars from 0 to 4 s by area also cannot guarantee that the position difference is 0 at t=4 s.",
+        "label": "reasoning",
+        "source": "Even if judging from the area that the two cars have the same displacement from 0 to 4 s or that the displacement difference can be found, it cannot guarantee that the position difference is 0 at t=4 s."
+      }
+    ],
+    "claim_count": 20,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure is a v-t graph.",
+          "label": "perception",
+          "source": "The figure is a v-t graph"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The horizontal axis is t/s.",
+          "label": "perception",
+          "source": "The horizontal axis is t/s"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The vertical axis is v/(m·s^-1).",
+          "label": "perception",
+          "source": "The vertical axis is v/(m·s^-1)"
+        },
+        {
+          "claim_id": 4,
+          "claim": "A's velocity graph starts from near t=0, v=0.",
+          "label": "perception",
+          "source": "A's velocity graph starts from near t=0, v=0"
+        },
+        {
+          "claim_id": 5,
+          "claim": "A's speed gradually increases with time.",
+          "label": "perception",
+          "source": "gradually increases with time"
+        },
+        {
+          "claim_id": 6,
+          "claim": "A's speed is about 2 m/s when t=4 s.",
+          "label": "perception",
+          "source": "is about 2 m/s when t=4 s"
+        },
+        {
+          "claim_id": 7,
+          "claim": "A's speed graph line shape is two identical circular arcs.",
+          "label": "perception",
+          "source": "the shape is two identical circular arcs"
+        },
+        {
+          "claim_id": 8,
+          "claim": "B's speed graph line is a straight line.",
+          "label": "perception",
+          "source": "B's speed graph line is a straight line descending from t=0, v=2 m/s to t=4 s, v=0"
+        },
+        {
+          "claim_id": 9,
+          "claim": "B's speed graph line descends from t=0, v=2 m/s to t=4 s, v=0.",
+          "label": "perception",
+          "source": "descends from t=0, v=2 m/s to t=4 s, v=0"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The two graph lines intersect at about t=2 s, v=1 m/s.",
+          "label": "perception",
+          "source": "the two graph lines intersect at about t=2 s, v=1 m/s"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The area under the v-t graph represents displacement.",
+          "label": "knowledge",
+          "source": "the area under the v-t graph represents displacement"
+        },
+        {
+          "claim_id": 12,
+          "claim": "To determine whether the two cars meet at t=4 s, it is necessary to compare their actual positions at t=4 s.",
+          "label": "reasoning",
+          "source": "but to determine whether the two cars meet at t=4 s, it is necessary to compare their actual positions at t=4 s"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The position difference between the two cars at t=4 s can be written as x_A(4)-x_B(4)=[x_A(0)-x_B(0)]+∫0^4[v_A(t)-v_B(t)]dt.",
+          "label": "reasoning",
+          "source": "can be written as x_A(4)-x_B(4)=[x_A(0)-x_B(0)]+∫0^4[v_A(t)-v_B(t)]dt"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The graph can at most give the displacements of the two cars from 0 to 4 s.",
+          "label": "reasoning",
+          "source": "The graph can at most give the displacements or displacement difference of the two cars from 0 to 4 s."
+        },
+        {
+          "claim_id": 15,
+          "claim": "The graph can at most give the displacement difference of the two cars from 0 to 4 s.",
+          "label": "reasoning",
+          "source": "The graph can at most give the displacements or displacement difference of the two cars from 0 to 4 s."
+        },
+        {
+          "claim_id": 16,
+          "claim": "The graph cannot give the initial position difference of the two cars x_A(0)-x_B(0).",
+          "label": "reasoning",
+          "source": "It cannot give the initial position difference of the two cars x_A(0)-x_B(0)."
+        },
+        {
+          "claim_id": 17,
+          "claim": "The stem only states that the two cars move on the same straight line.",
+          "label": "perception",
+          "source": "The stem only states that the two cars move on the same straight line."
+        },
+        {
+          "claim_id": 18,
+          "claim": "The stem does not state the initial positions.",
+          "label": "perception",
+          "source": "The initial positions are not stated."
+        },
+        {
+          "claim_id": 19,
+          "claim": "Judging from the area that the two cars have the same displacement from 0 to 4 s also cannot guarantee that the position difference is 0 at t=4 s.",
+          "label": "reasoning",
+          "source": "Even if judging from the area that the two cars have the same displacement from 0 to 4 s or that the displacement difference can be found, it cannot guarantee that the position difference is 0 at t=4 s."
+        },
+        {
+          "claim_id": 20,
+          "claim": "Finding the displacement difference of the two cars from 0 to 4 s by area also cannot guarantee that the position difference is 0 at t=4 s.",
+          "label": "reasoning",
+          "source": "Even if judging from the area that the two cars have the same displacement from 0 to 4 s or that the displacement difference can be found, it cannot guarantee that the position difference is 0 at t=4 s."
+        }
+      ],
+      "coverage_notes": "已按原顺序覆盖图像描述、v-t图象位移知识、位置差公式、图象信息限制、题干条件缺失以及最终不能保证相遇的结论。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:31Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/physics/multi_physics/10241_physics_multi_physics_open_02c1c23ec2dd93c8a7f2790d_1afe1c2560.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/physics/multi_physics/05447_physics_multi_physics_open_02c1c23ec2dd93c8a7f2790d_1afe1c2560.json"
+  }
+}

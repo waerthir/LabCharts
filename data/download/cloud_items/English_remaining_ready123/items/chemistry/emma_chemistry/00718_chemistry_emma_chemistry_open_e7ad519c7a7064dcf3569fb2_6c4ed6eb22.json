@@ -1,0 +1,660 @@
+{
+  "pack_index": 718,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00156:emma_chemistry__open_e7ad519c7a7064dcf3569fb2__9540bc22fac2",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_e7ad519c7a7064dcf3569fb2",
+    "source_problem_id": "open_e7ad519c7a7064dcf3569fb2",
+    "problem_run_key": "emma_chemistry__open_e7ad519c7a7064dcf3569fb2__9540bc22fac2",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00156.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00156.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00156.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00156.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Please choose the SMILES expression of the transition-state structure shown in the image, ignoring the arrows. <image_1>",
+    "raw_answer_text": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+    "open_variant_id": "open_e7ad519c7a7064dcf3569fb2",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_1717c6cf143c583459b4a2bb",
+        "problem_id": "prob_2f252d0edce81131763628d2",
+        "node_type": "answer_claim",
+        "canonical_value": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+        "surface_forms": [
+          "CCOC(CNC([OH2+])c1ccccc1)OCC"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_62b15b0664dbb353c715745a"
+        ],
+        "evidence_refs": [
+          "asset_62b15b0664dbb353c715745a"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "CCOC(CNC([OH2+])c1ccccc1)OCC"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T11:00:55Z",
+        "updated_at": "2026-04-08T11:00:55Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_e7ad519c7a7064dcf3569fb2",
+      "parent_problem_id": "prob_2f252d0edce81131763628d2",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+    "raw_standard_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: on the left side of the image there is a benzene ring, and the benzene ring is connected to a benzylic carbon; this carbon is also connected to a group labeled OH2 and carrying a positive charge, and is connected to an N-H. The nitrogen atom is further connected to a carbon chain, and the terminal carbon is simultaneously attached to two OEt ethoxy groups. There are also curved arrows in the image, but the question requires ignoring these arrows. Then reason: write the SMILES according to connectivity. One can start from an ethoxy group and write it as CCO, connected through oxygen to the acetal carbon, giving CCOC. This acetal carbon is also connected to the chain C-N-C, so it is written as CCOC(CNC(...)). The terminal benzylic carbon is connected to [OH2+] and the benzene ring c1ccccc1, so this part is C([OH2+])c1ccccc1. The other substituent of the acetal carbon is the second ethoxy group OCC. Therefore the complete SMILES is CCOC(CNC([OH2+])c1ccccc1)OCC.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_e7ad519c7a7064dcf3569fb2",
+      "problem_run_key": "emma_chemistry__open_e7ad519c7a7064dcf3569fb2__9540bc22fac2",
+      "question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "standard_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00156.png",
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/crops/emmachemistry00156.png"
+      ],
+      "initial_multi_solution_score": 0.2657,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Convert the image to a connectivity graph, ignoring all curved arrows. Start the SMILES at one ethoxy group as CCO, attach it to the acetal carbon, then branch from that carbon to the chain C-N-C. On the terminal benzylic carbon, add branches to [OH2+] and to the phenyl ring c1ccccc1. Add the second ethoxy group as the other branch from the acetal carbon. This gives CCOC(CNC([OH2+])c1ccccc1)OCC.",
+          "CoT_raw": "先描述图像：图中左侧是一个苯环，苯环连接到一个苄位碳；该碳还连接到标注为 OH2 且带正电的基团，并连接到一个 N-H。氮原子再连接到一条碳链，末端碳同时连有两个 OEt 乙氧基。图中还有曲箭头，但题目要求忽略这些箭头。再推理：按连通性写 SMILES。可从一个乙氧基开始写为 CCO，通过氧连接到缩醛碳，得到 CCOC。该缩醛碳还连接到链 C-N-C，因此写成 CCOC(CNC(...))。末端苄位碳连接 [OH2+] 和苯环 c1ccccc1，所以该部分为 C([OH2+])c1ccccc1。缩醛碳的另一个取代基是第二个乙氧基 OCC。因此完整 SMILES 为 CCOC(CNC([OH2+])c1ccccc1)OCC。",
+          "model_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+              "predicted_part": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中左侧是一个苯环，苯环连接到一个苄位碳；该碳还连接到标注为 OH2 且带正电的基团，并连接到一个 N-H。氮原子再连接到一条碳链，末端碳同时连有两个 OEt 乙氧基。图中还有曲箭头，但题目要求忽略这些箭头。再推理：按连通性写 SMILES。可从一个乙氧基开始写为 CCO，通过氧连接到缩醛碳，得到 CCOC。该缩醛碳还连接到链 C-N-C，因此写成 CCOC(CNC(...))。末端苄位碳连接 [OH2+] 和苯环 c1ccccc1，所以该部分为 C([OH2+])c1ccccc1。缩醛碳的另一个取代基是第二个乙氧基 OCC。因此完整 SMILES 为 CCOC(CNC([OH2+])c1ccccc1)OCC。",
+          "answer_answer_check_final": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace passes. It first describes the image, then reasons from connectivity while explicitly ignoring arrows. The visual claims match the image: phenyl attached to benzylic carbon, benzylic carbon attached to OH2+ and N-H, N connected to a carbon chain ending at a carbon bearing two ethoxy groups. The SMILES construction follows the method draft and yields the standard answer.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中左侧是一个苯环，苯环连接到一个苄位碳；该碳还连接到标注为 OH2 且带正电的基团，并连接到一个 N-H。氮原子再连接到一条碳链，末端碳同时连有两个 OEt 乙氧基。图中还有曲箭头，但题目要求忽略这些箭头。再推理：按连通性写 SMILES。可从一个乙氧基开始写为 CCO，通过氧连接到缩醛碳，得到 CCOC。该缩醛碳还连接到链 C-N-C，因此写成 CCOC(CNC(...))。末端苄位碳连接 [OH2+] 和苯环 c1ccccc1，所以该部分为 C([OH2+])c1ccccc1。缩醛碳的另一个取代基是第二个乙氧基 OCC。因此完整 SMILES 为 CCOC(CNC([OH2+])c1ccccc1)OCC。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Direct graph transcription from the displayed skeletal structure; no alternative reaction-mechanism interpretation is used, and the curved arrows are explicitly ignored as requested.",
+            "image_role": "Read the molecular graph in the image: a phenyl ring bonded to a benzylic carbon; that carbon is also bonded to an N-H substituent and to a protonated hydroxyl/water group shown as OH2 with a positive charge. The nitrogen is bonded onward to a methylene group, which connects to an acetal carbon bearing two ethoxy groups labeled OEt. Ignore the curved arrows.",
+            "text_role": "Use the question instruction to output the SMILES expression of the shown transition-state structure and to ignore arrows rather than treating them as bonds or reaction steps.",
+            "knowledge_role": "Use standard skeletal-structure conventions: unlabeled vertices are carbons with implied hydrogens, benzene is written as c1ccccc1 in aromatic SMILES, OEt means OCC or CCO depending traversal direction, N-H can be written as neutral N when valence is satisfied, and protonated OH2 attached through oxygen is represented as [OH2+]. Then choose any valid traversal and branch syntax to encode the same connectivity."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中左侧是一个苯环，苯环连接到一个苄位碳；该碳还连接到标注为 OH2 且带正电的基团，并连接到一个 N-H。氮原子再连接到一条碳链，末端碳同时连有两个 OEt 乙氧基。图中还有曲箭头，但题目要求忽略这些箭头。再推理：按连通性写 SMILES。可从一个乙氧基开始写为 CCO，通过氧连接到缩醛碳，得到 CCOC。该缩醛碳还连接到链 C-N-C，因此写成 CCOC(CNC(...))。末端苄位碳连接 [OH2+] 和苯环 c1ccccc1，所以该部分为 C([OH2+])c1ccccc1。缩醛碳的另一个取代基是第二个乙氧基 OCC。因此完整 SMILES 为 CCOC(CNC([OH2+])c1ccccc1)OCC。",
+            "model_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2571,
+              "completion_tokens": 817,
+              "total_tokens": 3388,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 20.037,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace passes. It first describes the image, then reasons from connectivity while explicitly ignoring arrows. The visual claims match the image: phenyl attached to benzylic carbon, benzylic carbon attached to OH2+ and N-H, N connected to a carbon chain ending at a carbon bearing two ethoxy groups. The SMILES construction follows the method draft and yields the standard answer.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 21.793
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 20.048,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 3,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 3,
+                "requests_with_usage": 4,
+                "prompt_tokens": 11039,
+                "completion_tokens": 4467,
+                "total_tokens": 15506,
+                "cached_tokens": 0,
+                "reasoning_tokens": 2582,
+                "total_request_seconds": 107.789,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 21.808,
+              "usage_delta": {
+                "request_count": 6,
+                "successful_request_count": 4,
+                "failed_request_count": 3,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 6,
+                "requests_with_usage": 5,
+                "prompt_tokens": 13891,
+                "completion_tokens": 3852,
+                "total_tokens": 17743,
+                "cached_tokens": 1792,
+                "reasoning_tokens": 2712,
+                "total_request_seconds": 280.286,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 47.501,
+          "usage_delta": {
+            "request_count": 10,
+            "successful_request_count": 9,
+            "failed_request_count": 7,
+            "retry_count": 7,
+            "text_request_count": 0,
+            "multimodal_request_count": 10,
+            "requests_with_usage": 13,
+            "prompt_tokens": 35292,
+            "completion_tokens": 14616,
+            "total_tokens": 49908,
+            "cached_tokens": 0,
+            "reasoning_tokens": 8873,
+            "total_request_seconds": 517.547,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "935",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00156.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_2f252d0edce81131763628d2",
+          "open_variant_count": 1,
+          "open_variant_id": "open_e7ad519c7a7064dcf3569fb2",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": [
+            "metadata.extraction_notes indicates the source image field contained a PIL image object representation rather than a path or URL.",
+            "metadata.image_paths is empty while top-level image_paths contains one image path."
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 89.382,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 1,
+        "retry_count": 1,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 4,
+        "prompt_tokens": 10925,
+        "completion_tokens": 3229,
+        "total_tokens": 14154,
+        "cached_tokens": 0,
+        "reasoning_tokens": 2057,
+        "total_request_seconds": 87.321,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+      "final_cot": "First describe the image: on the left side of the image there is a benzene ring, and the benzene ring is connected to a benzylic carbon; this carbon is also connected to a group labeled OH2 and carrying a positive charge, and is connected to an N-H. The nitrogen atom is further connected to a carbon chain, and the terminal carbon is simultaneously attached to two OEt ethoxy groups. There are also curved arrows in the image, but the question requires ignoring these arrows. Then reason: write the SMILES according to connectivity. One can start from an ethoxy group and write it as CCO, connected through oxygen to the acetal carbon, giving CCOC. This acetal carbon is also connected to the chain C-N-C, so it is written as CCOC(CNC(...)). The terminal benzylic carbon is connected to [OH2+] and the benzene ring c1ccccc1, so this part is C([OH2+])c1ccccc1. The other substituent of the acetal carbon is the second ethoxy group OCC. Therefore the complete SMILES is CCOC(CNC([OH2+])c1ccccc1)OCC.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace passes. It first describes the image, then reasons from connectivity while explicitly ignoring arrows. The visual claims match the image: phenyl attached to benzylic carbon, benzylic carbon attached to OH2+ and N-H, N connected to a carbon chain ending at a carbon bearing two ethoxy groups. The SMILES construction follows the method draft and yields the standard answer.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 21.793
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 157,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00156.json",
+        "source_sample_filename": "emmachemistry00156.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00156.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T05:40:12Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:33Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_2f252d0edce81131763628d2",
+          "new_problem_id": "open_e7ad519c7a7064dcf3569fb2",
+          "old_problem_run_key": "emma_chemistry__prob_2f252d0edce81131763628d2__8f81c4127915",
+          "new_problem_run_key": "emma_chemistry__open_e7ad519c7a7064dcf3569fb2__9540bc22fac2",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00156.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_e7ad519c7a7064dcf3569fb2",
+          "new_problem_id": "open_e7ad519c7a7064dcf3569fb2",
+          "old_problem_run_key": "emma_chemistry__open_e7ad519c7a7064dcf3569fb2__9540bc22fac2",
+          "new_problem_run_key": "emma_chemistry__open_e7ad519c7a7064dcf3569fb2__9540bc22fac2",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00156.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_e7ad519c7a7064dcf3569fb2",
+    "problem_run_key": "emma_chemistry__open_e7ad519c7a7064dcf3569fb2__9540bc22fac2",
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+    "raw_standard_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "CCOC(CNC([OH2+])c1ccccc1)OCC",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: on the left side of the image there is a benzene ring, and the benzene ring is connected to a benzylic carbon; this carbon is also connected to a group labeled OH2 and carrying a positive charge, and is connected to an N-H. The nitrogen atom is further connected to a carbon chain, and the terminal carbon is simultaneously attached to two OEt ethoxy groups. There are also curved arrows in the image, but the question requires ignoring these arrows. Then reason: write the SMILES according to connectivity. One can start from an ethoxy group and write it as CCO, connected through oxygen to the acetal carbon, giving CCOC. This acetal carbon is also connected to the chain C-N-C, so it is written as CCOC(CNC(...)). The terminal benzylic carbon is connected to [OH2+] and the benzene ring c1ccccc1, so this part is C([OH2+])c1ccccc1. The other substituent of the acetal carbon is the second ethoxy group OCC. Therefore the complete SMILES is CCOC(CNC([OH2+])c1ccccc1)OCC.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "On the left side of the figure is a benzene ring.",
+        "label": "perception",
+        "source": "On the left side of the figure is a benzene ring"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The benzene ring is connected to a benzylic carbon.",
+        "label": "perception",
+        "source": "The benzene ring is connected to a benzylic carbon"
+      },
+      {
+        "claim_id": 3,
+        "claim": "This benzylic carbon is connected to a group labeled OH2.",
+        "label": "perception",
+        "source": "This carbon is also connected to a group labeled OH2 and carrying a positive charge"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The OH2 group carries a positive charge.",
+        "label": "perception",
+        "source": "A group labeled OH2 and carrying a positive charge"
+      },
+      {
+        "claim_id": 5,
+        "claim": "This benzylic carbon is connected to an N-H.",
+        "label": "perception",
+        "source": "and is connected to an N-H"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The nitrogen atom is connected to a carbon chain.",
+        "label": "perception",
+        "source": "The nitrogen atom is also connected to a carbon chain"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The terminal carbon is simultaneously attached to two OEt ethoxy groups.",
+        "label": "perception",
+        "source": "The terminal carbon is simultaneously attached to two OEt ethoxy groups"
+      },
+      {
+        "claim_id": 8,
+        "claim": "There are curved arrows in the figure.",
+        "label": "perception",
+        "source": "There are also curved arrows in the figure"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The curved arrows need to be ignored in the answer to this question.",
+        "label": "reasoning",
+        "source": "But the problem requires ignoring these arrows"
+      },
+      {
+        "claim_id": 10,
+        "claim": "SMILES should be written according to connectivity.",
+        "label": "reasoning",
+        "source": "Write SMILES according to connectivity"
+      },
+      {
+        "claim_id": 11,
+        "claim": "Starting from one ethoxy group, it can be written as CCO.",
+        "label": "reasoning",
+        "source": "One can start from one ethoxy group and write it as CCO"
+      },
+      {
+        "claim_id": 12,
+        "claim": "After connecting through oxygen to the acetal carbon, CCOC is obtained.",
+        "label": "reasoning",
+        "source": "Connecting through oxygen to the acetal carbon gives CCOC"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The acetal carbon is also connected to the chain C-N-C.",
+        "label": "reasoning",
+        "source": "This acetal carbon is also connected to the chain C-N-C"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The part containing the acetal carbon connected to the C-N-C chain can be written as CCOC(CNC(...)).",
+        "label": "reasoning",
+        "source": "Therefore it is written as CCOC(CNC(...))"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The terminal benzylic carbon is connected to [OH2+].",
+        "label": "reasoning",
+        "source": "The terminal benzylic carbon is connected to [OH2+] and the benzene ring c1ccccc1"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The terminal benzylic carbon is connected to the benzene ring c1ccccc1.",
+        "label": "reasoning",
+        "source": "The terminal benzylic carbon is connected to [OH2+] and the benzene ring c1ccccc1"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The terminal benzylic carbon part is written as C([OH2+])c1ccccc1.",
+        "label": "reasoning",
+        "source": "Therefore this part is C([OH2+])c1ccccc1"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The other substituent of the acetal carbon is the second ethoxy group OCC.",
+        "label": "reasoning",
+        "source": "The other substituent of the acetal carbon is the second ethoxy group OCC"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The complete SMILES is CCOC(CNC([OH2+])c1ccccc1)OCC.",
+        "label": "reasoning",
+        "source": "Therefore the complete SMILES is CCOC(CNC([OH2+])c1ccccc1)OCC"
+      }
+    ],
+    "claim_count": 19,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "On the left side of the figure is a benzene ring.",
+          "label": "perception",
+          "source": "On the left side of the figure is a benzene ring"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The benzene ring is connected to a benzylic carbon.",
+          "label": "perception",
+          "source": "The benzene ring is connected to a benzylic carbon"
+        },
+        {
+          "claim_id": 3,
+          "claim": "This benzylic carbon is connected to a group labeled OH2.",
+          "label": "perception",
+          "source": "This carbon is also connected to a group labeled OH2 and carrying a positive charge"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The OH2 group carries a positive charge.",
+          "label": "perception",
+          "source": "A group labeled OH2 and carrying a positive charge"
+        },
+        {
+          "claim_id": 5,
+          "claim": "This benzylic carbon is connected to an N-H.",
+          "label": "perception",
+          "source": "and is connected to an N-H"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The nitrogen atom is connected to a carbon chain.",
+          "label": "perception",
+          "source": "The nitrogen atom is also connected to a carbon chain"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The terminal carbon is simultaneously attached to two OEt ethoxy groups.",
+          "label": "perception",
+          "source": "The terminal carbon is simultaneously attached to two OEt ethoxy groups"
+        },
+        {
+          "claim_id": 8,
+          "claim": "There are curved arrows in the figure.",
+          "label": "perception",
+          "source": "There are also curved arrows in the figure"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The curved arrows need to be ignored in the answer to this question.",
+          "label": "reasoning",
+          "source": "But the problem requires ignoring these arrows"
+        },
+        {
+          "claim_id": 10,
+          "claim": "SMILES should be written according to connectivity.",
+          "label": "reasoning",
+          "source": "Write SMILES according to connectivity"
+        },
+        {
+          "claim_id": 11,
+          "claim": "Starting from one ethoxy group, it can be written as CCO.",
+          "label": "reasoning",
+          "source": "One can start from one ethoxy group and write it as CCO"
+        },
+        {
+          "claim_id": 12,
+          "claim": "After connecting through oxygen to the acetal carbon, CCOC is obtained.",
+          "label": "reasoning",
+          "source": "Connecting through oxygen to the acetal carbon gives CCOC"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The acetal carbon is also connected to the chain C-N-C.",
+          "label": "reasoning",
+          "source": "This acetal carbon is also connected to the chain C-N-C"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The part containing the acetal carbon connected to the C-N-C chain can be written as CCOC(CNC(...)).",
+          "label": "reasoning",
+          "source": "Therefore it is written as CCOC(CNC(...))"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The terminal benzylic carbon is connected to [OH2+].",
+          "label": "reasoning",
+          "source": "The terminal benzylic carbon is connected to [OH2+] and the benzene ring c1ccccc1"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The terminal benzylic carbon is connected to the benzene ring c1ccccc1.",
+          "label": "reasoning",
+          "source": "The terminal benzylic carbon is connected to [OH2+] and the benzene ring c1ccccc1"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The terminal benzylic carbon part is written as C([OH2+])c1ccccc1.",
+          "label": "reasoning",
+          "source": "Therefore this part is C([OH2+])c1ccccc1"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The other substituent of the acetal carbon is the second ethoxy group OCC.",
+          "label": "reasoning",
+          "source": "The other substituent of the acetal carbon is the second ethoxy group OCC"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The complete SMILES is CCOC(CNC([OH2+])c1ccccc1)OCC.",
+          "label": "reasoning",
+          "source": "Therefore the complete SMILES is CCOC(CNC([OH2+])c1ccccc1)OCC"
+        }
+      ],
+      "coverage_notes": "已覆盖 final_cot 中的结构读取、忽略箭头的任务约束、按连通性构建 SMILES 的中间步骤以及最终 SMILES 结论。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/05807_chemistry_emma_chemistry_open_e7ad519c7a7064dcf3569fb2_6c4ed6eb22.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/00718_chemistry_emma_chemistry_open_e7ad519c7a7064dcf3569fb2_6c4ed6eb22.json"
+  }
+}

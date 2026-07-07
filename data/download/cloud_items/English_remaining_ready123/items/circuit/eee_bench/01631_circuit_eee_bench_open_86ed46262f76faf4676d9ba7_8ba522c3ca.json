@@ -1,0 +1,390 @@
+{
+  "pack_index": 1631,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "circuit/eee_bench:eeebench00014:open_86ed46262f76faf4676d9ba7",
+    "subject_dir": "circuit",
+    "dataset_slug": "eee_bench",
+    "problem_id": "open_86ed46262f76faf4676d9ba7",
+    "source_problem_id": "open_86ed46262f76faf4676d9ba7",
+    "problem_run_key": null,
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench00014.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench00014.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/circuit/eee_bench/samples/eeebench00014.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench00014.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "The system block diagram is shown in the <image>, where \\( K \\) is a real number. The system is stable when \\( K < \\) ________.",
+    "raw_answer_text": "4",
+    "open_variant_id": "open_86ed46262f76faf4676d9ba7",
+    "variant_index": 1,
+    "title": "EEE-Bench open-ended question",
+    "split_role": "single",
+    "rewritten_question_text": "The system block diagram is shown in the image, where \\( K \\) is a real number. The system is stable when \\( K < \\) ________.",
+    "expected_answer_type": "numeric",
+    "expected_answer": "4",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_2ce3740ac248c2a86b996ee2",
+        "problem_id": "prob_0b0921c4265c11daeafc6280",
+        "node_type": "answer_claim",
+        "canonical_value": "4",
+        "surface_forms": [
+          "4"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_f1af1717f3d3130a1ad0c4aa"
+        ],
+        "evidence_refs": [
+          "asset_f1af1717f3d3130a1ad0c4aa"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "4"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-05-01T21:44:53Z",
+        "updated_at": "2026-05-01T21:44:53Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_86ed46262f76faf4676d9ba7",
+      "parent_problem_id": "prob_0b0921c4265c11daeafc6280",
+      "variant_index": 1,
+      "title": "EEE-Bench open-ended question",
+      "rewritten_question_text": "The system block diagram is shown in the image, where \\( K \\) is a real number. The system is stable when \\( K < \\) ________.",
+      "expected_answer_type": "numeric",
+      "expected_answer": "4",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "The system block diagram is shown in the image, where \\( K \\) is a real number. The system is stable when \\( K < \\) ________.",
+    "resolved_answer": "4",
+    "resolved_from_fallback": true,
+    "final_cot": "First describe the image: the input on the left side of the figure is X(s), which enters a summing node; from the output node on the right side, there is a feedback line that goes around to the upper side and then returns to the summing node, with a “+” marked beside the feedback terminal, and the input terminal also enters according to the positive sign, so it is a positive feedback structure. The forward path after the summing node is successively the transfer function block s/(s^2+4s+4), then passes through the gain block K, and finally the output is Y(s). The feedback path has no additional module and can be regarded as unit feedback. Then reason: the characteristic equation of the positive feedback closed loop is 1 - K·s/(s^2+4s+4)=0. Rearranging gives s^2+4s+4-Ks=0, namely s^2+(4-K)s+4=0. Stability of a second-order system requires all coefficients of the characteristic polynomial to be positive: 1>0, 4-K>0, 4>0. Therefore K<4 is needed. So the blank in the question should be filled with 4.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "id": "open_86ed46262f76faf4676d9ba7",
+      "final_cot": "First describe the image: the input on the left side of the figure is X(s), which enters a summing node; from the output node on the right side, there is a feedback line that goes around to the upper side and then returns to the summing node, with a “+” marked beside the feedback terminal, and the input terminal also enters according to the positive sign, so it is a positive feedback structure. The forward path after the summing node is successively the transfer function block s/(s^2+4s+4), then passes through the gain block K, and finally the output is Y(s). The feedback path has no additional module and can be regarded as unit feedback.\n\nThen reason: the characteristic equation of the positive feedback closed loop is 1 - K·s/(s^2+4s+4)=0. Rearranging gives s^2+4s+4-Ks=0, namely s^2+(4-K)s+4=0. Stability of a second-order system requires all coefficients of the characteristic polynomial to be positive: 1>0, 4-K>0, 4>0. Therefore K<4 is needed. So the blank in the question should be filled with 4.",
+      "difficulty_score": 35.0
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_86ed46262f76faf4676d9ba7",
+    "problem_run_key": null,
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "The system block diagram is shown in the image, where \\( K \\) is a real number. The system is stable when \\( K < \\) ________.",
+    "resolved_answer": "4",
+    "resolved_from_fallback": true,
+    "final_cot": "First describe the image: the input on the left side of the figure is X(s), which enters a summing node; from the output node on the right side, there is a feedback line that goes around to the upper side and then returns to the summing node, with a “+” marked beside the feedback terminal, and the input terminal also enters according to the positive sign, so it is a positive feedback structure. The forward path after the summing node is successively the transfer function block s/(s^2+4s+4), then passes through the gain block K, and finally the output is Y(s). The feedback path has no additional module and can be regarded as unit feedback.\n\nThen reason: the characteristic equation of the positive feedback closed loop is 1 - K·s/(s^2+4s+4)=0. Rearranging gives s^2+4s+4-Ks=0, namely s^2+(4-K)s+4=0. Stability of a second-order system requires all coefficients of the characteristic polynomial to be positive: 1>0, 4-K>0, 4>0. Therefore K<4 is needed. So the blank in the question should be filled with 4.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The input on the left side of the figure is X(s).",
+        "label": "perception",
+        "source": "The input on the left side of the figure is X(s)"
+      },
+      {
+        "claim_id": 2,
+        "claim": "X(s) enters a summing node.",
+        "label": "perception",
+        "source": "enters a summing node"
+      },
+      {
+        "claim_id": 3,
+        "claim": "From the output node on the right side, there is a feedback line that goes around to the upper side and then returns to the summing node.",
+        "label": "perception",
+        "source": "from the output node on the right side, there is a feedback line that goes around to the upper side and then returns to the summing node"
+      },
+      {
+        "claim_id": 4,
+        "claim": "A “+” is marked beside the feedback terminal.",
+        "label": "perception",
+        "source": "a “+” is marked beside the feedback terminal"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The input terminal also enters according to the positive sign.",
+        "label": "perception",
+        "source": "the input terminal also enters according to the positive sign"
+      },
+      {
+        "claim_id": 6,
+        "claim": "This structure is a positive feedback structure.",
+        "label": "reasoning",
+        "source": "Therefore it is a positive feedback structure"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The forward path after the summing node is, in order, the transfer function block s/(s^2+4s+4).",
+        "label": "perception",
+        "source": "The forward path after the summing node is, in order, the transfer function block s/(s^2+4s+4)"
+      },
+      {
+        "claim_id": 8,
+        "claim": "After the transfer function block, it passes through the gain block K.",
+        "label": "perception",
+        "source": "Then it passes through the gain block K"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Finally, the output is Y(s).",
+        "label": "perception",
+        "source": "Finally, the output is Y(s)"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The feedback path has no additional module.",
+        "label": "perception",
+        "source": "The feedback path has no additional module"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The feedback path can be regarded as unity feedback.",
+        "label": "reasoning",
+        "source": "Can be regarded as unity feedback"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The characteristic equation of this positive-feedback closed loop is 1 - K·s/(s^2+4s+4)=0.",
+        "label": "reasoning",
+        "source": "The characteristic equation of the positive-feedback closed loop is 1 - K·s/(s^2+4s+4)=0"
+      },
+      {
+        "claim_id": 13,
+        "claim": "1 - K·s/(s^2+4s+4)=0 can be rearranged as s^2+4s+4-Ks=0.",
+        "label": "reasoning",
+        "source": "Rearranging gives s^2+4s+4-Ks=0"
+      },
+      {
+        "claim_id": 14,
+        "claim": "s^2+4s+4-Ks=0 can be written as s^2+(4-K)s+4=0.",
+        "label": "reasoning",
+        "source": "That is, s^2+(4-K)s+4=0"
+      },
+      {
+        "claim_id": 15,
+        "claim": "Stability of a second-order system requires all coefficients of the characteristic polynomial to be positive.",
+        "label": "knowledge",
+        "source": "Stability of a second-order system requires all coefficients of the characteristic polynomial to be positive"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The leading coefficient of this characteristic polynomial satisfies 1>0.",
+        "label": "reasoning",
+        "source": "1>0"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The coefficient of the first-degree term of this characteristic polynomial needs to satisfy 4-K>0.",
+        "label": "reasoning",
+        "source": "4-K>0"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The constant term of this characteristic polynomial satisfies 4>0.",
+        "label": "reasoning",
+        "source": "4>0"
+      },
+      {
+        "claim_id": 19,
+        "claim": "For this system to be stable, K<4 is needed.",
+        "label": "reasoning",
+        "source": "Therefore K<4 is needed"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The blank in the problem should be filled with 4.",
+        "label": "reasoning",
+        "source": "So the blank in the problem should be filled with 4"
+      }
+    ],
+    "claim_count": 20,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The input on the left side of the figure is X(s).",
+          "label": "perception",
+          "source": "The input on the left side of the figure is X(s)"
+        },
+        {
+          "claim_id": 2,
+          "claim": "X(s) enters a summing node.",
+          "label": "perception",
+          "source": "enters a summing node"
+        },
+        {
+          "claim_id": 3,
+          "claim": "From the output node on the right side, there is a feedback line that goes around to the upper side and then returns to the summing node.",
+          "label": "perception",
+          "source": "from the output node on the right side, there is a feedback line that goes around to the upper side and then returns to the summing node"
+        },
+        {
+          "claim_id": 4,
+          "claim": "A “+” is marked beside the feedback terminal.",
+          "label": "perception",
+          "source": "a “+” is marked beside the feedback terminal"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The input terminal also enters according to the positive sign.",
+          "label": "perception",
+          "source": "the input terminal also enters according to the positive sign"
+        },
+        {
+          "claim_id": 6,
+          "claim": "This structure is a positive feedback structure.",
+          "label": "reasoning",
+          "source": "Therefore it is a positive feedback structure"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The forward path after the summing node is, in order, the transfer function block s/(s^2+4s+4).",
+          "label": "perception",
+          "source": "The forward path after the summing node is, in order, the transfer function block s/(s^2+4s+4)"
+        },
+        {
+          "claim_id": 8,
+          "claim": "After the transfer function block, it passes through the gain block K.",
+          "label": "perception",
+          "source": "Then it passes through the gain block K"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Finally, the output is Y(s).",
+          "label": "perception",
+          "source": "Finally, the output is Y(s)"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The feedback path has no additional module.",
+          "label": "perception",
+          "source": "The feedback path has no additional module"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The feedback path can be regarded as unity feedback.",
+          "label": "reasoning",
+          "source": "Can be regarded as unity feedback"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The characteristic equation of this positive-feedback closed loop is 1 - K·s/(s^2+4s+4)=0.",
+          "label": "reasoning",
+          "source": "The characteristic equation of the positive-feedback closed loop is 1 - K·s/(s^2+4s+4)=0"
+        },
+        {
+          "claim_id": 13,
+          "claim": "1 - K·s/(s^2+4s+4)=0 can be rearranged as s^2+4s+4-Ks=0.",
+          "label": "reasoning",
+          "source": "Rearranging gives s^2+4s+4-Ks=0"
+        },
+        {
+          "claim_id": 14,
+          "claim": "s^2+4s+4-Ks=0 can be written as s^2+(4-K)s+4=0.",
+          "label": "reasoning",
+          "source": "That is, s^2+(4-K)s+4=0"
+        },
+        {
+          "claim_id": 15,
+          "claim": "Stability of a second-order system requires all coefficients of the characteristic polynomial to be positive.",
+          "label": "knowledge",
+          "source": "Stability of a second-order system requires all coefficients of the characteristic polynomial to be positive"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The leading coefficient of this characteristic polynomial satisfies 1>0.",
+          "label": "reasoning",
+          "source": "1>0"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The coefficient of the first-degree term of this characteristic polynomial needs to satisfy 4-K>0.",
+          "label": "reasoning",
+          "source": "4-K>0"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The constant term of this characteristic polynomial satisfies 4>0.",
+          "label": "reasoning",
+          "source": "4>0"
+        },
+        {
+          "claim_id": 19,
+          "claim": "For this system to be stable, K<4 is needed.",
+          "label": "reasoning",
+          "source": "Therefore K<4 is needed"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The blank in the problem should be filled with 4.",
+          "label": "reasoning",
+          "source": "So the blank in the problem should be filled with 4"
+        }
+      ],
+      "coverage_notes": "已按原推理顺序覆盖图像描述、反馈结构判断、特征方程建立与整理、稳定性条件应用以及最终填空结论。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/circuit/eee_bench/06071_circuit_eee_bench_open_86ed46262f76faf4676d9ba7_8ba522c3ca.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/circuit/eee_bench/01631_circuit_eee_bench_open_86ed46262f76faf4676d9ba7_8ba522c3ca.json"
+  }
+}

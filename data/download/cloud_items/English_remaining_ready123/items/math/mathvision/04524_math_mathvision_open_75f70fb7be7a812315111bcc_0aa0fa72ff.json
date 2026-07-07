@@ -1,0 +1,835 @@
+{
+  "pack_index": 4524,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00131:mathvision__open_75f70fb7be7a812315111bcc__bda8c8b39ad5",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_75f70fb7be7a812315111bcc",
+    "source_problem_id": "open_75f70fb7be7a812315111bcc",
+    "problem_run_key": "mathvision__open_75f70fb7be7a812315111bcc__bda8c8b39ad5",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 55.0,
+    "difficulty_level": "medium",
+    "weighted_accuracy": 0.45,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 3,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00131.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00131.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00131.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00131.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "How many of the following shapes can be drawn using one continuous line (i.e. without lifting the pencil) and without going over a line twice?\n<image1>",
+    "raw_answer_text": "3",
+    "open_variant_id": "open_75f70fb7be7a812315111bcc",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "How many of the following shapes can be drawn using one continuous line (i.e. without lifting the pencil) and without going over a line twice?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "3",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_1cbdce4acac7af9257323b77",
+        "problem_id": "prob_e5d4ff3ea136663a2061d5f4",
+        "node_type": "answer_claim",
+        "canonical_value": "3",
+        "surface_forms": [
+          "3"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_f7b60d1fc30d11a45dbf9264"
+        ],
+        "evidence_refs": [
+          "asset_f7b60d1fc30d11a45dbf9264"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "3"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-04T17:33:54Z",
+        "updated_at": "2026-04-04T17:33:54Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_75f70fb7be7a812315111bcc",
+      "parent_problem_id": "prob_e5d4ff3ea136663a2061d5f4",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "How many of the following shapes can be drawn using one continuous line (i.e. without lifting the pencil) and without going over a line twice?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "3",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "How many of the following shapes can be drawn using one continuous line (i.e. without lifting the pencil) and without going over a line twice?",
+    "raw_answer": "3",
+    "raw_standard_answer": "3",
+    "resolved_question_text": "How many of the following shapes can be drawn using one continuous line (i.e. without lifting the pencil) and without going over a line twice?",
+    "resolved_answer": "3",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: From left to right there are four different figures. The 1st is a circle, crossed by a horizontal line, and the horizontal line extends out from both the left and right sides of the circle. The 2nd is a circle, with a small horizontal short line attached on each of the left and right sides; the short lines only connect to the edge of the circle and do not pass through the inside of the circle. The 3rd is two concentric circles, crossed by a horizontal line, and the horizontal line extends out beyond the outer circle on both the left and right. The 4th is multiple concentric circles, crossed by a horizontal line, and the horizontal line extends out beyond the outermost circle on both the left and right. Reasoning: Regard each figure as a graph in graph theory. Whether it can be drawn in one stroke without repeating edges depends on whether an Euler trail exists: in a connected graph, the number of odd-degree vertices must be 0 or 2. In the 1st figure, the two intersections of the horizontal line and the circle are degree 4, and only the two ends of the horizontal line are degree 1, so there are 2 odd-degree vertices, and it can be drawn in one stroke. In the 2nd figure, the outer ends of the left and right short lines are each degree 1, and the two points where the short lines connect to the circle are each degree 3; therefore there are altogether 4 odd-degree vertices, and it cannot be drawn in one stroke. In the 3rd figure, the intersections of the horizontal line and the two circles are all degree 4, and only the two ends of the horizontal line are degree 1, so there are 2 odd-degree vertices, and it can be drawn in one stroke. In the 4th figure, the intersections of the horizontal line and each concentric circle are all degree 4, and only the two ends of the horizontal line are degree 1, so there are 2 odd-degree vertices, and it can be drawn in one stroke. Therefore there are 3 figures that satisfy the condition.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_75f70fb7be7a812315111bcc",
+      "problem_run_key": "mathvision__open_75f70fb7be7a812315111bcc__bda8c8b39ad5",
+      "question_text": "How many of the following shapes can be drawn using one continuous line (i.e. without lifting the pencil) and without going over a line twice?",
+      "standard_answer": "3",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00131.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00131.png"
+      ],
+      "initial_multi_solution_score": 0.2747,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Model each displayed drawing as a graph and apply the Euler-trail test. First read the image left to right: (1) a circle crossed by one horizontal line extending outside both sides; (2) a circle with only two short horizontal stubs attached at the left and right, not a line through the circle; (3) two concentric circles crossed by a horizontal line; (4) several concentric circles crossed by a horizontal line. For each, mark all endpoints, attachment points, and crossing points as graph vertices, then count vertices of odd degree. Shape 1 has only the two outer endpoints as odd vertices, so it is drawable. Shape 2 has four odd vertices: the two outer stub endpoints plus the two attachment points where each stub meets the circle, so it is not drawable. Shapes 3 and 4 have crossings of degree 4 and only the two outer line endpoints odd, so each is drawable. Therefore 3 shapes satisfy the condition.",
+          "CoT_raw": "图像描述：从左到右共有四个不同的图形。第1个是一个圆，被一条水平线穿过，水平线从圆的左右两边都伸出。第2个是一个圆，左右两侧各接一小段水平短线，短线只接到圆边，没有贯穿圆内部。第3个是两个同心圆，被一条水平线穿过，水平线左右都伸出外圆。第4个是多个同心圆，被一条水平线穿过，水平线左右都伸出最外圆。\n\n推理：把每个图形看成图论中的图，能否一笔画且不重复边，取决于是否存在欧拉迹：连通图中奇度顶点数必须为0或2。\n第1个图形中，水平线与圆的两个交点是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n第2个图形中，左右短线的外端各是度1，短线与圆相接的两个点各是度3，因此共有4个奇度顶点，不能一笔画。\n第3个图形中，水平线与两个圆的交点都是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n第4个图形中，水平线与各个同心圆的交点都是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n因此满足条件的图形有3个。",
+          "model_answer": "3",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "3",
+              "predicted_part": "3",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：从左到右共有四个不同的图形。第1个是一个圆，被一条水平线穿过，水平线从圆的左右两边都伸出。第2个是一个圆，左右两侧各接一小段水平短线，短线只接到圆边，没有贯穿圆内部。第3个是两个同心圆，被一条水平线穿过，水平线左右都伸出外圆。第4个是多个同心圆，被一条水平线穿过，水平线左右都伸出最外圆。\n\n推理：把每个图形看成图论中的图，能否一笔画且不重复边，取决于是否存在欧拉迹：连通图中奇度顶点数必须为0或2。\n第1个图形中，水平线与圆的两个交点是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n第2个图形中，左右短线的外端各是度1，短线与圆相接的两个点各是度3，因此共有4个奇度顶点，不能一笔画。\n第3个图形中，水平线与两个圆的交点都是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n第4个图形中，水平线与各个同心圆的交点都是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n因此满足条件的图形有3个。",
+          "answer_answer_check_final": "3",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "The reasoning trace is faithful to the image, standard answer, and assigned Euler-trail method. It first describes the four displayed shapes and then reasons by counting odd-degree vertices. No revision is needed.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：从左到右共有四个不同的图形。第1个是一个圆，被一条水平线穿过，水平线从圆的左右两边都伸出。第2个是一个圆，左右两侧各接一小段水平短线，短线只接到圆边，没有贯穿圆内部。第3个是两个同心圆，被一条水平线穿过，水平线左右都伸出外圆。第4个是多个同心圆，被一条水平线穿过，水平线左右都伸出最外圆。\n\n推理：把每个图形看成图论中的图，能否一笔画且不重复边，取决于是否存在欧拉迹：连通图中奇度顶点数必须为0或2。\n第1个图形中，水平线与圆的两个交点是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n第2个图形中，左右短线的外端各是度1，短线与圆相接的两个点各是度3，因此共有4个奇度顶点，不能一笔画。\n第3个图形中，水平线与两个圆的交点都是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n第4个图形中，水平线与各个同心圆的交点都是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n因此满足条件的图形有3个。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Uses the standard graph-theoretic Euler path criterion directly, converting each picture into vertices and edges and counting odd-degree vertices.",
+            "image_role": "Identify the four candidate shapes and their intersections/attachments: a line through one circle, two stubs attached to a circle, a line through two concentric circles, and a line through multiple concentric circles.",
+            "text_role": "Use the condition 'one continuous line without lifting the pencil and without going over a line twice' as the requirement for an Euler trail.",
+            "knowledge_role": "Apply the Euler trail rule: a connected figure can be traced exactly once without retracing iff it has 0 or 2 odd-degree vertices."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：从左到右共有四个不同的图形。第1个是一个圆，被一条水平线穿过，水平线从圆的左右两边都伸出。第2个是一个圆，左右两侧各接一小段水平短线，短线只接到圆边，没有贯穿圆内部。第3个是两个同心圆，被一条水平线穿过，水平线左右都伸出外圆。第4个是多个同心圆，被一条水平线穿过，水平线左右都伸出最外圆。\n\n推理：把每个图形看成图论中的图，能否一笔画且不重复边，取决于是否存在欧拉迹：连通图中奇度顶点数必须为0或2。\n第1个图形中，水平线与圆的两个交点是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n第2个图形中，左右短线的外端各是度1，短线与圆相接的两个点各是度3，因此共有4个奇度顶点，不能一笔画。\n第3个图形中，水平线与两个圆的交点都是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n第4个图形中，水平线与各个同心圆的交点都是度4，只有水平线两端是度1，所以有2个奇度顶点，可以一笔画。\n因此满足条件的图形有3个。",
+            "model_answer": "3",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2954,
+              "completion_tokens": 919,
+              "total_tokens": 3873,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 17.47,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "The reasoning trace is faithful to the image, standard answer, and assigned Euler-trail method. It first describes the four displayed shapes and then reasons by counting odd-degree vertices. No revision is needed.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 17.403
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 17.509,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 18,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 18,
+                "prompt_tokens": 55110,
+                "completion_tokens": 20560,
+                "total_tokens": 75670,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 384.967,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 17.435,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 11,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 11,
+                "prompt_tokens": 30040,
+                "completion_tokens": 8900,
+                "total_tokens": 38940,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 189.634,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 18.283,
+          "usage_delta": {
+            "request_count": 19,
+            "successful_request_count": 23,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 19,
+            "requests_with_usage": 23,
+            "prompt_tokens": 60145,
+            "completion_tokens": 13737,
+            "total_tokens": 73882,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 304.966,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "272",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00131.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_e5d4ff3ea136663a2061d5f4",
+          "open_variant_count": 1,
+          "open_variant_id": "open_75f70fb7be7a812315111bcc",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "verification_requires_visual_structure_parsing"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 53.251,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 9250,
+        "completion_tokens": 2392,
+        "total_tokens": 11642,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 53.117,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "How many of the following shapes can be drawn using one continuous line (i.e. without lifting the pencil) and without going over a line twice?",
+      "answer": "3",
+      "final_cot": "Image description: From left to right there are four different figures. The 1st is a circle, crossed by a horizontal line, and the horizontal line extends out from both the left and right sides of the circle. The 2nd is a circle, with a small horizontal short line attached on each of the left and right sides; the short lines only connect to the edge of the circle and do not pass through the inside of the circle. The 3rd is two concentric circles, crossed by a horizontal line, and the horizontal line extends out beyond the outer circle on both the left and right. The 4th is multiple concentric circles, crossed by a horizontal line, and the horizontal line extends out beyond the outermost circle on both the left and right.\n\nReasoning: Regard each figure as a graph in graph theory. Whether it can be drawn in one stroke without repeating edges depends on whether an Euler trail exists: in a connected graph, the number of odd-degree vertices must be 0 or 2.\nIn the 1st figure, the two intersections of the horizontal line and the circle are degree 4, and only the two ends of the horizontal line are degree 1, so there are 2 odd-degree vertices, and it can be drawn in one stroke.\nIn the 2nd figure, the outer ends of the left and right short lines are each degree 1, and the two points where the short lines connect to the circle are each degree 3; therefore there are altogether 4 odd-degree vertices, and it cannot be drawn in one stroke.\nIn the 3rd figure, the intersections of the horizontal line and the two circles are all degree 4, and only the two ends of the horizontal line are degree 1, so there are 2 odd-degree vertices, and it can be drawn in one stroke.\nIn the 4th figure, the intersections of the horizontal line and each concentric circle are all degree 4, and only the two ends of the horizontal line are degree 1, so there are 2 odd-degree vertices, and it can be drawn in one stroke.\nTherefore there are 3 figures that satisfy the condition.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "The reasoning trace is faithful to the image, standard answer, and assigned Euler-trail method. It first describes the four displayed shapes and then reasons by counting odd-degree vertices. No revision is needed.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 17.403
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1254,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00131.json",
+        "source_sample_filename": "mathvision00131.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00131.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T11:53:52Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_75f70fb7be7a812315111bcc",
+          "new_problem_id": "open_75f70fb7be7a812315111bcc",
+          "old_problem_run_key": "mathvision__open_75f70fb7be7a812315111bcc__bda8c8b39ad5",
+          "new_problem_run_key": "mathvision__open_75f70fb7be7a812315111bcc__bda8c8b39ad5",
+          "target_relpath": "math/mathvision/samples/mathvision00131.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_75f70fb7be7a812315111bcc",
+    "problem_run_key": "mathvision__open_75f70fb7be7a812315111bcc__bda8c8b39ad5",
+    "raw_question_text": "How many of the following shapes can be drawn using one continuous line (i.e. without lifting the pencil) and without going over a line twice?",
+    "raw_answer": "3",
+    "raw_standard_answer": "3",
+    "resolved_question_text": "How many of the following shapes can be drawn using one continuous line (i.e. without lifting the pencil) and without going over a line twice?",
+    "resolved_answer": "3",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: From left to right there are four different figures. The 1st is a circle, crossed by a horizontal line, and the horizontal line extends out from both the left and right sides of the circle. The 2nd is a circle, with a small horizontal short line attached on each of the left and right sides; the short lines only connect to the edge of the circle and do not pass through the inside of the circle. The 3rd is two concentric circles, crossed by a horizontal line, and the horizontal line extends out beyond the outer circle on both the left and right. The 4th is multiple concentric circles, crossed by a horizontal line, and the horizontal line extends out beyond the outermost circle on both the left and right.\n\nReasoning: Regard each figure as a graph in graph theory. Whether it can be drawn in one stroke without repeating edges depends on whether an Euler trail exists: in a connected graph, the number of odd-degree vertices must be 0 or 2.\nIn the 1st figure, the two intersections of the horizontal line and the circle are degree 4, and only the two ends of the horizontal line are degree 1, so there are 2 odd-degree vertices, and it can be drawn in one stroke.\nIn the 2nd figure, the outer ends of the left and right short lines are each degree 1, and the two points where the short lines connect to the circle are each degree 3; therefore there are altogether 4 odd-degree vertices, and it cannot be drawn in one stroke.\nIn the 3rd figure, the intersections of the horizontal line and the two circles are all degree 4, and only the two ends of the horizontal line are degree 1, so there are 2 odd-degree vertices, and it can be drawn in one stroke.\nIn the 4th figure, the intersections of the horizontal line and each concentric circle are all degree 4, and only the two ends of the horizontal line are degree 1, so there are 2 odd-degree vertices, and it can be drawn in one stroke.\nTherefore there are 3 figures that satisfy the condition.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "From left to right there are four different figures.",
+        "label": "perception",
+        "source": "From left to right there are four different figures."
+      },
+      {
+        "claim_id": 2,
+        "claim": "The 1st figure is a circle.",
+        "label": "perception",
+        "source": "The 1st is a circle, crossed by a horizontal line"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The 1st figure is crossed by a horizontal line.",
+        "label": "perception",
+        "source": "The 1st is a circle, crossed by a horizontal line"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The horizontal line of the 1st figure extends out from both the left and right sides of the circle.",
+        "label": "perception",
+        "source": "The horizontal line extends out from both the left and right sides of the circle"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The 2nd figure is a circle.",
+        "label": "perception",
+        "source": "The 2nd is a circle, with a small horizontal short line attached on each of the left and right sides"
+      },
+      {
+        "claim_id": 6,
+        "claim": "A small horizontal short line is attached on each of the left and right sides of the 2nd figure.",
+        "label": "perception",
+        "source": "The 2nd is a circle, with a small horizontal short line attached on each of the left and right sides"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The short lines of the 2nd figure only connect to the edge of the circle.",
+        "label": "perception",
+        "source": "The short lines only connect to the edge of the circle and do not pass through the inside of the circle"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The short lines of the 2nd figure do not pass through the inside of the circle.",
+        "label": "perception",
+        "source": "The short lines only connect to the edge of the circle and do not pass through the inside of the circle"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The 3rd figure is two concentric circles.",
+        "label": "perception",
+        "source": "The 3rd is two concentric circles, crossed by a horizontal line"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The 3rd figure is crossed by a horizontal line.",
+        "label": "perception",
+        "source": "The 3rd is two concentric circles, crossed by a horizontal line"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The horizontal line of the 3rd figure extends out beyond the outer circle on both the left and right.",
+        "label": "perception",
+        "source": "The horizontal line extends out beyond the outer circle on both the left and right"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The 4th figure is multiple concentric circles.",
+        "label": "perception",
+        "source": "The 4th is multiple concentric circles, crossed by a horizontal line"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The 4th figure is crossed by a horizontal line.",
+        "label": "perception",
+        "source": "The 4th is multiple concentric circles, crossed by a horizontal line"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The horizontal line of the 4th figure extends out beyond the outermost circle on both the left and right.",
+        "label": "perception",
+        "source": "The horizontal line extends out beyond the outermost circle on both the left and right"
+      },
+      {
+        "claim_id": 15,
+        "claim": "Each figure can be regarded as a graph in graph theory.",
+        "label": "reasoning",
+        "source": "Regard each figure as a graph in graph theory"
+      },
+      {
+        "claim_id": 16,
+        "claim": "Whether it can be drawn in one stroke without repeating edges depends on whether an Euler trail exists.",
+        "label": "knowledge",
+        "source": "Whether it can be drawn in one stroke without repeating edges depends on whether an Euler trail exists"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The criterion for a connected graph to have an Euler trail is that the number of odd-degree vertices is 0 or 2.",
+        "label": "knowledge",
+        "source": "Whether it can be drawn in one stroke without repeating edges depends on whether an Euler trail exists: in a connected graph, the number of odd-degree vertices must be 0 or 2."
+      },
+      {
+        "claim_id": 18,
+        "claim": "In the 1st figure, the two intersections of the horizontal line and the circle are degree 4.",
+        "label": "reasoning",
+        "source": "In the 1st figure, the two intersections of the horizontal line and the circle are degree 4"
+      },
+      {
+        "claim_id": 19,
+        "claim": "In the 1st figure, only the two ends of the horizontal line are degree 1.",
+        "label": "reasoning",
+        "source": "Only the two ends of the horizontal line are degree 1"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The 1st figure has 2 odd-degree vertices.",
+        "label": "reasoning",
+        "source": "So there are 2 odd-degree vertices"
+      },
+      {
+        "claim_id": 21,
+        "claim": "The 1st figure can be drawn in one stroke.",
+        "label": "reasoning",
+        "source": "It can be drawn in one stroke"
+      },
+      {
+        "claim_id": 22,
+        "claim": "In the 2nd figure, the outer ends of the left and right short lines are each degree 1.",
+        "label": "reasoning",
+        "source": "In the 2nd figure, the outer ends of the left and right short lines are each degree 1"
+      },
+      {
+        "claim_id": 23,
+        "claim": "In the 2nd figure, the two points where the short lines connect to the circle are each degree 3.",
+        "label": "reasoning",
+        "source": "The two points where the short lines connect to the circle are each degree 3"
+      },
+      {
+        "claim_id": 24,
+        "claim": "The 2nd figure has altogether 4 odd-degree vertices.",
+        "label": "reasoning",
+        "source": "Therefore there are altogether 4 odd-degree vertices"
+      },
+      {
+        "claim_id": 25,
+        "claim": "The 2nd figure cannot be drawn in one stroke.",
+        "label": "reasoning",
+        "source": "It cannot be drawn in one stroke"
+      },
+      {
+        "claim_id": 26,
+        "claim": "In the 3rd figure, the intersections of the horizontal line and the two circles are all degree 4.",
+        "label": "reasoning",
+        "source": "In the 3rd figure, the intersections of the horizontal line and the two circles are all degree 4"
+      },
+      {
+        "claim_id": 27,
+        "claim": "In the 3rd figure, only the two ends of the horizontal line are degree 1.",
+        "label": "reasoning",
+        "source": "Only the two ends of the horizontal line are degree 1"
+      },
+      {
+        "claim_id": 28,
+        "claim": "The 3rd figure has 2 odd-degree vertices.",
+        "label": "reasoning",
+        "source": "So there are 2 odd-degree vertices"
+      },
+      {
+        "claim_id": 29,
+        "claim": "The 3rd figure can be drawn in one stroke.",
+        "label": "reasoning",
+        "source": "It can be drawn in one stroke"
+      },
+      {
+        "claim_id": 30,
+        "claim": "In the 4th figure, the intersections of the horizontal line and each concentric circle are all degree 4.",
+        "label": "reasoning",
+        "source": "In the 4th figure, the intersections of the horizontal line and each concentric circle are all degree 4"
+      },
+      {
+        "claim_id": 31,
+        "claim": "In the 4th figure, only the two ends of the horizontal line are degree 1.",
+        "label": "reasoning",
+        "source": "Only the two ends of the horizontal line are degree 1"
+      },
+      {
+        "claim_id": 32,
+        "claim": "The 4th figure has 2 odd-degree vertices.",
+        "label": "reasoning",
+        "source": "So there are 2 odd-degree vertices"
+      },
+      {
+        "claim_id": 33,
+        "claim": "The 4th figure can be drawn in one stroke.",
+        "label": "reasoning",
+        "source": "It can be drawn in one stroke"
+      },
+      {
+        "claim_id": 34,
+        "claim": "There are 3 figures that satisfy the condition.",
+        "label": "reasoning",
+        "source": "Therefore there are 3 figures that satisfy the condition."
+      }
+    ],
+    "claim_count": 34,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "From left to right there are four different figures.",
+          "label": "perception",
+          "source": "From left to right there are four different figures."
+        },
+        {
+          "claim_id": 2,
+          "claim": "The 1st figure is a circle.",
+          "label": "perception",
+          "source": "The 1st is a circle, crossed by a horizontal line"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The 1st figure is crossed by a horizontal line.",
+          "label": "perception",
+          "source": "The 1st is a circle, crossed by a horizontal line"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The horizontal line of the 1st figure extends out from both the left and right sides of the circle.",
+          "label": "perception",
+          "source": "The horizontal line extends out from both the left and right sides of the circle"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The 2nd figure is a circle.",
+          "label": "perception",
+          "source": "The 2nd is a circle, with a small horizontal short line attached on each of the left and right sides"
+        },
+        {
+          "claim_id": 6,
+          "claim": "A small horizontal short line is attached on each of the left and right sides of the 2nd figure.",
+          "label": "perception",
+          "source": "The 2nd is a circle, with a small horizontal short line attached on each of the left and right sides"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The short lines of the 2nd figure only connect to the edge of the circle.",
+          "label": "perception",
+          "source": "The short lines only connect to the edge of the circle and do not pass through the inside of the circle"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The short lines of the 2nd figure do not pass through the inside of the circle.",
+          "label": "perception",
+          "source": "The short lines only connect to the edge of the circle and do not pass through the inside of the circle"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The 3rd figure is two concentric circles.",
+          "label": "perception",
+          "source": "The 3rd is two concentric circles, crossed by a horizontal line"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The 3rd figure is crossed by a horizontal line.",
+          "label": "perception",
+          "source": "The 3rd is two concentric circles, crossed by a horizontal line"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The horizontal line of the 3rd figure extends out beyond the outer circle on both the left and right.",
+          "label": "perception",
+          "source": "The horizontal line extends out beyond the outer circle on both the left and right"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The 4th figure is multiple concentric circles.",
+          "label": "perception",
+          "source": "The 4th is multiple concentric circles, crossed by a horizontal line"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The 4th figure is crossed by a horizontal line.",
+          "label": "perception",
+          "source": "The 4th is multiple concentric circles, crossed by a horizontal line"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The horizontal line of the 4th figure extends out beyond the outermost circle on both the left and right.",
+          "label": "perception",
+          "source": "The horizontal line extends out beyond the outermost circle on both the left and right"
+        },
+        {
+          "claim_id": 15,
+          "claim": "Each figure can be regarded as a graph in graph theory.",
+          "label": "reasoning",
+          "source": "Regard each figure as a graph in graph theory"
+        },
+        {
+          "claim_id": 16,
+          "claim": "Whether it can be drawn in one stroke without repeating edges depends on whether an Euler trail exists.",
+          "label": "knowledge",
+          "source": "Whether it can be drawn in one stroke without repeating edges depends on whether an Euler trail exists"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The criterion for a connected graph to have an Euler trail is that the number of odd-degree vertices is 0 or 2.",
+          "label": "knowledge",
+          "source": "Whether it can be drawn in one stroke without repeating edges depends on whether an Euler trail exists: in a connected graph, the number of odd-degree vertices must be 0 or 2."
+        },
+        {
+          "claim_id": 18,
+          "claim": "In the 1st figure, the two intersections of the horizontal line and the circle are degree 4.",
+          "label": "reasoning",
+          "source": "In the 1st figure, the two intersections of the horizontal line and the circle are degree 4"
+        },
+        {
+          "claim_id": 19,
+          "claim": "In the 1st figure, only the two ends of the horizontal line are degree 1.",
+          "label": "reasoning",
+          "source": "Only the two ends of the horizontal line are degree 1"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The 1st figure has 2 odd-degree vertices.",
+          "label": "reasoning",
+          "source": "So there are 2 odd-degree vertices"
+        },
+        {
+          "claim_id": 21,
+          "claim": "The 1st figure can be drawn in one stroke.",
+          "label": "reasoning",
+          "source": "It can be drawn in one stroke"
+        },
+        {
+          "claim_id": 22,
+          "claim": "In the 2nd figure, the outer ends of the left and right short lines are each degree 1.",
+          "label": "reasoning",
+          "source": "In the 2nd figure, the outer ends of the left and right short lines are each degree 1"
+        },
+        {
+          "claim_id": 23,
+          "claim": "In the 2nd figure, the two points where the short lines connect to the circle are each degree 3.",
+          "label": "reasoning",
+          "source": "The two points where the short lines connect to the circle are each degree 3"
+        },
+        {
+          "claim_id": 24,
+          "claim": "The 2nd figure has altogether 4 odd-degree vertices.",
+          "label": "reasoning",
+          "source": "Therefore there are altogether 4 odd-degree vertices"
+        },
+        {
+          "claim_id": 25,
+          "claim": "The 2nd figure cannot be drawn in one stroke.",
+          "label": "reasoning",
+          "source": "It cannot be drawn in one stroke"
+        },
+        {
+          "claim_id": 26,
+          "claim": "In the 3rd figure, the intersections of the horizontal line and the two circles are all degree 4.",
+          "label": "reasoning",
+          "source": "In the 3rd figure, the intersections of the horizontal line and the two circles are all degree 4"
+        },
+        {
+          "claim_id": 27,
+          "claim": "In the 3rd figure, only the two ends of the horizontal line are degree 1.",
+          "label": "reasoning",
+          "source": "Only the two ends of the horizontal line are degree 1"
+        },
+        {
+          "claim_id": 28,
+          "claim": "The 3rd figure has 2 odd-degree vertices.",
+          "label": "reasoning",
+          "source": "So there are 2 odd-degree vertices"
+        },
+        {
+          "claim_id": 29,
+          "claim": "The 3rd figure can be drawn in one stroke.",
+          "label": "reasoning",
+          "source": "It can be drawn in one stroke"
+        },
+        {
+          "claim_id": 30,
+          "claim": "In the 4th figure, the intersections of the horizontal line and each concentric circle are all degree 4.",
+          "label": "reasoning",
+          "source": "In the 4th figure, the intersections of the horizontal line and each concentric circle are all degree 4"
+        },
+        {
+          "claim_id": 31,
+          "claim": "In the 4th figure, only the two ends of the horizontal line are degree 1.",
+          "label": "reasoning",
+          "source": "Only the two ends of the horizontal line are degree 1"
+        },
+        {
+          "claim_id": 32,
+          "claim": "The 4th figure has 2 odd-degree vertices.",
+          "label": "reasoning",
+          "source": "So there are 2 odd-degree vertices"
+        },
+        {
+          "claim_id": 33,
+          "claim": "The 4th figure can be drawn in one stroke.",
+          "label": "reasoning",
+          "source": "It can be drawn in one stroke"
+        },
+        {
+          "claim_id": 34,
+          "claim": "There are 3 figures that satisfy the condition.",
+          "label": "reasoning",
+          "source": "Therefore there are 3 figures that satisfy the condition."
+        }
+      ],
+      "coverage_notes": "已按 review 的 fix 严重性问题替换原第17条，使欧拉迹判定条件表述包含必要上下文；其余 claim 保持不变。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:21Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/03283_math_mathvision_open_75f70fb7be7a812315111bcc_0aa0fa72ff.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04524_math_mathvision_open_75f70fb7be7a812315111bcc_0aa0fa72ff.json"
+  }
+}

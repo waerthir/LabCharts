@@ -1,0 +1,617 @@
+{
+  "pack_index": 4397,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision01613:mathvision__open_d159ac6bfb0460b64d166879__00ec0568c69d",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_d159ac6bfb0460b64d166879",
+    "source_problem_id": "open_d159ac6bfb0460b64d166879",
+    "problem_run_key": "mathvision__open_d159ac6bfb0460b64d166879__00ec0568c69d",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01613.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01613.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision01613.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01613.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once. <image1>",
+    "raw_answer_text": "84",
+    "open_variant_id": "open_d159ac6bfb0460b64d166879",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once.",
+    "expected_answer_type": "numeric",
+    "expected_answer": "84",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_fb333fe72f5cd27fb8c8d65a",
+        "problem_id": "prob_a06168c6c96401d0ed7ff43e",
+        "node_type": "answer_claim",
+        "canonical_value": "84",
+        "surface_forms": [
+          "84"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_ded866c00f20209212267f14"
+        ],
+        "evidence_refs": [
+          "asset_ded866c00f20209212267f14"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "84"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-07T16:25:26Z",
+        "updated_at": "2026-04-07T16:25:26Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_d159ac6bfb0460b64d166879",
+      "parent_problem_id": "prob_a06168c6c96401d0ed7ff43e",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once.",
+      "expected_answer_type": "numeric",
+      "expected_answer": "84",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once.",
+    "raw_answer": "84",
+    "raw_standard_answer": "84",
+    "resolved_question_text": "In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once.",
+    "resolved_answer": "84",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: In the attached figure is a 3×3 letter grid. Reading by rows from top to bottom: the first row is B A N, the second row is A N A, and the third row is N A N. The only B is in the upper left corner. Then reason: The target word is BANANA; one can only move between adjacent cells sharing an edge, and revisiting cells is allowed. Use dynamic programming to count the number of paths that stop at each cell when each letter has been read. The 1st letter B: it can only start from the B in the upper left corner, with count 1. Reading BA: from B one can go to the A on the right and the A below, so the counts for A cells are: upper middle 1, left middle 1. Reading BAN: from the upper middle A one can go to the upper right N and the center N; from the left middle A one can go to the center N and the lower left N. Therefore the counts for N cells are: upper right 1, center 2, lower left 1. Reading BANA: distribute these counts to adjacent A cells, obtaining counts for the four A cells: upper middle 3, left middle 3, right middle 3, lower middle 3. Reading BANAN: continue distributing to adjacent N cells, obtaining: upper right 6, center 12, lower left 6, lower right 6. Reading BANANA: finally distribute to adjacent A cells: upper middle 18, left middle 18, right middle 24, lower middle 24. The total is 18 + 18 + 24 + 24 = 84. Therefore there are altogether 84 ways to read it.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_d159ac6bfb0460b64d166879",
+      "problem_run_key": "mathvision__open_d159ac6bfb0460b64d166879__00ec0568c69d",
+      "question_text": "In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once.",
+      "standard_answer": "84",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01613.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision01613.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Use dynamic programming over the 3x3 grid read from the image. First record the table rows as B A N / A N A / N A N, with the only B in the upper-left corner. From the text, the target word is BANANA and each move must go to an edge-adjacent cell; revisits are allowed. Start with count 1 at the B cell for the first letter. For each next letter A, N, A, N, A, create a new count table: for every current cell, distribute its count to all edge-adjacent cells containing the next required letter. After processing the final A, sum the counts over all A cells. This recurrence gives the total number of valid readings, 84.",
+          "CoT_raw": "先描述图像：附图中是一个 3×3 的字母表格。按行从上到下读为：第一行 B A N，第二行 A N A，第三行 N A N。唯一的 B 在左上角。\n\n再推理：目标词是 BANANA，只能在共享边的相邻格之间移动，且允许重复访问格子。用动态规划统计读到每个字母时停在各格的路径数。\n\n第 1 个字母 B：只能从左上角 B 开始，计数为 1。\n\n读到 BA：从 B 可到右边 A 和下边 A，所以 A 格计数为：上中 1，左中 1。\n\n读到 BAN：从上中 A 可到右上 N、中心 N；从左中 A 可到中心 N、左下 N。因此 N 格计数为：右上 1，中心 2，左下 1。\n\n读到 BANA：把这些计数分配到相邻 A 格，得到四个 A 格计数：上中 3，左中 3，右中 3，下中 3。\n\n读到 BANAN：继续分配到相邻 N 格，得到：右上 6，中心 12，左下 6，右下 6。\n\n读到 BANANA：最后分配到相邻 A 格：上中 18，左中 18，右中 24，下中 24。总数为 18 + 18 + 24 + 24 = 84。\n\n因此共有 84 种读法。",
+          "model_answer": "84",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "84",
+              "predicted_part": "84",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：附图中是一个 3×3 的字母表格。按行从上到下读为：第一行 B A N，第二行 A N A，第三行 N A N。唯一的 B 在左上角。\n\n再推理：目标词是 BANANA，只能在共享边的相邻格之间移动，且允许重复访问格子。用动态规划统计读到每个字母时停在各格的路径数。\n\n第 1 个字母 B：只能从左上角 B 开始，计数为 1。\n\n读到 BA：从 B 可到右边 A 和下边 A，所以 A 格计数为：上中 1，左中 1。\n\n读到 BAN：从上中 A 可到右上 N、中心 N；从左中 A 可到中心 N、左下 N。因此 N 格计数为：右上 1，中心 2，左下 1。\n\n读到 BANA：把这些计数分配到相邻 A 格，得到四个 A 格计数：上中 3，左中 3，右中 3，下中 3。\n\n读到 BANAN：继续分配到相邻 N 格，得到：右上 6，中心 12，左下 6，右下 6。\n\n读到 BANANA：最后分配到相邻 A 格：上中 18，左中 18，右中 24，下中 24。总数为 18 + 18 + 24 + 24 = 84。\n\n因此共有 84 种读法。",
+          "answer_answer_check_final": "84",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace correctly begins with a visual description, accurately records the 3x3 grid as B A N / A N A / N A N, follows the assigned dynamic programming method, uses the edge-adjacency and revisiting rules correctly, and obtains the standard answer 84.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：附图中是一个 3×3 的字母表格。按行从上到下读为：第一行 B A N，第二行 A N A，第三行 N A N。唯一的 B 在左上角。\n\n再推理：目标词是 BANANA，只能在共享边的相邻格之间移动，且允许重复访问格子。用动态规划统计读到每个字母时停在各格的路径数。\n\n第 1 个字母 B：只能从左上角 B 开始，计数为 1。\n\n读到 BA：从 B 可到右边 A 和下边 A，所以 A 格计数为：上中 1，左中 1。\n\n读到 BAN：从上中 A 可到右上 N、中心 N；从左中 A 可到中心 N、左下 N。因此 N 格计数为：右上 1，中心 2，左下 1。\n\n读到 BANA：把这些计数分配到相邻 A 格，得到四个 A 格计数：上中 3，左中 3，右中 3，下中 3。\n\n读到 BANAN：继续分配到相邻 N 格，得到：右上 6，中心 12，左下 6，右下 6。\n\n读到 BANANA：最后分配到相邻 A 格：上中 18，左中 18，右中 24，下中 24。总数为 18 + 18 + 24 + 24 = 84。\n\n因此共有 84 种读法。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the standard state-counting/DP route: it counts all partial spellings by endpoint and word position rather than listing paths individually. It is the most direct honest method for this grid-path counting problem.",
+            "image_role": "Read the visual grid structure and letters: a 3 by 3 table with rows BAN, ANA, NAN; note the unique starting B at the top-left and the locations of A and N cells. If the attached image appears duplicated, both copies show the same grid.",
+            "text_role": "Use the question text to identify the word BANANA, the movement rule of sharing an edge, and the permission that cells may be revisited.",
+            "knowledge_role": "Apply the dynamic programming/path-counting rule on a grid graph: the number of ways to reach a cell for the next letter equals the sum of counts from adjacent cells containing the previous letter."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：附图中是一个 3×3 的字母表格。按行从上到下读为：第一行 B A N，第二行 A N A，第三行 N A N。唯一的 B 在左上角。\n\n再推理：目标词是 BANANA，只能在共享边的相邻格之间移动，且允许重复访问格子。用动态规划统计读到每个字母时停在各格的路径数。\n\n第 1 个字母 B：只能从左上角 B 开始，计数为 1。\n\n读到 BA：从 B 可到右边 A 和下边 A，所以 A 格计数为：上中 1，左中 1。\n\n读到 BAN：从上中 A 可到右上 N、中心 N；从左中 A 可到中心 N、左下 N。因此 N 格计数为：右上 1，中心 2，左下 1。\n\n读到 BANA：把这些计数分配到相邻 A 格，得到四个 A 格计数：上中 3，左中 3，右中 3，下中 3。\n\n读到 BANAN：继续分配到相邻 N 格，得到：右上 6，中心 12，左下 6，右下 6。\n\n读到 BANANA：最后分配到相邻 A 格：上中 18，左中 18，右中 24，下中 24。总数为 18 + 18 + 24 + 24 = 84。\n\n因此共有 84 种读法。",
+            "model_answer": "84",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2637,
+              "completion_tokens": 1375,
+              "total_tokens": 4012,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 17.152,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace correctly begins with a visual description, accurately records the 3x3 grid as B A N / A N A / N A N, follows the assigned dynamic programming method, uses the edge-adjacency and revisiting rules correctly, and obtains the standard answer 84.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 11.126
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 17.185,
+              "usage_delta": {
+                "request_count": 15,
+                "successful_request_count": 11,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 15,
+                "requests_with_usage": 11,
+                "prompt_tokens": 32091,
+                "completion_tokens": 18602,
+                "total_tokens": 50693,
+                "cached_tokens": 4352,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 291.012,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 11.152,
+              "usage_delta": {
+                "request_count": 14,
+                "successful_request_count": 7,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 14,
+                "requests_with_usage": 7,
+                "prompt_tokens": 19105,
+                "completion_tokens": 5993,
+                "total_tokens": 25098,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 105.588,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 16.195,
+          "usage_delta": {
+            "request_count": 6,
+            "successful_request_count": 3,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 6,
+            "requests_with_usage": 3,
+            "prompt_tokens": 6458,
+            "completion_tokens": 2412,
+            "total_tokens": 8870,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 39.319,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1990",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01613.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_a06168c6c96401d0ed7ff43e",
+          "open_variant_count": 1,
+          "open_variant_id": "open_d159ac6bfb0460b64d166879",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 44.569,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 8338,
+        "completion_tokens": 3089,
+        "total_tokens": 11427,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 44.44,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once.",
+      "answer": "84",
+      "final_cot": "First describe the image: In the attached figure is a 3×3 letter grid. Reading by rows from top to bottom: the first row is B A N, the second row is A N A, and the third row is N A N. The only B is in the upper left corner.\n\nThen reason: The target word is BANANA; one can only move between adjacent cells sharing an edge, and revisiting cells is allowed. Use dynamic programming to count the number of paths that stop at each cell when each letter has been read.\n\nThe 1st letter B: it can only start from the B in the upper left corner, with count 1.\n\nReading BA: from B one can go to the A on the right and the A below, so the counts for A cells are: upper middle 1, left middle 1.\n\nReading BAN: from the upper middle A one can go to the upper right N and the center N; from the left middle A one can go to the center N and the lower left N. Therefore the counts for N cells are: upper right 1, center 2, lower left 1.\n\nReading BANA: distribute these counts to adjacent A cells, obtaining counts for the four A cells: upper middle 3, left middle 3, right middle 3, lower middle 3.\n\nReading BANAN: continue distributing to adjacent N cells, obtaining: upper right 6, center 12, lower left 6, lower right 6.\n\nReading BANANA: finally distribute to adjacent A cells: upper middle 18, left middle 18, right middle 24, lower middle 24. The total is 18 + 18 + 24 + 24 = 84.\n\nTherefore there are altogether 84 ways to read it.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace correctly begins with a visual description, accurately records the 3x3 grid as B A N / A N A / N A N, follows the assigned dynamic programming method, uses the edge-adjacency and revisiting rules correctly, and obtains the standard answer 84.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 11.126
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 2736,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01613.json",
+        "source_sample_filename": "mathvision01613.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01613.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T20:08:40Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_d159ac6bfb0460b64d166879",
+          "new_problem_id": "open_d159ac6bfb0460b64d166879",
+          "old_problem_run_key": "mathvision__open_d159ac6bfb0460b64d166879__00ec0568c69d",
+          "new_problem_run_key": "mathvision__open_d159ac6bfb0460b64d166879__00ec0568c69d",
+          "target_relpath": "math/mathvision/samples/mathvision01613.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_d159ac6bfb0460b64d166879",
+    "problem_run_key": "mathvision__open_d159ac6bfb0460b64d166879__00ec0568c69d",
+    "raw_question_text": "In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once.",
+    "raw_answer": "84",
+    "raw_standard_answer": "84",
+    "resolved_question_text": "In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once.",
+    "resolved_answer": "84",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: In the attached figure is a 3×3 letter grid. Reading by rows from top to bottom: the first row is B A N, the second row is A N A, and the third row is N A N. The only B is in the upper left corner.\n\nThen reason: The target word is BANANA; one can only move between adjacent cells sharing an edge, and revisiting cells is allowed. Use dynamic programming to count the number of paths that stop at each cell when each letter has been read.\n\nThe 1st letter B: it can only start from the B in the upper left corner, with count 1.\n\nReading BA: from B one can go to the A on the right and the A below, so the counts for A cells are: upper middle 1, left middle 1.\n\nReading BAN: from the upper middle A one can go to the upper right N and the center N; from the left middle A one can go to the center N and the lower left N. Therefore the counts for N cells are: upper right 1, center 2, lower left 1.\n\nReading BANA: distribute these counts to adjacent A cells, obtaining counts for the four A cells: upper middle 3, left middle 3, right middle 3, lower middle 3.\n\nReading BANAN: continue distributing to adjacent N cells, obtaining: upper right 6, center 12, lower left 6, lower right 6.\n\nReading BANANA: finally distribute to adjacent A cells: upper middle 18, left middle 18, right middle 24, lower middle 24. The total is 18 + 18 + 24 + 24 = 84.\n\nTherefore there are altogether 84 ways to read it.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "In the attached figure is a 3×3 letter grid.",
+        "label": "perception",
+        "source": "In the attached figure is a 3×3 letter grid."
+      },
+      {
+        "claim_id": 2,
+        "claim": "The first row from left to right is B A N.",
+        "label": "perception",
+        "source": "First row B A N"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The second row from left to right is A N A.",
+        "label": "perception",
+        "source": "Second row A N A"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The third row from left to right is N A N.",
+        "label": "perception",
+        "source": "Third row N A N"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The only B is in the upper left corner.",
+        "label": "perception",
+        "source": "The only B is in the upper left corner."
+      },
+      {
+        "claim_id": 6,
+        "claim": "The target word is BANANA.",
+        "label": "perception",
+        "source": "The target word is BANANA"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Movement can only be performed between adjacent cells sharing an edge.",
+        "label": "reasoning",
+        "source": "Can only move between adjacent cells sharing an edge"
+      },
+      {
+        "claim_id": 8,
+        "claim": "Repeated visits to cells are allowed.",
+        "label": "reasoning",
+        "source": "Repeated visits to cells are allowed"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Use dynamic programming to count the number of paths stopping at each cell when reading each letter.",
+        "label": "reasoning",
+        "source": "Use dynamic programming to count the number of paths stopping at each cell when reading each letter."
+      },
+      {
+        "claim_id": 10,
+        "claim": "The 1st letter B can only start from the upper-left B, with a count of 1.",
+        "label": "reasoning",
+        "source": "The 1st letter B: can only start from the upper-left B, with a count of 1."
+      },
+      {
+        "claim_id": 11,
+        "claim": "When reading BA, the A-cell counts are upper middle 1, left middle 1.",
+        "label": "reasoning",
+        "source": "When reading BA: from B one can reach the A on the right and the A below, so the A-cell counts are: upper middle 1, left middle 1."
+      },
+      {
+        "claim_id": 12,
+        "claim": "When reading BAN, the N-cell counts are upper right 1, center 2, lower left 1.",
+        "label": "reasoning",
+        "source": "When reading BAN: from the upper-middle A one can reach the upper-right N and the center N; from the left-middle A one can reach the center N and the lower-left N. Therefore the N-cell counts are: upper right 1, center 2, lower left 1."
+      },
+      {
+        "claim_id": 13,
+        "claim": "When reading BANA, the counts for the four A cells are upper middle 3, left middle 3, right middle 3, lower middle 3.",
+        "label": "reasoning",
+        "source": "When reading BANA: distribute these counts to adjacent A cells, obtaining the counts for the four A cells: upper middle 3, left middle 3, right middle 3, lower middle 3."
+      },
+      {
+        "claim_id": 14,
+        "claim": "When reading BANAN, the N-cell counts are upper right 6, center 12, lower left 6, lower right 6.",
+        "label": "reasoning",
+        "source": "When reading BANAN: continue distributing to adjacent N cells, obtaining: upper right 6, center 12, lower left 6, lower right 6."
+      },
+      {
+        "claim_id": 15,
+        "claim": "When reading BANANA, the A-cell counts are upper middle 18, left middle 18, right middle 24, lower middle 24.",
+        "label": "reasoning",
+        "source": "Reading to BANANA: finally allocated to adjacent A squares: upper middle 18, left middle 18, right middle 24, lower middle 24."
+      },
+      {
+        "claim_id": 16,
+        "claim": "The total is 18 + 18 + 24 + 24 = 84, therefore there are altogether 84 ways to read it.",
+        "label": "reasoning",
+        "source": "The total is 18 + 18 + 24 + 24 = 84. Therefore there are altogether 84 ways to read it."
+      }
+    ],
+    "claim_count": 16,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "In the attached figure is a 3×3 letter grid.",
+          "label": "perception",
+          "source": "In the attached figure is a 3×3 letter grid."
+        },
+        {
+          "claim_id": 2,
+          "claim": "The first row from left to right is B A N.",
+          "label": "perception",
+          "source": "First row B A N"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The second row from left to right is A N A.",
+          "label": "perception",
+          "source": "Second row A N A"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The third row from left to right is N A N.",
+          "label": "perception",
+          "source": "Third row N A N"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The only B is in the upper left corner.",
+          "label": "perception",
+          "source": "The only B is in the upper left corner."
+        },
+        {
+          "claim_id": 6,
+          "claim": "The target word is BANANA.",
+          "label": "perception",
+          "source": "The target word is BANANA"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Movement can only be performed between adjacent cells sharing an edge.",
+          "label": "reasoning",
+          "source": "Can only move between adjacent cells sharing an edge"
+        },
+        {
+          "claim_id": 8,
+          "claim": "Repeated visits to cells are allowed.",
+          "label": "reasoning",
+          "source": "Repeated visits to cells are allowed"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Use dynamic programming to count the number of paths stopping at each cell when reading each letter.",
+          "label": "reasoning",
+          "source": "Use dynamic programming to count the number of paths stopping at each cell when reading each letter."
+        },
+        {
+          "claim_id": 10,
+          "claim": "The 1st letter B can only start from the upper-left B, with a count of 1.",
+          "label": "reasoning",
+          "source": "The 1st letter B: can only start from the upper-left B, with a count of 1."
+        },
+        {
+          "claim_id": 11,
+          "claim": "When reading BA, the A-cell counts are upper middle 1, left middle 1.",
+          "label": "reasoning",
+          "source": "When reading BA: from B one can reach the A on the right and the A below, so the A-cell counts are: upper middle 1, left middle 1."
+        },
+        {
+          "claim_id": 12,
+          "claim": "When reading BAN, the N-cell counts are upper right 1, center 2, lower left 1.",
+          "label": "reasoning",
+          "source": "When reading BAN: from the upper-middle A one can reach the upper-right N and the center N; from the left-middle A one can reach the center N and the lower-left N. Therefore the N-cell counts are: upper right 1, center 2, lower left 1."
+        },
+        {
+          "claim_id": 13,
+          "claim": "When reading BANA, the counts for the four A cells are upper middle 3, left middle 3, right middle 3, lower middle 3.",
+          "label": "reasoning",
+          "source": "When reading BANA: distribute these counts to adjacent A cells, obtaining the counts for the four A cells: upper middle 3, left middle 3, right middle 3, lower middle 3."
+        },
+        {
+          "claim_id": 14,
+          "claim": "When reading BANAN, the N-cell counts are upper right 6, center 12, lower left 6, lower right 6.",
+          "label": "reasoning",
+          "source": "When reading BANAN: continue distributing to adjacent N cells, obtaining: upper right 6, center 12, lower left 6, lower right 6."
+        },
+        {
+          "claim_id": 15,
+          "claim": "When reading BANANA, the A-cell counts are upper middle 18, left middle 18, right middle 24, lower middle 24.",
+          "label": "reasoning",
+          "source": "Reading to BANANA: finally allocated to adjacent A squares: upper middle 18, left middle 18, right middle 24, lower middle 24."
+        },
+        {
+          "claim_id": 16,
+          "claim": "The total is 18 + 18 + 24 + 24 = 84, therefore there are altogether 84 ways to read it.",
+          "label": "reasoning",
+          "source": "The total is 18 + 18 + 24 + 24 = 84. Therefore there are altogether 84 ways to read it."
+        }
+      ],
+      "coverage_notes": "已应用所有 severity 为 fix 的修改：将移动规则和重复访问规则重标为 reasoning，并将过度拆分的动态规划步骤合并为按前缀计数分布的关键推理节点。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T10:29:07Z",
+    "changed_target_fields": 69,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

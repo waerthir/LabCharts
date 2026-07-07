@@ -1,0 +1,763 @@
+{
+  "pack_index": 915,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00335:emma_chemistry__open_0dad31a873414d3214958568__b04c1393b11c",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_0dad31a873414d3214958568",
+    "source_problem_id": "open_0dad31a873414d3214958568",
+    "problem_run_key": "emma_chemistry__open_0dad31a873414d3214958568__b04c1393b11c",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00335.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00335.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00335.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00335.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "<image_1> In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "raw_answer_text": "20",
+    "open_variant_id": "open_0dad31a873414d3214958568",
+    "variant_index": 1,
+    "title": "EMMA-Chemistry open-ended question",
+    "split_role": "single",
+    "rewritten_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen. Note: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "expected_answer_type": "numeric",
+    "expected_answer": "20",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_b75e988886f97b3fec4195e5",
+        "problem_id": "prob_5fe72352fadb4e208599e3b3",
+        "node_type": "answer_claim",
+        "canonical_value": "20",
+        "surface_forms": [
+          "20"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_96a161467d67059f0a9ca41b"
+        ],
+        "evidence_refs": [
+          "asset_96a161467d67059f0a9ca41b"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "20"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-07T17:40:26Z",
+        "updated_at": "2026-04-07T17:40:26Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_0dad31a873414d3214958568",
+      "parent_problem_id": "prob_5fe72352fadb4e208599e3b3",
+      "variant_index": 1,
+      "title": "EMMA-Chemistry open-ended question",
+      "rewritten_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+      "expected_answer_type": "numeric",
+      "expected_answer": "20",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "raw_answer": "20",
+    "raw_standard_answer": "20",
+    "resolved_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen. Note: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "resolved_answer": "20",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: the central structure in the figure is CH3O2C–N(H)–S(=O)2–Cl, with a CH3O2C fragment on the left connected to N, N then connected to the sulfonyl group S, and S connected by double bonds to two O and by a single bond to Cl. The figure also shows two :NEt3 components, one on the right near Cl and the other at the lower left near H; curved arrows are ignored according to the question. Then reason: count only bonds between heavy atoms, not bonds involving hydrogen. In the CH3O2C fragment there are CH3–O, O–C, C=O, and C–N, for a total of 4 bonds. The sulfonyl chloride part has N–S, two S=O, and S–Cl, for a total of 4 bonds. Therefore the central structure has 4 + 4 = 8 heavy-atom bonds in total. Each :NEt3 contains 3 N–C bonds and 3 internal ethyl C–C bonds, for a total of 6 bonds; two :NEt3 have 12 bonds in total. The total number is 8 + 12 = 20.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_0dad31a873414d3214958568",
+      "problem_run_key": "emma_chemistry__open_0dad31a873414d3214958568__b04c1393b11c",
+      "question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+      "standard_answer": "20",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00335.png",
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/crops/emmachemistry00335.png"
+      ],
+      "initial_multi_solution_score": 0.3697,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Count heavy-atom bonds by components. In the CH3O2C fragment, count CH3–O, O–C, C=O, and C–N = 4 bonds. In the sulfonyl chloride portion, count N–S, two S=O bonds, and S–Cl = 4 more bonds, giving 8 for the central structure. Each :NEt3 has three N–C bonds and three C–C bonds within the ethyl groups, so 6 bonds per NEt3; two such groups contribute 12. Add 8 + 12 = 20.",
+          "CoT_raw": "先描述图像：图中中心结构为 CH3O2C–N(H)–S(=O)2–Cl，左侧有 CH3O2C 片段连接到 N，N 再连接到磺酰基 S，S 与两个 O 双键连接并与 Cl 单键连接。图中还显示两个 :NEt3 组分，一个在右侧靠近 Cl，另一个在左下方靠近 H；弯箭头按题意忽略。\n再推理：只数重原子之间的键，不数涉及氢的键。CH3O2C 片段中有 CH3–O、O–C、C=O、C–N，共 4 个键。磺酰氯部分有 N–S、两个 S=O、S–Cl，共 4 个键。因此中心结构共有 4 + 4 = 8 个重原子键。每个 :NEt3 含有 3 个 N–C 键和 3 个乙基内部 C–C 键，共 6 个键；两个 :NEt3 共 12 个键。总数为 8 + 12 = 20。",
+          "model_answer": "20",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "20",
+              "predicted_part": "20",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中中心结构为 CH3O2C–N(H)–S(=O)2–Cl，左侧有 CH3O2C 片段连接到 N，N 再连接到磺酰基 S，S 与两个 O 双键连接并与 Cl 单键连接。图中还显示两个 :NEt3 组分，一个在右侧靠近 Cl，另一个在左下方靠近 H；弯箭头按题意忽略。\n再推理：只数重原子之间的键，不数涉及氢的键。CH3O2C 片段中有 CH3–O、O–C、C=O、C–N，共 4 个键。磺酰氯部分有 N–S、两个 S=O、S–Cl，共 4 个键。因此中心结构共有 4 + 4 = 8 个重原子键。每个 :NEt3 含有 3 个 N–C 键和 3 个乙基内部 C–C 键，共 6 个键；两个 :NEt3 共 12 个键。总数为 8 + 12 = 20。",
+          "answer_answer_check_final": "20",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace passes. It first describes the image and then reasons, follows the assigned component-counting method, ignores arrows as instructed, excludes H-involving bonds, expands CH3O2C and Et3 abbreviations appropriately, and reaches the standard answer 20. No revision needed.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中中心结构为 CH3O2C–N(H)–S(=O)2–Cl，左侧有 CH3O2C 片段连接到 N，N 再连接到磺酰基 S，S 与两个 O 双键连接并与 Cl 单键连接。图中还显示两个 :NEt3 组分，一个在右侧靠近 Cl，另一个在左下方靠近 H；弯箭头按题意忽略。\n再推理：只数重原子之间的键，不数涉及氢的键。CH3O2C 片段中有 CH3–O、O–C、C=O、C–N，共 4 个键。磺酰氯部分有 N–S、两个 S=O、S–Cl，共 4 个键。因此中心结构共有 4 + 4 = 8 个重原子键。每个 :NEt3 含有 3 个 N–C 键和 3 个乙基内部 C–C 键，共 6 个键；两个 :NEt3 共 12 个键。总数为 8 + 12 = 20。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Direct visual enumeration of visible/non-expanded components: count each heavy-atom bond connection in the main drawn molecule and in each triethylamine abbreviation, then add subtotals.",
+            "image_role": "Read the chemical drawing: a main CH3O2C–N(H)–S(=O)2–Cl structure is shown, plus two separate :NEt3 groups; curved arrows are present but must be ignored. Identify the CH3O2C fragment as CH3–O–C(=O)– attached to N, the N–S linkage, two S=O bonds, an S–Cl bond, and two NEt3 components.",
+            "text_role": "Use the question instruction to include all components, disregard arrows, and exclude bonds involving hydrogen.",
+            "knowledge_role": "Use standard line-angle/abbreviation conventions: CH3O2C means CH3–O–C(=O)–, and NEt3 means triethylamine N(CH2CH3)3. Count each single or double bond as one bond connection for this problem, exclude N–H and all C–H bonds, and ignore arrows."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中中心结构为 CH3O2C–N(H)–S(=O)2–Cl，左侧有 CH3O2C 片段连接到 N，N 再连接到磺酰基 S，S 与两个 O 双键连接并与 Cl 单键连接。图中还显示两个 :NEt3 组分，一个在右侧靠近 Cl，另一个在左下方靠近 H；弯箭头按题意忽略。\n再推理：只数重原子之间的键，不数涉及氢的键。CH3O2C 片段中有 CH3–O、O–C、C=O、C–N，共 4 个键。磺酰氯部分有 N–S、两个 S=O、S–Cl，共 4 个键。因此中心结构共有 4 + 4 = 8 个重原子键。每个 :NEt3 含有 3 个 N–C 键和 3 个乙基内部 C–C 键，共 6 个键；两个 :NEt3 共 12 个键。总数为 8 + 12 = 20。",
+            "model_answer": "20",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2643,
+              "completion_tokens": 827,
+              "total_tokens": 3470,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 18.743,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace passes. It first describes the image and then reasons, follows the assigned component-counting method, ignores arrows as instructed, excludes H-involving bonds, expands CH3O2C and Et3 abbreviations appropriately, and reaches the standard answer 20. No revision needed.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 13.816
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 18.759,
+              "usage_delta": {
+                "request_count": 9,
+                "successful_request_count": 10,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 9,
+                "requests_with_usage": 11,
+                "prompt_tokens": 29401,
+                "completion_tokens": 12415,
+                "total_tokens": 41816,
+                "cached_tokens": 2304,
+                "reasoning_tokens": 8112,
+                "total_request_seconds": 307.819,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 56.252,
+              "usage_delta": {
+                "request_count": 7,
+                "successful_request_count": 11,
+                "failed_request_count": 9,
+                "retry_count": 9,
+                "text_request_count": 0,
+                "multimodal_request_count": 7,
+                "requests_with_usage": 17,
+                "prompt_tokens": 52082,
+                "completion_tokens": 15412,
+                "total_tokens": 67494,
+                "cached_tokens": 0,
+                "reasoning_tokens": 12077,
+                "total_request_seconds": 466.044,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Build the heavy-atom graph and sum degrees. For the central structure, the heavy-atom degrees are: methyl C 1, ester O 2, carbonyl C 3, carbonyl O 1, N 2 for its C and S heavy-atom neighbors, S 4 for N, Cl, and two O atoms, two sulfonyl O atoms 1 each, and Cl 1. The central degree sum is 16, so it has 16/2 = 8 heavy-atom bonds. For one NEt3, N has degree 3, the three alpha ethyl carbons have degree 2 each, and the three terminal ethyl carbons have degree 1 each: degree sum 3 + 6 + 3 = 12, giving 6 bonds. Two NEt3 components give 12 bonds. Total = 8 + 12 = 20.",
+          "CoT_raw": "先描述图像：图中显示一个中心过渡态结构，中心部分包含 CH3O2C–N–S(=O)2–Cl 骨架，并画有两个 :NEt3 组分；图中的弯箭头按题意不计入键数。氢相关的键也按题意排除。再推理：按照重原子图计数，中心结构的重原子连接为 CH3碳–酯氧、酯氧–羰基碳、羰基碳–羰基氧、羰基碳–N、N–S、S–Cl、S–O、S–O，共 8 个重原子键。等价地，中心结构重原子度数和为 16，因此键数为 16/2 = 8。每个 NEt3 中，N 与三个乙基相连，且三个乙基各有一个 C–C 键，所以每个 NEt3 有 3 个 N–C 键 + 3 个 C–C 键 = 6 个不含氢的键。图中有两个 NEt3，因此贡献 12 个键。总键数 = 8 + 12 = 20。",
+          "model_answer": "20",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "20",
+              "predicted_part": "20",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中显示一个中心过渡态结构，中心部分包含 CH3O2C–N–S(=O)2–Cl 骨架，并画有两个 :NEt3 组分；图中的弯箭头按题意不计入键数。氢相关的键也按题意排除。再推理：按照重原子图计数，中心结构的重原子连接为 CH3碳–酯氧、酯氧–羰基碳、羰基碳–羰基氧、羰基碳–N、N–S、S–Cl、S–O、S–O，共 8 个重原子键。等价地，中心结构重原子度数和为 16，因此键数为 16/2 = 8。每个 NEt3 中，N 与三个乙基相连，且三个乙基各有一个 C–C 键，所以每个 NEt3 有 3 个 N–C 键 + 3 个 C–C 键 = 6 个不含氢的键。图中有两个 NEt3，因此贡献 12 个键。总键数 = 8 + 12 = 20。",
+          "answer_answer_check_final": "20",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace first describes the image, then reasons from a heavy-atom graph, ignores arrows and H-involving bonds as required, counts both NEt3 components, follows the assigned method draft, and reaches the standard answer 20.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中显示一个中心过渡态结构，中心部分包含 CH3O2C–N–S(=O)2–Cl 骨架，并画有两个 :NEt3 组分；图中的弯箭头按题意不计入键数。氢相关的键也按题意排除。再推理：按照重原子图计数，中心结构的重原子连接为 CH3碳–酯氧、酯氧–羰基碳、羰基碳–羰基氧、羰基碳–N、N–S、S–Cl、S–O、S–O，共 8 个重原子键。等价地，中心结构重原子度数和为 16，因此键数为 16/2 = 8。每个 NEt3 中，N 与三个乙基相连，且三个乙基各有一个 C–C 键，所以每个 NEt3 有 3 个 N–C 键 + 3 个 C–C 键 = 6 个不含氢的键。图中有两个 NEt3，因此贡献 12 个键。总键数 = 8 + 12 = 20。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Graph-theoretic degree-sum route: instead of listing every bond line one by one, expand the abbreviations into a heavy-atom graph, assign heavy-atom degrees, and divide the total degree by two.",
+            "image_role": "From the image, identify three disconnected heavy-atom components to include: the central carbamate/sulfonyl chloride structure, a right-side :NEt3, and a lower-left :NEt3. Note that the H attached to N and all hydrogens in CH3/Et groups are not counted as bond endpoints.",
+            "text_role": "Apply the text constraints that all components in the transition-state image must be considered, arrows disregarded, and hydrogen-involving bonds excluded.",
+            "knowledge_role": "Translate chemical abbreviations into a heavy-atom connectivity graph. For bond counting under the expected convention, each drawn single or double connection contributes one graph edge; the total number of bonds equals half the sum of heavy-atom degrees."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中显示一个中心过渡态结构，中心部分包含 CH3O2C–N–S(=O)2–Cl 骨架，并画有两个 :NEt3 组分；图中的弯箭头按题意不计入键数。氢相关的键也按题意排除。再推理：按照重原子图计数，中心结构的重原子连接为 CH3碳–酯氧、酯氧–羰基碳、羰基碳–羰基氧、羰基碳–N、N–S、S–Cl、S–O、S–O，共 8 个重原子键。等价地，中心结构重原子度数和为 16，因此键数为 16/2 = 8。每个 NEt3 中，N 与三个乙基相连，且三个乙基各有一个 C–C 键，所以每个 NEt3 有 3 个 N–C 键 + 3 个 C–C 键 = 6 个不含氢的键。图中有两个 NEt3，因此贡献 12 个键。总键数 = 8 + 12 = 20。",
+            "model_answer": "20",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2704,
+              "completion_tokens": 837,
+              "total_tokens": 3541,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 21.122,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace first describes the image, then reasons from a heavy-atom graph, ignores arrows and H-involving bonds as required, counts both NEt3 components, follows the assigned method draft, and reaches the standard answer 20.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 0.98,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 19.723
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 21.136,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 3,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 3,
+                "requests_with_usage": 3,
+                "prompt_tokens": 8826,
+                "completion_tokens": 2407,
+                "total_tokens": 11233,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1548,
+                "total_request_seconds": 59.514,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 19.74,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 6,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 6,
+                "prompt_tokens": 19401,
+                "completion_tokens": 7065,
+                "total_tokens": 26466,
+                "cached_tokens": 0,
+                "reasoning_tokens": 5399,
+                "total_request_seconds": 170.387,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 41.542,
+          "usage_delta": {
+            "request_count": 14,
+            "successful_request_count": 12,
+            "failed_request_count": 2,
+            "retry_count": 2,
+            "text_request_count": 0,
+            "multimodal_request_count": 14,
+            "requests_with_usage": 14,
+            "prompt_tokens": 37681,
+            "completion_tokens": 15333,
+            "total_tokens": 53014,
+            "cached_tokens": 0,
+            "reasoning_tokens": 10528,
+            "total_request_seconds": 380.0,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "234",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00335.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "descriptive",
+          "parent_problem_id": "prob_5fe72352fadb4e208599e3b3",
+          "open_variant_count": 1,
+          "open_variant_id": "open_0dad31a873414d3214958568",
+          "open_variant_index": 1,
+          "open_variant_title": "EMMA-Chemistry 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 157.46,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 2,
+        "retry_count": 2,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 6,
+        "prompt_tokens": 17398,
+        "completion_tokens": 5318,
+        "total_tokens": 22716,
+        "cached_tokens": 0,
+        "reasoning_tokens": 3598,
+        "total_request_seconds": 151.348,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+      "answer": "20",
+      "final_cot": "First describe the image: the central structure in the figure is CH3O2C–N(H)–S(=O)2–Cl, with a CH3O2C fragment on the left connected to N, N then connected to the sulfonyl group S, and S connected by double bonds to two O and by a single bond to Cl. The figure also shows two :NEt3 components, one on the right near Cl and the other at the lower left near H; curved arrows are ignored according to the question.\nThen reason: count only bonds between heavy atoms, not bonds involving hydrogen. In the CH3O2C fragment there are CH3–O, O–C, C=O, and C–N, for a total of 4 bonds. The sulfonyl chloride part has N–S, two S=O, and S–Cl, for a total of 4 bonds. Therefore the central structure has 4 + 4 = 8 heavy-atom bonds in total. Each :NEt3 contains 3 N–C bonds and 3 internal ethyl C–C bonds, for a total of 6 bonds; two :NEt3 have 12 bonds in total. The total number is 8 + 12 = 20.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace passes. It first describes the image and then reasons, follows the assigned component-counting method, ignores arrows as instructed, excludes H-involving bonds, expands CH3O2C and Et3 abbreviations appropriately, and reaches the standard answer 20. No revision needed.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 13.816
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace first describes the image, then reasons from a heavy-atom graph, ignores arrows and H-involving bonds as required, counts both NEt3 components, follows the assigned method draft, and reaches the standard answer 20.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 0.98,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 19.723
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 336,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00335.json",
+        "source_sample_filename": "emmachemistry00335.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00335.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T06:54:38Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:33Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_5fe72352fadb4e208599e3b3",
+          "new_problem_id": "open_0dad31a873414d3214958568",
+          "old_problem_run_key": "emma_chemistry__prob_5fe72352fadb4e208599e3b3__9c3e521705d4",
+          "new_problem_run_key": "emma_chemistry__open_0dad31a873414d3214958568__b04c1393b11c",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00335.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_0dad31a873414d3214958568",
+          "new_problem_id": "open_0dad31a873414d3214958568",
+          "old_problem_run_key": "emma_chemistry__open_0dad31a873414d3214958568__b04c1393b11c",
+          "new_problem_run_key": "emma_chemistry__open_0dad31a873414d3214958568__b04c1393b11c",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00335.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_0dad31a873414d3214958568",
+    "problem_run_key": "emma_chemistry__open_0dad31a873414d3214958568__b04c1393b11c",
+    "raw_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen.\n\nNote: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "raw_answer": "20",
+    "raw_standard_answer": "20",
+    "resolved_question_text": "In the transition-state structure shown in the image, calculate the total number of bonds in the structure, including single, double, and triple bonds but excluding those involving hydrogen. Note: Disregard arrows. Consider all components present in the transition-state structure shown in the image.",
+    "resolved_answer": "20",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: the central structure in the figure is CH3O2C–N(H)–S(=O)2–Cl, with a CH3O2C fragment on the left connected to N, N then connected to the sulfonyl group S, and S connected by double bonds to two O and by a single bond to Cl. The figure also shows two :NEt3 components, one on the right near Cl and the other at the lower left near H; curved arrows are ignored according to the question.\nThen reason: count only bonds between heavy atoms, not bonds involving hydrogen. In the CH3O2C fragment there are CH3–O, O–C, C=O, and C–N, for a total of 4 bonds. The sulfonyl chloride part has N–S, two S=O, and S–Cl, for a total of 4 bonds. Therefore the central structure has 4 + 4 = 8 heavy-atom bonds in total. Each :NEt3 contains 3 N–C bonds and 3 internal ethyl C–C bonds, for a total of 6 bonds; two :NEt3 have 12 bonds in total. The total number is 8 + 12 = 20.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "On the left there is a CH3O2C fragment connected to N.",
+        "label": "perception",
+        "source": "On the left there is a CH3O2C fragment connected to N"
+      },
+      {
+        "claim_id": 2,
+        "claim": "N is then connected to the sulfonyl group S.",
+        "label": "perception",
+        "source": "N is then connected to the sulfonyl group S"
+      },
+      {
+        "claim_id": 3,
+        "claim": "S is connected by double bonds to two O.",
+        "label": "perception",
+        "source": "S is connected by double bonds to two O"
+      },
+      {
+        "claim_id": 4,
+        "claim": "S is connected by a single bond to Cl.",
+        "label": "perception",
+        "source": "and connected by a single bond to Cl"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The figure shows two :NEt3 components.",
+        "label": "perception",
+        "source": "The figure also shows two :NEt3 components"
+      },
+      {
+        "claim_id": 6,
+        "claim": "One :NEt3 is on the right near Cl.",
+        "label": "perception",
+        "source": "One is on the right near Cl"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Another :NEt3 is at the lower left near H.",
+        "label": "perception",
+        "source": "Another is at the lower left near H"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The curved arrows are ignored in this problem.",
+        "label": "reasoning",
+        "source": "curved arrows are ignored according to the problem statement"
+      },
+      {
+        "claim_id": 9,
+        "claim": "This problem only counts bonds between heavy atoms.",
+        "label": "reasoning",
+        "source": "Only count bonds between heavy atoms"
+      },
+      {
+        "claim_id": 10,
+        "claim": "This problem does not count bonds involving hydrogen.",
+        "label": "reasoning",
+        "source": "Do not count bonds involving hydrogen"
+      },
+      {
+        "claim_id": 11,
+        "claim": "In the CH3O2C fragment, there are CH3–O, O–C, C=O, C–N, for a total of 4 heavy-atom bonds.",
+        "label": "reasoning",
+        "source": "In the CH3O2C fragment, there are CH3–O, O–C, C=O, C–N, for a total of 4 bonds"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The sulfonyl chloride part has N–S, two S=O, S–Cl, for a total of 4 heavy-atom bonds.",
+        "label": "reasoning",
+        "source": "The sulfonyl chloride part has N–S, two S=O, S–Cl, for a total of 4 bonds"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The central structure has a total of 8 heavy-atom bonds.",
+        "label": "reasoning",
+        "source": "Therefore the central structure has a total of 4 + 4 = 8 heavy-atom bonds"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Each :NEt3 contains 3 N–C bonds and 3 internal C–C bonds of ethyl groups, for a total of 6 heavy-atom bonds.",
+        "label": "reasoning",
+        "source": "Each :NEt3 contains 3 N–C bonds and 3 internal C–C bonds of ethyl groups, for a total of 6 bonds"
+      },
+      {
+        "claim_id": 15,
+        "claim": "Two :NEt3 have a total of 12 heavy-atom bonds.",
+        "label": "reasoning",
+        "source": "Two :NEt3 have a total of 12 bonds"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The total number of bonds is 20.",
+        "label": "reasoning",
+        "source": "The total is 8 + 12 = 20"
+      }
+    ],
+    "claim_count": 16,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "On the left there is a CH3O2C fragment connected to N.",
+          "label": "perception",
+          "source": "On the left there is a CH3O2C fragment connected to N"
+        },
+        {
+          "claim_id": 2,
+          "claim": "N is then connected to the sulfonyl group S.",
+          "label": "perception",
+          "source": "N is then connected to the sulfonyl group S"
+        },
+        {
+          "claim_id": 3,
+          "claim": "S is connected by double bonds to two O.",
+          "label": "perception",
+          "source": "S is connected by double bonds to two O"
+        },
+        {
+          "claim_id": 4,
+          "claim": "S is connected by a single bond to Cl.",
+          "label": "perception",
+          "source": "and connected by a single bond to Cl"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The figure shows two :NEt3 components.",
+          "label": "perception",
+          "source": "The figure also shows two :NEt3 components"
+        },
+        {
+          "claim_id": 6,
+          "claim": "One :NEt3 is on the right near Cl.",
+          "label": "perception",
+          "source": "One is on the right near Cl"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Another :NEt3 is at the lower left near H.",
+          "label": "perception",
+          "source": "Another is at the lower left near H"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The curved arrows are ignored in this problem.",
+          "label": "reasoning",
+          "source": "curved arrows are ignored according to the problem statement"
+        },
+        {
+          "claim_id": 9,
+          "claim": "This problem only counts bonds between heavy atoms.",
+          "label": "reasoning",
+          "source": "Only count bonds between heavy atoms"
+        },
+        {
+          "claim_id": 10,
+          "claim": "This problem does not count bonds involving hydrogen.",
+          "label": "reasoning",
+          "source": "Do not count bonds involving hydrogen"
+        },
+        {
+          "claim_id": 11,
+          "claim": "In the CH3O2C fragment, there are CH3–O, O–C, C=O, C–N, for a total of 4 heavy-atom bonds.",
+          "label": "reasoning",
+          "source": "In the CH3O2C fragment, there are CH3–O, O–C, C=O, C–N, for a total of 4 bonds"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The sulfonyl chloride part has N–S, two S=O, S–Cl, for a total of 4 heavy-atom bonds.",
+          "label": "reasoning",
+          "source": "The sulfonyl chloride part has N–S, two S=O, S–Cl, for a total of 4 bonds"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The central structure has a total of 8 heavy-atom bonds.",
+          "label": "reasoning",
+          "source": "Therefore the central structure has a total of 4 + 4 = 8 heavy-atom bonds"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Each :NEt3 contains 3 N–C bonds and 3 internal C–C bonds of ethyl groups, for a total of 6 heavy-atom bonds.",
+          "label": "reasoning",
+          "source": "Each :NEt3 contains 3 N–C bonds and 3 internal C–C bonds of ethyl groups, for a total of 6 bonds"
+        },
+        {
+          "claim_id": 15,
+          "claim": "Two :NEt3 have a total of 12 heavy-atom bonds.",
+          "label": "reasoning",
+          "source": "Two :NEt3 have a total of 12 bonds"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The total number of bonds is 20.",
+          "label": "reasoning",
+          "source": "The total is 8 + 12 = 20"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题删除重复的中心结构总述，并合并过度拆分的 CH3O2C、磺酰氯和 :NEt3 键数统计声明；其余声明保持原意并按顺序重新编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:23Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/05626_chemistry_emma_chemistry_open_0dad31a873414d3214958568_7a0160a016.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/00915_chemistry_emma_chemistry_open_0dad31a873414d3214958568_7a0160a016.json"
+  }
+}

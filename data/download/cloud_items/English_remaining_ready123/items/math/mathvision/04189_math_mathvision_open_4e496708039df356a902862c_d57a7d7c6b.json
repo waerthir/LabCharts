@@ -1,0 +1,759 @@
+{
+  "pack_index": 4189,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00114:mathvision__open_4e496708039df356a902862c__1ca673632d0d",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_4e496708039df356a902862c",
+    "source_problem_id": "open_4e496708039df356a902862c",
+    "problem_run_key": "mathvision__open_4e496708039df356a902862c__1ca673632d0d",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00114.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00114.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00114.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00114.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In the figure each asterisk stands for one digit. The sum of the digits of the product is equal to\n<image1>",
+    "raw_answer_text": "16",
+    "open_variant_id": "open_4e496708039df356a902862c",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "In the figure, each asterisk stands for one digit. The sum of the digits of the product is equal to:",
+    "expected_answer_type": "numeric",
+    "expected_answer": "16",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_32a9b79990e7d8764b8391d5",
+        "problem_id": "prob_b4b763b197b4495d3356a548",
+        "node_type": "answer_claim",
+        "canonical_value": "16",
+        "surface_forms": [
+          "16"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_195bb3ff9ea009c64602ac69"
+        ],
+        "evidence_refs": [
+          "asset_195bb3ff9ea009c64602ac69"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "16"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-04T16:23:12Z",
+        "updated_at": "2026-04-04T16:23:12Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_4e496708039df356a902862c",
+      "parent_problem_id": "prob_b4b763b197b4495d3356a548",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "In the figure, each asterisk stands for one digit. The sum of the digits of the product is equal to:",
+      "expected_answer_type": "numeric",
+      "expected_answer": "16",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the figure, each asterisk stands for one digit. The sum of the digits of the product is equal to:",
+    "raw_answer": "16",
+    "raw_standard_answer": "16",
+    "resolved_question_text": "In the figure, each asterisk stands for one digit. The sum of the digits of the product is equal to:",
+    "resolved_answer": "16",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a vertical multiplication. The three-digit number on top is written as “***”, and the three-digit multiplier below is written as “1**”. Under the horizontal line, three partial products are listed, displayed in order as “22**”, “90*”, and “**2”, with a plus sign beside them; the final total product at the bottom is displayed as “56***”. Reasoning: Let the upper three-digit number be N, and the lower multiplier be 100+10d+e. The third partial product “**2” comes from multiplying N by the 1 in the hundreds place of the multiplier, so N itself is a three-digit number whose units digit is 2, denoted N=100a+10b+2. The second partial product is “90*”, so N·d is a three-digit number between 900 and 909. Combining this with the fact that the units digit of N is 2, screen the one-digit number d one by one: possible results are (d,N)=(1,902),(2,452),(3,302). Then use the first partial product “22**” to screen, that is, it is required that 2200≤N·e≤2299. If N=902, there is no one-digit number e that makes the product fall between 2200 and 2299; if N=302, there is also no one-digit number e satisfying it; if N=452, then when e=5, 452×5=2260, matching “22**”. Therefore N=452, and the multiplier is 125. The complete multiplication is 452×125=56500, which also matches the final “56***”. The sum of the digits of the product is 5+6+5+0+0=16.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_4e496708039df356a902862c",
+      "problem_run_key": "mathvision__open_4e496708039df356a902862c__1ca673632d0d",
+      "question_text": "In the figure, each asterisk stands for one digit. The sum of the digits of the product is equal to:",
+      "standard_answer": "16",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00114.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00114.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the vertical multiplication from the image as a 3-digit number N = *** multiplied by a 3-digit number 1**, with partial products shown as 22**, 90*, and **2, and final product 56***. From the third partial product **2, which is the multiplicand times the hundreds digit 1, infer that the multiplicand itself ends in 2, so write N = 100a + 10b + 2. Let the multiplier be 100 + 10d + e. Use the second partial product: N·d is a 3-digit number of the form 90*, so 900 ≤ N·d ≤ 909. Test possible one-digit d values with N ending in 2; this forces d = 2 and N = 452, because 452·2 = 904. Then use the first partial product: N·e has the form 22**, so 2200 ≤ 452e ≤ 2299, giving e = 5 since 452·5 = 2260. Thus the full product is 452·125 = 56500, whose digit sum is 5 + 6 + 5 + 0 + 0 = 16.",
+          "CoT_raw": "图像描述：图中是一个竖式乘法。上面的三位数写成“***”，下面的乘数是三位数“1**”。中间列出的三个部分积依次显示为“22**”、“90*”和“**2”，最后的乘积显示为“56***”。\n推理：设上面的三位数为 N，乘数为 100+10d+e。因为第三个部分积“**2”来自乘数百位上的 1 与 N 相乘，所以 N 本身末位是 2，记为 N=100a+10b+2。第二个部分积为“90*”，所以 N·d 是 900 到 909 之间的三位数。结合 N 末位为 2，检验一位数 d 的可能性，可得到可行的关键选择为 d=2，N=452，因为 452×2=904，符合“90*”。再看第一个部分积“22**”，即 2200≤452e≤2299，所以 e=5，因为 452×5=2260。于是完整乘法为 452×125=56500。乘积各位数字之和为 5+6+5+0+0=16。",
+          "model_answer": "16",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "16",
+              "predicted_part": "16",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个竖式乘法。上面的三位数写成“***”，下面的乘数是三位数“1**”。中间列出的三个部分积依次显示为“22**”、“90*”和“**2”，最后的乘积显示为“56***”。\n推理：设上面的三位数为 N，乘数为 100+10d+e。因为第三个部分积“**2”来自乘数百位上的 1 与 N 相乘，所以 N 本身末位是 2，记为 N=100a+10b+2。第二个部分积为“90*”，所以 N·d 是 900 到 909 之间的三位数。结合 N 末位为 2，检验一位数 d 的可能性，可得到可行的关键选择为 d=2，N=452，因为 452×2=904，符合“90*”。再看第一个部分积“22**”，即 2200≤452e≤2299，所以 e=5，因为 452×5=2260。于是完整乘法为 452×125=56500。乘积各位数字之和为 5+6+5+0+0=16。",
+          "answer_answer_check_final": "16",
+          "CoT_verify_0": false,
+          "CoT_qualify_0": "图像描述部分与图片一致，且满足“先描述图像，再推理”的顺序；最终答案也与标准答案16一致，并且整体遵循了方法草稿。但推理中有一个关键不严谨/错误的桥步：仅由 N 末位为2 且 N·d 为 900 到 909，并不能唯一推出 d=2, N=452；还存在例如 d=1, N=902 和 d=3, N=302 也满足该条件。因此应修订为：先列出第二个部分积条件下的所有可能对，如 (d,N)=(1,902),(2,452),(3,302)，再用第一个部分积“22**”筛选，发现只有 N=452 时存在 e=5 使 452×5=2260，从而得到完整乘法 452×125=56500，数字和为16。",
+          "CoT_after_polish_1": "图像描述：图中是一个竖式乘法。上面的三位数写成“***”，下面的三位乘数写成“1**”。横线下面列出三个部分积，依次显示为“22**”、“90*”和“**2”，旁边有加号；最下面的总乘积显示为“56***”。\n推理：设上面的三位数为 N，下面的乘数为 100+10d+e。第三个部分积“**2”来自乘数百位上的 1 与 N 相乘，所以 N 本身是一个末位为 2 的三位数，记为 N=100a+10b+2。第二个部分积为“90*”，所以 N·d 是 900 到 909 之间的三位数。结合 N 末位为 2，逐一筛选一位数 d：可能得到 (d,N)=(1,902),(2,452),(3,302)。再用第一个部分积“22**”筛选，即需要 2200≤N·e≤2299。若 N=902，没有一位数 e 使乘积落在 2200 到 2299；若 N=302，也没有一位数 e 满足；若 N=452，则 e=5 时 452×5=2260，符合“22**”。因此 N=452，乘数为 125。完整乘法为 452×125=56500，也符合最后的“56***”。乘积各位数字之和为 5+6+5+0+0=16。",
+          "CoT_verify_1": true,
+          "CoT_qualify_1": "The trace is valid and consistent with the image and standard answer. It correctly describes the vertical multiplication before reasoning, grounds the visible patterns as ***, 1**, 22**, 90*, **2, and 56***, and derives the product 56500 with digit sum 16. Minor improvement: explicitly mention the alignment/shift of the third partial product to justify why the visible '**2' implies the multiplicand itself ends in 2.",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个竖式乘法。上面的三位数写成“***”，下面的三位乘数写成“1**”。横线下面列出三个部分积，依次显示为“22**”、“90*”和“**2”，旁边有加号；最下面的总乘积显示为“56***”。\n推理：设上面的三位数为 N，下面的乘数为 100+10d+e。第三个部分积“**2”来自乘数百位上的 1 与 N 相乘，所以 N 本身是一个末位为 2 的三位数，记为 N=100a+10b+2。第二个部分积为“90*”，所以 N·d 是 900 到 909 之间的三位数。结合 N 末位为 2，逐一筛选一位数 d：可能得到 (d,N)=(1,902),(2,452),(3,302)。再用第一个部分积“22**”筛选，即需要 2200≤N·e≤2299。若 N=902，没有一位数 e 使乘积落在 2200 到 2299；若 N=302，也没有一位数 e 满足；若 N=452，则 e=5 时 452×5=2260，符合“22**”。因此 N=452，乘数为 125。完整乘法为 452×125=56500，也符合最后的“56***”。乘积各位数字之和为 5+6+5+0+0=16。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct cryptarithm/long-multiplication route using the displayed partial products as interval constraints to determine the hidden digits, then summing the digits of the final product.",
+            "image_role": "The image supplies the multiplication layout: top number is ***, multiplier is 1**, partial products are 22**, 90*, and **2, and the final product has form 56***.",
+            "text_role": "The question text states that every asterisk represents one digit and asks for the sum of the digits of the product.",
+            "knowledge_role": "Use standard long multiplication: each partial product equals the multiplicand times the corresponding multiplier digit, with place-value shifts ignored when identifying the unshifted partial rows; use digit-pattern interval constraints such as 90* meaning 900 to 909."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个竖式乘法。上面的三位数写成“***”，下面的乘数是三位数“1**”。中间列出的三个部分积依次显示为“22**”、“90*”和“**2”，最后的乘积显示为“56***”。\n推理：设上面的三位数为 N，乘数为 100+10d+e。因为第三个部分积“**2”来自乘数百位上的 1 与 N 相乘，所以 N 本身末位是 2，记为 N=100a+10b+2。第二个部分积为“90*”，所以 N·d 是 900 到 909 之间的三位数。结合 N 末位为 2，检验一位数 d 的可能性，可得到可行的关键选择为 d=2，N=452，因为 452×2=904，符合“90*”。再看第一个部分积“22**”，即 2200≤452e≤2299，所以 e=5，因为 452×5=2260。于是完整乘法为 452×125=56500。乘积各位数字之和为 5+6+5+0+0=16。",
+            "model_answer": "16",
+            "method_following_score_self_report": 0.96,
+            "possible_risk_flags": [
+              "assigned method's statement that the second partial product alone forces d=2 is terse; the solution follows it while using the first partial product for consistency"
+            ],
+            "_llm_usage": {
+              "prompt_tokens": 2807,
+              "completion_tokens": 1906,
+              "total_tokens": 4713,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 33.975,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": false,
+              "critic_suggestions": "图像描述部分与图片一致，且满足“先描述图像，再推理”的顺序；最终答案也与标准答案16一致，并且整体遵循了方法草稿。但推理中有一个关键不严谨/错误的桥步：仅由 N 末位为2 且 N·d 为 900 到 909，并不能唯一推出 d=2, N=452；还存在例如 d=1, N=902 和 d=3, N=302 也满足该条件。因此应修订为：先列出第二个部分积条件下的所有可能对，如 (d,N)=(1,902),(2,452),(3,302)，再用第一个部分积“22**”筛选，发现只有 N=452 时存在 e=5 使 452×5=2260，从而得到完整乘法 452×125=56500，数字和为16。",
+              "major_failures": [
+                "关键推理步骤声称第二个部分积条件直接迫使 d=2, N=452，但该结论不唯一，遗漏了其他满足 N·d=90* 且 N 末位为2的可能性。",
+                "需要增加枚举和排除步骤，使用第一个部分积“22**”来唯一确定 N=452 和 e=5。"
+              ],
+              "extractability_score": 0.82,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 0.9,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 36.653
+            },
+            {
+              "round_index": 1,
+              "verify_pass": true,
+              "critic_suggestions": "The trace is valid and consistent with the image and standard answer. It correctly describes the vertical multiplication before reasoning, grounds the visible patterns as ***, 1**, 22**, 90*, **2, and 56***, and derives the product 56500 with digit sum 16. Minor improvement: explicitly mention the alignment/shift of the third partial product to justify why the visible '**2' implies the multiplicand itself ends in 2.",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.98,
+              "method_fidelity_score": 0.9,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 22.708
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 33.988,
+              "usage_delta": {
+                "request_count": 43,
+                "successful_request_count": 49,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 43,
+                "requests_with_usage": 49,
+                "prompt_tokens": 137644,
+                "completion_tokens": 33932,
+                "total_tokens": 171576,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 703.935,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 36.671,
+              "usage_delta": {
+                "request_count": 24,
+                "successful_request_count": 29,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 24,
+                "requests_with_usage": 29,
+                "prompt_tokens": 81806,
+                "completion_tokens": 28318,
+                "total_tokens": 110124,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 562.321,
+                "last_error": null
+              },
+              "verify_pass": false
+            },
+            "CoT_after_polish_1": {
+              "wall_seconds": 21.481,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 14,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 14,
+                "prompt_tokens": 34031,
+                "completion_tokens": 15283,
+                "total_tokens": 49314,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 314.254,
+                "last_error": null
+              }
+            },
+            "verify_round_1": {
+              "wall_seconds": 22.721,
+              "usage_delta": {
+                "request_count": 6,
+                "successful_request_count": 11,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 6,
+                "requests_with_usage": 11,
+                "prompt_tokens": 29148,
+                "completion_tokens": 7786,
+                "total_tokens": 36934,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 170.547,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 25.331,
+          "usage_delta": {
+            "request_count": 37,
+            "successful_request_count": 24,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 37,
+            "requests_with_usage": 24,
+            "prompt_tokens": 66416,
+            "completion_tokens": 19744,
+            "total_tokens": 86160,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 411.115,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "211",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00114.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_b4b763b197b4495d3356a548",
+          "open_variant_count": 1,
+          "open_variant_id": "open_4e496708039df356a902862c",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "figure content is not transcribed in text, so exact reasoning complexity cannot be fully confirmed from fields alone"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 140.216,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 15213,
+        "completion_tokens": 7608,
+        "total_tokens": 22821,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 140.111,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the figure, each asterisk stands for one digit. The sum of the digits of the product is equal to:",
+      "answer": "16",
+      "final_cot": "Image description: In the image is a vertical multiplication. The three-digit number on top is written as “***”, and the three-digit multiplier below is written as “1**”. Below the horizontal line, three partial products are listed, displayed in order as “22**”, “90*”, and “**2”, with a plus sign beside them; the final total product at the bottom is displayed as “56***”.\nReasoning: Let the three-digit number on top be N, and the multiplier below be 100+10d+e. The third partial product “**2” comes from multiplying N by the 1 in the hundreds place of the multiplier, so N itself is a three-digit number with units digit 2, written as N=100a+10b+2. The second partial product is “90*”, so N·d is a three-digit number between 900 and 909. Combining this with the fact that the units digit of N is 2, screen the one-digit d one by one: the possible results are (d,N)=(1,902),(2,452),(3,302). Then use the first partial product “22**” to screen, that is, it is required that 2200≤N·e≤2299. If N=902, there is no one-digit e that makes the product fall between 2200 and 2299; if N=302, there is also no one-digit e satisfying it; if N=452, then when e=5, 452×5=2260, matching “22**”. Therefore N=452, and the multiplier is 125. The complete multiplication is 452×125=56500, which also matches the final “56***”. The sum of the digits of the product is 5+6+5+0+0=16.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": false,
+          "critic_suggestions": "图像描述部分与图片一致，且满足“先描述图像，再推理”的顺序；最终答案也与标准答案16一致，并且整体遵循了方法草稿。但推理中有一个关键不严谨/错误的桥步：仅由 N 末位为2 且 N·d 为 900 到 909，并不能唯一推出 d=2, N=452；还存在例如 d=1, N=902 和 d=3, N=302 也满足该条件。因此应修订为：先列出第二个部分积条件下的所有可能对，如 (d,N)=(1,902),(2,452),(3,302)，再用第一个部分积“22**”筛选，发现只有 N=452 时存在 e=5 使 452×5=2260，从而得到完整乘法 452×125=56500，数字和为16。",
+          "major_failures": [
+            "关键推理步骤声称第二个部分积条件直接迫使 d=2, N=452，但该结论不唯一，遗漏了其他满足 N·d=90* 且 N 末位为2的可能性。",
+            "需要增加枚举和排除步骤，使用第一个部分积“22**”来唯一确定 N=452 和 e=5。"
+          ],
+          "extractability_score": 0.82,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 0.9,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 36.653
+        },
+        {
+          "method_id": "1",
+          "round_index": 1,
+          "verify_pass": true,
+          "critic_suggestions": "The trace is valid and consistent with the image and standard answer. It correctly describes the vertical multiplication before reasoning, grounds the visible patterns as ***, 1**, 22**, 90*, **2, and 56***, and derives the product 56500 with digit sum 16. Minor improvement: explicitly mention the alignment/shift of the third partial product to justify why the visible '**2' implies the multiplicand itself ends in 2.",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.98,
+          "method_fidelity_score": 0.9,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 22.708
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1237,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00114.json",
+        "source_sample_filename": "mathvision00114.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00114.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T11:54:41Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_4e496708039df356a902862c",
+          "new_problem_id": "open_4e496708039df356a902862c",
+          "old_problem_run_key": "mathvision__open_4e496708039df356a902862c__1ca673632d0d",
+          "new_problem_run_key": "mathvision__open_4e496708039df356a902862c__1ca673632d0d",
+          "target_relpath": "math/mathvision/samples/mathvision00114.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_4e496708039df356a902862c",
+    "problem_run_key": "mathvision__open_4e496708039df356a902862c__1ca673632d0d",
+    "raw_question_text": "In the figure, each asterisk stands for one digit. The sum of the digits of the product is equal to:",
+    "raw_answer": "16",
+    "raw_standard_answer": "16",
+    "resolved_question_text": "In the figure, each asterisk stands for one digit. The sum of the digits of the product is equal to:",
+    "resolved_answer": "16",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: In the image is a vertical multiplication. The three-digit number on top is written as “***”, and the three-digit multiplier below is written as “1**”. Below the horizontal line, three partial products are listed, displayed in order as “22**”, “90*”, and “**2”, with a plus sign beside them; the final total product at the bottom is displayed as “56***”.\nReasoning: Let the three-digit number on top be N, and the multiplier below be 100+10d+e. The third partial product “**2” comes from multiplying N by the 1 in the hundreds place of the multiplier, so N itself is a three-digit number with units digit 2, written as N=100a+10b+2. The second partial product is “90*”, so N·d is a three-digit number between 900 and 909. Combining this with the fact that the units digit of N is 2, screen the one-digit d one by one: the possible results are (d,N)=(1,902),(2,452),(3,302). Then use the first partial product “22**” to screen, that is, it is required that 2200≤N·e≤2299. If N=902, there is no one-digit e that makes the product fall between 2200 and 2299; if N=302, there is also no one-digit e satisfying it; if N=452, then when e=5, 452×5=2260, matching “22**”. Therefore N=452, and the multiplier is 125. The complete multiplication is 452×125=56500, which also matches the final “56***”. The sum of the digits of the product is 5+6+5+0+0=16.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "In the image is a vertical multiplication.",
+        "label": "perception",
+        "source": "In the image is a vertical multiplication"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The three-digit number on top is written as “***”.",
+        "label": "perception",
+        "source": "The three-digit number on top is written as “***”"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The three-digit multiplier below is written as “1**”.",
+        "label": "perception",
+        "source": "The three-digit multiplier below is written as “1**”"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Three partial products are listed below the horizontal line.",
+        "label": "perception",
+        "source": "Three partial products are listed below the horizontal line"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The first partial product is displayed as “22**”.",
+        "label": "perception",
+        "source": "They are displayed in order as “22**”, “90*”, and “**2”"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The second partial product is displayed as “90*”.",
+        "label": "perception",
+        "source": "They are displayed in order as “22**”, “90*”, and “**2”"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The third partial product is displayed as “**2”.",
+        "label": "perception",
+        "source": "They are displayed in order as “22**”, “90*”, and “**2”"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The final total product at the bottom is displayed as “56***”.",
+        "label": "perception",
+        "source": "The final total product at the bottom is displayed as “56***”"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Let the three-digit number on top be N.",
+        "label": "reasoning",
+        "source": "Let the three-digit number on top be N"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Let the multiplier below be 100+10d+e.",
+        "label": "reasoning",
+        "source": "The following multiplier is 100+10d+e"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The third partial product “**2” comes from multiplying the 1 in the hundreds place of the multiplier by N.",
+        "label": "reasoning",
+        "source": "The third partial product “**2” comes from multiplying the 1 in the hundreds place of the multiplier by N"
+      },
+      {
+        "claim_id": 12,
+        "claim": "N itself is a three-digit number whose units digit is 2, and can be written as N=100a+10b+2.",
+        "label": "reasoning",
+        "source": "So N itself is a three-digit number whose units digit is 2, written as N=100a+10b+2"
+      },
+      {
+        "claim_id": 13,
+        "claim": "N·d is a three-digit number between 900 and 909.",
+        "label": "reasoning",
+        "source": "So N·d is a three-digit number between 900 and 909"
+      },
+      {
+        "claim_id": 14,
+        "claim": "After screening one-digit d in combination with N having units digit 2, it is possible to obtain (d,N)=(1,902),(2,452),(3,302).",
+        "label": "reasoning",
+        "source": "Combining with N having units digit 2, screen one-digit d one by one: it is possible to obtain (d,N)=(1,902),(2,452),(3,302)"
+      },
+      {
+        "claim_id": 15,
+        "claim": "When screening using the first partial product “22**”, 2200≤N·e≤2299 is needed.",
+        "label": "reasoning",
+        "source": "Then screen using the first partial product “22**”, that is, 2200≤N·e≤2299 is needed"
+      },
+      {
+        "claim_id": 16,
+        "claim": "If N=902, there is no one-digit e that makes the product fall between 2200 and 2299.",
+        "label": "reasoning",
+        "source": "If N=902, there is no one-digit e that makes the product fall between 2200 and 2299"
+      },
+      {
+        "claim_id": 17,
+        "claim": "If N=302, there is no one-digit e satisfying it.",
+        "label": "reasoning",
+        "source": "If N=302, there is also no one-digit e satisfying it"
+      },
+      {
+        "claim_id": 18,
+        "claim": "If N=452, then when e=5, 452×5=2260, which conforms to “22**”.",
+        "label": "reasoning",
+        "source": "If N=452, then when e=5, 452×5=2260, which conforms to “22**”"
+      },
+      {
+        "claim_id": 19,
+        "claim": "Therefore N=452.",
+        "label": "reasoning",
+        "source": "Therefore N=452"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The multiplier is 125.",
+        "label": "reasoning",
+        "source": "The multiplier is 125"
+      },
+      {
+        "claim_id": 21,
+        "claim": "The complete multiplication is 452×125=56500, which also matches the final “56***”.",
+        "label": "reasoning",
+        "source": "The complete multiplication is 452×125=56500, which also matches the final “56***”"
+      },
+      {
+        "claim_id": 22,
+        "claim": "The sum of the digits of the product is 5+6+5+0+0=16.",
+        "label": "reasoning",
+        "source": "The sum of the digits of the product is 5+6+5+0+0=16"
+      }
+    ],
+    "claim_count": 22,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "In the image is a vertical multiplication.",
+          "label": "perception",
+          "source": "In the image is a vertical multiplication"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The three-digit number on top is written as “***”.",
+          "label": "perception",
+          "source": "The three-digit number on top is written as “***”"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The three-digit multiplier below is written as “1**”.",
+          "label": "perception",
+          "source": "The three-digit multiplier below is written as “1**”"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Three partial products are listed below the horizontal line.",
+          "label": "perception",
+          "source": "Three partial products are listed below the horizontal line"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The first partial product is displayed as “22**”.",
+          "label": "perception",
+          "source": "They are displayed in order as “22**”, “90*”, and “**2”"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The second partial product is displayed as “90*”.",
+          "label": "perception",
+          "source": "They are displayed in order as “22**”, “90*”, and “**2”"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The third partial product is displayed as “**2”.",
+          "label": "perception",
+          "source": "They are displayed in order as “22**”, “90*”, and “**2”"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The final total product at the bottom is displayed as “56***”.",
+          "label": "perception",
+          "source": "The final total product at the bottom is displayed as “56***”"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Let the three-digit number on top be N.",
+          "label": "reasoning",
+          "source": "Let the three-digit number on top be N"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Let the multiplier below be 100+10d+e.",
+          "label": "reasoning",
+          "source": "The following multiplier is 100+10d+e"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The third partial product “**2” comes from multiplying the 1 in the hundreds place of the multiplier by N.",
+          "label": "reasoning",
+          "source": "The third partial product “**2” comes from multiplying the 1 in the hundreds place of the multiplier by N"
+        },
+        {
+          "claim_id": 12,
+          "claim": "N itself is a three-digit number whose units digit is 2, and can be written as N=100a+10b+2.",
+          "label": "reasoning",
+          "source": "So N itself is a three-digit number whose units digit is 2, written as N=100a+10b+2"
+        },
+        {
+          "claim_id": 13,
+          "claim": "N·d is a three-digit number between 900 and 909.",
+          "label": "reasoning",
+          "source": "So N·d is a three-digit number between 900 and 909"
+        },
+        {
+          "claim_id": 14,
+          "claim": "After screening one-digit d in combination with N having units digit 2, it is possible to obtain (d,N)=(1,902),(2,452),(3,302).",
+          "label": "reasoning",
+          "source": "Combining with N having units digit 2, screen one-digit d one by one: it is possible to obtain (d,N)=(1,902),(2,452),(3,302)"
+        },
+        {
+          "claim_id": 15,
+          "claim": "When screening using the first partial product “22**”, 2200≤N·e≤2299 is needed.",
+          "label": "reasoning",
+          "source": "Then screen using the first partial product “22**”, that is, 2200≤N·e≤2299 is needed"
+        },
+        {
+          "claim_id": 16,
+          "claim": "If N=902, there is no one-digit e that makes the product fall between 2200 and 2299.",
+          "label": "reasoning",
+          "source": "If N=902, there is no one-digit e that makes the product fall between 2200 and 2299"
+        },
+        {
+          "claim_id": 17,
+          "claim": "If N=302, there is no one-digit e satisfying it.",
+          "label": "reasoning",
+          "source": "If N=302, there is also no one-digit e satisfying it"
+        },
+        {
+          "claim_id": 18,
+          "claim": "If N=452, then when e=5, 452×5=2260, which conforms to “22**”.",
+          "label": "reasoning",
+          "source": "If N=452, then when e=5, 452×5=2260, which conforms to “22**”"
+        },
+        {
+          "claim_id": 19,
+          "claim": "Therefore N=452.",
+          "label": "reasoning",
+          "source": "Therefore N=452"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The multiplier is 125.",
+          "label": "reasoning",
+          "source": "The multiplier is 125"
+        },
+        {
+          "claim_id": 21,
+          "claim": "The complete multiplication is 452×125=56500, which also matches the final “56***”.",
+          "label": "reasoning",
+          "source": "The complete multiplication is 452×125=56500, which also matches the final “56***”"
+        },
+        {
+          "claim_id": 22,
+          "claim": "The sum of the digits of the product is 5+6+5+0+0=16.",
+          "label": "reasoning",
+          "source": "The sum of the digits of the product is 5+6+5+0+0=16"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的四处 over_split 问题合并相邻微声明，并保持其余声明不变；已重新顺序编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:28Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/08555_math_mathvision_open_4e496708039df356a902862c_d57a7d7c6b.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04189_math_mathvision_open_4e496708039df356a902862c_d57a7d7c6b.json"
+  }
+}

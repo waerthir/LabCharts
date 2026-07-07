@@ -1,0 +1,772 @@
+{
+  "pack_index": 3888,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00935:mathvision__open_c47fabe2d066703b3293819a__0e2d8129dec0",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_c47fabe2d066703b3293819a",
+    "source_problem_id": "open_c47fabe2d066703b3293819a",
+    "problem_run_key": "mathvision__open_c47fabe2d066703b3293819a__0e2d8129dec0",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00935.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00935.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00935.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00935.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In the (correct) calculation shown, some of the digits were replaced by the letters P, Q, R and S. What is the value of $P+Q+R+S$?\n<image1>",
+    "raw_answer_text": "15",
+    "open_variant_id": "open_c47fabe2d066703b3293819a",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "In the (correct) calculation shown in the image, some of the digits were replaced by the letters P, Q, R and S. What is the value of P+Q+R+S?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "15",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_5eae8b75e68f09066e0ff341",
+        "problem_id": "prob_a96af655a6481847e9f99380",
+        "node_type": "answer_claim",
+        "canonical_value": "15",
+        "surface_forms": [
+          "15"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_a7fec4e9764d06e4b2cecf74"
+        ],
+        "evidence_refs": [
+          "asset_a7fec4e9764d06e4b2cecf74"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "15"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T19:02:56Z",
+        "updated_at": "2026-04-06T19:02:56Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_c47fabe2d066703b3293819a",
+      "parent_problem_id": "prob_a96af655a6481847e9f99380",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "In the (correct) calculation shown in the image, some of the digits were replaced by the letters P, Q, R and S. What is the value of P+Q+R+S?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "15",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the (correct) calculation shown in the image, some of the digits were replaced by the letters P, Q, R and S. What is the value of P+Q+R+S?",
+    "raw_answer": "15",
+    "raw_standard_answer": "15",
+    "resolved_question_text": "In the (correct) calculation shown in the image, some of the digits were replaced by the letters P, Q, R and S. What is the value of P+Q+R+S?",
+    "resolved_answer": "15",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The image shows a vertical addition, the first row is P45, the second row has a plus sign in front, and the number is QRS; the result below the horizontal line is 654. Therefore it can be read as P45 + QRS = 654. Reasoning: Calculate by columns from right to left. Ones column: the ones digit of 5 + S is 4, so 5 + S = 14, obtaining S = 9, and carry 1 to the tens place. Tens column: the ones digit of 4 + R + 1 is 5, so R = 0, and this column has no carry to the hundreds place. Hundreds column: P + Q = 6. Therefore P + Q + R + S = 6 + 0 + 9 = 15.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_c47fabe2d066703b3293819a",
+      "problem_run_key": "mathvision__open_c47fabe2d066703b3293819a__0e2d8129dec0",
+      "question_text": "In the (correct) calculation shown in the image, some of the digits were replaced by the letters P, Q, R and S. What is the value of P+Q+R+S?",
+      "standard_answer": "15",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00935.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00935.png"
+      ],
+      "initial_multi_solution_score": 0.3917,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the image as a vertical addition: the top number is P45, the second number is QRS, and the result is 654. Work column by column from right to left with carries. Units column: 5+S has ones digit 4, so S=9 and carry 1. Tens column: 4+R+1 has ones digit 5, so R=0 and no carry. Hundreds column: P+Q equals 6. Therefore P+Q+R+S = 6+0+9 = 15.",
+          "CoT_raw": "图像描述：图中显示一个竖式加法，第一行是 P45，第二行前面有加号，数字是 QRS，横线下方的结果是 654。因此可读作 P45 + QRS = 654。\n推理：按列从右到左计算。个位列：5 + S 的个位数字是 4，所以 5 + S = 14，得到 S = 9，并向十位进 1。十位列：4 + R + 1 的个位数字是 5，所以 R = 0，且这一列没有向百位进位。百位列：P + Q = 6。因此 P + Q + R + S = 6 + 0 + 9 = 15。",
+          "model_answer": "15",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "15",
+              "predicted_part": "15",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中显示一个竖式加法，第一行是 P45，第二行前面有加号，数字是 QRS，横线下方的结果是 654。因此可读作 P45 + QRS = 654。\n推理：按列从右到左计算。个位列：5 + S 的个位数字是 4，所以 5 + S = 14，得到 S = 9，并向十位进 1。十位列：4 + R + 1 的个位数字是 5，所以 R = 0，且这一列没有向百位进位。百位列：P + Q = 6。因此 P + Q + R + S = 6 + 0 + 9 = 15。",
+          "answer_answer_check_final": "15",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "候选推理先描述图像再推理，符合多模态顺序要求；图像中的竖式确实为 P45 + QRS = 654。逐列进位分析与标准答案和方法草稿一致，最终得到 P+Q+R+S=15。无需修改。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中显示一个竖式加法，第一行是 P45，第二行前面有加号，数字是 QRS，横线下方的结果是 654。因此可读作 P45 + QRS = 654。\n推理：按列从右到左计算。个位列：5 + S 的个位数字是 4，所以 5 + S = 14，得到 S = 9，并向十位进 1。十位列：4 + R + 1 的个位数字是 5，所以 R = 0，且这一列没有向百位进位。百位列：P + Q = 6。因此 P + Q + R + S = 6 + 0 + 9 = 15。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route uses the standard vertical-addition carry mechanism directly, determining the unknowns by local column constraints.",
+            "image_role": "The image supplies the layout and digits of the calculation: P45 plus QRS equals 654, aligned in hundreds, tens, and units columns.",
+            "text_role": "The question states that P, Q, R, and S are digits replacing letters and asks for P+Q+R+S.",
+            "knowledge_role": "Use base-10 column addition and carry rules for each digit column."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中显示一个竖式加法，第一行是 P45，第二行前面有加号，数字是 QRS，横线下方的结果是 654。因此可读作 P45 + QRS = 654。\n推理：按列从右到左计算。个位列：5 + S 的个位数字是 4，所以 5 + S = 14，得到 S = 9，并向十位进 1。十位列：4 + R + 1 的个位数字是 5，所以 R = 0，且这一列没有向百位进位。百位列：P + Q = 6。因此 P + Q + R + S = 6 + 0 + 9 = 15。",
+            "model_answer": "15",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2706,
+              "completion_tokens": 446,
+              "total_tokens": 3152,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 7.946,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "候选推理先描述图像再推理，符合多模态顺序要求；图像中的竖式确实为 P45 + QRS = 654。逐列进位分析与标准答案和方法草稿一致，最终得到 P+Q+R+S=15。无需修改。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 6.927
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 7.969,
+              "usage_delta": {
+                "request_count": 8,
+                "successful_request_count": 8,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 8,
+                "requests_with_usage": 8,
+                "prompt_tokens": 20330,
+                "completion_tokens": 6493,
+                "total_tokens": 26823,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 123.686,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 6.951,
+              "usage_delta": {
+                "request_count": 5,
+                "successful_request_count": 7,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 5,
+                "requests_with_usage": 7,
+                "prompt_tokens": 20952,
+                "completion_tokens": 7183,
+                "total_tokens": 28135,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 143.23,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Read the displayed calculation as the numerical equation P45 + QRS = 654. Convert the two numbers into place-value expressions: P45 = 100P+45 and QRS = 100Q+10R+S. Then 100P+45+100Q+10R+S=654, so 100(P+Q)+10R+S=609. Taking the equation modulo 10 gives S=9. Substituting gives 100(P+Q)+10R=600, or 10(P+Q)+R=60. Since R is a digit, R must be 0 and P+Q=6. Thus P+Q+R+S=6+0+9=15.",
+          "CoT_raw": "图像描述：图中是一道竖式加法，第一行是 P45，第二行是 +QRS，横线下面的结果是 654。因此图中计算可读为 P45 + QRS = 654。推理：把两个三位数写成位值表达式，P45 = 100P + 45，QRS = 100Q + 10R + S。所以 100P + 45 + 100Q + 10R + S = 654，即 100(P+Q) + 10R + S = 609。对个位看，S = 9。代入后得到 100(P+Q) + 10R = 600，也就是 10(P+Q) + R = 60。因为 R 是一位数字，所以 R = 0，且 P+Q = 6。因此 P+Q+R+S = 6 + 0 + 9 = 15。",
+          "model_answer": "15",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "15",
+              "predicted_part": "15",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一道竖式加法，第一行是 P45，第二行是 +QRS，横线下面的结果是 654。因此图中计算可读为 P45 + QRS = 654。推理：把两个三位数写成位值表达式，P45 = 100P + 45，QRS = 100Q + 10R + S。所以 100P + 45 + 100Q + 10R + S = 654，即 100(P+Q) + 10R + S = 609。对个位看，S = 9。代入后得到 100(P+Q) + 10R = 600，也就是 10(P+Q) + R = 60。因为 R 是一位数字，所以 R = 0，且 P+Q = 6。因此 P+Q+R+S = 6 + 0 + 9 = 15。",
+          "answer_answer_check_final": "15",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理链符合要求：先描述图像再推理，图像读取为竖式 P45 + QRS = 654 与所附图片一致；代数转换和个位/整式推导正确；最终答案 15 与标准答案一致。无需修改。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一道竖式加法，第一行是 P45，第二行是 +QRS，横线下面的结果是 654。因此图中计算可读为 P45 + QRS = 654。推理：把两个三位数写成位值表达式，P45 = 100P + 45，QRS = 100Q + 10R + S。所以 100P + 45 + 100Q + 10R + S = 654，即 100(P+Q) + 10R + S = 609。对个位看，S = 9。代入后得到 100(P+Q) + 10R = 600，也就是 10(P+Q) + R = 60。因为 R 是一位数字，所以 R = 0，且 P+Q = 6。因此 P+Q+R+S = 6 + 0 + 9 = 15。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route treats the visual addition as a single algebraic place-value equation, using modular and digit-size constraints rather than explicitly tracking carries column by column.",
+            "image_role": "The image is used to identify the exact equation P45 + QRS = 654 and the placement of each letter in hundreds, tens, or units positions.",
+            "text_role": "The text clarifies that the letters stand for digits and that the required final quantity is the sum P+Q+R+S.",
+            "knowledge_role": "Use decimal place-value expansion, modular arithmetic modulo 10, and the fact that each letter represents a digit from 0 to 9, with leading letters representing valid number digits."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一道竖式加法，第一行是 P45，第二行是 +QRS，横线下面的结果是 654。因此图中计算可读为 P45 + QRS = 654。推理：把两个三位数写成位值表达式，P45 = 100P + 45，QRS = 100Q + 10R + S。所以 100P + 45 + 100Q + 10R + S = 654，即 100(P+Q) + 10R + S = 609。对个位看，S = 9。代入后得到 100(P+Q) + 10R = 600，也就是 10(P+Q) + R = 60。因为 R 是一位数字，所以 R = 0，且 P+Q = 6。因此 P+Q+R+S = 6 + 0 + 9 = 15。",
+            "model_answer": "15",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2742,
+              "completion_tokens": 536,
+              "total_tokens": 3278,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 10.589,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理链符合要求：先描述图像再推理，图像读取为竖式 P45 + QRS = 654 与所附图片一致；代数转换和个位/整式推导正确；最终答案 15 与标准答案一致。无需修改。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 8.741
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 10.612,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 13,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 13,
+                "prompt_tokens": 32623,
+                "completion_tokens": 16375,
+                "total_tokens": 48998,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 298.912,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 8.757,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 13,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 13,
+                "prompt_tokens": 34011,
+                "completion_tokens": 9530,
+                "total_tokens": 43541,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 314.817,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 18.275,
+          "usage_delta": {
+            "request_count": 13,
+            "successful_request_count": 3,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 13,
+            "requests_with_usage": 3,
+            "prompt_tokens": 8170,
+            "completion_tokens": 1993,
+            "total_tokens": 10163,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 37.254,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1417",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00935.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_a96af655a6481847e9f99380",
+          "open_variant_count": 1,
+          "open_variant_id": "open_c47fabe2d066703b3293819a",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "asset_registry_record.llm_used=true"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 52.612,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 14182,
+        "completion_tokens": 2715,
+        "total_tokens": 16897,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 52.446,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the (correct) calculation shown in the image, some of the digits were replaced by the letters P, Q, R and S. What is the value of P+Q+R+S?",
+      "answer": "15",
+      "final_cot": "Image description: The image shows a vertical addition, the first row is P45, the second row has a plus sign in front, and the number is QRS; the result below the horizontal line is 654. Therefore it can be read as P45 + QRS = 654.\nReasoning: Calculate by columns from right to left. Ones column: the ones digit of 5 + S is 4, so 5 + S = 14, obtaining S = 9, and carry 1 to the tens place. Tens column: the ones digit of 4 + R + 1 is 5, so R = 0, and this column has no carry to the hundreds place. Hundreds column: P + Q = 6. Therefore P + Q + R + S = 6 + 0 + 9 = 15.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "候选推理先描述图像再推理，符合多模态顺序要求；图像中的竖式确实为 P45 + QRS = 654。逐列进位分析与标准答案和方法草稿一致，最终得到 P+Q+R+S=15。无需修改。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 6.927
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理链符合要求：先描述图像再推理，图像读取为竖式 P45 + QRS = 654 与所附图片一致；代数转换和个位/整式推导正确；最终答案 15 与标准答案一致。无需修改。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 8.741
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 2058,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00935.json",
+        "source_sample_filename": "mathvision00935.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00935.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T16:28:41Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_c47fabe2d066703b3293819a",
+          "new_problem_id": "open_c47fabe2d066703b3293819a",
+          "old_problem_run_key": "mathvision__open_c47fabe2d066703b3293819a__0e2d8129dec0",
+          "new_problem_run_key": "mathvision__open_c47fabe2d066703b3293819a__0e2d8129dec0",
+          "target_relpath": "math/mathvision/samples/mathvision00935.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_c47fabe2d066703b3293819a",
+    "problem_run_key": "mathvision__open_c47fabe2d066703b3293819a__0e2d8129dec0",
+    "raw_question_text": "In the (correct) calculation shown in the image, some of the digits were replaced by the letters P, Q, R and S. What is the value of P+Q+R+S?",
+    "raw_answer": "15",
+    "raw_standard_answer": "15",
+    "resolved_question_text": "In the (correct) calculation shown in the image, some of the digits were replaced by the letters P, Q, R and S. What is the value of P+Q+R+S?",
+    "resolved_answer": "15",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The image shows a vertical addition, the first row is P45, the second row has a plus sign in front, and the number is QRS; the result below the horizontal line is 654. Therefore it can be read as P45 + QRS = 654.\nReasoning: Calculate by columns from right to left. Ones column: the ones digit of 5 + S is 4, so 5 + S = 14, obtaining S = 9, and carry 1 to the tens place. Tens column: the ones digit of 4 + R + 1 is 5, so R = 0, and this column has no carry to the hundreds place. Hundreds column: P + Q = 6. Therefore P + Q + R + S = 6 + 0 + 9 = 15.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The image shows a vertical addition.",
+        "label": "perception",
+        "source": "The image shows a vertical addition"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The first row is P45.",
+        "label": "perception",
+        "source": "The first row is P45"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The second row has a plus sign in front.",
+        "label": "perception",
+        "source": "The second row has a plus sign in front"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The number in the second row is QRS.",
+        "label": "perception",
+        "source": "The number is QRS"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The result below the horizontal line is 654.",
+        "label": "perception",
+        "source": "The result below the horizontal line is 654"
+      },
+      {
+        "claim_id": 6,
+        "claim": "This vertical calculation can be read as P45 + QRS = 654.",
+        "label": "reasoning",
+        "source": "Therefore it can be read as P45 + QRS = 654"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Calculate by columns from right to left.",
+        "label": "reasoning",
+        "source": "Calculate by columns from right to left"
+      },
+      {
+        "claim_id": 8,
+        "claim": "In the ones column, the ones digit of 5 + S is 4.",
+        "label": "reasoning",
+        "source": "Ones column: the ones digit of 5 + S is 4"
+      },
+      {
+        "claim_id": 9,
+        "claim": "In the ones column, 5 + S = 14.",
+        "label": "reasoning",
+        "source": "So 5 + S = 14"
+      },
+      {
+        "claim_id": 10,
+        "claim": "S = 9。",
+        "label": "reasoning",
+        "source": "Get S = 9"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The ones column carries 1 to the tens place.",
+        "label": "reasoning",
+        "source": "And carry 1 to the tens place"
+      },
+      {
+        "claim_id": 12,
+        "claim": "In the tens column, the ones digit of 4 + R + 1 is 5.",
+        "label": "reasoning",
+        "source": "Tens column: the ones digit of 4 + R + 1 is 5"
+      },
+      {
+        "claim_id": 13,
+        "claim": "R = 0。",
+        "label": "reasoning",
+        "source": "So R = 0"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The tens column does not carry to the hundreds place.",
+        "label": "reasoning",
+        "source": "And this column does not carry to the hundreds place"
+      },
+      {
+        "claim_id": 15,
+        "claim": "In the hundreds column, P + Q = 6.",
+        "label": "reasoning",
+        "source": "Hundreds column: P + Q = 6"
+      },
+      {
+        "claim_id": 16,
+        "claim": "P + Q + R + S = 6 + 0 + 9。",
+        "label": "reasoning",
+        "source": "Therefore P + Q + R + S = 6 + 0 + 9 = 15"
+      },
+      {
+        "claim_id": 17,
+        "claim": "P + Q + R + S = 15。",
+        "label": "reasoning",
+        "source": "Therefore P + Q + R + S = 6 + 0 + 9 = 15"
+      }
+    ],
+    "claim_count": 17,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The image shows a vertical addition.",
+          "label": "perception",
+          "source": "The image shows a vertical addition"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The first row is P45.",
+          "label": "perception",
+          "source": "The first row is P45"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The second row has a plus sign in front.",
+          "label": "perception",
+          "source": "The second row has a plus sign in front"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The number in the second row is QRS.",
+          "label": "perception",
+          "source": "The number is QRS"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The result below the horizontal line is 654.",
+          "label": "perception",
+          "source": "The result below the horizontal line is 654"
+        },
+        {
+          "claim_id": 6,
+          "claim": "This vertical calculation can be read as P45 + QRS = 654.",
+          "label": "reasoning",
+          "source": "Therefore it can be read as P45 + QRS = 654"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Calculate by columns from right to left.",
+          "label": "reasoning",
+          "source": "Calculate by columns from right to left"
+        },
+        {
+          "claim_id": 8,
+          "claim": "In the ones column, the ones digit of 5 + S is 4.",
+          "label": "reasoning",
+          "source": "Ones column: the ones digit of 5 + S is 4"
+        },
+        {
+          "claim_id": 9,
+          "claim": "In the ones column, 5 + S = 14.",
+          "label": "reasoning",
+          "source": "So 5 + S = 14"
+        },
+        {
+          "claim_id": 10,
+          "claim": "S = 9。",
+          "label": "reasoning",
+          "source": "Get S = 9"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The ones column carries 1 to the tens place.",
+          "label": "reasoning",
+          "source": "And carry 1 to the tens place"
+        },
+        {
+          "claim_id": 12,
+          "claim": "In the tens column, the ones digit of 4 + R + 1 is 5.",
+          "label": "reasoning",
+          "source": "Tens column: the ones digit of 4 + R + 1 is 5"
+        },
+        {
+          "claim_id": 13,
+          "claim": "R = 0。",
+          "label": "reasoning",
+          "source": "So R = 0"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The tens column does not carry to the hundreds place.",
+          "label": "reasoning",
+          "source": "And this column does not carry to the hundreds place"
+        },
+        {
+          "claim_id": 15,
+          "claim": "In the hundreds column, P + Q = 6.",
+          "label": "reasoning",
+          "source": "Hundreds column: P + Q = 6"
+        },
+        {
+          "claim_id": 16,
+          "claim": "P + Q + R + S = 6 + 0 + 9。",
+          "label": "reasoning",
+          "source": "Therefore P + Q + R + S = 6 + 0 + 9 = 15"
+        },
+        {
+          "claim_id": 17,
+          "claim": "P + Q + R + S = 15。",
+          "label": "reasoning",
+          "source": "Therefore P + Q + R + S = 6 + 0 + 9 = 15"
+        }
+      ],
+      "coverage_notes": "All explicit observations and calculation steps in the final_cot are covered in order."
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T09:44:49Z",
+    "changed_target_fields": 65,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

@@ -1,0 +1,866 @@
+{
+  "pack_index": 3719,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00417:mathvision__open_54dc5ef0d949d4545c5ea40c__e04940602007",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_54dc5ef0d949d4545c5ea40c",
+    "source_problem_id": "open_54dc5ef0d949d4545c5ea40c",
+    "problem_run_key": "mathvision__open_54dc5ef0d949d4545c5ea40c__e04940602007",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00417.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00417.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00417.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00417.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "The diagram shows the floor plan of Renate's house. Renate enters her house from the terrace (Terrasse) and walks through every door of the house exactly once. Which room does she end up in?\n<image1>",
+    "raw_answer_text": "2",
+    "open_variant_id": "open_54dc5ef0d949d4545c5ea40c",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "The diagram shows the floor plan of Renate's house. Renate enters her house from the terrace (Terrasse) and walks through every door of the house exactly once. Which room does she end up in?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "2",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_9b2e42a58f4c1436978d1916",
+        "problem_id": "prob_8e213c3eb28889b09fdbdb81",
+        "node_type": "answer_claim",
+        "canonical_value": "2",
+        "surface_forms": [
+          "2"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_7c13dcb403d506b0bd28b549"
+        ],
+        "evidence_refs": [
+          "asset_7c13dcb403d506b0bd28b549"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "2"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-05T13:01:47Z",
+        "updated_at": "2026-04-05T13:01:47Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_54dc5ef0d949d4545c5ea40c",
+      "parent_problem_id": "prob_8e213c3eb28889b09fdbdb81",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "The diagram shows the floor plan of Renate's house. Renate enters her house from the terrace (Terrasse) and walks through every door of the house exactly once. Which room does she end up in?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "2",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "The diagram shows the floor plan of Renate's house. Renate enters her house from the terrace (Terrasse) and walks through every door of the house exactly once. Which room does she end up in?",
+    "raw_answer": "2",
+    "raw_standard_answer": "2",
+    "resolved_question_text": "The diagram shows the floor plan of Renate's house. Renate enters her house from the terrace (Terrasse) and walks through every door of the house exactly once. Which room does she end up in?",
+    "resolved_answer": "2",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: This is a house floor plan, the bottom is an entire terrace labeled “Terrasse”, above it is divided into three rooms 1, 2, 3, the lower left is 4, and the lower right is 5. The doorways in the figure are represented by short diagonal lines, so each door can be regarded as an edge of the graph. Then reason: The door connections readable from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5. Thus the degree of each point is: the degree of Terrasse is 1, the degree of room 4 is 2, the degree of room 1 is 2, the degree of room 2 is 3, the degree of room 3 is 2, and the degree of room 5 is 2. Renate wants “to pass through every door exactly once”, this is an Euler path. The start point and end point of an Euler path are exactly the two odd-degree vertices. She starts from Terrasse, and the other odd-degree vertex is room 2, so she will finally end in room 2.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_54dc5ef0d949d4545c5ea40c",
+      "problem_run_key": "mathvision__open_54dc5ef0d949d4545c5ea40c__e04940602007",
+      "question_text": "The diagram shows the floor plan of Renate's house. Renate enters her house from the terrace (Terrasse) and walks through every door of the house exactly once. Which room does she end up in?",
+      "standard_answer": "2",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00417.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00417.png"
+      ],
+      "initial_multi_solution_score": 0.3647,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First read the floor-plan image as a graph: vertices are Terrasse and rooms 1, 2, 3, 4, 5; each visible door gap is an edge. From the image, the door adjacencies are Terrasse-4, 4-1, 1-2, 2-3, 2-5, and 3-5. Then use the text condition that Renate starts at Terrasse and crosses every door exactly once, i.e. she makes an Euler trail starting at Terrasse. Count incident doors: Terrasse has degree 1, room 4 has degree 2, room 1 has degree 2, room 2 has degree 3, room 3 has degree 2, and room 5 has degree 2. In an Euler trail, the endpoints are exactly the odd-degree vertices. Since one odd vertex is the starting Terrasse, the other odd vertex is room 2, so she ends in room 2.",
+          "CoT_raw": "先描述图像：这是一张房屋平面图，底部是一整条标着“Terrasse”的露台，上方分成 1、2、3 三个房间，左下是 4，右下是 5。图中的门口用斜短线表示，所以可以把每个门看成图的一条边。\n\n再推理：从图上可读出的门连接是 Terrasse-4、4-1、1-2、2-3、2-5、3-5。于是各点度数为：Terrasse 的度数 1，房间 4 的度数 2，房间 1 的度数 2，房间 2 的度数 3，房间 3 的度数 2，房间 5 的度数 2。Renate 要“每条门都恰好经过一次”，这就是一条欧拉通路。欧拉通路的起点和终点正好是两个奇度顶点。她从 Terrasse 出发，而另一个奇度顶点是房间 2，所以她最后会结束在房间 2。",
+          "model_answer": "2",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "2",
+              "predicted_part": "2",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：这是一张房屋平面图，底部是一整条标着“Terrasse”的露台，上方分成 1、2、3 三个房间，左下是 4，右下是 5。图中的门口用斜短线表示，所以可以把每个门看成图的一条边。\n\n再推理：从图上可读出的门连接是 Terrasse-4、4-1、1-2、2-3、2-5、3-5。于是各点度数为：Terrasse 的度数 1，房间 4 的度数 2，房间 1 的度数 2，房间 2 的度数 3，房间 3 的度数 2，房间 5 的度数 2。Renate 要“每条门都恰好经过一次”，这就是一条欧拉通路。欧拉通路的起点和终点正好是两个奇度顶点。她从 Terrasse 出发，而另一个奇度顶点是房间 2，所以她最后会结束在房间 2。",
+          "answer_answer_check_final": "2",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "无需修改。候选推理先描述图像再推理，正确将房间和露台建模为图的顶点、将门建模为边；读取的门连接关系与图像一致，欧拉通路奇度顶点推理正确，最终答案与标准答案 2 一致。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：这是一张房屋平面图，底部是一整条标着“Terrasse”的露台，上方分成 1、2、3 三个房间，左下是 4，右下是 5。图中的门口用斜短线表示，所以可以把每个门看成图的一条边。\n\n再推理：从图上可读出的门连接是 Terrasse-4、4-1、1-2、2-3、2-5、3-5。于是各点度数为：Terrasse 的度数 1，房间 4 的度数 2，房间 1 的度数 2，房间 2 的度数 3，房间 3 的度数 2，房间 5 的度数 2。Renate 要“每条门都恰好经过一次”，这就是一条欧拉通路。欧拉通路的起点和终点正好是两个奇度顶点。她从 Terrasse 出发，而另一个奇度顶点是房间 2，所以她最后会结束在房间 2。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Uses the global Euler-trail parity theorem via degree counting; it does not need to construct the actual walking route.",
+            "image_role": "Read the labeled rooms and all visible door connections: Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5, with no other doors shown.",
+            "text_role": "Use that Renate enters from the terrace and walks through every door exactly once, and the question asks for the final room.",
+            "knowledge_role": "Bridge the floor plan to graph theory: rooms/terrace are vertices, doors are edges; an Euler trail begins and ends at the two odd-degree vertices."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：这是一张房屋平面图，底部是一整条标着“Terrasse”的露台，上方分成 1、2、3 三个房间，左下是 4，右下是 5。图中的门口用斜短线表示，所以可以把每个门看成图的一条边。\n\n再推理：从图上可读出的门连接是 Terrasse-4、4-1、1-2、2-3、2-5、3-5。于是各点度数为：Terrasse 的度数 1，房间 4 的度数 2，房间 1 的度数 2，房间 2 的度数 3，房间 3 的度数 2，房间 5 的度数 2。Renate 要“每条门都恰好经过一次”，这就是一条欧拉通路。欧拉通路的起点和终点正好是两个奇度顶点。她从 Terrasse 出发，而另一个奇度顶点是房间 2，所以她最后会结束在房间 2。",
+            "model_answer": "2",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 3196,
+              "completion_tokens": 811,
+              "total_tokens": 4007,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 18.672,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "无需修改。候选推理先描述图像再推理，正确将房间和露台建模为图的顶点、将门建模为边；读取的门连接关系与图像一致，欧拉通路奇度顶点推理正确，最终答案与标准答案 2 一致。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 22.128
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 18.69,
+              "usage_delta": {
+                "request_count": 15,
+                "successful_request_count": 18,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 15,
+                "requests_with_usage": 18,
+                "prompt_tokens": 50163,
+                "completion_tokens": 20299,
+                "total_tokens": 70462,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 409.435,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 22.15,
+              "usage_delta": {
+                "request_count": 14,
+                "successful_request_count": 16,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 14,
+                "requests_with_usage": 16,
+                "prompt_tokens": 48618,
+                "completion_tokens": 12844,
+                "total_tokens": 61462,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 284.257,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "First describe the image structure: the terrace has only one visible door into room 4; room 4 connects upward to room 1; room 1 connects to room 2; room 2 connects to rooms 1, 3, and 5; room 3 connects to rooms 2 and 5; room 5 connects to rooms 2 and 3. Now follow a concrete valid door-by-door walk required by the text. Starting at Terrasse, the first door must be Terrasse -> 4. From room 4, after using the terrace door, the only unused exit is 4 -> 1. From room 1, the only unused exit is 1 -> 2. The remaining unused doors form the small cycle between rooms 2, 3, and 5: use either 2 -> 3 -> 5 -> 2 or 2 -> 5 -> 3 -> 2. In both cases every listed door is used exactly once and the final room is 2.",
+          "CoT_raw": "图像描述：底部灰色区域标有“Terrasse”，其上方是房间4和5；上排从左到右是房间1、2、3。图中可见门洞连接为：Terrasse只通向房间4；房间4通向房间1；房间1通向房间2；房间2通向房间3和房间5；房间3通向房间5。推理：Renate从Terrasse进入，第一扇门必须走Terrasse -> 4。到房间4后，未走过的唯一门是4 -> 1。到房间1后，未走过的唯一门是1 -> 2。剩下房间2、3、5之间的门可按2 -> 3 -> 5 -> 2走完，或按2 -> 5 -> 3 -> 2走完。两种情况下所有门都恰好走一次，最后都在房间2。",
+          "model_answer": "2",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "2",
+              "predicted_part": "2",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：底部灰色区域标有“Terrasse”，其上方是房间4和5；上排从左到右是房间1、2、3。图中可见门洞连接为：Terrasse只通向房间4；房间4通向房间1；房间1通向房间2；房间2通向房间3和房间5；房间3通向房间5。推理：Renate从Terrasse进入，第一扇门必须走Terrasse -> 4。到房间4后，未走过的唯一门是4 -> 1。到房间1后，未走过的唯一门是1 -> 2。剩下房间2、3、5之间的门可按2 -> 3 -> 5 -> 2走完，或按2 -> 5 -> 3 -> 2走完。两种情况下所有门都恰好走一次，最后都在房间2。",
+          "answer_answer_check_final": "2",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace first describes the image, then reasons from the door graph, matches the assigned method draft, and ends with the standard answer 2.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：底部灰色区域标有“Terrasse”，其上方是房间4和5；上排从左到右是房间1、2、3。图中可见门洞连接为：Terrasse只通向房间4；房间4通向房间1；房间1通向房间2；房间2通向房间3和房间5；房间3通向房间5。推理：Renate从Terrasse进入，第一扇门必须走Terrasse -> 4。到房间4后，未走过的唯一门是4 -> 1。到房间1后，未走过的唯一门是1 -> 2。剩下房间2、3、5之间的门可按2 -> 3 -> 5 -> 2走完，或按2 -> 5 -> 3 -> 2走完。两种情况下所有门都恰好走一次，最后都在房间2。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Weakly distinct: instead of relying primarily on odd-degree counting, this constructs/forces an explicit traversal from the terrace and checks that the remaining cycle returns to room 2. It still uses the same graph interpretation of the floor plan.",
+            "image_role": "Read the one entrance from Terrasse to room 4 and the subsequent door network among rooms 1, 2, 3, 4, and 5, especially the triangle/cycle 2-3-5-2.",
+            "text_role": "Use the instruction that Renate starts from Terrasse and must pass through every door exactly once.",
+            "knowledge_role": "Bridge visual doors to possible moves; use forced-move reasoning at rooms with only one unused continuation, plus recognition that a remaining cycle returns to its starting room."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：底部灰色区域标有“Terrasse”，其上方是房间4和5；上排从左到右是房间1、2、3。图中可见门洞连接为：Terrasse只通向房间4；房间4通向房间1；房间1通向房间2；房间2通向房间3和房间5；房间3通向房间5。推理：Renate从Terrasse进入，第一扇门必须走Terrasse -> 4。到房间4后，未走过的唯一门是4 -> 1。到房间1后，未走过的唯一门是1 -> 2。剩下房间2、3、5之间的门可按2 -> 3 -> 5 -> 2走完，或按2 -> 5 -> 3 -> 2走完。两种情况下所有门都恰好走一次，最后都在房间2。",
+            "model_answer": "2",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 3204,
+              "completion_tokens": 1295,
+              "total_tokens": 4499,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 22.811,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace first describes the image, then reasons from the door graph, matches the assigned method draft, and ends with the standard answer 2.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 22.443
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 22.833,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 16,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 16,
+                "prompt_tokens": 52572,
+                "completion_tokens": 25554,
+                "total_tokens": 78126,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 505.218,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 22.464,
+              "usage_delta": {
+                "request_count": 10,
+                "successful_request_count": 14,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 10,
+                "requests_with_usage": 14,
+                "prompt_tokens": 41296,
+                "completion_tokens": 14274,
+                "total_tokens": 55570,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 296.69,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 48.956,
+          "usage_delta": {
+            "request_count": 42,
+            "successful_request_count": 40,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 42,
+            "requests_with_usage": 40,
+            "prompt_tokens": 111605,
+            "completion_tokens": 37957,
+            "total_tokens": 149562,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 772.635,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "307",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00417.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_8e213c3eb28889b09fdbdb81",
+          "open_variant_count": 1,
+          "open_variant_id": "open_54dc5ef0d949d4545c5ea40c",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "Metadata extraction_notes state that the answer is a numeric label with no option mapping provided.",
+            "Top-level image_paths and metadata.image_paths are inconsistent."
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 135.124,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 16590,
+        "completion_tokens": 6736,
+        "total_tokens": 23326,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 134.973,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "The diagram shows the floor plan of Renate's house. Renate enters her house from the terrace (Terrasse) and walks through every door of the house exactly once. Which room does she end up in?",
+      "answer": "2",
+      "final_cot": "First describe the image: This is a house floor plan, the bottom is an entire terrace labeled “Terrasse”, above it is divided into three rooms 1, 2, 3, the lower left is 4, and the lower right is 5. The doorways in the figure are represented by short diagonal lines, so each door can be regarded as an edge of the graph.\n\nThen reason: The door connections readable from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5. Thus the degree of each point is: the degree of Terrasse is 1, the degree of room 4 is 2, the degree of room 1 is 2, the degree of room 2 is 3, the degree of room 3 is 2, and the degree of room 5 is 2. Renate wants “to pass through every door exactly once”, this is an Euler path. The start point and end point of an Euler path are exactly the two odd-degree vertices. She starts from Terrasse, and the other odd-degree vertex is room 2, so she will finally end in room 2.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "无需修改。候选推理先描述图像再推理，正确将房间和露台建模为图的顶点、将门建模为边；读取的门连接关系与图像一致，欧拉通路奇度顶点推理正确，最终答案与标准答案 2 一致。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 22.128
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace first describes the image, then reasons from the door graph, matches the assigned method draft, and ends with the standard answer 2.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 22.443
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1540,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00417.json",
+        "source_sample_filename": "mathvision00417.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00417.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T13:38:21Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_54dc5ef0d949d4545c5ea40c",
+          "new_problem_id": "open_54dc5ef0d949d4545c5ea40c",
+          "old_problem_run_key": "mathvision__open_54dc5ef0d949d4545c5ea40c__e04940602007",
+          "new_problem_run_key": "mathvision__open_54dc5ef0d949d4545c5ea40c__e04940602007",
+          "target_relpath": "math/mathvision/samples/mathvision00417.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_54dc5ef0d949d4545c5ea40c",
+    "problem_run_key": "mathvision__open_54dc5ef0d949d4545c5ea40c__e04940602007",
+    "raw_question_text": "The diagram shows the floor plan of Renate's house. Renate enters her house from the terrace (Terrasse) and walks through every door of the house exactly once. Which room does she end up in?",
+    "raw_answer": "2",
+    "raw_standard_answer": "2",
+    "resolved_question_text": "The diagram shows the floor plan of Renate's house. Renate enters her house from the terrace (Terrasse) and walks through every door of the house exactly once. Which room does she end up in?",
+    "resolved_answer": "2",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: This is a house floor plan, the bottom is an entire terrace labeled “Terrasse”, above it is divided into three rooms 1, 2, 3, the lower left is 4, and the lower right is 5. The doorways in the figure are represented by short diagonal lines, so each door can be regarded as an edge of the graph.\n\nThen reason: The door connections readable from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5. Thus the degree of each point is: the degree of Terrasse is 1, the degree of room 4 is 2, the degree of room 1 is 2, the degree of room 2 is 3, the degree of room 3 is 2, and the degree of room 5 is 2. Renate wants “to pass through every door exactly once”, this is an Euler path. The start point and end point of an Euler path are exactly the two odd-degree vertices. She starts from Terrasse, and the other odd-degree vertex is room 2, so she will finally end in room 2.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The image is a house floor plan.",
+        "label": "perception",
+        "source": "This is a house floor plan"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The bottom is an entire terrace labeled “Terrasse”.",
+        "label": "perception",
+        "source": "The bottom is an entire terrace labeled “Terrasse”"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Above the terrace is divided into three rooms 1, 2, 3.",
+        "label": "perception",
+        "source": "Above it is divided into three rooms 1, 2, 3"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The lower left is 4.",
+        "label": "perception",
+        "source": "The lower left is 4"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The lower right is 5.",
+        "label": "perception",
+        "source": "The lower right is 5"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The doorway in the figure is represented by a short diagonal line.",
+        "label": "perception",
+        "source": "The doorway in the figure is represented by a short diagonal line"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Each door can be regarded as an edge of the graph.",
+        "label": "reasoning",
+        "source": "Therefore each door can be regarded as an edge of the graph"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The door connections that can be read from the figure include Terrasse-4.",
+        "label": "perception",
+        "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The door connections that can be read from the figure include 4-1.",
+        "label": "perception",
+        "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The door connections that can be read from the figure include 1-2.",
+        "label": "perception",
+        "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The door connections that can be read from the figure include 2-3.",
+        "label": "perception",
+        "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The door connections that can be read from the figure include 2-5.",
+        "label": "perception",
+        "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The door connections that can be read from the figure include 3-5.",
+        "label": "perception",
+        "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The degree of Terrasse is 1.",
+        "label": "reasoning",
+        "source": "Degree of Terrasse 1"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The degree of room 4 is 2.",
+        "label": "reasoning",
+        "source": "Degree of room 4 2"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The degree of room 1 is 2.",
+        "label": "reasoning",
+        "source": "Degree of room 1 2"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The degree of room 2 is 3.",
+        "label": "reasoning",
+        "source": "Degree of room 2 3"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The degree of room 3 is 2.",
+        "label": "reasoning",
+        "source": "Degree of room 3 2"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The degree of room 5 is 2.",
+        "label": "reasoning",
+        "source": "Degree of room 5 2"
+      },
+      {
+        "claim_id": 20,
+        "claim": "Renate wants to “pass through each door exactly once”.",
+        "label": "perception",
+        "source": "Renate wants “each door to be passed through exactly once”"
+      },
+      {
+        "claim_id": 21,
+        "claim": "Renate's route is an Eulerian trail.",
+        "label": "reasoning",
+        "source": "This is an Eulerian trail"
+      },
+      {
+        "claim_id": 22,
+        "claim": "The starting point and ending point of an Eulerian trail are exactly the two vertices of odd degree.",
+        "label": "knowledge",
+        "source": "The starting point and ending point of an Eulerian trail are exactly the two vertices of odd degree"
+      },
+      {
+        "claim_id": 23,
+        "claim": "Renate starts from Terrasse.",
+        "label": "perception",
+        "source": "She starts from Terrasse"
+      },
+      {
+        "claim_id": 24,
+        "claim": "The other vertex of odd degree is room 2.",
+        "label": "reasoning",
+        "source": "The other vertex of odd degree is room 2"
+      },
+      {
+        "claim_id": 25,
+        "claim": "Renate will finally end in room 2.",
+        "label": "reasoning",
+        "source": "So she will finally end in room 2"
+      }
+    ],
+    "claim_count": 25,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The image is a house floor plan.",
+          "label": "perception",
+          "source": "This is a house floor plan"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The bottom is an entire terrace labeled “Terrasse”.",
+          "label": "perception",
+          "source": "The bottom is an entire terrace labeled “Terrasse”"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Above the terrace is divided into three rooms 1, 2, 3.",
+          "label": "perception",
+          "source": "Above it is divided into three rooms 1, 2, 3"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The lower left is 4.",
+          "label": "perception",
+          "source": "The lower left is 4"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The lower right is 5.",
+          "label": "perception",
+          "source": "The lower right is 5"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The doorway in the figure is represented by a short diagonal line.",
+          "label": "perception",
+          "source": "The doorway in the figure is represented by a short diagonal line"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Each door can be regarded as an edge of the graph.",
+          "label": "reasoning",
+          "source": "Therefore each door can be regarded as an edge of the graph"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The door connections that can be read from the figure include Terrasse-4.",
+          "label": "perception",
+          "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The door connections that can be read from the figure include 4-1.",
+          "label": "perception",
+          "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The door connections that can be read from the figure include 1-2.",
+          "label": "perception",
+          "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The door connections that can be read from the figure include 2-3.",
+          "label": "perception",
+          "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The door connections that can be read from the figure include 2-5.",
+          "label": "perception",
+          "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The door connections that can be read from the figure include 3-5.",
+          "label": "perception",
+          "source": "The door connections that can be read from the figure are Terrasse-4, 4-1, 1-2, 2-3, 2-5, 3-5"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The degree of Terrasse is 1.",
+          "label": "reasoning",
+          "source": "Degree of Terrasse 1"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The degree of room 4 is 2.",
+          "label": "reasoning",
+          "source": "Degree of room 4 2"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The degree of room 1 is 2.",
+          "label": "reasoning",
+          "source": "Degree of room 1 2"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The degree of room 2 is 3.",
+          "label": "reasoning",
+          "source": "Degree of room 2 3"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The degree of room 3 is 2.",
+          "label": "reasoning",
+          "source": "Degree of room 3 2"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The degree of room 5 is 2.",
+          "label": "reasoning",
+          "source": "Degree of room 5 2"
+        },
+        {
+          "claim_id": 20,
+          "claim": "Renate wants to “pass through each door exactly once”.",
+          "label": "perception",
+          "source": "Renate wants “each door to be passed through exactly once”"
+        },
+        {
+          "claim_id": 21,
+          "claim": "Renate's route is an Eulerian trail.",
+          "label": "reasoning",
+          "source": "This is an Eulerian trail"
+        },
+        {
+          "claim_id": 22,
+          "claim": "The starting point and ending point of an Eulerian trail are exactly the two vertices of odd degree.",
+          "label": "knowledge",
+          "source": "The starting point and ending point of an Eulerian trail are exactly the two vertices of odd degree"
+        },
+        {
+          "claim_id": 23,
+          "claim": "Renate starts from Terrasse.",
+          "label": "perception",
+          "source": "She starts from Terrasse"
+        },
+        {
+          "claim_id": 24,
+          "claim": "The other vertex of odd degree is room 2.",
+          "label": "reasoning",
+          "source": "The other vertex of odd degree is room 2"
+        },
+        {
+          "claim_id": 25,
+          "claim": "Renate will finally end in room 2.",
+          "label": "reasoning",
+          "source": "So she will finally end in room 2"
+        }
+      ],
+      "coverage_notes": "已按原推理顺序覆盖图像描述、门连接读取、度数计算、欧拉通路规则应用和最终答案。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T09:23:03Z",
+    "changed_target_fields": 105,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

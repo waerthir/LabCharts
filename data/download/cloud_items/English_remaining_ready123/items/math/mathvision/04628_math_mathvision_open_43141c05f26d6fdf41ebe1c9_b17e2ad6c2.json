@@ -1,0 +1,778 @@
+{
+  "pack_index": 4628,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision01184:mathvision__open_43141c05f26d6fdf41ebe1c9__ef6408594bd6",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_43141c05f26d6fdf41ebe1c9",
+    "source_problem_id": "open_43141c05f26d6fdf41ebe1c9",
+    "problem_run_key": "mathvision__open_43141c05f26d6fdf41ebe1c9__ef6408594bd6",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 55.0,
+    "difficulty_level": "medium",
+    "weighted_accuracy": 0.45,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 3,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01184.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01184.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision01184.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01184.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "What is the maximum number of $T$-shaped polyominos (shown below) that we can put into a $6 \\times 6$ grid without any overlaps. The blocks can be rotated.\n<image1>",
+    "raw_answer_text": "8",
+    "open_variant_id": "open_43141c05f26d6fdf41ebe1c9",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "What is the maximum number of T-shaped polyominos (shown below) that we can put into a 6 x 6 grid without any overlaps? The blocks can be rotated.",
+    "expected_answer_type": "numeric",
+    "expected_answer": "8",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_596e1d3872741bd725bad8a0",
+        "problem_id": "prob_14651114d9eb9a3a1f5d87f2",
+        "node_type": "answer_claim",
+        "canonical_value": "8",
+        "surface_forms": [
+          "8"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_2f27daa6414f3fae24e773a1"
+        ],
+        "evidence_refs": [
+          "asset_2f27daa6414f3fae24e773a1"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "8"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T11:59:52Z",
+        "updated_at": "2026-04-08T11:59:52Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_43141c05f26d6fdf41ebe1c9",
+      "parent_problem_id": "prob_14651114d9eb9a3a1f5d87f2",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "What is the maximum number of T-shaped polyominos (shown below) that we can put into a 6 x 6 grid without any overlaps? The blocks can be rotated.",
+      "expected_answer_type": "numeric",
+      "expected_answer": "8",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the maximum number of T-shaped polyominos (shown below) that we can put into a 6 x 6 grid without any overlaps? The blocks can be rotated.",
+    "raw_answer": "8",
+    "raw_standard_answer": "8",
+    "resolved_question_text": "What is the maximum number of T-shaped polyominos (shown below) that we can put into a 6 x 6 grid without any overlaps? The blocks can be rotated.",
+    "resolved_answer": "8",
+    "resolved_from_fallback": false,
+    "final_cot": "The tile shown in the image is a T-shaped tetromino: it is made of 4 unit squares, with 3 connected in a row and the other 1 attached to one side of the middle square; the problem asks to place it into a 6×6 grid, with rotation allowed. First look at the area upper bound: a 6×6 has a total of 36 cells, and each T occupies 4 cells, so at most no more than floor(36/4)=9 can fit. Then use black-white checkerboard coloring: the 6×6 board has 18 black cells and 18 white cells. Any T tetromino, no matter how it is rotated, will cover 3 cells of one color and 1 cell of the other color, so each T contributes ±2 to the black-white difference. If 9 are placed and completely fill the 36 cells, the total black-white difference must be 0, but after dividing the sum of 9 ±2's by 2, it is the sum of 9 ±1's, and an odd number of ±1's cannot sum to 0, so 9 is impossible. Thus the upper bound drops to 8. Finally give a concrete placement of 8: numbering rows and columns from 1 to 6, they can be placed at {(1,1),(1,2),(1,3),(2,2)}, {(2,1),(3,1),(4,1),(3,2)}, {(4,2),(4,3),(4,4),(3,3)}, {(1,4),(2,4),(3,4),(2,3)}, {(1,5),(2,5),(3,5),(2,6)}, {(3,6),(4,6),(5,6),(4,5)}, {(6,1),(6,2),(6,3),(5,2)}, {(6,4),(6,5),(6,6),(5,5)}. These pieces do not overlap, so 8 can be achieved. Therefore the maximum value is 8.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_43141c05f26d6fdf41ebe1c9",
+      "problem_run_key": "mathvision__open_43141c05f26d6fdf41ebe1c9__ef6408594bd6",
+      "question_text": "What is the maximum number of T-shaped polyominos (shown below) that we can put into a 6 x 6 grid without any overlaps? The blocks can be rotated.",
+      "standard_answer": "8",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01184.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision01184.png"
+      ],
+      "initial_multi_solution_score": 0.3287,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First describe the pictured block as a T-tetromino: it consists of 4 unit squares, three in a row with a fourth attached to the middle square on one side. From the text, the board is a 6 by 6 square grid and rotations of this T are allowed. Use area to get the preliminary upper bound floor(36/4)=9. Then rule out 9 by a checkerboard coloring of the 6 by 6 grid: the board has 18 black and 18 white squares, while every T-tetromino, in any rotation, covers either 3 black and 1 white or 3 white and 1 black, giving color imbalance ±2. With 9 pieces, the sum of nine ±2 imbalances cannot be 0, so 9 pieces cannot fill the whole board. Finally show 8 is achievable by giving an explicit packing. For example, with rows and columns numbered 1 to 6, place T's on cells: {(1,1),(1,2),(1,3),(2,2)}, {(2,1),(3,1),(4,1),(3,2)}, {(4,2),(4,3),(4,4),(3,3)}, {(1,4),(2,4),(3,4),(2,3)}, {(1,5),(2,5),(3,5),(2,6)}, {(3,6),(4,6),(5,6),(4,5)}, {(6,1),(6,2),(6,3),(5,2)}, and {(6,4),(6,5),(6,6),(5,5)}. These are eight nonoverlapping rotated T's, leaving four cells unused, so the maximum is 8.",
+          "CoT_raw": "图像里给出的拼块是一个 T 形四格骨牌：由 4 个单位正方形组成，3 个连成一排，另 1 个接在中间方块的一侧；题目要求把它放进 6×6 方格中，且允许旋转。先看面积上界：6×6 一共 36 个格子，每个 T 占 4 格，所以最多不超过 floor(36/4)=9 个。再用黑白棋盘染色：6×6 棋盘黑白各 18 格。任一 T 四格无论如何旋转，都会覆盖 3 个同色格和 1 个异色格，因此每个 T 对黑白差值贡献 ±2。若放 9 个并且完全铺满 36 格，总黑白差值必须为 0，但 9 个 ±2 的和除以 2 后是 9 个 ±1 的和，奇数个 ±1 不可能和为 0，所以 9 个不可能。于是上界降到 8。最后给出一个 8 个的具体摆放：按行列 1 到 6 编号，可放在 {(1,1),(1,2),(1,3),(2,2)}，{(2,1),(3,1),(4,1),(3,2)}，{(4,2),(4,3),(4,4),(3,3)}，{(1,4),(2,4),(3,4),(2,3)}，{(1,5),(2,5),(3,5),(2,6)}，{(3,6),(4,6),(5,6),(4,5)}，{(6,1),(6,2),(6,3),(5,2)}，{(6,4),(6,5),(6,6),(5,5)}。这些块互不重叠，因此 8 个可实现。故最大值为 8。",
+          "model_answer": "8",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "8",
+              "predicted_part": "8",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像里给出的拼块是一个 T 形四格骨牌：由 4 个单位正方形组成，3 个连成一排，另 1 个接在中间方块的一侧；题目要求把它放进 6×6 方格中，且允许旋转。先看面积上界：6×6 一共 36 个格子，每个 T 占 4 格，所以最多不超过 floor(36/4)=9 个。再用黑白棋盘染色：6×6 棋盘黑白各 18 格。任一 T 四格无论如何旋转，都会覆盖 3 个同色格和 1 个异色格，因此每个 T 对黑白差值贡献 ±2。若放 9 个并且完全铺满 36 格，总黑白差值必须为 0，但 9 个 ±2 的和除以 2 后是 9 个 ±1 的和，奇数个 ±1 不可能和为 0，所以 9 个不可能。于是上界降到 8。最后给出一个 8 个的具体摆放：按行列 1 到 6 编号，可放在 {(1,1),(1,2),(1,3),(2,2)}，{(2,1),(3,1),(4,1),(3,2)}，{(4,2),(4,3),(4,4),(3,3)}，{(1,4),(2,4),(3,4),(2,3)}，{(1,5),(2,5),(3,5),(2,6)}，{(3,6),(4,6),(5,6),(4,5)}，{(6,1),(6,2),(6,3),(5,2)}，{(6,4),(6,5),(6,6),(5,5)}。这些块互不重叠，因此 8 个可实现。故最大值为 8。",
+          "answer_answer_check_final": "8",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace first describes the image as a T-tetromino, then follows the area bound, checkerboard parity obstruction for 9 pieces, and explicit construction for 8 pieces. The final answer is consistent with the standard answer.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像里给出的拼块是一个 T 形四格骨牌：由 4 个单位正方形组成，3 个连成一排，另 1 个接在中间方块的一侧；题目要求把它放进 6×6 方格中，且允许旋转。先看面积上界：6×6 一共 36 个格子，每个 T 占 4 格，所以最多不超过 floor(36/4)=9 个。再用黑白棋盘染色：6×6 棋盘黑白各 18 格。任一 T 四格无论如何旋转，都会覆盖 3 个同色格和 1 个异色格，因此每个 T 对黑白差值贡献 ±2。若放 9 个并且完全铺满 36 格，总黑白差值必须为 0，但 9 个 ±2 的和除以 2 后是 9 个 ±1 的和，奇数个 ±1 不可能和为 0，所以 9 个不可能。于是上界降到 8。最后给出一个 8 个的具体摆放：按行列 1 到 6 编号，可放在 {(1,1),(1,2),(1,3),(2,2)}，{(2,1),(3,1),(4,1),(3,2)}，{(4,2),(4,3),(4,4),(3,3)}，{(1,4),(2,4),(3,4),(2,3)}，{(1,5),(2,5),(3,5),(2,6)}，{(3,6),(4,6),(5,6),(4,5)}，{(6,1),(6,2),(6,3),(5,2)}，{(6,4),(6,5),(6,6),(5,5)}。这些块互不重叠，因此 8 个可实现。故最大值为 8。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is a direct invariant-plus-construction route: it combines an area bound, a checkerboard parity obstruction to exclude the only larger possibility, and an explicit coordinate packing to prove attainability.",
+            "image_role": "The image supplies the exact polyomino shape: a 4-square T made from a row of three unit squares with one unit square attached to the middle, so each block has area 4 and the checkerboard color pattern is 3-to-1.",
+            "text_role": "The text supplies the 6 x 6 grid size, the nonoverlap requirement, the fact that rotations are allowed, and asks for the maximum number of blocks.",
+            "knowledge_role": "Use standard polyomino area counting, checkerboard coloring/color-imbalance invariants, and explicit coordinate verification of a packing."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像里给出的拼块是一个 T 形四格骨牌：由 4 个单位正方形组成，3 个连成一排，另 1 个接在中间方块的一侧；题目要求把它放进 6×6 方格中，且允许旋转。先看面积上界：6×6 一共 36 个格子，每个 T 占 4 格，所以最多不超过 floor(36/4)=9 个。再用黑白棋盘染色：6×6 棋盘黑白各 18 格。任一 T 四格无论如何旋转，都会覆盖 3 个同色格和 1 个异色格，因此每个 T 对黑白差值贡献 ±2。若放 9 个并且完全铺满 36 格，总黑白差值必须为 0，但 9 个 ±2 的和除以 2 后是 9 个 ±1 的和，奇数个 ±1 不可能和为 0，所以 9 个不可能。于是上界降到 8。最后给出一个 8 个的具体摆放：按行列 1 到 6 编号，可放在 {(1,1),(1,2),(1,3),(2,2)}，{(2,1),(3,1),(4,1),(3,2)}，{(4,2),(4,3),(4,4),(3,3)}，{(1,4),(2,4),(3,4),(2,3)}，{(1,5),(2,5),(3,5),(2,6)}，{(3,6),(4,6),(5,6),(4,5)}，{(6,1),(6,2),(6,3),(5,2)}，{(6,4),(6,5),(6,6),(5,5)}。这些块互不重叠，因此 8 个可实现。故最大值为 8。",
+            "model_answer": "8",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [
+              "low_resolution_image"
+            ],
+            "_llm_usage": {
+              "prompt_tokens": 1954,
+              "completion_tokens": 2812,
+              "total_tokens": 4766,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 52.774,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace first describes the image as a T-tetromino, then follows the area bound, checkerboard parity obstruction for 9 pieces, and explicit construction for 8 pieces. The final answer is consistent with the standard answer.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 19.118
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 52.78,
+              "usage_delta": {
+                "request_count": 38,
+                "successful_request_count": 38,
+                "failed_request_count": 2,
+                "retry_count": 2,
+                "text_request_count": 0,
+                "multimodal_request_count": 38,
+                "requests_with_usage": 38,
+                "prompt_tokens": 206845,
+                "completion_tokens": 36050,
+                "total_tokens": 242895,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 968.337,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 19.121,
+              "usage_delta": {
+                "request_count": 11,
+                "successful_request_count": 13,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 11,
+                "requests_with_usage": 13,
+                "prompt_tokens": 92066,
+                "completion_tokens": 13918,
+                "total_tokens": 105984,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 249.402,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 121.48,
+          "usage_delta": {
+            "request_count": 55,
+            "successful_request_count": 47,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 55,
+            "requests_with_usage": 47,
+            "prompt_tokens": 253130,
+            "completion_tokens": 68247,
+            "total_tokens": 321377,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 1261.377,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "2845",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01184.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_14651114d9eb9a3a1f5d87f2",
+          "open_variant_count": 1,
+          "open_variant_id": "open_43141c05f26d6fdf41ebe1c9",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "shape_interpretation_depends_on_image",
+            "small_image_resolution"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 193.413,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 6164,
+        "completion_tokens": 11269,
+        "total_tokens": 17433,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 193.364,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the maximum number of T-shaped polyominos (shown below) that we can put into a 6 x 6 grid without any overlaps? The blocks can be rotated.",
+      "answer": "8",
+      "final_cot": "The tile shown in the image is a T-shaped tetromino: it is made of 4 unit squares, with 3 connected in a row and the other 1 attached to one side of the middle square; the problem asks to place it into a 6×6 grid, with rotation allowed. First look at the area upper bound: a 6×6 has a total of 36 cells, and each T occupies 4 cells, so at most no more than floor(36/4)=9 can fit. Then use black-white checkerboard coloring: the 6×6 board has 18 black cells and 18 white cells. Any T tetromino, no matter how it is rotated, will cover 3 cells of one color and 1 cell of the other color, so each T contributes ±2 to the black-white difference. If 9 are placed and completely fill the 36 cells, the total black-white difference must be 0, but after dividing the sum of 9 ±2's by 2, it is the sum of 9 ±1's, and an odd number of ±1's cannot sum to 0, so 9 is impossible. Thus the upper bound drops to 8. Finally give a concrete placement of 8: numbering rows and columns from 1 to 6, they can be placed at {(1,1),(1,2),(1,3),(2,2)}, {(2,1),(3,1),(4,1),(3,2)}, {(4,2),(4,3),(4,4),(3,3)}, {(1,4),(2,4),(3,4),(2,3)}, {(1,5),(2,5),(3,5),(2,6)}, {(3,6),(4,6),(5,6),(4,5)}, {(6,1),(6,2),(6,3),(5,2)}, {(6,4),(6,5),(6,6),(5,5)}. These pieces do not overlap, so 8 can be achieved. Therefore the maximum value is 8.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace first describes the image as a T-tetromino, then follows the area bound, checkerboard parity obstruction for 9 pieces, and explicit construction for 8 pieces. The final answer is consistent with the standard answer.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 19.118
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 2307,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01184.json",
+        "source_sample_filename": "mathvision01184.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01184.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T17:34:52Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_43141c05f26d6fdf41ebe1c9",
+          "new_problem_id": "open_43141c05f26d6fdf41ebe1c9",
+          "old_problem_run_key": "mathvision__open_43141c05f26d6fdf41ebe1c9__ef6408594bd6",
+          "new_problem_run_key": "mathvision__open_43141c05f26d6fdf41ebe1c9__ef6408594bd6",
+          "target_relpath": "math/mathvision/samples/mathvision01184.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_43141c05f26d6fdf41ebe1c9",
+    "problem_run_key": "mathvision__open_43141c05f26d6fdf41ebe1c9__ef6408594bd6",
+    "raw_question_text": "What is the maximum number of T-shaped polyominos (shown below) that we can put into a 6 x 6 grid without any overlaps? The blocks can be rotated.",
+    "raw_answer": "8",
+    "raw_standard_answer": "8",
+    "resolved_question_text": "What is the maximum number of T-shaped polyominos (shown below) that we can put into a 6 x 6 grid without any overlaps? The blocks can be rotated.",
+    "resolved_answer": "8",
+    "resolved_from_fallback": false,
+    "final_cot": "The tile shown in the image is a T-shaped tetromino: it is made of 4 unit squares, with 3 connected in a row and the other 1 attached to one side of the middle square; the problem asks to place it into a 6×6 grid, with rotation allowed. First look at the area upper bound: a 6×6 has a total of 36 cells, and each T occupies 4 cells, so at most no more than floor(36/4)=9 can fit. Then use black-white checkerboard coloring: the 6×6 board has 18 black cells and 18 white cells. Any T tetromino, no matter how it is rotated, will cover 3 cells of one color and 1 cell of the other color, so each T contributes ±2 to the black-white difference. If 9 are placed and completely fill the 36 cells, the total black-white difference must be 0, but after dividing the sum of 9 ±2's by 2, it is the sum of 9 ±1's, and an odd number of ±1's cannot sum to 0, so 9 is impossible. Thus the upper bound drops to 8. Finally give a concrete placement of 8: numbering rows and columns from 1 to 6, they can be placed at {(1,1),(1,2),(1,3),(2,2)}, {(2,1),(3,1),(4,1),(3,2)}, {(4,2),(4,3),(4,4),(3,3)}, {(1,4),(2,4),(3,4),(2,3)}, {(1,5),(2,5),(3,5),(2,6)}, {(3,6),(4,6),(5,6),(4,5)}, {(6,1),(6,2),(6,3),(5,2)}, {(6,4),(6,5),(6,6),(5,5)}. These pieces do not overlap, so 8 can be achieved. Therefore the maximum value is 8.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The tile shown in the image is a T-shaped tetromino.",
+        "label": "perception",
+        "source": "The tile shown in the image is a T-shaped tetromino"
+      },
+      {
+        "claim_id": 2,
+        "claim": "This tile is made of 4 unit squares.",
+        "label": "perception",
+        "source": "Made of 4 unit squares"
+      },
+      {
+        "claim_id": 3,
+        "claim": "In this tile, 3 unit squares are connected in a row.",
+        "label": "perception",
+        "source": "3 are connected in a row"
+      },
+      {
+        "claim_id": 4,
+        "claim": "In this tile, the other 1 unit square is attached to one side of the middle square.",
+        "label": "perception",
+        "source": "The other 1 is attached to one side of the middle square"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The problem asks to place this tile into a 6×6 grid.",
+        "label": "perception",
+        "source": "The problem asks to place it into a 6×6 grid"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The problem allows rotating this tile.",
+        "label": "perception",
+        "source": "And rotation is allowed"
+      },
+      {
+        "claim_id": 7,
+        "claim": "A 6×6 grid has a total of 36 cells.",
+        "label": "reasoning",
+        "source": "A 6×6 has a total of 36 cells"
+      },
+      {
+        "claim_id": 8,
+        "claim": "Each T occupies 4 cells.",
+        "label": "perception",
+        "source": "Each T occupies 4 cells"
+      },
+      {
+        "claim_id": 9,
+        "claim": "By area calculation, at most no more than floor(36/4)=9 T-shaped tetrominoes can fit.",
+        "label": "reasoning",
+        "source": "So at most no more than floor(36/4)=9 can fit"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Color the 6×6 board as a black-white checkerboard.",
+        "label": "reasoning",
+        "source": "Then use black-white checkerboard coloring"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The 6×6 board has 18 black cells and 18 white cells.",
+        "label": "reasoning",
+        "source": "The 6×6 board has 18 black cells and 18 white cells"
+      },
+      {
+        "claim_id": 12,
+        "claim": "Any T tetromino, no matter how it is rotated, will cover 3 cells of one color and 1 cell of the other color.",
+        "label": "reasoning",
+        "source": "Any T tetromino, no matter how it is rotated, will cover 3 cells of one color and 1 cell of the other color"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Each T therefore contributes ±2 to the black-white difference.",
+        "label": "reasoning",
+        "source": "Therefore each T contributes ±2 to the black-white difference"
+      },
+      {
+        "claim_id": 14,
+        "claim": "If 9 are placed and completely fill the 36 cells, the total black-white difference must be 0.",
+        "label": "reasoning",
+        "source": "If 9 are placed and completely fill the 36 cells, the total black-white difference must be 0"
+      },
+      {
+        "claim_id": 15,
+        "claim": "After dividing the sum of 9 ±2's by 2, it is the sum of 9 ±1's.",
+        "label": "reasoning",
+        "source": "But after dividing the sum of 9 ±2's by 2, it is the sum of 9 ±1's"
+      },
+      {
+        "claim_id": 16,
+        "claim": "An odd number of ±1's cannot sum to 0.",
+        "label": "knowledge",
+        "source": "An odd number of ±1's cannot sum to 0"
+      },
+      {
+        "claim_id": 17,
+        "claim": "9 T-shaped tetrominoes cannot be placed in and completely fill this board.",
+        "label": "reasoning",
+        "source": "So 9 is impossible"
+      },
+      {
+        "claim_id": 18,
+        "claim": "Thus the upper bound drops to 8.",
+        "label": "reasoning",
+        "source": "Thus the upper bound drops to 8"
+      },
+      {
+        "claim_id": 19,
+        "claim": "One T can be placed at {(1,1),(1,2),(1,3),(2,2)}.",
+        "label": "reasoning",
+        "source": "Can be placed at {(1,1),(1,2),(1,3),(2,2)}"
+      },
+      {
+        "claim_id": 20,
+        "claim": "One T can be placed at {(2,1),(3,1),(4,1),(3,2)}.",
+        "label": "reasoning",
+        "source": "{(2,1),(3,1),(4,1),(3,2)}"
+      },
+      {
+        "claim_id": 21,
+        "claim": "One T can be placed at {(4,2),(4,3),(4,4),(3,3)}.",
+        "label": "reasoning",
+        "source": "{(4,2),(4,3),(4,4),(3,3)}"
+      },
+      {
+        "claim_id": 22,
+        "claim": "One T can be placed at {(1,4),(2,4),(3,4),(2,3)}.",
+        "label": "reasoning",
+        "source": "{(1,4),(2,4),(3,4),(2,3)}"
+      },
+      {
+        "claim_id": 23,
+        "claim": "One T can be placed at {(1,5),(2,5),(3,5),(2,6)}.",
+        "label": "reasoning",
+        "source": "{(1,5),(2,5),(3,5),(2,6)}"
+      },
+      {
+        "claim_id": 24,
+        "claim": "One T can be placed at {(3,6),(4,6),(5,6),(4,5)}.",
+        "label": "reasoning",
+        "source": "{(3,6),(4,6),(5,6),(4,5)}"
+      },
+      {
+        "claim_id": 25,
+        "claim": "One T can be placed at {(6,1),(6,2),(6,3),(5,2)}.",
+        "label": "reasoning",
+        "source": "{(6,1),(6,2),(6,3),(5,2)}"
+      },
+      {
+        "claim_id": 26,
+        "claim": "One T can be placed at {(6,4),(6,5),(6,6),(5,5)}.",
+        "label": "reasoning",
+        "source": "{(6,4),(6,5),(6,6),(5,5)}"
+      },
+      {
+        "claim_id": 27,
+        "claim": "These given pieces do not overlap.",
+        "label": "reasoning",
+        "source": "These pieces do not overlap"
+      },
+      {
+        "claim_id": 28,
+        "claim": "8 T-shaped tetrominoes can be placed into the 6×6 grid.",
+        "label": "reasoning",
+        "source": "Therefore 8 can be achieved"
+      },
+      {
+        "claim_id": 29,
+        "claim": "The maximum value is 8.",
+        "label": "reasoning",
+        "source": "Therefore the maximum value is 8"
+      }
+    ],
+    "claim_count": 29,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The tile shown in the image is a T-shaped tetromino.",
+          "label": "perception",
+          "source": "The tile shown in the image is a T-shaped tetromino"
+        },
+        {
+          "claim_id": 2,
+          "claim": "This tile is made of 4 unit squares.",
+          "label": "perception",
+          "source": "Made of 4 unit squares"
+        },
+        {
+          "claim_id": 3,
+          "claim": "In this tile, 3 unit squares are connected in a row.",
+          "label": "perception",
+          "source": "3 are connected in a row"
+        },
+        {
+          "claim_id": 4,
+          "claim": "In this tile, the other 1 unit square is attached to one side of the middle square.",
+          "label": "perception",
+          "source": "The other 1 is attached to one side of the middle square"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The problem asks to place this tile into a 6×6 grid.",
+          "label": "perception",
+          "source": "The problem asks to place it into a 6×6 grid"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The problem allows rotating this tile.",
+          "label": "perception",
+          "source": "And rotation is allowed"
+        },
+        {
+          "claim_id": 7,
+          "claim": "A 6×6 grid has a total of 36 cells.",
+          "label": "reasoning",
+          "source": "A 6×6 has a total of 36 cells"
+        },
+        {
+          "claim_id": 8,
+          "claim": "Each T occupies 4 cells.",
+          "label": "perception",
+          "source": "Each T occupies 4 cells"
+        },
+        {
+          "claim_id": 9,
+          "claim": "By area calculation, at most no more than floor(36/4)=9 T-shaped tetrominoes can fit.",
+          "label": "reasoning",
+          "source": "So at most no more than floor(36/4)=9 can fit"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Color the 6×6 board as a black-white checkerboard.",
+          "label": "reasoning",
+          "source": "Then use black-white checkerboard coloring"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The 6×6 board has 18 black cells and 18 white cells.",
+          "label": "reasoning",
+          "source": "The 6×6 board has 18 black cells and 18 white cells"
+        },
+        {
+          "claim_id": 12,
+          "claim": "Any T tetromino, no matter how it is rotated, will cover 3 cells of one color and 1 cell of the other color.",
+          "label": "reasoning",
+          "source": "Any T tetromino, no matter how it is rotated, will cover 3 cells of one color and 1 cell of the other color"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Each T therefore contributes ±2 to the black-white difference.",
+          "label": "reasoning",
+          "source": "Therefore each T contributes ±2 to the black-white difference"
+        },
+        {
+          "claim_id": 14,
+          "claim": "If 9 are placed and completely fill the 36 cells, the total black-white difference must be 0.",
+          "label": "reasoning",
+          "source": "If 9 are placed and completely fill the 36 cells, the total black-white difference must be 0"
+        },
+        {
+          "claim_id": 15,
+          "claim": "After dividing the sum of 9 ±2's by 2, it is the sum of 9 ±1's.",
+          "label": "reasoning",
+          "source": "But after dividing the sum of 9 ±2's by 2, it is the sum of 9 ±1's"
+        },
+        {
+          "claim_id": 16,
+          "claim": "An odd number of ±1's cannot sum to 0.",
+          "label": "knowledge",
+          "source": "An odd number of ±1's cannot sum to 0"
+        },
+        {
+          "claim_id": 17,
+          "claim": "9 T-shaped tetrominoes cannot be placed in and completely fill this board.",
+          "label": "reasoning",
+          "source": "So 9 is impossible"
+        },
+        {
+          "claim_id": 18,
+          "claim": "Thus the upper bound drops to 8.",
+          "label": "reasoning",
+          "source": "Thus the upper bound drops to 8"
+        },
+        {
+          "claim_id": 19,
+          "claim": "One T can be placed at {(1,1),(1,2),(1,3),(2,2)}.",
+          "label": "reasoning",
+          "source": "Can be placed at {(1,1),(1,2),(1,3),(2,2)}"
+        },
+        {
+          "claim_id": 20,
+          "claim": "One T can be placed at {(2,1),(3,1),(4,1),(3,2)}.",
+          "label": "reasoning",
+          "source": "{(2,1),(3,1),(4,1),(3,2)}"
+        },
+        {
+          "claim_id": 21,
+          "claim": "One T can be placed at {(4,2),(4,3),(4,4),(3,3)}.",
+          "label": "reasoning",
+          "source": "{(4,2),(4,3),(4,4),(3,3)}"
+        },
+        {
+          "claim_id": 22,
+          "claim": "One T can be placed at {(1,4),(2,4),(3,4),(2,3)}.",
+          "label": "reasoning",
+          "source": "{(1,4),(2,4),(3,4),(2,3)}"
+        },
+        {
+          "claim_id": 23,
+          "claim": "One T can be placed at {(1,5),(2,5),(3,5),(2,6)}.",
+          "label": "reasoning",
+          "source": "{(1,5),(2,5),(3,5),(2,6)}"
+        },
+        {
+          "claim_id": 24,
+          "claim": "One T can be placed at {(3,6),(4,6),(5,6),(4,5)}.",
+          "label": "reasoning",
+          "source": "{(3,6),(4,6),(5,6),(4,5)}"
+        },
+        {
+          "claim_id": 25,
+          "claim": "One T can be placed at {(6,1),(6,2),(6,3),(5,2)}.",
+          "label": "reasoning",
+          "source": "{(6,1),(6,2),(6,3),(5,2)}"
+        },
+        {
+          "claim_id": 26,
+          "claim": "One T can be placed at {(6,4),(6,5),(6,6),(5,5)}.",
+          "label": "reasoning",
+          "source": "{(6,4),(6,5),(6,6),(5,5)}"
+        },
+        {
+          "claim_id": 27,
+          "claim": "These given pieces do not overlap.",
+          "label": "reasoning",
+          "source": "These pieces do not overlap"
+        },
+        {
+          "claim_id": 28,
+          "claim": "8 T-shaped tetrominoes can be placed into the 6×6 grid.",
+          "label": "reasoning",
+          "source": "Therefore 8 can be achieved"
+        },
+        {
+          "claim_id": 29,
+          "claim": "The maximum value is 8.",
+          "label": "reasoning",
+          "source": "Therefore the maximum value is 8"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的要求，将 claim 19-26 的标签由 perception 改为 reasoning；其余 claim 保持不变。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:21Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/03387_math_mathvision_open_43141c05f26d6fdf41ebe1c9_b17e2ad6c2.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04628_math_mathvision_open_43141c05f26d6fdf41ebe1c9_b17e2ad6c2.json"
+  }
+}

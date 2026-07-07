@@ -1,0 +1,683 @@
+{
+  "pack_index": 717,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00147:emma_chemistry__open_f5b76884979f096a7d870f53__ef119bbe0c51",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_f5b76884979f096a7d870f53",
+    "source_problem_id": "open_f5b76884979f096a7d870f53",
+    "problem_run_key": "emma_chemistry__open_f5b76884979f096a7d870f53__ef119bbe0c51",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00147.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00147.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00147.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00147.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Please choose the SMILES expression of the transition-state structure shown in the image, ignoring the arrows. <image_1>",
+    "raw_answer_text": "*C1OC(C)([O-])[N+]1(*)*",
+    "open_variant_id": "open_f5b76884979f096a7d870f53",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "*C1OC(C)([O-])[N+]1(*)*",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_b20cf8f2d0dbceedb02d2e69",
+        "problem_id": "prob_2c059e2a944123fe0fa16595",
+        "node_type": "answer_claim",
+        "canonical_value": "*C1OC(C)([O-])[N+]1(*)*",
+        "surface_forms": [
+          "*C1OC(C)([O-])[N+]1(*)*"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_8983e14ccea4b239045b7045"
+        ],
+        "evidence_refs": [
+          "asset_8983e14ccea4b239045b7045"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "*C1OC(C)([O-])[N+]1(*)*"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T11:37:37Z",
+        "updated_at": "2026-04-08T11:37:37Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_f5b76884979f096a7d870f53",
+      "parent_problem_id": "prob_2c059e2a944123fe0fa16595",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "*C1OC(C)([O-])[N+]1(*)*",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*C1OC(C)([O-])[N+]1(*)*",
+    "raw_standard_answer": "*C1OC(C)([O-])[N+]1(*)*",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*C1OC(C)([O-])[N+]1(*)*",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a chemical line structure, with several curved arrows; according to the problem statement, ignore these arrows. The actual bond connections show a four-membered ring: the lower left is O, the lower right is near the substituent where negatively charged O⁻ is located, the top is positively charged N⁺, and the upper-left ring atom is connected to R²; N⁺ is also connected to two substituents, R¹ and R. Reasoning: Represent unspecified substituents such as R/R¹/R² with wildcard *. Starting from the ring carbon connected to the wildcard, write as *C1, along the ring to oxygen as O, then to the central carbon as C; this central carbon has one carbon substituent and one negative oxygen substituent, written as C(C)([O-]); subsequently connect to the positively charged nitrogen and close the ring, written as [N+]1; on the nitrogen there are also two wildcard substituents, written as (*)*. Therefore the SMILES is *C1OC(C)([O-])[N+]1(*)*.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_f5b76884979f096a7d870f53",
+      "problem_run_key": "emma_chemistry__open_f5b76884979f096a7d870f53__ef119bbe0c51",
+      "question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "standard_answer": "*C1OC(C)([O-])[N+]1(*)*",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00147.png",
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/crops/emmachemistry00147.png"
+      ],
+      "initial_multi_solution_score": 0.2657,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First describe the image as a chemical line drawing rather than a reaction mechanism: ignore all curved arrows, then trace the actual bonds. Choose a ring starting at a wildcard-attached carbon, write the ring as `*C1OC... [N+]1...`, place the central carbon after the ring oxygen, add its methyl/alkyl branch as `(C)` and the negatively charged oxygen branch as `([O-])`, then close through positively charged nitrogen as `[N+]1`. Finally attach the wildcard substituents to nitrogen and the terminal atom to give `*C1OC(C)([O-])[N+]1(*)*`.",
+          "CoT_raw": "图像描述：图中是一个化学线式结构，带有若干弯曲箭头；按题意忽略这些箭头。实际键连显示一个四元环：左下为 O，右下为带负电的 O⁻所在取代基附近，顶部为带正电的 N⁺，左上环原子连接 R²；N⁺还连接 R¹ 和 R 两个取代基。推理：将 R/R¹/R² 等未指定取代基用通配符 * 表示。从连接通配符的环碳开始写作 *C1，沿环到氧为 O，再到中心碳为 C；该中心碳有一个碳取代基和一个负氧取代基，写作 C(C)([O-])；随后连接到带正电的氮并闭环，写作 [N+]1；氮上还有两个通配符取代基，写作 (*)*。因此 SMILES 为 *C1OC(C)([O-])[N+]1(*)*。",
+          "model_answer": "*C1OC(C)([O-])[N+]1(*)*",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "*C1OC(C)([O-])[N+]1(*)*",
+              "predicted_part": "*C1OC(C)([O-])[N+]1(*)*",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个化学线式结构，带有若干弯曲箭头；按题意忽略这些箭头。实际键连显示一个四元环：左下为 O，右下为带负电的 O⁻所在取代基附近，顶部为带正电的 N⁺，左上环原子连接 R²；N⁺还连接 R¹ 和 R 两个取代基。推理：将 R/R¹/R² 等未指定取代基用通配符 * 表示。从连接通配符的环碳开始写作 *C1，沿环到氧为 O，再到中心碳为 C；该中心碳有一个碳取代基和一个负氧取代基，写作 C(C)([O-])；随后连接到带正电的氮并闭环，写作 [N+]1；氮上还有两个通配符取代基，写作 (*)*。因此 SMILES 为 *C1OC(C)([O-])[N+]1(*)*。",
+          "answer_answer_check_final": "*C1OC(C)([O-])[N+]1(*)*",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace is acceptable. It follows the required image-grounded order by first describing the line drawing and arrows, then deriving the SMILES. The final SMILES exactly matches the standard answer and the method draft. Minor wording issue: the image description of the four-membered ring says the lower-right position is the “O⁻所在取代基附近,” which could be clearer because the negatively charged oxygen is a substituent, not a ring atom; revise to say the lower/right ring atom is a carbon bearing an O⁻ substituent. Otherwise the structural claims are grounded in the image and the reasoning is extractable.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个化学线式结构，带有若干弯曲箭头；按题意忽略这些箭头。实际键连显示一个四元环：左下为 O，右下为带负电的 O⁻所在取代基附近，顶部为带正电的 N⁺，左上环原子连接 R²；N⁺还连接 R¹ 和 R 两个取代基。推理：将 R/R¹/R² 等未指定取代基用通配符 * 表示。从连接通配符的环碳开始写作 *C1，沿环到氧为 O，再到中心碳为 C；该中心碳有一个碳取代基和一个负氧取代基，写作 C(C)([O-])；随后连接到带正电的氮并闭环，写作 [N+]1；氮上还有两个通配符取代基，写作 (*)*。因此 SMILES 为 *C1OC(C)([O-])[N+]1(*)*。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct structural-transcription route: read the drawn connectivity and charges from the image, ignore the curved arrows as instructed, then encode the resulting graph as SMILES. No alternative mechanistic inference or option elimination is needed.",
+            "image_role": "Use the image to identify the molecular graph: a cyclic transition-state scaffold containing a five-membered ring path C–O–C–N–C, with the nitrogen labeled N carrying a positive charge, a right-side oxygen labeled with a negative charge attached to the central carbon, a methyl/alkyl substituent on that same central carbon, and three generic R/R1/R2 attachment points represented by wildcards. Curved arrows in the drawing are noted but excluded from the connectivity.",
+            "text_role": "Use the question text only to determine the required output format—SMILES—and to enforce the instruction to ignore the arrows in the transition-state drawing.",
+            "knowledge_role": "Apply SMILES conventions: use `*` for unspecified R-group attachment atoms, ring digit `1` to close the five-membered ring, bracket charged atoms as `[O-]` and `[N+]`, and encode branches from the central carbon with parentheses."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个化学线式结构，带有若干弯曲箭头；按题意忽略这些箭头。实际键连显示一个四元环：左下为 O，右下为带负电的 O⁻所在取代基附近，顶部为带正电的 N⁺，左上环原子连接 R²；N⁺还连接 R¹ 和 R 两个取代基。推理：将 R/R¹/R² 等未指定取代基用通配符 * 表示。从连接通配符的环碳开始写作 *C1，沿环到氧为 O，再到中心碳为 C；该中心碳有一个碳取代基和一个负氧取代基，写作 C(C)([O-])；随后连接到带正电的氮并闭环，写作 [N+]1；氮上还有两个通配符取代基，写作 (*)*。因此 SMILES 为 *C1OC(C)([O-])[N+]1(*)*。",
+            "model_answer": "*C1OC(C)([O-])[N+]1(*)*",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2624,
+              "completion_tokens": 811,
+              "total_tokens": 3435,
+              "cached_tokens": 0,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 19.444,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace is acceptable. It follows the required image-grounded order by first describing the line drawing and arrows, then deriving the SMILES. The final SMILES exactly matches the standard answer and the method draft. Minor wording issue: the image description of the four-membered ring says the lower-right position is the “O⁻所在取代基附近,” which could be clearer because the negatively charged oxygen is a substituent, not a ring atom; revise to say the lower/right ring atom is a carbon bearing an O⁻ substituent. Otherwise the structural claims are grounded in the image and the reasoning is extractable.",
+              "major_failures": [],
+              "extractability_score": 0.9,
+              "grounding_score": 0.85,
+              "method_fidelity_score": 0.95,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 14.978
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 19.454,
+              "usage_delta": {
+                "request_count": 5,
+                "successful_request_count": 9,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 5,
+                "requests_with_usage": 10,
+                "prompt_tokens": 42299,
+                "completion_tokens": 10632,
+                "total_tokens": 52931,
+                "cached_tokens": 0,
+                "reasoning_tokens": 7551,
+                "total_request_seconds": 266.932,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 14.984,
+              "usage_delta": {
+                "request_count": 5,
+                "successful_request_count": 4,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 5,
+                "requests_with_usage": 4,
+                "prompt_tokens": 25719,
+                "completion_tokens": 2582,
+                "total_tokens": 28301,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1975,
+                "total_request_seconds": 65.037,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 16.187,
+          "usage_delta": {
+            "request_count": 6,
+            "successful_request_count": 7,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 6,
+            "requests_with_usage": 7,
+            "prompt_tokens": 19212,
+            "completion_tokens": 6468,
+            "total_tokens": 25680,
+            "cached_tokens": 0,
+            "reasoning_tokens": 4101,
+            "total_request_seconds": 157.699,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "961",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00147.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_2c059e2a944123fe0fa16595",
+          "open_variant_count": 1,
+          "open_variant_id": "open_f5b76884979f096a7d870f53",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": [
+            "small_image_resolution"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 50.649,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 8374,
+        "completion_tokens": 2054,
+        "total_tokens": 10428,
+        "cached_tokens": 0,
+        "reasoning_tokens": 1182,
+        "total_request_seconds": 50.599,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "answer": "*C1OC(C)([O-])[N+]1(*)*",
+      "final_cot": "Image description: The figure is a chemical line structure, with several curved arrows; according to the problem statement, ignore these arrows. The actual bond connections show a four-membered ring: the lower left is O, the lower right is near the substituent where negatively charged O⁻ is located, the top is positively charged N⁺, and the upper-left ring atom is connected to R²; N⁺ is also connected to two substituents, R¹ and R. Reasoning: Represent unspecified substituents such as R/R¹/R² with wildcard *. Starting from the ring carbon connected to the wildcard, write as *C1, along the ring to oxygen as O, then to the central carbon as C; this central carbon has one carbon substituent and one negative oxygen substituent, written as C(C)([O-]); subsequently connect to the positively charged nitrogen and close the ring, written as [N+]1; on the nitrogen there are also two wildcard substituents, written as (*)*. Therefore the SMILES is *C1OC(C)([O-])[N+]1(*)*.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace is acceptable. It follows the required image-grounded order by first describing the line drawing and arrows, then deriving the SMILES. The final SMILES exactly matches the standard answer and the method draft. Minor wording issue: the image description of the four-membered ring says the lower-right position is the “O⁻所在取代基附近,” which could be clearer because the negatively charged oxygen is a substituent, not a ring atom; revise to say the lower/right ring atom is a carbon bearing an O⁻ substituent. Otherwise the structural claims are grounded in the image and the reasoning is extractable.",
+          "major_failures": [],
+          "extractability_score": 0.9,
+          "grounding_score": 0.85,
+          "method_fidelity_score": 0.95,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 14.978
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 148,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00147.json",
+        "source_sample_filename": "emmachemistry00147.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00147.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T05:36:54Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:33Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_2c059e2a944123fe0fa16595",
+          "new_problem_id": "open_f5b76884979f096a7d870f53",
+          "old_problem_run_key": "emma_chemistry__prob_2c059e2a944123fe0fa16595__2c68fde2060c",
+          "new_problem_run_key": "emma_chemistry__open_f5b76884979f096a7d870f53__ef119bbe0c51",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00147.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_f5b76884979f096a7d870f53",
+          "new_problem_id": "open_f5b76884979f096a7d870f53",
+          "old_problem_run_key": "emma_chemistry__open_f5b76884979f096a7d870f53__ef119bbe0c51",
+          "new_problem_run_key": "emma_chemistry__open_f5b76884979f096a7d870f53__ef119bbe0c51",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00147.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_f5b76884979f096a7d870f53",
+    "problem_run_key": "emma_chemistry__open_f5b76884979f096a7d870f53__ef119bbe0c51",
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*C1OC(C)([O-])[N+]1(*)*",
+    "raw_standard_answer": "*C1OC(C)([O-])[N+]1(*)*",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*C1OC(C)([O-])[N+]1(*)*",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a chemical line structure, with several curved arrows; according to the problem statement, ignore these arrows. The actual bond connections show a four-membered ring: the lower left is O, the lower right is near the substituent where negatively charged O⁻ is located, the top is positively charged N⁺, and the upper-left ring atom is connected to R²; N⁺ is also connected to two substituents, R¹ and R. Reasoning: Represent unspecified substituents such as R/R¹/R² with wildcard *. Starting from the ring carbon connected to the wildcard, write as *C1, along the ring to oxygen as O, then to the central carbon as C; this central carbon has one carbon substituent and one negative oxygen substituent, written as C(C)([O-]); subsequently connect to the positively charged nitrogen and close the ring, written as [N+]1; on the nitrogen there are also two wildcard substituents, written as (*)*. Therefore the SMILES is *C1OC(C)([O-])[N+]1(*)*.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure is a chemical line structure.",
+        "label": "perception",
+        "source": "The figure is a chemical line structure"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The figure has several curved arrows.",
+        "label": "perception",
+        "source": "contains several curved arrows"
+      },
+      {
+        "claim_id": 3,
+        "claim": "In the answer to this problem, ignore these arrows according to the problem statement.",
+        "label": "reasoning",
+        "source": "Ignore these arrows according to the problem statement"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The actual bond connections show a four-membered ring.",
+        "label": "perception",
+        "source": "The actual bond connections show a four-membered ring"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The lower left of the four-membered ring is O.",
+        "label": "perception",
+        "source": "The lower left is O"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The lower right of the four-membered ring is near the substituent where negatively charged O⁻ is located.",
+        "label": "perception",
+        "source": "The lower right is near the substituent where the negatively charged O⁻ is located"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The top of the four-membered ring is the positively charged N⁺.",
+        "label": "perception",
+        "source": "The top is the positively charged N⁺"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The upper-left ring atom is connected to R².",
+        "label": "perception",
+        "source": "The upper-left ring atom is connected to R²"
+      },
+      {
+        "claim_id": 9,
+        "claim": "N⁺ is connected to the R¹ substituent.",
+        "label": "perception",
+        "source": "N⁺ is also connected to two substituents, R¹ and R"
+      },
+      {
+        "claim_id": 10,
+        "claim": "N⁺ is connected to the R substituent.",
+        "label": "perception",
+        "source": "N⁺ is also connected to two substituents, R¹ and R"
+      },
+      {
+        "claim_id": 11,
+        "claim": "Unspecified substituents such as R/R¹/R² are represented by the wildcard *.",
+        "label": "reasoning",
+        "source": "Represent unspecified substituents such as R/R¹/R² with the wildcard *"
+      },
+      {
+        "claim_id": 12,
+        "claim": "Starting from the ring carbon connected to the wildcard, write as *C1.",
+        "label": "reasoning",
+        "source": "Starting from the ring carbon connected to the wildcard, write as *C1"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Along the ring to oxygen, write as O.",
+        "label": "reasoning",
+        "source": "Along the ring to oxygen is O"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Along the ring further to the central carbon, write as C.",
+        "label": "reasoning",
+        "source": "Then to the central carbon is C"
+      },
+      {
+        "claim_id": 15,
+        "claim": "This central carbon has one carbon substituent.",
+        "label": "perception",
+        "source": "This central carbon has one carbon substituent and one negative oxygen substituent"
+      },
+      {
+        "claim_id": 16,
+        "claim": "This central carbon has a negative oxygen substituent.",
+        "label": "perception",
+        "source": "This central carbon has one carbon substituent and one negative oxygen substituent"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The central carbon and its substituents are written as C(C)([O-]).",
+        "label": "reasoning",
+        "source": "Written as C(C)([O-])"
+      },
+      {
+        "claim_id": 18,
+        "claim": "Then it is connected to positively charged nitrogen and ring-closes, written as [N+]1.",
+        "label": "reasoning",
+        "source": "Then it is connected to positively charged nitrogen and ring-closes, written as [N+]1"
+      },
+      {
+        "claim_id": 19,
+        "claim": "There are also two wildcard substituents on the nitrogen.",
+        "label": "reasoning",
+        "source": "There are also two wildcard substituents on the nitrogen"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The two wildcard substituents on the nitrogen are written as (*)*.",
+        "label": "reasoning",
+        "source": "Written as (*)*"
+      },
+      {
+        "claim_id": 21,
+        "claim": "The SMILES of this structure is *C1OC(C)([O-])[N+]1(*)*.",
+        "label": "reasoning",
+        "source": "Therefore the SMILES is *C1OC(C)([O-])[N+]1(*)*"
+      }
+    ],
+    "claim_count": 21,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure is a chemical line structure.",
+          "label": "perception",
+          "source": "The figure is a chemical line structure"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The figure has several curved arrows.",
+          "label": "perception",
+          "source": "contains several curved arrows"
+        },
+        {
+          "claim_id": 3,
+          "claim": "In the answer to this problem, ignore these arrows according to the problem statement.",
+          "label": "reasoning",
+          "source": "Ignore these arrows according to the problem statement"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The actual bond connections show a four-membered ring.",
+          "label": "perception",
+          "source": "The actual bond connections show a four-membered ring"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The lower left of the four-membered ring is O.",
+          "label": "perception",
+          "source": "The lower left is O"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The lower right of the four-membered ring is near the substituent where negatively charged O⁻ is located.",
+          "label": "perception",
+          "source": "The lower right is near the substituent where the negatively charged O⁻ is located"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The top of the four-membered ring is the positively charged N⁺.",
+          "label": "perception",
+          "source": "The top is the positively charged N⁺"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The upper-left ring atom is connected to R².",
+          "label": "perception",
+          "source": "The upper-left ring atom is connected to R²"
+        },
+        {
+          "claim_id": 9,
+          "claim": "N⁺ is connected to the R¹ substituent.",
+          "label": "perception",
+          "source": "N⁺ is also connected to two substituents, R¹ and R"
+        },
+        {
+          "claim_id": 10,
+          "claim": "N⁺ is connected to the R substituent.",
+          "label": "perception",
+          "source": "N⁺ is also connected to two substituents, R¹ and R"
+        },
+        {
+          "claim_id": 11,
+          "claim": "Unspecified substituents such as R/R¹/R² are represented by the wildcard *.",
+          "label": "reasoning",
+          "source": "Represent unspecified substituents such as R/R¹/R² with the wildcard *"
+        },
+        {
+          "claim_id": 12,
+          "claim": "Starting from the ring carbon connected to the wildcard, write as *C1.",
+          "label": "reasoning",
+          "source": "Starting from the ring carbon connected to the wildcard, write as *C1"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Along the ring to oxygen, write as O.",
+          "label": "reasoning",
+          "source": "Along the ring to oxygen is O"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Along the ring further to the central carbon, write as C.",
+          "label": "reasoning",
+          "source": "Then to the central carbon is C"
+        },
+        {
+          "claim_id": 15,
+          "claim": "This central carbon has one carbon substituent.",
+          "label": "perception",
+          "source": "This central carbon has one carbon substituent and one negative oxygen substituent"
+        },
+        {
+          "claim_id": 16,
+          "claim": "This central carbon has a negative oxygen substituent.",
+          "label": "perception",
+          "source": "This central carbon has one carbon substituent and one negative oxygen substituent"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The central carbon and its substituents are written as C(C)([O-]).",
+          "label": "reasoning",
+          "source": "Written as C(C)([O-])"
+        },
+        {
+          "claim_id": 18,
+          "claim": "Then it is connected to positively charged nitrogen and ring-closes, written as [N+]1.",
+          "label": "reasoning",
+          "source": "Then it is connected to positively charged nitrogen and ring-closes, written as [N+]1"
+        },
+        {
+          "claim_id": 19,
+          "claim": "There are also two wildcard substituents on the nitrogen.",
+          "label": "reasoning",
+          "source": "There are also two wildcard substituents on the nitrogen"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The two wildcard substituents on the nitrogen are written as (*)*.",
+          "label": "reasoning",
+          "source": "Written as (*)*"
+        },
+        {
+          "claim_id": 21,
+          "claim": "The SMILES of this structure is *C1OC(C)([O-])[N+]1(*)*.",
+          "label": "reasoning",
+          "source": "Therefore the SMILES is *C1OC(C)([O-])[N+]1(*)*"
+        }
+      ],
+      "coverage_notes": "已按原始推理顺序覆盖图像描述、忽略箭头、环与取代基识别、通配符表示、SMILES 逐段构造以及最终答案。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/05806_chemistry_emma_chemistry_open_f5b76884979f096a7d870f53_d7d4ad355a.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/00717_chemistry_emma_chemistry_open_f5b76884979f096a7d870f53_d7d4ad355a.json"
+  }
+}

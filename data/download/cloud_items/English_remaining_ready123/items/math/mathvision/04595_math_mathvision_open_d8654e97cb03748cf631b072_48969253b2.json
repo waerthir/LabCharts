@@ -1,0 +1,932 @@
+{
+  "pack_index": 4595,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00800:mathvision__open_d8654e97cb03748cf631b072__84522839e448",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_d8654e97cb03748cf631b072",
+    "source_problem_id": "open_d8654e97cb03748cf631b072",
+    "problem_run_key": "mathvision__open_d8654e97cb03748cf631b072__84522839e448",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 55.0,
+    "difficulty_level": "medium",
+    "weighted_accuracy": 0.45,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 3,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00800.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00800.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00800.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00800.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "How many different ways are there in the diagram shown, to get from point $A$ to point $B$ if you are only allowed to move in the directions indicated?\n<image1>",
+    "raw_answer_text": "12",
+    "open_variant_id": "open_d8654e97cb03748cf631b072",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "How many different ways are there in the diagram shown, to get from point $A$ to point $B$ if you are only allowed to move in the directions indicated?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "12",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_28d21a9a8ef854edd70ec1cf",
+        "problem_id": "prob_64b202a77cd74765301cfc78",
+        "node_type": "answer_claim",
+        "canonical_value": "12",
+        "surface_forms": [
+          "12"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_1506c918ffe5d28f88d02a69"
+        ],
+        "evidence_refs": [
+          "asset_1506c918ffe5d28f88d02a69"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "12"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T18:14:29Z",
+        "updated_at": "2026-04-06T18:14:29Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_d8654e97cb03748cf631b072",
+      "parent_problem_id": "prob_64b202a77cd74765301cfc78",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "How many different ways are there in the diagram shown, to get from point $A$ to point $B$ if you are only allowed to move in the directions indicated?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "12",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "How many different ways are there in the diagram shown, to get from point $A$ to point $B$ if you are only allowed to move in the directions indicated?",
+    "raw_answer": "12",
+    "raw_standard_answer": "12",
+    "resolved_question_text": "How many different ways are there in the diagram shown, to get from point $A$ to point $B$ if you are only allowed to move in the directions indicated?",
+    "resolved_answer": "12",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a directed acyclic graph from top A to bottom B. A is at the very top, and B is at the very bottom. In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows. The arrows all point to lower or same-level but lower-slanting positions, so dynamic counting can be done in order from top to bottom. A has three outgoing edges: to the upper-left point, the upper-right point, and the first dashed center point. Reasoning: Let the number of paths reaching A be 1. Accumulate downward in topological order: the upper-left point, the upper-right point, and the first dashed center point each get 1 path. The upper central solid-line point is entered from the upper-left point and the upper-right point, so it is 1+1=2. The left middle point is entered from the upper-left point and the first dashed center point, so it is 1+1=2. The right middle point is entered from the upper-right point and the first dashed center point, so it is 1+1=2. The second dashed center point is entered from the first dashed center point, so it is 1. The middle central solid-line point is entered from the upper central solid-line point, the left middle point, and the right middle point, so it is 2+2+2=6. The lower-left point is entered from the left middle point and the second dashed center point, so it is 2+1=3. The lower-right point is entered from the right middle point and the second dashed center point, so it is 2+1=3. Finally B is entered from the lower-left point, the middle central solid-line point, and the lower-right point, therefore the total is 3+6+3=12.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_d8654e97cb03748cf631b072",
+      "problem_run_key": "mathvision__open_d8654e97cb03748cf631b072__84522839e448",
+      "question_text": "How many different ways are there in the diagram shown, to get from point $A$ to point $B$ if you are only allowed to move in the directions indicated?",
+      "standard_answer": "12",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00800.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00800.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Use a directed-graph dynamic programming count. First describe the image as a directed acyclic graph: point A is at the top and B at the bottom, with solid and dashed arrows giving all allowed directed moves. Label the intermediate vertices by level/position. Put path count 1 at A. Then move downward/topologically through the diagram, assigning to each vertex the sum of the counts on all vertices with arrows into it. From the image, A sends one path each to the upper-left vertex, upper-right vertex, and first dashed center vertex. The next reachable middle vertices receive counts by summing their incoming arrows; continuing this level by level gives the final three vertices feeding into B with counts 3, 6, and 3. Add these incoming counts at B: 3 + 6 + 3 = 12.",
+          "CoT_raw": "图像描述：图中是一个从顶部 A 到底部 B 的有向无环图。A 在最上方，B 在最下方。中间有左列、右列、中心实线列，以及一条带虚线箭头的中心辅助列。箭头都指向较低或同层偏下的位置，因此可以按从上到下的顺序做动态计数。A 有三条出边：到左上点、右上点、以及第一个虚线中心点。\n\n推理：设到达 A 的路径数为 1。按拓扑顺序向下累加：左上点、右上点、第一个虚线中心点各得到 1 条路径。上方中心实线点由左上点和右上点进入，所以为 1+1=2。左中点由左上点和第一个虚线中心点进入，所以为 1+1=2。右中点由右上点和第一个虚线中心点进入，所以为 1+1=2。第二个虚线中心点由第一个虚线中心点进入，所以为 1。中间中心实线点由上方中心实线点、左中点、右中点进入，所以为 2+2+2=6。左下点由左中点和第二个虚线中心点进入，所以为 2+1=3。右下点由右中点和第二个虚线中心点进入，所以为 2+1=3。最后 B 由左下点、中间中心实线点、右下点进入，因此总数为 3+6+3=12。",
+          "model_answer": "12",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "12",
+              "predicted_part": "12",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个从顶部 A 到底部 B 的有向无环图。A 在最上方，B 在最下方。中间有左列、右列、中心实线列，以及一条带虚线箭头的中心辅助列。箭头都指向较低或同层偏下的位置，因此可以按从上到下的顺序做动态计数。A 有三条出边：到左上点、右上点、以及第一个虚线中心点。\n\n推理：设到达 A 的路径数为 1。按拓扑顺序向下累加：左上点、右上点、第一个虚线中心点各得到 1 条路径。上方中心实线点由左上点和右上点进入，所以为 1+1=2。左中点由左上点和第一个虚线中心点进入，所以为 1+1=2。右中点由右上点和第一个虚线中心点进入，所以为 1+1=2。第二个虚线中心点由第一个虚线中心点进入，所以为 1。中间中心实线点由上方中心实线点、左中点、右中点进入，所以为 2+2+2=6。左下点由左中点和第二个虚线中心点进入，所以为 2+1=3。右下点由右中点和第二个虚线中心点进入，所以为 2+1=3。最后 B 由左下点、中间中心实线点、右下点进入，因此总数为 3+6+3=12。",
+          "answer_answer_check_final": "12",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "The reasoning trace is consistent with the image, the standard answer, and the assigned dynamic-programming method. It first describes the diagram, then performs topological path-count accumulation. No revision is needed.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个从顶部 A 到底部 B 的有向无环图。A 在最上方，B 在最下方。中间有左列、右列、中心实线列，以及一条带虚线箭头的中心辅助列。箭头都指向较低或同层偏下的位置，因此可以按从上到下的顺序做动态计数。A 有三条出边：到左上点、右上点、以及第一个虚线中心点。\n\n推理：设到达 A 的路径数为 1。按拓扑顺序向下累加：左上点、右上点、第一个虚线中心点各得到 1 条路径。上方中心实线点由左上点和右上点进入，所以为 1+1=2。左中点由左上点和第一个虚线中心点进入，所以为 1+1=2。右中点由右上点和第一个虚线中心点进入，所以为 1+1=2。第二个虚线中心点由第一个虚线中心点进入，所以为 1。中间中心实线点由上方中心实线点、左中点、右中点进入，所以为 2+2+2=6。左下点由左中点和第二个虚线中心点进入，所以为 2+1=3。右下点由右中点和第二个虚线中心点进入，所以为 2+1=3。最后 B 由左下点、中间中心实线点、右下点进入，因此总数为 3+6+3=12。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the canonical path-counting route: treat the diagram as a directed acyclic graph and propagate counts forward, rather than trying to enumerate complete routes one by one.",
+            "image_role": "Read the locations of A and B, all intermediate vertices, and every arrow direction, including dashed arrows as permitted moves.",
+            "text_role": "Use the instruction that movement is only allowed in the indicated directions and that the task is to count ways from A to B.",
+            "knowledge_role": "Apply the directed-acyclic-graph path-counting rule: the number of ways to reach any vertex equals the sum of the numbers of ways to reach its immediate predecessors."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个从顶部 A 到底部 B 的有向无环图。A 在最上方，B 在最下方。中间有左列、右列、中心实线列，以及一条带虚线箭头的中心辅助列。箭头都指向较低或同层偏下的位置，因此可以按从上到下的顺序做动态计数。A 有三条出边：到左上点、右上点、以及第一个虚线中心点。\n\n推理：设到达 A 的路径数为 1。按拓扑顺序向下累加：左上点、右上点、第一个虚线中心点各得到 1 条路径。上方中心实线点由左上点和右上点进入，所以为 1+1=2。左中点由左上点和第一个虚线中心点进入，所以为 1+1=2。右中点由右上点和第一个虚线中心点进入，所以为 1+1=2。第二个虚线中心点由第一个虚线中心点进入，所以为 1。中间中心实线点由上方中心实线点、左中点、右中点进入，所以为 2+2+2=6。左下点由左中点和第二个虚线中心点进入，所以为 2+1=3。右下点由右中点和第二个虚线中心点进入，所以为 2+1=3。最后 B 由左下点、中间中心实线点、右下点进入，因此总数为 3+6+3=12。",
+            "model_answer": "12",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2908,
+              "completion_tokens": 1439,
+              "total_tokens": 4347,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 22.004,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "The reasoning trace is consistent with the image, the standard answer, and the assigned dynamic-programming method. It first describes the diagram, then performs topological path-count accumulation. No revision is needed.",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 0.98,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 21.191
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 22.051,
+              "usage_delta": {
+                "request_count": 21,
+                "successful_request_count": 27,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 21,
+                "requests_with_usage": 27,
+                "prompt_tokens": 71459,
+                "completion_tokens": 25636,
+                "total_tokens": 97095,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 525.44,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 21.238,
+              "usage_delta": {
+                "request_count": 17,
+                "successful_request_count": 19,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 17,
+                "requests_with_usage": 19,
+                "prompt_tokens": 53184,
+                "completion_tokens": 16904,
+                "total_tokens": 70088,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 360.34,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 27.951,
+          "usage_delta": {
+            "request_count": 25,
+            "successful_request_count": 19,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 25,
+            "requests_with_usage": 19,
+            "prompt_tokens": 49358,
+            "completion_tokens": 16801,
+            "total_tokens": 66159,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 339.706,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1376",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00800.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_64b202a77cd74765301cfc78",
+          "open_variant_count": 1,
+          "open_variant_id": "open_d8654e97cb03748cf631b072",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "diagram_not_textualized_in_prompt",
+            "visual_grounding_required"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 71.263,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 9147,
+        "completion_tokens": 3957,
+        "total_tokens": 13104,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 71.095,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "How many different ways are there in the diagram shown, to get from point $A$ to point $B$ if you are only allowed to move in the directions indicated?",
+      "answer": "12",
+      "final_cot": "Image description: The figure is a directed acyclic graph from top A to bottom B. A is at the very top, and B is at the very bottom. In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows. The arrows all point to lower or same-level but lower-slanting positions, so dynamic counting can be done in order from top to bottom. A has three outgoing edges: to the upper-left point, the upper-right point, and the first dashed center point.\n\nReasoning: Let the number of paths reaching A be 1. Accumulate downward in topological order: the upper-left point, the upper-right point, and the first dashed center point each get 1 path. The upper central solid-line point is entered from the upper-left point and the upper-right point, so it is 1+1=2. The left middle point is entered from the upper-left point and the first dashed center point, so it is 1+1=2. The right middle point is entered from the upper-right point and the first dashed center point, so it is 1+1=2. The second dashed center point is entered from the first dashed center point, so it is 1. The middle central solid-line point is entered from the upper central solid-line point, the left middle point, and the right middle point, so it is 2+2+2=6. The lower-left point is entered from the left middle point and the second dashed center point, so it is 2+1=3. The lower-right point is entered from the right middle point and the second dashed center point, so it is 2+1=3. Finally B is entered from the lower-left point, the middle central solid-line point, and the lower-right point, therefore the total is 3+6+3=12.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "The reasoning trace is consistent with the image, the standard answer, and the assigned dynamic-programming method. It first describes the diagram, then performs topological path-count accumulation. No revision is needed.",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 0.98,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 21.191
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1923,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00800.json",
+        "source_sample_filename": "mathvision00800.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00800.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T15:45:49Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_d8654e97cb03748cf631b072",
+          "new_problem_id": "open_d8654e97cb03748cf631b072",
+          "old_problem_run_key": "mathvision__open_d8654e97cb03748cf631b072__84522839e448",
+          "new_problem_run_key": "mathvision__open_d8654e97cb03748cf631b072__84522839e448",
+          "target_relpath": "math/mathvision/samples/mathvision00800.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_d8654e97cb03748cf631b072",
+    "problem_run_key": "mathvision__open_d8654e97cb03748cf631b072__84522839e448",
+    "raw_question_text": "How many different ways are there in the diagram shown, to get from point $A$ to point $B$ if you are only allowed to move in the directions indicated?",
+    "raw_answer": "12",
+    "raw_standard_answer": "12",
+    "resolved_question_text": "How many different ways are there in the diagram shown, to get from point $A$ to point $B$ if you are only allowed to move in the directions indicated?",
+    "resolved_answer": "12",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure is a directed acyclic graph from top A to bottom B. A is at the very top, and B is at the very bottom. In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows. The arrows all point to lower or same-level but lower-slanting positions, so dynamic counting can be done in order from top to bottom. A has three outgoing edges: to the upper-left point, the upper-right point, and the first dashed center point.\n\nReasoning: Let the number of paths reaching A be 1. Accumulate downward in topological order: the upper-left point, the upper-right point, and the first dashed center point each get 1 path. The upper central solid-line point is entered from the upper-left point and the upper-right point, so it is 1+1=2. The left middle point is entered from the upper-left point and the first dashed center point, so it is 1+1=2. The right middle point is entered from the upper-right point and the first dashed center point, so it is 1+1=2. The second dashed center point is entered from the first dashed center point, so it is 1. The middle central solid-line point is entered from the upper central solid-line point, the left middle point, and the right middle point, so it is 2+2+2=6. The lower-left point is entered from the left middle point and the second dashed center point, so it is 2+1=3. The lower-right point is entered from the right middle point and the second dashed center point, so it is 2+1=3. Finally B is entered from the lower-left point, the middle central solid-line point, and the lower-right point, therefore the total is 3+6+3=12.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure is a directed acyclic graph from top A to bottom B.",
+        "label": "perception",
+        "source": "The figure is a directed acyclic graph from top A to bottom B."
+      },
+      {
+        "claim_id": 2,
+        "claim": "A is at the very top.",
+        "label": "perception",
+        "source": "A is at the very top, and B is at the very bottom."
+      },
+      {
+        "claim_id": 3,
+        "claim": "B is at the very bottom.",
+        "label": "perception",
+        "source": "A is at the very top, and B is at the very bottom."
+      },
+      {
+        "claim_id": 4,
+        "claim": "There is a left column in the middle.",
+        "label": "perception",
+        "source": "In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows."
+      },
+      {
+        "claim_id": 5,
+        "claim": "There is a right column in the middle.",
+        "label": "perception",
+        "source": "In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows."
+      },
+      {
+        "claim_id": 6,
+        "claim": "There is a central solid-line column in the middle.",
+        "label": "perception",
+        "source": "In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows."
+      },
+      {
+        "claim_id": 7,
+        "claim": "There is a central auxiliary column with dashed arrows in the middle.",
+        "label": "perception",
+        "source": "In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows."
+      },
+      {
+        "claim_id": 8,
+        "claim": "The arrows all point to lower or same-level but lower-slanting positions.",
+        "label": "perception",
+        "source": "The arrows all point to lower or same-level but lower-slanting positions"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Dynamic counting can be done in order from top to bottom.",
+        "label": "reasoning",
+        "source": "Therefore dynamic counting can be done in order from top to bottom."
+      },
+      {
+        "claim_id": 10,
+        "claim": "A has one outgoing edge to the upper-left point.",
+        "label": "perception",
+        "source": "A has three outgoing edges: to the upper-left point, the upper-right point, and the first dashed center point."
+      },
+      {
+        "claim_id": 11,
+        "claim": "A has one outgoing edge to the upper-right point.",
+        "label": "perception",
+        "source": "A has three outgoing edges: to the upper-left point, the upper-right point, and the first dashed center point."
+      },
+      {
+        "claim_id": 12,
+        "claim": "A has one outgoing edge to the first dashed center point.",
+        "label": "perception",
+        "source": "A has three outgoing edges: to the upper-left point, the upper-right point, and the first dashed center point."
+      },
+      {
+        "claim_id": 13,
+        "claim": "Let the number of paths reaching A be 1.",
+        "label": "reasoning",
+        "source": "Let the number of paths reaching A be 1."
+      },
+      {
+        "claim_id": 14,
+        "claim": "Accumulate downward in topological order.",
+        "label": "reasoning",
+        "source": "Accumulate downward in topological order"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The upper-left point gets 1 path.",
+        "label": "reasoning",
+        "source": "The upper-left point, the upper-right point, and the first dashed center point each get 1 path."
+      },
+      {
+        "claim_id": 16,
+        "claim": "The upper-right point gets 1 path.",
+        "label": "reasoning",
+        "source": "The upper-left point, the upper-right point, and the first dashed center point each get 1 path."
+      },
+      {
+        "claim_id": 17,
+        "claim": "The first dashed center point gets 1 path.",
+        "label": "reasoning",
+        "source": "The upper-left point, the upper-right point, and the first dashed center point each get 1 path."
+      },
+      {
+        "claim_id": 18,
+        "claim": "The upper central solid-line point is entered from the upper-left point.",
+        "label": "perception",
+        "source": "The upper central solid-line point is entered from the upper-left point and the upper-right point"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The upper central solid-line point is entered from the upper-right point.",
+        "label": "perception",
+        "source": "The upper central solid-line point is entered from the upper-left point and the upper-right point"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The number of paths of the upper central solid-line point is 2.",
+        "label": "reasoning",
+        "source": "So it is 1+1=2."
+      },
+      {
+        "claim_id": 21,
+        "claim": "The left middle point is entered from the upper-left point.",
+        "label": "perception",
+        "source": "The left middle point is entered from the upper-left point and the first dashed center point"
+      },
+      {
+        "claim_id": 22,
+        "claim": "The left middle point is entered from the first dashed center point.",
+        "label": "perception",
+        "source": "The left middle point is entered from the upper-left point and the first dashed center point"
+      },
+      {
+        "claim_id": 23,
+        "claim": "The number of paths of the left middle point is 2.",
+        "label": "reasoning",
+        "source": "So it is 1+1=2."
+      },
+      {
+        "claim_id": 24,
+        "claim": "The right middle point is entered from the upper-right point.",
+        "label": "perception",
+        "source": "The right middle point is entered from the upper-right point and the first dashed center point"
+      },
+      {
+        "claim_id": 25,
+        "claim": "The right middle point is entered from the first dashed center point.",
+        "label": "perception",
+        "source": "The right middle point is entered from the upper-right point and the first dashed center point"
+      },
+      {
+        "claim_id": 26,
+        "claim": "The number of paths of the right middle point is 2.",
+        "label": "reasoning",
+        "source": "So it is 1+1=2."
+      },
+      {
+        "claim_id": 27,
+        "claim": "The second dashed center point is entered from the first dashed center point.",
+        "label": "perception",
+        "source": "The second dashed center point is entered from the first dashed center point"
+      },
+      {
+        "claim_id": 28,
+        "claim": "The number of paths of the second dashed center point is 1.",
+        "label": "reasoning",
+        "source": "So it is 1."
+      },
+      {
+        "claim_id": 29,
+        "claim": "The middle central solid-line point is entered from the upper central solid-line point.",
+        "label": "perception",
+        "source": "The middle central solid-line point is entered from the upper central solid-line point, the left middle point, and the right middle point"
+      },
+      {
+        "claim_id": 30,
+        "claim": "The middle central solid-line point is entered from the left middle point.",
+        "label": "perception",
+        "source": "The middle central solid-line point is entered from the upper central solid-line point, the left middle point, and the right middle point"
+      },
+      {
+        "claim_id": 31,
+        "claim": "The middle central solid-line point is entered from the right middle point.",
+        "label": "perception",
+        "source": "The middle central solid-line point is entered from the upper central solid-line point, the left middle point, and the right middle point"
+      },
+      {
+        "claim_id": 32,
+        "claim": "The number of paths of the middle central solid-line point is 6.",
+        "label": "reasoning",
+        "source": "So it is 2+2+2=6."
+      },
+      {
+        "claim_id": 33,
+        "claim": "The lower-left point is entered from the left middle point.",
+        "label": "perception",
+        "source": "The lower-left point is entered from the left middle point and the second dashed center point"
+      },
+      {
+        "claim_id": 34,
+        "claim": "The lower-left point is entered from the second dashed center point.",
+        "label": "perception",
+        "source": "The lower-left point is entered from the left middle point and the second dashed center point"
+      },
+      {
+        "claim_id": 35,
+        "claim": "The number of paths of the lower-left point is 3.",
+        "label": "reasoning",
+        "source": "So it is 2+1=3."
+      },
+      {
+        "claim_id": 36,
+        "claim": "The lower-right point is entered from the right middle point.",
+        "label": "perception",
+        "source": "The lower-right point is entered from the right middle point and the second dashed center point"
+      },
+      {
+        "claim_id": 37,
+        "claim": "The lower-right point is entered from the second dashed center point.",
+        "label": "perception",
+        "source": "The lower-right point is entered from the right middle point and the second dashed center point"
+      },
+      {
+        "claim_id": 38,
+        "claim": "The number of paths of the lower-right point is 3.",
+        "label": "reasoning",
+        "source": "So it is 2+1=3."
+      },
+      {
+        "claim_id": 39,
+        "claim": "B is entered from the lower-left point.",
+        "label": "perception",
+        "source": "Finally B is entered from the lower-left point, the middle central solid-line point, and the lower-right point"
+      },
+      {
+        "claim_id": 40,
+        "claim": "B is entered from the middle central solid-line point.",
+        "label": "perception",
+        "source": "Finally B is entered from the lower-left point, the middle central solid-line point, and the lower-right point"
+      },
+      {
+        "claim_id": 41,
+        "claim": "B is entered from the lower-right point.",
+        "label": "perception",
+        "source": "Finally B is entered from the lower-left point, the middle central solid-line point, and the lower-right point"
+      },
+      {
+        "claim_id": 42,
+        "claim": "The total number of paths from A to B is 12.",
+        "label": "reasoning",
+        "source": "Therefore the total is 3+6+3=12."
+      }
+    ],
+    "claim_count": 42,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure is a directed acyclic graph from top A to bottom B.",
+          "label": "perception",
+          "source": "The figure is a directed acyclic graph from top A to bottom B."
+        },
+        {
+          "claim_id": 2,
+          "claim": "A is at the very top.",
+          "label": "perception",
+          "source": "A is at the very top, and B is at the very bottom."
+        },
+        {
+          "claim_id": 3,
+          "claim": "B is at the very bottom.",
+          "label": "perception",
+          "source": "A is at the very top, and B is at the very bottom."
+        },
+        {
+          "claim_id": 4,
+          "claim": "There is a left column in the middle.",
+          "label": "perception",
+          "source": "In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows."
+        },
+        {
+          "claim_id": 5,
+          "claim": "There is a right column in the middle.",
+          "label": "perception",
+          "source": "In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows."
+        },
+        {
+          "claim_id": 6,
+          "claim": "There is a central solid-line column in the middle.",
+          "label": "perception",
+          "source": "In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows."
+        },
+        {
+          "claim_id": 7,
+          "claim": "There is a central auxiliary column with dashed arrows in the middle.",
+          "label": "perception",
+          "source": "In the middle there are a left column, a right column, a central solid-line column, and a central auxiliary column with dashed arrows."
+        },
+        {
+          "claim_id": 8,
+          "claim": "The arrows all point to lower or same-level but lower-slanting positions.",
+          "label": "perception",
+          "source": "The arrows all point to lower or same-level but lower-slanting positions"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Dynamic counting can be done in order from top to bottom.",
+          "label": "reasoning",
+          "source": "Therefore dynamic counting can be done in order from top to bottom."
+        },
+        {
+          "claim_id": 10,
+          "claim": "A has one outgoing edge to the upper-left point.",
+          "label": "perception",
+          "source": "A has three outgoing edges: to the upper-left point, the upper-right point, and the first dashed center point."
+        },
+        {
+          "claim_id": 11,
+          "claim": "A has one outgoing edge to the upper-right point.",
+          "label": "perception",
+          "source": "A has three outgoing edges: to the upper-left point, the upper-right point, and the first dashed center point."
+        },
+        {
+          "claim_id": 12,
+          "claim": "A has one outgoing edge to the first dashed center point.",
+          "label": "perception",
+          "source": "A has three outgoing edges: to the upper-left point, the upper-right point, and the first dashed center point."
+        },
+        {
+          "claim_id": 13,
+          "claim": "Let the number of paths reaching A be 1.",
+          "label": "reasoning",
+          "source": "Let the number of paths reaching A be 1."
+        },
+        {
+          "claim_id": 14,
+          "claim": "Accumulate downward in topological order.",
+          "label": "reasoning",
+          "source": "Accumulate downward in topological order"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The upper-left point gets 1 path.",
+          "label": "reasoning",
+          "source": "The upper-left point, the upper-right point, and the first dashed center point each get 1 path."
+        },
+        {
+          "claim_id": 16,
+          "claim": "The upper-right point gets 1 path.",
+          "label": "reasoning",
+          "source": "The upper-left point, the upper-right point, and the first dashed center point each get 1 path."
+        },
+        {
+          "claim_id": 17,
+          "claim": "The first dashed center point gets 1 path.",
+          "label": "reasoning",
+          "source": "The upper-left point, the upper-right point, and the first dashed center point each get 1 path."
+        },
+        {
+          "claim_id": 18,
+          "claim": "The upper central solid-line point is entered from the upper-left point.",
+          "label": "perception",
+          "source": "The upper central solid-line point is entered from the upper-left point and the upper-right point"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The upper central solid-line point is entered from the upper-right point.",
+          "label": "perception",
+          "source": "The upper central solid-line point is entered from the upper-left point and the upper-right point"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The number of paths of the upper central solid-line point is 2.",
+          "label": "reasoning",
+          "source": "So it is 1+1=2."
+        },
+        {
+          "claim_id": 21,
+          "claim": "The left middle point is entered from the upper-left point.",
+          "label": "perception",
+          "source": "The left middle point is entered from the upper-left point and the first dashed center point"
+        },
+        {
+          "claim_id": 22,
+          "claim": "The left middle point is entered from the first dashed center point.",
+          "label": "perception",
+          "source": "The left middle point is entered from the upper-left point and the first dashed center point"
+        },
+        {
+          "claim_id": 23,
+          "claim": "The number of paths of the left middle point is 2.",
+          "label": "reasoning",
+          "source": "So it is 1+1=2."
+        },
+        {
+          "claim_id": 24,
+          "claim": "The right middle point is entered from the upper-right point.",
+          "label": "perception",
+          "source": "The right middle point is entered from the upper-right point and the first dashed center point"
+        },
+        {
+          "claim_id": 25,
+          "claim": "The right middle point is entered from the first dashed center point.",
+          "label": "perception",
+          "source": "The right middle point is entered from the upper-right point and the first dashed center point"
+        },
+        {
+          "claim_id": 26,
+          "claim": "The number of paths of the right middle point is 2.",
+          "label": "reasoning",
+          "source": "So it is 1+1=2."
+        },
+        {
+          "claim_id": 27,
+          "claim": "The second dashed center point is entered from the first dashed center point.",
+          "label": "perception",
+          "source": "The second dashed center point is entered from the first dashed center point"
+        },
+        {
+          "claim_id": 28,
+          "claim": "The number of paths of the second dashed center point is 1.",
+          "label": "reasoning",
+          "source": "So it is 1."
+        },
+        {
+          "claim_id": 29,
+          "claim": "The middle central solid-line point is entered from the upper central solid-line point.",
+          "label": "perception",
+          "source": "The middle central solid-line point is entered from the upper central solid-line point, the left middle point, and the right middle point"
+        },
+        {
+          "claim_id": 30,
+          "claim": "The middle central solid-line point is entered from the left middle point.",
+          "label": "perception",
+          "source": "The middle central solid-line point is entered from the upper central solid-line point, the left middle point, and the right middle point"
+        },
+        {
+          "claim_id": 31,
+          "claim": "The middle central solid-line point is entered from the right middle point.",
+          "label": "perception",
+          "source": "The middle central solid-line point is entered from the upper central solid-line point, the left middle point, and the right middle point"
+        },
+        {
+          "claim_id": 32,
+          "claim": "The number of paths of the middle central solid-line point is 6.",
+          "label": "reasoning",
+          "source": "So it is 2+2+2=6."
+        },
+        {
+          "claim_id": 33,
+          "claim": "The lower-left point is entered from the left middle point.",
+          "label": "perception",
+          "source": "The lower-left point is entered from the left middle point and the second dashed center point"
+        },
+        {
+          "claim_id": 34,
+          "claim": "The lower-left point is entered from the second dashed center point.",
+          "label": "perception",
+          "source": "The lower-left point is entered from the left middle point and the second dashed center point"
+        },
+        {
+          "claim_id": 35,
+          "claim": "The number of paths of the lower-left point is 3.",
+          "label": "reasoning",
+          "source": "So it is 2+1=3."
+        },
+        {
+          "claim_id": 36,
+          "claim": "The lower-right point is entered from the right middle point.",
+          "label": "perception",
+          "source": "The lower-right point is entered from the right middle point and the second dashed center point"
+        },
+        {
+          "claim_id": 37,
+          "claim": "The lower-right point is entered from the second dashed center point.",
+          "label": "perception",
+          "source": "The lower-right point is entered from the right middle point and the second dashed center point"
+        },
+        {
+          "claim_id": 38,
+          "claim": "The number of paths of the lower-right point is 3.",
+          "label": "reasoning",
+          "source": "So it is 2+1=3."
+        },
+        {
+          "claim_id": 39,
+          "claim": "B is entered from the lower-left point.",
+          "label": "perception",
+          "source": "Finally B is entered from the lower-left point, the middle central solid-line point, and the lower-right point"
+        },
+        {
+          "claim_id": 40,
+          "claim": "B is entered from the middle central solid-line point.",
+          "label": "perception",
+          "source": "Finally B is entered from the lower-left point, the middle central solid-line point, and the lower-right point"
+        },
+        {
+          "claim_id": 41,
+          "claim": "B is entered from the lower-right point.",
+          "label": "perception",
+          "source": "Finally B is entered from the lower-left point, the middle central solid-line point, and the lower-right point"
+        },
+        {
+          "claim_id": 42,
+          "claim": "The total number of paths from A to B is 12.",
+          "label": "reasoning",
+          "source": "Therefore the total is 3+6+3=12."
+        }
+      ],
+      "coverage_notes": "已按 final_cot 的图像描述与动态计数推理顺序拆分；合取的入边、出边和路径数结论均拆成原子声明。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:21Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/03354_math_mathvision_open_d8654e97cb03748cf631b072_48969253b2.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04595_math_mathvision_open_d8654e97cb03748cf631b072_48969253b2.json"
+  }
+}

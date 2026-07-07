@@ -1,0 +1,792 @@
+{
+  "pack_index": 4357,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00524:mathvision__open_f9df3452922d9ccb95e280dd__42f3461e7476",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_f9df3452922d9ccb95e280dd",
+    "source_problem_id": "open_f9df3452922d9ccb95e280dd",
+    "problem_run_key": "mathvision__open_f9df3452922d9ccb95e280dd__42f3461e7476",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00524.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00524.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00524.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00524.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Andrew bought 27 little cubes of the same color, each with three adjacent faces painted red and the other three of another color. He wants to use all these little cubes to build a bigger cube. What is the largest number of completely red faces that he can get for this cube?\n<image1>",
+    "raw_answer_text": "6",
+    "open_variant_id": "open_f9df3452922d9ccb95e280dd",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "Andrew bought 27 little cubes of the same color, each with three adjacent faces painted red and the other three of another color. He wants to use all these little cubes to build a bigger cube. What is the largest number of completely red faces that he can get for this cube?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "6",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_68e2a163449a32d25a8ae22c",
+        "problem_id": "prob_c94382f06f9604cf4fd556d1",
+        "node_type": "answer_claim",
+        "canonical_value": "6",
+        "surface_forms": [
+          "6"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_824bca70457b9f90ccfd6a13"
+        ],
+        "evidence_refs": [
+          "asset_824bca70457b9f90ccfd6a13"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "6"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T06:48:59Z",
+        "updated_at": "2026-04-06T06:48:59Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_f9df3452922d9ccb95e280dd",
+      "parent_problem_id": "prob_c94382f06f9604cf4fd556d1",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "Andrew bought 27 little cubes of the same color, each with three adjacent faces painted red and the other three of another color. He wants to use all these little cubes to build a bigger cube. What is the largest number of completely red faces that he can get for this cube?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "6",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Andrew bought 27 little cubes of the same color, each with three adjacent faces painted red and the other three of another color. He wants to use all these little cubes to build a bigger cube. What is the largest number of completely red faces that he can get for this cube?",
+    "raw_answer": "6",
+    "raw_standard_answer": "6",
+    "resolved_question_text": "Andrew bought 27 little cubes of the same color, each with three adjacent faces painted red and the other three of another color. He wants to use all these little cubes to build a bigger cube. What is the largest number of completely red faces that he can get for this cube?",
+    "resolved_answer": "6",
+    "resolved_from_fallback": false,
+    "final_cot": "There are 27 little cubes, so using all of them to build one larger cube means the larger cube must be 3 by 3 by 3. In a 3 by 3 by 3 cube, the small-cube positions are: 8 corner positions, each exposing 3 mutually adjacent faces; 12 edge positions, each exposing 2 adjacent faces; 6 face-center positions, each exposing 1 face; and 1 interior position, exposing no faces. Each little cube has exactly 3 mutually adjacent red faces. Therefore, at every corner position, orient the cube so the 3 exposed faces are the 3 red faces. At every edge position, orient the cube so the 2 exposed faces are two of its red faces. At every face-center position, orient the cube so the 1 exposed face is red. The interior cube does not matter because none of its faces are exposed. Thus every exposed unit square on the surface of the large cube can be red, so all 6 faces of the large cube can be completely red. Since a cube has only 6 faces total, the maximum is 6.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_f9df3452922d9ccb95e280dd",
+      "problem_run_key": "mathvision__open_f9df3452922d9ccb95e280dd__42f3461e7476",
+      "question_text": "Andrew bought 27 little cubes of the same color, each with three adjacent faces painted red and the other three of another color. He wants to use all these little cubes to build a bigger cube. What is the largest number of completely red faces that he can get for this cube?",
+      "standard_answer": "6",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00524.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00524.png"
+      ],
+      "initial_multi_solution_score": 0.3467,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Use a position-type construction. Read that there are 27 small cubes, so using all of them makes a 3 by 3 by 3 cube. Each small cube has three mutually adjacent red faces. In the large cube, classify small-cube positions: 8 corners expose 3 mutually adjacent faces, 12 edge positions expose 2 adjacent faces, 6 face-center positions expose 1 face, and 1 interior cube exposes none. Orient each corner cube so its three exposed faces are its three red faces; orient each edge cube so its two exposed faces are among its red faces; orient each face-center cube so its one exposed face is red. Thus every exposed unit square on the surface can be red, so all 6 large faces are completely red. Since a cube has only 6 faces total, the maximum is 6.",
+          "CoT_raw": "There are 27 little cubes, so using all of them to build one larger cube means the larger cube must be 3 by 3 by 3. In a 3 by 3 by 3 cube, the small-cube positions are: 8 corner positions, each exposing 3 mutually adjacent faces; 12 edge positions, each exposing 2 adjacent faces; 6 face-center positions, each exposing 1 face; and 1 interior position, exposing no faces. Each little cube has exactly 3 mutually adjacent red faces. Therefore, at every corner position, orient the cube so the 3 exposed faces are the 3 red faces. At every edge position, orient the cube so the 2 exposed faces are two of its red faces. At every face-center position, orient the cube so the 1 exposed face is red. The interior cube does not matter because none of its faces are exposed. Thus every exposed unit square on the surface of the large cube can be red, so all 6 faces of the large cube can be completely red. Since a cube has only 6 faces total, the maximum is 6.",
+          "model_answer": "6",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "6",
+              "predicted_part": "6",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "There are 27 little cubes, so using all of them to build one larger cube means the larger cube must be 3 by 3 by 3. In a 3 by 3 by 3 cube, the small-cube positions are: 8 corner positions, each exposing 3 mutually adjacent faces; 12 edge positions, each exposing 2 adjacent faces; 6 face-center positions, each exposing 1 face; and 1 interior position, exposing no faces. Each little cube has exactly 3 mutually adjacent red faces. Therefore, at every corner position, orient the cube so the 3 exposed faces are the 3 red faces. At every edge position, orient the cube so the 2 exposed faces are two of its red faces. At every face-center position, orient the cube so the 1 exposed face is red. The interior cube does not matter because none of its faces are exposed. Thus every exposed unit square on the surface of the large cube can be red, so all 6 faces of the large cube can be completely red. Since a cube has only 6 faces total, the maximum is 6.",
+          "answer_answer_check_final": "6",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revisions needed. The reasoning is faithful to the problem, matches the standard answer, follows the assigned position-type construction method, and makes no unsupported image-dependent claims.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "There are 27 little cubes, so using all of them to build one larger cube means the larger cube must be 3 by 3 by 3. In a 3 by 3 by 3 cube, the small-cube positions are: 8 corner positions, each exposing 3 mutually adjacent faces; 12 edge positions, each exposing 2 adjacent faces; 6 face-center positions, each exposing 1 face; and 1 interior position, exposing no faces. Each little cube has exactly 3 mutually adjacent red faces. Therefore, at every corner position, orient the cube so the 3 exposed faces are the 3 red faces. At every edge position, orient the cube so the 2 exposed faces are two of its red faces. At every face-center position, orient the cube so the 1 exposed face is red. The interior cube does not matter because none of its faces are exposed. Thus every exposed unit square on the surface of the large cube can be red, so all 6 faces of the large cube can be completely red. Since a cube has only 6 faces total, the maximum is 6.",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route explicitly analyzes the different geometric position types in the 3x3x3 cube and verifies that each type can be oriented to make all exposed faces red.",
+            "image_role": "The image shows the key visual model of a small cube with three adjacent red faces, confirming that the red faces meet at one vertex.",
+            "text_role": "The text provides the number of small cubes, 27, and states that each has exactly three adjacent red faces; it asks for the maximum number of completely red faces of the larger cube.",
+            "knowledge_role": "Use the facts that 27 cubes form a 3x3x3 cube, surface positions expose 0, 1, 2, or 3 mutually adjacent faces, and a cube has at most 6 faces."
+          },
+          "solver_metadata": {
+            "cot_raw": "There are 27 little cubes, so using all of them to build one larger cube means the larger cube must be 3 by 3 by 3. In a 3 by 3 by 3 cube, the small-cube positions are: 8 corner positions, each exposing 3 mutually adjacent faces; 12 edge positions, each exposing 2 adjacent faces; 6 face-center positions, each exposing 1 face; and 1 interior position, exposing no faces. Each little cube has exactly 3 mutually adjacent red faces. Therefore, at every corner position, orient the cube so the 3 exposed faces are the 3 red faces. At every edge position, orient the cube so the 2 exposed faces are two of its red faces. At every face-center position, orient the cube so the 1 exposed face is red. The interior cube does not matter because none of its faces are exposed. Thus every exposed unit square on the surface of the large cube can be red, so all 6 faces of the large cube can be completely red. Since a cube has only 6 faces total, the maximum is 6.",
+            "model_answer": "6",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 1500,
+              "completion_tokens": 610,
+              "total_tokens": 2110,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 12.605,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revisions needed. The reasoning is faithful to the problem, matches the standard answer, follows the assigned position-type construction method, and makes no unsupported image-dependent claims.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 11.651
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 12.622,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 11,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 11,
+                "prompt_tokens": 33301,
+                "completion_tokens": 10503,
+                "total_tokens": 43804,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 209.023,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 11.67,
+              "usage_delta": {
+                "request_count": 14,
+                "successful_request_count": 16,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 14,
+                "requests_with_usage": 16,
+                "prompt_tokens": 40052,
+                "completion_tokens": 12743,
+                "total_tokens": 52795,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 319.68,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Use a coordinate/orientation construction. Read that the large cube must be built from all 27 cubes, so model its cells as coordinates (x,y,z) where each coordinate is -1, 0, or 1. A small cube on the outer surface needs a red face in every nonzero coordinate direction: for example, a cube with x=1 must have its outward +x face red, and similarly for y or z. Because each little cube has a triad of red faces meeting at one corner, it can be rotated so that its red triad points toward any chosen corner direction. For each cell, choose a red corner direction whose signs agree with all nonzero coordinates of that cell; arbitrary signs may be chosen for zero coordinates. Then every required outward surface face is red. Therefore all six faces of the large cube can be completely red, and no answer above 6 is possible.",
+          "CoT_raw": "图像描述：图片中显示的是一个小立方体，可见的三个相邻面都被涂成红色，符合题目中“每个小立方体有三个相邻面为红色”的条件。推理：Andrew 有 27 个小立方体，因此用完所有小立方体能组成一个 3×3×3 的大立方体。把大立方体的 27 个位置表示为坐标 (x,y,z)，其中 x,y,z 分别取 -1,0,1。若某个小立方体位于外表面，则每个非零坐标方向对应一个需要露出的外表面：例如 x=1 的位置需要 +x 面为红色，y=-1 的位置需要 -y 面为红色。每个小立方体的三个红面相邻并交于一个角，所以通过旋转，可以让这三个红面朝向任意一个角方向，即任意一组三个坐标符号方向。对于大立方体中的任意位置，只要选择一个角方向，使它的符号与该位置所有非零坐标一致；坐标为 0 的方向可以任意选择符号。这样该位置所有需要露出的外表面都会是红色。于是可以安排所有 27 个小立方体，使大立方体的全部外表面都为红色。因此 6 个大面都可以完全是红色，而一个立方体最多只有 6 个面，所以最大值是 6。",
+          "model_answer": "6",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "6",
+              "predicted_part": "6",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图片中显示的是一个小立方体，可见的三个相邻面都被涂成红色，符合题目中“每个小立方体有三个相邻面为红色”的条件。推理：Andrew 有 27 个小立方体，因此用完所有小立方体能组成一个 3×3×3 的大立方体。把大立方体的 27 个位置表示为坐标 (x,y,z)，其中 x,y,z 分别取 -1,0,1。若某个小立方体位于外表面，则每个非零坐标方向对应一个需要露出的外表面：例如 x=1 的位置需要 +x 面为红色，y=-1 的位置需要 -y 面为红色。每个小立方体的三个红面相邻并交于一个角，所以通过旋转，可以让这三个红面朝向任意一个角方向，即任意一组三个坐标符号方向。对于大立方体中的任意位置，只要选择一个角方向，使它的符号与该位置所有非零坐标一致；坐标为 0 的方向可以任意选择符号。这样该位置所有需要露出的外表面都会是红色。于是可以安排所有 27 个小立方体，使大立方体的全部外表面都为红色。因此 6 个大面都可以完全是红色，而一个立方体最多只有 6 个面，所以最大值是 6。",
+          "answer_answer_check_final": "6",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理链与题目、标准答案和方法草稿一致。图像描述先于推理，且视觉声明仅限于可见的三个相邻红面，没有依赖不可见信息。坐标/朝向构造清楚说明了如何使所有外露面为红色，并正确得出最大值为 6。无需修改。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图片中显示的是一个小立方体，可见的三个相邻面都被涂成红色，符合题目中“每个小立方体有三个相邻面为红色”的条件。推理：Andrew 有 27 个小立方体，因此用完所有小立方体能组成一个 3×3×3 的大立方体。把大立方体的 27 个位置表示为坐标 (x,y,z)，其中 x,y,z 分别取 -1,0,1。若某个小立方体位于外表面，则每个非零坐标方向对应一个需要露出的外表面：例如 x=1 的位置需要 +x 面为红色，y=-1 的位置需要 -y 面为红色。每个小立方体的三个红面相邻并交于一个角，所以通过旋转，可以让这三个红面朝向任意一个角方向，即任意一组三个坐标符号方向。对于大立方体中的任意位置，只要选择一个角方向，使它的符号与该位置所有非零坐标一致；坐标为 0 的方向可以任意选择符号。这样该位置所有需要露出的外表面都会是红色。于是可以安排所有 27 个小立方体，使大立方体的全部外表面都为红色。因此 6 个大面都可以完全是红色，而一个立方体最多只有 6 个面，所以最大值是 6。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route avoids enumerating corner/edge/face-center cases directly and instead gives a global coordinate assignment rule for orienting every cube.",
+            "image_role": "The image visually establishes that the three red faces form one corner triad on each little cube.",
+            "text_role": "The text gives the total of 27 cubes and the condition that each cube has three adjacent red faces, which determines the 3x3x3 arrangement and available rotations.",
+            "knowledge_role": "Use coordinate modeling of a 3x3x3 cube, the rotational symmetry of a cube allowing the red triad to point toward any corner direction, and the upper bound that a cube has only 6 faces."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图片中显示的是一个小立方体，可见的三个相邻面都被涂成红色，符合题目中“每个小立方体有三个相邻面为红色”的条件。推理：Andrew 有 27 个小立方体，因此用完所有小立方体能组成一个 3×3×3 的大立方体。把大立方体的 27 个位置表示为坐标 (x,y,z)，其中 x,y,z 分别取 -1,0,1。若某个小立方体位于外表面，则每个非零坐标方向对应一个需要露出的外表面：例如 x=1 的位置需要 +x 面为红色，y=-1 的位置需要 -y 面为红色。每个小立方体的三个红面相邻并交于一个角，所以通过旋转，可以让这三个红面朝向任意一个角方向，即任意一组三个坐标符号方向。对于大立方体中的任意位置，只要选择一个角方向，使它的符号与该位置所有非零坐标一致；坐标为 0 的方向可以任意选择符号。这样该位置所有需要露出的外表面都会是红色。于是可以安排所有 27 个小立方体，使大立方体的全部外表面都为红色。因此 6 个大面都可以完全是红色，而一个立方体最多只有 6 个面，所以最大值是 6。",
+            "model_answer": "6",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 1511,
+              "completion_tokens": 855,
+              "total_tokens": 2366,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 17.561,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理链与题目、标准答案和方法草稿一致。图像描述先于推理，且视觉声明仅限于可见的三个相邻红面，没有依赖不可见信息。坐标/朝向构造清楚说明了如何使所有外露面为红色，并正确得出最大值为 6。无需修改。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 10.928
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 17.581,
+              "usage_delta": {
+                "request_count": 11,
+                "successful_request_count": 14,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 11,
+                "requests_with_usage": 14,
+                "prompt_tokens": 44686,
+                "completion_tokens": 16666,
+                "total_tokens": 61352,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 336.38,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 10.947,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 15,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 15,
+                "prompt_tokens": 39374,
+                "completion_tokens": 13987,
+                "total_tokens": 53361,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 344.501,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 22.977,
+          "usage_delta": {
+            "request_count": 19,
+            "successful_request_count": 11,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 19,
+            "requests_with_usage": 11,
+            "prompt_tokens": 32254,
+            "completion_tokens": 10402,
+            "total_tokens": 42656,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 216.282,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1200",
+        "subject": "数学",
+        "requires_image": false,
+        "text_dominant": true,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00524.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_c94382f06f9604cf4fd556d1",
+          "open_variant_count": 1,
+          "open_variant_id": "open_f9df3452922d9ccb95e280dd",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "metadata.image_paths differs from top-level image_paths"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 75.831,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 8260,
+        "completion_tokens": 3636,
+        "total_tokens": 11896,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 75.698,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "Andrew bought 27 little cubes of the same color, each with three adjacent faces painted red and the other three of another color. He wants to use all these little cubes to build a bigger cube. What is the largest number of completely red faces that he can get for this cube?",
+      "answer": "6",
+      "final_cot": "There are 27 little cubes, so using all of them to build one larger cube means the larger cube must be 3 by 3 by 3. In a 3 by 3 by 3 cube, the small-cube positions are: 8 corner positions, each exposing 3 mutually adjacent faces; 12 edge positions, each exposing 2 adjacent faces; 6 face-center positions, each exposing 1 face; and 1 interior position, exposing no faces. Each little cube has exactly 3 mutually adjacent red faces. Therefore, at every corner position, orient the cube so the 3 exposed faces are the 3 red faces. At every edge position, orient the cube so the 2 exposed faces are two of its red faces. At every face-center position, orient the cube so the 1 exposed face is red. The interior cube does not matter because none of its faces are exposed. Thus every exposed unit square on the surface of the large cube can be red, so all 6 faces of the large cube can be completely red. Since a cube has only 6 faces total, the maximum is 6.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revisions needed. The reasoning is faithful to the problem, matches the standard answer, follows the assigned position-type construction method, and makes no unsupported image-dependent claims.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 11.651
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理链与题目、标准答案和方法草稿一致。图像描述先于推理，且视觉声明仅限于可见的三个相邻红面，没有依赖不可见信息。坐标/朝向构造清楚说明了如何使所有外露面为红色，并正确得出最大值为 6。无需修改。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 10.928
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1647,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00524.json",
+        "source_sample_filename": "mathvision00524.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00524.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T14:15:49Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_f9df3452922d9ccb95e280dd",
+          "new_problem_id": "open_f9df3452922d9ccb95e280dd",
+          "old_problem_run_key": "mathvision__open_f9df3452922d9ccb95e280dd__42f3461e7476",
+          "new_problem_run_key": "mathvision__open_f9df3452922d9ccb95e280dd__42f3461e7476",
+          "target_relpath": "math/mathvision/samples/mathvision00524.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_f9df3452922d9ccb95e280dd",
+    "problem_run_key": "mathvision__open_f9df3452922d9ccb95e280dd__42f3461e7476",
+    "raw_question_text": "Andrew bought 27 little cubes of the same color, each with three adjacent faces painted red and the other three of another color. He wants to use all these little cubes to build a bigger cube. What is the largest number of completely red faces that he can get for this cube?",
+    "raw_answer": "6",
+    "raw_standard_answer": "6",
+    "resolved_question_text": "Andrew bought 27 little cubes of the same color, each with three adjacent faces painted red and the other three of another color. He wants to use all these little cubes to build a bigger cube. What is the largest number of completely red faces that he can get for this cube?",
+    "resolved_answer": "6",
+    "resolved_from_fallback": false,
+    "final_cot": "There are 27 little cubes, so using all of them to build one larger cube means the larger cube must be 3 by 3 by 3. In a 3 by 3 by 3 cube, the small-cube positions are: 8 corner positions, each exposing 3 mutually adjacent faces; 12 edge positions, each exposing 2 adjacent faces; 6 face-center positions, each exposing 1 face; and 1 interior position, exposing no faces. Each little cube has exactly 3 mutually adjacent red faces. Therefore, at every corner position, orient the cube so the 3 exposed faces are the 3 red faces. At every edge position, orient the cube so the 2 exposed faces are two of its red faces. At every face-center position, orient the cube so the 1 exposed face is red. The interior cube does not matter because none of its faces are exposed. Thus every exposed unit square on the surface of the large cube can be red, so all 6 faces of the large cube can be completely red. Since a cube has only 6 faces total, the maximum is 6.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "There are 27 little cubes.",
+        "label": "perception",
+        "source": "There are 27 little cubes"
+      },
+      {
+        "claim_id": 2,
+        "claim": "Using all 27 little cubes to build one larger cube means the larger cube must be 3 by 3 by 3.",
+        "label": "reasoning",
+        "source": "so using all of them to build one larger cube means the larger cube must be 3 by 3 by 3"
+      },
+      {
+        "claim_id": 3,
+        "claim": "A 3 by 3 by 3 cube has 8 corner positions.",
+        "label": "reasoning",
+        "source": "In a 3 by 3 by 3 cube, the small-cube positions are: 8 corner positions"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Each corner position in a 3 by 3 by 3 cube exposes 3 mutually adjacent faces.",
+        "label": "reasoning",
+        "source": "8 corner positions, each exposing 3 mutually adjacent faces"
+      },
+      {
+        "claim_id": 5,
+        "claim": "A 3 by 3 by 3 cube has 12 edge positions.",
+        "label": "reasoning",
+        "source": "12 edge positions"
+      },
+      {
+        "claim_id": 6,
+        "claim": "Each edge position in a 3 by 3 by 3 cube exposes 2 adjacent faces.",
+        "label": "reasoning",
+        "source": "12 edge positions, each exposing 2 adjacent faces"
+      },
+      {
+        "claim_id": 7,
+        "claim": "A 3 by 3 by 3 cube has 6 face-center positions.",
+        "label": "reasoning",
+        "source": "6 face-center positions"
+      },
+      {
+        "claim_id": 8,
+        "claim": "Each face-center position in a 3 by 3 by 3 cube exposes 1 face.",
+        "label": "reasoning",
+        "source": "6 face-center positions, each exposing 1 face"
+      },
+      {
+        "claim_id": 9,
+        "claim": "A 3 by 3 by 3 cube has 1 interior position.",
+        "label": "reasoning",
+        "source": "and 1 interior position"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The interior position in a 3 by 3 by 3 cube exposes no faces.",
+        "label": "reasoning",
+        "source": "1 interior position, exposing no faces"
+      },
+      {
+        "claim_id": 11,
+        "claim": "Each little cube has exactly 3 mutually adjacent red faces.",
+        "label": "perception",
+        "source": "Each little cube has exactly 3 mutually adjacent red faces."
+      },
+      {
+        "claim_id": 12,
+        "claim": "At every corner position, the cube can be oriented so the 3 exposed faces are the 3 red faces.",
+        "label": "reasoning",
+        "source": "Therefore, at every corner position, orient the cube so the 3 exposed faces are the 3 red faces."
+      },
+      {
+        "claim_id": 13,
+        "claim": "At every edge position, the cube can be oriented so the 2 exposed faces are two of its red faces.",
+        "label": "reasoning",
+        "source": "At every edge position, orient the cube so the 2 exposed faces are two of its red faces."
+      },
+      {
+        "claim_id": 14,
+        "claim": "At every face-center position, the cube can be oriented so the 1 exposed face is red.",
+        "label": "reasoning",
+        "source": "At every face-center position, orient the cube so the 1 exposed face is red."
+      },
+      {
+        "claim_id": 15,
+        "claim": "The interior cube's orientation does not matter.",
+        "label": "reasoning",
+        "source": "The interior cube does not matter because none of its faces are exposed."
+      },
+      {
+        "claim_id": 16,
+        "claim": "Every exposed unit square on the surface of the large cube can be red.",
+        "label": "reasoning",
+        "source": "Thus every exposed unit square on the surface of the large cube can be red"
+      },
+      {
+        "claim_id": 17,
+        "claim": "All 6 faces of the large cube can be completely red.",
+        "label": "reasoning",
+        "source": "so all 6 faces of the large cube can be completely red."
+      },
+      {
+        "claim_id": 18,
+        "claim": "A cube has only 6 faces total.",
+        "label": "knowledge",
+        "source": "Since a cube has only 6 faces total"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The maximum number of completely red faces is 6.",
+        "label": "reasoning",
+        "source": "the maximum is 6."
+      }
+    ],
+    "claim_count": 19,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "There are 27 little cubes.",
+          "label": "perception",
+          "source": "There are 27 little cubes"
+        },
+        {
+          "claim_id": 2,
+          "claim": "Using all 27 little cubes to build one larger cube means the larger cube must be 3 by 3 by 3.",
+          "label": "reasoning",
+          "source": "so using all of them to build one larger cube means the larger cube must be 3 by 3 by 3"
+        },
+        {
+          "claim_id": 3,
+          "claim": "A 3 by 3 by 3 cube has 8 corner positions.",
+          "label": "reasoning",
+          "source": "In a 3 by 3 by 3 cube, the small-cube positions are: 8 corner positions"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Each corner position in a 3 by 3 by 3 cube exposes 3 mutually adjacent faces.",
+          "label": "reasoning",
+          "source": "8 corner positions, each exposing 3 mutually adjacent faces"
+        },
+        {
+          "claim_id": 5,
+          "claim": "A 3 by 3 by 3 cube has 12 edge positions.",
+          "label": "reasoning",
+          "source": "12 edge positions"
+        },
+        {
+          "claim_id": 6,
+          "claim": "Each edge position in a 3 by 3 by 3 cube exposes 2 adjacent faces.",
+          "label": "reasoning",
+          "source": "12 edge positions, each exposing 2 adjacent faces"
+        },
+        {
+          "claim_id": 7,
+          "claim": "A 3 by 3 by 3 cube has 6 face-center positions.",
+          "label": "reasoning",
+          "source": "6 face-center positions"
+        },
+        {
+          "claim_id": 8,
+          "claim": "Each face-center position in a 3 by 3 by 3 cube exposes 1 face.",
+          "label": "reasoning",
+          "source": "6 face-center positions, each exposing 1 face"
+        },
+        {
+          "claim_id": 9,
+          "claim": "A 3 by 3 by 3 cube has 1 interior position.",
+          "label": "reasoning",
+          "source": "and 1 interior position"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The interior position in a 3 by 3 by 3 cube exposes no faces.",
+          "label": "reasoning",
+          "source": "1 interior position, exposing no faces"
+        },
+        {
+          "claim_id": 11,
+          "claim": "Each little cube has exactly 3 mutually adjacent red faces.",
+          "label": "perception",
+          "source": "Each little cube has exactly 3 mutually adjacent red faces."
+        },
+        {
+          "claim_id": 12,
+          "claim": "At every corner position, the cube can be oriented so the 3 exposed faces are the 3 red faces.",
+          "label": "reasoning",
+          "source": "Therefore, at every corner position, orient the cube so the 3 exposed faces are the 3 red faces."
+        },
+        {
+          "claim_id": 13,
+          "claim": "At every edge position, the cube can be oriented so the 2 exposed faces are two of its red faces.",
+          "label": "reasoning",
+          "source": "At every edge position, orient the cube so the 2 exposed faces are two of its red faces."
+        },
+        {
+          "claim_id": 14,
+          "claim": "At every face-center position, the cube can be oriented so the 1 exposed face is red.",
+          "label": "reasoning",
+          "source": "At every face-center position, orient the cube so the 1 exposed face is red."
+        },
+        {
+          "claim_id": 15,
+          "claim": "The interior cube's orientation does not matter.",
+          "label": "reasoning",
+          "source": "The interior cube does not matter because none of its faces are exposed."
+        },
+        {
+          "claim_id": 16,
+          "claim": "Every exposed unit square on the surface of the large cube can be red.",
+          "label": "reasoning",
+          "source": "Thus every exposed unit square on the surface of the large cube can be red"
+        },
+        {
+          "claim_id": 17,
+          "claim": "All 6 faces of the large cube can be completely red.",
+          "label": "reasoning",
+          "source": "so all 6 faces of the large cube can be completely red."
+        },
+        {
+          "claim_id": 18,
+          "claim": "A cube has only 6 faces total.",
+          "label": "knowledge",
+          "source": "Since a cube has only 6 faces total"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The maximum number of completely red faces is 6.",
+          "label": "reasoning",
+          "source": "the maximum is 6."
+        }
+      ],
+      "coverage_notes": "Applied all fix-severity edits: relabeled the 3 by 3 by 3 position-count and exposure claims as reasoning, and removed the duplicate claim that no faces of the interior cube are exposed. Remaining claims preserve the original order and support from final_cot."
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:28Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/08723_math_mathvision_open_f9df3452922d9ccb95e280dd_3e2e540bcd.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04357_math_mathvision_open_f9df3452922d9ccb95e280dd_3e2e540bcd.json"
+  }
+}

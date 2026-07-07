@@ -1,0 +1,793 @@
+{
+  "pack_index": 4496,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00858:mathvision__open_a627ecbaa0c49da779365c7a__42913604f70a",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_a627ecbaa0c49da779365c7a",
+    "source_problem_id": "open_a627ecbaa0c49da779365c7a",
+    "problem_run_key": "mathvision__open_a627ecbaa0c49da779365c7a__42913604f70a",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00858.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00858.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00858.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00858.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In the picture any letter stands for some digit (different letters for different digits, equal letters for equal digits). Which digit is $\\mathrm{K}$?\n<image1>",
+    "raw_answer_text": "9",
+    "open_variant_id": "open_a627ecbaa0c49da779365c7a",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Which digit is $\\mathrm{K}$?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "9",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_86df82a57ae7acd56fd1175d",
+        "problem_id": "prob_7e8676d043b8f45fb45b9ddf",
+        "node_type": "answer_claim",
+        "canonical_value": "9",
+        "surface_forms": [
+          "9"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_fac2e6135cdd6763c47dfd8d"
+        ],
+        "evidence_refs": [
+          "asset_fac2e6135cdd6763c47dfd8d"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "9"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T16:58:52Z",
+        "updated_at": "2026-04-06T16:58:52Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_a627ecbaa0c49da779365c7a",
+      "parent_problem_id": "prob_7e8676d043b8f45fb45b9ddf",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Which digit is $\\mathrm{K}$?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "9",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Which digit is $\\mathrm{K}$?",
+    "raw_answer": "9",
+    "raw_standard_answer": "9",
+    "resolved_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Which digit is $\\mathrm{K}$?",
+    "resolved_answer": "9",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The image shows a vertical addition, the first line is the two-digit number OK, the left side of the second line has a plus sign, the second addend is KO, and the result below the horizontal line is the three-digit number WOW. Then reason: Treat it as the vertical addition OK + KO = WOW. Let the carry from the ones place to the tens place be c, where c can only be 0 or 1. Look at the tens column: in the tens place it is O + K plus the ones-place carry c, the resulting tens digit is still O, and the carry to the hundreds place is W. Therefore O + K + c = O + 10W, and eliminating O gives K + c = 10W. Because the result is a three-digit number, the hundreds digit W cannot be 0; and K is a one-digit digit and c is at most 1, so K + c is at most 10. Thus it can only be that 10W = 10, namely W = 1. At this time K + c = 10; if c = 0 then K = 10 is impossible, so c = 1 and K = 9.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_a627ecbaa0c49da779365c7a",
+      "problem_run_key": "mathvision__open_a627ecbaa0c49da779365c7a__42913604f70a",
+      "question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Which digit is $\\mathrm{K}$?",
+      "standard_answer": "9",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00858.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00858.png"
+      ],
+      "initial_multi_solution_score": 0.3647,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the image as a vertical addition alphametic: the two addends are OK and KO, and the result is WOW. Use column-by-column carries. From the tens column, the digit O in the result is obtained from O + K plus the carry from the units column, with a carry W into the hundreds column. Thus O + K + c = O + 10W, so K + c = 10W, where c is 0 or 1. Since the result is three-digit, W is nonzero; the only possibility with a digit K and carry c is W = 1, c = 1, and K = 9.",
+          "CoT_raw": "先描述图像：图中显示一个竖式加法，第一行是两位数 OK，第二行左侧有加号，第二个加数是 KO，横线下方的结果是三位数 WOW。\n\n再推理：把它看作竖式加法 OK + KO = WOW。设个位向十位的进位为 c，其中 c 只能是 0 或 1。看十位列：十位上是 O + K 再加个位进位 c，结果十位仍为 O，并且向百位进位为 W。因此有 O + K + c = O + 10W，消去 O 得 K + c = 10W。因为结果是三位数，百位 W 不能为 0；而 K 是一位数字、c 至多为 1，所以 K + c 最大为 10。于是只能有 10W = 10，即 W = 1。此时 K + c = 10，若 c = 0 则 K = 10 不可能，所以 c = 1，K = 9。",
+          "model_answer": "9",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "9",
+              "predicted_part": "9",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中显示一个竖式加法，第一行是两位数 OK，第二行左侧有加号，第二个加数是 KO，横线下方的结果是三位数 WOW。\n\n再推理：把它看作竖式加法 OK + KO = WOW。设个位向十位的进位为 c，其中 c 只能是 0 或 1。看十位列：十位上是 O + K 再加个位进位 c，结果十位仍为 O，并且向百位进位为 W。因此有 O + K + c = O + 10W，消去 O 得 K + c = 10W。因为结果是三位数，百位 W 不能为 0；而 K 是一位数字、c 至多为 1，所以 K + c 最大为 10。于是只能有 10W = 10，即 W = 1。此时 K + c = 10，若 c = 0 则 K = 10 不可能，所以 c = 1，K = 9。",
+          "answer_answer_check_final": "9",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "候选推理通过核查。图像描述准确：竖式为 OK + KO = WOW，且先描述图像、再进行推理。推理基本完全遵循方法草稿，通过十位列列式 O + K + c = O + 10W，推出 K + c = 10W，再由 W 非零、K 为一位数且 c 为 0 或 1，得到 W = 1、c = 1、K = 9。最终答案与标准答案一致。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中显示一个竖式加法，第一行是两位数 OK，第二行左侧有加号，第二个加数是 KO，横线下方的结果是三位数 WOW。\n\n再推理：把它看作竖式加法 OK + KO = WOW。设个位向十位的进位为 c，其中 c 只能是 0 或 1。看十位列：十位上是 O + K 再加个位进位 c，结果十位仍为 O，并且向百位进位为 W。因此有 O + K + c = O + 10W，消去 O 得 K + c = 10W。因为结果是三位数，百位 W 不能为 0；而 K 是一位数字、c 至多为 1，所以 K + c 最大为 10。于是只能有 10W = 10，即 W = 1。此时 K + c = 10，若 c = 0 则 K = 10 不可能，所以 c = 1，K = 9。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route relies directly on positional column arithmetic and carry constraints, especially the tens column cancellation of O.",
+            "image_role": "The image supplies the vertical addition layout: OK above KO, a plus sign, a horizontal bar, and result WOW aligned by columns.",
+            "text_role": "The text states that identical letters represent identical digits and different letters represent different digits, and asks for the digit K.",
+            "knowledge_role": "Use standard base-10 column addition: each column may produce a carry of 0 or 1, and the leftmost digit of a multi-digit number cannot be zero."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中显示一个竖式加法，第一行是两位数 OK，第二行左侧有加号，第二个加数是 KO，横线下方的结果是三位数 WOW。\n\n再推理：把它看作竖式加法 OK + KO = WOW。设个位向十位的进位为 c，其中 c 只能是 0 或 1。看十位列：十位上是 O + K 再加个位进位 c，结果十位仍为 O，并且向百位进位为 W。因此有 O + K + c = O + 10W，消去 O 得 K + c = 10W。因为结果是三位数，百位 W 不能为 0；而 K 是一位数字、c 至多为 1，所以 K + c 最大为 10。于是只能有 10W = 10，即 W = 1。此时 K + c = 10，若 c = 0 则 K = 10 不可能，所以 c = 1，K = 9。",
+            "model_answer": "9",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2408,
+              "completion_tokens": 666,
+              "total_tokens": 3074,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 14.17,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "候选推理通过核查。图像描述准确：竖式为 OK + KO = WOW，且先描述图像、再进行推理。推理基本完全遵循方法草稿，通过十位列列式 O + K + c = O + 10W，推出 K + c = 10W，再由 W 非零、K 为一位数且 c 为 0 或 1，得到 W = 1、c = 1、K = 9。最终答案与标准答案一致。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 11.669
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 14.184,
+              "usage_delta": {
+                "request_count": 19,
+                "successful_request_count": 19,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 19,
+                "requests_with_usage": 19,
+                "prompt_tokens": 42345,
+                "completion_tokens": 13570,
+                "total_tokens": 55915,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 269.662,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 11.683,
+              "usage_delta": {
+                "request_count": 14,
+                "successful_request_count": 16,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 14,
+                "requests_with_usage": 16,
+                "prompt_tokens": 41574,
+                "completion_tokens": 14684,
+                "total_tokens": 56258,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 293.214,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Read the picture as the equation OK + KO = WOW. Translate the letter strings into base-10 numbers: OK = 10O + K, KO = 10K + O, and WOW = 100W + 10O + W = 101W + 10O. Then solve 10O + K + 10K + O = 101W + 10O, giving O + 11K = 101W. Since the sum of two two-digit numbers is shown as a three-digit number, W must be 1. Substitute W = 1 to get O + 11K = 101. Because O is a digit 0–9, 11K must be between 92 and 101, forcing K = 9.",
+          "CoT_raw": "图像描述：图片中是一个竖式加法，第一行是 OK，第二行前面有加号且数为 KO，下方横线下面的结果是 WOW。因此图中表达的是 OK + KO = WOW。推理：把字母串看作十进制数，OK = 10O + K，KO = 10K + O，WOW = 100W + 10O + W = 101W + 10O。于是 (10O + K) + (10K + O) = 101W + 10O，化简得 11O + 11K = 101W + 10O，即 O + 11K = 101W。两个两位数相加得到三位数，百位 W 只能是 1。代入 W = 1，得到 O + 11K = 101。因为 O 是 0 到 9 的数字，所以 11K = 101 - O 在 92 到 101 之间；这个范围内唯一的 11 的倍数是 99，所以 K = 9。",
+          "model_answer": "9",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "9",
+              "predicted_part": "9",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图片中是一个竖式加法，第一行是 OK，第二行前面有加号且数为 KO，下方横线下面的结果是 WOW。因此图中表达的是 OK + KO = WOW。推理：把字母串看作十进制数，OK = 10O + K，KO = 10K + O，WOW = 100W + 10O + W = 101W + 10O。于是 (10O + K) + (10K + O) = 101W + 10O，化简得 11O + 11K = 101W + 10O，即 O + 11K = 101W。两个两位数相加得到三位数，百位 W 只能是 1。代入 W = 1，得到 O + 11K = 101。因为 O 是 0 到 9 的数字，所以 11K = 101 - O 在 92 到 101 之间；这个范围内唯一的 11 的倍数是 99，所以 K = 9。",
+          "answer_answer_check_final": "9",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理过程符合题意、图像内容和标准答案。候选先描述图像中的竖式加法 OK + KO = WOW，再进行代数推理，满足“先描述图像，再推理”的要求。数学化简正确，最终得到 K = 9，与标准答案一致。无需实质性修改。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图片中是一个竖式加法，第一行是 OK，第二行前面有加号且数为 KO，下方横线下面的结果是 WOW。因此图中表达的是 OK + KO = WOW。推理：把字母串看作十进制数，OK = 10O + K，KO = 10K + O，WOW = 100W + 10O + W = 101W + 10O。于是 (10O + K) + (10K + O) = 101W + 10O，化简得 11O + 11K = 101W + 10O，即 O + 11K = 101W。两个两位数相加得到三位数，百位 W 只能是 1。代入 W = 1，得到 O + 11K = 101。因为 O 是 0 到 9 的数字，所以 11K = 101 - O 在 92 到 101 之间；这个范围内唯一的 11 的倍数是 99，所以 K = 9。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route treats the whole alphametic as an algebraic equation in place values rather than reasoning column-by-column with carries.",
+            "image_role": "The image provides the full symbolic equation OK + KO = WOW and shows that WOW is a three-digit result.",
+            "text_role": "The text provides the digit-substitution rule and the target unknown K.",
+            "knowledge_role": "Use decimal place-value expansion, the fact that a leading digit of a displayed three-digit number is nonzero, and digit bounds 0 through 9."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图片中是一个竖式加法，第一行是 OK，第二行前面有加号且数为 KO，下方横线下面的结果是 WOW。因此图中表达的是 OK + KO = WOW。推理：把字母串看作十进制数，OK = 10O + K，KO = 10K + O，WOW = 100W + 10O + W = 101W + 10O。于是 (10O + K) + (10K + O) = 101W + 10O，化简得 11O + 11K = 101W + 10O，即 O + 11K = 101W。两个两位数相加得到三位数，百位 W 只能是 1。代入 W = 1，得到 O + 11K = 101。因为 O 是 0 到 9 的数字，所以 11K = 101 - O 在 92 到 101 之间；这个范围内唯一的 11 的倍数是 99，所以 K = 9。",
+            "model_answer": "9",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2430,
+              "completion_tokens": 757,
+              "total_tokens": 3187,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 13.18,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理过程符合题意、图像内容和标准答案。候选先描述图像中的竖式加法 OK + KO = WOW，再进行代数推理，满足“先描述图像，再推理”的要求。数学化简正确，最终得到 K = 9，与标准答案一致。无需实质性修改。",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 10.554
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 13.192,
+              "usage_delta": {
+                "request_count": 17,
+                "successful_request_count": 17,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 17,
+                "requests_with_usage": 17,
+                "prompt_tokens": 42941,
+                "completion_tokens": 17665,
+                "total_tokens": 60606,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 338.17,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 10.569,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 16,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 16,
+                "prompt_tokens": 44340,
+                "completion_tokens": 16947,
+                "total_tokens": 61287,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 316.062,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 24.792,
+          "usage_delta": {
+            "request_count": 13,
+            "successful_request_count": 10,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 13,
+            "requests_with_usage": 10,
+            "prompt_tokens": 27300,
+            "completion_tokens": 9358,
+            "total_tokens": 36658,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 185.656,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1312",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00858.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_7e8676d043b8f45fb45b9ddf",
+          "open_variant_count": 1,
+          "open_variant_id": "open_a627ecbaa0c49da779365c7a",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "image_content_not_explicitly_available_in_text",
+            "multi_step assessment is partly inferred from puzzle type rather than inspected visual details"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 74.465,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 12748,
+        "completion_tokens": 3628,
+        "total_tokens": 16376,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 74.343,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Which digit is $\\mathrm{K}$?",
+      "answer": "9",
+      "final_cot": "First describe the image: The image shows a vertical addition, the first line is the two-digit number OK, the left side of the second line has a plus sign, the second addend is KO, and the result below the horizontal line is the three-digit number WOW.\n\nThen reason: Treat it as the vertical addition OK + KO = WOW. Let the carry from the ones place to the tens place be c, where c can only be 0 or 1. Look at the tens column: in the tens place it is O + K plus the ones-place carry c, the resulting tens digit is still O, and the carry to the hundreds place is W. Therefore O + K + c = O + 10W, and eliminating O gives K + c = 10W. Because the result is a three-digit number, the hundreds digit W cannot be 0; and K is a one-digit digit and c is at most 1, so K + c is at most 10. Thus it can only be that 10W = 10, namely W = 1. At this time K + c = 10; if c = 0 then K = 10 is impossible, so c = 1 and K = 9.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "候选推理通过核查。图像描述准确：竖式为 OK + KO = WOW，且先描述图像、再进行推理。推理基本完全遵循方法草稿，通过十位列列式 O + K + c = O + 10W，推出 K + c = 10W，再由 W 非零、K 为一位数且 c 为 0 或 1，得到 W = 1、c = 1、K = 9。最终答案与标准答案一致。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 11.669
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理过程符合题意、图像内容和标准答案。候选先描述图像中的竖式加法 OK + KO = WOW，再进行代数推理，满足“先描述图像，再推理”的要求。数学化简正确，最终得到 K = 9，与标准答案一致。无需实质性修改。",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 10.554
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1981,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00858.json",
+        "source_sample_filename": "mathvision00858.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00858.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T15:57:33Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_a627ecbaa0c49da779365c7a",
+          "new_problem_id": "open_a627ecbaa0c49da779365c7a",
+          "old_problem_run_key": "mathvision__open_a627ecbaa0c49da779365c7a__42913604f70a",
+          "new_problem_run_key": "mathvision__open_a627ecbaa0c49da779365c7a__42913604f70a",
+          "target_relpath": "math/mathvision/samples/mathvision00858.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_a627ecbaa0c49da779365c7a",
+    "problem_run_key": "mathvision__open_a627ecbaa0c49da779365c7a__42913604f70a",
+    "raw_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Which digit is $\\mathrm{K}$?",
+    "raw_answer": "9",
+    "raw_standard_answer": "9",
+    "resolved_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Which digit is $\\mathrm{K}$?",
+    "resolved_answer": "9",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The image shows a vertical addition, the first line is the two-digit number OK, the left side of the second line has a plus sign, the second addend is KO, and the result below the horizontal line is the three-digit number WOW.\n\nThen reason: Treat it as the vertical addition OK + KO = WOW. Let the carry from the ones place to the tens place be c, where c can only be 0 or 1. Look at the tens column: in the tens place it is O + K plus the ones-place carry c, the resulting tens digit is still O, and the carry to the hundreds place is W. Therefore O + K + c = O + 10W, and eliminating O gives K + c = 10W. Because the result is a three-digit number, the hundreds digit W cannot be 0; and K is a one-digit digit and c is at most 1, so K + c is at most 10. Thus it can only be that 10W = 10, namely W = 1. At this time K + c = 10; if c = 0 then K = 10 is impossible, so c = 1 and K = 9.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The image shows a vertical addition.",
+        "label": "perception",
+        "source": "The image shows a vertical addition"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The first line is the two-digit number OK.",
+        "label": "perception",
+        "source": "The first line is the two-digit number OK"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The left side of the second line has a plus sign.",
+        "label": "perception",
+        "source": "The left side of the second line has a plus sign"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The second addend is KO.",
+        "label": "perception",
+        "source": "The second addend is KO"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The result below the horizontal line is a three-digit number WOW.",
+        "label": "perception",
+        "source": "The result below the horizontal line is a three-digit number WOW"
+      },
+      {
+        "claim_id": 6,
+        "claim": "This vertical addition can be represented as OK + KO = WOW.",
+        "label": "reasoning",
+        "source": "View it as the vertical addition OK + KO = WOW"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Let the carry from the ones place to the tens place be c.",
+        "label": "reasoning",
+        "source": "Let the carry from the ones place to the tens place be c"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The carry c from the ones place to the tens place can only be 0 or 1.",
+        "label": "reasoning",
+        "source": "Among them, c can only be 0 or 1"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The tens column satisfies O + K + c = O + 10W.",
+        "label": "reasoning",
+        "source": "In the tens place, it is O + K plus the ones-place carry c; the resulting tens digit is still O, and the carry to the hundreds place is W. Therefore O + K + c = O + 10W"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Eliminating O from O + K + c = O + 10W gives K + c = 10W.",
+        "label": "reasoning",
+        "source": "Eliminating O gives K + c = 10W"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The hundreds digit W cannot be 0.",
+        "label": "reasoning",
+        "source": "The hundreds digit W cannot be 0"
+      },
+      {
+        "claim_id": 12,
+        "claim": "K is a one-digit number.",
+        "label": "reasoning",
+        "source": "K is a one-digit number"
+      },
+      {
+        "claim_id": 13,
+        "claim": "K + c is at most 10.",
+        "label": "reasoning",
+        "source": "So K + c is at most 10"
+      },
+      {
+        "claim_id": 14,
+        "claim": "There can only be 10W = 10, that is, W = 1.",
+        "label": "reasoning",
+        "source": "Thus there can only be 10W = 10, that is, W = 1"
+      },
+      {
+        "claim_id": 15,
+        "claim": "At this time K + c = 10.",
+        "label": "reasoning",
+        "source": "At this time K + c = 10"
+      },
+      {
+        "claim_id": 16,
+        "claim": "If c = 0, then K = 10.",
+        "label": "reasoning",
+        "source": "If c = 0, then K = 10"
+      },
+      {
+        "claim_id": 17,
+        "claim": "K = 10 is impossible.",
+        "label": "reasoning",
+        "source": "K = 10 is impossible"
+      },
+      {
+        "claim_id": 18,
+        "claim": "c = 1。",
+        "label": "reasoning",
+        "source": "So c = 1"
+      },
+      {
+        "claim_id": 19,
+        "claim": "K = 9。",
+        "label": "reasoning",
+        "source": "K = 9"
+      }
+    ],
+    "claim_count": 19,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The image shows a vertical addition.",
+          "label": "perception",
+          "source": "The image shows a vertical addition"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The first line is the two-digit number OK.",
+          "label": "perception",
+          "source": "The first line is the two-digit number OK"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The left side of the second line has a plus sign.",
+          "label": "perception",
+          "source": "The left side of the second line has a plus sign"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The second addend is KO.",
+          "label": "perception",
+          "source": "The second addend is KO"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The result below the horizontal line is a three-digit number WOW.",
+          "label": "perception",
+          "source": "The result below the horizontal line is a three-digit number WOW"
+        },
+        {
+          "claim_id": 6,
+          "claim": "This vertical addition can be represented as OK + KO = WOW.",
+          "label": "reasoning",
+          "source": "View it as the vertical addition OK + KO = WOW"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Let the carry from the ones place to the tens place be c.",
+          "label": "reasoning",
+          "source": "Let the carry from the ones place to the tens place be c"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The carry c from the ones place to the tens place can only be 0 or 1.",
+          "label": "reasoning",
+          "source": "Among them, c can only be 0 or 1"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The tens column satisfies O + K + c = O + 10W.",
+          "label": "reasoning",
+          "source": "In the tens place, it is O + K plus the ones-place carry c; the resulting tens digit is still O, and the carry to the hundreds place is W. Therefore O + K + c = O + 10W"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Eliminating O from O + K + c = O + 10W gives K + c = 10W.",
+          "label": "reasoning",
+          "source": "Eliminating O gives K + c = 10W"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The hundreds digit W cannot be 0.",
+          "label": "reasoning",
+          "source": "The hundreds digit W cannot be 0"
+        },
+        {
+          "claim_id": 12,
+          "claim": "K is a one-digit number.",
+          "label": "reasoning",
+          "source": "K is a one-digit number"
+        },
+        {
+          "claim_id": 13,
+          "claim": "K + c is at most 10.",
+          "label": "reasoning",
+          "source": "So K + c is at most 10"
+        },
+        {
+          "claim_id": 14,
+          "claim": "There can only be 10W = 10, that is, W = 1.",
+          "label": "reasoning",
+          "source": "Thus there can only be 10W = 10, that is, W = 1"
+        },
+        {
+          "claim_id": 15,
+          "claim": "At this time K + c = 10.",
+          "label": "reasoning",
+          "source": "At this time K + c = 10"
+        },
+        {
+          "claim_id": 16,
+          "claim": "If c = 0, then K = 10.",
+          "label": "reasoning",
+          "source": "If c = 0, then K = 10"
+        },
+        {
+          "claim_id": 17,
+          "claim": "K = 10 is impossible.",
+          "label": "reasoning",
+          "source": "K = 10 is impossible"
+        },
+        {
+          "claim_id": 18,
+          "claim": "c = 1。",
+          "label": "reasoning",
+          "source": "So c = 1"
+        },
+        {
+          "claim_id": 19,
+          "claim": "K = 9。",
+          "label": "reasoning",
+          "source": "K = 9"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的两处 over_split 问题合并 claims 9-12 以及 claims 17-18，并保留其余原有支持于 final_cot 的 claims；已重新顺序编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:29Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/08862_math_mathvision_open_a627ecbaa0c49da779365c7a_fa07db09f6.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04496_math_mathvision_open_a627ecbaa0c49da779365c7a_fa07db09f6.json"
+  }
+}

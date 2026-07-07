@@ -1,0 +1,834 @@
+{
+  "pack_index": 1661,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "circuit/eee_bench:eeebench01232:eee_bench__open_279711157751f602af894a35__9622c7853cf3",
+    "subject_dir": "circuit",
+    "dataset_slug": "eee_bench",
+    "problem_id": "open_279711157751f602af894a35",
+    "source_problem_id": "open_279711157751f602af894a35",
+    "problem_run_key": "eee_bench__open_279711157751f602af894a35__9622c7853cf3",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01232.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01232.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/circuit/eee_bench/samples/eeebench01232.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench01232.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In the circuit shown in figure, the potential at point A is",
+    "raw_answer_text": "-4V",
+    "open_variant_id": "open_279711157751f602af894a35",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "What is the potential at point A in the circuit shown in the figure?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "-4V",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_dc6d0099b9170d83b0eef91e",
+        "problem_id": "prob_13ec6675608140990b8af49a",
+        "node_type": "answer_claim",
+        "canonical_value": "-4V",
+        "surface_forms": [
+          "-4V"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_17c484dc8883fc795faea0b8"
+        ],
+        "evidence_refs": [
+          "asset_17c484dc8883fc795faea0b8"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "-4V"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-05T15:42:37Z",
+        "updated_at": "2026-04-05T15:42:37Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_279711157751f602af894a35",
+      "parent_problem_id": "prob_13ec6675608140990b8af49a",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "What is the potential at point A in the circuit shown in the figure?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "-4V",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the potential at point A in the circuit shown in the figure?",
+    "raw_answer": "-4V",
+    "raw_standard_answer": "-4V",
+    "resolved_question_text": "What is the potential at point A in the circuit shown in the figure?",
+    "resolved_answer": "-4V",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The attached circuit diagram shows a grounded left-middle node. A vertical 13 V source connects this ground node to the upper-left node, then a 6Ω resistor leads to node x. Node x also connects downward through a 5Ω resistor to a lower-left node l, which connects through a 2Ω resistor back to ground. From node x to the right there is a 5 V source, then a 3Ω resistor to a top-middle node t. Node t connects right through a 4Ω resistor to a top-right node r, which goes downward through a 2Ω resistor to point A. Node t also connects downward through a vertical 3Ω resistor to the top node p of a 17 V source; the lower node q of that 17 V source connects through an 8Ω resistor to point A. Reasoning: Take the grounded left-middle node as 0 V. Using the source polarities specified in the method: the upper terminal of the 13 V source is U = 13 V; the node y to the right of the 5 V source satisfies y = x - 5; and the node q below the 17 V source satisfies q = p - 17. KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0. KCL at lower-left node l is (l - x)/5 + l/2 = 0, giving l = 2x/7. Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0, so x = (14t + 161)/27 and y = x - 5 = (14t + 26)/27. On the right side, KCL at node r gives (r - t)/4 + (r - A)/2 = 0, so r = (t + 2A)/3. KCL at point A gives (A - r)/2 + (A - q)/8 = 0, so q = 5A - 4r. KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0 with q = p - 17. Solving these right-side relations gives A = t - 6, r = t - 4, q = t - 14, and p = t + 3. Finally, KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0. Since r = t - 4 and p = t + 3, the last two terms are +1 and -1, so they cancel and t = y. Therefore t = (14t + 26)/27, giving 27t = 14t + 26, so 13t = 26 and t = 2 V. Hence A = t - 6 = -4 V.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_279711157751f602af894a35",
+      "problem_run_key": "eee_bench__open_279711157751f602af894a35__9622c7853cf3",
+      "question_text": "What is the potential at point A in the circuit shown in the figure?",
+      "standard_answer": "-4V",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench00951.png",
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/crops/eeebench00951.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Label the grounded left middle node as 0 V. Assign unknown node voltages to the node after the 6Ω/above the 5Ω branch, the node to the right of the 5V source, the top middle node feeding the 4Ω and vertical 3Ω, the top-right node, point A, and the nodes around the 17V source. Use source constraints: the upper terminal of the 13V source is +13 V relative to ground, the node right of the 5V source is 5 V lower than its left terminal, and the node below the 17V source is 17 V lower than its top terminal. Write KCL at ordinary nodes and supernodes: the left supernode around the 5V source connected through 6Ω, 5Ω, and top 3Ω; the lower-left node connected to 5Ω and 2Ω; the top-middle/right nodes; point A connected to 2Ω and 8Ω; and the supernode around the 17V source connected through the vertical 3Ω and 8Ω. Solve the simultaneous linear equations for the node voltage at A relative to ground; the solution gives VA = -4 V.",
+          "CoT_raw": "图像描述：The attached circuit diagram shows a grounded left-middle node. A vertical 13 V source connects this ground node to the upper-left node, then a 6Ω resistor leads to node x. Node x also connects downward through a 5Ω resistor to a lower-left node l, which connects through a 2Ω resistor back to ground. From node x to the right there is a 5 V source, then a 3Ω resistor to a top-middle node t. Node t connects right through a 4Ω resistor to a top-right node r, which goes downward through a 2Ω resistor to point A. Node t also connects downward through a vertical 3Ω resistor to the top node p of a 17 V source; the lower node q of that 17 V source connects through an 8Ω resistor to point A. 推理：Take the grounded left-middle node as 0 V. Using the source polarities specified in the method: the upper terminal of the 13 V source is U = 13 V; the node y to the right of the 5 V source satisfies y = x - 5; and the node q below the 17 V source satisfies q = p - 17. KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0. KCL at lower-left node l is (l - x)/5 + l/2 = 0, giving l = 2x/7. Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0, so x = (14t + 161)/27 and y = x - 5 = (14t + 26)/27. On the right side, KCL at node r gives (r - t)/4 + (r - A)/2 = 0, so r = (t + 2A)/3. KCL at point A gives (A - r)/2 + (A - q)/8 = 0, so q = 5A - 4r. KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0 with q = p - 17. Solving these right-side relations gives A = t - 6, r = t - 4, q = t - 14, and p = t + 3. Finally, KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0. Since r = t - 4 and p = t + 3, the last two terms are +1 and -1, so they cancel and t = y. Therefore t = (14t + 26)/27, giving 27t = 14t + 26, so 13t = 26 and t = 2 V. Hence A = t - 6 = -4 V.",
+          "model_answer": "-4 V",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "-4V",
+              "predicted_part": "-4 V",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：The attached circuit diagram shows a grounded left-middle node. A vertical 13 V source connects this ground node to the upper-left node, then a 6Ω resistor leads to node x. Node x also connects downward through a 5Ω resistor to a lower-left node l, which connects through a 2Ω resistor back to ground. From node x to the right there is a 5 V source, then a 3Ω resistor to a top-middle node t. Node t connects right through a 4Ω resistor to a top-right node r, which goes downward through a 2Ω resistor to point A. Node t also connects downward through a vertical 3Ω resistor to the top node p of a 17 V source; the lower node q of that 17 V source connects through an 8Ω resistor to point A. 推理：Take the grounded left-middle node as 0 V. Using the source polarities specified in the method: the upper terminal of the 13 V source is U = 13 V; the node y to the right of the 5 V source satisfies y = x - 5; and the node q below the 17 V source satisfies q = p - 17. KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0. KCL at lower-left node l is (l - x)/5 + l/2 = 0, giving l = 2x/7. Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0, so x = (14t + 161)/27 and y = x - 5 = (14t + 26)/27. On the right side, KCL at node r gives (r - t)/4 + (r - A)/2 = 0, so r = (t + 2A)/3. KCL at point A gives (A - r)/2 + (A - q)/8 = 0, so q = 5A - 4r. KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0 with q = p - 17. Solving these right-side relations gives A = t - 6, r = t - 4, q = t - 14, and p = t + 3. Finally, KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0. Since r = t - 4 and p = t + 3, the last two terms are +1 and -1, so they cancel and t = y. Therefore t = (14t + 26)/27, giving 27t = 14t + 26, so 13t = 26 and t = 2 V. Hence A = t - 6 = -4 V.",
+          "answer_answer_check_final": "-4 V",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "The trace passes. It first describes the circuit image and then performs nodal/supernode reasoning, matching the required multimodal order. The circuit connections, source polarity constraints, KCL equations, algebra, and final value VA = -4 V are consistent with the image, the method draft, and the standard answer. No substantive revision is needed.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：The attached circuit diagram shows a grounded left-middle node. A vertical 13 V source connects this ground node to the upper-left node, then a 6Ω resistor leads to node x. Node x also connects downward through a 5Ω resistor to a lower-left node l, which connects through a 2Ω resistor back to ground. From node x to the right there is a 5 V source, then a 3Ω resistor to a top-middle node t. Node t connects right through a 4Ω resistor to a top-right node r, which goes downward through a 2Ω resistor to point A. Node t also connects downward through a vertical 3Ω resistor to the top node p of a 17 V source; the lower node q of that 17 V source connects through an 8Ω resistor to point A. 推理：Take the grounded left-middle node as 0 V. Using the source polarities specified in the method: the upper terminal of the 13 V source is U = 13 V; the node y to the right of the 5 V source satisfies y = x - 5; and the node q below the 17 V source satisfies q = p - 17. KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0. KCL at lower-left node l is (l - x)/5 + l/2 = 0, giving l = 2x/7. Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0, so x = (14t + 161)/27 and y = x - 5 = (14t + 26)/27. On the right side, KCL at node r gives (r - t)/4 + (r - A)/2 = 0, so r = (t + 2A)/3. KCL at point A gives (A - r)/2 + (A - q)/8 = 0, so q = 5A - 4r. KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0 with q = p - 17. Solving these right-side relations gives A = t - 6, r = t - 4, q = t - 14, and p = t + 3. Finally, KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0. Since r = t - 4 and p = t + 3, the last two terms are +1 and -1, so they cancel and t = y. Therefore t = (14t + 26)/27, giving 27t = 14t + 26, so 13t = 26 and t = 2 V. Hence A = t - 6 = -4 V.",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the natural circuit-analysis route for this diagram: identify the grounded reference and use nodal analysis with supernodes around the ideal voltage sources. With only one target method requested, no weaker variants are needed.",
+            "image_role": "Read the circuit topology and component values from the figure: the left middle node is grounded; point A is on the lower right vertical conductor between the 2Ω vertical resistor and the 8Ω bottom resistor; resistors are 6Ω, 5Ω, 2Ω on the left network and 3Ω, 4Ω, 3Ω, 2Ω, 8Ω on the right network. Also read voltage-source polarities from the long plates: the 13V source has its positive terminal at the upper node, the 5V source is positive on the left, and the 17V source is positive at the top.",
+            "text_role": "Use the question text only to identify that the requested quantity is the electric potential at point A in the shown circuit, not a current or voltage drop.",
+            "knowledge_role": "Use nodal analysis/KCL, Ohm’s law, and ideal-voltage-source constraints. Treat nodes connected by ideal voltage sources as supernodes, impose voltage differences according to the indicated polarities, and take the ground symbol as 0 V."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：The attached circuit diagram shows a grounded left-middle node. A vertical 13 V source connects this ground node to the upper-left node, then a 6Ω resistor leads to node x. Node x also connects downward through a 5Ω resistor to a lower-left node l, which connects through a 2Ω resistor back to ground. From node x to the right there is a 5 V source, then a 3Ω resistor to a top-middle node t. Node t connects right through a 4Ω resistor to a top-right node r, which goes downward through a 2Ω resistor to point A. Node t also connects downward through a vertical 3Ω resistor to the top node p of a 17 V source; the lower node q of that 17 V source connects through an 8Ω resistor to point A. 推理：Take the grounded left-middle node as 0 V. Using the source polarities specified in the method: the upper terminal of the 13 V source is U = 13 V; the node y to the right of the 5 V source satisfies y = x - 5; and the node q below the 17 V source satisfies q = p - 17. KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0. KCL at lower-left node l is (l - x)/5 + l/2 = 0, giving l = 2x/7. Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0, so x = (14t + 161)/27 and y = x - 5 = (14t + 26)/27. On the right side, KCL at node r gives (r - t)/4 + (r - A)/2 = 0, so r = (t + 2A)/3. KCL at point A gives (A - r)/2 + (A - q)/8 = 0, so q = 5A - 4r. KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0 with q = p - 17. Solving these right-side relations gives A = t - 6, r = t - 4, q = t - 14, and p = t + 3. Finally, KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0. Since r = t - 4 and p = t + 3, the last two terms are +1 and -1, so they cancel and t = y. Therefore t = (14t + 26)/27, giving 27t = 14t + 26, so 13t = 26 and t = 2 V. Hence A = t - 6 = -4 V.",
+            "model_answer": "-4 V",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 3066,
+              "completion_tokens": 3127,
+              "total_tokens": 6193,
+              "cached_tokens": 0,
+              "reasoning_tokens": 2425
+            },
+            "_llm_elapsed_seconds": 45.709,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "The trace passes. It first describes the circuit image and then performs nodal/supernode reasoning, matching the required multimodal order. The circuit connections, source polarity constraints, KCL equations, algebra, and final value VA = -4 V are consistent with the image, the method draft, and the standard answer. No substantive revision is needed.",
+              "major_failures": [],
+              "extractability_score": 0.97,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 0.99,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 24.307
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 45.738,
+              "usage_delta": {
+                "request_count": 45,
+                "successful_request_count": 48,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 45,
+                "requests_with_usage": 48,
+                "prompt_tokens": 149223,
+                "completion_tokens": 34622,
+                "total_tokens": 183845,
+                "cached_tokens": 0,
+                "reasoning_tokens": 20008,
+                "total_request_seconds": 667.081,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 24.334,
+              "usage_delta": {
+                "request_count": 16,
+                "successful_request_count": 19,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 16,
+                "requests_with_usage": 19,
+                "prompt_tokens": 56459,
+                "completion_tokens": 11633,
+                "total_tokens": 68092,
+                "cached_tokens": 0,
+                "reasoning_tokens": 8202,
+                "total_request_seconds": 236.704,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 36.451,
+          "usage_delta": {
+            "request_count": 29,
+            "successful_request_count": 27,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 29,
+            "requests_with_usage": 27,
+            "prompt_tokens": 89360,
+            "completion_tokens": 25733,
+            "total_tokens": 115093,
+            "cached_tokens": 0,
+            "reasoning_tokens": 14473,
+            "total_request_seconds": 463.887,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EEE-Bench",
+        "dataset_slug": "eee_bench",
+        "source_problem_id": "207",
+        "subject": "电气电子工程领域",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01232.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_13ec6675608140990b8af49a",
+          "open_variant_count": 1,
+          "open_variant_id": "open_279711157751f602af894a35",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "metadata.extraction_notes states the source image field contained a PIL.Image placeholder rather than a path or URL",
+            "metadata.image_paths is empty while top-level image_paths contains one image path",
+            "question text alone is underspecified without the figure"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 106.556,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 9999,
+        "completion_tokens": 7131,
+        "total_tokens": 17130,
+        "cached_tokens": 0,
+        "reasoning_tokens": 5759,
+        "total_request_seconds": 106.432,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the potential at point A in the circuit shown in the figure?",
+      "answer": "-4V",
+      "final_cot": "Image description: The attached circuit diagram shows a grounded left-middle node. A vertical 13 V source connects this ground node to the upper-left node, then a 6Ω resistor leads to node x. Node x also connects downward through a 5Ω resistor to a lower-left node l, which connects through a 2Ω resistor back to ground. From node x to the right there is a 5 V source, then a 3Ω resistor to a top-middle node t. Node t connects right through a 4Ω resistor to a top-right node r, which goes downward through a 2Ω resistor to point A. Node t also connects downward through a vertical 3Ω resistor to the top node p of a 17 V source; the lower node q of that 17 V source connects through an 8Ω resistor to point A. Reasoning: Take the grounded left-middle node as 0 V. Using the source polarities specified in the method: the upper terminal of the 13 V source is U = 13 V; the node y to the right of the 5 V source satisfies y = x - 5; and the node q below the 17 V source satisfies q = p - 17. KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0. KCL at lower-left node l is (l - x)/5 + l/2 = 0, giving l = 2x/7. Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0, so x = (14t + 161)/27 and y = x - 5 = (14t + 26)/27. On the right side, KCL at node r gives (r - t)/4 + (r - A)/2 = 0, so r = (t + 2A)/3. KCL at point A gives (A - r)/2 + (A - q)/8 = 0, so q = 5A - 4r. KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0 with q = p - 17. Solving these right-side relations gives A = t - 6, r = t - 4, q = t - 14, and p = t + 3. Finally, KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0. Since r = t - 4 and p = t + 3, the last two terms are +1 and -1, so they cancel and t = y. Therefore t = (14t + 26)/27, giving 27t = 14t + 26, so 13t = 26 and t = 2 V. Hence A = t - 6 = -4 V.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "The trace passes. It first describes the circuit image and then performs nodal/supernode reasoning, matching the required multimodal order. The circuit connections, source polarity constraints, KCL equations, algebra, and final value VA = -4 V are consistent with the image, the method draft, and the standard answer. No substantive revision is needed.",
+          "major_failures": [],
+          "extractability_score": 0.97,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 0.99,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 24.307
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_resume_openvariants_20260506T003434CST",
+        "processed_index": 1348,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "circuit",
+        "dataset": "eee_bench",
+        "relative_dataset": "circuit/eee_bench",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01232.json",
+        "source_sample_filename": "eeebench01232.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01232.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.events.jsonl",
+        "written_at": "2026-05-05T23:34:04Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:17Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_279711157751f602af894a35",
+          "new_problem_id": "open_279711157751f602af894a35",
+          "old_problem_run_key": "eee_bench__open_279711157751f602af894a35__5bca381cec5e",
+          "new_problem_run_key": "eee_bench__open_279711157751f602af894a35__9622c7853cf3",
+          "target_relpath": "circuit/eee_bench/samples/eeebench01232.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_279711157751f602af894a35",
+    "problem_run_key": "eee_bench__open_279711157751f602af894a35__9622c7853cf3",
+    "raw_question_text": "What is the potential at point A in the circuit shown in the figure?",
+    "raw_answer": "-4V",
+    "raw_standard_answer": "-4V",
+    "resolved_question_text": "What is the potential at point A in the circuit shown in the figure?",
+    "resolved_answer": "-4V",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The attached circuit diagram shows a grounded left-middle node. A vertical 13 V source connects this ground node to the upper-left node, then a 6Ω resistor leads to node x. Node x also connects downward through a 5Ω resistor to a lower-left node l, which connects through a 2Ω resistor back to ground. From node x to the right there is a 5 V source, then a 3Ω resistor to a top-middle node t. Node t connects right through a 4Ω resistor to a top-right node r, which goes downward through a 2Ω resistor to point A. Node t also connects downward through a vertical 3Ω resistor to the top node p of a 17 V source; the lower node q of that 17 V source connects through an 8Ω resistor to point A. Reasoning: Take the grounded left-middle node as 0 V. Using the source polarities specified in the method: the upper terminal of the 13 V source is U = 13 V; the node y to the right of the 5 V source satisfies y = x - 5; and the node q below the 17 V source satisfies q = p - 17. KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0. KCL at lower-left node l is (l - x)/5 + l/2 = 0, giving l = 2x/7. Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0, so x = (14t + 161)/27 and y = x - 5 = (14t + 26)/27. On the right side, KCL at node r gives (r - t)/4 + (r - A)/2 = 0, so r = (t + 2A)/3. KCL at point A gives (A - r)/2 + (A - q)/8 = 0, so q = 5A - 4r. KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0 with q = p - 17. Solving these right-side relations gives A = t - 6, r = t - 4, q = t - 14, and p = t + 3. Finally, KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0. Since r = t - 4 and p = t + 3, the last two terms are +1 and -1, so they cancel and t = y. Therefore t = (14t + 26)/27, giving 27t = 14t + 26, so 13t = 26 and t = 2 V. Hence A = t - 6 = -4 V.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The attached circuit diagram shows a grounded left-middle node.",
+        "label": "perception",
+        "source": "The attached circuit diagram shows a grounded left-middle node."
+      },
+      {
+        "claim_id": 2,
+        "claim": "A vertical 13 V source connects the ground node to the upper-left node.",
+        "label": "perception",
+        "source": "A vertical 13 V source connects this ground node to the upper-left node"
+      },
+      {
+        "claim_id": 3,
+        "claim": "A 6Ω resistor leads from the upper-left node to node x.",
+        "label": "perception",
+        "source": "then a 6Ω resistor leads to node x"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Node x connects downward through a 5Ω resistor to lower-left node l.",
+        "label": "perception",
+        "source": "Node x also connects downward through a 5Ω resistor to a lower-left node l"
+      },
+      {
+        "claim_id": 5,
+        "claim": "Lower-left node l connects through a 2Ω resistor back to ground.",
+        "label": "perception",
+        "source": "which connects through a 2Ω resistor back to ground"
+      },
+      {
+        "claim_id": 6,
+        "claim": "From node x to the right there is a 5 V source.",
+        "label": "perception",
+        "source": "From node x to the right there is a 5 V source"
+      },
+      {
+        "claim_id": 7,
+        "claim": "After the 5 V source, a 3Ω resistor connects to top-middle node t.",
+        "label": "perception",
+        "source": "then a 3Ω resistor to a top-middle node t"
+      },
+      {
+        "claim_id": 8,
+        "claim": "Node t connects right through a 4Ω resistor to top-right node r.",
+        "label": "perception",
+        "source": "Node t connects right through a 4Ω resistor to a top-right node r"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Top-right node r goes downward through a 2Ω resistor to point A.",
+        "label": "perception",
+        "source": "which goes downward through a 2Ω resistor to point A"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Node t connects downward through a vertical 3Ω resistor to top node p of a 17 V source.",
+        "label": "perception",
+        "source": "Node t also connects downward through a vertical 3Ω resistor to the top node p of a 17 V source"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The lower node q of the 17 V source connects through an 8Ω resistor to point A.",
+        "label": "perception",
+        "source": "the lower node q of that 17 V source connects through an 8Ω resistor to point A"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The grounded left-middle node is taken as 0 V.",
+        "label": "reasoning",
+        "source": "Take the grounded left-middle node as 0 V."
+      },
+      {
+        "claim_id": 13,
+        "claim": "Using the specified source polarities, the upper terminal of the 13 V source has U = 13 V.",
+        "label": "reasoning",
+        "source": "Using the source polarities specified in the method: the upper terminal of the 13 V source is U = 13 V"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Using the specified source polarities, the node y to the right of the 5 V source satisfies y = x - 5.",
+        "label": "reasoning",
+        "source": "the node y to the right of the 5 V source satisfies y = x - 5"
+      },
+      {
+        "claim_id": 15,
+        "claim": "Using the specified source polarities, the node q below the 17 V source satisfies q = p - 17.",
+        "label": "reasoning",
+        "source": "the node q below the 17 V source satisfies q = p - 17"
+      },
+      {
+        "claim_id": 16,
+        "claim": "KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0.",
+        "label": "reasoning",
+        "source": "KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0."
+      },
+      {
+        "claim_id": 17,
+        "claim": "KCL at lower-left node l is (l - x)/5 + l/2 = 0.",
+        "label": "reasoning",
+        "source": "KCL at lower-left node l is (l - x)/5 + l/2 = 0"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The lower-left-node KCL gives l = 2x/7.",
+        "label": "reasoning",
+        "source": "giving l = 2x/7"
+      },
+      {
+        "claim_id": 19,
+        "claim": "Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0.",
+        "label": "reasoning",
+        "source": "Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0"
+      },
+      {
+        "claim_id": 20,
+        "claim": "From 27x - 14t - 161 = 0, x = (14t + 161)/27.",
+        "label": "reasoning",
+        "source": "so x = (14t + 161)/27"
+      },
+      {
+        "claim_id": 21,
+        "claim": "From y = x - 5 and x = (14t + 161)/27, y = (14t + 26)/27.",
+        "label": "reasoning",
+        "source": "y = x - 5 = (14t + 26)/27"
+      },
+      {
+        "claim_id": 22,
+        "claim": "KCL at node r gives (r - t)/4 + (r - A)/2 = 0.",
+        "label": "reasoning",
+        "source": "KCL at node r gives (r - t)/4 + (r - A)/2 = 0"
+      },
+      {
+        "claim_id": 23,
+        "claim": "The node-r KCL gives r = (t + 2A)/3.",
+        "label": "reasoning",
+        "source": "so r = (t + 2A)/3"
+      },
+      {
+        "claim_id": 24,
+        "claim": "KCL at point A gives (A - r)/2 + (A - q)/8 = 0.",
+        "label": "reasoning",
+        "source": "KCL at point A gives (A - r)/2 + (A - q)/8 = 0"
+      },
+      {
+        "claim_id": 25,
+        "claim": "The point-A KCL gives q = 5A - 4r.",
+        "label": "reasoning",
+        "source": "so q = 5A - 4r"
+      },
+      {
+        "claim_id": 26,
+        "claim": "KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0.",
+        "label": "reasoning",
+        "source": "KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0"
+      },
+      {
+        "claim_id": 27,
+        "claim": "Solving the right-side relations gives A = t - 6.",
+        "label": "reasoning",
+        "source": "Solving these right-side relations gives A = t - 6"
+      },
+      {
+        "claim_id": 28,
+        "claim": "Solving the right-side relations gives r = t - 4.",
+        "label": "reasoning",
+        "source": "r = t - 4"
+      },
+      {
+        "claim_id": 29,
+        "claim": "Solving the right-side relations gives q = t - 14.",
+        "label": "reasoning",
+        "source": "q = t - 14"
+      },
+      {
+        "claim_id": 30,
+        "claim": "Solving the right-side relations gives p = t + 3.",
+        "label": "reasoning",
+        "source": "p = t + 3"
+      },
+      {
+        "claim_id": 31,
+        "claim": "KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0.",
+        "label": "reasoning",
+        "source": "Finally, KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0."
+      },
+      {
+        "claim_id": 32,
+        "claim": "Substituting r = t - 4 and p = t + 3 into the top-middle-node KCL makes the last two terms +1 and -1, so they cancel and t = y.",
+        "label": "reasoning",
+        "source": "Since r = t - 4 and p = t + 3, the last two terms are +1 and -1, so they cancel and t = y."
+      },
+      {
+        "claim_id": 33,
+        "claim": "Using t = y and y = (14t + 26)/27 gives t = (14t + 26)/27, so t = 2 V.",
+        "label": "reasoning",
+        "source": "Therefore t = (14t + 26)/27, giving 27t = 14t + 26, so 13t = 26 and t = 2 V."
+      },
+      {
+        "claim_id": 34,
+        "claim": "Using A = t - 6 and t = 2 V gives A = -4 V.",
+        "label": "reasoning",
+        "source": "Hence A = t - 6 = -4 V."
+      }
+    ],
+    "claim_count": 34,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The attached circuit diagram shows a grounded left-middle node.",
+          "label": "perception",
+          "source": "The attached circuit diagram shows a grounded left-middle node."
+        },
+        {
+          "claim_id": 2,
+          "claim": "A vertical 13 V source connects the ground node to the upper-left node.",
+          "label": "perception",
+          "source": "A vertical 13 V source connects this ground node to the upper-left node"
+        },
+        {
+          "claim_id": 3,
+          "claim": "A 6Ω resistor leads from the upper-left node to node x.",
+          "label": "perception",
+          "source": "then a 6Ω resistor leads to node x"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Node x connects downward through a 5Ω resistor to lower-left node l.",
+          "label": "perception",
+          "source": "Node x also connects downward through a 5Ω resistor to a lower-left node l"
+        },
+        {
+          "claim_id": 5,
+          "claim": "Lower-left node l connects through a 2Ω resistor back to ground.",
+          "label": "perception",
+          "source": "which connects through a 2Ω resistor back to ground"
+        },
+        {
+          "claim_id": 6,
+          "claim": "From node x to the right there is a 5 V source.",
+          "label": "perception",
+          "source": "From node x to the right there is a 5 V source"
+        },
+        {
+          "claim_id": 7,
+          "claim": "After the 5 V source, a 3Ω resistor connects to top-middle node t.",
+          "label": "perception",
+          "source": "then a 3Ω resistor to a top-middle node t"
+        },
+        {
+          "claim_id": 8,
+          "claim": "Node t connects right through a 4Ω resistor to top-right node r.",
+          "label": "perception",
+          "source": "Node t connects right through a 4Ω resistor to a top-right node r"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Top-right node r goes downward through a 2Ω resistor to point A.",
+          "label": "perception",
+          "source": "which goes downward through a 2Ω resistor to point A"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Node t connects downward through a vertical 3Ω resistor to top node p of a 17 V source.",
+          "label": "perception",
+          "source": "Node t also connects downward through a vertical 3Ω resistor to the top node p of a 17 V source"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The lower node q of the 17 V source connects through an 8Ω resistor to point A.",
+          "label": "perception",
+          "source": "the lower node q of that 17 V source connects through an 8Ω resistor to point A"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The grounded left-middle node is taken as 0 V.",
+          "label": "reasoning",
+          "source": "Take the grounded left-middle node as 0 V."
+        },
+        {
+          "claim_id": 13,
+          "claim": "Using the specified source polarities, the upper terminal of the 13 V source has U = 13 V.",
+          "label": "reasoning",
+          "source": "Using the source polarities specified in the method: the upper terminal of the 13 V source is U = 13 V"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Using the specified source polarities, the node y to the right of the 5 V source satisfies y = x - 5.",
+          "label": "reasoning",
+          "source": "the node y to the right of the 5 V source satisfies y = x - 5"
+        },
+        {
+          "claim_id": 15,
+          "claim": "Using the specified source polarities, the node q below the 17 V source satisfies q = p - 17.",
+          "label": "reasoning",
+          "source": "the node q below the 17 V source satisfies q = p - 17"
+        },
+        {
+          "claim_id": 16,
+          "claim": "KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0.",
+          "label": "reasoning",
+          "source": "KCL for the supernode around the 5 V source is (x - 13)/6 + (x - l)/5 + (y - t)/3 = 0."
+        },
+        {
+          "claim_id": 17,
+          "claim": "KCL at lower-left node l is (l - x)/5 + l/2 = 0.",
+          "label": "reasoning",
+          "source": "KCL at lower-left node l is (l - x)/5 + l/2 = 0"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The lower-left-node KCL gives l = 2x/7.",
+          "label": "reasoning",
+          "source": "giving l = 2x/7"
+        },
+        {
+          "claim_id": 19,
+          "claim": "Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0.",
+          "label": "reasoning",
+          "source": "Substituting y = x - 5 and l = 2x/7 into the 5 V supernode equation gives 27x - 14t - 161 = 0"
+        },
+        {
+          "claim_id": 20,
+          "claim": "From 27x - 14t - 161 = 0, x = (14t + 161)/27.",
+          "label": "reasoning",
+          "source": "so x = (14t + 161)/27"
+        },
+        {
+          "claim_id": 21,
+          "claim": "From y = x - 5 and x = (14t + 161)/27, y = (14t + 26)/27.",
+          "label": "reasoning",
+          "source": "y = x - 5 = (14t + 26)/27"
+        },
+        {
+          "claim_id": 22,
+          "claim": "KCL at node r gives (r - t)/4 + (r - A)/2 = 0.",
+          "label": "reasoning",
+          "source": "KCL at node r gives (r - t)/4 + (r - A)/2 = 0"
+        },
+        {
+          "claim_id": 23,
+          "claim": "The node-r KCL gives r = (t + 2A)/3.",
+          "label": "reasoning",
+          "source": "so r = (t + 2A)/3"
+        },
+        {
+          "claim_id": 24,
+          "claim": "KCL at point A gives (A - r)/2 + (A - q)/8 = 0.",
+          "label": "reasoning",
+          "source": "KCL at point A gives (A - r)/2 + (A - q)/8 = 0"
+        },
+        {
+          "claim_id": 25,
+          "claim": "The point-A KCL gives q = 5A - 4r.",
+          "label": "reasoning",
+          "source": "so q = 5A - 4r"
+        },
+        {
+          "claim_id": 26,
+          "claim": "KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0.",
+          "label": "reasoning",
+          "source": "KCL for the supernode around the 17 V source gives (p - t)/3 + (q - A)/8 = 0"
+        },
+        {
+          "claim_id": 27,
+          "claim": "Solving the right-side relations gives A = t - 6.",
+          "label": "reasoning",
+          "source": "Solving these right-side relations gives A = t - 6"
+        },
+        {
+          "claim_id": 28,
+          "claim": "Solving the right-side relations gives r = t - 4.",
+          "label": "reasoning",
+          "source": "r = t - 4"
+        },
+        {
+          "claim_id": 29,
+          "claim": "Solving the right-side relations gives q = t - 14.",
+          "label": "reasoning",
+          "source": "q = t - 14"
+        },
+        {
+          "claim_id": 30,
+          "claim": "Solving the right-side relations gives p = t + 3.",
+          "label": "reasoning",
+          "source": "p = t + 3"
+        },
+        {
+          "claim_id": 31,
+          "claim": "KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0.",
+          "label": "reasoning",
+          "source": "Finally, KCL at top-middle node t is (t - y)/3 + (t - r)/4 + (t - p)/3 = 0."
+        },
+        {
+          "claim_id": 32,
+          "claim": "Substituting r = t - 4 and p = t + 3 into the top-middle-node KCL makes the last two terms +1 and -1, so they cancel and t = y.",
+          "label": "reasoning",
+          "source": "Since r = t - 4 and p = t + 3, the last two terms are +1 and -1, so they cancel and t = y."
+        },
+        {
+          "claim_id": 33,
+          "claim": "Using t = y and y = (14t + 26)/27 gives t = (14t + 26)/27, so t = 2 V.",
+          "label": "reasoning",
+          "source": "Therefore t = (14t + 26)/27, giving 27t = 14t + 26, so 13t = 26 and t = 2 V."
+        },
+        {
+          "claim_id": 34,
+          "claim": "Using A = t - 6 and t = 2 V gives A = -4 V.",
+          "label": "reasoning",
+          "source": "Hence A = t - 6 = -4 V."
+        }
+      ],
+      "coverage_notes": "Applied all fix-severity edits: deleted the duplicate q = p - 17 claim and merged the over-split cancellation and algebra steps. All remaining claims are supported by the final_cot and renumbered sequentially."
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T07:36:01Z",
+    "changed_target_fields": 3,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

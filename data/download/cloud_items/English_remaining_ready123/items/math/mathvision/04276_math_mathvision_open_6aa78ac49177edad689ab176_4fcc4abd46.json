@@ -1,0 +1,743 @@
+{
+  "pack_index": 4276,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00328:mathvision__open_6aa78ac49177edad689ab176__625baeea10c1",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_6aa78ac49177edad689ab176",
+    "source_problem_id": "open_6aa78ac49177edad689ab176",
+    "problem_run_key": "mathvision__open_6aa78ac49177edad689ab176__625baeea10c1",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00328.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00328.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00328.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00328.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "One of the five coins $A, B, C, D$ or $E$ shall be placed in an empty square so that there are exactly two coins in each row and in each column. Which coin should be moved?\n<image1>",
+    "raw_answer_text": "C",
+    "open_variant_id": "open_6aa78ac49177edad689ab176",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "One of the five coins A, B, C, D or E shall be placed in an empty square so that there are exactly two coins in each row and in each column. Which coin should be moved?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "C",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_822ba9dd1798f6629342e061",
+        "problem_id": "prob_6189f010c347c5d331b43451",
+        "node_type": "answer_claim",
+        "canonical_value": "C",
+        "surface_forms": [
+          "C"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_f264c6e9cbe34bcbd0d641f8"
+        ],
+        "evidence_refs": [
+          "asset_f264c6e9cbe34bcbd0d641f8"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "option",
+        "normalized_value": {
+          "answer": "C"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-05T20:13:48Z",
+        "updated_at": "2026-04-05T20:13:48Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_6aa78ac49177edad689ab176",
+      "parent_problem_id": "prob_6189f010c347c5d331b43451",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "One of the five coins A, B, C, D or E shall be placed in an empty square so that there are exactly two coins in each row and in each column. Which coin should be moved?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "C",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "One of the five coins A, B, C, D or E shall be placed in an empty square so that there are exactly two coins in each row and in each column. Which coin should be moved?",
+    "raw_answer": "C",
+    "raw_standard_answer": "C",
+    "resolved_question_text": "One of the five coins A, B, C, D or E shall be placed in an empty square so that there are exactly two coins in each row and in each column. Which coin should be moved?",
+    "resolved_answer": "C",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: the attached figure shows a 5×5 grid. Recording the coin positions with rows 1 to 5 from top to bottom and columns 1 to 5 from left to right: row 1 column 1 is A, and row 1 column 5 has an unlabeled coin; row 2 column 2 and row 2 column 4 each have an unlabeled coin; row 3 column 3 is D, and row 3 column 4 has an unlabeled coin; row 4 column 1 is B; row 5 column 1 is C, row 5 column 3 is E, and row 5 column 5 has an unlabeled coin. Then reason: the problem requires moving only one of the coins A, B, C, D, E to an empty square, so that every row and every column has exactly 2 coins. The current numbers of coins in each row are: row 1 has 2, row 2 has 2, row 3 has 2, row 4 has 1, row 5 has 3. Therefore, a coin must be moved away from row 5 and placed into row 4. The current numbers of coins in each column are: column 1 has 3, column 2 has 1, column 3 has 2, column 4 has 2, column 5 has 2. Therefore, a coin must be moved away from column 1 and placed into column 2. The intersection of the surplus row and the surplus column is row 5 column 1, where the labeled coin is C; the required target square, row 4 column 2, is empty. Therefore C should be moved.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_6aa78ac49177edad689ab176",
+      "problem_run_key": "mathvision__open_6aa78ac49177edad689ab176__625baeea10c1",
+      "question_text": "One of the five coins A, B, C, D or E shall be placed in an empty square so that there are exactly two coins in each row and in each column. Which coin should be moved?",
+      "standard_answer": "C",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00328.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00328.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First describe the diagram as a 5-by-5 grid and record the occupied cells: A at row 1 column 1, an unlabeled coin at row 1 column 5; unlabeled coins at row 2 columns 2 and 4; D at row 3 column 3 and an unlabeled coin at row 3 column 4; B at row 4 column 1; C at row 5 column 1, E at row 5 column 3, and an unlabeled coin at row 5 column 5. From the text, only one of the labeled coins A–E may be moved into an empty square, and the final grid must have exactly two coins in every row and every column. Count current row totals: rows 1, 2, and 3 already have 2, row 4 has 1, row 5 has 3. Therefore the moved coin must come from row 5 and be placed in row 4. Count current column totals: columns 3, 4, and 5 already have 2, column 1 has 3, column 2 has 1. Therefore the moved coin must come from column 1 and be placed in column 2. The only labeled coin at the intersection of surplus row 5 and surplus column 1 is C, and the needed destination row 4 column 2 is empty. So the coin to move is C.",
+          "CoT_raw": "先描述图像：附图显示一个 5×5 方格。按从上到下为第 1 至第 5 行、从左到右为第 1 至第 5 列记录硬币位置：第 1 行第 1 列是 A，第 1 行第 5 列有一个无字母硬币；第 2 行第 2 列和第 2 行第 4 列各有一个无字母硬币；第 3 行第 3 列是 D，第 3 行第 4 列有一个无字母硬币；第 4 行第 1 列是 B；第 5 行第 1 列是 C，第 5 行第 3 列是 E，第 5 行第 5 列有一个无字母硬币。\n\n再推理：题目要求只移动 A、B、C、D、E 中的一个硬币到一个空格，使每行、每列都恰好有 2 个硬币。当前各行硬币数为：第 1 行 2 个，第 2 行 2 个，第 3 行 2 个，第 4 行 1 个，第 5 行 3 个。所以必须从第 5 行移走一个硬币，并放到第 4 行。当前各列硬币数为：第 1 列 3 个，第 2 列 1 个，第 3 列 2 个，第 4 列 2 个，第 5 列 2 个。所以必须从第 1 列移走一个硬币，并放到第 2 列。 surplus 行和 surplus 列的交点是第 5 行第 1 列，该处的有字母硬币是 C；所需目标格第 4 行第 2 列为空。因此应移动 C。",
+          "model_answer": "C",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "C",
+              "predicted_part": "C",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：附图显示一个 5×5 方格。按从上到下为第 1 至第 5 行、从左到右为第 1 至第 5 列记录硬币位置：第 1 行第 1 列是 A，第 1 行第 5 列有一个无字母硬币；第 2 行第 2 列和第 2 行第 4 列各有一个无字母硬币；第 3 行第 3 列是 D，第 3 行第 4 列有一个无字母硬币；第 4 行第 1 列是 B；第 5 行第 1 列是 C，第 5 行第 3 列是 E，第 5 行第 5 列有一个无字母硬币。\n\n再推理：题目要求只移动 A、B、C、D、E 中的一个硬币到一个空格，使每行、每列都恰好有 2 个硬币。当前各行硬币数为：第 1 行 2 个，第 2 行 2 个，第 3 行 2 个，第 4 行 1 个，第 5 行 3 个。所以必须从第 5 行移走一个硬币，并放到第 4 行。当前各列硬币数为：第 1 列 3 个，第 2 列 1 个，第 3 列 2 个，第 4 列 2 个，第 5 列 2 个。所以必须从第 1 列移走一个硬币，并放到第 2 列。 surplus 行和 surplus 列的交点是第 5 行第 1 列，该处的有字母硬币是 C；所需目标格第 4 行第 2 列为空。因此应移动 C。",
+          "answer_answer_check_final": "C",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "The trace is valid. It correctly describes the image first, then uses row/column counts to identify the only movable coin as C, matching the standard answer. No revision needed.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：附图显示一个 5×5 方格。按从上到下为第 1 至第 5 行、从左到右为第 1 至第 5 列记录硬币位置：第 1 行第 1 列是 A，第 1 行第 5 列有一个无字母硬币；第 2 行第 2 列和第 2 行第 4 列各有一个无字母硬币；第 3 行第 3 列是 D，第 3 行第 4 列有一个无字母硬币；第 4 行第 1 列是 B；第 5 行第 1 列是 C，第 5 行第 3 列是 E，第 5 行第 5 列有一个无字母硬币。\n\n再推理：题目要求只移动 A、B、C、D、E 中的一个硬币到一个空格，使每行、每列都恰好有 2 个硬币。当前各行硬币数为：第 1 行 2 个，第 2 行 2 个，第 3 行 2 个，第 4 行 1 个，第 5 行 3 个。所以必须从第 5 行移走一个硬币，并放到第 4 行。当前各列硬币数为：第 1 列 3 个，第 2 列 1 个，第 3 列 2 个，第 4 列 2 个，第 5 列 2 个。所以必须从第 1 列移走一个硬币，并放到第 2 列。 surplus 行和 surplus 列的交点是第 5 行第 1 列，该处的有字母硬币是 C；所需目标格第 4 行第 2 列为空。因此应移动 C。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct row-and-column count route: identify the unique surplus row/column and deficient row/column, then use their intersection to determine the movable labeled coin.",
+            "image_role": "Read the 5-by-5 grid layout, the positions of all coins, and the labels A, B, C, D, E on their coins.",
+            "text_role": "Read the instruction that exactly one labeled coin A–E must be moved to an empty square so that every row and column contains exactly two coins.",
+            "knowledge_role": "Use conservation of the total number of coins under a move, plus row/column count balancing: a valid move must remove a coin from the overfull row and column and add it to the underfull row and column."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：附图显示一个 5×5 方格。按从上到下为第 1 至第 5 行、从左到右为第 1 至第 5 列记录硬币位置：第 1 行第 1 列是 A，第 1 行第 5 列有一个无字母硬币；第 2 行第 2 列和第 2 行第 4 列各有一个无字母硬币；第 3 行第 3 列是 D，第 3 行第 4 列有一个无字母硬币；第 4 行第 1 列是 B；第 5 行第 1 列是 C，第 5 行第 3 列是 E，第 5 行第 5 列有一个无字母硬币。\n\n再推理：题目要求只移动 A、B、C、D、E 中的一个硬币到一个空格，使每行、每列都恰好有 2 个硬币。当前各行硬币数为：第 1 行 2 个，第 2 行 2 个，第 3 行 2 个，第 4 行 1 个，第 5 行 3 个。所以必须从第 5 行移走一个硬币，并放到第 4 行。当前各列硬币数为：第 1 列 3 个，第 2 列 1 个，第 3 列 2 个，第 4 列 2 个，第 5 列 2 个。所以必须从第 1 列移走一个硬币，并放到第 2 列。 surplus 行和 surplus 列的交点是第 5 行第 1 列，该处的有字母硬币是 C；所需目标格第 4 行第 2 列为空。因此应移动 C。",
+            "model_answer": "C",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2942,
+              "completion_tokens": 743,
+              "total_tokens": 3685,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 12.958,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "The trace is valid. It correctly describes the image first, then uses row/column counts to identify the only movable coin as C, matching the standard answer. No revision needed.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 16.15
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 12.99,
+              "usage_delta": {
+                "request_count": 15,
+                "successful_request_count": 17,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 15,
+                "requests_with_usage": 17,
+                "prompt_tokens": 45435,
+                "completion_tokens": 21045,
+                "total_tokens": 66480,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 404.779,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 16.188,
+              "usage_delta": {
+                "request_count": 10,
+                "successful_request_count": 13,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 10,
+                "requests_with_usage": 13,
+                "prompt_tokens": 39416,
+                "completion_tokens": 11750,
+                "total_tokens": 51166,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 256.365,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 42.64,
+          "usage_delta": {
+            "request_count": 45,
+            "successful_request_count": 35,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 45,
+            "requests_with_usage": 35,
+            "prompt_tokens": 85387,
+            "completion_tokens": 29144,
+            "total_tokens": 114531,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 629.156,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "661",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00328.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_6189f010c347c5d331b43451",
+          "open_variant_count": 1,
+          "open_variant_id": "open_6aa78ac49177edad689ab176",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 71.869,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 9175,
+        "completion_tokens": 2258,
+        "total_tokens": 11433,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 71.714,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "One of the five coins A, B, C, D or E shall be placed in an empty square so that there are exactly two coins in each row and in each column. Which coin should be moved?",
+      "answer": "C",
+      "final_cot": "First describe the image: the attached figure shows a 5×5 grid. Recording the coin positions with rows 1 to 5 from top to bottom and columns 1 to 5 from left to right: row 1 column 1 is A, and row 1 column 5 has an unlabeled coin; row 2 column 2 and row 2 column 4 each have an unlabeled coin; row 3 column 3 is D, and row 3 column 4 has an unlabeled coin; row 4 column 1 is B; row 5 column 1 is C, row 5 column 3 is E, and row 5 column 5 has an unlabeled coin.\n\nThen reason: the problem requires moving only one of the coins A, B, C, D, E to an empty square, so that every row and every column has exactly 2 coins. The current numbers of coins in each row are: row 1 has 2, row 2 has 2, row 3 has 2, row 4 has 1, row 5 has 3. Therefore, a coin must be moved away from row 5 and placed into row 4. The current numbers of coins in each column are: column 1 has 3, column 2 has 1, column 3 has 2, column 4 has 2, column 5 has 2. Therefore, a coin must be moved away from column 1 and placed into column 2. The intersection of the surplus row and the surplus column is row 5 column 1, where the labeled coin is C; the required target square, row 4 column 2, is empty. Therefore C should be moved.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "The trace is valid. It correctly describes the image first, then uses row/column counts to identify the only movable coin as C, matching the standard answer. No revision needed.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 16.15
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1451,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00328.json",
+        "source_sample_filename": "mathvision00328.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00328.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T13:08:41Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_6aa78ac49177edad689ab176",
+          "new_problem_id": "open_6aa78ac49177edad689ab176",
+          "old_problem_run_key": "mathvision__open_6aa78ac49177edad689ab176__625baeea10c1",
+          "new_problem_run_key": "mathvision__open_6aa78ac49177edad689ab176__625baeea10c1",
+          "target_relpath": "math/mathvision/samples/mathvision00328.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_6aa78ac49177edad689ab176",
+    "problem_run_key": "mathvision__open_6aa78ac49177edad689ab176__625baeea10c1",
+    "raw_question_text": "One of the five coins A, B, C, D or E shall be placed in an empty square so that there are exactly two coins in each row and in each column. Which coin should be moved?",
+    "raw_answer": "C",
+    "raw_standard_answer": "C",
+    "resolved_question_text": "One of the five coins A, B, C, D or E shall be placed in an empty square so that there are exactly two coins in each row and in each column. Which coin should be moved?",
+    "resolved_answer": "C",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: the attached figure shows a 5×5 grid. Recording the coin positions with rows 1 to 5 from top to bottom and columns 1 to 5 from left to right: row 1 column 1 is A, and row 1 column 5 has an unlabeled coin; row 2 column 2 and row 2 column 4 each have an unlabeled coin; row 3 column 3 is D, and row 3 column 4 has an unlabeled coin; row 4 column 1 is B; row 5 column 1 is C, row 5 column 3 is E, and row 5 column 5 has an unlabeled coin.\n\nThen reason: the problem requires moving only one of the coins A, B, C, D, E to an empty square, so that every row and every column has exactly 2 coins. The current numbers of coins in each row are: row 1 has 2, row 2 has 2, row 3 has 2, row 4 has 1, row 5 has 3. Therefore, a coin must be moved away from row 5 and placed into row 4. The current numbers of coins in each column are: column 1 has 3, column 2 has 1, column 3 has 2, column 4 has 2, column 5 has 2. Therefore, a coin must be moved away from column 1 and placed into column 2. The intersection of the surplus row and the surplus column is row 5 column 1, where the labeled coin is C; the required target square, row 4 column 2, is empty. Therefore C should be moved.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The attached figure shows a 5×5 grid.",
+        "label": "perception",
+        "source": "The attached figure shows a 5×5 grid."
+      },
+      {
+        "claim_id": 2,
+        "claim": "Record the coin positions with rows 1 to 5 from top to bottom.",
+        "label": "perception",
+        "source": "Record the coin positions with rows 1 to 5 from top to bottom and columns 1 to 5 from left to right"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Record the coin positions with columns 1 to 5 from left to right.",
+        "label": "perception",
+        "source": "Record the coin positions with rows 1 to 5 from top to bottom and columns 1 to 5 from left to right"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Row 1 column 1 is A.",
+        "label": "perception",
+        "source": "Row 1 column 1 is A"
+      },
+      {
+        "claim_id": 5,
+        "claim": "Row 1 column 5 has an unlabeled coin.",
+        "label": "perception",
+        "source": "Row 1 column 5 has an unlabeled coin"
+      },
+      {
+        "claim_id": 6,
+        "claim": "Row 2 column 2 has an unlabeled coin.",
+        "label": "perception",
+        "source": "Row 2 column 2 and row 2 column 4 each have an unlabeled coin"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Row 2 column 4 has an unlabeled coin.",
+        "label": "perception",
+        "source": "Row 2 column 2 and row 2 column 4 each have an unlabeled coin"
+      },
+      {
+        "claim_id": 8,
+        "claim": "Row 3 column 3 is D.",
+        "label": "perception",
+        "source": "Row 3 column 3 is D"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Row 3 column 4 has an unlabeled coin.",
+        "label": "perception",
+        "source": "Row 3 column 4 has an unlabeled coin"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Row 4 column 1 is B.",
+        "label": "perception",
+        "source": "Row 4 column 1 is B"
+      },
+      {
+        "claim_id": 11,
+        "claim": "Row 5 column 1 is C.",
+        "label": "perception",
+        "source": "Row 5 column 1 is C"
+      },
+      {
+        "claim_id": 12,
+        "claim": "Row 5 column 3 is E.",
+        "label": "perception",
+        "source": "Row 5 column 3 is E"
+      },
+      {
+        "claim_id": 13,
+        "claim": "There is a coin without a letter at row 5 column 5.",
+        "label": "perception",
+        "source": "There is a coin without a letter at row 5 column 5"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The problem requires moving only one coin among A, B, C, D, E to an empty square.",
+        "label": "perception",
+        "source": "The problem requires moving only one coin among A, B, C, D, E to an empty square"
+      },
+      {
+        "claim_id": 15,
+        "claim": "After moving, each row has exactly 2 coins.",
+        "label": "perception",
+        "source": "Make each row and each column have exactly 2 coins"
+      },
+      {
+        "claim_id": 16,
+        "claim": "After moving, each column has exactly 2 coins.",
+        "label": "perception",
+        "source": "Make each row and each column have exactly 2 coins"
+      },
+      {
+        "claim_id": 17,
+        "claim": "Currently only row 4 has 1 coin, row 5 has 3 coins, and all other rows have 2 coins.",
+        "label": "reasoning",
+        "source": "The current number of coins in each row is: row 1 has 2, row 2 has 2, row 3 has 2, row 4 has 1, row 5 has 3."
+      },
+      {
+        "claim_id": 18,
+        "claim": "A coin must be moved away from row 5.",
+        "label": "reasoning",
+        "source": "So a coin must be moved away from row 5"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The coin must be placed in row 4.",
+        "label": "reasoning",
+        "source": "and placed in row 4"
+      },
+      {
+        "claim_id": 20,
+        "claim": "Currently only column 1 has 3 coins, column 2 has 1 coin, and all other columns have 2 coins.",
+        "label": "reasoning",
+        "source": "The current number of coins in each column is: column 1 has 3, column 2 has 1, column 3 has 2, column 4 has 2, and column 5 has 2."
+      },
+      {
+        "claim_id": 21,
+        "claim": "A coin must be removed from column 1.",
+        "label": "reasoning",
+        "source": "So a coin must be removed from column 1"
+      },
+      {
+        "claim_id": 22,
+        "claim": "The coin must be placed in column 2.",
+        "label": "reasoning",
+        "source": "and placed in column 2"
+      },
+      {
+        "claim_id": 23,
+        "claim": "The intersection of the surplus row and the surplus column is row 5, column 1.",
+        "label": "reasoning",
+        "source": "The intersection of the surplus row and the surplus column is row 5, column 1"
+      },
+      {
+        "claim_id": 24,
+        "claim": "The lettered coin at the intersection of the surplus row and the surplus column is C.",
+        "label": "reasoning",
+        "source": "The intersection of the surplus row and the surplus column is row 5, column 1, and the lettered coin there is C"
+      },
+      {
+        "claim_id": 25,
+        "claim": "The required target cell is row 4, column 2.",
+        "label": "reasoning",
+        "source": "The required target cell, row 4, column 2, is empty"
+      },
+      {
+        "claim_id": 26,
+        "claim": "Row 4, column 2 is empty.",
+        "label": "reasoning",
+        "source": "The required target cell, row 4, column 2, is empty"
+      },
+      {
+        "claim_id": 27,
+        "claim": "C should be moved.",
+        "label": "reasoning",
+        "source": "Therefore C should be moved."
+      }
+    ],
+    "claim_count": 27,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The attached figure shows a 5×5 grid.",
+          "label": "perception",
+          "source": "The attached figure shows a 5×5 grid."
+        },
+        {
+          "claim_id": 2,
+          "claim": "Record the coin positions with rows 1 to 5 from top to bottom.",
+          "label": "perception",
+          "source": "Record the coin positions with rows 1 to 5 from top to bottom and columns 1 to 5 from left to right"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Record the coin positions with columns 1 to 5 from left to right.",
+          "label": "perception",
+          "source": "Record the coin positions with rows 1 to 5 from top to bottom and columns 1 to 5 from left to right"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Row 1 column 1 is A.",
+          "label": "perception",
+          "source": "Row 1 column 1 is A"
+        },
+        {
+          "claim_id": 5,
+          "claim": "Row 1 column 5 has an unlabeled coin.",
+          "label": "perception",
+          "source": "Row 1 column 5 has an unlabeled coin"
+        },
+        {
+          "claim_id": 6,
+          "claim": "Row 2 column 2 has an unlabeled coin.",
+          "label": "perception",
+          "source": "Row 2 column 2 and row 2 column 4 each have an unlabeled coin"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Row 2 column 4 has an unlabeled coin.",
+          "label": "perception",
+          "source": "Row 2 column 2 and row 2 column 4 each have an unlabeled coin"
+        },
+        {
+          "claim_id": 8,
+          "claim": "Row 3 column 3 is D.",
+          "label": "perception",
+          "source": "Row 3 column 3 is D"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Row 3 column 4 has an unlabeled coin.",
+          "label": "perception",
+          "source": "Row 3 column 4 has an unlabeled coin"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Row 4 column 1 is B.",
+          "label": "perception",
+          "source": "Row 4 column 1 is B"
+        },
+        {
+          "claim_id": 11,
+          "claim": "Row 5 column 1 is C.",
+          "label": "perception",
+          "source": "Row 5 column 1 is C"
+        },
+        {
+          "claim_id": 12,
+          "claim": "Row 5 column 3 is E.",
+          "label": "perception",
+          "source": "Row 5 column 3 is E"
+        },
+        {
+          "claim_id": 13,
+          "claim": "There is a coin without a letter at row 5 column 5.",
+          "label": "perception",
+          "source": "There is a coin without a letter at row 5 column 5"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The problem requires moving only one coin among A, B, C, D, E to an empty square.",
+          "label": "perception",
+          "source": "The problem requires moving only one coin among A, B, C, D, E to an empty square"
+        },
+        {
+          "claim_id": 15,
+          "claim": "After moving, each row has exactly 2 coins.",
+          "label": "perception",
+          "source": "Make each row and each column have exactly 2 coins"
+        },
+        {
+          "claim_id": 16,
+          "claim": "After moving, each column has exactly 2 coins.",
+          "label": "perception",
+          "source": "Make each row and each column have exactly 2 coins"
+        },
+        {
+          "claim_id": 17,
+          "claim": "Currently only row 4 has 1 coin, row 5 has 3 coins, and all other rows have 2 coins.",
+          "label": "reasoning",
+          "source": "The current number of coins in each row is: row 1 has 2, row 2 has 2, row 3 has 2, row 4 has 1, row 5 has 3."
+        },
+        {
+          "claim_id": 18,
+          "claim": "A coin must be moved away from row 5.",
+          "label": "reasoning",
+          "source": "So a coin must be moved away from row 5"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The coin must be placed in row 4.",
+          "label": "reasoning",
+          "source": "and placed in row 4"
+        },
+        {
+          "claim_id": 20,
+          "claim": "Currently only column 1 has 3 coins, column 2 has 1 coin, and all other columns have 2 coins.",
+          "label": "reasoning",
+          "source": "The current number of coins in each column is: column 1 has 3, column 2 has 1, column 3 has 2, column 4 has 2, and column 5 has 2."
+        },
+        {
+          "claim_id": 21,
+          "claim": "A coin must be removed from column 1.",
+          "label": "reasoning",
+          "source": "So a coin must be removed from column 1"
+        },
+        {
+          "claim_id": 22,
+          "claim": "The coin must be placed in column 2.",
+          "label": "reasoning",
+          "source": "and placed in column 2"
+        },
+        {
+          "claim_id": 23,
+          "claim": "The intersection of the surplus row and the surplus column is row 5, column 1.",
+          "label": "reasoning",
+          "source": "The intersection of the surplus row and the surplus column is row 5, column 1"
+        },
+        {
+          "claim_id": 24,
+          "claim": "The lettered coin at the intersection of the surplus row and the surplus column is C.",
+          "label": "reasoning",
+          "source": "The intersection of the surplus row and the surplus column is row 5, column 1, and the lettered coin there is C"
+        },
+        {
+          "claim_id": 25,
+          "claim": "The required target cell is row 4, column 2.",
+          "label": "reasoning",
+          "source": "The required target cell, row 4, column 2, is empty"
+        },
+        {
+          "claim_id": 26,
+          "claim": "Row 4, column 2 is empty.",
+          "label": "reasoning",
+          "source": "The required target cell, row 4, column 2, is empty"
+        },
+        {
+          "claim_id": 27,
+          "claim": "C should be moved.",
+          "label": "reasoning",
+          "source": "Therefore C should be moved."
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题合并行计数与列计数 claim，并替换关于 C 的重复 claim；其余 claim 保持原有顺序与内容。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:28Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/08642_math_mathvision_open_6aa78ac49177edad689ab176_4fcc4abd46.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04276_math_mathvision_open_6aa78ac49177edad689ab176_4fcc4abd46.json"
+  }
+}

@@ -1,0 +1,641 @@
+{
+  "pack_index": 4516,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00063:mathvision__open_4fff89a64aa9ce6f2a1dda89__aa719bba5d69",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_4fff89a64aa9ce6f2a1dda89",
+    "source_problem_id": "open_4fff89a64aa9ce6f2a1dda89",
+    "problem_run_key": "mathvision__open_4fff89a64aa9ce6f2a1dda89__aa719bba5d69",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 55.0,
+    "difficulty_level": "medium",
+    "weighted_accuracy": 0.45,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00063.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00063.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00063.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00063.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Peter has drawn this pattern:\n<image1>\nHe draws exactly the same pattern once more.\nWhich point is on his drawing?",
+    "raw_answer_text": "D",
+    "open_variant_id": "open_4fff89a64aa9ce6f2a1dda89",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "Peter has drawn this pattern. He draws exactly the same pattern once more. Which labeled point is on his drawing?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "D",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_81cad6243c46e6406566c896",
+        "problem_id": "prob_57b78ef9b9ceafa72dee63c6",
+        "node_type": "answer_claim",
+        "canonical_value": "D",
+        "surface_forms": [
+          "D"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_9951e1bdd8a37144a2d380de"
+        ],
+        "evidence_refs": [
+          "asset_9951e1bdd8a37144a2d380de"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "option",
+        "normalized_value": {
+          "answer": "D"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-04T13:17:27Z",
+        "updated_at": "2026-04-04T13:17:27Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_4fff89a64aa9ce6f2a1dda89",
+      "parent_problem_id": "prob_57b78ef9b9ceafa72dee63c6",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "Peter has drawn this pattern. He draws exactly the same pattern once more. Which labeled point is on his drawing?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "D",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Peter has drawn this pattern. He draws exactly the same pattern once more. Which labeled point is on his drawing?",
+    "raw_answer": "D",
+    "raw_standard_answer": "D",
+    "resolved_question_text": "Peter has drawn this pattern. He draws exactly the same pattern once more. Which labeled point is on his drawing?",
+    "resolved_answer": "D",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The diagram is a piece of grid paper. On the left there is already a black connected right-angled broken-line path. The path moves horizontally and vertically along the grid lines, and its current rightmost end stops at a bottom grid point. In the blank grid on the right, candidate points A, B, C, D, E are marked. The candidate points are distributed at different heights: B is on a higher grid line, A, D, E are on the same middle-upper horizontal grid line, and C is on a lower grid line. Reasoning: According to the problem, the same pattern must be drawn once more from the current rightmost end. According to the existing pattern, the movement sequence for one repetition read from the bottom endpoint is: up 3 squares, right 3 squares, down 3 squares, right 1 square, up 2 squares, right 2 squares, down 2 squares, right 1 square, up 1 square, right 1 square, down 1 square, right 1 square. After copying this sequence to the right from the current rightmost end, after “right 1 square, up 2 squares”, there will appear a horizontal line segment on the second grid line from the top, with length 2 squares. Observing the positions of the candidate points, D falls exactly on this newly drawn horizontal line segment, while A, B, C, E are not on the newly drawn path. Therefore the marked point on the pattern newly drawn by Peter is D.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_4fff89a64aa9ce6f2a1dda89",
+      "problem_run_key": "mathvision__open_4fff89a64aa9ce6f2a1dda89__aa719bba5d69",
+      "question_text": "Peter has drawn this pattern. He draws exactly the same pattern once more. Which labeled point is on his drawing?",
+      "standard_answer": "D",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00063.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00063.png"
+      ],
+      "initial_multi_solution_score": 0.3017,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First inspect the grid drawing: the black pattern is a connected orthogonal path ending at a bottom-row grid point, with candidate points A–E placed to its right. Read the movement sequence of one repeat from the existing pattern: starting at the bottom endpoint, go up 3 squares, right 3, down 3, right 1, up 2, right 2, down 2, right 1, up 1, right 1, down 1, right 1. Now start at the current rightmost black endpoint and copy that same sequence to the right. In the copied path, the segment after going right 1 and up 2 is a horizontal segment two squares long on the second grid line from the top; labeled point D lies on that segment, while A, B, C, and E do not. Therefore the labeled point on the new drawing is D.",
+          "CoT_raw": "图像描述：图中是一张方格纸，左侧已有一条黑色的连通直角折线路径，路径沿着网格线水平和竖直移动，当前最右端停在底部网格点。右侧空白网格中标出了候选点 A、B、C、D、E。候选点分布在不同高度：B 在较高的网格线上，A、D、E 在同一条中上方水平网格线上，C 在更低一条网格线上。\n\n推理：按题意要把同样的图案从当前最右端再画一次。根据已有图案，从底部端点读取一次重复的移动顺序为：上 3 格、右 3 格、下 3 格、右 1 格、上 2 格、右 2 格、下 2 格、右 1 格、上 1 格、右 1 格、下 1 格、右 1 格。把这个顺序从当前最右端向右复制后，其中在“右 1 格、上 2 格”之后，会出现一段位于从上往下第二条网格线上的水平线段，长度为 2 格。观察候选点位置，D 正好落在这段新画出的水平线段上，而 A、B、C、E 不在新画出的路径上。因此在 Peter 新画的图案上的标记点是 D。",
+          "model_answer": "D",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "D",
+              "predicted_part": "D",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一张方格纸，左侧已有一条黑色的连通直角折线路径，路径沿着网格线水平和竖直移动，当前最右端停在底部网格点。右侧空白网格中标出了候选点 A、B、C、D、E。候选点分布在不同高度：B 在较高的网格线上，A、D、E 在同一条中上方水平网格线上，C 在更低一条网格线上。\n\n推理：按题意要把同样的图案从当前最右端再画一次。根据已有图案，从底部端点读取一次重复的移动顺序为：上 3 格、右 3 格、下 3 格、右 1 格、上 2 格、右 2 格、下 2 格、右 1 格、上 1 格、右 1 格、下 1 格、右 1 格。把这个顺序从当前最右端向右复制后，其中在“右 1 格、上 2 格”之后，会出现一段位于从上往下第二条网格线上的水平线段，长度为 2 格。观察候选点位置，D 正好落在这段新画出的水平线段上，而 A、B、C、E 不在新画出的路径上。因此在 Peter 新画的图案上的标记点是 D。",
+          "answer_answer_check_final": "D",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理链通过核查。图像描述先于推理，候选点相对位置、黑色折线路径的移动序列、从当前右端点复制图案后 D 落在线段上的结论均与图像、标准答案和方法草案一致。无需修改。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一张方格纸，左侧已有一条黑色的连通直角折线路径，路径沿着网格线水平和竖直移动，当前最右端停在底部网格点。右侧空白网格中标出了候选点 A、B、C、D、E。候选点分布在不同高度：B 在较高的网格线上，A、D、E 在同一条中上方水平网格线上，C 在更低一条网格线上。\n\n推理：按题意要把同样的图案从当前最右端再画一次。根据已有图案，从底部端点读取一次重复的移动顺序为：上 3 格、右 3 格、下 3 格、右 1 格、上 2 格、右 2 格、下 2 格、右 1 格、上 1 格、右 1 格、下 1 格、右 1 格。把这个顺序从当前最右端向右复制后，其中在“右 1 格、上 2 格”之后，会出现一段位于从上往下第二条网格线上的水平线段，长度为 2 格。观察候选点位置，D 正好落在这段新画出的水平线段上，而 A、B、C、E 不在新画出的路径上。因此在 Peter 新画的图案上的标记点是 D。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct continuation-by-movement-sequence route: it uses the exact grid-step path of the given pattern and tests which labeled point lies on the translated copy.",
+            "image_role": "Read the black orthogonal pattern, its rightmost endpoint, the grid spacing, and the relative positions of labeled points A, B, C, D, and E. Identify that D is on the copied horizontal segment at the same height as the middle shelf of the pattern.",
+            "text_role": "Use the statement that Peter draws exactly the same pattern once more to justify extending the existing path by an identical translated copy to the right.",
+            "knowledge_role": "A repeated pattern on a square grid preserves the same sequence of horizontal and vertical moves; a labeled point is on the drawing only if it lies on one of the copied line segments."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一张方格纸，左侧已有一条黑色的连通直角折线路径，路径沿着网格线水平和竖直移动，当前最右端停在底部网格点。右侧空白网格中标出了候选点 A、B、C、D、E。候选点分布在不同高度：B 在较高的网格线上，A、D、E 在同一条中上方水平网格线上，C 在更低一条网格线上。\n\n推理：按题意要把同样的图案从当前最右端再画一次。根据已有图案，从底部端点读取一次重复的移动顺序为：上 3 格、右 3 格、下 3 格、右 1 格、上 2 格、右 2 格、下 2 格、右 1 格、上 1 格、右 1 格、下 1 格、右 1 格。把这个顺序从当前最右端向右复制后，其中在“右 1 格、上 2 格”之后，会出现一段位于从上往下第二条网格线上的水平线段，长度为 2 格。观察候选点位置，D 正好落在这段新画出的水平线段上，而 A、B、C、E 不在新画出的路径上。因此在 Peter 新画的图案上的标记点是 D。",
+            "model_answer": "D",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 3339,
+              "completion_tokens": 1403,
+              "total_tokens": 4742,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 27.19,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理链通过核查。图像描述先于推理，候选点相对位置、黑色折线路径的移动序列、从当前右端点复制图案后 D 落在线段上的结论均与图像、标准答案和方法草案一致。无需修改。",
+              "major_failures": [],
+              "extractability_score": 0.97,
+              "grounding_score": 0.96,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 40.216
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 27.241,
+              "usage_delta": {
+                "request_count": 16,
+                "successful_request_count": 22,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 16,
+                "requests_with_usage": 22,
+                "prompt_tokens": 69606,
+                "completion_tokens": 25171,
+                "total_tokens": 94777,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 499.251,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 40.266,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 17,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 17,
+                "prompt_tokens": 58380,
+                "completion_tokens": 19057,
+                "total_tokens": 77437,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 495.938,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 43.244,
+          "usage_delta": {
+            "request_count": 46,
+            "successful_request_count": 39,
+            "failed_request_count": 1,
+            "retry_count": 1,
+            "text_request_count": 0,
+            "multimodal_request_count": 46,
+            "requests_with_usage": 39,
+            "prompt_tokens": 118776,
+            "completion_tokens": 31804,
+            "total_tokens": 150580,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 734.816,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "75",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00063.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_57b78ef9b9ceafa72dee63c6",
+          "open_variant_count": 1,
+          "open_variant_id": "open_4fff89a64aa9ce6f2a1dda89",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "image_required",
+            "limited_text_context",
+            "visual_pattern_reasoning"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 110.774,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 10390,
+        "completion_tokens": 5732,
+        "total_tokens": 16122,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 110.594,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "Peter has drawn this pattern. He draws exactly the same pattern once more. Which labeled point is on his drawing?",
+      "answer": "D",
+      "final_cot": "Image description: The diagram is a piece of grid paper. On the left there is already a black connected right-angled broken-line path. The path moves horizontally and vertically along the grid lines, and its current rightmost end stops at a bottom grid point. In the blank grid on the right, candidate points A, B, C, D, E are marked. The candidate points are distributed at different heights: B is on a higher grid line, A, D, E are on the same middle-upper horizontal grid line, and C is on a lower grid line.\n\nReasoning: According to the problem, the same pattern must be drawn once more from the current rightmost end. According to the existing pattern, the movement sequence for one repetition read from the bottom endpoint is: up 3 squares, right 3 squares, down 3 squares, right 1 square, up 2 squares, right 2 squares, down 2 squares, right 1 square, up 1 square, right 1 square, down 1 square, right 1 square. After copying this sequence to the right from the current rightmost end, after “right 1 square, up 2 squares”, there will appear a horizontal line segment on the second grid line from the top, with length 2 squares. Observing the positions of the candidate points, D falls exactly on this newly drawn horizontal line segment, while A, B, C, E are not on the newly drawn path. Therefore the marked point on the pattern newly drawn by Peter is D.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理链通过核查。图像描述先于推理，候选点相对位置、黑色折线路径的移动序列、从当前右端点复制图案后 D 落在线段上的结论均与图像、标准答案和方法草案一致。无需修改。",
+          "major_failures": [],
+          "extractability_score": 0.97,
+          "grounding_score": 0.96,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 40.216
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1186,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00063.json",
+        "source_sample_filename": "mathvision00063.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00063.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T11:30:53Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_4fff89a64aa9ce6f2a1dda89",
+          "new_problem_id": "open_4fff89a64aa9ce6f2a1dda89",
+          "old_problem_run_key": "mathvision__open_4fff89a64aa9ce6f2a1dda89__aa719bba5d69",
+          "new_problem_run_key": "mathvision__open_4fff89a64aa9ce6f2a1dda89__aa719bba5d69",
+          "target_relpath": "math/mathvision/samples/mathvision00063.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_4fff89a64aa9ce6f2a1dda89",
+    "problem_run_key": "mathvision__open_4fff89a64aa9ce6f2a1dda89__aa719bba5d69",
+    "raw_question_text": "Peter has drawn this pattern. He draws exactly the same pattern once more. Which labeled point is on his drawing?",
+    "raw_answer": "D",
+    "raw_standard_answer": "D",
+    "resolved_question_text": "Peter has drawn this pattern. He draws exactly the same pattern once more. Which labeled point is on his drawing?",
+    "resolved_answer": "D",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The diagram is a piece of grid paper. On the left there is already a black connected right-angled broken-line path. The path moves horizontally and vertically along the grid lines, and its current rightmost end stops at a bottom grid point. In the blank grid on the right, candidate points A, B, C, D, E are marked. The candidate points are distributed at different heights: B is on a higher grid line, A, D, E are on the same middle-upper horizontal grid line, and C is on a lower grid line.\n\nReasoning: According to the problem, the same pattern must be drawn once more from the current rightmost end. According to the existing pattern, the movement sequence for one repetition read from the bottom endpoint is: up 3 squares, right 3 squares, down 3 squares, right 1 square, up 2 squares, right 2 squares, down 2 squares, right 1 square, up 1 square, right 1 square, down 1 square, right 1 square. After copying this sequence to the right from the current rightmost end, after “right 1 square, up 2 squares”, there will appear a horizontal line segment on the second grid line from the top, with length 2 squares. Observing the positions of the candidate points, D falls exactly on this newly drawn horizontal line segment, while A, B, C, E are not on the newly drawn path. Therefore the marked point on the pattern newly drawn by Peter is D.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The picture shows a sheet of grid paper.",
+        "label": "perception",
+        "source": "The picture shows a sheet of grid paper"
+      },
+      {
+        "claim_id": 2,
+        "claim": "On the left there is already a black connected right-angled broken-line path.",
+        "label": "perception",
+        "source": "On the left there is already a black connected right-angled broken-line path"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The path moves horizontally and vertically along the grid lines.",
+        "label": "perception",
+        "source": "The path moves horizontally and vertically along the grid lines"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The current rightmost end stops at a bottom grid point.",
+        "label": "perception",
+        "source": "The current rightmost end stops at a bottom grid point"
+      },
+      {
+        "claim_id": 5,
+        "claim": "In the blank grid on the right, candidate points A, B, C, D, E are marked.",
+        "label": "perception",
+        "source": "In the blank grid on the right, candidate points A, B, C, D, E are marked"
+      },
+      {
+        "claim_id": 6,
+        "claim": "B is on a higher grid line.",
+        "label": "perception",
+        "source": "B is on a higher grid line"
+      },
+      {
+        "claim_id": 7,
+        "claim": "A, D, E are on the same middle-upper horizontal grid line.",
+        "label": "perception",
+        "source": "A, D, E are on the same middle-upper horizontal grid line"
+      },
+      {
+        "claim_id": 8,
+        "claim": "C is on a lower grid line.",
+        "label": "perception",
+        "source": "C is on a lower grid line"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The problem requires drawing the same pattern once more from the current rightmost end.",
+        "label": "reasoning",
+        "source": "According to the problem, the same pattern must be drawn once more from the current rightmost end"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The movement sequence for one repetition read from the bottom endpoint is: up 3 squares, right 3 squares, down 3 squares, right 1 square, up 2 squares, right 2 squares, down 2 squares, right 1 square, up 1 square, right 1 square, down 1 square, right 1 square.",
+        "label": "perception",
+        "source": "The movement sequence for one repetition read from the bottom endpoint is: up 3 squares, right 3 squares, down 3 squares, right 1 square, up 2 squares, right 2 squares, down 2 squares, right 1 square, up 1 square, right 1 square, down 1 square, right 1 square"
+      },
+      {
+        "claim_id": 11,
+        "claim": "After copying this sequence to the right from the current rightmost end, there will appear a horizontal line segment on the second grid line from the top.",
+        "label": "reasoning",
+        "source": "After copying this sequence to the right from the current rightmost end, after “right 1 square, up 2 squares”, there will appear a horizontal line segment on the second grid line from the top, with length 2 squares"
+      },
+      {
+        "claim_id": 12,
+        "claim": "This newly appearing horizontal line segment has length 2 squares.",
+        "label": "reasoning",
+        "source": "There will appear a horizontal line segment on the second grid line from the top, with length 2 squares"
+      },
+      {
+        "claim_id": 13,
+        "claim": "D falls exactly on this newly drawn horizontal line segment.",
+        "label": "reasoning",
+        "source": "D falls exactly on this newly drawn horizontal line segment"
+      },
+      {
+        "claim_id": 14,
+        "claim": "A is not on the newly drawn path.",
+        "label": "reasoning",
+        "source": "A, B, C, E are not on the newly drawn path"
+      },
+      {
+        "claim_id": 15,
+        "claim": "B is not on the newly drawn path.",
+        "label": "reasoning",
+        "source": "A, B, C, E are not on the newly drawn path"
+      },
+      {
+        "claim_id": 16,
+        "claim": "C is not on the newly drawn path.",
+        "label": "reasoning",
+        "source": "A, B, C, E are not on the newly drawn path"
+      },
+      {
+        "claim_id": 17,
+        "claim": "E is not on the newly drawn path.",
+        "label": "reasoning",
+        "source": "A, B, C, E are not on the newly drawn path"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The marked point on the pattern newly drawn by Peter is D.",
+        "label": "reasoning",
+        "source": "Therefore the marked point on the pattern newly drawn by Peter is D"
+      }
+    ],
+    "claim_count": 18,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The picture shows a sheet of grid paper.",
+          "label": "perception",
+          "source": "The picture shows a sheet of grid paper"
+        },
+        {
+          "claim_id": 2,
+          "claim": "On the left there is already a black connected right-angled broken-line path.",
+          "label": "perception",
+          "source": "On the left there is already a black connected right-angled broken-line path"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The path moves horizontally and vertically along the grid lines.",
+          "label": "perception",
+          "source": "The path moves horizontally and vertically along the grid lines"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The current rightmost end stops at a bottom grid point.",
+          "label": "perception",
+          "source": "The current rightmost end stops at a bottom grid point"
+        },
+        {
+          "claim_id": 5,
+          "claim": "In the blank grid on the right, candidate points A, B, C, D, E are marked.",
+          "label": "perception",
+          "source": "In the blank grid on the right, candidate points A, B, C, D, E are marked"
+        },
+        {
+          "claim_id": 6,
+          "claim": "B is on a higher grid line.",
+          "label": "perception",
+          "source": "B is on a higher grid line"
+        },
+        {
+          "claim_id": 7,
+          "claim": "A, D, E are on the same middle-upper horizontal grid line.",
+          "label": "perception",
+          "source": "A, D, E are on the same middle-upper horizontal grid line"
+        },
+        {
+          "claim_id": 8,
+          "claim": "C is on a lower grid line.",
+          "label": "perception",
+          "source": "C is on a lower grid line"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The problem requires drawing the same pattern once more from the current rightmost end.",
+          "label": "reasoning",
+          "source": "According to the problem, the same pattern must be drawn once more from the current rightmost end"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The movement sequence for one repetition read from the bottom endpoint is: up 3 squares, right 3 squares, down 3 squares, right 1 square, up 2 squares, right 2 squares, down 2 squares, right 1 square, up 1 square, right 1 square, down 1 square, right 1 square.",
+          "label": "perception",
+          "source": "The movement sequence for one repetition read from the bottom endpoint is: up 3 squares, right 3 squares, down 3 squares, right 1 square, up 2 squares, right 2 squares, down 2 squares, right 1 square, up 1 square, right 1 square, down 1 square, right 1 square"
+        },
+        {
+          "claim_id": 11,
+          "claim": "After copying this sequence to the right from the current rightmost end, there will appear a horizontal line segment on the second grid line from the top.",
+          "label": "reasoning",
+          "source": "After copying this sequence to the right from the current rightmost end, after “right 1 square, up 2 squares”, there will appear a horizontal line segment on the second grid line from the top, with length 2 squares"
+        },
+        {
+          "claim_id": 12,
+          "claim": "This newly appearing horizontal line segment has length 2 squares.",
+          "label": "reasoning",
+          "source": "There will appear a horizontal line segment on the second grid line from the top, with length 2 squares"
+        },
+        {
+          "claim_id": 13,
+          "claim": "D falls exactly on this newly drawn horizontal line segment.",
+          "label": "reasoning",
+          "source": "D falls exactly on this newly drawn horizontal line segment"
+        },
+        {
+          "claim_id": 14,
+          "claim": "A is not on the newly drawn path.",
+          "label": "reasoning",
+          "source": "A, B, C, E are not on the newly drawn path"
+        },
+        {
+          "claim_id": 15,
+          "claim": "B is not on the newly drawn path.",
+          "label": "reasoning",
+          "source": "A, B, C, E are not on the newly drawn path"
+        },
+        {
+          "claim_id": 16,
+          "claim": "C is not on the newly drawn path.",
+          "label": "reasoning",
+          "source": "A, B, C, E are not on the newly drawn path"
+        },
+        {
+          "claim_id": 17,
+          "claim": "E is not on the newly drawn path.",
+          "label": "reasoning",
+          "source": "A, B, C, E are not on the newly drawn path"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The marked point on the pattern newly drawn by Peter is D.",
+          "label": "reasoning",
+          "source": "Therefore the marked point on the pattern newly drawn by Peter is D"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题进行修复：合并原 claims 7、8、9 为一条完整的 A、D、E 同线感知 claim，并将原 claim 12 的标签由 reasoning 改为 perception；其余 claims 保持原有内容和顺序并重新编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:21Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/03275_math_mathvision_open_4fff89a64aa9ce6f2a1dda89_b3bb125885.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04516_math_mathvision_open_4fff89a64aa9ce6f2a1dda89_b3bb125885.json"
+  }
+}

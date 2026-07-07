@@ -1,0 +1,692 @@
+{
+  "pack_index": 1979,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "circuit/eee_bench:eeebench01657:eee_bench__open_21740c0fb19de96e684a7b72__df0c8b24b4d9",
+    "subject_dir": "circuit",
+    "dataset_slug": "eee_bench",
+    "problem_id": "open_21740c0fb19de96e684a7b72",
+    "source_problem_id": "open_21740c0fb19de96e684a7b72",
+    "problem_run_key": "eee_bench__open_21740c0fb19de96e684a7b72__df0c8b24b4d9",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01657.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01657.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/circuit/eee_bench/samples/eeebench01657.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench01657.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Given the system structure as shown in <image>, calculate the settling time \\( t_s \\) for the system's unit step response.",
+    "raw_answer_text": "0.8",
+    "open_variant_id": "open_21740c0fb19de96e684a7b72",
+    "variant_index": 1,
+    "title": "EEE-Bench open-ended question",
+    "split_role": "single",
+    "rewritten_question_text": "Given the system structure as shown in the image, calculate the settling time \\( t_s \\) for the system's unit step response.",
+    "expected_answer_type": "numeric",
+    "expected_answer": "0.8",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_7cdabb36baaf8d41a923d793",
+        "problem_id": "prob_c1639d673dd92e95ac40e84e",
+        "node_type": "answer_claim",
+        "canonical_value": "0.8",
+        "surface_forms": [
+          "0.8"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_ae3d757a398723487b52d404"
+        ],
+        "evidence_refs": [
+          "asset_ae3d757a398723487b52d404"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "0.8"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-05T18:49:28Z",
+        "updated_at": "2026-04-05T18:49:28Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_21740c0fb19de96e684a7b72",
+      "parent_problem_id": "prob_c1639d673dd92e95ac40e84e",
+      "variant_index": 1,
+      "title": "EEE-Bench open-ended question",
+      "rewritten_question_text": "Given the system structure as shown in the image, calculate the settling time \\( t_s \\) for the system's unit step response.",
+      "expected_answer_type": "numeric",
+      "expected_answer": "0.8",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Given the system structure as shown in the image, calculate the settling time \\( t_s \\) for the system's unit step response.",
+    "raw_answer": "0.8",
+    "raw_standard_answer": "0.8",
+    "resolved_question_text": "Given the system structure as shown in the image, calculate the settling time \\( t_s \\) for the system's unit step response.",
+    "resolved_answer": "0.8",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows a standard negative feedback control system. The input is R(s), which first enters the summing point; at the summing point, the reference input has a positive sign, and the feedback signal has a negative sign. In the forward path, there is only one transfer function block, labeled 100/[s(s+10)]. The output is C(s), and it is fed back directly from the output end to the summing point, therefore the feedback path is unity feedback. Reasoning: From the figure, the open-loop transfer function can be obtained as G(s)=100/[s(s+10)], and the unity negative feedback closed-loop transfer function is C(s)/R(s)=G(s)/(1+G(s))=100/[s(s+10)+100]=100/(s^2+10s+100). Comparing with the denominator of a standard second-order system s^2+2ζω_n s+ω_n^2, we can obtain ω_n^2=100, so ω_n=10; at the same time 2ζω_n=10, so ζω_n=5. According to the commonly used 2% settling time approximate formula t_s≈4/(ζω_n), t_s=4/5=0.8 is obtained.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_21740c0fb19de96e684a7b72",
+      "problem_run_key": "eee_bench__open_21740c0fb19de96e684a7b72__df0c8b24b4d9",
+      "question_text": "Given the system structure as shown in the image, calculate the settling time \\( t_s \\) for the system's unit step response.",
+      "standard_answer": "0.8",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench01376.png",
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/crops/eeebench01376.png"
+      ],
+      "initial_multi_solution_score": 0.3197,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "From the image, identify G(s)=100/[s(s+10)] with unity negative feedback. Form the closed-loop transfer function C(s)/R(s)=G(s)/(1+G(s))=100/(s(s+10)+100)=100/(s^2+10s+100). Compare s^2+10s+100 to s^2+2ζω_n s+ω_n^2, giving ω_n=10 and 2ζω_n=10, so ζω_n=5. For a unit step response, apply t_s≈4/(ζω_n)=4/5=0.8.",
+          "CoT_raw": "图像描述：图中是一个标准负反馈控制系统。输入为 R(s)，先进入求和点；求和点处参考输入为正号，反馈信号为负号。前向通道中只有一个传递函数方块，标为 100/[s(s+10)]。输出为 C(s)，并从输出端直接回馈到求和点，因此反馈通道为单位反馈。推理：由图可得开环传递函数 G(s)=100/[s(s+10)]，单位负反馈闭环传递函数为 C(s)/R(s)=G(s)/(1+G(s))=100/[s(s+10)+100]=100/(s^2+10s+100)。与标准二阶系统分母 s^2+2ζω_n s+ω_n^2 比较，可得 ω_n^2=100，所以 ω_n=10；同时 2ζω_n=10，所以 ζω_n=5。按常用 2% 稳定时间近似公式 t_s≈4/(ζω_n)，得到 t_s=4/5=0.8。",
+          "model_answer": "0.8 s",
+          "is_answer_match": true,
+          "answer_match_reason": "The predicted answer gives the same numerical settling time as the standard answer, with the appropriate time unit included.",
+          "answer_match_part_results": [
+            {
+              "standard_part": "0.8",
+              "predicted_part": "0.8 s",
+              "is_equivalent": true,
+              "reason": "The value is identical; adding seconds is consistent with settling time."
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个标准负反馈控制系统。输入为 R(s)，先进入求和点；求和点处参考输入为正号，反馈信号为负号。前向通道中只有一个传递函数方块，标为 100/[s(s+10)]。输出为 C(s)，并从输出端直接回馈到求和点，因此反馈通道为单位反馈。推理：由图可得开环传递函数 G(s)=100/[s(s+10)]，单位负反馈闭环传递函数为 C(s)/R(s)=G(s)/(1+G(s))=100/[s(s+10)+100]=100/(s^2+10s+100)。与标准二阶系统分母 s^2+2ζω_n s+ω_n^2 比较，可得 ω_n^2=100，所以 ω_n=10；同时 2ζω_n=10，所以 ζω_n=5。按常用 2% 稳定时间近似公式 t_s≈4/(ζω_n)，得到 t_s=4/5=0.8。",
+          "answer_answer_check_final": "0.8 s",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace is valid. It first describes the image and then reasons from the image-derived transfer function. Visual claims match the attached diagram: a unity negative feedback loop with forward transfer function 100/[s(s+10)], input R(s), output C(s), positive reference input and negative feedback at the summing junction. The closed-loop derivation and use of the 2% settling-time approximation follow the method draft and produce the standard answer 0.8.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个标准负反馈控制系统。输入为 R(s)，先进入求和点；求和点处参考输入为正号，反馈信号为负号。前向通道中只有一个传递函数方块，标为 100/[s(s+10)]。输出为 C(s)，并从输出端直接回馈到求和点，因此反馈通道为单位反馈。推理：由图可得开环传递函数 G(s)=100/[s(s+10)]，单位负反馈闭环传递函数为 C(s)/R(s)=G(s)/(1+G(s))=100/[s(s+10)+100]=100/(s^2+10s+100)。与标准二阶系统分母 s^2+2ζω_n s+ω_n^2 比较，可得 ω_n^2=100，所以 ω_n=10；同时 2ζω_n=10，所以 ζω_n=5。按常用 2% 稳定时间近似公式 t_s≈4/(ζω_n)，得到 t_s=4/5=0.8。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Direct closed-loop standard second-order-parameter route; it uses the feedback structure in the diagram to form the closed-loop transfer function, then reads damping parameters from the denominator.",
+            "image_role": "Read the block diagram as a unity negative-feedback control system: forward plant G(s)=100/[s(s+10)], output C(s) fed back directly to the summing junction with a minus sign, and input R(s) entering with a plus sign.",
+            "text_role": "Use the question text to know the requested quantity is the settling time t_s for the unit step response; no additional numerical parameters are supplied outside the image.",
+            "knowledge_role": "Use the unity negative-feedback formula T(s)=G(s)/(1+G(s)); compare the closed-loop denominator with the standard second-order form s^2+2ζω_n s+ω_n^2; use the common 2% settling-time approximation t_s≈4/(ζω_n)."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个标准负反馈控制系统。输入为 R(s)，先进入求和点；求和点处参考输入为正号，反馈信号为负号。前向通道中只有一个传递函数方块，标为 100/[s(s+10)]。输出为 C(s)，并从输出端直接回馈到求和点，因此反馈通道为单位反馈。推理：由图可得开环传递函数 G(s)=100/[s(s+10)]，单位负反馈闭环传递函数为 C(s)/R(s)=G(s)/(1+G(s))=100/[s(s+10)+100]=100/(s^2+10s+100)。与标准二阶系统分母 s^2+2ζω_n s+ω_n^2 比较，可得 ω_n^2=100，所以 ω_n=10；同时 2ζω_n=10，所以 ζω_n=5。按常用 2% 稳定时间近似公式 t_s≈4/(ζω_n)，得到 t_s=4/5=0.8。",
+            "model_answer": "0.8 s",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [
+              "settling_time_convention_implicit"
+            ],
+            "_llm_usage": {
+              "prompt_tokens": 2942,
+              "completion_tokens": 520,
+              "total_tokens": 3462,
+              "cached_tokens": 0,
+              "reasoning_tokens": 216
+            },
+            "_llm_elapsed_seconds": 10.137,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace is valid. It first describes the image and then reasons from the image-derived transfer function. Visual claims match the attached diagram: a unity negative feedback loop with forward transfer function 100/[s(s+10)], input R(s), output C(s), positive reference input and negative feedback at the summing junction. The closed-loop derivation and use of the 2% settling-time approximation follow the method draft and produce the standard answer 0.8.",
+              "major_failures": [],
+              "extractability_score": 0.98,
+              "grounding_score": 0.98,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 17.711
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 10.165,
+              "usage_delta": {
+                "request_count": 5,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 5,
+                "requests_with_usage": 5,
+                "prompt_tokens": 15106,
+                "completion_tokens": 3974,
+                "total_tokens": 19080,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1354,
+                "total_request_seconds": 75.61,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 5.209,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 3,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 3,
+                "requests_with_usage": 3,
+                "prompt_tokens": 6620,
+                "completion_tokens": 1193,
+                "total_tokens": 7813,
+                "cached_tokens": 0,
+                "reasoning_tokens": 585,
+                "total_request_seconds": 26.368,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 17.738,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 13,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 13,
+                "prompt_tokens": 40747,
+                "completion_tokens": 10868,
+                "total_tokens": 51615,
+                "cached_tokens": 0,
+                "reasoning_tokens": 6297,
+                "total_request_seconds": 253.344,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 9.843,
+          "usage_delta": {
+            "request_count": 3,
+            "successful_request_count": 1,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 3,
+            "requests_with_usage": 1,
+            "prompt_tokens": 3037,
+            "completion_tokens": 518,
+            "total_tokens": 3555,
+            "cached_tokens": 0,
+            "reasoning_tokens": 167,
+            "total_request_seconds": 9.81,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EEE-Bench",
+        "dataset_slug": "eee_bench",
+        "source_problem_id": "362",
+        "subject": "电气电子工程领域",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01657.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "calculation",
+          "parent_problem_id": "prob_c1639d673dd92e95ac40e84e",
+          "open_variant_count": 1,
+          "open_variant_id": "open_21740c0fb19de96e684a7b72",
+          "open_variant_index": 1,
+          "open_variant_title": "EEE-Bench 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "metadata.extraction_notes states the source image field had no extractable path or URL.",
+            "metadata.image_paths is empty while top-level image_paths contains an image path."
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 42.983,
+      "problem_usage": {
+        "request_count": 4,
+        "successful_request_count": 4,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 4,
+        "requests_with_usage": 4,
+        "prompt_tokens": 10177,
+        "completion_tokens": 1465,
+        "total_tokens": 11642,
+        "cached_tokens": 0,
+        "reasoning_tokens": 560,
+        "total_request_seconds": 42.84,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "Given the system structure as shown in the image, calculate the settling time \\( t_s \\) for the system's unit step response.",
+      "answer": "0.8",
+      "final_cot": "Image description: The figure shows a standard negative feedback control system. The input is R(s), which first enters the summing point; at the summing point, the reference input has a positive sign, and the feedback signal has a negative sign. In the forward path, there is only one transfer function block, labeled 100/[s(s+10)]. The output is C(s), and it is fed back directly from the output end to the summing point, therefore the feedback path is unity feedback. Reasoning: From the figure, the open-loop transfer function can be obtained as G(s)=100/[s(s+10)], and the unity negative feedback closed-loop transfer function is C(s)/R(s)=G(s)/(1+G(s))=100/[s(s+10)+100]=100/(s^2+10s+100). Comparing with the denominator of a standard second-order system s^2+2ζω_n s+ω_n^2, we can obtain ω_n^2=100, so ω_n=10; at the same time 2ζω_n=10, so ζω_n=5. According to the commonly used 2% settling time approximate formula t_s≈4/(ζω_n), t_s=4/5=0.8 is obtained.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace is valid. It first describes the image and then reasons from the image-derived transfer function. Visual claims match the attached diagram: a unity negative feedback loop with forward transfer function 100/[s(s+10)], input R(s), output C(s), positive reference input and negative feedback at the summing junction. The closed-loop derivation and use of the 2% settling-time approximation follow the method draft and produce the standard answer 0.8.",
+          "major_failures": [],
+          "extractability_score": 0.98,
+          "grounding_score": 0.98,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 17.711
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_resume_openvariants_20260506T003434CST",
+        "processed_index": 1773,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "circuit",
+        "dataset": "eee_bench",
+        "relative_dataset": "circuit/eee_bench",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01657.json",
+        "source_sample_filename": "eeebench01657.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01657.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.events.jsonl",
+        "written_at": "2026-05-06T00:47:36Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:17Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_21740c0fb19de96e684a7b72",
+          "new_problem_id": "open_21740c0fb19de96e684a7b72",
+          "old_problem_run_key": "eee_bench__open_21740c0fb19de96e684a7b72__86a739b52f31",
+          "new_problem_run_key": "eee_bench__open_21740c0fb19de96e684a7b72__df0c8b24b4d9",
+          "target_relpath": "circuit/eee_bench/samples/eeebench01657.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_21740c0fb19de96e684a7b72",
+    "problem_run_key": "eee_bench__open_21740c0fb19de96e684a7b72__df0c8b24b4d9",
+    "raw_question_text": "Given the system structure as shown in the image, calculate the settling time \\( t_s \\) for the system's unit step response.",
+    "raw_answer": "0.8",
+    "raw_standard_answer": "0.8",
+    "resolved_question_text": "Given the system structure as shown in the image, calculate the settling time \\( t_s \\) for the system's unit step response.",
+    "resolved_answer": "0.8",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The figure shows a standard negative feedback control system. The input is R(s), which first enters the summing point; at the summing point, the reference input has a positive sign, and the feedback signal has a negative sign. In the forward path, there is only one transfer function block, labeled 100/[s(s+10)]. The output is C(s), and it is fed back directly from the output end to the summing point, therefore the feedback path is unity feedback. Reasoning: From the figure, the open-loop transfer function can be obtained as G(s)=100/[s(s+10)], and the unity negative feedback closed-loop transfer function is C(s)/R(s)=G(s)/(1+G(s))=100/[s(s+10)+100]=100/(s^2+10s+100). Comparing with the denominator of a standard second-order system s^2+2ζω_n s+ω_n^2, we can obtain ω_n^2=100, so ω_n=10; at the same time 2ζω_n=10, so ζω_n=5. According to the commonly used 2% settling time approximate formula t_s≈4/(ζω_n), t_s=4/5=0.8 is obtained.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure shows a standard negative feedback control system.",
+        "label": "perception",
+        "source": "The figure shows a standard negative feedback control system."
+      },
+      {
+        "claim_id": 2,
+        "claim": "The input is R(s).",
+        "label": "perception",
+        "source": "The input is R(s), and first enters the summing point"
+      },
+      {
+        "claim_id": 3,
+        "claim": "R(s) first enters the summing point.",
+        "label": "perception",
+        "source": "The input is R(s), and first enters the summing point"
+      },
+      {
+        "claim_id": 4,
+        "claim": "At the summing point, the reference input is a positive sign.",
+        "label": "perception",
+        "source": "At the summing point, the reference input is a positive sign"
+      },
+      {
+        "claim_id": 5,
+        "claim": "At the summing point, the feedback signal is a negative sign.",
+        "label": "perception",
+        "source": "The feedback signal is a negative sign"
+      },
+      {
+        "claim_id": 6,
+        "claim": "There is only one transfer function block in the forward path.",
+        "label": "perception",
+        "source": "There is only one transfer function block in the forward path"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The transfer function block in the forward path is labeled 100/[s(s+10)].",
+        "label": "perception",
+        "source": "Labeled 100/[s(s+10)]"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The output is C(s).",
+        "label": "perception",
+        "source": "the output is C(s)"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The output end is directly fed back to the summing point.",
+        "label": "perception",
+        "source": "And directly fed back from the output end to the summing point"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The feedback path is unit feedback.",
+        "label": "reasoning",
+        "source": "Therefore the feedback path is unit feedback."
+      },
+      {
+        "claim_id": 11,
+        "claim": "From the figure, the open-loop transfer function can be obtained as G(s)=100/[s(s+10)].",
+        "label": "reasoning",
+        "source": "From the figure, the open-loop transfer function can be obtained as G(s)=100/[s(s+10)]"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The closed-loop transfer function with unit negative feedback is C(s)/R(s)=G(s)/(1+G(s)).",
+        "label": "knowledge",
+        "source": "The closed-loop transfer function with unit negative feedback is C(s)/R(s)=G(s)/(1+G(s))"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Substituting G(s)=100/[s(s+10)] into the unity negative feedback closed-loop transfer function gives C(s)/R(s)=100/[s(s+10)+100].",
+        "label": "reasoning",
+        "source": "C(s)/R(s)=G(s)/(1+G(s))=100/[s(s+10)+100]"
+      },
+      {
+        "claim_id": 14,
+        "claim": "100/[s(s+10)+100] simplifies to 100/(s^2+10s+100).",
+        "label": "reasoning",
+        "source": "100/[s(s+10)+100]=100/(s^2+10s+100)"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The denominator of the standard second-order system is s^2+2ζω_n s+ω_n^2.",
+        "label": "knowledge",
+        "source": "Standard second-order system denominator s^2+2ζω_n s+ω_n^2"
+      },
+      {
+        "claim_id": 16,
+        "claim": "Comparing s^2+10s+100 with the denominator of the standard second-order system, we can obtain ω_n^2=100.",
+        "label": "reasoning",
+        "source": "Comparing with the standard second-order system denominator s^2+2ζω_n s+ω_n^2, we can obtain ω_n^2=100"
+      },
+      {
+        "claim_id": 17,
+        "claim": "From ω_n^2=100, we can obtain ω_n=10.",
+        "label": "reasoning",
+        "source": "Therefore ω_n=10"
+      },
+      {
+        "claim_id": 18,
+        "claim": "Comparing s^2+10s+100 with the denominator of the standard second-order system, we can obtain 2ζω_n=10.",
+        "label": "reasoning",
+        "source": "At the same time 2ζω_n=10"
+      },
+      {
+        "claim_id": 19,
+        "claim": "From 2ζω_n=10, we can obtain ζω_n=5.",
+        "label": "reasoning",
+        "source": "So ζω_n=5"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The commonly used 2% settling time approximate formula is t_s≈4/(ζω_n).",
+        "label": "knowledge",
+        "source": "According to the commonly used 2% settling time approximate formula t_s≈4/(ζω_n)"
+      },
+      {
+        "claim_id": 21,
+        "claim": "Substituting ζω_n=5 into t_s≈4/(ζω_n) gives t_s=4/5.",
+        "label": "reasoning",
+        "source": "Obtain t_s=4/5=0.8"
+      },
+      {
+        "claim_id": 22,
+        "claim": "t_s=0.8。",
+        "label": "reasoning",
+        "source": "t_s=4/5=0.8"
+      }
+    ],
+    "claim_count": 22,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure shows a standard negative feedback control system.",
+          "label": "perception",
+          "source": "The figure shows a standard negative feedback control system."
+        },
+        {
+          "claim_id": 2,
+          "claim": "The input is R(s).",
+          "label": "perception",
+          "source": "The input is R(s), and first enters the summing point"
+        },
+        {
+          "claim_id": 3,
+          "claim": "R(s) first enters the summing point.",
+          "label": "perception",
+          "source": "The input is R(s), and first enters the summing point"
+        },
+        {
+          "claim_id": 4,
+          "claim": "At the summing point, the reference input is a positive sign.",
+          "label": "perception",
+          "source": "At the summing point, the reference input is a positive sign"
+        },
+        {
+          "claim_id": 5,
+          "claim": "At the summing point, the feedback signal is a negative sign.",
+          "label": "perception",
+          "source": "The feedback signal is a negative sign"
+        },
+        {
+          "claim_id": 6,
+          "claim": "There is only one transfer function block in the forward path.",
+          "label": "perception",
+          "source": "There is only one transfer function block in the forward path"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The transfer function block in the forward path is labeled 100/[s(s+10)].",
+          "label": "perception",
+          "source": "Labeled 100/[s(s+10)]"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The output is C(s).",
+          "label": "perception",
+          "source": "the output is C(s)"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The output end is directly fed back to the summing point.",
+          "label": "perception",
+          "source": "And directly fed back from the output end to the summing point"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The feedback path is unit feedback.",
+          "label": "reasoning",
+          "source": "Therefore the feedback path is unit feedback."
+        },
+        {
+          "claim_id": 11,
+          "claim": "From the figure, the open-loop transfer function can be obtained as G(s)=100/[s(s+10)].",
+          "label": "reasoning",
+          "source": "From the figure, the open-loop transfer function can be obtained as G(s)=100/[s(s+10)]"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The closed-loop transfer function with unit negative feedback is C(s)/R(s)=G(s)/(1+G(s)).",
+          "label": "knowledge",
+          "source": "The closed-loop transfer function with unit negative feedback is C(s)/R(s)=G(s)/(1+G(s))"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Substituting G(s)=100/[s(s+10)] into the unity negative feedback closed-loop transfer function gives C(s)/R(s)=100/[s(s+10)+100].",
+          "label": "reasoning",
+          "source": "C(s)/R(s)=G(s)/(1+G(s))=100/[s(s+10)+100]"
+        },
+        {
+          "claim_id": 14,
+          "claim": "100/[s(s+10)+100] simplifies to 100/(s^2+10s+100).",
+          "label": "reasoning",
+          "source": "100/[s(s+10)+100]=100/(s^2+10s+100)"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The denominator of the standard second-order system is s^2+2ζω_n s+ω_n^2.",
+          "label": "knowledge",
+          "source": "Standard second-order system denominator s^2+2ζω_n s+ω_n^2"
+        },
+        {
+          "claim_id": 16,
+          "claim": "Comparing s^2+10s+100 with the denominator of the standard second-order system, we can obtain ω_n^2=100.",
+          "label": "reasoning",
+          "source": "Comparing with the standard second-order system denominator s^2+2ζω_n s+ω_n^2, we can obtain ω_n^2=100"
+        },
+        {
+          "claim_id": 17,
+          "claim": "From ω_n^2=100, we can obtain ω_n=10.",
+          "label": "reasoning",
+          "source": "Therefore ω_n=10"
+        },
+        {
+          "claim_id": 18,
+          "claim": "Comparing s^2+10s+100 with the denominator of the standard second-order system, we can obtain 2ζω_n=10.",
+          "label": "reasoning",
+          "source": "At the same time 2ζω_n=10"
+        },
+        {
+          "claim_id": 19,
+          "claim": "From 2ζω_n=10, we can obtain ζω_n=5.",
+          "label": "reasoning",
+          "source": "So ζω_n=5"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The commonly used 2% settling time approximate formula is t_s≈4/(ζω_n).",
+          "label": "knowledge",
+          "source": "According to the commonly used 2% settling time approximate formula t_s≈4/(ζω_n)"
+        },
+        {
+          "claim_id": 21,
+          "claim": "Substituting ζω_n=5 into t_s≈4/(ζω_n) gives t_s=4/5.",
+          "label": "reasoning",
+          "source": "Obtain t_s=4/5=0.8"
+        },
+        {
+          "claim_id": 22,
+          "claim": "t_s=0.8。",
+          "label": "reasoning",
+          "source": "t_s=4/5=0.8"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题将 claim 10 的标签由 perception 修改为 reasoning；其余 claims 保持不变。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T07:49:23Z",
+    "changed_target_fields": 85,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

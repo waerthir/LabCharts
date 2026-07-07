@@ -1,0 +1,472 @@
+{
+  "pack_index": 8986,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "physics/physreason:physreason00615:open_bb3643cdb3a601e9742584ef",
+    "subject_dir": "physics",
+    "dataset_slug": "physreason",
+    "problem_id": "open_bb3643cdb3a601e9742584ef",
+    "source_problem_id": "open_bb3643cdb3a601e9742584ef",
+    "problem_run_key": null,
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [],
+    "pending_reasons": [],
+    "pending_judge_count": 0,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/physics/physreason/samples/physreason00615.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/physics/physreason/samples/physreason00615.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/physics/physreason/samples/physreason00615.json",
+    "image_paths": []
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "A proton with mass $m_p$ and energy $E_p$ collides head-on with a photon of energy $E_b$. The collision results in the formation of a new particle with mass $m_\\Delta$. This is a one-dimensional collision that conserves both relativistic energy and relativistic momentum. You may use the following constants where needed:\n$g=9.8 \\mathrm{~N} / \\mathrm{kg}$\n$k=1 / 4 \\pi \\epsilon_{0}=8.99 \\times 10^{9} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{C}^{2}$\n$c=3.00 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}$\n$N_{\\mathrm{A}}=6.02 \\times 10^{23}(\\mathrm{~mol})^{-1}$\n$\\sigma=5.67 \\times 10^{-8} \\mathrm{~J} /\\left(\\mathrm{s} \\cdot \\mathrm{m}^{2} \\cdot \\mathrm{K}^{4}\\right)$\n$1 \\mathrm{eV}=1.602 \\times 10^{-19} \\mathrm{~J}$\n$m_{e}=9.109 \\times 10^{-31} \\mathrm{~kg}=0.511 \\mathrm{MeV} / \\mathrm{c}^{2}$\n$m_{p}=1.673 \\times 10^{-27} \\mathrm{~kg}=938 \\mathrm{MeV} / \\mathrm{c}^{2}$\n$\\sin \\theta \\approx \\theta-\\frac{1}{6} \\theta^{3}$ for $|\\theta| \\ll 1$\n$G=6.67 \\times 10^{-11} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{kg}^{2}$\n$k_{\\mathrm{m}}=\\mu_{0} / 4 \\pi=10^{-7} \\mathrm{~T} \\cdot \\mathrm{m} / \\mathrm{A}$\n$k_{\\mathrm{B}}=1.38 \\times 10^{-23} \\mathrm{~J} / \\mathrm{K}$\n$R=N_{\\mathrm{A}} k_{\\mathrm{B}}=8.31 \\mathrm{~J} /(\\mathrm{mol} \\cdot \\mathrm{K})$\n$e=1.602 \\times 10^{-19} \\mathrm{C}$\n$h=6.63 \\times 10^{-34} \\mathrm{~J} \\cdot \\mathrm{s}=4.14 \\times 10^{-15} \\mathrm{eV} \\cdot \\mathrm{s}$\n$(1+x)^{n} \\approx 1+n x$ for $|x| \\ll 1$\n$\\ln (1+x) \\approx x$ for $|x| \\ll 1$\n$\\cos \\theta \\approx 1-\\frac{1}{2} \\theta^{2}$ for $|\\theta| \\ll 1$\nvelocity parameter $\\beta = \\frac{v}{c}$\nLorentz factor $\\gamma = \\frac{1}{\\sqrt{1-\\beta^{2}}}$\nrelativistic momentum $p = \\gamma \\beta m c$\nrelativistic energy $E = \\gamma m c^{2}$\nrelativistic doppler shift $\\frac{f}{f_{0}} = \\sqrt{\\frac{1-\\beta}{1+\\beta}}$\nRelativistic particles obey the mass-energy relation: $E^{2}=(p c)^{2}+\\left(m c^{2}\\right)^{2}$\n\n1. Determine $E_p$ in terms of $m_p$, $m_{\\Delta}$, and $E_b$. You may assume that $E_b$ is small.\n2. In this case, the photon energy $E_b$ is that of the cosmic background radiation, which is an EM wave with wavelength $1.06 \\mathrm{~mm}$. Determine the energy of the photons, writing your answer in electron volts.\n3. Assuming this value for $E_b$, what is the energy of the proton, in electron volts, that will allow the above reaction? This sets an upper limit on the energy of cosmic rays. The mass of the proton is given by $m_p c^{2}=938 \\mathrm{MeV}$ and the mass of the $\\Delta$ is given by $m_{\\Delta} c^{2}=1232 \\mathrm{MeV}$.",
+    "raw_answer_text": "$\\frac{m_{\\Delta}^{2}-m_{p}^{2}}{4 E_{b}}$\n$\\approx 1.17 \\times 10^{-3} \\mathrm{eV}$\n$E_{p} \\approx 1.4 \\times 10^{20} \\mathrm{eV}$",
+    "open_variant_id": "open_bb3643cdb3a601e9742584ef",
+    "variant_index": 1,
+    "title": "PhysReason open-ended question",
+    "split_role": "single",
+    "rewritten_question_text": "A proton with mass $m_p$ and energy $E_p$ collides head-on with a photon of energy $E_b$. The collision results in the formation of a new particle with mass $m_\\Delta$. This is a one-dimensional collision that conserves both relativistic energy and relativistic momentum. You may use the following constants where needed: $g=9.8 \\mathrm{~N} / \\mathrm{kg}$ $k=1 / 4 \\pi \\epsilon_{0}=8.99 \\times 10^{9} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{C}^{2}$ $c=3.00 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}$ $N_{\\mathrm{A}}=6.02 \\times 10^{23}(\\mathrm{~mol})^{-1}$ $\\sigma=5.67 \\times 10^{-8} \\mathrm{~J} /\\left(\\mathrm{s} \\cdot \\mathrm{m}^{2} \\cdot \\mathrm{K}^{4}\\right)$ $1 \\mathrm{eV}=1.602 \\times 10^{-19} \\mathrm{~J}$ $m_{e}=9.109 \\times 10^{-31} \\mathrm{~kg}=0.511 \\mathrm{MeV} / \\mathrm{c}^{2}$ $m_{p}=1.673 \\times 10^{-27} \\mathrm{~kg}=938 \\mathrm{MeV} / \\mathrm{c}^{2}$ $\\sin \\theta \\approx \\theta-\\frac{1}{6} \\theta^{3}$ for $|\\theta| \\ll 1$ $G=6.67 \\times 10^{-11} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{kg}^{2}$ $k_{\\mathrm{m}}=\\mu_{0} / 4 \\pi=10^{-7} \\mathrm{~T} \\cdot \\mathrm{m} / \\mathrm{A}$ $k_{\\mathrm{B}}=1.38 \\times 10^{-23} \\mathrm{~J} / \\mathrm{K}$ $R=N_{\\mathrm{A}} k_{\\mathrm{B}}=8.31 \\mathrm{~J} /(\\mathrm{mol} \\cdot \\mathrm{K})$ $e=1.602 \\times 10^{-19} \\mathrm{C}$ $h=6.63 \\times 10^{-34} \\mathrm{~J} \\cdot \\mathrm{s}=4.14 \\times 10^{-15} \\mathrm{eV} \\cdot \\mathrm{s}$ $(1+x)^{n} \\approx 1+n x$ for $|x| \\ll 1$ $\\ln (1+x) \\approx x$ for $|x| \\ll 1$ $\\cos \\theta \\approx 1-\\frac{1}{2} \\theta^{2}$ for $|\\theta| \\ll 1$ velocity parameter $\\beta = \\frac{v}{c}$ Lorentz factor $\\gamma = \\frac{1}{\\sqrt{1-\\beta^{2}}}$ relativistic momentum $p = \\gamma \\beta m c$ relativistic energy $E = \\gamma m c^{2}$ relativistic doppler shift $\\frac{f}{f_{0}} = \\sqrt{\\frac{1-\\beta}{1+\\beta}}$ Relativistic particles obey the mass-energy relation: $E^{2}=(p c)^{2}+\\left(m c^{2}\\right)^{2}$ 1. Determine $E_p$ in terms of $m_p$, $m_{\\Delta}$, and $E_b$. You may assume that $E_b$ is small. 2. In this case, the photon energy $E_b$ is that of the cosmic background radiation, which is an EM wave with wavelength $1.06 \\mathrm{~mm}$. Determine the energy of the photons, writing your answer in electron volts. 3. Assuming this value for $E_b$, what is the energy of the proton, in electron volts, that will allow the above reaction? This sets an upper limit on the energy of cosmic rays. The mass of the proton is given by $m_p c^{2}=938 \\mathrm{MeV}$ and the mass of the $\\Delta$ is given by $m_{\\Delta} c^{2}=1232 \\mathrm{MeV}$.",
+    "expected_answer_type": "text",
+    "expected_answer": "$\\frac{m_{\\Delta}^{2}-m_{p}^{2}}{4 E_{b}}$ $\\approx 1.17 \\times 10^{-3} \\mathrm{eV}$ $E_{p} \\approx 1.4 \\times 10^{20} \\mathrm{eV}$",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_cdb9a7a480fe4c77234a8f4a",
+        "problem_id": "prob_1b0ad5db472b8ca70a124463",
+        "node_type": "answer_claim",
+        "canonical_value": "$\\frac{m_{\\Delta}^{2}-m_{p}^{2}}{4 E_{b}}$\n$\\approx 1.17 \\times 10^{-3} \\mathrm{eV}$\n$E_{p} \\approx 1.4 \\times 10^{20} \\mathrm{eV}$",
+        "surface_forms": [
+          "$\\frac{m_{\\Delta}^{2}-m_{p}^{2}}{4 E_{b}}$\n$\\approx 1.17 \\times 10^{-3} \\mathrm{eV}$\n$E_{p} \\approx 1.4 \\times 10^{20} \\mathrm{eV}$"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_b459ec645b523c66f53b1a20"
+        ],
+        "evidence_refs": [
+          "asset_b459ec645b523c66f53b1a20"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "text",
+        "normalized_value": {
+          "answer": "$\\frac{m_{\\Delta}^{2}-m_{p}^{2}}{4 E_{b}}$\n$\\approx 1.17 \\times 10^{-3} \\mathrm{eV}$\n$E_{p} \\approx 1.4 \\times 10^{20} \\mathrm{eV}$"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T19:37:45Z",
+        "updated_at": "2026-04-08T19:37:45Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_bb3643cdb3a601e9742584ef",
+      "parent_problem_id": "prob_1b0ad5db472b8ca70a124463",
+      "variant_index": 1,
+      "title": "PhysReason open-ended question",
+      "rewritten_question_text": "A proton with mass $m_p$ and energy $E_p$ collides head-on with a photon of energy $E_b$. The collision results in the formation of a new particle with mass $m_\\Delta$. This is a one-dimensional collision that conserves both relativistic energy and relativistic momentum. You may use the following constants where needed:\n$g=9.8 \\mathrm{~N} / \\mathrm{kg}$\n$k=1 / 4 \\pi \\epsilon_{0}=8.99 \\times 10^{9} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{C}^{2}$\n$c=3.00 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}$\n$N_{\\mathrm{A}}=6.02 \\times 10^{23}(\\mathrm{~mol})^{-1}$\n$\\sigma=5.67 \\times 10^{-8} \\mathrm{~J} /\\left(\\mathrm{s} \\cdot \\mathrm{m}^{2} \\cdot \\mathrm{K}^{4}\\right)$\n$1 \\mathrm{eV}=1.602 \\times 10^{-19} \\mathrm{~J}$\n$m_{e}=9.109 \\times 10^{-31} \\mathrm{~kg}=0.511 \\mathrm{MeV} / \\mathrm{c}^{2}$\n$m_{p}=1.673 \\times 10^{-27} \\mathrm{~kg}=938 \\mathrm{MeV} / \\mathrm{c}^{2}$\n$\\sin \\theta \\approx \\theta-\\frac{1}{6} \\theta^{3}$ for $|\\theta| \\ll 1$\n$G=6.67 \\times 10^{-11} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{kg}^{2}$\n$k_{\\mathrm{m}}=\\mu_{0} / 4 \\pi=10^{-7} \\mathrm{~T} \\cdot \\mathrm{m} / \\mathrm{A}$\n$k_{\\mathrm{B}}=1.38 \\times 10^{-23} \\mathrm{~J} / \\mathrm{K}$\n$R=N_{\\mathrm{A}} k_{\\mathrm{B}}=8.31 \\mathrm{~J} /(\\mathrm{mol} \\cdot \\mathrm{K})$\n$e=1.602 \\times 10^{-19} \\mathrm{C}$\n$h=6.63 \\times 10^{-34} \\mathrm{~J} \\cdot \\mathrm{s}=4.14 \\times 10^{-15} \\mathrm{eV} \\cdot \\mathrm{s}$\n$(1+x)^{n} \\approx 1+n x$ for $|x| \\ll 1$\n$\\ln (1+x) \\approx x$ for $|x| \\ll 1$\n$\\cos \\theta \\approx 1-\\frac{1}{2} \\theta^{2}$ for $|\\theta| \\ll 1$\nvelocity parameter $\\beta = \\frac{v}{c}$\nLorentz factor $\\gamma = \\frac{1}{\\sqrt{1-\\beta^{2}}}$\nrelativistic momentum $p = \\gamma \\beta m c$\nrelativistic energy $E = \\gamma m c^{2}$\nrelativistic doppler shift $\\frac{f}{f_{0}} = \\sqrt{\\frac{1-\\beta}{1+\\beta}}$\nRelativistic particles obey the mass-energy relation: $E^{2}=(p c)^{2}+\\left(m c^{2}\\right)^{2}$\n\n1. Determine $E_p$ in terms of $m_p$, $m_{\\Delta}$, and $E_b$. You may assume that $E_b$ is small.\n2. In this case, the photon energy $E_b$ is that of the cosmic background radiation, which is an EM wave with wavelength $1.06 \\mathrm{~mm}$. Determine the energy of the photons, writing your answer in electron volts.\n3. Assuming this value for $E_b$, what is the energy of the proton, in electron volts, that will allow the above reaction? This sets an upper limit on the energy of cosmic rays. The mass of the proton is given by $m_p c^{2}=938 \\mathrm{MeV}$ and the mass of the $\\Delta$ is given by $m_{\\Delta} c^{2}=1232 \\mathrm{MeV}$.",
+      "expected_answer_type": "text",
+      "expected_answer": "$\\frac{m_{\\Delta}^{2}-m_{p}^{2}}{4 E_{b}}$\n$\\approx 1.17 \\times 10^{-3} \\mathrm{eV}$\n$E_{p} \\approx 1.4 \\times 10^{20} \\mathrm{eV}$",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "A proton with mass $m_p$ and energy $E_p$ collides head-on with a photon of energy $E_b$. The collision results in the formation of a new particle with mass $m_\\Delta$. This is a one-dimensional collision that conserves both relativistic energy and relativistic momentum. You may use the following constants where needed: $g=9.8 \\mathrm{~N} / \\mathrm{kg}$ $k=1 / 4 \\pi \\epsilon_{0}=8.99 \\times 10^{9} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{C}^{2}$ $c=3.00 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}$ $N_{\\mathrm{A}}=6.02 \\times 10^{23}(\\mathrm{~mol})^{-1}$ $\\sigma=5.67 \\times 10^{-8} \\mathrm{~J} /\\left(\\mathrm{s} \\cdot \\mathrm{m}^{2} \\cdot \\mathrm{K}^{4}\\right)$ $1 \\mathrm{eV}=1.602 \\times 10^{-19} \\mathrm{~J}$ $m_{e}=9.109 \\times 10^{-31} \\mathrm{~kg}=0.511 \\mathrm{MeV} / \\mathrm{c}^{2}$ $m_{p}=1.673 \\times 10^{-27} \\mathrm{~kg}=938 \\mathrm{MeV} / \\mathrm{c}^{2}$ $\\sin \\theta \\approx \\theta-\\frac{1}{6} \\theta^{3}$ for $|\\theta| \\ll 1$ $G=6.67 \\times 10^{-11} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{kg}^{2}$ $k_{\\mathrm{m}}=\\mu_{0} / 4 \\pi=10^{-7} \\mathrm{~T} \\cdot \\mathrm{m} / \\mathrm{A}$ $k_{\\mathrm{B}}=1.38 \\times 10^{-23} \\mathrm{~J} / \\mathrm{K}$ $R=N_{\\mathrm{A}} k_{\\mathrm{B}}=8.31 \\mathrm{~J} /(\\mathrm{mol} \\cdot \\mathrm{K})$ $e=1.602 \\times 10^{-19} \\mathrm{C}$ $h=6.63 \\times 10^{-34} \\mathrm{~J} \\cdot \\mathrm{s}=4.14 \\times 10^{-15} \\mathrm{eV} \\cdot \\mathrm{s}$ $(1+x)^{n} \\approx 1+n x$ for $|x| \\ll 1$ $\\ln (1+x) \\approx x$ for $|x| \\ll 1$ $\\cos \\theta \\approx 1-\\frac{1}{2} \\theta^{2}$ for $|\\theta| \\ll 1$ velocity parameter $\\beta = \\frac{v}{c}$ Lorentz factor $\\gamma = \\frac{1}{\\sqrt{1-\\beta^{2}}}$ relativistic momentum $p = \\gamma \\beta m c$ relativistic energy $E = \\gamma m c^{2}$ relativistic doppler shift $\\frac{f}{f_{0}} = \\sqrt{\\frac{1-\\beta}{1+\\beta}}$ Relativistic particles obey the mass-energy relation: $E^{2}=(p c)^{2}+\\left(m c^{2}\\right)^{2}$ 1. Determine $E_p$ in terms of $m_p$, $m_{\\Delta}$, and $E_b$. You may assume that $E_b$ is small. 2. In this case, the photon energy $E_b$ is that of the cosmic background radiation, which is an EM wave with wavelength $1.06 \\mathrm{~mm}$. Determine the energy of the photons, writing your answer in electron volts. 3. Assuming this value for $E_b$, what is the energy of the proton, in electron volts, that will allow the above reaction? This sets an upper limit on the energy of cosmic rays. The mass of the proton is given by $m_p c^{2}=938 \\mathrm{MeV}$ and the mass of the $\\Delta$ is given by $m_{\\Delta} c^{2}=1232 \\mathrm{MeV}$.",
+    "resolved_answer": "$\\frac{m_{\\Delta}^{2}-m_{p}^{2}}{4 E_{b}}$ $\\approx 1.17 \\times 10^{-3} \\mathrm{eV}$ $E_{p} \\approx 1.4 \\times 10^{20} \\mathrm{eV}$",
+    "resolved_from_fallback": true,
+    "final_cot": "Use the invariant squared center-of-mass energy for the initial proton plus photon. In the lab/CMB frame the proton has energy E_p and momentum p_p, while the photon has energy E_b and momentum magnitude E_b/c. Since the collision is head-on, the photon momentum is opposite the proton momentum, so the invariant is s=(p_p+p_\\gamma)^2=m_p^2c^4+2E_b(E_p+p_pc). At the threshold for producing one particle of mass m_\\Delta, set s=m_\\Delta^2c^4. Therefore m_\\Delta^2c^4=m_p^2c^4+2E_b(E_p+p_pc). Because E_b is small, the required proton energy is ultra-relativistic, so p_pc\\approx E_p. Then m_\\Delta^2c^4-m_p^2c^4\\approx 4E_bE_p, so E_p\\approx \\frac{(m_\\Delta^2-m_p^2)c^4}{4E_b}. Equivalently, if masses are quoted as rest energies, E_p\\approx \\frac{(m_\\Delta c^2)^2-(m_pc^2)^2}{4E_b}. For the background photon with wavelength \\lambda=1.06 mm=1.06\\times10^{-3} m, E_b=\\frac{hc}{\\lambda}=\\frac{(4.14\\times10^{-15}\\,\\mathrm{eV\\cdot s})(3.00\\times10^8\\,\\mathrm{m/s})}{1.06\\times10^{-3}\\,\\mathrm{m}} \\approx 1.17\\times10^{-3}\\,\\mathrm{eV}. Now use m_pc^2=938 MeV and m_\\Delta c^2=1232 MeV: (1232)^2-(938)^2=637980\\ \\mathrm{MeV^2}. Thus E_p\\approx \\frac{637980\\times(10^6\\,\\mathrm{eV})^2}{4(1.17\\times10^{-3}\\,\\mathrm{eV})} \\approx 1.36\\times10^{20}\\,\\mathrm{eV}, which rounds to about 1.4\\times10^{20} eV.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "id": "open_bb3643cdb3a601e9742584ef",
+      "final_cot": "Use the invariant squared center-of-mass energy for the initial proton plus photon. In the lab/CMB frame the proton has energy E_p and momentum p_p, while the photon has energy E_b and momentum magnitude E_b/c. Since the collision is head-on, the photon momentum is opposite the proton momentum, so the invariant is\ns=(p_p+p_\\gamma)^2=m_p^2c^4+2E_b(E_p+p_pc).\nAt the threshold for producing one particle of mass m_\\Delta, set s=m_\\Delta^2c^4. Therefore\nm_\\Delta^2c^4=m_p^2c^4+2E_b(E_p+p_pc).\nBecause E_b is small, the required proton energy is ultra-relativistic, so p_pc\\approx E_p. Then\nm_\\Delta^2c^4-m_p^2c^4\\approx 4E_bE_p,\nso\nE_p\\approx \\frac{(m_\\Delta^2-m_p^2)c^4}{4E_b}.\nEquivalently, if masses are quoted as rest energies, E_p\\approx \\frac{(m_\\Delta c^2)^2-(m_pc^2)^2}{4E_b}.\n\nFor the background photon with wavelength \\lambda=1.06 mm=1.06\\times10^{-3} m,\nE_b=\\frac{hc}{\\lambda}=\\frac{(4.14\\times10^{-15}\\,\\mathrm{eV\\cdot s})(3.00\\times10^8\\,\\mathrm{m/s})}{1.06\\times10^{-3}\\,\\mathrm{m}}\n\\approx 1.17\\times10^{-3}\\,\\mathrm{eV}.\n\nNow use m_pc^2=938 MeV and m_\\Delta c^2=1232 MeV:\n(1232)^2-(938)^2=637980\\ \\mathrm{MeV^2}.\nThus\nE_p\\approx \\frac{637980\\times(10^6\\,\\mathrm{eV})^2}{4(1.17\\times10^{-3}\\,\\mathrm{eV})}\n\\approx 1.36\\times10^{20}\\,\\mathrm{eV},\nwhich rounds to about 1.4\\times10^{20} eV.",
+      "difficulty_score": 65.0
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_bb3643cdb3a601e9742584ef",
+    "problem_run_key": null,
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "A proton with mass $m_p$ and energy $E_p$ collides head-on with a photon of energy $E_b$. The collision results in the formation of a new particle with mass $m_\\Delta$. This is a one-dimensional collision that conserves both relativistic energy and relativistic momentum. You may use the following constants where needed: $g=9.8 \\mathrm{~N} / \\mathrm{kg}$ $k=1 / 4 \\pi \\epsilon_{0}=8.99 \\times 10^{9} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{C}^{2}$ $c=3.00 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}$ $N_{\\mathrm{A}}=6.02 \\times 10^{23}(\\mathrm{~mol})^{-1}$ $\\sigma=5.67 \\times 10^{-8} \\mathrm{~J} /\\left(\\mathrm{s} \\cdot \\mathrm{m}^{2} \\cdot \\mathrm{K}^{4}\\right)$ $1 \\mathrm{eV}=1.602 \\times 10^{-19} \\mathrm{~J}$ $m_{e}=9.109 \\times 10^{-31} \\mathrm{~kg}=0.511 \\mathrm{MeV} / \\mathrm{c}^{2}$ $m_{p}=1.673 \\times 10^{-27} \\mathrm{~kg}=938 \\mathrm{MeV} / \\mathrm{c}^{2}$ $\\sin \\theta \\approx \\theta-\\frac{1}{6} \\theta^{3}$ for $|\\theta| \\ll 1$ $G=6.67 \\times 10^{-11} \\mathrm{~N} \\cdot \\mathrm{m}^{2} / \\mathrm{kg}^{2}$ $k_{\\mathrm{m}}=\\mu_{0} / 4 \\pi=10^{-7} \\mathrm{~T} \\cdot \\mathrm{m} / \\mathrm{A}$ $k_{\\mathrm{B}}=1.38 \\times 10^{-23} \\mathrm{~J} / \\mathrm{K}$ $R=N_{\\mathrm{A}} k_{\\mathrm{B}}=8.31 \\mathrm{~J} /(\\mathrm{mol} \\cdot \\mathrm{K})$ $e=1.602 \\times 10^{-19} \\mathrm{C}$ $h=6.63 \\times 10^{-34} \\mathrm{~J} \\cdot \\mathrm{s}=4.14 \\times 10^{-15} \\mathrm{eV} \\cdot \\mathrm{s}$ $(1+x)^{n} \\approx 1+n x$ for $|x| \\ll 1$ $\\ln (1+x) \\approx x$ for $|x| \\ll 1$ $\\cos \\theta \\approx 1-\\frac{1}{2} \\theta^{2}$ for $|\\theta| \\ll 1$ velocity parameter $\\beta = \\frac{v}{c}$ Lorentz factor $\\gamma = \\frac{1}{\\sqrt{1-\\beta^{2}}}$ relativistic momentum $p = \\gamma \\beta m c$ relativistic energy $E = \\gamma m c^{2}$ relativistic doppler shift $\\frac{f}{f_{0}} = \\sqrt{\\frac{1-\\beta}{1+\\beta}}$ Relativistic particles obey the mass-energy relation: $E^{2}=(p c)^{2}+\\left(m c^{2}\\right)^{2}$ 1. Determine $E_p$ in terms of $m_p$, $m_{\\Delta}$, and $E_b$. You may assume that $E_b$ is small. 2. In this case, the photon energy $E_b$ is that of the cosmic background radiation, which is an EM wave with wavelength $1.06 \\mathrm{~mm}$. Determine the energy of the photons, writing your answer in electron volts. 3. Assuming this value for $E_b$, what is the energy of the proton, in electron volts, that will allow the above reaction? This sets an upper limit on the energy of cosmic rays. The mass of the proton is given by $m_p c^{2}=938 \\mathrm{MeV}$ and the mass of the $\\Delta$ is given by $m_{\\Delta} c^{2}=1232 \\mathrm{MeV}$.",
+    "resolved_answer": "$\\frac{m_{\\Delta}^{2}-m_{p}^{2}}{4 E_{b}}$ $\\approx 1.17 \\times 10^{-3} \\mathrm{eV}$ $E_{p} \\approx 1.4 \\times 10^{20} \\mathrm{eV}$",
+    "resolved_from_fallback": true,
+    "final_cot": "Use the invariant squared center-of-mass energy for the initial proton plus photon. In the lab/CMB frame the proton has energy E_p and momentum p_p, while the photon has energy E_b and momentum magnitude E_b/c. Since the collision is head-on, the photon momentum is opposite the proton momentum, so the invariant is\ns=(p_p+p_\\gamma)^2=m_p^2c^4+2E_b(E_p+p_pc).\nAt the threshold for producing one particle of mass m_\\Delta, set s=m_\\Delta^2c^4. Therefore\nm_\\Delta^2c^4=m_p^2c^4+2E_b(E_p+p_pc).\nBecause E_b is small, the required proton energy is ultra-relativistic, so p_pc\\approx E_p. Then\nm_\\Delta^2c^4-m_p^2c^4\\approx 4E_bE_p,\nso\nE_p\\approx \\frac{(m_\\Delta^2-m_p^2)c^4}{4E_b}.\nEquivalently, if masses are quoted as rest energies, E_p\\approx \\frac{(m_\\Delta c^2)^2-(m_pc^2)^2}{4E_b}.\n\nFor the background photon with wavelength \\lambda=1.06 mm=1.06\\times10^{-3} m,\nE_b=\\frac{hc}{\\lambda}=\\frac{(4.14\\times10^{-15}\\,\\mathrm{eV\\cdot s})(3.00\\times10^8\\,\\mathrm{m/s})}{1.06\\times10^{-3}\\,\\mathrm{m}}\n\\approx 1.17\\times10^{-3}\\,\\mathrm{eV}.\n\nNow use m_pc^2=938 MeV and m_\\Delta c^2=1232 MeV:\n(1232)^2-(938)^2=637980\\ \\mathrm{MeV^2}.\nThus\nE_p\\approx \\frac{637980\\times(10^6\\,\\mathrm{eV})^2}{4(1.17\\times10^{-3}\\,\\mathrm{eV})}\n\\approx 1.36\\times10^{20}\\,\\mathrm{eV},\nwhich rounds to about 1.4\\times10^{20} eV.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The solution uses the invariant squared center-of-mass energy for the initial proton plus photon.",
+        "label": "reasoning",
+        "source": "Use the invariant squared center-of-mass energy for the initial proton plus photon."
+      },
+      {
+        "claim_id": 2,
+        "claim": "In the lab/CMB frame the proton has energy E_p.",
+        "label": "perception",
+        "source": "In the lab/CMB frame the proton has energy E_p and momentum p_p"
+      },
+      {
+        "claim_id": 3,
+        "claim": "In the lab/CMB frame the proton has momentum p_p.",
+        "label": "perception",
+        "source": "In the lab/CMB frame the proton has energy E_p and momentum p_p"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The photon has energy E_b.",
+        "label": "perception",
+        "source": "the photon has energy E_b and momentum magnitude E_b/c"
+      },
+      {
+        "claim_id": 5,
+        "claim": "A photon with energy E_b has momentum magnitude E_b/c.",
+        "label": "knowledge",
+        "source": "the photon has energy E_b and momentum magnitude E_b/c"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The collision is head-on.",
+        "label": "perception",
+        "source": "Since the collision is head-on"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The photon momentum is opposite the proton momentum.",
+        "label": "reasoning",
+        "source": "the photon momentum is opposite the proton momentum"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The invariant is s=(p_p+p_\\gamma)^2=m_p^2c^4+2E_b(E_p+p_pc).",
+        "label": "reasoning",
+        "source": "s=(p_p+p_\\gamma)^2=m_p^2c^4+2E_b(E_p+p_pc)."
+      },
+      {
+        "claim_id": 9,
+        "claim": "At the threshold for producing one particle of mass m_\\Delta, s is set equal to m_\\Delta^2c^4.",
+        "label": "reasoning",
+        "source": "At the threshold for producing one particle of mass m_\\Delta, set s=m_\\Delta^2c^4."
+      },
+      {
+        "claim_id": 10,
+        "claim": "m_\\Delta^2c^4=m_p^2c^4+2E_b(E_p+p_pc).",
+        "label": "reasoning",
+        "source": "m_\\Delta^2c^4=m_p^2c^4+2E_b(E_p+p_pc)."
+      },
+      {
+        "claim_id": 11,
+        "claim": "E_b is small.",
+        "label": "reasoning",
+        "source": "Because E_b is small"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The required proton energy is ultra-relativistic.",
+        "label": "reasoning",
+        "source": "the required proton energy is ultra-relativistic"
+      },
+      {
+        "claim_id": 13,
+        "claim": "For the required proton, p_pc\\approx E_p.",
+        "label": "reasoning",
+        "source": "so p_pc\\approx E_p."
+      },
+      {
+        "claim_id": 14,
+        "claim": "m_\\Delta^2c^4-m_p^2c^4\\approx 4E_bE_p.",
+        "label": "reasoning",
+        "source": "m_\\Delta^2c^4-m_p^2c^4\\approx 4E_bE_p"
+      },
+      {
+        "claim_id": 15,
+        "claim": "E_p\\approx \\frac{(m_\\Delta^2-m_p^2)c^4}{4E_b}.",
+        "label": "reasoning",
+        "source": "E_p\\approx \\frac{(m_\\Delta^2-m_p^2)c^4}{4E_b}."
+      },
+      {
+        "claim_id": 16,
+        "claim": "If masses are quoted as rest energies, E_p\\approx \\frac{(m_\\Delta c^2)^2-(m_pc^2)^2}{4E_b}.",
+        "label": "reasoning",
+        "source": "if masses are quoted as rest energies, E_p\\approx \\frac{(m_\\Delta c^2)^2-(m_pc^2)^2}{4E_b}."
+      },
+      {
+        "claim_id": 17,
+        "claim": "The background photon has wavelength \\lambda=1.06 mm.",
+        "label": "perception",
+        "source": "For the background photon with wavelength \\lambda=1.06 mm=1.06\\times10^{-3} m"
+      },
+      {
+        "claim_id": 18,
+        "claim": "1.06 mm equals 1.06\\times10^{-3} m.",
+        "label": "reasoning",
+        "source": "\\lambda=1.06 mm=1.06\\times10^{-3} m"
+      },
+      {
+        "claim_id": 19,
+        "claim": "Photon energy is given by E_b=\\frac{hc}{\\lambda}.",
+        "label": "knowledge",
+        "source": "E_b=\\frac{hc}{\\lambda}"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The photon energy substitution is E_b=\\frac{(4.14\\times10^{-15}\\,\\mathrm{eV\\cdot s})(3.00\\times10^8\\,\\mathrm{m/s})}{1.06\\times10^{-3}\\,\\mathrm{m}}.",
+        "label": "reasoning",
+        "source": "E_b=\\frac{hc}{\\lambda}=\\frac{(4.14\\times10^{-15}\\,\\mathrm{eV\\cdot s})(3.00\\times10^8\\,\\mathrm{m/s})}{1.06\\times10^{-3}\\,\\mathrm{m}}"
+      },
+      {
+        "claim_id": 21,
+        "claim": "E_b\\approx 1.17\\times10^{-3}\\,\\mathrm{eV}.",
+        "label": "reasoning",
+        "source": "\\approx 1.17\\times10^{-3}\\,\\mathrm{eV}."
+      },
+      {
+        "claim_id": 22,
+        "claim": "m_pc^2=938 MeV.",
+        "label": "perception",
+        "source": "Now use m_pc^2=938 MeV and m_\\Delta c^2=1232 MeV"
+      },
+      {
+        "claim_id": 23,
+        "claim": "m_\\Delta c^2=1232 MeV.",
+        "label": "perception",
+        "source": "Now use m_pc^2=938 MeV and m_\\Delta c^2=1232 MeV"
+      },
+      {
+        "claim_id": 24,
+        "claim": "(1232)^2-(938)^2=637980\\ \\mathrm{MeV^2}.",
+        "label": "reasoning",
+        "source": "(1232)^2-(938)^2=637980\\ \\mathrm{MeV^2}."
+      },
+      {
+        "claim_id": 25,
+        "claim": "E_p\\approx \\frac{637980\\times(10^6\\,\\mathrm{eV})^2}{4(1.17\\times10^{-3}\\,\\mathrm{eV})}.",
+        "label": "reasoning",
+        "source": "E_p\\approx \\frac{637980\\times(10^6\\,\\mathrm{eV})^2}{4(1.17\\times10^{-3}\\,\\mathrm{eV})}"
+      },
+      {
+        "claim_id": 26,
+        "claim": "E_p\\approx 1.36\\times10^{20}\\,\\mathrm{eV}.",
+        "label": "reasoning",
+        "source": "\\approx 1.36\\times10^{20}\\,\\mathrm{eV}"
+      },
+      {
+        "claim_id": 27,
+        "claim": "The result rounds to about 1.4\\times10^{20} eV.",
+        "label": "reasoning",
+        "source": "which rounds to about 1.4\\times10^{20} eV."
+      }
+    ],
+    "claim_count": 27,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The solution uses the invariant squared center-of-mass energy for the initial proton plus photon.",
+          "label": "reasoning",
+          "source": "Use the invariant squared center-of-mass energy for the initial proton plus photon."
+        },
+        {
+          "claim_id": 2,
+          "claim": "In the lab/CMB frame the proton has energy E_p.",
+          "label": "perception",
+          "source": "In the lab/CMB frame the proton has energy E_p and momentum p_p"
+        },
+        {
+          "claim_id": 3,
+          "claim": "In the lab/CMB frame the proton has momentum p_p.",
+          "label": "perception",
+          "source": "In the lab/CMB frame the proton has energy E_p and momentum p_p"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The photon has energy E_b.",
+          "label": "perception",
+          "source": "the photon has energy E_b and momentum magnitude E_b/c"
+        },
+        {
+          "claim_id": 5,
+          "claim": "A photon with energy E_b has momentum magnitude E_b/c.",
+          "label": "knowledge",
+          "source": "the photon has energy E_b and momentum magnitude E_b/c"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The collision is head-on.",
+          "label": "perception",
+          "source": "Since the collision is head-on"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The photon momentum is opposite the proton momentum.",
+          "label": "reasoning",
+          "source": "the photon momentum is opposite the proton momentum"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The invariant is s=(p_p+p_\\gamma)^2=m_p^2c^4+2E_b(E_p+p_pc).",
+          "label": "reasoning",
+          "source": "s=(p_p+p_\\gamma)^2=m_p^2c^4+2E_b(E_p+p_pc)."
+        },
+        {
+          "claim_id": 9,
+          "claim": "At the threshold for producing one particle of mass m_\\Delta, s is set equal to m_\\Delta^2c^4.",
+          "label": "reasoning",
+          "source": "At the threshold for producing one particle of mass m_\\Delta, set s=m_\\Delta^2c^4."
+        },
+        {
+          "claim_id": 10,
+          "claim": "m_\\Delta^2c^4=m_p^2c^4+2E_b(E_p+p_pc).",
+          "label": "reasoning",
+          "source": "m_\\Delta^2c^4=m_p^2c^4+2E_b(E_p+p_pc)."
+        },
+        {
+          "claim_id": 11,
+          "claim": "E_b is small.",
+          "label": "reasoning",
+          "source": "Because E_b is small"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The required proton energy is ultra-relativistic.",
+          "label": "reasoning",
+          "source": "the required proton energy is ultra-relativistic"
+        },
+        {
+          "claim_id": 13,
+          "claim": "For the required proton, p_pc\\approx E_p.",
+          "label": "reasoning",
+          "source": "so p_pc\\approx E_p."
+        },
+        {
+          "claim_id": 14,
+          "claim": "m_\\Delta^2c^4-m_p^2c^4\\approx 4E_bE_p.",
+          "label": "reasoning",
+          "source": "m_\\Delta^2c^4-m_p^2c^4\\approx 4E_bE_p"
+        },
+        {
+          "claim_id": 15,
+          "claim": "E_p\\approx \\frac{(m_\\Delta^2-m_p^2)c^4}{4E_b}.",
+          "label": "reasoning",
+          "source": "E_p\\approx \\frac{(m_\\Delta^2-m_p^2)c^4}{4E_b}."
+        },
+        {
+          "claim_id": 16,
+          "claim": "If masses are quoted as rest energies, E_p\\approx \\frac{(m_\\Delta c^2)^2-(m_pc^2)^2}{4E_b}.",
+          "label": "reasoning",
+          "source": "if masses are quoted as rest energies, E_p\\approx \\frac{(m_\\Delta c^2)^2-(m_pc^2)^2}{4E_b}."
+        },
+        {
+          "claim_id": 17,
+          "claim": "The background photon has wavelength \\lambda=1.06 mm.",
+          "label": "perception",
+          "source": "For the background photon with wavelength \\lambda=1.06 mm=1.06\\times10^{-3} m"
+        },
+        {
+          "claim_id": 18,
+          "claim": "1.06 mm equals 1.06\\times10^{-3} m.",
+          "label": "reasoning",
+          "source": "\\lambda=1.06 mm=1.06\\times10^{-3} m"
+        },
+        {
+          "claim_id": 19,
+          "claim": "Photon energy is given by E_b=\\frac{hc}{\\lambda}.",
+          "label": "knowledge",
+          "source": "E_b=\\frac{hc}{\\lambda}"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The photon energy substitution is E_b=\\frac{(4.14\\times10^{-15}\\,\\mathrm{eV\\cdot s})(3.00\\times10^8\\,\\mathrm{m/s})}{1.06\\times10^{-3}\\,\\mathrm{m}}.",
+          "label": "reasoning",
+          "source": "E_b=\\frac{hc}{\\lambda}=\\frac{(4.14\\times10^{-15}\\,\\mathrm{eV\\cdot s})(3.00\\times10^8\\,\\mathrm{m/s})}{1.06\\times10^{-3}\\,\\mathrm{m}}"
+        },
+        {
+          "claim_id": 21,
+          "claim": "E_b\\approx 1.17\\times10^{-3}\\,\\mathrm{eV}.",
+          "label": "reasoning",
+          "source": "\\approx 1.17\\times10^{-3}\\,\\mathrm{eV}."
+        },
+        {
+          "claim_id": 22,
+          "claim": "m_pc^2=938 MeV.",
+          "label": "perception",
+          "source": "Now use m_pc^2=938 MeV and m_\\Delta c^2=1232 MeV"
+        },
+        {
+          "claim_id": 23,
+          "claim": "m_\\Delta c^2=1232 MeV.",
+          "label": "perception",
+          "source": "Now use m_pc^2=938 MeV and m_\\Delta c^2=1232 MeV"
+        },
+        {
+          "claim_id": 24,
+          "claim": "(1232)^2-(938)^2=637980\\ \\mathrm{MeV^2}.",
+          "label": "reasoning",
+          "source": "(1232)^2-(938)^2=637980\\ \\mathrm{MeV^2}."
+        },
+        {
+          "claim_id": 25,
+          "claim": "E_p\\approx \\frac{637980\\times(10^6\\,\\mathrm{eV})^2}{4(1.17\\times10^{-3}\\,\\mathrm{eV})}.",
+          "label": "reasoning",
+          "source": "E_p\\approx \\frac{637980\\times(10^6\\,\\mathrm{eV})^2}{4(1.17\\times10^{-3}\\,\\mathrm{eV})}"
+        },
+        {
+          "claim_id": 26,
+          "claim": "E_p\\approx 1.36\\times10^{20}\\,\\mathrm{eV}.",
+          "label": "reasoning",
+          "source": "\\approx 1.36\\times10^{20}\\,\\mathrm{eV}"
+        },
+        {
+          "claim_id": 27,
+          "claim": "The result rounds to about 1.4\\times10^{20} eV.",
+          "label": "reasoning",
+          "source": "which rounds to about 1.4\\times10^{20} eV."
+        }
+      ],
+      "coverage_notes": "Applied the two requested fix-severity relabel operations: claim 11 and claim 16 were relabeled as reasoning. No no_fix issue was edited."
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-05T15:34:46Z",
+    "changed_target_fields": 2,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

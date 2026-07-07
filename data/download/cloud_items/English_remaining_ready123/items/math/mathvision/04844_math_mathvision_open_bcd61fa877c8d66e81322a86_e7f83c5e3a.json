@@ -1,0 +1,845 @@
+{
+  "pack_index": 4844,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00470:mathvision__open_bcd61fa877c8d66e81322a86__c8f7619f6e1e",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_bcd61fa877c8d66e81322a86",
+    "source_problem_id": "open_bcd61fa877c8d66e81322a86",
+    "problem_run_key": "mathvision__open_bcd61fa877c8d66e81322a86__c8f7619f6e1e",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 70.0,
+    "difficulty_level": "medium_high",
+    "weighted_accuracy": 0.3,
+    "wrong_models": [
+      "gpt55_high",
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "gpt55_high",
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 3,
+    "gpt55_high_correct": "False",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00470.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00470.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00470.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00470.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In the picture any letter stands for some digit (different letters for different digits, equal letters for equal digits). Find the largest possible value of the number KAN.\n<image1>",
+    "raw_answer_text": "864",
+    "open_variant_id": "open_bcd61fa877c8d66e81322a86",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Find the largest possible value of the number KAN.",
+    "expected_answer_type": "numeric",
+    "expected_answer": "864",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_87200535d97421975b37735d",
+        "problem_id": "prob_ac2f8db8b482598fae596866",
+        "node_type": "answer_claim",
+        "canonical_value": "864",
+        "surface_forms": [
+          "864"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_adc748176653b38f7615f098"
+        ],
+        "evidence_refs": [
+          "asset_adc748176653b38f7615f098"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "864"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T03:40:20Z",
+        "updated_at": "2026-04-06T03:40:20Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_bcd61fa877c8d66e81322a86",
+      "parent_problem_id": "prob_ac2f8db8b482598fae596866",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Find the largest possible value of the number KAN.",
+      "expected_answer_type": "numeric",
+      "expected_answer": "864",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Find the largest possible value of the number KAN.",
+    "raw_answer": "864",
+    "raw_standard_answer": "864",
+    "resolved_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Find the largest possible value of the number KAN.",
+    "resolved_answer": "864",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The picture shows a vertical subtraction, the first row is KAN, the left side of the second row has a minus sign, the second row is GAR, there is a horizontal line below, and the result is written as the two-digit number OO, with OO aligned in the tens and ones positions. Reasoning: Read the vertical calculation as KAN - GAR = OO. Because the result has only two digits, the hundreds place must cancel to 0. Analyze by columns: If the ones place does not borrow from the tens place, then A-A in the tens place will get 0, and it is impossible to get O, the same as the result's tens digit, while also satisfying the different-letter constraint in the hundreds place; therefore the ones place borrows 1 from the tens place. In this way the tens place becomes A-1-A=-1, needing to borrow 1 from the hundreds place, and the tens-place result is 9, so O=9. Since the hundreds place has had 1 borrowed away by the tens place, it must satisfy K-1-G=0, therefore K-G=1. After borrowing in the ones place, there is N-R+10=O=9, so N-R=-1, namely R=N+1. In order to make KAN largest, first maximize the hundreds digit K. Because O=9, K cannot be 9; and K=G+1, so the maximum possible K is 8, at which time G=7. Next maximize the tens digit A; the largest unused digit different from 8,7,9 is 6, so A=6. Finally maximize N, and require R=N+1 and different from 8,7,6,9. N=5 would make R=6, conflicting with A; when N=4, R=5, satisfying that all different letters correspond to different digits. Therefore KAN=864.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_bcd61fa877c8d66e81322a86",
+      "problem_run_key": "mathvision__open_bcd61fa877c8d66e81322a86__c8f7619f6e1e",
+      "question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Find the largest possible value of the number KAN.",
+      "standard_answer": "864",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00470.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00470.png"
+      ],
+      "initial_multi_solution_score": 0.3647,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the picture as a vertical subtraction: KAN above GAR, with result OO under the line. Use column-by-column subtraction. Since the final answer has only two digits, the hundreds digits must cancel with a borrow, so K-G=1. Then the tens column (A-A with a borrow) forces O=9 and also forces a borrow from the units column. The units column then gives N-R=-1, so R=N+1. Now use the digit-distinctness rule: O=9 means K cannot be 9, so the largest possible hundreds digit is K=8, hence G=7. To maximize KAN, take the largest unused tens digit A=6, and then the largest N that keeps R=N+1 distinct from 8,7,6,9 is N=4. This gives 864.",
+          "CoT_raw": "图像描述：图片中是一个竖式减法，第一行是 KAN，第二行左侧有减号，第二行是 GAR，下面有横线，结果写成两位数 OO，且 OO 对齐在十位和个位位置。\n\n推理：把竖式读作 KAN - GAR = OO。因为结果只有两位数，所以百位必须抵消为 0。按列分析：个位若不向十位借位，则十位 A-A 会得到 0，不可能得到与结果十位相同的 O 并同时满足百位不同字母约束；因此个位向十位借 1。这样十位变成 A-1-A=-1，需要向百位借 1，十位结果为 9，所以 O=9。百位由于被十位借走 1，必须满足 K-1-G=0，因此 K-G=1。个位借位后有 N-R+10=O=9，所以 N-R=-1，即 R=N+1。为了使 KAN 最大，先最大化百位 K。因为 O=9，K 不能是 9；又 K=G+1，所以最大可取 K=8，此时 G=7。接着最大化十位 A，未用且不同于 8,7,9 的最大数字是 6，所以 A=6。最后最大化 N，并要求 R=N+1 且不同于 8,7,6,9。N=5 会使 R=6，与 A 冲突；N=4 时 R=5，满足所有不同字母对应不同数字。因此 KAN=864。",
+          "model_answer": "864",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "864",
+              "predicted_part": "864",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图片中是一个竖式减法，第一行是 KAN，第二行左侧有减号，第二行是 GAR，下面有横线，结果写成两位数 OO，且 OO 对齐在十位和个位位置。\n\n推理：把竖式读作 KAN - GAR = OO。因为结果只有两位数，所以百位必须抵消为 0。按列分析：个位若不向十位借位，则十位 A-A 会得到 0，不可能得到与结果十位相同的 O 并同时满足百位不同字母约束；因此个位向十位借 1。这样十位变成 A-1-A=-1，需要向百位借 1，十位结果为 9，所以 O=9。百位由于被十位借走 1，必须满足 K-1-G=0，因此 K-G=1。个位借位后有 N-R+10=O=9，所以 N-R=-1，即 R=N+1。为了使 KAN 最大，先最大化百位 K。因为 O=9，K 不能是 9；又 K=G+1，所以最大可取 K=8，此时 G=7。接着最大化十位 A，未用且不同于 8,7,9 的最大数字是 6，所以 A=6。最后最大化 N，并要求 R=N+1 且不同于 8,7,6,9。N=5 会使 R=6，与 A 冲突；N=4 时 R=5，满足所有不同字母对应不同数字。因此 KAN=864。",
+          "answer_answer_check_final": "864",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理整体正确，图像描述与图片一致，且满足“先描述图像，再推理”的顺序；最终答案 864 与标准答案一致。唯一可改进处是：在说明“个位不借位”的情况时，候选 trace 写成“不可能得到与结果十位相同的 O 并同时满足百位不同字母约束”，这里应更精确地说：若个位不向十位借位，则十位结果为 0，所以 O=0；个位也要等于 O，则 N-R=0，导致 N=R，违反不同字母对应不同数字。其余列式推导和最大化步骤均成立。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图片中是一个竖式减法，第一行是 KAN，第二行左侧有减号，第二行是 GAR，下面有横线，结果写成两位数 OO，且 OO 对齐在十位和个位位置。\n\n推理：把竖式读作 KAN - GAR = OO。因为结果只有两位数，所以百位必须抵消为 0。按列分析：个位若不向十位借位，则十位 A-A 会得到 0，不可能得到与结果十位相同的 O 并同时满足百位不同字母约束；因此个位向十位借 1。这样十位变成 A-1-A=-1，需要向百位借 1，十位结果为 9，所以 O=9。百位由于被十位借走 1，必须满足 K-1-G=0，因此 K-G=1。个位借位后有 N-R+10=O=9，所以 N-R=-1，即 R=N+1。为了使 KAN 最大，先最大化百位 K。因为 O=9，K 不能是 9；又 K=G+1，所以最大可取 K=8，此时 G=7。接着最大化十位 A，未用且不同于 8,7,9 的最大数字是 6，所以 A=6。最后最大化 N，并要求 R=N+1 且不同于 8,7,6,9。N=5 会使 R=6，与 A 冲突；N=4 时 R=5，满足所有不同字母对应不同数字。因此 KAN=864。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route is a place-value/borrow analysis of the subtraction itself, going column by column to force the digit relations before maximizing.",
+            "image_role": "The image provides the exact subtraction layout KAN − GAR = OO, including the two-digit repeated-digit result and the alignment needed for borrow reasoning.",
+            "text_role": "The text states that different letters mean different digits and asks for the largest possible value of KAN, which turns the picture into a constrained cryptarithm optimization problem.",
+            "knowledge_role": "Use standard subtraction borrowing rules and the rule that each letter represents a unique digit; after finding forced relations, maximize lexicographically subject to those constraints."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图片中是一个竖式减法，第一行是 KAN，第二行左侧有减号，第二行是 GAR，下面有横线，结果写成两位数 OO，且 OO 对齐在十位和个位位置。\n\n推理：把竖式读作 KAN - GAR = OO。因为结果只有两位数，所以百位必须抵消为 0。按列分析：个位若不向十位借位，则十位 A-A 会得到 0，不可能得到与结果十位相同的 O 并同时满足百位不同字母约束；因此个位向十位借 1。这样十位变成 A-1-A=-1，需要向百位借 1，十位结果为 9，所以 O=9。百位由于被十位借走 1，必须满足 K-1-G=0，因此 K-G=1。个位借位后有 N-R+10=O=9，所以 N-R=-1，即 R=N+1。为了使 KAN 最大，先最大化百位 K。因为 O=9，K 不能是 9；又 K=G+1，所以最大可取 K=8，此时 G=7。接着最大化十位 A，未用且不同于 8,7,9 的最大数字是 6，所以 A=6。最后最大化 N，并要求 R=N+1 且不同于 8,7,6,9。N=5 会使 R=6，与 A 冲突；N=4 时 R=5，满足所有不同字母对应不同数字。因此 KAN=864。",
+            "model_answer": "864",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2667,
+              "completion_tokens": 1228,
+              "total_tokens": 3895,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 23.877,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理整体正确，图像描述与图片一致，且满足“先描述图像，再推理”的顺序；最终答案 864 与标准答案一致。唯一可改进处是：在说明“个位不借位”的情况时，候选 trace 写成“不可能得到与结果十位相同的 O 并同时满足百位不同字母约束”，这里应更精确地说：若个位不向十位借位，则十位结果为 0，所以 O=0；个位也要等于 O，则 N-R=0，导致 N=R，违反不同字母对应不同数字。其余列式推导和最大化步骤均成立。",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 0.98,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 18.897
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 23.887,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 19,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 19,
+                "prompt_tokens": 55396,
+                "completion_tokens": 19505,
+                "total_tokens": 74901,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 394.975,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 18.905,
+              "usage_delta": {
+                "request_count": 8,
+                "successful_request_count": 8,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 8,
+                "requests_with_usage": 8,
+                "prompt_tokens": 25330,
+                "completion_tokens": 10330,
+                "total_tokens": 35660,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 217.111,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Read the picture as the equation KAN − GAR = OO, where OO is a two-digit number with equal digits. Convert it to a numerical constraint: 100(K-G)+(N-R)=11O. Because the result is two identical digits, the difference must be a multiple of 11, and the only way to fit the digit range and distinct-letter rule is K-G=1 and N-R=-1, giving O=9. Once O is fixed as 9, K cannot be 9, so maximize K by taking K=8 and G=7. Then maximize A with the remaining unused digits, giving A=6. Finally choose the largest N such that R=N+1 is still a different digit from K,G,A,O; N=4 works, so the maximum KAN is 864.",
+          "CoT_raw": "先描述图像：图中是一个竖式减法，第一行是三位数 KAN，第二行左侧有减号，减去三位数 GAR，横线下面的结果是两位数 OO，即两个相同字母 O 组成的两位数。由题意，不同字母代表不同数字，相同字母代表相同数字。\n再推理：竖式表示 KAN − GAR = OO。写成数值为 (100K+10A+N) − (100G+10A+R) = 11O，所以 100(K−G)+(N−R)=11O。因为结果 OO 是两位数，所以 11O 在 11 到 99 之间，且 O 非零。若 K−G≥2，则 100(K−G)+(N−R) 至少为 200−9=191，太大；因此必须 K−G=1。于是 100+N−R=11O。由于 N−R 只能在 −9 到 9 之间，左边只能在 91 到 109 之间，而形如 11O 的两位数中唯一可行的是 99，所以 O=9，且 N−R=−1，即 R=N+1。为了最大化 KAN，先最大化百位 K。因为 O=9，K 不能是 9；又 K=G+1，所以最大可取 K=8，G=7。接着最大化十位 A，剩余未用最大数字是 6，所以 A=6。最后最大化个位 N，并要求 R=N+1 且不能与 8,7,6,9 重复。N=5 会使 R=6，与 A 重复，不行；N=4 时 R=5，满足所有不同字母对应不同数字。因此最大 KAN=864。",
+          "model_answer": "864",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "864",
+              "predicted_part": "864",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中是一个竖式减法，第一行是三位数 KAN，第二行左侧有减号，减去三位数 GAR，横线下面的结果是两位数 OO，即两个相同字母 O 组成的两位数。由题意，不同字母代表不同数字，相同字母代表相同数字。\n再推理：竖式表示 KAN − GAR = OO。写成数值为 (100K+10A+N) − (100G+10A+R) = 11O，所以 100(K−G)+(N−R)=11O。因为结果 OO 是两位数，所以 11O 在 11 到 99 之间，且 O 非零。若 K−G≥2，则 100(K−G)+(N−R) 至少为 200−9=191，太大；因此必须 K−G=1。于是 100+N−R=11O。由于 N−R 只能在 −9 到 9 之间，左边只能在 91 到 109 之间，而形如 11O 的两位数中唯一可行的是 99，所以 O=9，且 N−R=−1，即 R=N+1。为了最大化 KAN，先最大化百位 K。因为 O=9，K 不能是 9；又 K=G+1，所以最大可取 K=8，G=7。接着最大化十位 A，剩余未用最大数字是 6，所以 A=6。最后最大化个位 N，并要求 R=N+1 且不能与 8,7,6,9 重复。N=5 会使 R=6，与 A 重复，不行；N=4 时 R=5，满足所有不同字母对应不同数字。因此最大 KAN=864。",
+          "answer_answer_check_final": "864",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理整体正确，图像描述先于推理，且与图中竖式 KAN − GAR = OO 一致；最终答案 864 与标准答案一致。唯一小建议是，在推出 K−G=1 时，可以补充说明 K−G≤0 时左边不可能达到正的两位数 11O，这样逻辑更完整。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中是一个竖式减法，第一行是三位数 KAN，第二行左侧有减号，减去三位数 GAR，横线下面的结果是两位数 OO，即两个相同字母 O 组成的两位数。由题意，不同字母代表不同数字，相同字母代表相同数字。\n再推理：竖式表示 KAN − GAR = OO。写成数值为 (100K+10A+N) − (100G+10A+R) = 11O，所以 100(K−G)+(N−R)=11O。因为结果 OO 是两位数，所以 11O 在 11 到 99 之间，且 O 非零。若 K−G≥2，则 100(K−G)+(N−R) 至少为 200−9=191，太大；因此必须 K−G=1。于是 100+N−R=11O。由于 N−R 只能在 −9 到 9 之间，左边只能在 91 到 109 之间，而形如 11O 的两位数中唯一可行的是 99，所以 O=9，且 N−R=−1，即 R=N+1。为了最大化 KAN，先最大化百位 K。因为 O=9，K 不能是 9；又 K=G+1，所以最大可取 K=8，G=7。接着最大化十位 A，剩余未用最大数字是 6，所以 A=6。最后最大化个位 N，并要求 R=N+1 且不能与 8,7,6,9 重复。N=5 会使 R=6，与 A 重复，不行；N=4 时 R=5，满足所有不同字母对应不同数字。因此最大 KAN=864。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route is algebraic and optimization-based rather than borrow-based: it starts from a single equation, derives digit differences, and then maximizes KAN lexicographically under the resulting constraints.",
+            "image_role": "The image gives the exact symbolic equation in vertical form, including that the bottom number is OO, which is essential for translating the visual puzzle into a numeric relation.",
+            "text_role": "The text supplies the unique-digit condition and the objective to maximize KAN, so the algebraic constraints can be turned into a search for the largest valid assignment.",
+            "knowledge_role": "Use place-value algebra, the fact that repeated-digit results are multiples of 11, and lexicographic maximization under distinct-digit constraints."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中是一个竖式减法，第一行是三位数 KAN，第二行左侧有减号，减去三位数 GAR，横线下面的结果是两位数 OO，即两个相同字母 O 组成的两位数。由题意，不同字母代表不同数字，相同字母代表相同数字。\n再推理：竖式表示 KAN − GAR = OO。写成数值为 (100K+10A+N) − (100G+10A+R) = 11O，所以 100(K−G)+(N−R)=11O。因为结果 OO 是两位数，所以 11O 在 11 到 99 之间，且 O 非零。若 K−G≥2，则 100(K−G)+(N−R) 至少为 200−9=191，太大；因此必须 K−G=1。于是 100+N−R=11O。由于 N−R 只能在 −9 到 9 之间，左边只能在 91 到 109 之间，而形如 11O 的两位数中唯一可行的是 99，所以 O=9，且 N−R=−1，即 R=N+1。为了最大化 KAN，先最大化百位 K。因为 O=9，K 不能是 9；又 K=G+1，所以最大可取 K=8，G=7。接着最大化十位 A，剩余未用最大数字是 6，所以 A=6。最后最大化个位 N，并要求 R=N+1 且不能与 8,7,6,9 重复。N=5 会使 R=6，与 A 重复，不行；N=4 时 R=5，满足所有不同字母对应不同数字。因此最大 KAN=864。",
+            "model_answer": "864",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2661,
+              "completion_tokens": 1409,
+              "total_tokens": 4070,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 25.345,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理整体正确，图像描述先于推理，且与图中竖式 KAN − GAR = OO 一致；最终答案 864 与标准答案一致。唯一小建议是，在推出 K−G=1 时，可以补充说明 K−G≤0 时左边不可能达到正的两位数 11O，这样逻辑更完整。",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 0.98,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 30.808
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 25.355,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 15,
+                "failed_request_count": 5,
+                "retry_count": 5,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 15,
+                "prompt_tokens": 42678,
+                "completion_tokens": 22920,
+                "total_tokens": 65598,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 1047.686,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 30.816,
+              "usage_delta": {
+                "request_count": 5,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 5,
+                "requests_with_usage": 5,
+                "prompt_tokens": 16453,
+                "completion_tokens": 6069,
+                "total_tokens": 22522,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 110.021,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 69.797,
+          "usage_delta": {
+            "request_count": 49,
+            "successful_request_count": 45,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 49,
+            "requests_with_usage": 45,
+            "prompt_tokens": 125026,
+            "completion_tokens": 49105,
+            "total_tokens": 174131,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 973.84,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1045",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00470.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "calculation",
+          "parent_problem_id": "prob_ac2f8db8b482598fae596866",
+          "open_variant_count": 1,
+          "open_variant_id": "open_bcd61fa877c8d66e81322a86",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "small_image_resolution",
+            "visual_constraints_not_transcribed_in_text"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 168.791,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 14235,
+        "completion_tokens": 8840,
+        "total_tokens": 23075,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 168.708,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Find the largest possible value of the number KAN.",
+      "answer": "864",
+      "final_cot": "Image description: The picture shows a vertical subtraction, the first row is KAN, the left side of the second row has a minus sign, the second row is GAR, there is a horizontal line below, and the result is written as the two-digit number OO, with OO aligned in the tens and ones positions.\n\nReasoning: Read the vertical calculation as KAN - GAR = OO. Because the result has only two digits, the hundreds place must cancel to 0. Analyze by columns: If the ones place does not borrow from the tens place, then A-A in the tens place will get 0, and it is impossible to get O, the same as the result's tens digit, while also satisfying the different-letter constraint in the hundreds place; therefore the ones place borrows 1 from the tens place. In this way the tens place becomes A-1-A=-1, needing to borrow 1 from the hundreds place, and the tens-place result is 9, so O=9. Since the hundreds place has had 1 borrowed away by the tens place, it must satisfy K-1-G=0, therefore K-G=1. After borrowing in the ones place, there is N-R+10=O=9, so N-R=-1, namely R=N+1. In order to make KAN largest, first maximize the hundreds digit K. Because O=9, K cannot be 9; and K=G+1, so the maximum possible K is 8, at which time G=7. Next maximize the tens digit A; the largest unused digit different from 8,7,9 is 6, so A=6. Finally maximize N, and require R=N+1 and different from 8,7,6,9. N=5 would make R=6, conflicting with A; when N=4, R=5, satisfying that all different letters correspond to different digits. Therefore KAN=864.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理整体正确，图像描述与图片一致，且满足“先描述图像，再推理”的顺序；最终答案 864 与标准答案一致。唯一可改进处是：在说明“个位不借位”的情况时，候选 trace 写成“不可能得到与结果十位相同的 O 并同时满足百位不同字母约束”，这里应更精确地说：若个位不向十位借位，则十位结果为 0，所以 O=0；个位也要等于 O，则 N-R=0，导致 N=R，违反不同字母对应不同数字。其余列式推导和最大化步骤均成立。",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 0.98,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 18.897
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理整体正确，图像描述先于推理，且与图中竖式 KAN − GAR = OO 一致；最终答案 864 与标准答案一致。唯一小建议是，在推出 K−G=1 时，可以补充说明 K−G≤0 时左边不可能达到正的两位数 11O，这样逻辑更完整。",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 0.98,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 30.808
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1593,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00470.json",
+        "source_sample_filename": "mathvision00470.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00470.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T13:53:49Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:19Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_bcd61fa877c8d66e81322a86",
+          "new_problem_id": "open_bcd61fa877c8d66e81322a86",
+          "old_problem_run_key": "mathvision__open_bcd61fa877c8d66e81322a86__c8f7619f6e1e",
+          "new_problem_run_key": "mathvision__open_bcd61fa877c8d66e81322a86__c8f7619f6e1e",
+          "target_relpath": "math/mathvision/samples/mathvision00470.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_bcd61fa877c8d66e81322a86",
+    "problem_run_key": "mathvision__open_bcd61fa877c8d66e81322a86__c8f7619f6e1e",
+    "raw_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Find the largest possible value of the number KAN.",
+    "raw_answer": "864",
+    "raw_standard_answer": "864",
+    "resolved_question_text": "In the picture, any letter stands for some digit (different letters for different digits, equal letters for equal digits). Find the largest possible value of the number KAN.",
+    "resolved_answer": "864",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: The picture shows a vertical subtraction, the first row is KAN, the left side of the second row has a minus sign, the second row is GAR, there is a horizontal line below, and the result is written as the two-digit number OO, with OO aligned in the tens and ones positions.\n\nReasoning: Read the vertical calculation as KAN - GAR = OO. Because the result has only two digits, the hundreds place must cancel to 0. Analyze by columns: If the ones place does not borrow from the tens place, then A-A in the tens place will get 0, and it is impossible to get O, the same as the result's tens digit, while also satisfying the different-letter constraint in the hundreds place; therefore the ones place borrows 1 from the tens place. In this way the tens place becomes A-1-A=-1, needing to borrow 1 from the hundreds place, and the tens-place result is 9, so O=9. Since the hundreds place has had 1 borrowed away by the tens place, it must satisfy K-1-G=0, therefore K-G=1. After borrowing in the ones place, there is N-R+10=O=9, so N-R=-1, namely R=N+1. In order to make KAN largest, first maximize the hundreds digit K. Because O=9, K cannot be 9; and K=G+1, so the maximum possible K is 8, at which time G=7. Next maximize the tens digit A; the largest unused digit different from 8,7,9 is 6, so A=6. Finally maximize N, and require R=N+1 and different from 8,7,6,9. N=5 would make R=6, conflicting with A; when N=4, R=5, satisfying that all different letters correspond to different digits. Therefore KAN=864.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The picture shows a vertical subtraction.",
+        "label": "perception",
+        "source": "The picture shows a vertical subtraction"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The first row of the vertical calculation is KAN.",
+        "label": "perception",
+        "source": "The first row is KAN"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The left side of the second row of the vertical calculation has a minus sign.",
+        "label": "perception",
+        "source": "The left side of the second row has a minus sign"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The second row of the vertical calculation is GAR.",
+        "label": "perception",
+        "source": "The second row is GAR"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The result of the vertical calculation is written as the two-digit number OO.",
+        "label": "perception",
+        "source": "The result is written as the two-digit number OO"
+      },
+      {
+        "claim_id": 6,
+        "claim": "OO is aligned in the tens and ones positions.",
+        "label": "perception",
+        "source": "OO is aligned in the tens and ones positions"
+      },
+      {
+        "claim_id": 7,
+        "claim": "This vertical calculation can be read as KAN - GAR = OO.",
+        "label": "reasoning",
+        "source": "Read the vertical calculation as KAN - GAR = OO"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The hundreds place must cancel to 0.",
+        "label": "reasoning",
+        "source": "So the hundreds place must cancel to 0"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Different letters correspond to different digits.",
+        "label": "knowledge",
+        "source": "Different-letter constraint; all different letters correspond to different digits"
+      },
+      {
+        "claim_id": 10,
+        "claim": "If the ones place does not borrow from the tens place, then A-A in the tens place will get 0.",
+        "label": "reasoning",
+        "source": "If the ones place does not borrow from the tens place, then A-A in the tens place will get 0"
+      },
+      {
+        "claim_id": 11,
+        "claim": "Getting 0 in the tens place cannot produce O, the same as the result's tens digit, while also satisfying the different-letter constraint in the hundreds place.",
+        "label": "reasoning",
+        "source": "It is impossible to get O, the same as the result's tens digit, while also satisfying the different-letter constraint in the hundreds place"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The ones place must borrow 1 from the tens place.",
+        "label": "reasoning",
+        "source": "Therefore the ones place borrows 1 from the tens place"
+      },
+      {
+        "claim_id": 13,
+        "claim": "After the ones place borrows 1 from the tens place, the tens place becomes A-1-A=-1, needing to borrow 1 from the hundreds place.",
+        "label": "reasoning",
+        "source": "In this way the tens place becomes A-1-A=-1, needing to borrow 1 from the hundreds place"
+      },
+      {
+        "claim_id": 14,
+        "claim": "After the tens place borrows 1 from the hundreds place, the tens-place result is 9, so O=9.",
+        "label": "reasoning",
+        "source": "The tens-place result is 9, so O=9"
+      },
+      {
+        "claim_id": 15,
+        "claim": "Since the hundreds place has had 1 borrowed away by the tens place, the condition simplifies to K-G=1.",
+        "label": "reasoning",
+        "source": "Since the hundreds place has had 1 borrowed away by the tens place, it must satisfy K-1-G=0, therefore K-G=1"
+      },
+      {
+        "claim_id": 16,
+        "claim": "After borrowing in the ones place, there is N-R+10=O=9, therefore R=N+1.",
+        "label": "reasoning",
+        "source": "After borrowing in the ones place, there is N-R+10=O=9, so N-R=-1, namely R=N+1"
+      },
+      {
+        "claim_id": 17,
+        "claim": "In order to make KAN largest, one should first maximize the hundreds digit K.",
+        "label": "reasoning",
+        "source": "In order to make KAN largest, first maximize the hundreds digit K"
+      },
+      {
+        "claim_id": 18,
+        "claim": "Because O=9 and K=G+1, K cannot be 9, and the maximum possible K is 8, at which time G=7.",
+        "label": "reasoning",
+        "source": "Because O=9, K cannot be 9; and K=G+1, so the maximum possible K is 8, at which time G=7"
+      },
+      {
+        "claim_id": 19,
+        "claim": "Next maximize the tens digit A; the largest unused digit different from 8, 7, 9 is 6, so A=6.",
+        "label": "reasoning",
+        "source": "Next maximize the tens digit A; the largest unused digit different from 8,7,9 is 6, so A=6"
+      },
+      {
+        "claim_id": 20,
+        "claim": "Finally maximize N, and require R=N+1 and N, R to be different from 8, 7, 6, 9.",
+        "label": "reasoning",
+        "source": "Finally maximize N, and require R=N+1 and different from 8,7,6,9"
+      },
+      {
+        "claim_id": 21,
+        "claim": "N=5 would make R=6, conflicting with A.",
+        "label": "reasoning",
+        "source": "N=5 would make R=6, conflicting with A"
+      },
+      {
+        "claim_id": 22,
+        "claim": "When N=4, R=5, satisfying that all different letters correspond to different digits.",
+        "label": "reasoning",
+        "source": "When N=4, R=5, satisfying that all different letters correspond to different digits"
+      },
+      {
+        "claim_id": 23,
+        "claim": "KAN=864。",
+        "label": "reasoning",
+        "source": "Therefore KAN=864"
+      }
+    ],
+    "claim_count": 23,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The picture shows a vertical subtraction.",
+          "label": "perception",
+          "source": "The picture shows a vertical subtraction"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The first row of the vertical calculation is KAN.",
+          "label": "perception",
+          "source": "The first row is KAN"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The left side of the second row of the vertical calculation has a minus sign.",
+          "label": "perception",
+          "source": "The left side of the second row has a minus sign"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The second row of the vertical calculation is GAR.",
+          "label": "perception",
+          "source": "The second row is GAR"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The result of the vertical calculation is written as the two-digit number OO.",
+          "label": "perception",
+          "source": "The result is written as the two-digit number OO"
+        },
+        {
+          "claim_id": 6,
+          "claim": "OO is aligned in the tens and ones positions.",
+          "label": "perception",
+          "source": "OO is aligned in the tens and ones positions"
+        },
+        {
+          "claim_id": 7,
+          "claim": "This vertical calculation can be read as KAN - GAR = OO.",
+          "label": "reasoning",
+          "source": "Read the vertical calculation as KAN - GAR = OO"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The hundreds place must cancel to 0.",
+          "label": "reasoning",
+          "source": "So the hundreds place must cancel to 0"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Different letters correspond to different digits.",
+          "label": "knowledge",
+          "source": "Different-letter constraint; all different letters correspond to different digits"
+        },
+        {
+          "claim_id": 10,
+          "claim": "If the ones place does not borrow from the tens place, then A-A in the tens place will get 0.",
+          "label": "reasoning",
+          "source": "If the ones place does not borrow from the tens place, then A-A in the tens place will get 0"
+        },
+        {
+          "claim_id": 11,
+          "claim": "Getting 0 in the tens place cannot produce O, the same as the result's tens digit, while also satisfying the different-letter constraint in the hundreds place.",
+          "label": "reasoning",
+          "source": "It is impossible to get O, the same as the result's tens digit, while also satisfying the different-letter constraint in the hundreds place"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The ones place must borrow 1 from the tens place.",
+          "label": "reasoning",
+          "source": "Therefore the ones place borrows 1 from the tens place"
+        },
+        {
+          "claim_id": 13,
+          "claim": "After the ones place borrows 1 from the tens place, the tens place becomes A-1-A=-1, needing to borrow 1 from the hundreds place.",
+          "label": "reasoning",
+          "source": "In this way the tens place becomes A-1-A=-1, needing to borrow 1 from the hundreds place"
+        },
+        {
+          "claim_id": 14,
+          "claim": "After the tens place borrows 1 from the hundreds place, the tens-place result is 9, so O=9.",
+          "label": "reasoning",
+          "source": "The tens-place result is 9, so O=9"
+        },
+        {
+          "claim_id": 15,
+          "claim": "Since the hundreds place has had 1 borrowed away by the tens place, the condition simplifies to K-G=1.",
+          "label": "reasoning",
+          "source": "Since the hundreds place has had 1 borrowed away by the tens place, it must satisfy K-1-G=0, therefore K-G=1"
+        },
+        {
+          "claim_id": 16,
+          "claim": "After borrowing in the ones place, there is N-R+10=O=9, therefore R=N+1.",
+          "label": "reasoning",
+          "source": "After borrowing in the ones place, there is N-R+10=O=9, so N-R=-1, namely R=N+1"
+        },
+        {
+          "claim_id": 17,
+          "claim": "In order to make KAN largest, one should first maximize the hundreds digit K.",
+          "label": "reasoning",
+          "source": "In order to make KAN largest, first maximize the hundreds digit K"
+        },
+        {
+          "claim_id": 18,
+          "claim": "Because O=9 and K=G+1, K cannot be 9, and the maximum possible K is 8, at which time G=7.",
+          "label": "reasoning",
+          "source": "Because O=9, K cannot be 9; and K=G+1, so the maximum possible K is 8, at which time G=7"
+        },
+        {
+          "claim_id": 19,
+          "claim": "Next maximize the tens digit A; the largest unused digit different from 8, 7, 9 is 6, so A=6.",
+          "label": "reasoning",
+          "source": "Next maximize the tens digit A; the largest unused digit different from 8,7,9 is 6, so A=6"
+        },
+        {
+          "claim_id": 20,
+          "claim": "Finally maximize N, and require R=N+1 and N, R to be different from 8, 7, 6, 9.",
+          "label": "reasoning",
+          "source": "Finally maximize N, and require R=N+1 and different from 8,7,6,9"
+        },
+        {
+          "claim_id": 21,
+          "claim": "N=5 would make R=6, conflicting with A.",
+          "label": "reasoning",
+          "source": "N=5 would make R=6, conflicting with A"
+        },
+        {
+          "claim_id": 22,
+          "claim": "When N=4, R=5, satisfying that all different letters correspond to different digits.",
+          "label": "reasoning",
+          "source": "When N=4, R=5, satisfying that all different letters correspond to different digits"
+        },
+        {
+          "claim_id": 23,
+          "claim": "KAN=864。",
+          "label": "reasoning",
+          "source": "Therefore KAN=864"
+        }
+      ],
+      "coverage_notes": "已按 review 的 fix 项补充“不同字母对应不同数字”关键约束，并拆分原第 12、18 条复合推理；其余 claims 保持原有内容与顺序。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:20Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/03177_math_mathvision_open_bcd61fa877c8d66e81322a86_e7f83c5e3a.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04844_math_mathvision_open_bcd61fa877c8d66e81322a86_e7f83c5e3a.json"
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "pack_index": 1197,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00162:open_51d6e4250b592b2f02f45ec8",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_51d6e4250b592b2f02f45ec8",
+    "source_problem_id": "open_51d6e4250b592b2f02f45ec8",
+    "problem_run_key": null,
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 70.0,
+    "difficulty_level": "medium_high",
+    "weighted_accuracy": 0.3,
+    "wrong_models": [
+      "gpt55_high",
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "False",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00162.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00162.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00162.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00162.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Please choose the SMILES expression of the transition-state structure shown in the image, ignoring the arrows. <image_1>",
+    "raw_answer_text": "*/C=C/NC(C*)C(*)C(C)=O.[NH4+]",
+    "open_variant_id": "open_51d6e4250b592b2f02f45ec8",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "*/C=C/NC(C*)C(*)C(C)=O.[NH4+]",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_92df1df029f3cb566344a3db",
+        "problem_id": "prob_30233f23b8987a3d88a957b9",
+        "node_type": "answer_claim",
+        "canonical_value": "*/C=C/NC(C*)C(*)C(C)=O.[NH4+]",
+        "surface_forms": [
+          "*/C=C/NC(C*)C(*)C(C)=O.[NH4+]"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_3b1350e3e42c66ea51b327de"
+        ],
+        "evidence_refs": [
+          "asset_3b1350e3e42c66ea51b327de"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "*/C=C/NC(C*)C(*)C(C)=O.[NH4+]"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T04:32:05Z",
+        "updated_at": "2026-04-08T04:32:05Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_51d6e4250b592b2f02f45ec8",
+      "parent_problem_id": "prob_30233f23b8987a3d88a957b9",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "*/C=C/NC(C*)C(*)C(C)=O.[NH4+]",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*/C=C/NC(C*)C(*)C(C)=O.[NH4+]",
+    "resolved_from_fallback": true,
+    "final_cot": "Image description: In the upper part of the figure there is a positively charged H3N-H fragment, namely the ammonium ion form; below is a nitrogen-containing organic skeleton, where the nitrogen atom is connected to the alkenyl fragment on the right and to the saturated carbon chain on the left, the chain has multiple R substituents, there is a C=C double bond at the lower right, and there is a carbonyl at the upper right. Several curved arrows are also drawn in the figure, but the problem requires ignoring these arrows. Reasoning: After ignoring the curved arrows, this structure should be read according to ordinary connectivity as two unconnected components. The upper H3N-H positively charged fragment is written as [NH4+]. In the lower organic fragment, each R group is represented by the wildcard atom *. According to the specified method, tracing starts from the right R-substituted alkene, passes through C=C to N, and then through the saturated carbon chain to the carbonyl, which can be written as */C=C/NC(C*)C(*)C(C)=O. The alkene configuration is represented by /C=C/. The two unconnected components are connected with a dot, therefore the overall SMILES is */C=C/NC(C*)C(*)C(C)=O.[NH4+].",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "id": "open_51d6e4250b592b2f02f45ec8",
+      "final_cot": "Image description: In the upper part of the figure there is a positively charged H3N-H fragment, namely the ammonium ion form; below is a nitrogen-containing organic skeleton, where the nitrogen atom is connected to the alkenyl fragment on the right and to the saturated carbon chain on the left, the chain has multiple R substituents, there is a C=C double bond at the lower right, and there is a carbonyl at the upper right. Several curved arrows are also drawn in the figure, but the problem requires ignoring these arrows.\n\nReasoning: After ignoring the curved arrows, this structure should be read according to ordinary connectivity as two unconnected components. The upper H3N-H positively charged fragment is written as [NH4+]. In the lower organic fragment, each R group is represented by the wildcard atom *. According to the specified method, tracing starts from the right R-substituted alkene, passes through C=C to N, and then through the saturated carbon chain to the carbonyl, which can be written as */C=C/NC(C*)C(*)C(C)=O. The alkene configuration is represented by /C=C/. The two unconnected components are connected with a dot, therefore the overall SMILES is */C=C/NC(C*)C(*)C(C)=O.[NH4+].",
+      "difficulty_score": 65.0
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_51d6e4250b592b2f02f45ec8",
+    "problem_run_key": null,
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*/C=C/NC(C*)C(*)C(C)=O.[NH4+]",
+    "resolved_from_fallback": true,
+    "final_cot": "Image description: In the upper part of the figure there is a positively charged H3N-H fragment, namely the ammonium ion form; below is a nitrogen-containing organic skeleton, where the nitrogen atom is connected to the alkenyl fragment on the right and to the saturated carbon chain on the left, the chain has multiple R substituents, there is a C=C double bond at the lower right, and there is a carbonyl at the upper right. Several curved arrows are also drawn in the figure, but the problem requires ignoring these arrows.\n\nReasoning: After ignoring the curved arrows, this structure should be read according to ordinary connectivity as two unconnected components. The upper H3N-H positively charged fragment is written as [NH4+]. In the lower organic fragment, each R group is represented by the wildcard atom *. According to the specified method, tracing starts from the right R-substituted alkene, passes through C=C to N, and then through the saturated carbon chain to the carbonyl, which can be written as */C=C/NC(C*)C(*)C(C)=O. The alkene configuration is represented by /C=C/. The two unconnected components are connected with a dot, therefore the overall SMILES is */C=C/NC(C*)C(*)C(C)=O.[NH4+].",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "In the upper part of the figure there is a positively charged H3N-H fragment.",
+        "label": "perception",
+        "source": "In the upper part of the figure there is a positively charged H3N-H fragment"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The upper positively charged H3N-H fragment is in the ammonium ion form.",
+        "label": "perception",
+        "source": "namely the ammonium ion form"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Below in the figure is a nitrogen-containing organic skeleton.",
+        "label": "perception",
+        "source": "below is a nitrogen-containing organic skeleton"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The nitrogen atom of the lower organic skeleton is connected to the alkenyl fragment on the right.",
+        "label": "perception",
+        "source": "the nitrogen atom is connected to the alkenyl fragment on the right"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The nitrogen atom of the lower organic skeleton is connected to the saturated carbon chain on the left.",
+        "label": "perception",
+        "source": "and is connected to the saturated carbon chain on the left"
+      },
+      {
+        "claim_id": 6,
+        "claim": "There are multiple R substituents on the left saturated carbon chain.",
+        "label": "perception",
+        "source": "the chain has multiple R substituents"
+      },
+      {
+        "claim_id": 7,
+        "claim": "There is a C=C double bond at the lower right of the figure.",
+        "label": "perception",
+        "source": "there is a C=C double bond at the lower right"
+      },
+      {
+        "claim_id": 8,
+        "claim": "There is a carbonyl at the upper right of the figure.",
+        "label": "perception",
+        "source": "there is a carbonyl at the upper right"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Several curved arrows are drawn in the figure.",
+        "label": "perception",
+        "source": "Several curved arrows are also drawn in the figure"
+      },
+      {
+        "claim_id": 10,
+        "claim": "This solution ignores the curved arrows.",
+        "label": "reasoning",
+        "source": "After ignoring the curved arrows"
+      },
+      {
+        "claim_id": 11,
+        "claim": "After ignoring the curved arrows, this structure should be read according to ordinary connectivity as two unconnected components.",
+        "label": "reasoning",
+        "source": "this structure should be read according to ordinary connectivity as two unconnected components"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The upper H3N-H positively charged fragment is written as [NH4+].",
+        "label": "reasoning",
+        "source": "The upper H3N-H positively charged fragment is written as [NH4+]"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Each R group in the lower organic fragment is represented by the wildcard atom *.",
+        "label": "reasoning",
+        "source": "In the lower organic fragment, each R group is represented by the wildcard atom *"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The specified tracing method starts from the right R-substituted alkene.",
+        "label": "reasoning",
+        "source": "according to the specified method, tracing starts from the right R-substituted alkene"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The specified tracing path passes through C=C to N.",
+        "label": "reasoning",
+        "source": "passes through C=C to N"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The specified tracing path then passes through the saturated carbon chain to the carbonyl.",
+        "label": "reasoning",
+        "source": "then passes through the saturated carbon chain to the carbonyl"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The lower organic fragment can be written as */C=C/NC(C*)C(*)C(C)=O.",
+        "label": "reasoning",
+        "source": "can be written as */C=C/NC(C*)C(*)C(C)=O"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The alkene configuration is represented by /C=C/.",
+        "label": "knowledge",
+        "source": "The alkene configuration is represented by /C=C/"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The two unconnected components are connected with a dot.",
+        "label": "knowledge",
+        "source": "The two unconnected components are connected with a dot"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The overall SMILES is */C=C/NC(C*)C(*)C(C)=O.[NH4+].",
+        "label": "reasoning",
+        "source": "therefore the overall SMILES is */C=C/NC(C*)C(*)C(C)=O.[NH4+]"
+      }
+    ],
+    "claim_count": 20,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "In the upper part of the figure there is a positively charged H3N-H fragment.",
+          "label": "perception",
+          "source": "In the upper part of the figure there is a positively charged H3N-H fragment"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The upper positively charged H3N-H fragment is in the ammonium ion form.",
+          "label": "perception",
+          "source": "namely the ammonium ion form"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Below in the figure is a nitrogen-containing organic skeleton.",
+          "label": "perception",
+          "source": "below is a nitrogen-containing organic skeleton"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The nitrogen atom of the lower organic skeleton is connected to the alkenyl fragment on the right.",
+          "label": "perception",
+          "source": "the nitrogen atom is connected to the alkenyl fragment on the right"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The nitrogen atom of the lower organic skeleton is connected to the saturated carbon chain on the left.",
+          "label": "perception",
+          "source": "and is connected to the saturated carbon chain on the left"
+        },
+        {
+          "claim_id": 6,
+          "claim": "There are multiple R substituents on the left saturated carbon chain.",
+          "label": "perception",
+          "source": "the chain has multiple R substituents"
+        },
+        {
+          "claim_id": 7,
+          "claim": "There is a C=C double bond at the lower right of the figure.",
+          "label": "perception",
+          "source": "there is a C=C double bond at the lower right"
+        },
+        {
+          "claim_id": 8,
+          "claim": "There is a carbonyl at the upper right of the figure.",
+          "label": "perception",
+          "source": "there is a carbonyl at the upper right"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Several curved arrows are drawn in the figure.",
+          "label": "perception",
+          "source": "Several curved arrows are also drawn in the figure"
+        },
+        {
+          "claim_id": 10,
+          "claim": "This solution ignores the curved arrows.",
+          "label": "reasoning",
+          "source": "After ignoring the curved arrows"
+        },
+        {
+          "claim_id": 11,
+          "claim": "After ignoring the curved arrows, this structure should be read according to ordinary connectivity as two unconnected components.",
+          "label": "reasoning",
+          "source": "this structure should be read according to ordinary connectivity as two unconnected components"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The upper H3N-H positively charged fragment is written as [NH4+].",
+          "label": "reasoning",
+          "source": "The upper H3N-H positively charged fragment is written as [NH4+]"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Each R group in the lower organic fragment is represented by the wildcard atom *.",
+          "label": "reasoning",
+          "source": "In the lower organic fragment, each R group is represented by the wildcard atom *"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The specified tracing method starts from the right R-substituted alkene.",
+          "label": "reasoning",
+          "source": "according to the specified method, tracing starts from the right R-substituted alkene"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The specified tracing path passes through C=C to N.",
+          "label": "reasoning",
+          "source": "passes through C=C to N"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The specified tracing path then passes through the saturated carbon chain to the carbonyl.",
+          "label": "reasoning",
+          "source": "then passes through the saturated carbon chain to the carbonyl"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The lower organic fragment can be written as */C=C/NC(C*)C(*)C(C)=O.",
+          "label": "reasoning",
+          "source": "can be written as */C=C/NC(C*)C(*)C(C)=O"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The alkene configuration is represented by /C=C/.",
+          "label": "knowledge",
+          "source": "The alkene configuration is represented by /C=C/"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The two unconnected components are connected with a dot.",
+          "label": "knowledge",
+          "source": "The two unconnected components are connected with a dot"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The overall SMILES is */C=C/NC(C*)C(*)C(C)=O.[NH4+].",
+          "label": "reasoning",
+          "source": "therefore the overall SMILES is */C=C/NC(C*)C(*)C(C)=O.[NH4+]"
+        }
+      ],
+      "coverage_notes": "已按原始顺序覆盖图像描述、忽略箭头后的结构解读、片段 SMILES 转换、SMILES 连接规则以及最终答案。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:17Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/00727_chemistry_emma_chemistry_open_51d6e4250b592b2f02f45ec8_2d9f020d75.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/01197_chemistry_emma_chemistry_open_51d6e4250b592b2f02f45ec8_2d9f020d75.json"
+  }
+}

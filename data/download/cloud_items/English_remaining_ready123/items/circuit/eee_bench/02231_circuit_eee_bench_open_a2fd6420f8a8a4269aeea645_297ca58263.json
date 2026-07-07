@@ -1,0 +1,772 @@
+{
+  "pack_index": 2231,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "circuit/eee_bench:eeebench01737:eee_bench__open_a2fd6420f8a8a4269aeea645__fee4dcc96132",
+    "subject_dir": "circuit",
+    "dataset_slug": "eee_bench",
+    "problem_id": "open_a2fd6420f8a8a4269aeea645",
+    "source_problem_id": "open_a2fd6420f8a8a4269aeea645",
+    "problem_run_key": "eee_bench__open_a2fd6420f8a8a4269aeea645__fee4dcc96132",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 50.0,
+    "difficulty_level": "medium",
+    "weighted_accuracy": 0.5,
+    "wrong_models": [
+      "gpt55_high",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "False",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01737.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01737.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/circuit/eee_bench/samples/eeebench01737.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench01737.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "The open-loop frequency response is shown in <image>. The unstable system in the figure is ( ).",
+    "raw_answer_text": "System (2)",
+    "open_variant_id": "open_a2fd6420f8a8a4269aeea645",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "The open-loop frequency response is shown in the figure. Which system is unstable?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "System (2)",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_d87efaafc8f698f4cd42015e",
+        "problem_id": "prob_e028257145d5017533f9cc7d",
+        "node_type": "answer_claim",
+        "canonical_value": "System (2)",
+        "surface_forms": [
+          "System (2)"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_c49269aad310e40b49487315"
+        ],
+        "evidence_refs": [
+          "asset_c49269aad310e40b49487315"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "System (2)"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-05T18:34:21Z",
+        "updated_at": "2026-04-05T18:34:21Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_a2fd6420f8a8a4269aeea645",
+      "parent_problem_id": "prob_e028257145d5017533f9cc7d",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "The open-loop frequency response is shown in the figure. Which system is unstable?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "System (2)",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "The open-loop frequency response is shown in the figure. Which system is unstable?",
+    "raw_answer": "System (2)",
+    "raw_standard_answer": "System (2)",
+    "resolved_question_text": "The open-loop frequency response is shown in the figure. Which system is unstable?",
+    "resolved_answer": "System (2)",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The figure gives three open-loop frequency responses/Nyquist curves side by side, labeled System1, System2, and System3 respectively. Each graph has complex-plane coordinate axes, the key real-axis points -1 and 0 are marked on the horizontal axis, and the frequency direction is indicated with arrows. The annotation of System1 is P=1, ν=0; the curve starts from near the negative real axis, winds downward into an arc, and then tends toward 0; looking at the complete Nyquist curve, it gives an encirclement of the -1 point that matches P=1. The annotation of System2 is P=1, ν=1; the curve is near the imaginary axis and bends leftward, but the encirclement situation relative to the -1 point does not satisfy the Nyquist winding number required when P=1. The annotation of System3 is P=0, ν=1; the curve passes in a wavelike form near -1, but the net winding number is 0, matching P=0. Then reason: The Nyquist criterion requires that, when the closed loop is stable, the net winding number of the open-loop frequency response around -1+j0 must match the number P of open-loop right-half-plane poles according to the corresponding sign convention; if it does not match, then the closed loop has right-half-plane poles and is unstable. The winding number of System1 is consistent with P=1, so it is stable. The winding number of System2 is inconsistent with P=1, so the closed loop is unstable. The net winding number of System3 is consistent with P=0, so it is stable. Therefore only System (2) is an unstable system.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_a2fd6420f8a8a4269aeea645",
+      "problem_run_key": "eee_bench__open_a2fd6420f8a8a4269aeea645__fee4dcc96132",
+      "question_text": "The open-loop frequency response is shown in the figure. Which system is unstable?",
+      "standard_answer": "System (2)",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench01456.png",
+        "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/crops/eeebench01456.png"
+      ],
+      "initial_multi_solution_score": 0.3287,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First describe the figure as three Nyquist/open-loop frequency-response curves labeled System 1, System 2, and System 3, each drawn relative to the real-axis point -1 and with frequency-direction arrows. For each system, read the plotted encirclement behavior and the given P/ν annotations. Then apply the Nyquist criterion to compare the encirclement of -1+j0 with the open-loop unstable-pole count. The comparison identifies only System (2) as violating the stability condition, so the unstable system is System (2).",
+          "CoT_raw": "先描述图像：图中并排给出三个开环频率响应/Nyquist 曲线，分别标为 System1、System2、System3。每幅图都有复平面坐标轴，横轴上标出关键实轴点 -1 和 0，并用箭头标明频率方向。System1 的标注为 P=1、ν=0，曲线从负实轴附近出发，向下绕成一段弧形后趋向 0；按完整 Nyquist 曲线看，它对 -1 点给出与 P=1 相匹配的 encirclement。System2 的标注为 P=1、ν=1，曲线在虚轴附近并向左弯曲，但相对于 -1 点的绕行情况没有满足 P=1 时所需的 Nyquist 绕数。System3 的标注为 P=0、ν=1，曲线在 -1 附近呈波形穿行，但净绕数为 0，与 P=0 相匹配。\n再推理：Nyquist 判据要求闭环稳定时，开环频率响应对 -1+j0 的净绕数必须与开环右半平面极点数 P 按相应符号约定相匹配；若不匹配，则闭环存在右半平面极点而不稳定。System1 的绕数与 P=1 一致，因此稳定。System2 的绕数与 P=1 不一致，因此闭环不稳定。System3 的净绕数与 P=0 一致，因此稳定。所以只有 System (2) 是不稳定系统。",
+          "model_answer": "System (2)",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "System (2)",
+              "predicted_part": "System (2)",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中并排给出三个开环频率响应/Nyquist 曲线，分别标为 System1、System2、System3。每幅图都有复平面坐标轴，横轴上标出关键实轴点 -1 和 0，并用箭头标明频率方向。System1 的标注为 P=1、ν=0，曲线从负实轴附近出发，向下绕成一段弧形后趋向 0；按完整 Nyquist 曲线看，它对 -1 点给出与 P=1 相匹配的 encirclement。System2 的标注为 P=1、ν=1，曲线在虚轴附近并向左弯曲，但相对于 -1 点的绕行情况没有满足 P=1 时所需的 Nyquist 绕数。System3 的标注为 P=0、ν=1，曲线在 -1 附近呈波形穿行，但净绕数为 0，与 P=0 相匹配。\n再推理：Nyquist 判据要求闭环稳定时，开环频率响应对 -1+j0 的净绕数必须与开环右半平面极点数 P 按相应符号约定相匹配；若不匹配，则闭环存在右半平面极点而不稳定。System1 的绕数与 P=1 一致，因此稳定。System2 的绕数与 P=1 不一致，因此闭环不稳定。System3 的净绕数与 P=0 一致，因此稳定。所以只有 System (2) 是不稳定系统。",
+          "answer_answer_check_final": "System (2)",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "The trace is broadly consistent with the image, the standard answer, and the assigned method: it first describes the three Nyquist/open-loop frequency-response plots, then applies the Nyquist criterion and concludes System (2). To improve rigor, it should make the encirclement sign convention explicit and clarify how the displayed ν annotations relate to the net encirclement count, especially because statements like “matching P=1” are somewhat compressed. Visual descriptions are mostly grounded, though the claims about the complete Nyquist encirclement are inferential rather than directly drawn in full.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中并排给出三个开环频率响应/Nyquist 曲线，分别标为 System1、System2、System3。每幅图都有复平面坐标轴，横轴上标出关键实轴点 -1 和 0，并用箭头标明频率方向。System1 的标注为 P=1、ν=0，曲线从负实轴附近出发，向下绕成一段弧形后趋向 0；按完整 Nyquist 曲线看，它对 -1 点给出与 P=1 相匹配的 encirclement。System2 的标注为 P=1、ν=1，曲线在虚轴附近并向左弯曲，但相对于 -1 点的绕行情况没有满足 P=1 时所需的 Nyquist 绕数。System3 的标注为 P=0、ν=1，曲线在 -1 附近呈波形穿行，但净绕数为 0，与 P=0 相匹配。\n再推理：Nyquist 判据要求闭环稳定时，开环频率响应对 -1+j0 的净绕数必须与开环右半平面极点数 P 按相应符号约定相匹配；若不匹配，则闭环存在右半平面极点而不稳定。System1 的绕数与 P=1 一致，因此稳定。System2 的绕数与 P=1 不一致，因此闭环不稳定。System3 的净绕数与 P=0 一致，因此稳定。所以只有 System (2) 是不稳定系统。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct control-theory route: identify the critical point and encirclement information from the Nyquist/open-loop frequency-response plots, then apply the Nyquist stability criterion to select the unstable case.",
+            "image_role": "Read the three labeled open-loop frequency-response/Nyquist plots for System 1, System 2, and System 3. Note the marked critical point at -1 on the real axis, the arrows showing the direction as frequency increases, and the annotations beside each plot; in particular, System 2 is marked with an encirclement/crossing count that, together with its open-loop right-half-plane pole count, gives the unstable case.",
+            "text_role": "Use the question text only to establish that the task is to decide which of the systems shown by the open-loop frequency-response plots is unstable.",
+            "knowledge_role": "Use the Nyquist stability criterion: closed-loop stability is determined by whether the Nyquist encirclement of the critical point -1+j0 correctly compensates for the number of open-loop right-half-plane poles. If the required Nyquist relation is not satisfied, the closed-loop system has right-half-plane poles and is unstable."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中并排给出三个开环频率响应/Nyquist 曲线，分别标为 System1、System2、System3。每幅图都有复平面坐标轴，横轴上标出关键实轴点 -1 和 0，并用箭头标明频率方向。System1 的标注为 P=1、ν=0，曲线从负实轴附近出发，向下绕成一段弧形后趋向 0；按完整 Nyquist 曲线看，它对 -1 点给出与 P=1 相匹配的 encirclement。System2 的标注为 P=1、ν=1，曲线在虚轴附近并向左弯曲，但相对于 -1 点的绕行情况没有满足 P=1 时所需的 Nyquist 绕数。System3 的标注为 P=0、ν=1，曲线在 -1 附近呈波形穿行，但净绕数为 0，与 P=0 相匹配。\n再推理：Nyquist 判据要求闭环稳定时，开环频率响应对 -1+j0 的净绕数必须与开环右半平面极点数 P 按相应符号约定相匹配；若不匹配，则闭环存在右半平面极点而不稳定。System1 的绕数与 P=1 一致，因此稳定。System2 的绕数与 P=1 不一致，因此闭环不稳定。System3 的净绕数与 P=0 一致，因此稳定。所以只有 System (2) 是不稳定系统。",
+            "model_answer": "System (2)",
+            "method_following_score_self_report": 0.96,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2791,
+              "completion_tokens": 2826,
+              "total_tokens": 5617,
+              "cached_tokens": 0,
+              "reasoning_tokens": 2422
+            },
+            "_llm_elapsed_seconds": 63.733,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "The trace is broadly consistent with the image, the standard answer, and the assigned method: it first describes the three Nyquist/open-loop frequency-response plots, then applies the Nyquist criterion and concludes System (2). To improve rigor, it should make the encirclement sign convention explicit and clarify how the displayed ν annotations relate to the net encirclement count, especially because statements like “matching P=1” are somewhat compressed. Visual descriptions are mostly grounded, though the claims about the complete Nyquist encirclement are inferential rather than directly drawn in full.",
+              "major_failures": [],
+              "extractability_score": 0.85,
+              "grounding_score": 0.8,
+              "method_fidelity_score": 0.9,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 57.225
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 63.766,
+              "usage_delta": {
+                "request_count": 37,
+                "successful_request_count": 33,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 37,
+                "requests_with_usage": 33,
+                "prompt_tokens": 104949,
+                "completion_tokens": 26748,
+                "total_tokens": 131697,
+                "cached_tokens": 0,
+                "reasoning_tokens": 16208,
+                "total_request_seconds": 615.73,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 57.257,
+              "usage_delta": {
+                "request_count": 16,
+                "successful_request_count": 21,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 16,
+                "requests_with_usage": 22,
+                "prompt_tokens": 68632,
+                "completion_tokens": 21005,
+                "total_tokens": 89637,
+                "cached_tokens": 3328,
+                "reasoning_tokens": 15038,
+                "total_request_seconds": 481.917,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 100.679,
+          "usage_delta": {
+            "request_count": 34,
+            "successful_request_count": 41,
+            "failed_request_count": 1,
+            "retry_count": 1,
+            "text_request_count": 0,
+            "multimodal_request_count": 34,
+            "requests_with_usage": 42,
+            "prompt_tokens": 133661,
+            "completion_tokens": 41540,
+            "total_tokens": 175201,
+            "cached_tokens": 0,
+            "reasoning_tokens": 29386,
+            "total_request_seconds": 978.699,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EEE-Bench",
+        "dataset_slug": "eee_bench",
+        "source_problem_id": "349",
+        "subject": "电气电子工程领域",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01737.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_e028257145d5017533f9cc7d",
+          "open_variant_count": 1,
+          "open_variant_id": "open_a2fd6420f8a8a4269aeea645",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "domain_specific_knowledge_required",
+            "image_content_not_textually_described",
+            "short_text_answer_with_choice_normalization_risk"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 221.735,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 9014,
+        "completion_tokens": 8455,
+        "total_tokens": 17469,
+        "cached_tokens": 0,
+        "reasoning_tokens": 7506,
+        "total_request_seconds": 221.604,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "The open-loop frequency response is shown in the figure. Which system is unstable?",
+      "answer": "System (2)",
+      "final_cot": "First describe the image: The figure gives three open-loop frequency responses/Nyquist curves side by side, labeled System1, System2, and System3 respectively. Each graph has complex-plane coordinate axes, the key real-axis points -1 and 0 are marked on the horizontal axis, and the frequency direction is indicated with arrows. The annotation of System1 is P=1, ν=0; the curve starts from near the negative real axis, winds downward into an arc, and then tends toward 0; looking at the complete Nyquist curve, it gives an encirclement of the -1 point that matches P=1. The annotation of System2 is P=1, ν=1; the curve is near the imaginary axis and bends leftward, but the encirclement situation relative to the -1 point does not satisfy the Nyquist winding number required when P=1. The annotation of System3 is P=0, ν=1; the curve passes in a wavelike form near -1, but the net winding number is 0, matching P=0.\nThen reason: The Nyquist criterion requires that, when the closed loop is stable, the net winding number of the open-loop frequency response around -1+j0 must match the number P of open-loop right-half-plane poles according to the corresponding sign convention; if it does not match, then the closed loop has right-half-plane poles and is unstable. The winding number of System1 is consistent with P=1, so it is stable. The winding number of System2 is inconsistent with P=1, so the closed loop is unstable. The net winding number of System3 is consistent with P=0, so it is stable. Therefore only System (2) is an unstable system.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "The trace is broadly consistent with the image, the standard answer, and the assigned method: it first describes the three Nyquist/open-loop frequency-response plots, then applies the Nyquist criterion and concludes System (2). To improve rigor, it should make the encirclement sign convention explicit and clarify how the displayed ν annotations relate to the net encirclement count, especially because statements like “matching P=1” are somewhat compressed. Visual descriptions are mostly grounded, though the claims about the complete Nyquist encirclement are inferential rather than directly drawn in full.",
+          "major_failures": [],
+          "extractability_score": 0.85,
+          "grounding_score": 0.8,
+          "method_fidelity_score": 0.9,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 57.225
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_resume_openvariants_20260506T003434CST",
+        "processed_index": 1853,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "circuit",
+        "dataset": "eee_bench",
+        "relative_dataset": "circuit/eee_bench",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench01737.json",
+        "source_sample_filename": "eeebench01737.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench01737.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.events.jsonl",
+        "written_at": "2026-05-06T01:19:19Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:17Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_a2fd6420f8a8a4269aeea645",
+          "new_problem_id": "open_a2fd6420f8a8a4269aeea645",
+          "old_problem_run_key": "eee_bench__open_a2fd6420f8a8a4269aeea645__d3970186c5ce",
+          "new_problem_run_key": "eee_bench__open_a2fd6420f8a8a4269aeea645__fee4dcc96132",
+          "target_relpath": "circuit/eee_bench/samples/eeebench01737.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_a2fd6420f8a8a4269aeea645",
+    "problem_run_key": "eee_bench__open_a2fd6420f8a8a4269aeea645__fee4dcc96132",
+    "raw_question_text": "The open-loop frequency response is shown in the figure. Which system is unstable?",
+    "raw_answer": "System (2)",
+    "raw_standard_answer": "System (2)",
+    "resolved_question_text": "The open-loop frequency response is shown in the figure. Which system is unstable?",
+    "resolved_answer": "System (2)",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The figure gives three open-loop frequency responses/Nyquist curves side by side, labeled System1, System2, and System3 respectively. Each graph has complex-plane coordinate axes, the key real-axis points -1 and 0 are marked on the horizontal axis, and the frequency direction is indicated with arrows. The annotation of System1 is P=1, ν=0; the curve starts from near the negative real axis, winds downward into an arc, and then tends toward 0; looking at the complete Nyquist curve, it gives an encirclement of the -1 point that matches P=1. The annotation of System2 is P=1, ν=1; the curve is near the imaginary axis and bends leftward, but the encirclement situation relative to the -1 point does not satisfy the Nyquist winding number required when P=1. The annotation of System3 is P=0, ν=1; the curve passes in a wavelike form near -1, but the net winding number is 0, matching P=0.\nThen reason: The Nyquist criterion requires that, when the closed loop is stable, the net winding number of the open-loop frequency response around -1+j0 must match the number P of open-loop right-half-plane poles according to the corresponding sign convention; if it does not match, then the closed loop has right-half-plane poles and is unstable. The winding number of System1 is consistent with P=1, so it is stable. The winding number of System2 is inconsistent with P=1, so the closed loop is unstable. The net winding number of System3 is consistent with P=0, so it is stable. Therefore only System (2) is an unstable system.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure gives three open-loop frequency responses/Nyquist curves side by side.",
+        "label": "perception",
+        "source": "The figure gives three open-loop frequency responses/Nyquist curves side by side"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The first open-loop frequency response/Nyquist curve is labeled System1.",
+        "label": "perception",
+        "source": "They are labeled System1, System2, and System3 respectively"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The second open-loop frequency response/Nyquist curve is labeled System2.",
+        "label": "perception",
+        "source": "They are labeled System1, System2, and System3 respectively"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The third open-loop frequency response/Nyquist curve is labeled System3.",
+        "label": "perception",
+        "source": "They are labeled System1, System2, and System3 respectively"
+      },
+      {
+        "claim_id": 5,
+        "claim": "Each graph has complex-plane coordinate axes.",
+        "label": "perception",
+        "source": "Each graph has complex-plane coordinate axes"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The key real-axis points -1 and 0 are marked on the horizontal axis of each graph.",
+        "label": "perception",
+        "source": "The key real-axis points -1 and 0 are marked on the horizontal axis"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Each graph indicates the frequency direction with arrows.",
+        "label": "perception",
+        "source": "And the frequency direction is indicated with arrows"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The annotation of System1 is P=1.",
+        "label": "perception",
+        "source": "The annotation of System1 is P=1, ν=0"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The annotation of System1 is ν=0.",
+        "label": "perception",
+        "source": "The annotation of System1 is P=1, ν=0"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The curve of System1 starts from near the negative real axis.",
+        "label": "perception",
+        "source": "The curve starts from near the negative real axis"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The curve of System1 winds downward into an arc.",
+        "label": "perception",
+        "source": "Winds downward into an arc and then tends toward 0"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The curve of System1 tends toward 0.",
+        "label": "perception",
+        "source": "Winds downward into an arc and then tends toward 0"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The annotation of System2 is P=1.",
+        "label": "perception",
+        "source": "The annotation of System2 is P=1, ν=1"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The annotation of System2 is ν=1.",
+        "label": "perception",
+        "source": "The annotation of System2 is P=1, ν=1"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The curve of System2 is near the imaginary axis.",
+        "label": "perception",
+        "source": "The curve is near the imaginary axis and bends leftward"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The curve of System2 bends leftward.",
+        "label": "perception",
+        "source": "The curve is near the imaginary axis and bends leftward"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The annotation of System3 is P=0.",
+        "label": "perception",
+        "source": "The annotation of System3 is P=0, ν=1"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The annotation of System3 is ν=1.",
+        "label": "perception",
+        "source": "The annotation of System3 is P=0, ν=1"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The curve of System3 passes in a waveform near -1.",
+        "label": "perception",
+        "source": "The curve passes in a waveform near -1"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The net encirclement number of System3 is 0.",
+        "label": "reasoning",
+        "source": "But the net encirclement number is 0"
+      },
+      {
+        "claim_id": 21,
+        "claim": "The Nyquist criterion requires that when the closed loop is stable, the net encirclement number of the open-loop frequency response around -1+j0 must match the number P of open-loop right-half-plane poles according to the corresponding sign convention.",
+        "label": "knowledge",
+        "source": "The Nyquist criterion requires that when the closed loop is stable, the net encirclement number of the open-loop frequency response around -1+j0 must match the number P of open-loop right-half-plane poles according to the corresponding sign convention"
+      },
+      {
+        "claim_id": 22,
+        "claim": "If the Nyquist encirclement number does not match the number P of open-loop right-half-plane poles, then the closed loop has right-half-plane poles and is unstable.",
+        "label": "knowledge",
+        "source": "If it does not match, then the closed loop has right-half-plane poles and is unstable"
+      },
+      {
+        "claim_id": 23,
+        "claim": "The encirclement number of System1 is consistent with P=1.",
+        "label": "reasoning",
+        "source": "The encirclement number of System1 is consistent with P=1"
+      },
+      {
+        "claim_id": 24,
+        "claim": "System1 is stable.",
+        "label": "reasoning",
+        "source": "Therefore it is stable"
+      },
+      {
+        "claim_id": 25,
+        "claim": "The encirclement number of System2 is not consistent with P=1.",
+        "label": "reasoning",
+        "source": "The encirclement number of System2 is not consistent with P=1"
+      },
+      {
+        "claim_id": 26,
+        "claim": "The closed loop of System2 is unstable.",
+        "label": "reasoning",
+        "source": "Therefore the closed loop is unstable"
+      },
+      {
+        "claim_id": 27,
+        "claim": "The net encirclement number of System3 is consistent with P=0.",
+        "label": "reasoning",
+        "source": "The net encirclement number of System3 is consistent with P=0"
+      },
+      {
+        "claim_id": 28,
+        "claim": "System3 is stable.",
+        "label": "reasoning",
+        "source": "Therefore it is stable"
+      },
+      {
+        "claim_id": 29,
+        "claim": "Only System (2) is an unstable system.",
+        "label": "reasoning",
+        "source": "So only System (2) is an unstable system"
+      }
+    ],
+    "claim_count": 29,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure gives three open-loop frequency responses/Nyquist curves side by side.",
+          "label": "perception",
+          "source": "The figure gives three open-loop frequency responses/Nyquist curves side by side"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The first open-loop frequency response/Nyquist curve is labeled System1.",
+          "label": "perception",
+          "source": "They are labeled System1, System2, and System3 respectively"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The second open-loop frequency response/Nyquist curve is labeled System2.",
+          "label": "perception",
+          "source": "They are labeled System1, System2, and System3 respectively"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The third open-loop frequency response/Nyquist curve is labeled System3.",
+          "label": "perception",
+          "source": "They are labeled System1, System2, and System3 respectively"
+        },
+        {
+          "claim_id": 5,
+          "claim": "Each graph has complex-plane coordinate axes.",
+          "label": "perception",
+          "source": "Each graph has complex-plane coordinate axes"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The key real-axis points -1 and 0 are marked on the horizontal axis of each graph.",
+          "label": "perception",
+          "source": "The key real-axis points -1 and 0 are marked on the horizontal axis"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Each graph indicates the frequency direction with arrows.",
+          "label": "perception",
+          "source": "And the frequency direction is indicated with arrows"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The annotation of System1 is P=1.",
+          "label": "perception",
+          "source": "The annotation of System1 is P=1, ν=0"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The annotation of System1 is ν=0.",
+          "label": "perception",
+          "source": "The annotation of System1 is P=1, ν=0"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The curve of System1 starts from near the negative real axis.",
+          "label": "perception",
+          "source": "The curve starts from near the negative real axis"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The curve of System1 winds downward into an arc.",
+          "label": "perception",
+          "source": "Winds downward into an arc and then tends toward 0"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The curve of System1 tends toward 0.",
+          "label": "perception",
+          "source": "Winds downward into an arc and then tends toward 0"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The annotation of System2 is P=1.",
+          "label": "perception",
+          "source": "The annotation of System2 is P=1, ν=1"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The annotation of System2 is ν=1.",
+          "label": "perception",
+          "source": "The annotation of System2 is P=1, ν=1"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The curve of System2 is near the imaginary axis.",
+          "label": "perception",
+          "source": "The curve is near the imaginary axis and bends leftward"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The curve of System2 bends leftward.",
+          "label": "perception",
+          "source": "The curve is near the imaginary axis and bends leftward"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The annotation of System3 is P=0.",
+          "label": "perception",
+          "source": "The annotation of System3 is P=0, ν=1"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The annotation of System3 is ν=1.",
+          "label": "perception",
+          "source": "The annotation of System3 is P=0, ν=1"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The curve of System3 passes in a waveform near -1.",
+          "label": "perception",
+          "source": "The curve passes in a waveform near -1"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The net encirclement number of System3 is 0.",
+          "label": "reasoning",
+          "source": "But the net encirclement number is 0"
+        },
+        {
+          "claim_id": 21,
+          "claim": "The Nyquist criterion requires that when the closed loop is stable, the net encirclement number of the open-loop frequency response around -1+j0 must match the number P of open-loop right-half-plane poles according to the corresponding sign convention.",
+          "label": "knowledge",
+          "source": "The Nyquist criterion requires that when the closed loop is stable, the net encirclement number of the open-loop frequency response around -1+j0 must match the number P of open-loop right-half-plane poles according to the corresponding sign convention"
+        },
+        {
+          "claim_id": 22,
+          "claim": "If the Nyquist encirclement number does not match the number P of open-loop right-half-plane poles, then the closed loop has right-half-plane poles and is unstable.",
+          "label": "knowledge",
+          "source": "If it does not match, then the closed loop has right-half-plane poles and is unstable"
+        },
+        {
+          "claim_id": 23,
+          "claim": "The encirclement number of System1 is consistent with P=1.",
+          "label": "reasoning",
+          "source": "The encirclement number of System1 is consistent with P=1"
+        },
+        {
+          "claim_id": 24,
+          "claim": "System1 is stable.",
+          "label": "reasoning",
+          "source": "Therefore it is stable"
+        },
+        {
+          "claim_id": 25,
+          "claim": "The encirclement number of System2 is not consistent with P=1.",
+          "label": "reasoning",
+          "source": "The encirclement number of System2 is not consistent with P=1"
+        },
+        {
+          "claim_id": 26,
+          "claim": "The closed loop of System2 is unstable.",
+          "label": "reasoning",
+          "source": "Therefore the closed loop is unstable"
+        },
+        {
+          "claim_id": 27,
+          "claim": "The net encirclement number of System3 is consistent with P=0.",
+          "label": "reasoning",
+          "source": "The net encirclement number of System3 is consistent with P=0"
+        },
+        {
+          "claim_id": 28,
+          "claim": "System3 is stable.",
+          "label": "reasoning",
+          "source": "Therefore it is stable"
+        },
+        {
+          "claim_id": 29,
+          "claim": "Only System (2) is an unstable system.",
+          "label": "reasoning",
+          "source": "So only System (2) is an unstable system"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的三项重复问题删除原 claim 13、18、23，并保持其余受 final_cot 支持的声明不变；随后按原顺序重新编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:18Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/circuit/eee_bench/01581_circuit_eee_bench_open_a2fd6420f8a8a4269aeea645_297ca58263.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/circuit/eee_bench/02231_circuit_eee_bench_open_a2fd6420f8a8a4269aeea645_297ca58263.json"
+  }
+}

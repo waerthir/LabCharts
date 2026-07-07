@@ -1,0 +1,721 @@
+{
+  "pack_index": 4450,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00750:mathvision__open_66851417ee0059b25bd8f0ab__8cb0cb205e1f",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_66851417ee0059b25bd8f0ab",
+    "source_problem_id": "open_66851417ee0059b25bd8f0ab",
+    "problem_run_key": "mathvision__open_66851417ee0059b25bd8f0ab__8cb0cb205e1f",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00750.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00750.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00750.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00750.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Ellis's Eel Emporium contains a large tank holding three different types of eel: electric eels, moray eels and freshwater eels. A notice on the tank reads as follows:\n<image1>\nHow many eels are in the tank?",
+    "raw_answer_text": "21",
+    "open_variant_id": "open_66851417ee0059b25bd8f0ab",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "Ellis's Eel Emporium contains a large tank holding three different types of eel: electric eels, moray eels and freshwater eels. A notice on the tank reads as follows: <image1> How many eels are in the tank?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "21",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_068679aed3a4f8c7e6ae2632",
+        "problem_id": "prob_48f6e72a4581662cda94e078",
+        "node_type": "answer_claim",
+        "canonical_value": "21",
+        "surface_forms": [
+          "21"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_7e9a02b08b37d2fef800f8b5"
+        ],
+        "evidence_refs": [
+          "asset_7e9a02b08b37d2fef800f8b5"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "21"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-07T01:57:29Z",
+        "updated_at": "2026-04-07T01:57:29Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_66851417ee0059b25bd8f0ab",
+      "parent_problem_id": "prob_48f6e72a4581662cda94e078",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "Ellis's Eel Emporium contains a large tank holding three different types of eel: electric eels, moray eels and freshwater eels. A notice on the tank reads as follows:\n<image1>\nHow many eels are in the tank?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "21",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Ellis's Eel Emporium contains a large tank holding three different types of eel: electric eels, moray eels and freshwater eels. A notice on the tank reads as follows:\n<image1>\nHow many eels are in the tank?",
+    "raw_answer": "21",
+    "raw_standard_answer": "21",
+    "resolved_question_text": "Ellis's Eel Emporium contains a large tank holding three different types of eel: electric eels, moray eels and freshwater eels. A notice on the tank reads as follows: <image1> How many eels are in the tank?",
+    "resolved_answer": "21",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: in the image, there are three lines of text on the notice board, respectively: “All the eels are electric eels except 12”, “All the eels are moray eels except 14”, “All the eels are freshwater eels except 16”. That is to say, there are 12 eels that are not electric, 14 eels that are not moray, and 16 eels that are not freshwater. Then reason: the problem states that there are only three kinds of eels in the water tank: electric, moray, freshwater. Add the three quantities of “not a certain kind” together, obtaining 12 + 14 + 16 = 42. For any eel, it belongs to one of the three kinds, therefore it will be counted once each in the “except” quantities of the other two kinds, so each eel is counted twice in 42. Therefore the total number of eels is 42 ÷ 2 = 21.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_66851417ee0059b25bd8f0ab",
+      "problem_run_key": "mathvision__open_66851417ee0059b25bd8f0ab__8cb0cb205e1f",
+      "question_text": "Ellis's Eel Emporium contains a large tank holding three different types of eel: electric eels, moray eels and freshwater eels. A notice on the tank reads as follows:\n<image1>\nHow many eels are in the tank?",
+      "standard_answer": "21",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00750.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00750.png"
+      ],
+      "initial_multi_solution_score": 0.3467,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the notice in the image as three complement statements: non-electric eels = 12, non-moray eels = 14, and non-freshwater eels = 16. From the question text, use that the tank contains exactly three eel types: electric, moray, and freshwater. Add the three exception counts: 12 + 14 + 16 = 42. Since each actual eel is excluded from exactly two of the three type statements, this sum counts every eel twice, so the total number of eels is 42 / 2 = 21.",
+          "CoT_raw": "先描述图像：图中通知牌上有三行文字，分别是：“All the eels are electric eels except 12”，“All the eels are moray eels except 14”，“All the eels are freshwater eels except 16”。也就是说，非 electric 的鳗鱼有 12 条，非 moray 的鳗鱼有 14 条，非 freshwater 的鳗鱼有 16 条。\n\n再推理：题目说明水箱里只有三种鳗鱼：electric、moray、freshwater。把三个“不是某类”的数量相加，得到 12 + 14 + 16 = 42。对于任意一条鳗鱼，它属于三类中的一种，因此它会被另外两类的“except”数量各计入一次，所以每条鳗鱼在 42 中被数了两次。因此总鳗鱼数是 42 ÷ 2 = 21。",
+          "model_answer": "21",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "21",
+              "predicted_part": "21",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中通知牌上有三行文字，分别是：“All the eels are electric eels except 12”，“All the eels are moray eels except 14”，“All the eels are freshwater eels except 16”。也就是说，非 electric 的鳗鱼有 12 条，非 moray 的鳗鱼有 14 条，非 freshwater 的鳗鱼有 16 条。\n\n再推理：题目说明水箱里只有三种鳗鱼：electric、moray、freshwater。把三个“不是某类”的数量相加，得到 12 + 14 + 16 = 42。对于任意一条鳗鱼，它属于三类中的一种，因此它会被另外两类的“except”数量各计入一次，所以每条鳗鱼在 42 中被数了两次。因此总鳗鱼数是 42 ÷ 2 = 21。",
+          "answer_answer_check_final": "21",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "The reasoning trace is faithful to the image, the question, the standard answer, and the assigned method draft. It correctly first describes the notice in the image, then reasons from the three complement counts to obtain 21.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中通知牌上有三行文字，分别是：“All the eels are electric eels except 12”，“All the eels are moray eels except 14”，“All the eels are freshwater eels except 16”。也就是说，非 electric 的鳗鱼有 12 条，非 moray 的鳗鱼有 14 条，非 freshwater 的鳗鱼有 16 条。\n\n再推理：题目说明水箱里只有三种鳗鱼：electric、moray、freshwater。把三个“不是某类”的数量相加，得到 12 + 14 + 16 = 42。对于任意一条鳗鱼，它属于三类中的一种，因此它会被另外两类的“except”数量各计入一次，所以每条鳗鱼在 42 中被数了两次。因此总鳗鱼数是 42 ÷ 2 = 21。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Uses a global double-counting/complement argument rather than solving for each eel type individually.",
+            "image_role": "Extract the three lines on the notice: 'All the eels are electric eels except 12', '... moray eels except 14', and '... freshwater eels except 16'.",
+            "text_role": "Use the surrounding text to know there are exactly three eel categories in the tank and the question asks for the total number of eels.",
+            "knowledge_role": "Interpret 'all are type X except n' as 'n eels are not type X'; because the three categories are exhaustive and disjoint, summing the three non-type counts counts each eel exactly twice."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中通知牌上有三行文字，分别是：“All the eels are electric eels except 12”，“All the eels are moray eels except 14”，“All the eels are freshwater eels except 16”。也就是说，非 electric 的鳗鱼有 12 条，非 moray 的鳗鱼有 14 条，非 freshwater 的鳗鱼有 16 条。\n\n再推理：题目说明水箱里只有三种鳗鱼：electric、moray、freshwater。把三个“不是某类”的数量相加，得到 12 + 14 + 16 = 42。对于任意一条鳗鱼，它属于三类中的一种，因此它会被另外两类的“except”数量各计入一次，所以每条鳗鱼在 42 中被数了两次。因此总鳗鱼数是 42 ÷ 2 = 21。",
+            "model_answer": "21",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 3247,
+              "completion_tokens": 612,
+              "total_tokens": 3859,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 13.81,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "The reasoning trace is faithful to the image, the question, the standard answer, and the assigned method draft. It correctly first describes the notice in the image, then reasons from the three complement counts to obtain 21.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 11.466
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 13.892,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 12,
+                "prompt_tokens": 29159,
+                "completion_tokens": 10662,
+                "total_tokens": 39821,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 215.937,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 11.547,
+              "usage_delta": {
+                "request_count": 13,
+                "successful_request_count": 16,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 13,
+                "requests_with_usage": 16,
+                "prompt_tokens": 47179,
+                "completion_tokens": 16416,
+                "total_tokens": 63595,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 333.15,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Read the notice and assign variables: E = number of electric eels, M = number of moray eels, F = number of freshwater eels. The image gives M + F = 12, E + F = 14, and E + M = 16. Solve the linear system: adding all equations gives 2(E + M + F) = 42, so E + M + F = 21. Alternatively, subtract to find E = 9, M = 7, F = 5, then total 9 + 7 + 5 = 21.",
+          "CoT_raw": "Image description: The notice in the image has three lines: “All the eels are electric eels except 12”, “All the eels are moray eels except 14”, and “All the eels are freshwater eels except 16”.\n\nReasoning: Let E be the number of electric eels, M be the number of moray eels, and F be the number of freshwater eels. “Electric eels except 12” means the non-electric eels are 12, so M + F = 12. “Moray eels except 14” means E + F = 14. “Freshwater eels except 16” means E + M = 16. Adding the three equations gives (M + F) + (E + F) + (E + M) = 12 + 14 + 16, so 2(E + M + F) = 42. Therefore E + M + F = 21.",
+          "model_answer": "21",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "21",
+              "predicted_part": "21",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "Image description: The notice in the image has three lines: “All the eels are electric eels except 12”, “All the eels are moray eels except 14”, and “All the eels are freshwater eels except 16”.\n\nReasoning: Let E be the number of electric eels, M be the number of moray eels, and F be the number of freshwater eels. “Electric eels except 12” means the non-electric eels are 12, so M + F = 12. “Moray eels except 14” means E + F = 14. “Freshwater eels except 16” means E + M = 16. Adding the three equations gives (M + F) + (E + F) + (E + M) = 12 + 14 + 16, so 2(E + M + F) = 42. Therefore E + M + F = 21.",
+          "answer_answer_check_final": "21",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revisions needed. The trace accurately describes the notice, follows the required order of image description before reasoning, correctly translates the statements into equations, follows the method draft, and reaches the standard answer 21.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "Image description: The notice in the image has three lines: “All the eels are electric eels except 12”, “All the eels are moray eels except 14”, and “All the eels are freshwater eels except 16”.\n\nReasoning: Let E be the number of electric eels, M be the number of moray eels, and F be the number of freshwater eels. “Electric eels except 12” means the non-electric eels are 12, so M + F = 12. “Moray eels except 14” means E + F = 14. “Freshwater eels except 16” means E + M = 16. Adding the three equations gives (M + F) + (E + F) + (E + M) = 12 + 14 + 16, so 2(E + M + F) = 42. Therefore E + M + F = 21.",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Uses explicit variables and a system of equations for the three eel-type counts; it can recover individual counts, not only the total via direct double counting.",
+            "image_role": "Read the notice values 12, 14, and 16 and associate each with the corresponding excluded eel type.",
+            "text_role": "Use the text to identify the three possible types as electric, moray, and freshwater, so the variables E, M, and F cover all eels.",
+            "knowledge_role": "Translate each exception statement into a pair-sum equation over the other two eel types, then solve the resulting simultaneous equations."
+          },
+          "solver_metadata": {
+            "cot_raw": "Image description: The notice in the image has three lines: “All the eels are electric eels except 12”, “All the eels are moray eels except 14”, and “All the eels are freshwater eels except 16”.\n\nReasoning: Let E be the number of electric eels, M be the number of moray eels, and F be the number of freshwater eels. “Electric eels except 12” means the non-electric eels are 12, so M + F = 12. “Moray eels except 14” means E + F = 14. “Freshwater eels except 16” means E + M = 16. Adding the three equations gives (M + F) + (E + F) + (E + M) = 12 + 14 + 16, so 2(E + M + F) = 42. Therefore E + M + F = 21.",
+            "model_answer": "21",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 3249,
+              "completion_tokens": 486,
+              "total_tokens": 3735,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 7.873,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revisions needed. The trace accurately describes the notice, follows the required order of image description before reasoning, correctly translates the statements into equations, follows the method draft, and reaches the standard answer 21.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 7.917
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 7.956,
+              "usage_delta": {
+                "request_count": 11,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 11,
+                "requests_with_usage": 12,
+                "prompt_tokens": 35914,
+                "completion_tokens": 9479,
+                "total_tokens": 45393,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 186.871,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 8.0,
+              "usage_delta": {
+                "request_count": 8,
+                "successful_request_count": 8,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 8,
+                "requests_with_usage": 8,
+                "prompt_tokens": 17078,
+                "completion_tokens": 5368,
+                "total_tokens": 22446,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 107.135,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 17.715,
+          "usage_delta": {
+            "request_count": 22,
+            "successful_request_count": 5,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 22,
+            "requests_with_usage": 5,
+            "prompt_tokens": 14270,
+            "completion_tokens": 3715,
+            "total_tokens": 17985,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 72.834,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1770",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00750.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_48f6e72a4581662cda94e078",
+          "open_variant_count": 1,
+          "open_variant_id": "open_66851417ee0059b25bd8f0ab",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "image_content_not_transcribed_in_input",
+            "multi_step_assessment_uncertain_without_viewing_notice_text"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 59.149,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 16850,
+        "completion_tokens": 2588,
+        "total_tokens": 19438,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 58.689,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "Ellis's Eel Emporium contains a large tank holding three different types of eel: electric eels, moray eels and freshwater eels. A notice on the tank reads as follows:\n<image1>\nHow many eels are in the tank?",
+      "answer": "21",
+      "final_cot": "First describe the image: in the image, there are three lines of text on the notice board, respectively: “All the eels are electric eels except 12”, “All the eels are moray eels except 14”, “All the eels are freshwater eels except 16”. That is to say, there are 12 eels that are not electric, 14 eels that are not moray, and 16 eels that are not freshwater.\n\nThen reason: the problem states that there are only three kinds of eels in the water tank: electric, moray, freshwater. Add the three quantities of “not a certain kind” together, obtaining 12 + 14 + 16 = 42. For any eel, it belongs to one of the three kinds, therefore it will be counted once each in the “except” quantities of the other two kinds, so each eel is counted twice in 42. Therefore the total number of eels is 42 ÷ 2 = 21.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "The reasoning trace is faithful to the image, the question, the standard answer, and the assigned method draft. It correctly first describes the notice in the image, then reasons from the three complement counts to obtain 21.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 11.466
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revisions needed. The trace accurately describes the notice, follows the required order of image description before reasoning, correctly translates the statements into equations, follows the method draft, and reaches the standard answer 21.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 7.917
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1873,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00750.json",
+        "source_sample_filename": "mathvision00750.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00750.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T15:39:07Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_66851417ee0059b25bd8f0ab",
+          "new_problem_id": "open_66851417ee0059b25bd8f0ab",
+          "old_problem_run_key": "mathvision__open_66851417ee0059b25bd8f0ab__8cb0cb205e1f",
+          "new_problem_run_key": "mathvision__open_66851417ee0059b25bd8f0ab__8cb0cb205e1f",
+          "target_relpath": "math/mathvision/samples/mathvision00750.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_66851417ee0059b25bd8f0ab",
+    "problem_run_key": "mathvision__open_66851417ee0059b25bd8f0ab__8cb0cb205e1f",
+    "raw_question_text": "Ellis's Eel Emporium contains a large tank holding three different types of eel: electric eels, moray eels and freshwater eels. A notice on the tank reads as follows:\n<image1>\nHow many eels are in the tank?",
+    "raw_answer": "21",
+    "raw_standard_answer": "21",
+    "resolved_question_text": "Ellis's Eel Emporium contains a large tank holding three different types of eel: electric eels, moray eels and freshwater eels. A notice on the tank reads as follows: <image1> How many eels are in the tank?",
+    "resolved_answer": "21",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: in the image, there are three lines of text on the notice board, respectively: “All the eels are electric eels except 12”, “All the eels are moray eels except 14”, “All the eels are freshwater eels except 16”. That is to say, there are 12 eels that are not electric, 14 eels that are not moray, and 16 eels that are not freshwater.\n\nThen reason: the problem states that there are only three kinds of eels in the water tank: electric, moray, freshwater. Add the three quantities of “not a certain kind” together, obtaining 12 + 14 + 16 = 42. For any eel, it belongs to one of the three kinds, therefore it will be counted once each in the “except” quantities of the other two kinds, so each eel is counted twice in 42. Therefore the total number of eels is 42 ÷ 2 = 21.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "There are three lines of text on the notice board in the image.",
+        "label": "perception",
+        "source": "There are three lines of text on the notice board in the image"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The text on the first line of the notice board is: “All the eels are electric eels except 12”.",
+        "label": "perception",
+        "source": "They are respectively: “All the eels are electric eels except 12”"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The text on the second line of the notice board is: “All the eels are moray eels except 14”.",
+        "label": "perception",
+        "source": "“All the eels are moray eels except 14”"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The text on the third line of the notice board is: “All the eels are freshwater eels except 16”.",
+        "label": "perception",
+        "source": "“All the eels are freshwater eels except 16”"
+      },
+      {
+        "claim_id": 5,
+        "claim": "There are 12 eels that are non-electric.",
+        "label": "reasoning",
+        "source": "That is to say, there are 12 eels that are non-electric"
+      },
+      {
+        "claim_id": 6,
+        "claim": "There are 14 eels that are non-moray.",
+        "label": "reasoning",
+        "source": "There are 14 eels that are non-moray"
+      },
+      {
+        "claim_id": 7,
+        "claim": "There are 16 eels that are non-freshwater.",
+        "label": "reasoning",
+        "source": "There are 16 eels that are non-freshwater"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The problem states that there are only three kinds of eels in the water tank: electric, moray, freshwater.",
+        "label": "perception",
+        "source": "The problem states that there are only three kinds of eels in the water tank: electric, moray, freshwater"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Add the quantities of the three “not a certain kind” together, obtaining 12 + 14 + 16 = 42.",
+        "label": "reasoning",
+        "source": "Add the quantities of the three “not a certain kind” together, obtaining 12 + 14 + 16 = 42"
+      },
+      {
+        "claim_id": 10,
+        "claim": "For any one eel, it belongs to one of the three kinds.",
+        "label": "reasoning",
+        "source": "For any one eel, it belongs to one of the three kinds"
+      },
+      {
+        "claim_id": 11,
+        "claim": "Each eel will be counted once each in the “except” quantities of the other two kinds.",
+        "label": "reasoning",
+        "source": "It will be counted once each in the “except” quantities of the other two kinds"
+      },
+      {
+        "claim_id": 12,
+        "claim": "Each eel was counted twice in 42.",
+        "label": "reasoning",
+        "source": "So each eel was counted twice in 42"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The total number of eels is 42 ÷ 2 = 21.",
+        "label": "reasoning",
+        "source": "Therefore the total number of eels is 42 ÷ 2 = 21"
+      }
+    ],
+    "claim_count": 13,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "There are three lines of text on the notice board in the image.",
+          "label": "perception",
+          "source": "There are three lines of text on the notice board in the image"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The text on the first line of the notice board is: “All the eels are electric eels except 12”.",
+          "label": "perception",
+          "source": "They are respectively: “All the eels are electric eels except 12”"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The text on the second line of the notice board is: “All the eels are moray eels except 14”.",
+          "label": "perception",
+          "source": "“All the eels are moray eels except 14”"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The text on the third line of the notice board is: “All the eels are freshwater eels except 16”.",
+          "label": "perception",
+          "source": "“All the eels are freshwater eels except 16”"
+        },
+        {
+          "claim_id": 5,
+          "claim": "There are 12 eels that are non-electric.",
+          "label": "reasoning",
+          "source": "That is to say, there are 12 eels that are non-electric"
+        },
+        {
+          "claim_id": 6,
+          "claim": "There are 14 eels that are non-moray.",
+          "label": "reasoning",
+          "source": "There are 14 eels that are non-moray"
+        },
+        {
+          "claim_id": 7,
+          "claim": "There are 16 eels that are non-freshwater.",
+          "label": "reasoning",
+          "source": "There are 16 eels that are non-freshwater"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The problem states that there are only three kinds of eels in the water tank: electric, moray, freshwater.",
+          "label": "perception",
+          "source": "The problem states that there are only three kinds of eels in the water tank: electric, moray, freshwater"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Add the quantities of the three “not a certain kind” together, obtaining 12 + 14 + 16 = 42.",
+          "label": "reasoning",
+          "source": "Add the quantities of the three “not a certain kind” together, obtaining 12 + 14 + 16 = 42"
+        },
+        {
+          "claim_id": 10,
+          "claim": "For any one eel, it belongs to one of the three kinds.",
+          "label": "reasoning",
+          "source": "For any one eel, it belongs to one of the three kinds"
+        },
+        {
+          "claim_id": 11,
+          "claim": "Each eel will be counted once each in the “except” quantities of the other two kinds.",
+          "label": "reasoning",
+          "source": "It will be counted once each in the “except” quantities of the other two kinds"
+        },
+        {
+          "claim_id": 12,
+          "claim": "Each eel was counted twice in 42.",
+          "label": "reasoning",
+          "source": "So each eel was counted twice in 42"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The total number of eels is 42 ÷ 2 = 21.",
+          "label": "reasoning",
+          "source": "Therefore the total number of eels is 42 ÷ 2 = 21"
+        }
+      ],
+      "coverage_notes": "All explicit observations and reasoning steps in the final_cot are covered in order."
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:29Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/math/mathvision/08816_math_mathvision_open_66851417ee0059b25bd8f0ab_04fda55308.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/math/mathvision/04450_math_mathvision_open_66851417ee0059b25bd8f0ab_04fda55308.json"
+  }
+}

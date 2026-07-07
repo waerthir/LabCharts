@@ -1,0 +1,320 @@
+{
+  "pack_index": 2254,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "circuit/eee_bench:eeebench00000:open_0baf18ebf27f6e9947e62333",
+    "subject_dir": "circuit",
+    "dataset_slug": "eee_bench",
+    "problem_id": "open_0baf18ebf27f6e9947e62333",
+    "source_problem_id": "open_0baf18ebf27f6e9947e62333",
+    "problem_run_key": null,
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 70.0,
+    "difficulty_level": "medium_high",
+    "weighted_accuracy": 0.3,
+    "wrong_models": [
+      "gpt55_high",
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "False",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/samples/eeebench00000.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/circuit/eee_bench/samples/eeebench00000.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/circuit/eee_bench/samples/eeebench00000.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/circuit/eee_bench/artifacts/images/eeebench00000.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "The Boolean function \\( f \\) implemented in the figure using two-input multiplexers is",
+    "raw_answer_text": "\\( A \\overline{B} C + A B \\overline{C} \\)",
+    "open_variant_id": "open_0baf18ebf27f6e9947e62333",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "Write the Boolean expression for \\( f \\) implemented by the two-input multiplexer circuit shown in the figure.",
+    "expected_answer_type": "text",
+    "expected_answer": "\\( A \\overline{B} C + A B \\overline{C} \\)",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_629f1fce35721e89d958ff24",
+        "problem_id": "prob_01088a4e2bbafe0f84392b0e",
+        "node_type": "answer_claim",
+        "canonical_value": "\\( A \\overline{B} C + A B \\overline{C} \\)",
+        "surface_forms": [
+          "\\( A \\overline{B} C + A B \\overline{C} \\)"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_546f9e7c2466223058c6bf1f"
+        ],
+        "evidence_refs": [
+          "asset_546f9e7c2466223058c6bf1f"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "text",
+        "normalized_value": {
+          "answer": "\\( A \\overline{B} C + A B \\overline{C} \\)"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-05-01T21:27:35Z",
+        "updated_at": "2026-05-01T21:27:35Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_0baf18ebf27f6e9947e62333",
+      "parent_problem_id": "prob_01088a4e2bbafe0f84392b0e",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "Write the Boolean expression for \\( f \\) implemented by the two-input multiplexer circuit shown in the figure.",
+      "expected_answer_type": "text",
+      "expected_answer": "\\( A \\overline{B} C + A B \\overline{C} \\)",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "Write the Boolean expression for \\( f \\) implemented by the two-input multiplexer circuit shown in the figure.",
+    "resolved_answer": "\\( A \\overline{B} C + A B \\overline{C} \\)",
+    "resolved_from_fallback": true,
+    "final_cot": "Image description: There are two 2-to-1 MUXs in the figure. Data input 0 of the lower MUX is connected to C, data input 1 is connected to \\overline{C}, and its select terminal is at the bottom, labeled B. The output of the lower MUX is connected to the select terminal of the upper MUX. Data input 0 of the upper MUX is drawn as a low-level/0 input, data input 1 is connected to A, and the output terminal is labeled f. Reasoning: The output rule of a 2-to-1 MUX is Y = \\overline{S}D_0 + SD_1. The select signal of the lower MUX is B, so its output is \\overline{B}C + B\\overline{C}. This output serves as the select signal of the upper MUX. For the upper MUX, D_0 = 0 and D_1 = A, therefore f = \\overline{S}\\cdot 0 + S\\cdot A = A S, where S = \\overline{B}C + B\\overline{C}. So f = A(\\overline{B}C + B\\overline{C}) = A\\overline{B}C + AB\\overline{C}.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "id": "open_0baf18ebf27f6e9947e62333",
+      "final_cot": "Image description: There are two 2-to-1 MUXs in the figure. Data input 0 of the lower MUX is connected to C, data input 1 is connected to \\overline{C}, and its select terminal is at the bottom, labeled B. The output of the lower MUX is connected to the select terminal of the upper MUX. Data input 0 of the upper MUX is drawn as a low-level/0 input, data input 1 is connected to A, and the output terminal is labeled f.\n\nReasoning: The output rule of a 2-to-1 MUX is Y = \\overline{S}D_0 + SD_1. The select signal of the lower MUX is B, so its output is \\overline{B}C + B\\overline{C}. This output serves as the select signal of the upper MUX. For the upper MUX, D_0 = 0 and D_1 = A, therefore f = \\overline{S}\\cdot 0 + S\\cdot A = A S, where S = \\overline{B}C + B\\overline{C}. So f = A(\\overline{B}C + B\\overline{C}) = A\\overline{B}C + AB\\overline{C}.",
+      "difficulty_score": 35.0
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_0baf18ebf27f6e9947e62333",
+    "problem_run_key": null,
+    "raw_question_text": null,
+    "raw_answer": null,
+    "raw_standard_answer": null,
+    "resolved_question_text": "Write the Boolean expression for \\( f \\) implemented by the two-input multiplexer circuit shown in the figure.",
+    "resolved_answer": "\\( A \\overline{B} C + A B \\overline{C} \\)",
+    "resolved_from_fallback": true,
+    "final_cot": "Image description: There are two 2-to-1 MUXs in the figure. Data input 0 of the lower MUX is connected to C, data input 1 is connected to \\overline{C}, and its select terminal is at the bottom, labeled B. The output of the lower MUX is connected to the select terminal of the upper MUX. Data input 0 of the upper MUX is drawn as a low-level/0 input, data input 1 is connected to A, and the output terminal is labeled f.\n\nReasoning: The output rule of a 2-to-1 MUX is Y = \\overline{S}D_0 + SD_1. The select signal of the lower MUX is B, so its output is \\overline{B}C + B\\overline{C}. This output serves as the select signal of the upper MUX. For the upper MUX, D_0 = 0 and D_1 = A, therefore f = \\overline{S}\\cdot 0 + S\\cdot A = A S, where S = \\overline{B}C + B\\overline{C}. So f = A(\\overline{B}C + B\\overline{C}) = A\\overline{B}C + AB\\overline{C}.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "There are two 2-to-1 MUXs in the figure.",
+        "label": "perception",
+        "source": "There are two 2-to-1 MUXs in the figure."
+      },
+      {
+        "claim_id": 2,
+        "claim": "Data input 0 of the lower MUX is connected to C.",
+        "label": "perception",
+        "source": "Data input 0 of the lower MUX is connected to C"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Data input 1 of the lower MUX is connected to \\overline{C}.",
+        "label": "perception",
+        "source": "Data input 1 is connected to \\overline{C}"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The select terminal of the lower MUX is labeled B.",
+        "label": "perception",
+        "source": "Its select terminal is at the bottom, labeled B"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The output of the lower MUX is connected to the select terminal of the upper MUX.",
+        "label": "perception",
+        "source": "The output of the lower MUX is connected to the select terminal of the upper MUX."
+      },
+      {
+        "claim_id": 6,
+        "claim": "Data input 0 of the upper MUX is drawn as a low-level/0 input.",
+        "label": "perception",
+        "source": "Data input 0 of the upper MUX is drawn as a low-level/0 input"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Data input 1 of the upper MUX is connected to A.",
+        "label": "perception",
+        "source": "Data input 1 is connected to A"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The output terminal of the upper MUX is labeled f.",
+        "label": "perception",
+        "source": "The output terminal is labeled f"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The output rule of a 2-to-1 MUX is Y = \\overline{S}D_0 + SD_1.",
+        "label": "knowledge",
+        "source": "The output rule of a 2-to-1 MUX is Y = \\overline{S}D_0 + SD_1."
+      },
+      {
+        "claim_id": 10,
+        "claim": "The output of the lower MUX is \\overline{B}C + B\\overline{C}.",
+        "label": "reasoning",
+        "source": "So its output is \\overline{B}C + B\\overline{C}"
+      },
+      {
+        "claim_id": 11,
+        "claim": "f = \\overline{S}\\cdot 0 + S\\cdot A = A S。",
+        "label": "reasoning",
+        "source": "Therefore f = \\overline{S}\\cdot 0 + S\\cdot A = A S"
+      },
+      {
+        "claim_id": 12,
+        "claim": "S = \\overline{B}C + B\\overline{C}。",
+        "label": "reasoning",
+        "source": "Where S = \\overline{B}C + B\\overline{C}"
+      },
+      {
+        "claim_id": 13,
+        "claim": "f = A(\\overline{B}C + B\\overline{C})。",
+        "label": "reasoning",
+        "source": "So f = A(\\overline{B}C + B\\overline{C})"
+      },
+      {
+        "claim_id": 14,
+        "claim": "f = A\\overline{B}C + AB\\overline{C}。",
+        "label": "reasoning",
+        "source": "= A\\overline{B}C + AB\\overline{C}"
+      }
+    ],
+    "claim_count": 14,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "There are two 2-to-1 MUXs in the figure.",
+          "label": "perception",
+          "source": "There are two 2-to-1 MUXs in the figure."
+        },
+        {
+          "claim_id": 2,
+          "claim": "Data input 0 of the lower MUX is connected to C.",
+          "label": "perception",
+          "source": "Data input 0 of the lower MUX is connected to C"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Data input 1 of the lower MUX is connected to \\overline{C}.",
+          "label": "perception",
+          "source": "Data input 1 is connected to \\overline{C}"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The select terminal of the lower MUX is labeled B.",
+          "label": "perception",
+          "source": "Its select terminal is at the bottom, labeled B"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The output of the lower MUX is connected to the select terminal of the upper MUX.",
+          "label": "perception",
+          "source": "The output of the lower MUX is connected to the select terminal of the upper MUX."
+        },
+        {
+          "claim_id": 6,
+          "claim": "Data input 0 of the upper MUX is drawn as a low-level/0 input.",
+          "label": "perception",
+          "source": "Data input 0 of the upper MUX is drawn as a low-level/0 input"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Data input 1 of the upper MUX is connected to A.",
+          "label": "perception",
+          "source": "Data input 1 is connected to A"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The output terminal of the upper MUX is labeled f.",
+          "label": "perception",
+          "source": "The output terminal is labeled f"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The output rule of a 2-to-1 MUX is Y = \\overline{S}D_0 + SD_1.",
+          "label": "knowledge",
+          "source": "The output rule of a 2-to-1 MUX is Y = \\overline{S}D_0 + SD_1."
+        },
+        {
+          "claim_id": 10,
+          "claim": "The output of the lower MUX is \\overline{B}C + B\\overline{C}.",
+          "label": "reasoning",
+          "source": "So its output is \\overline{B}C + B\\overline{C}"
+        },
+        {
+          "claim_id": 11,
+          "claim": "f = \\overline{S}\\cdot 0 + S\\cdot A = A S。",
+          "label": "reasoning",
+          "source": "Therefore f = \\overline{S}\\cdot 0 + S\\cdot A = A S"
+        },
+        {
+          "claim_id": 12,
+          "claim": "S = \\overline{B}C + B\\overline{C}。",
+          "label": "reasoning",
+          "source": "Where S = \\overline{B}C + B\\overline{C}"
+        },
+        {
+          "claim_id": 13,
+          "claim": "f = A(\\overline{B}C + B\\overline{C})。",
+          "label": "reasoning",
+          "source": "So f = A(\\overline{B}C + B\\overline{C})"
+        },
+        {
+          "claim_id": 14,
+          "claim": "f = A\\overline{B}C + AB\\overline{C}。",
+          "label": "reasoning",
+          "source": "= A\\overline{B}C + AB\\overline{C}"
+        }
+      ],
+      "coverage_notes": "已按 review 删除重复的原 claim 10、12、13、14，并保留其余由 final_cot 支持的感知、知识和推理 claims。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:17Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/circuit/eee_bench/01254_circuit_eee_bench_open_0baf18ebf27f6e9947e62333_849b128c2a.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/circuit/eee_bench/02254_circuit_eee_bench_open_0baf18ebf27f6e9947e62333_849b128c2a.json"
+  }
+}

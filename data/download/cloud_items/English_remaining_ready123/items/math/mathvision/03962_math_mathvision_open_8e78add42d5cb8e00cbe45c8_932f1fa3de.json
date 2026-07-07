@@ -1,0 +1,845 @@
+{
+  "pack_index": 3962,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision01050:mathvision__open_8e78add42d5cb8e00cbe45c8__d5a26a9d5341",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_8e78add42d5cb8e00cbe45c8",
+    "source_problem_id": "open_8e78add42d5cb8e00cbe45c8",
+    "problem_run_key": "mathvision__open_8e78add42d5cb8e00cbe45c8__d5a26a9d5341",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01050.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01050.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision01050.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01050.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In the addition sum below, $a, b$ and $c$ stand for different digits.\n<image1>\nWhat is the value of $a+b+c$ ?",
+    "raw_answer_text": "16",
+    "open_variant_id": "open_8e78add42d5cb8e00cbe45c8",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "In the addition sum below, $a, b$ and $c$ stand for different digits. <image1> What is the value of $a+b+c$?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "16",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_9da0c510e174ff7ceb6ce2ee",
+        "problem_id": "prob_def5e209ec1291b1b57a4178",
+        "node_type": "answer_claim",
+        "canonical_value": "16",
+        "surface_forms": [
+          "16"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_bfc571d6db5bb59b8f2856f5"
+        ],
+        "evidence_refs": [
+          "asset_bfc571d6db5bb59b8f2856f5"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "16"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-07T01:15:32Z",
+        "updated_at": "2026-04-07T01:15:32Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_8e78add42d5cb8e00cbe45c8",
+      "parent_problem_id": "prob_def5e209ec1291b1b57a4178",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "In the addition sum below, $a, b$ and $c$ stand for different digits.\n<image1>\nWhat is the value of $a+b+c$?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "16",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the addition sum below, $a, b$ and $c$ stand for different digits.\n<image1>\nWhat is the value of $a+b+c$?",
+    "raw_answer": "16",
+    "raw_standard_answer": "16",
+    "resolved_question_text": "In the addition sum below, $a, b$ and $c$ stand for different digits. <image1> What is the value of $a+b+c$?",
+    "resolved_answer": "16",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: In the figure there is a vertical addition. The first row is abc, the second row has a plus sign in front and is written acb, and the result below the horizontal line underneath is c4a; the dot after a looks like only a period punctuation mark, not part of the number. Then reason: set carries by columns. Ones column: c+b=a+10r, where r is the carry from the ones place to the tens place. Tens column: b+c+r=4+10s, where s is the carry from the tens place to the hundreds place. Hundreds column: a+a+s=c, and there is no carry to the thousands place. Because the ones and tens columns both contain the same b+c, substituting b+c=a+10r from the ones column into the tens column gives a+10r+r=4+10s, that is, a+11r=4+10s. r and s can only be 0 or 1. If r=0, then a=4+10s, so only s=0, a=4. But the hundreds column gives c=2a+s=8, and the ones column would give b+c=4, that is, b+8=4, impossible. If r=1, then a+11=4+10s, so only s=1, a=3. The hundreds column gives c=2a+s=2·3+1=7. The ones column gives b+c=a+10r=13, so b+7=13, obtaining b=6. Therefore a=3, b=6, c=7, and the three digits are different. a+b+c=3+6+7=16.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_8e78add42d5cb8e00cbe45c8",
+      "problem_run_key": "mathvision__open_8e78add42d5cb8e00cbe45c8__d5a26a9d5341",
+      "question_text": "In the addition sum below, $a, b$ and $c$ stand for different digits.\n<image1>\nWhat is the value of $a+b+c$?",
+      "standard_answer": "16",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision01050.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision01050.png"
+      ],
+      "initial_multi_solution_score": 0.4097,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the image as a vertical addition: abc + acb = c4a, where the dot after a is just punctuation. Introduce carry variables from the ones and tens columns. Ones column: c+b = a + 10r. Tens column: b+c+r = 4 + 10s. Hundreds column: a+a+s = c, with no fourth digit. Since b+c appears in both the ones and tens columns, compare the first two equations to determine the carry r and force a. Then use the hundreds equation to get c, and finally use b+c from the ones column to get b. Sum the resulting distinct digits a+b+c.",
+          "CoT_raw": "先描述图像：图中是一个竖式加法。第一行是 abc，第二行前面有加号并写着 acb，下方横线下面的结果是 c4a，a 后面的点看起来只是句号标点，不是数字的一部分。\n\n再推理：按列设进位。个位列：c+b=a+10r，其中 r 是个位向十位的进位。十位列：b+c+r=4+10s，其中 s 是十位向百位的进位。百位列：a+a+s=c，且没有千位进位。\n\n因为个位和十位都包含同一个 b+c，所以由 b+c=a+10r 代入十位列，得到 a+10r+r=4+10s，即 a+11r=4+10s。r 和 s 都只能是 0 或 1。\n\n若 r=0，则 a=4+10s，只能 s=0, a=4。但百位列给 c=2a+s=8，个位列会给 b+c=4，即 b+8=4，不可能。\n\n若 r=1，则 a+11=4+10s，只能 s=1, a=3。百位列给 c=2a+s=2·3+1=7。个位列给 b+c=a+10r=13，所以 b+7=13，得到 b=6。\n\n因此 a=3, b=6, c=7，且三个数字不同。a+b+c=3+6+7=16。",
+          "model_answer": "16",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "16",
+              "predicted_part": "16",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中是一个竖式加法。第一行是 abc，第二行前面有加号并写着 acb，下方横线下面的结果是 c4a，a 后面的点看起来只是句号标点，不是数字的一部分。\n\n再推理：按列设进位。个位列：c+b=a+10r，其中 r 是个位向十位的进位。十位列：b+c+r=4+10s，其中 s 是十位向百位的进位。百位列：a+a+s=c，且没有千位进位。\n\n因为个位和十位都包含同一个 b+c，所以由 b+c=a+10r 代入十位列，得到 a+10r+r=4+10s，即 a+11r=4+10s。r 和 s 都只能是 0 或 1。\n\n若 r=0，则 a=4+10s，只能 s=0, a=4。但百位列给 c=2a+s=8，个位列会给 b+c=4，即 b+8=4，不可能。\n\n若 r=1，则 a+11=4+10s，只能 s=1, a=3。百位列给 c=2a+s=2·3+1=7。个位列给 b+c=a+10r=13，所以 b+7=13，得到 b=6。\n\n因此 a=3, b=6, c=7，且三个数字不同。a+b+c=3+6+7=16。",
+          "answer_answer_check_final": "16",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace accurately describes the image first, then follows the assigned column-carry method and reaches the standard answer 16.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中是一个竖式加法。第一行是 abc，第二行前面有加号并写着 acb，下方横线下面的结果是 c4a，a 后面的点看起来只是句号标点，不是数字的一部分。\n\n再推理：按列设进位。个位列：c+b=a+10r，其中 r 是个位向十位的进位。十位列：b+c+r=4+10s，其中 s 是十位向百位的进位。百位列：a+a+s=c，且没有千位进位。\n\n因为个位和十位都包含同一个 b+c，所以由 b+c=a+10r 代入十位列，得到 a+10r+r=4+10s，即 a+11r=4+10s。r 和 s 都只能是 0 或 1。\n\n若 r=0，则 a=4+10s，只能 s=0, a=4。但百位列给 c=2a+s=8，个位列会给 b+c=4，即 b+8=4，不可能。\n\n若 r=1，则 a+11=4+10s，只能 s=1, a=3。百位列给 c=2a+s=2·3+1=7。个位列给 b+c=a+10r=13，所以 b+7=13，得到 b=6。\n\n因此 a=3, b=6, c=7，且三个数字不同。a+b+c=3+6+7=16。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the standard column-by-column carry analysis, directly exploiting the repeated pair b+c in the ones and tens columns.",
+            "image_role": "The image supplies the exact written sum: top number abc, second number acb, result c4a, aligned by place value.",
+            "text_role": "The text states that a, b, and c are different digits and asks for a+b+c.",
+            "knowledge_role": "Use base-ten addition with carries in each column and the fact that leading digits in three-digit numbers are nonzero."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中是一个竖式加法。第一行是 abc，第二行前面有加号并写着 acb，下方横线下面的结果是 c4a，a 后面的点看起来只是句号标点，不是数字的一部分。\n\n再推理：按列设进位。个位列：c+b=a+10r，其中 r 是个位向十位的进位。十位列：b+c+r=4+10s，其中 s 是十位向百位的进位。百位列：a+a+s=c，且没有千位进位。\n\n因为个位和十位都包含同一个 b+c，所以由 b+c=a+10r 代入十位列，得到 a+10r+r=4+10s，即 a+11r=4+10s。r 和 s 都只能是 0 或 1。\n\n若 r=0，则 a=4+10s，只能 s=0, a=4。但百位列给 c=2a+s=8，个位列会给 b+c=4，即 b+8=4，不可能。\n\n若 r=1，则 a+11=4+10s，只能 s=1, a=3。百位列给 c=2a+s=2·3+1=7。个位列给 b+c=a+10r=13，所以 b+7=13，得到 b=6。\n\n因此 a=3, b=6, c=7，且三个数字不同。a+b+c=3+6+7=16。",
+            "model_answer": "16",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2733,
+              "completion_tokens": 905,
+              "total_tokens": 3638,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 17.514,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace accurately describes the image first, then follows the assigned column-carry method and reaches the standard answer 16.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 0.98,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 11.912
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 17.528,
+              "usage_delta": {
+                "request_count": 21,
+                "successful_request_count": 24,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 21,
+                "requests_with_usage": 24,
+                "prompt_tokens": 68534,
+                "completion_tokens": 25400,
+                "total_tokens": 93934,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 612.074,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 11.926,
+              "usage_delta": {
+                "request_count": 9,
+                "successful_request_count": 10,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 9,
+                "requests_with_usage": 10,
+                "prompt_tokens": 25831,
+                "completion_tokens": 4699,
+                "total_tokens": 30530,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 105.931,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Read the image as the whole number equation abc + acb = c4a. Convert this to a place-value equation: (100a+10b+c)+(100a+10c+b)=100c+40+a. Simplify to a linear digit equation. Use modular arithmetic, especially modulo 11, to restrict the relationship between a and c. Combine this with the size/carry fact that adding two hundreds digits a+a can only make the hundreds digit c equal to 2a or 2a+1. Test the small remaining possibilities for a and c in the simplified equation to determine b, then compute a+b+c.",
+          "CoT_raw": "图像描述：图中是一个竖式加法，第一行是三位数 abc，第二行左侧有加号，第二个三位数是 acb，横线下面的结果是 c4a，其中末尾的点只是标点，不是数字。因此图像表示 abc + acb = c4a。\n\n推理：按位值把竖式写成方程：\n(100a+10b+c)+(100a+10c+b)=100c+40+a。\n化简得：200a+11b+11c=100c+40+a，即 199a+11b-89c=40。\n对 11 取模：199≡1，11b≡0，-89≡-1，40≡7，所以 a-c≡7 (mod 11)。因为 a 和 c 都是三位数的首位数字，所以为 1 到 9 的数字，a-c 只能是 7 或 -4。\n另一方面，从百位相加看，a+a 加上十位进位 0 或 1 后得到百位数字 c，因此 c=2a 或 c=2a+1。\n测试可能性：若 a-c=7，则 c=a-7，无法等于 2a 或 2a+1 的正数字情形。若 a-c=-4，则 c=a+4。结合 c=2a 得 a=4,c=8；结合 c=2a+1 得 a=3,c=7。\n代入 199a+11b-89c=40：\n当 a=4,c=8 时，796+11b-712=40，得 11b=-44，不可行。\n当 a=3,c=7 时，597+11b-623=40，得 11b=66，所以 b=6。\n于是 a=3,b=6,c=7，且三个数字不同。a+b+c=3+6+7=16。",
+          "model_answer": "16",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "16",
+              "predicted_part": "16",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个竖式加法，第一行是三位数 abc，第二行左侧有加号，第二个三位数是 acb，横线下面的结果是 c4a，其中末尾的点只是标点，不是数字。因此图像表示 abc + acb = c4a。\n\n推理：按位值把竖式写成方程：\n(100a+10b+c)+(100a+10c+b)=100c+40+a。\n化简得：200a+11b+11c=100c+40+a，即 199a+11b-89c=40。\n对 11 取模：199≡1，11b≡0，-89≡-1，40≡7，所以 a-c≡7 (mod 11)。因为 a 和 c 都是三位数的首位数字，所以为 1 到 9 的数字，a-c 只能是 7 或 -4。\n另一方面，从百位相加看，a+a 加上十位进位 0 或 1 后得到百位数字 c，因此 c=2a 或 c=2a+1。\n测试可能性：若 a-c=7，则 c=a-7，无法等于 2a 或 2a+1 的正数字情形。若 a-c=-4，则 c=a+4。结合 c=2a 得 a=4,c=8；结合 c=2a+1 得 a=3,c=7。\n代入 199a+11b-89c=40：\n当 a=4,c=8 时，796+11b-712=40，得 11b=-44，不可行。\n当 a=3,c=7 时，597+11b-623=40，得 11b=66，所以 b=6。\n于是 a=3,b=6,c=7，且三个数字不同。a+b+c=3+6+7=16。",
+          "answer_answer_check_final": "16",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace correctly reads the image, follows the required image-description-then-reasoning order, matches the method draft, and reaches the standard answer 16.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个竖式加法，第一行是三位数 abc，第二行左侧有加号，第二个三位数是 acb，横线下面的结果是 c4a，其中末尾的点只是标点，不是数字。因此图像表示 abc + acb = c4a。\n\n推理：按位值把竖式写成方程：\n(100a+10b+c)+(100a+10c+b)=100c+40+a。\n化简得：200a+11b+11c=100c+40+a，即 199a+11b-89c=40。\n对 11 取模：199≡1，11b≡0，-89≡-1，40≡7，所以 a-c≡7 (mod 11)。因为 a 和 c 都是三位数的首位数字，所以为 1 到 9 的数字，a-c 只能是 7 或 -4。\n另一方面，从百位相加看，a+a 加上十位进位 0 或 1 后得到百位数字 c，因此 c=2a 或 c=2a+1。\n测试可能性：若 a-c=7，则 c=a-7，无法等于 2a 或 2a+1 的正数字情形。若 a-c=-4，则 c=a+4。结合 c=2a 得 a=4,c=8；结合 c=2a+1 得 a=3,c=7。\n代入 199a+11b-89c=40：\n当 a=4,c=8 时，796+11b-712=40，得 11b=-44，不可行。\n当 a=3,c=7 时，597+11b-623=40，得 11b=66，所以 b=6。\n于是 a=3,b=6,c=7，且三个数字不同。a+b+c=3+6+7=16。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route treats the visual sum as a single algebraic number equation and uses modular constraints before checking the remaining digit cases, rather than solving primarily by local column carries.",
+            "image_role": "The image is needed to identify the equation abc + acb = c4a and the placement of the digit 4 in the tens position of the result.",
+            "text_role": "The text gives the constraint that a, b, and c are different digits and identifies the requested expression a+b+c.",
+            "knowledge_role": "Use base-ten expansion of three-digit numbers, modular arithmetic for digit equations, and the limited carry behavior in the hundreds column."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个竖式加法，第一行是三位数 abc，第二行左侧有加号，第二个三位数是 acb，横线下面的结果是 c4a，其中末尾的点只是标点，不是数字。因此图像表示 abc + acb = c4a。\n\n推理：按位值把竖式写成方程：\n(100a+10b+c)+(100a+10c+b)=100c+40+a。\n化简得：200a+11b+11c=100c+40+a，即 199a+11b-89c=40。\n对 11 取模：199≡1，11b≡0，-89≡-1，40≡7，所以 a-c≡7 (mod 11)。因为 a 和 c 都是三位数的首位数字，所以为 1 到 9 的数字，a-c 只能是 7 或 -4。\n另一方面，从百位相加看，a+a 加上十位进位 0 或 1 后得到百位数字 c，因此 c=2a 或 c=2a+1。\n测试可能性：若 a-c=7，则 c=a-7，无法等于 2a 或 2a+1 的正数字情形。若 a-c=-4，则 c=a+4。结合 c=2a 得 a=4,c=8；结合 c=2a+1 得 a=3,c=7。\n代入 199a+11b-89c=40：\n当 a=4,c=8 时，796+11b-712=40，得 11b=-44，不可行。\n当 a=3,c=7 时，597+11b-623=40，得 11b=66，所以 b=6。\n于是 a=3,b=6,c=7，且三个数字不同。a+b+c=3+6+7=16。",
+            "model_answer": "16",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2728,
+              "completion_tokens": 1491,
+              "total_tokens": 4219,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 24.721,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace correctly reads the image, follows the required image-description-then-reasoning order, matches the method draft, and reaches the standard answer 16.",
+              "major_failures": [],
+              "extractability_score": 0.98,
+              "grounding_score": 0.98,
+              "method_fidelity_score": 0.97,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 10.938
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 24.734,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 18,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 18,
+                "prompt_tokens": 53668,
+                "completion_tokens": 15505,
+                "total_tokens": 69173,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 291.517,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 10.953,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 6,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 6,
+                "prompt_tokens": 19586,
+                "completion_tokens": 7430,
+                "total_tokens": 27016,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 125.34,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 37.721,
+          "usage_delta": {
+            "request_count": 41,
+            "successful_request_count": 40,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 41,
+            "requests_with_usage": 40,
+            "prompt_tokens": 101156,
+            "completion_tokens": 33859,
+            "total_tokens": 135015,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 642.556,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1736",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01050.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_def5e209ec1291b1b57a4178",
+          "open_variant_count": 1,
+          "open_variant_id": "open_8e78add42d5cb8e00cbe45c8",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "small_image_dimensions_206x226",
+            "visual_layout_not_transcribed_in_text"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 102.908,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 14607,
+        "completion_tokens": 5425,
+        "total_tokens": 20032,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 102.786,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the addition sum below, $a, b$ and $c$ stand for different digits.\n<image1>\nWhat is the value of $a+b+c$?",
+      "answer": "16",
+      "final_cot": "First describe the image: In the figure there is a vertical addition. The first row is abc, the second row has a plus sign in front and is written acb, and the result below the horizontal line underneath is c4a; the dot after a looks like only a period punctuation mark, not part of the number.\n\nThen reason: set carries by columns. Ones column: c+b=a+10r, where r is the carry from the ones place to the tens place. Tens column: b+c+r=4+10s, where s is the carry from the tens place to the hundreds place. Hundreds column: a+a+s=c, and there is no carry to the thousands place.\n\nBecause the ones and tens columns both contain the same b+c, substituting b+c=a+10r from the ones column into the tens column gives a+10r+r=4+10s, that is, a+11r=4+10s. r and s can only be 0 or 1.\n\nIf r=0, then a=4+10s, so only s=0, a=4. But the hundreds column gives c=2a+s=8, and the ones column would give b+c=4, that is, b+8=4, impossible.\n\nIf r=1, then a+11=4+10s, so only s=1, a=3. The hundreds column gives c=2a+s=2·3+1=7. The ones column gives b+c=a+10r=13, so b+7=13, obtaining b=6.\n\nTherefore a=3, b=6, c=7, and the three digits are different. a+b+c=3+6+7=16.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace accurately describes the image first, then follows the assigned column-carry method and reaches the standard answer 16.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 0.98,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 11.912
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace correctly reads the image, follows the required image-description-then-reasoning order, matches the method draft, and reaches the standard answer 16.",
+          "major_failures": [],
+          "extractability_score": 0.98,
+          "grounding_score": 0.98,
+          "method_fidelity_score": 0.97,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 10.938
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 2173,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision01050.json",
+        "source_sample_filename": "mathvision01050.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision01050.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T16:58:40Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_8e78add42d5cb8e00cbe45c8",
+          "new_problem_id": "open_8e78add42d5cb8e00cbe45c8",
+          "old_problem_run_key": "mathvision__open_8e78add42d5cb8e00cbe45c8__d5a26a9d5341",
+          "new_problem_run_key": "mathvision__open_8e78add42d5cb8e00cbe45c8__d5a26a9d5341",
+          "target_relpath": "math/mathvision/samples/mathvision01050.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_8e78add42d5cb8e00cbe45c8",
+    "problem_run_key": "mathvision__open_8e78add42d5cb8e00cbe45c8__d5a26a9d5341",
+    "raw_question_text": "In the addition sum below, $a, b$ and $c$ stand for different digits.\n<image1>\nWhat is the value of $a+b+c$?",
+    "raw_answer": "16",
+    "raw_standard_answer": "16",
+    "resolved_question_text": "In the addition sum below, $a, b$ and $c$ stand for different digits. <image1> What is the value of $a+b+c$?",
+    "resolved_answer": "16",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: In the figure there is a vertical addition. The first row is abc, the second row has a plus sign in front and is written acb, and the result below the horizontal line underneath is c4a; the dot after a looks like only a period punctuation mark, not part of the number.\n\nThen reason: set carries by columns. Ones column: c+b=a+10r, where r is the carry from the ones place to the tens place. Tens column: b+c+r=4+10s, where s is the carry from the tens place to the hundreds place. Hundreds column: a+a+s=c, and there is no carry to the thousands place.\n\nBecause the ones and tens columns both contain the same b+c, substituting b+c=a+10r from the ones column into the tens column gives a+10r+r=4+10s, that is, a+11r=4+10s. r and s can only be 0 or 1.\n\nIf r=0, then a=4+10s, so only s=0, a=4. But the hundreds column gives c=2a+s=8, and the ones column would give b+c=4, that is, b+8=4, impossible.\n\nIf r=1, then a+11=4+10s, so only s=1, a=3. The hundreds column gives c=2a+s=2·3+1=7. The ones column gives b+c=a+10r=13, so b+7=13, obtaining b=6.\n\nTherefore a=3, b=6, c=7, and the three digits are different. a+b+c=3+6+7=16.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The picture shows a vertical addition.",
+        "label": "perception",
+        "source": "In the figure there is a vertical addition"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The first row is abc.",
+        "label": "perception",
+        "source": "The first row is abc"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The second row has a plus sign in front and is written acb.",
+        "label": "perception",
+        "source": "The second row has a plus sign in front and is written acb"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The result below the horizontal line underneath is c4a.",
+        "label": "perception",
+        "source": "The result below the horizontal line underneath is c4a"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The dot after a looks like only a period punctuation mark, not part of the number.",
+        "label": "perception",
+        "source": "The dot after a looks like only a period punctuation mark, not part of the number"
+      },
+      {
+        "claim_id": 6,
+        "claim": "Set carries by columns.",
+        "label": "reasoning",
+        "source": "Set carries by columns"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The ones column satisfies c+b=a+10r.",
+        "label": "reasoning",
+        "source": "Ones column: c+b=a+10r"
+      },
+      {
+        "claim_id": 8,
+        "claim": "r is the carry from the ones place to the tens place.",
+        "label": "reasoning",
+        "source": "where r is the carry from the ones place to the tens place"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The tens column satisfies b+c+r=4+10s.",
+        "label": "reasoning",
+        "source": "Tens column: b+c+r=4+10s"
+      },
+      {
+        "claim_id": 10,
+        "claim": "s is the carry from the tens place to the hundreds place.",
+        "label": "reasoning",
+        "source": "where s is the carry from the tens place to the hundreds place"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The hundreds column satisfies a+a+s=c.",
+        "label": "reasoning",
+        "source": "Hundreds column: a+a+s=c"
+      },
+      {
+        "claim_id": 12,
+        "claim": "There is no carry from the hundreds column to the thousands column.",
+        "label": "reasoning",
+        "source": "and there is no carry to the thousands column"
+      },
+      {
+        "claim_id": 13,
+        "claim": "Both the ones and tens columns contain the same b+c.",
+        "label": "reasoning",
+        "source": "Because both the ones and tens columns contain the same b+c"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Substituting b+c=a+10r into the tens column gives a+10r+r=4+10s.",
+        "label": "reasoning",
+        "source": "Substituting b+c=a+10r into the tens column gives a+10r+r=4+10s"
+      },
+      {
+        "claim_id": 15,
+        "claim": "a+10r+r=4+10s can be simplified to a+11r=4+10s.",
+        "label": "reasoning",
+        "source": "that is, a+11r=4+10s"
+      },
+      {
+        "claim_id": 16,
+        "claim": "Both r and s can only be 0 or 1.",
+        "label": "reasoning",
+        "source": "Both r and s can only be 0 or 1"
+      },
+      {
+        "claim_id": 17,
+        "claim": "If r=0, then a=4+10s, only s=0, a=4.",
+        "label": "reasoning",
+        "source": "If r=0, then a=4+10s, only s=0, a=4"
+      },
+      {
+        "claim_id": 18,
+        "claim": "In the case r=0, the hundreds column gives c=8, and the units column will give b+8=4, impossible.",
+        "label": "reasoning",
+        "source": "The hundreds column gives c=2a+s=8, and the units column will give b+c=4, that is, b+8=4, impossible"
+      },
+      {
+        "claim_id": 19,
+        "claim": "If r=1, then a+11=4+10s, only s=1, a=3.",
+        "label": "reasoning",
+        "source": "If r=1, then a+11=4+10s, only s=1, a=3"
+      },
+      {
+        "claim_id": 20,
+        "claim": "In the case r=1, the hundreds column gives c=2·3+1=7.",
+        "label": "reasoning",
+        "source": "The hundreds column gives c=2a+s=2·3+1=7"
+      },
+      {
+        "claim_id": 21,
+        "claim": "In the case r=1, the units column gives b+7=13, obtaining b=6.",
+        "label": "reasoning",
+        "source": "The units column gives b+c=a+10r=13, so b+7=13, obtaining b=6"
+      },
+      {
+        "claim_id": 22,
+        "claim": "The three digits are different.",
+        "label": "reasoning",
+        "source": "and the three digits are different"
+      },
+      {
+        "claim_id": 23,
+        "claim": "a+b+c=3+6+7=16。",
+        "label": "reasoning",
+        "source": "a+b+c=3+6+7=16"
+      }
+    ],
+    "claim_count": 23,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The picture shows a vertical addition.",
+          "label": "perception",
+          "source": "In the figure there is a vertical addition"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The first row is abc.",
+          "label": "perception",
+          "source": "The first row is abc"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The second row has a plus sign in front and is written acb.",
+          "label": "perception",
+          "source": "The second row has a plus sign in front and is written acb"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The result below the horizontal line underneath is c4a.",
+          "label": "perception",
+          "source": "The result below the horizontal line underneath is c4a"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The dot after a looks like only a period punctuation mark, not part of the number.",
+          "label": "perception",
+          "source": "The dot after a looks like only a period punctuation mark, not part of the number"
+        },
+        {
+          "claim_id": 6,
+          "claim": "Set carries by columns.",
+          "label": "reasoning",
+          "source": "Set carries by columns"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The ones column satisfies c+b=a+10r.",
+          "label": "reasoning",
+          "source": "Ones column: c+b=a+10r"
+        },
+        {
+          "claim_id": 8,
+          "claim": "r is the carry from the ones place to the tens place.",
+          "label": "reasoning",
+          "source": "where r is the carry from the ones place to the tens place"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The tens column satisfies b+c+r=4+10s.",
+          "label": "reasoning",
+          "source": "Tens column: b+c+r=4+10s"
+        },
+        {
+          "claim_id": 10,
+          "claim": "s is the carry from the tens place to the hundreds place.",
+          "label": "reasoning",
+          "source": "where s is the carry from the tens place to the hundreds place"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The hundreds column satisfies a+a+s=c.",
+          "label": "reasoning",
+          "source": "Hundreds column: a+a+s=c"
+        },
+        {
+          "claim_id": 12,
+          "claim": "There is no carry from the hundreds column to the thousands column.",
+          "label": "reasoning",
+          "source": "and there is no carry to the thousands column"
+        },
+        {
+          "claim_id": 13,
+          "claim": "Both the ones and tens columns contain the same b+c.",
+          "label": "reasoning",
+          "source": "Because both the ones and tens columns contain the same b+c"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Substituting b+c=a+10r into the tens column gives a+10r+r=4+10s.",
+          "label": "reasoning",
+          "source": "Substituting b+c=a+10r into the tens column gives a+10r+r=4+10s"
+        },
+        {
+          "claim_id": 15,
+          "claim": "a+10r+r=4+10s can be simplified to a+11r=4+10s.",
+          "label": "reasoning",
+          "source": "that is, a+11r=4+10s"
+        },
+        {
+          "claim_id": 16,
+          "claim": "Both r and s can only be 0 or 1.",
+          "label": "reasoning",
+          "source": "Both r and s can only be 0 or 1"
+        },
+        {
+          "claim_id": 17,
+          "claim": "If r=0, then a=4+10s, only s=0, a=4.",
+          "label": "reasoning",
+          "source": "If r=0, then a=4+10s, only s=0, a=4"
+        },
+        {
+          "claim_id": 18,
+          "claim": "In the case r=0, the hundreds column gives c=8, and the units column will give b+8=4, impossible.",
+          "label": "reasoning",
+          "source": "The hundreds column gives c=2a+s=8, and the units column will give b+c=4, that is, b+8=4, impossible"
+        },
+        {
+          "claim_id": 19,
+          "claim": "If r=1, then a+11=4+10s, only s=1, a=3.",
+          "label": "reasoning",
+          "source": "If r=1, then a+11=4+10s, only s=1, a=3"
+        },
+        {
+          "claim_id": 20,
+          "claim": "In the case r=1, the hundreds column gives c=2·3+1=7.",
+          "label": "reasoning",
+          "source": "The hundreds column gives c=2a+s=2·3+1=7"
+        },
+        {
+          "claim_id": 21,
+          "claim": "In the case r=1, the units column gives b+7=13, obtaining b=6.",
+          "label": "reasoning",
+          "source": "The units column gives b+c=a+10r=13, so b+7=13, obtaining b=6"
+        },
+        {
+          "claim_id": 22,
+          "claim": "The three digits are different.",
+          "label": "reasoning",
+          "source": "and the three digits are different"
+        },
+        {
+          "claim_id": 23,
+          "claim": "a+b+c=3+6+7=16。",
+          "label": "reasoning",
+          "source": "a+b+c=3+6+7=16"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题合并过细拆分与重复结论，并保持其余支持于 final_cot 的 claims 顺序不变。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T09:50:56Z",
+    "changed_target_fields": 93,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

@@ -1,0 +1,735 @@
+{
+  "pack_index": 2810,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "geography/geosqa:geosqa00656:geosqa__open_9382d7cf32440dda4bd49d87__9ff55e078407",
+    "subject_dir": "geography",
+    "dataset_slug": "geosqa",
+    "problem_id": "open_9382d7cf32440dda4bd49d87",
+    "source_problem_id": "open_9382d7cf32440dda4bd49d87",
+    "problem_run_key": "geosqa__open_9382d7cf32440dda4bd49d87__9ff55e078407",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.45,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/geography/geosqa/samples/geosqa00656.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/geography/geosqa/samples/geosqa00656.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/geography/geosqa/samples/geosqa00656.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/geography/geosqa/artifacts/images/geosqa00656.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer_text": null,
+    "open_variant_id": "open_9382d7cf32440dda4bd49d87",
+    "variant_index": 1,
+    "title": "GeoSQA Open-ended Question",
+    "split_role": "single",
+    "rewritten_question_text": "In the following figure, places Jia and Yi are world-famous spaceflight centers. <image1> Approximately how many kilometers is the shortest distance between the cities Jia and Yi?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "12,000 kilometers",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_84bbfb142b33af95e6542a00",
+        "problem_id": "prob_14c82cfd416efb1850d644d1",
+        "node_type": "answer_claim",
+        "canonical_value": "12,000 kilometers",
+        "surface_forms": [
+          "12,000 kilometers"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_dc5971fbf61d3cfe96ed01a2"
+        ],
+        "evidence_refs": [
+          "asset_dc5971fbf61d3cfe96ed01a2"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "12,000 kilometers"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T23:26:15Z",
+        "updated_at": "2026-04-08T23:26:15Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_9382d7cf32440dda4bd49d87",
+      "parent_problem_id": "prob_14c82cfd416efb1850d644d1",
+      "variant_index": 1,
+      "title": "GeoSQA Open-ended Question",
+      "rewritten_question_text": "In the following figure, places Jia and Yi are world-famous spaceflight centers.\n\n<image1>\n\nApproximately how many kilometers is the shortest distance between the cities Jia and Yi?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "12,000 kilometers",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the following figure, places Jia and Yi are world-famous spaceflight centers.\n\n<image1>\n\nApproximately how many kilometers is the shortest distance between the cities Jia and Yi?",
+    "raw_answer": "12,000 kilometers",
+    "raw_standard_answer": "12,000 kilometers",
+    "resolved_question_text": "In the following figure, places Jia and Yi are world-famous spaceflight centers. <image1> Approximately how many kilometers is the shortest distance between the cities Jia and Yi?",
+    "resolved_answer": "12,000 kilometers",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: in the left map, Jia is located near southeastern North America; the map marks about the 30° parallel and the 80° meridian, so Jia can be read as being approximately near 30°N, 80°W. In the right map, Yi is located near inland Asia; the map marks about the 40° parallel and the 100° meridian, so Yi can be read as being approximately near 40°N, 100°E. Reasoning: the question asks for the “shortest distance” between the two cities, which should be estimated according to the great-circle distance between two points on the earth’s sphere. The longitude difference between the two places is about 80°+100°=180°, and the latitudes are respectively about φ1=30°N and φ2=40°N. From the great-circle central angle formula: cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ. Substituting Δλ≈180°, the central angle c is about 110°. On the great circle of the earth’s surface, each 1° is about 111 kilometers, so the distance is about 110×111≈12210 kilometers, that is, about 12,200 kilometers; taking an approximation, it is about 12,000 kilometers.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_9382d7cf32440dda4bd49d87",
+      "problem_run_key": "geosqa__open_9382d7cf32440dda4bd49d87__9ff55e078407",
+      "question_text": "In the following figure, places Jia and Yi are world-famous spaceflight centers.\n\n<image1>\n\nApproximately how many kilometers is the shortest distance between the cities Jia and Yi?",
+      "standard_answer": "12,000 kilometers",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/geography/geosqa/artifacts/images/geosqa00656.png",
+        "/home/lijingyue/qiujianbo/ready/geography/geosqa/artifacts/crops/geosqa00656.png"
+      ],
+      "initial_multi_solution_score": 0.3647,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "先描述图像：左图甲位于30°N附近、80°W附近，右图乙位于40°N附近、100°E附近。再根据题意要求“最短距离”，把两城看作球面两点，取经度差Δλ≈180°、纬度φ1≈30°N、φ2≈40°N。代入大圆距离关系，得到中心角约110°，再乘以每度约111千米，得约1.22万千米，按选项/近似取1.20万千米。",
+          "CoT_raw": "图像描述：左侧地图中，甲位于北美东南部附近，图上标有约30°纬线和80°经线，可读作甲大致在30°N、80°W附近。右侧地图中，乙位于亚洲内陆附近，图上标有约40°纬线和100°经线，可读作乙大致在40°N、100°E附近。\n推理：题目问两城间的“最短距离”，应按地球球面上两点的大圆距离估算。两地经度差约为80°+100°=180°，纬度分别约为φ1=30°N、φ2=40°N。由大圆中心角公式：cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ。代入Δλ≈180°，得到中心角c约为110°。地球表面大圆上每1°约为111千米，所以距离约为110×111≈12210千米，即约1.22万千米，按近似取约1.20万千米。",
+          "model_answer": "约1.20万千米",
+          "is_answer_match": true,
+          "answer_match_reason": "标准答案为1.20万千米，预测答案为约1.20万千米，仅增加了“约”，数值一致且符合近似表达。",
+          "answer_match_part_results": [
+            {
+              "standard_part": "1.20万千米",
+              "predicted_part": "约1.20万千米",
+              "is_equivalent": true,
+              "reason": "两者表示的距离相同，预测答案只是明确为近似值。"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：左侧地图中，甲位于北美东南部附近，图上标有约30°纬线和80°经线，可读作甲大致在30°N、80°W附近。右侧地图中，乙位于亚洲内陆附近，图上标有约40°纬线和100°经线，可读作乙大致在40°N、100°E附近。\n推理：题目问两城间的“最短距离”，应按地球球面上两点的大圆距离估算。两地经度差约为80°+100°=180°，纬度分别约为φ1=30°N、φ2=40°N。由大圆中心角公式：cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ。代入Δλ≈180°，得到中心角c约为110°。地球表面大圆上每1°约为111千米，所以距离约为110×111≈12210千米，即约1.22万千米，按近似取约1.20万千米。",
+          "answer_answer_check_final": "约1.20万千米",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理链基本合格：先描述图像位置，再进行球面最短距离推算，顺序符合要求；读图坐标、经度差、大圆距离公式和最终近似均与标准答案一致。可小幅改进之处是说明“右侧为亚洲内陆”属于基于轮廓和经纬度的地理识别，若严格表述可改为“乙位于约40°N、100°E处”。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：左侧地图中，甲位于北美东南部附近，图上标有约30°纬线和80°经线，可读作甲大致在30°N、80°W附近。右侧地图中，乙位于亚洲内陆附近，图上标有约40°纬线和100°经线，可读作乙大致在40°N、100°E附近。\n推理：题目问两城间的“最短距离”，应按地球球面上两点的大圆距离估算。两地经度差约为80°+100°=180°，纬度分别约为φ1=30°N、φ2=40°N。由大圆中心角公式：cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ。代入Δλ≈180°，得到中心角c约为110°。地球表面大圆上每1°约为111千米，所以距离约为110×111≈12210千米，即约1.22万千米，按近似取约1.20万千米。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "直接采用球面两点大圆距离/球面余弦公式，由图上经纬度读数进入计算；这是标准解析几何路线。",
+            "image_role": "从图中先读出甲在北美佛罗里达东岸附近，约为30°N、80°W；乙在中国西北航天中心附近，约为40°N、100°E。两点经度差约为180°。",
+            "text_role": "文本说明甲、乙是航天中心，并要求求两城之间的最短距离，提示应按地球球面最短航线而不是地图平面距离计算。",
+            "knowledge_role": "地球上两点最短距离沿大圆；球面余弦公式 cosσ=sinφ1 sinφ2+cosφ1 cosφ2 cosΔλ。若Δλ≈180°，则σ≈180°-(φ1+φ2)=180°-(30°+40°)=110°；地球大圆1°约111 km，故距离约110×111≈12200 km，即约1.20万千米。"
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：左侧地图中，甲位于北美东南部附近，图上标有约30°纬线和80°经线，可读作甲大致在30°N、80°W附近。右侧地图中，乙位于亚洲内陆附近，图上标有约40°纬线和100°经线，可读作乙大致在40°N、100°E附近。\n推理：题目问两城间的“最短距离”，应按地球球面上两点的大圆距离估算。两地经度差约为80°+100°=180°，纬度分别约为φ1=30°N、φ2=40°N。由大圆中心角公式：cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ。代入Δλ≈180°，得到中心角c约为110°。地球表面大圆上每1°约为111千米，所以距离约为110×111≈12210千米，即约1.22万千米，按近似取约1.20万千米。",
+            "model_answer": "约1.20万千米",
+            "method_following_score_self_report": 0.98,
+            "possible_risk_flags": [
+              "图中经纬度读数为近似值",
+              "按球面大圆距离估算，未考虑地球椭球体细节"
+            ],
+            "_llm_usage": {
+              "prompt_tokens": 2946,
+              "completion_tokens": 813,
+              "total_tokens": 3759,
+              "cached_tokens": 0,
+              "reasoning_tokens": 472
+            },
+            "_llm_elapsed_seconds": 20.425,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理链基本合格：先描述图像位置，再进行球面最短距离推算，顺序符合要求；读图坐标、经度差、大圆距离公式和最终近似均与标准答案一致。可小幅改进之处是说明“右侧为亚洲内陆”属于基于轮廓和经纬度的地理识别，若严格表述可改为“乙位于约40°N、100°E处”。",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 22.63
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 20.44,
+              "usage_delta": {
+                "request_count": 14,
+                "successful_request_count": 14,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 14,
+                "requests_with_usage": 14,
+                "prompt_tokens": 41765,
+                "completion_tokens": 11741,
+                "total_tokens": 53506,
+                "cached_tokens": 0,
+                "reasoning_tokens": 6255,
+                "total_request_seconds": 386.912,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 6.8,
+              "usage_delta": {
+                "request_count": 5,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 5,
+                "requests_with_usage": 5,
+                "prompt_tokens": 10014,
+                "completion_tokens": 3672,
+                "total_tokens": 13686,
+                "cached_tokens": 0,
+                "reasoning_tokens": 2285,
+                "total_request_seconds": 119.426,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 22.648,
+              "usage_delta": {
+                "request_count": 10,
+                "successful_request_count": 10,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 10,
+                "requests_with_usage": 10,
+                "prompt_tokens": 28881,
+                "completion_tokens": 7698,
+                "total_tokens": 36579,
+                "cached_tokens": 0,
+                "reasoning_tokens": 5276,
+                "total_request_seconds": 320.372,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "先描述图像：甲读作约30°N、80°W，乙读作约40°N、100°E。构造甲的对跖点：它应在30°S、100°E。图中乙与该对跖点同在100°E经线附近，二者纬度差约40°-(-30°)=70°。由于甲到其对跖点的球面距离为180°中心角，所以甲到乙的最短中心角为180°-70°=110°，换算成距离约110×111≈1.2万千米。",
+          "CoT_raw": "先描述图像：图中左侧小图显示甲位于美国佛罗里达半岛附近，经纬线标注可读为约30°N、80°W；右侧小图显示乙位于中国西北部附近，经纬线标注可读为约40°N、100°E。\n\n再推理：构造甲地的对跖点。甲约为30°N、80°W，所以其对跖点应为30°S、100°E。乙约为40°N、100°E，与甲的对跖点大致在同一条100°E经线上。乙与该对跖点的纬度差为40°－(-30°)=70°。甲到其对跖点的球面中心角为180°，因此甲到乙的最短球面中心角约为180°－70°=110°。按地球上1°大圆弧长约111千米计算，距离约为110×111=12210千米，约为1.2万千米。",
+          "model_answer": "约1.20万千米",
+          "is_answer_match": true,
+          "answer_match_reason": "标准答案为1.20万千米，预测答案为约1.20万千米，仅多了“约”字，数值和单位一致，语义等价。",
+          "answer_match_part_results": [
+            {
+              "standard_part": "1.20万千米",
+              "predicted_part": "约1.20万千米",
+              "is_equivalent": true,
+              "reason": "两者均表示约12000千米，数值和单位一致。"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中左侧小图显示甲位于美国佛罗里达半岛附近，经纬线标注可读为约30°N、80°W；右侧小图显示乙位于中国西北部附近，经纬线标注可读为约40°N、100°E。\n\n再推理：构造甲地的对跖点。甲约为30°N、80°W，所以其对跖点应为30°S、100°E。乙约为40°N、100°E，与甲的对跖点大致在同一条100°E经线上。乙与该对跖点的纬度差为40°－(-30°)=70°。甲到其对跖点的球面中心角为180°，因此甲到乙的最短球面中心角约为180°－70°=110°。按地球上1°大圆弧长约111千米计算，距离约为110×111=12210千米，约为1.2万千米。",
+          "answer_answer_check_final": "约1.20万千米",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理轨迹与题目、图像和标准答案一致。其先描述图像中甲约为30°N、80°W、乙约为40°N、100°E，再用甲的对跖点30°S、100°E与乙的纬度差推得中心角约110°，最后换算为约1.2万千米，符合方法草稿与标准答案。无明显需要修改之处。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中左侧小图显示甲位于美国佛罗里达半岛附近，经纬线标注可读为约30°N、80°W；右侧小图显示乙位于中国西北部附近，经纬线标注可读为约40°N、100°E。\n\n再推理：构造甲地的对跖点。甲约为30°N、80°W，所以其对跖点应为30°S、100°E。乙约为40°N、100°E，与甲的对跖点大致在同一条100°E经线上。乙与该对跖点的纬度差为40°－(-30°)=70°。甲到其对跖点的球面中心角为180°，因此甲到乙的最短球面中心角约为180°－70°=110°。按地球上1°大圆弧长约111千米计算，距离约为110×111=12210千米，约为1.2万千米。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "不直接套球面余弦公式，而利用甲点对跖点与乙点几乎同经线的几何关系，先求乙到甲的对跖点的角距离，再用180°相减；与方法1的计算桥梁不同。",
+            "image_role": "从图中识别甲约在30°N、80°W，乙约在40°N、100°E；注意100°E正好与80°W相差180°，乙所在经线接近甲的对跖经线。",
+            "text_role": "文本只需提供目标量：求甲、乙两城之间的最短距离；“航天中心”帮助确认图中甲、乙对应的地理位置读数是肯尼迪附近和酒泉附近。",
+            "knowledge_role": "球面上一点的对跖点纬度变号、经度差180°，甲的对跖点约为30°S、100°E。乙在40°N、100°E附近，与甲的对跖点在同一经线上，相隔纬度约70°。甲到乙的大圆中心角等于180°-70°=110°；1°大圆弧长约111 km，所以距离约12200 km，近似为1.20万千米。"
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中左侧小图显示甲位于美国佛罗里达半岛附近，经纬线标注可读为约30°N、80°W；右侧小图显示乙位于中国西北部附近，经纬线标注可读为约40°N、100°E。\n\n再推理：构造甲地的对跖点。甲约为30°N、80°W，所以其对跖点应为30°S、100°E。乙约为40°N、100°E，与甲的对跖点大致在同一条100°E经线上。乙与该对跖点的纬度差为40°－(-30°)=70°。甲到其对跖点的球面中心角为180°，因此甲到乙的最短球面中心角约为180°－70°=110°。按地球上1°大圆弧长约111千米计算，距离约为110×111=12210千米，约为1.2万千米。",
+            "model_answer": "约1.20万千米",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [
+              "图中经纬度读数为近似值"
+            ],
+            "_llm_usage": {
+              "prompt_tokens": 2953,
+              "completion_tokens": 810,
+              "total_tokens": 3763,
+              "cached_tokens": 0,
+              "reasoning_tokens": 502
+            },
+            "_llm_elapsed_seconds": 24.928,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理轨迹与题目、图像和标准答案一致。其先描述图像中甲约为30°N、80°W、乙约为40°N、100°E，再用甲的对跖点30°S、100°E与乙的纬度差推得中心角约110°，最后换算为约1.2万千米，符合方法草稿与标准答案。无明显需要修改之处。",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 18.935
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 24.952,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 12,
+                "prompt_tokens": 37556,
+                "completion_tokens": 8402,
+                "total_tokens": 45958,
+                "cached_tokens": 0,
+                "reasoning_tokens": 5589,
+                "total_request_seconds": 325.773,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 8.653,
+              "usage_delta": {
+                "request_count": 5,
+                "successful_request_count": 5,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 5,
+                "requests_with_usage": 5,
+                "prompt_tokens": 12225,
+                "completion_tokens": 6081,
+                "total_tokens": 18306,
+                "cached_tokens": 0,
+                "reasoning_tokens": 4497,
+                "total_request_seconds": 208.361,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 18.958,
+              "usage_delta": {
+                "request_count": 9,
+                "successful_request_count": 14,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 9,
+                "requests_with_usage": 14,
+                "prompt_tokens": 42292,
+                "completion_tokens": 8738,
+                "total_tokens": 51030,
+                "cached_tokens": 0,
+                "reasoning_tokens": 5975,
+                "total_request_seconds": 342.629,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 38.096,
+          "usage_delta": {
+            "request_count": 11,
+            "successful_request_count": 7,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 11,
+            "requests_with_usage": 7,
+            "prompt_tokens": 21103,
+            "completion_tokens": 7222,
+            "total_tokens": 28325,
+            "cached_tokens": 0,
+            "reasoning_tokens": 2762,
+            "total_request_seconds": 232.81,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "GeoSQA",
+        "dataset_slug": "geosqa",
+        "source_problem_id": "3770",
+        "subject": "地理",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/geography/geosqa/samples/geosqa00656.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_14c82cfd416efb1850d644d1",
+          "open_variant_count": 1,
+          "open_variant_id": "open_9382d7cf32440dda4bd49d87",
+          "open_variant_index": 1,
+          "open_variant_title": "GeoSQA 开放题",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 140.584,
+      "problem_usage": {
+        "request_count": 7,
+        "successful_request_count": 7,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 7,
+        "requests_with_usage": 7,
+        "prompt_tokens": 17306,
+        "completion_tokens": 4486,
+        "total_tokens": 21792,
+        "cached_tokens": 0,
+        "reasoning_tokens": 2429,
+        "total_request_seconds": 140.406,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "下图中甲、乙两地为世界著名的航天中心。\n\n<image1>\n\n甲、乙两城间的最短距离约为多少千米？",
+      "answer": "12,000 kilometers",
+      "final_cot": "Image description: in the left map, Jia is located near southeastern North America; the map marks about the 30° parallel and the 80° meridian, so Jia can be read as being approximately near 30°N, 80°W. In the right map, Yi is located near inland Asia; the map marks about the 40° parallel and the 100° meridian, so Yi can be read as being approximately near 40°N, 100°E.\nReasoning: the question asks for the “shortest distance” between the two cities, which should be estimated according to the great-circle distance between two points on the earth’s sphere. The longitude difference between the two places is about 80°+100°=180°, and the latitudes are respectively about φ1=30°N and φ2=40°N. From the great-circle central angle formula: cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ. Substituting Δλ≈180°, the central angle c is about 110°. On the great circle of the earth’s surface, each 1° is about 111 kilometers, so the distance is about 110×111≈12210 kilometers, that is, about 12,200 kilometers; taking an approximation, it is about 12,000 kilometers.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理链基本合格：先描述图像位置，再进行球面最短距离推算，顺序符合要求；读图坐标、经度差、大圆距离公式和最终近似均与标准答案一致。可小幅改进之处是说明“右侧为亚洲内陆”属于基于轮廓和经纬度的地理识别，若严格表述可改为“乙位于约40°N、100°E处”。",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 22.63
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理轨迹与题目、图像和标准答案一致。其先描述图像中甲约为30°N、80°W、乙约为40°N、100°E，再用甲的对跖点30°S、100°E与乙的纬度差推得中心角约110°，最后换算为约1.2万千米，符合方法草稿与标准答案。无明显需要修改之处。",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 18.935
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_resume_openvariants_20260506T003434CST",
+        "processed_index": 2662,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "geography",
+        "dataset": "geosqa",
+        "relative_dataset": "geography/geosqa",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/geography/geosqa/samples/geosqa00656.json",
+        "source_sample_filename": "geosqa00656.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/geography/geosqa/samples/geosqa00656.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.events.jsonl",
+        "written_at": "2026-05-06T06:03:24Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:18Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_9382d7cf32440dda4bd49d87",
+          "new_problem_id": "open_9382d7cf32440dda4bd49d87",
+          "old_problem_run_key": "geosqa__open_9382d7cf32440dda4bd49d87__9ff55e078407",
+          "new_problem_run_key": "geosqa__open_9382d7cf32440dda4bd49d87__9ff55e078407",
+          "target_relpath": "geography/geosqa/samples/geosqa00656.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_9382d7cf32440dda4bd49d87",
+    "problem_run_key": "geosqa__open_9382d7cf32440dda4bd49d87__9ff55e078407",
+    "raw_question_text": "In the following figure, places Jia and Yi are world-famous spaceflight centers.\n\n<image1>\n\nApproximately how many kilometers is the shortest distance between the cities Jia and Yi?",
+    "raw_answer": "12,000 kilometers",
+    "raw_standard_answer": "12,000 kilometers",
+    "resolved_question_text": "In the following figure, places Jia and Yi are world-famous spaceflight centers. <image1> Approximately how many kilometers is the shortest distance between the cities Jia and Yi?",
+    "resolved_answer": "12,000 kilometers",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: in the left map, Jia is located near southeastern North America; the map marks about the 30° parallel and the 80° meridian, so Jia can be read as being approximately near 30°N, 80°W. In the right map, Yi is located near inland Asia; the map marks about the 40° parallel and the 100° meridian, so Yi can be read as being approximately near 40°N, 100°E.\nReasoning: the question asks for the “shortest distance” between the two cities, which should be estimated according to the great-circle distance between two points on the earth’s sphere. The longitude difference between the two places is about 80°+100°=180°, and the latitudes are respectively about φ1=30°N and φ2=40°N. From the great-circle central angle formula: cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ. Substituting Δλ≈180°, the central angle c is about 110°. On the great circle of the earth’s surface, each 1° is about 111 kilometers, so the distance is about 110×111≈12210 kilometers, that is, about 12,200 kilometers; taking an approximation, it is about 12,000 kilometers.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "Jia is located near southeastern North America.",
+        "label": "perception",
+        "source": "Jia is located near southeastern North America"
+      },
+      {
+        "claim_id": 2,
+        "claim": "Jia is approximately near 30°N, 80°W.",
+        "label": "perception",
+        "source": "can be read as Jia being approximately near 30°N, 80°W"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Yi is located near inland Asia.",
+        "label": "perception",
+        "source": "Yi is located near inland Asia"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Yi is approximately near 40°N, 100°E.",
+        "label": "perception",
+        "source": "can be read as Yi being approximately near 40°N, 100°E"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The “shortest distance” between the two cities should be estimated according to the great-circle distance between two points on the earth’s sphere.",
+        "label": "reasoning",
+        "source": "The question asks for the “shortest distance” between the two cities, which should be estimated according to the great-circle distance between two points on the earth’s sphere"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The longitude difference between the two places is about 80°+100°=180°.",
+        "label": "reasoning",
+        "source": "The longitude difference between the two places is about 80°+100°=180°"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The latitudes of the two places are respectively about φ1=30°N and φ2=40°N.",
+        "label": "reasoning",
+        "source": "the latitudes are respectively about φ1=30°N and φ2=40°N"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The great-circle central angle formula is cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ.",
+        "label": "knowledge",
+        "source": "From the great-circle central angle formula: cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Substitute Δλ≈180° into the great-circle central angle formula.",
+        "label": "reasoning",
+        "source": "Substituting Δλ≈180°"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The central angle c is about 110°.",
+        "label": "reasoning",
+        "source": "the central angle c is about 110°"
+      },
+      {
+        "claim_id": 11,
+        "claim": "On the great circle of the earth’s surface, each 1° is about 111 kilometers.",
+        "label": "knowledge",
+        "source": "On the great circle of the earth’s surface, each 1° is about 111 kilometers"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The distance is about 110×111≈12210 kilometers.",
+        "label": "reasoning",
+        "source": "The distance is about 110×111≈12210 kilometers"
+      },
+      {
+        "claim_id": 13,
+        "claim": "12210 kilometers is about 12,200 kilometers.",
+        "label": "reasoning",
+        "source": "that is, about 12,200 kilometers"
+      },
+      {
+        "claim_id": 14,
+        "claim": "Taking an approximation, the shortest distance between the two cities is about 12,000 kilometers.",
+        "label": "reasoning",
+        "source": "taking an approximation, it is about 12,000 kilometers"
+      }
+    ],
+    "claim_count": 14,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "Jia is located near southeastern North America.",
+          "label": "perception",
+          "source": "Jia is located near southeastern North America"
+        },
+        {
+          "claim_id": 2,
+          "claim": "Jia is approximately near 30°N, 80°W.",
+          "label": "perception",
+          "source": "can be read as Jia being approximately near 30°N, 80°W"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Yi is located near inland Asia.",
+          "label": "perception",
+          "source": "Yi is located near inland Asia"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Yi is approximately near 40°N, 100°E.",
+          "label": "perception",
+          "source": "can be read as Yi being approximately near 40°N, 100°E"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The “shortest distance” between the two cities should be estimated according to the great-circle distance between two points on the earth’s sphere.",
+          "label": "reasoning",
+          "source": "The question asks for the “shortest distance” between the two cities, which should be estimated according to the great-circle distance between two points on the earth’s sphere"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The longitude difference between the two places is about 80°+100°=180°.",
+          "label": "reasoning",
+          "source": "The longitude difference between the two places is about 80°+100°=180°"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The latitudes of the two places are respectively about φ1=30°N and φ2=40°N.",
+          "label": "reasoning",
+          "source": "the latitudes are respectively about φ1=30°N and φ2=40°N"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The great-circle central angle formula is cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ.",
+          "label": "knowledge",
+          "source": "From the great-circle central angle formula: cos c = sinφ1 sinφ2 + cosφ1 cosφ2 cosΔλ"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Substitute Δλ≈180° into the great-circle central angle formula.",
+          "label": "reasoning",
+          "source": "Substituting Δλ≈180°"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The central angle c is about 110°.",
+          "label": "reasoning",
+          "source": "the central angle c is about 110°"
+        },
+        {
+          "claim_id": 11,
+          "claim": "On the great circle of the earth’s surface, each 1° is about 111 kilometers.",
+          "label": "knowledge",
+          "source": "On the great circle of the earth’s surface, each 1° is about 111 kilometers"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The distance is about 110×111≈12210 kilometers.",
+          "label": "reasoning",
+          "source": "The distance is about 110×111≈12210 kilometers"
+        },
+        {
+          "claim_id": 13,
+          "claim": "12210 kilometers is about 12,200 kilometers.",
+          "label": "reasoning",
+          "source": "that is, about 12,200 kilometers"
+        },
+        {
+          "claim_id": 14,
+          "claim": "Taking an approximation, the shortest distance between the two cities is about 12,000 kilometers.",
+          "label": "reasoning",
+          "source": "taking an approximation, it is about 12,000 kilometers"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的意见删除原 claim 2、3、6、7；severity 为 no_fix 的 claim 13 未修改，并对剩余 claims 顺序 renumber。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:19Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/geography/geosqa/02556_geography_geosqa_open_9382d7cf32440dda4bd49d87_203635e20f.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/geography/geosqa/02810_geography_geosqa_open_9382d7cf32440dda4bd49d87_203635e20f.json"
+  }
+}

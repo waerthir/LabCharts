@@ -1,0 +1,795 @@
+{
+  "pack_index": 3454,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "geography/geosqa:geosqa00525:geosqa__open_631979ce065397f09530be9a__aeeff36c477c",
+    "subject_dir": "geography",
+    "dataset_slug": "geosqa",
+    "problem_id": "open_631979ce065397f09530be9a",
+    "source_problem_id": "open_631979ce065397f09530be9a",
+    "problem_run_key": "geosqa__open_631979ce065397f09530be9a__aeeff36c477c",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 100.0,
+    "difficulty_level": "high",
+    "weighted_accuracy": 0.0,
+    "wrong_models": [
+      "gpt55_high",
+      "qwen3_vl_72b_instruct",
+      "gpt54_mini",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "False",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/geography/geosqa/samples/geosqa00525.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/geography/geosqa/samples/geosqa00525.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/geography/geosqa/samples/geosqa00525.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/geography/geosqa/artifacts/images/geosqa00525.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer_text": null,
+    "open_variant_id": "open_631979ce065397f09530be9a",
+    "variant_index": 1,
+    "title": "GeoSQA Open-ended Question",
+    "split_role": "single",
+    "rewritten_question_text": "Read the schematic diagram of a certain urban area. <image1> According to the figure, what range does the relative height H (unit: meters) between points A and B satisfy?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "40<H<60",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_b097fab3b40f8f62424d482d",
+        "problem_id": "prob_8a23802dd990ae2b0e46e4a8",
+        "node_type": "answer_claim",
+        "canonical_value": "40<H<60",
+        "surface_forms": [
+          "40<H<60"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_5213378ce42d0b577359c2e1"
+        ],
+        "evidence_refs": [
+          "asset_5213378ce42d0b577359c2e1"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "40<H<60"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T22:06:38Z",
+        "updated_at": "2026-04-08T22:06:38Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_631979ce065397f09530be9a",
+      "parent_problem_id": "prob_8a23802dd990ae2b0e46e4a8",
+      "variant_index": 1,
+      "title": "GeoSQA Open-ended Question",
+      "rewritten_question_text": "Read the schematic diagram of a certain urban area. <image1>\nAccording to the figure, what range does the relative height H (unit: meters) between points A and B satisfy?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "40<H<60",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Read the schematic diagram of a certain urban area. <image1>\nAccording to the figure, what range does the relative height H (unit: meters) between points A and B satisfy?",
+    "raw_answer": "40<H<60",
+    "raw_standard_answer": "40<H<60",
+    "resolved_question_text": "Read the schematic diagram of a certain urban area. <image1> According to the figure, what range does the relative height H (unit: meters) between points A and B satisfy?",
+    "resolved_answer": "40<H<60",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The figure is a contour schematic diagram of a certain urban area, with the central grid area representing the urban area; the contour lines are labeled with values such as 160, 170, and 180, in meters; there are points A and B in the figure, with point B in the upper right and point A located at a relatively high place near the urban area. The adjacent labeled 160, 170, and 180 differ by 10 meters, so the contour interval is 10 meters. Then reason: Tracing along the contour lines, point B is between the two contour lines of 160 meters and 170 meters, so 160<B<170; continuing to count upward by the known contour interval of 10 meters, point A is between the two contour lines of 210 meters and 220 meters, so 210<A<220. The relative height H between points A and B is H=A-B. The lower limit uses the lowest possible value of A minus the highest possible value of B: H>210-170=40; the upper limit uses the highest possible value of A minus the lowest possible value of B: H<220-160=60. Therefore, the relative height between points A and B satisfies 40<H<60.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_631979ce065397f09530be9a",
+      "problem_run_key": "geosqa__open_631979ce065397f09530be9a__aeeff36c477c",
+      "question_text": "Read the schematic diagram of a certain urban area. <image1>\nAccording to the figure, what range does the relative height H (unit: meters) between points A and B satisfy?",
+      "standard_answer": "40<H<60",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/geography/geosqa/artifacts/images/geosqa00525.png",
+        "/home/lijingyue/qiujianbo/ready/geography/geosqa/artifacts/crops/geosqa00525.png"
+      ],
+      "initial_multi_solution_score": 0.3647,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First describe the diagram as a contour map of a city area with points A and B and labeled contours 160, 170, 180. Infer the contour interval is 10 m. Trace the contour lines around A and B to bracket A's elevation between its two neighboring contour values and B's elevation between its two neighboring contour values. Then compute the relative-height interval by subtracting B's maximum possible elevation from A's minimum possible elevation for the lower bound, and subtracting B's minimum possible elevation from A's maximum possible elevation for the upper bound. This gives 40<H<60.",
+          "CoT_raw": "先描述图像：图中是某城区等高线示意图，中部网格区域表示城区，等高线标注有160、170、180等数值，单位为米；图中有A、B两点，B点在右上部，A点位于城区附近较高处。相邻标注的160、170、180相差10米，所以等高距为10米。\n再推理：沿等高线追踪，B点夹在160米和170米两条等高线之间，因此160<B<170；由已知等高线按10米等高距继续向高处数，A点夹在210米和220米两条等高线之间，因此210<A<220。AB两点相对高度H=A-B。下限用A的最低可能值减B的最高可能值：H>210-170=40；上限用A的最高可能值减B的最低可能值：H<220-160=60。因此AB两点的相对高度满足40<H<60。",
+          "model_answer": "40<H<60",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "40<H<60",
+              "predicted_part": "40<H<60",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中是某城区等高线示意图，中部网格区域表示城区，等高线标注有160、170、180等数值，单位为米；图中有A、B两点，B点在右上部，A点位于城区附近较高处。相邻标注的160、170、180相差10米，所以等高距为10米。\n再推理：沿等高线追踪，B点夹在160米和170米两条等高线之间，因此160<B<170；由已知等高线按10米等高距继续向高处数，A点夹在210米和220米两条等高线之间，因此210<A<220。AB两点相对高度H=A-B。下限用A的最低可能值减B的最高可能值：H>210-170=40；上限用A的最高可能值减B的最低可能值：H<220-160=60。因此AB两点的相对高度满足40<H<60。",
+          "answer_answer_check_final": "40<H<60",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理链整体通过。它先描述图像、再进行等高线推理，最终答案与标准答案40<H<60一致，也基本遵循方法草案。可改进之处是：A点由180米继续向高处数到210—220米的过程可以更明确，例如逐条说明经过190、200、210等未标注等高线，以增强图像依据的可核查性。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中是某城区等高线示意图，中部网格区域表示城区，等高线标注有160、170、180等数值，单位为米；图中有A、B两点，B点在右上部，A点位于城区附近较高处。相邻标注的160、170、180相差10米，所以等高距为10米。\n再推理：沿等高线追踪，B点夹在160米和170米两条等高线之间，因此160<B<170；由已知等高线按10米等高距继续向高处数，A点夹在210米和220米两条等高线之间，因此210<A<220。AB两点相对高度H=A-B。下限用A的最低可能值减B的最高可能值：H>210-170=40；上限用A的最高可能值减B的最低可能值：H<220-160=60。因此AB两点的相对高度满足40<H<60。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Uses direct elevation bracketing of each point and subtraction of intervals; it does not rely on a memorized relative-height counting formula.",
+            "image_role": "Read the contour map: identify the labeled contour values 160, 170, and 180 to infer a 10 m contour interval; locate points A and B relative to the adjacent contour lines enclosing each point. From the diagram, A is in a higher contour belt than B, with the possible lower/upper bounds for A and B separated so that the minimum possible difference is 40 m and the maximum possible difference is 60 m.",
+            "text_role": "Use the question text only to know that the requested quantity is the relative height H between points A and B, in meters.",
+            "knowledge_role": "Contour-line rule: adjacent contour lines differ by one contour interval, and a point lying between two adjacent contours has an elevation strictly between those two values. Relative height is found by subtracting the possible elevation interval of the lower point from that of the higher point, using the smallest and largest possible differences."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中是某城区等高线示意图，中部网格区域表示城区，等高线标注有160、170、180等数值，单位为米；图中有A、B两点，B点在右上部，A点位于城区附近较高处。相邻标注的160、170、180相差10米，所以等高距为10米。\n再推理：沿等高线追踪，B点夹在160米和170米两条等高线之间，因此160<B<170；由已知等高线按10米等高距继续向高处数，A点夹在210米和220米两条等高线之间，因此210<A<220。AB两点相对高度H=A-B。下限用A的最低可能值减B的最高可能值：H>210-170=40；上限用A的最高可能值减B的最低可能值：H<220-160=60。因此AB两点的相对高度满足40<H<60。",
+            "model_answer": "40<H<60",
+            "method_following_score_self_report": 0.95,
+            "possible_risk_flags": [
+              "图像分辨率较低，部分未标注等高线需根据等高距顺推"
+            ],
+            "_llm_usage": {
+              "prompt_tokens": 2785,
+              "completion_tokens": 2648,
+              "total_tokens": 5433,
+              "cached_tokens": 0,
+              "reasoning_tokens": 2339
+            },
+            "_llm_elapsed_seconds": 60.675,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理链整体通过。它先描述图像、再进行等高线推理，最终答案与标准答案40<H<60一致，也基本遵循方法草案。可改进之处是：A点由180米继续向高处数到210—220米的过程可以更明确，例如逐条说明经过190、200、210等未标注等高线，以增强图像依据的可核查性。",
+              "major_failures": [],
+              "extractability_score": 0.9,
+              "grounding_score": 0.85,
+              "method_fidelity_score": 0.95,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 89.108
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 60.689,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 14,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 14,
+                "prompt_tokens": 44918,
+                "completion_tokens": 12328,
+                "total_tokens": 57246,
+                "cached_tokens": 0,
+                "reasoning_tokens": 9006,
+                "total_request_seconds": 432.259,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 89.122,
+              "usage_delta": {
+                "request_count": 9,
+                "successful_request_count": 13,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 9,
+                "requests_with_usage": 13,
+                "prompt_tokens": 44155,
+                "completion_tokens": 13708,
+                "total_tokens": 57863,
+                "cached_tokens": 0,
+                "reasoning_tokens": 10156,
+                "total_request_seconds": 406.846,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "First describe the visible contour map and note the labeled 160, 170, 180 contours. Determine the contour interval d=10 m. Instead of writing separate absolute elevation ranges, count the contour steps from the belt containing B to the belt containing A; the map places them about five contour intervals apart, and neither point is exactly on a contour line. Apply the contour-map relative-height counting rule: (5-1)×10 < H < (5+1)×10, so 40<H<60.",
+          "CoT_raw": "图像描述：图中是某城区等高线示意图，中部有网格状城区，周围分布多条弯曲等高线；图上能看到标注为160、170、180的等高线，单位为米。A点位于城区上方附近的等高线间，B点位于右侧160等高线附近的等高线间，两点都不在等高线上。推理：由相邻标注160、170、180可知等高距d=10米。按图中A、B所在高程带之间的等高线间隔来数，两点约相隔5个等高距。由于A、B均不在等高线上，相对高度按等高线相对高度估算规则为：(5-1)×10 < H < (5+1)×10，即40 < H < 60。",
+          "model_answer": "40<H<60",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "40<H<60",
+              "predicted_part": "40<H<60",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是某城区等高线示意图，中部有网格状城区，周围分布多条弯曲等高线；图上能看到标注为160、170、180的等高线，单位为米。A点位于城区上方附近的等高线间，B点位于右侧160等高线附近的等高线间，两点都不在等高线上。推理：由相邻标注160、170、180可知等高距d=10米。按图中A、B所在高程带之间的等高线间隔来数，两点约相隔5个等高距。由于A、B均不在等高线上，相对高度按等高线相对高度估算规则为：(5-1)×10 < H < (5+1)×10，即40 < H < 60。",
+          "answer_answer_check_final": "40<H<60",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace is consistent with the image, standard answer, and assigned method. It first describes the contour-map features, identifies the 160/170/180 labels and 10 m contour interval, then applies the relative-height counting rule with 5 contour intervals and non-contour point positions to obtain 40<H<60. No substantive revision needed; if improving precision, replace “约相隔5个等高距” with “按等高线高程带计为5个等高距” to avoid sounding approximate.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是某城区等高线示意图，中部有网格状城区，周围分布多条弯曲等高线；图上能看到标注为160、170、180的等高线，单位为米。A点位于城区上方附近的等高线间，B点位于右侧160等高线附近的等高线间，两点都不在等高线上。推理：由相邻标注160、170、180可知等高距d=10米。按图中A、B所在高程带之间的等高线间隔来数，两点约相隔5个等高距。由于A、B均不在等高线上，相对高度按等高线相对高度估算规则为：(5-1)×10 < H < (5+1)×10，即40 < H < 60。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "Weakly distinct but honest: it uses the same contour map facts, but solves by counting contour-interval separation between the two point belts rather than assigning full elevation ranges to A and B separately.",
+            "image_role": "Read the labeled contour values 160, 170, 180 on the sketch to get a 10 m interval, then visually follow the contour sequence between the belt containing A and the belt containing B. Count the number of contour intervals separating the two possible elevation belts; the diagram shows a five-interval separation in the central value, with each point lying between contours rather than exactly on a contour.",
+            "text_role": "Use the text to identify that the answer should be an inequality range for the relative height H of A and B, not a single elevation.",
+            "knowledge_role": "For two points located between contour lines, if their contour-belt separation corresponds to n contour intervals and the contour interval is d, the relative height is bounded by (n-1)d < H < (n+1)d because each endpoint may be anywhere within its own contour belt. Here n=5 and d=10 m."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是某城区等高线示意图，中部有网格状城区，周围分布多条弯曲等高线；图上能看到标注为160、170、180的等高线，单位为米。A点位于城区上方附近的等高线间，B点位于右侧160等高线附近的等高线间，两点都不在等高线上。推理：由相邻标注160、170、180可知等高距d=10米。按图中A、B所在高程带之间的等高线间隔来数，两点约相隔5个等高距。由于A、B均不在等高线上，相对高度按等高线相对高度估算规则为：(5-1)×10 < H < (5+1)×10，即40 < H < 60。",
+            "model_answer": "40<H<60",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [
+              "image_low_resolution_but_required_labels_visible"
+            ],
+            "_llm_usage": {
+              "prompt_tokens": 2771,
+              "completion_tokens": 677,
+              "total_tokens": 3448,
+              "cached_tokens": 0,
+              "reasoning_tokens": 431
+            },
+            "_llm_elapsed_seconds": 19.974,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace is consistent with the image, standard answer, and assigned method. It first describes the contour-map features, identifies the 160/170/180 labels and 10 m contour interval, then applies the relative-height counting rule with 5 contour intervals and non-contour point positions to obtain 40<H<60. No substantive revision needed; if improving precision, replace “约相隔5个等高距” with “按等高线高程带计为5个等高距” to avoid sounding approximate.",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.9,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 40.084
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 19.988,
+              "usage_delta": {
+                "request_count": 1,
+                "successful_request_count": 1,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 1,
+                "prompt_tokens": 2771,
+                "completion_tokens": 677,
+                "total_tokens": 3448,
+                "cached_tokens": 0,
+                "reasoning_tokens": 431,
+                "total_request_seconds": 146.082,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 40.096,
+              "usage_delta": {
+                "request_count": 2,
+                "successful_request_count": 1,
+                "failed_request_count": 1,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 2,
+                "requests_with_usage": 1,
+                "prompt_tokens": 3141,
+                "completion_tokens": 1191,
+                "total_tokens": 4332,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1034,
+                "total_request_seconds": 82.698,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 99.402,
+          "usage_delta": {
+            "request_count": 60,
+            "successful_request_count": 54,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 60,
+            "requests_with_usage": 54,
+            "prompt_tokens": 164156,
+            "completion_tokens": 42746,
+            "total_tokens": 206902,
+            "cached_tokens": 0,
+            "reasoning_tokens": 24927,
+            "total_request_seconds": 1192.677,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "GeoSQA",
+        "dataset_slug": "geosqa",
+        "source_problem_id": "3766",
+        "subject": "地理",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/geography/geosqa/samples/geosqa00525.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_8a23802dd990ae2b0e46e4a8",
+          "open_variant_count": 1,
+          "open_variant_id": "open_631979ce065397f09530be9a",
+          "open_variant_index": 1,
+          "open_variant_title": "GeoSQA 开放题",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 309.333,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 14776,
+        "completion_tokens": 11572,
+        "total_tokens": 26348,
+        "cached_tokens": 0,
+        "reasoning_tokens": 10006,
+        "total_request_seconds": 309.223,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "读某城区示意图。<image1>\n根据图示，AB两点的相对高度H（单位：米）满足什么范围？",
+      "answer": "40<H<60",
+      "final_cot": "First describe the image: The figure is a contour schematic diagram of a certain urban area, with the central grid area representing the urban area; the contour lines are labeled with values such as 160, 170, and 180, in meters; there are points A and B in the figure, with point B in the upper right and point A located at a relatively high place near the urban area. The adjacent labeled 160, 170, and 180 differ by 10 meters, so the contour interval is 10 meters.\nThen reason: Tracing along the contour lines, point B is between the two contour lines of 160 meters and 170 meters, so 160<B<170; continuing to count upward by the known contour interval of 10 meters, point A is between the two contour lines of 210 meters and 220 meters, so 210<A<220. The relative height H between points A and B is H=A-B. The lower limit uses the lowest possible value of A minus the highest possible value of B: H>210-170=40; the upper limit uses the highest possible value of A minus the lowest possible value of B: H<220-160=60. Therefore, the relative height between points A and B satisfies 40<H<60.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理链整体通过。它先描述图像、再进行等高线推理，最终答案与标准答案40<H<60一致，也基本遵循方法草案。可改进之处是：A点由180米继续向高处数到210—220米的过程可以更明确，例如逐条说明经过190、200、210等未标注等高线，以增强图像依据的可核查性。",
+          "major_failures": [],
+          "extractability_score": 0.9,
+          "grounding_score": 0.85,
+          "method_fidelity_score": 0.95,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 89.108
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace is consistent with the image, standard answer, and assigned method. It first describes the contour-map features, identifies the 160/170/180 labels and 10 m contour interval, then applies the relative-height counting rule with 5 contour intervals and non-contour point positions to obtain 40<H<60. No substantive revision needed; if improving precision, replace “约相隔5个等高距” with “按等高线高程带计为5个等高距” to avoid sounding approximate.",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.9,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 40.084
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_resume_openvariants_20260506T003434CST",
+        "processed_index": 2531,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "geography",
+        "dataset": "geosqa",
+        "relative_dataset": "geography/geosqa",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/geography/geosqa/samples/geosqa00525.json",
+        "source_sample_filename": "geosqa00525.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/geography/geosqa/samples/geosqa00525.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_resume_openvariants_20260506T003434CST.events.jsonl",
+        "written_at": "2026-05-06T05:30:22Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:18Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_631979ce065397f09530be9a",
+          "new_problem_id": "open_631979ce065397f09530be9a",
+          "old_problem_run_key": "geosqa__open_631979ce065397f09530be9a__aeeff36c477c",
+          "new_problem_run_key": "geosqa__open_631979ce065397f09530be9a__aeeff36c477c",
+          "target_relpath": "geography/geosqa/samples/geosqa00525.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_631979ce065397f09530be9a",
+    "problem_run_key": "geosqa__open_631979ce065397f09530be9a__aeeff36c477c",
+    "raw_question_text": "Read the schematic diagram of a certain urban area. <image1>\nAccording to the figure, what range does the relative height H (unit: meters) between points A and B satisfy?",
+    "raw_answer": "40<H<60",
+    "raw_standard_answer": "40<H<60",
+    "resolved_question_text": "Read the schematic diagram of a certain urban area. <image1> According to the figure, what range does the relative height H (unit: meters) between points A and B satisfy?",
+    "resolved_answer": "40<H<60",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The figure is a contour schematic diagram of a certain urban area, with the central grid area representing the urban area; the contour lines are labeled with values such as 160, 170, and 180, in meters; there are points A and B in the figure, with point B in the upper right and point A located at a relatively high place near the urban area. The adjacent labeled 160, 170, and 180 differ by 10 meters, so the contour interval is 10 meters.\nThen reason: Tracing along the contour lines, point B is between the two contour lines of 160 meters and 170 meters, so 160<B<170; continuing to count upward by the known contour interval of 10 meters, point A is between the two contour lines of 210 meters and 220 meters, so 210<A<220. The relative height H between points A and B is H=A-B. The lower limit uses the lowest possible value of A minus the highest possible value of B: H>210-170=40; the upper limit uses the highest possible value of A minus the lowest possible value of B: H<220-160=60. Therefore, the relative height between points A and B satisfies 40<H<60.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The figure is a contour schematic diagram of a certain urban area.",
+        "label": "perception",
+        "source": "The figure is a contour schematic diagram of a certain urban area"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The central grid area represents the urban area.",
+        "label": "perception",
+        "source": "The central grid area represents the urban area"
+      },
+      {
+        "claim_id": 3,
+        "claim": "The contour lines are labeled with values such as 160, 170, and 180.",
+        "label": "perception",
+        "source": "The contour lines are labeled with values such as 160, 170, and 180"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The units of the labeled contour values are meters.",
+        "label": "perception",
+        "source": "The unit is meters"
+      },
+      {
+        "claim_id": 5,
+        "claim": "There are points A and B in the figure.",
+        "label": "perception",
+        "source": "There are points A and B in the figure"
+      },
+      {
+        "claim_id": 6,
+        "claim": "Point B is in the upper right.",
+        "label": "perception",
+        "source": "Point B is in the upper right"
+      },
+      {
+        "claim_id": 7,
+        "claim": "Point A is located at a relatively high place near the urban area.",
+        "label": "perception",
+        "source": "Point A is located at a relatively high place near the urban area"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The adjacent labeled 160, 170, and 180 differ by 10 meters.",
+        "label": "reasoning",
+        "source": "The adjacent labeled 160, 170, and 180 differ by 10 meters"
+      },
+      {
+        "claim_id": 9,
+        "claim": "The contour interval is 10 meters.",
+        "label": "reasoning",
+        "source": "So the contour interval is 10 meters"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Point B is between the two contour lines of 160 meters and 170 meters.",
+        "label": "reasoning",
+        "source": "Tracing along the contour lines, point B is between the two contour lines of 160 meters and 170 meters"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The elevation of point B satisfies 160<B<170.",
+        "label": "reasoning",
+        "source": "Therefore 160<B<170"
+      },
+      {
+        "claim_id": 12,
+        "claim": "Point A is between the two contour lines of 210 meters and 220 meters.",
+        "label": "reasoning",
+        "source": "Point A is between the two contour lines of 210 meters and 220 meters"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The elevation of point A satisfies 210<A<220.",
+        "label": "reasoning",
+        "source": "Therefore 210<A<220"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The relative height H between points A and B equals the elevation of point A minus the elevation of point B.",
+        "label": "reasoning",
+        "source": "The relative height between points A and B H=A-B"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The lower limit of H uses the lowest possible value of A minus the highest possible value of B.",
+        "label": "reasoning",
+        "source": "The lower limit uses the lowest possible value of A minus the highest possible value of B"
+      },
+      {
+        "claim_id": 16,
+        "claim": "H>210-170=40。",
+        "label": "reasoning",
+        "source": "H>210-170=40"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The upper limit of H uses the highest possible value of A minus the lowest possible value of B.",
+        "label": "reasoning",
+        "source": "The upper limit uses the highest possible value of A minus the lowest possible value of B"
+      },
+      {
+        "claim_id": 18,
+        "claim": "H<220-160=60。",
+        "label": "reasoning",
+        "source": "H<220-160=60"
+      },
+      {
+        "claim_id": 19,
+        "claim": "The relative height between points A and B satisfies 40<H<60.",
+        "label": "reasoning",
+        "source": "Therefore the relative height between points A and B satisfies 40<H<60"
+      }
+    ],
+    "claim_count": 19,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The figure is a contour schematic diagram of a certain urban area.",
+          "label": "perception",
+          "source": "The figure is a contour schematic diagram of a certain urban area"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The central grid area represents the urban area.",
+          "label": "perception",
+          "source": "The central grid area represents the urban area"
+        },
+        {
+          "claim_id": 3,
+          "claim": "The contour lines are labeled with values such as 160, 170, and 180.",
+          "label": "perception",
+          "source": "The contour lines are labeled with values such as 160, 170, and 180"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The units of the labeled contour values are meters.",
+          "label": "perception",
+          "source": "The unit is meters"
+        },
+        {
+          "claim_id": 5,
+          "claim": "There are points A and B in the figure.",
+          "label": "perception",
+          "source": "There are points A and B in the figure"
+        },
+        {
+          "claim_id": 6,
+          "claim": "Point B is in the upper right.",
+          "label": "perception",
+          "source": "Point B is in the upper right"
+        },
+        {
+          "claim_id": 7,
+          "claim": "Point A is located at a relatively high place near the urban area.",
+          "label": "perception",
+          "source": "Point A is located at a relatively high place near the urban area"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The adjacent labeled 160, 170, and 180 differ by 10 meters.",
+          "label": "reasoning",
+          "source": "The adjacent labeled 160, 170, and 180 differ by 10 meters"
+        },
+        {
+          "claim_id": 9,
+          "claim": "The contour interval is 10 meters.",
+          "label": "reasoning",
+          "source": "So the contour interval is 10 meters"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Point B is between the two contour lines of 160 meters and 170 meters.",
+          "label": "reasoning",
+          "source": "Tracing along the contour lines, point B is between the two contour lines of 160 meters and 170 meters"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The elevation of point B satisfies 160<B<170.",
+          "label": "reasoning",
+          "source": "Therefore 160<B<170"
+        },
+        {
+          "claim_id": 12,
+          "claim": "Point A is between the two contour lines of 210 meters and 220 meters.",
+          "label": "reasoning",
+          "source": "Point A is between the two contour lines of 210 meters and 220 meters"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The elevation of point A satisfies 210<A<220.",
+          "label": "reasoning",
+          "source": "Therefore 210<A<220"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The relative height H between points A and B equals the elevation of point A minus the elevation of point B.",
+          "label": "reasoning",
+          "source": "The relative height between points A and B H=A-B"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The lower limit of H uses the lowest possible value of A minus the highest possible value of B.",
+          "label": "reasoning",
+          "source": "The lower limit uses the lowest possible value of A minus the highest possible value of B"
+        },
+        {
+          "claim_id": 16,
+          "claim": "H>210-170=40。",
+          "label": "reasoning",
+          "source": "H>210-170=40"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The upper limit of H uses the highest possible value of A minus the lowest possible value of B.",
+          "label": "reasoning",
+          "source": "The upper limit uses the highest possible value of A minus the lowest possible value of B"
+        },
+        {
+          "claim_id": 18,
+          "claim": "H<220-160=60。",
+          "label": "reasoning",
+          "source": "H<220-160=60"
+        },
+        {
+          "claim_id": 19,
+          "claim": "The relative height between points A and B satisfies 40<H<60.",
+          "label": "reasoning",
+          "source": "Therefore the relative height between points A and B satisfies 40<H<60"
+        }
+      ],
+      "coverage_notes": "已按原推理顺序覆盖图像描述、等高距判断、A/B高程范围判断、相对高度计算及最终范围结论。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:18Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/geography/geosqa/01783_geography_geosqa_open_631979ce065397f09530be9a_325b9ca3ba.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/geography/geosqa/03454_geography_geosqa_open_631979ce065397f09530be9a_325b9ca3ba.json"
+  }
+}

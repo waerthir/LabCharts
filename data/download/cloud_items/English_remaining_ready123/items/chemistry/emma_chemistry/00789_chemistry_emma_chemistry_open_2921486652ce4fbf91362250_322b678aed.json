@@ -1,0 +1,683 @@
+{
+  "pack_index": 789,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "chemistry/emma_chemistry:emmachemistry00604:emma_chemistry__open_2921486652ce4fbf91362250__497ca3be5cdf",
+    "subject_dir": "chemistry",
+    "dataset_slug": "emma_chemistry",
+    "problem_id": "open_2921486652ce4fbf91362250",
+    "source_problem_id": "open_2921486652ce4fbf91362250",
+    "problem_run_key": "emma_chemistry__open_2921486652ce4fbf91362250__497ca3be5cdf",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": true,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00604.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00604.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/chemistry/emma_chemistry/samples/emmachemistry00604.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00604.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "Please choose the SMILES expression of the transition-state structure shown in the image, ignoring the arrows. <image_1>",
+    "raw_answer_text": "*OCC(O)C1C=[O+]CC1",
+    "open_variant_id": "open_2921486652ce4fbf91362250",
+    "variant_index": 1,
+    "title": "Dataset Open Question",
+    "split_role": "single",
+    "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "expected_answer_type": "short_text",
+    "expected_answer": "*OCC(O)C1C=[O+]CC1",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_9f2f42fd040a9315ba523acb",
+        "problem_id": "prob_ac5487a6c79e229e97c085b7",
+        "node_type": "answer_claim",
+        "canonical_value": "*OCC(O)C1C=[O+]CC1",
+        "surface_forms": [
+          "*OCC(O)C1C=[O+]CC1"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_670825f488f62bf951a3149d"
+        ],
+        "evidence_refs": [
+          "asset_670825f488f62bf951a3149d"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "short_text",
+        "normalized_value": {
+          "answer": "*OCC(O)C1C=[O+]CC1"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-08T01:57:29Z",
+        "updated_at": "2026-04-08T01:57:29Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_2921486652ce4fbf91362250",
+      "parent_problem_id": "prob_ac5487a6c79e229e97c085b7",
+      "variant_index": 1,
+      "title": "Dataset Open Question",
+      "rewritten_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "expected_answer_type": "short_text",
+      "expected_answer": "*OCC(O)C1C=[O+]CC1",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*OCC(O)C1C=[O+]CC1",
+    "raw_standard_answer": "*OCC(O)C1C=[O+]CC1",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*OCC(O)C1C=[O+]CC1",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: On the left side of the figure there is an LnM group, connected to an oxygen atom; this oxygen atom continues to connect to a segment of carbon chain. The carbon chain goes right through one carbon, then reaches a carbon bearing a hydroxyl group, with the hydroxyl drawn as O-H. Then it connects further to the right to a ring carbon of a five-membered ring. In the five-membered ring, the starting ring carbon is connected downward to a carbon, this carbon forms a double-bond form C=[O+] with the positively charged oxygen at the lower right, and then continues through two carbons back to the starting ring carbon. There are also curved arrows and dashed-line interactions in the figure, but the problem requires ignoring the arrows. Reasoning: According to the problem and method, replace LnM with the wildcard atom *. The main chain from left to right is *-O-C-C(OH)-C, that is, the SMILES prefix is *OCC(O)C. The right-side five-membered ring is numbered as C1 starting from this connecting carbon, inside the ring in sequence are C=[O+], C, C and closing back to 1, therefore the ring part is written as C1C=[O+]CC1. Combining gives *OCC(O)C1C=[O+]CC1.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_2921486652ce4fbf91362250",
+      "problem_run_key": "emma_chemistry__open_2921486652ce4fbf91362250__497ca3be5cdf",
+      "question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "standard_answer": "*OCC(O)C1C=[O+]CC1",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/artifacts/images/emmachemistry00604.png"
+      ],
+      "initial_multi_solution_score": 0.2657,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "First transcribe the covalent connectivity from the image, not the arrows: replace the L_nM group by `*`, then follow the main chain as `*O-C-C(OH)-C`. From that carbon, encode the five-membered ring shown on the right: the starting ring carbon is `C1`, it is single-bonded to `C`, double-bonded onward to the positively charged oxygen as `C=[O+]`, then continues through two carbons `CC` back to the initial `1`. Combine these pieces to obtain the SMILES `*OCC(O)C1C=[O+]CC1`.",
+          "CoT_raw": "图像描述：图中左侧有一个 LnM 基团，与一个氧原子相连；该氧原子继续连到一段碳链。碳链向右经过一个碳后，到达一个带羟基的碳，羟基画成 O-H。再向右连接到一个五元环的环碳。五元环中，起始环碳向下与一个碳相连，该碳与右下方带正电的氧形成双键形式的 C=[O+]，然后继续通过两个碳回到起始环碳。图中还有弯箭头和虚线相互作用，但题目要求忽略箭头。推理：按题目和方法把 LnM 替换为通配原子 *。从左到右的主链是 *-O-C-C(OH)-C，即 SMILES 前缀为 *OCC(O)C。右侧五元环从该连接碳开始编号为 C1，环内依次为 C=[O+]、C、C 并闭合回 1，因此环部分写作 C1C=[O+]CC1。合并得到 *OCC(O)C1C=[O+]CC1。",
+          "model_answer": "*OCC(O)C1C=[O+]CC1",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "*OCC(O)C1C=[O+]CC1",
+              "predicted_part": "*OCC(O)C1C=[O+]CC1",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中左侧有一个 LnM 基团，与一个氧原子相连；该氧原子继续连到一段碳链。碳链向右经过一个碳后，到达一个带羟基的碳，羟基画成 O-H。再向右连接到一个五元环的环碳。五元环中，起始环碳向下与一个碳相连，该碳与右下方带正电的氧形成双键形式的 C=[O+]，然后继续通过两个碳回到起始环碳。图中还有弯箭头和虚线相互作用，但题目要求忽略箭头。推理：按题目和方法把 LnM 替换为通配原子 *。从左到右的主链是 *-O-C-C(OH)-C，即 SMILES 前缀为 *OCC(O)C。右侧五元环从该连接碳开始编号为 C1，环内依次为 C=[O+]、C、C 并闭合回 1，因此环部分写作 C1C=[O+]CC1。合并得到 *OCC(O)C1C=[O+]CC1。",
+          "answer_answer_check_final": "*OCC(O)C1C=[O+]CC1",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "Trace is acceptable. It first describes the image and then reasons, matches the assigned method draft, ignores the curved arrows, replaces LnM with `*`, and derives the standard SMILES `*OCC(O)C1C=[O+]CC1`. A minor improvement would be to state explicitly that only covalent connectivity is encoded while dashed/transition-state interactions are not included as SMILES bonds unless represented in the target structure.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中左侧有一个 LnM 基团，与一个氧原子相连；该氧原子继续连到一段碳链。碳链向右经过一个碳后，到达一个带羟基的碳，羟基画成 O-H。再向右连接到一个五元环的环碳。五元环中，起始环碳向下与一个碳相连，该碳与右下方带正电的氧形成双键形式的 C=[O+]，然后继续通过两个碳回到起始环碳。图中还有弯箭头和虚线相互作用，但题目要求忽略箭头。推理：按题目和方法把 LnM 替换为通配原子 *。从左到右的主链是 *-O-C-C(OH)-C，即 SMILES 前缀为 *OCC(O)C。右侧五元环从该连接碳开始编号为 C1，环内依次为 C=[O+]、C、C 并闭合回 1，因此环部分写作 C1C=[O+]CC1。合并得到 *OCC(O)C1C=[O+]CC1。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the direct structure-transcription route: identify the atom connectivity in the drawing and encode that single molecular graph as SMILES, with the metal/ligand fragment abstracted as a wildcard. No alternative independent route is needed for this essentially single-answer problem.",
+            "image_role": "Read the drawn skeleton while ignoring the curved arrows: a left L_nM fragment bonded to an oxygen, followed by an O-CH2-CH(OH)- linkage into a five-membered ring. The ring segment begins at the adjacent carbon, contains a C=C bond to a positively charged ring oxygen, then two carbons return to the ring-start carbon. The dashed coordination to the hydroxyl oxygen is not treated as a covalent SMILES bond for the organic structure.",
+            "text_role": "Use the question text to know the required output is a SMILES expression and that all reaction arrows in the image should be ignored.",
+            "knowledge_role": "Use SMILES conventions: represent the unspecified L_nM attachment as wildcard `*`; write the left alkoxy linkage as `*O`; encode the chain as `CC(O)`; use ring index `1` for the cyclopentyl/oxonium ring; use `[O+]` for the positively charged oxygen and `=` for the double bond. This yields `*OCC(O)C1C=[O+]CC1`."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中左侧有一个 LnM 基团，与一个氧原子相连；该氧原子继续连到一段碳链。碳链向右经过一个碳后，到达一个带羟基的碳，羟基画成 O-H。再向右连接到一个五元环的环碳。五元环中，起始环碳向下与一个碳相连，该碳与右下方带正电的氧形成双键形式的 C=[O+]，然后继续通过两个碳回到起始环碳。图中还有弯箭头和虚线相互作用，但题目要求忽略箭头。推理：按题目和方法把 LnM 替换为通配原子 *。从左到右的主链是 *-O-C-C(OH)-C，即 SMILES 前缀为 *OCC(O)C。右侧五元环从该连接碳开始编号为 C1，环内依次为 C=[O+]、C、C 并闭合回 1，因此环部分写作 C1C=[O+]CC1。合并得到 *OCC(O)C1C=[O+]CC1。",
+            "model_answer": "*OCC(O)C1C=[O+]CC1",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2842,
+              "completion_tokens": 627,
+              "total_tokens": 3469,
+              "cached_tokens": 0,
+              "reasoning_tokens": 296
+            },
+            "_llm_elapsed_seconds": 15.537,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "Trace is acceptable. It first describes the image and then reasons, matches the assigned method draft, ignores the curved arrows, replaces LnM with `*`, and derives the standard SMILES `*OCC(O)C1C=[O+]CC1`. A minor improvement would be to state explicitly that only covalent connectivity is encoded while dashed/transition-state interactions are not included as SMILES bonds unless represented in the target structure.",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 0.98,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 35.256
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 15.601,
+              "usage_delta": {
+                "request_count": 8,
+                "successful_request_count": 8,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 8,
+                "requests_with_usage": 8,
+                "prompt_tokens": 22772,
+                "completion_tokens": 7686,
+                "total_tokens": 30458,
+                "cached_tokens": 0,
+                "reasoning_tokens": 3567,
+                "total_request_seconds": 200.288,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 35.298,
+              "usage_delta": {
+                "request_count": 14,
+                "successful_request_count": 18,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 14,
+                "requests_with_usage": 18,
+                "prompt_tokens": 53830,
+                "completion_tokens": 17600,
+                "total_tokens": 71430,
+                "cached_tokens": 0,
+                "reasoning_tokens": 11848,
+                "total_request_seconds": 539.834,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 1,
+        "actual_method_count": 1,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 1,
+            "accepted_new_method_count": 1,
+            "accepted_total_method_count": 1
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 22.083,
+          "usage_delta": {
+            "request_count": 5,
+            "successful_request_count": 3,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 5,
+            "requests_with_usage": 3,
+            "prompt_tokens": 8451,
+            "completion_tokens": 2235,
+            "total_tokens": 10686,
+            "cached_tokens": 0,
+            "reasoning_tokens": 977,
+            "total_request_seconds": 60.798,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "EMMA-Chemistry",
+        "dataset_slug": "emma_chemistry",
+        "source_problem_id": "613",
+        "subject": "化学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00604.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_ac5487a6c79e229e97c085b7",
+          "open_variant_count": 1,
+          "open_variant_id": "open_2921486652ce4fbf91362250",
+          "open_variant_index": 1,
+          "open_variant_title": "Dataset Open Question",
+          "expected_answer_type": "short_text",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": [
+            "chemistry_domain_knowledge_required",
+            "image_readability_moderate"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 1,
+        "planned_method_count": 1,
+        "qualified_method_count": 1,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 73.007,
+      "problem_usage": {
+        "request_count": 3,
+        "successful_request_count": 3,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 3,
+        "requests_with_usage": 3,
+        "prompt_tokens": 9065,
+        "completion_tokens": 2594,
+        "total_tokens": 11659,
+        "cached_tokens": 0,
+        "reasoning_tokens": 1685,
+        "total_request_seconds": 72.804,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+      "answer": "*OCC(O)C1C=[O+]CC1",
+      "final_cot": "Image description: On the left side of the figure there is an LnM group, connected to an oxygen atom; this oxygen atom continues to connect to a segment of carbon chain. The carbon chain goes right through one carbon, then reaches a carbon bearing a hydroxyl group, with the hydroxyl drawn as O-H. Then it connects further to the right to a ring carbon of a five-membered ring. In the five-membered ring, the starting ring carbon is connected downward to a carbon, this carbon forms a double-bond form C=[O+] with the positively charged oxygen at the lower right, and then continues through two carbons back to the starting ring carbon. There are also curved arrows and dashed-line interactions in the figure, but the problem requires ignoring the arrows. Reasoning: According to the problem and method, replace LnM with the wildcard atom *. The main chain from left to right is *-O-C-C(OH)-C, that is, the SMILES prefix is *OCC(O)C. The right-side five-membered ring is numbered as C1 starting from this connecting carbon, inside the ring in sequence are C=[O+], C, C and closing back to 1, therefore the ring part is written as C1C=[O+]CC1. Combining gives *OCC(O)C1C=[O+]CC1.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "Trace is acceptable. It first describes the image and then reasons, matches the assigned method draft, ignores the curved arrows, replaces LnM with `*`, and derives the standard SMILES `*OCC(O)C1C=[O+]CC1`. A minor improvement would be to state explicitly that only covalent connectivity is encoded while dashed/transition-state interactions are not included as SMILES bonds unless represented in the target structure.",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 0.98,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 35.256
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_full_15w_20260505T042708Z",
+        "processed_index": 605,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "chemistry",
+        "dataset": "emma_chemistry",
+        "relative_dataset": "chemistry/emma_chemistry",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/chemistry/emma_chemistry/samples/emmachemistry00604.json",
+        "source_sample_filename": "emmachemistry00604.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/chemistry/emma_chemistry/samples/emmachemistry00604.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_full_15w_20260505T042708Z.events.jsonl",
+        "written_at": "2026-05-05T08:30:19Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:34Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_ac5487a6c79e229e97c085b7",
+          "new_problem_id": "open_2921486652ce4fbf91362250",
+          "old_problem_run_key": "emma_chemistry__prob_ac5487a6c79e229e97c085b7__dcf75de0b449",
+          "new_problem_run_key": "emma_chemistry__open_2921486652ce4fbf91362250__497ca3be5cdf",
+          "current_ready_output_rel": "chemistry/emma_chemistry/samples/emmachemistry00604.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_2921486652ce4fbf91362250",
+          "new_problem_id": "open_2921486652ce4fbf91362250",
+          "old_problem_run_key": "emma_chemistry__open_2921486652ce4fbf91362250__497ca3be5cdf",
+          "new_problem_run_key": "emma_chemistry__open_2921486652ce4fbf91362250__497ca3be5cdf",
+          "target_relpath": "chemistry/emma_chemistry/samples/emmachemistry00604.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_2921486652ce4fbf91362250",
+    "problem_run_key": "emma_chemistry__open_2921486652ce4fbf91362250__497ca3be5cdf",
+    "raw_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "raw_answer": "*OCC(O)C1C=[O+]CC1",
+    "raw_standard_answer": "*OCC(O)C1C=[O+]CC1",
+    "resolved_question_text": "What is the SMILES expression of the transition-state structure shown in the image, ignoring the arrows?",
+    "resolved_answer": "*OCC(O)C1C=[O+]CC1",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: On the left side of the figure there is an LnM group, connected to an oxygen atom; this oxygen atom continues to connect to a segment of carbon chain. The carbon chain goes right through one carbon, then reaches a carbon bearing a hydroxyl group, with the hydroxyl drawn as O-H. Then it connects further to the right to a ring carbon of a five-membered ring. In the five-membered ring, the starting ring carbon is connected downward to a carbon, this carbon forms a double-bond form C=[O+] with the positively charged oxygen at the lower right, and then continues through two carbons back to the starting ring carbon. There are also curved arrows and dashed-line interactions in the figure, but the problem requires ignoring the arrows. Reasoning: According to the problem and method, replace LnM with the wildcard atom *. The main chain from left to right is *-O-C-C(OH)-C, that is, the SMILES prefix is *OCC(O)C. The right-side five-membered ring is numbered as C1 starting from this connecting carbon, inside the ring in sequence are C=[O+], C, C and closing back to 1, therefore the ring part is written as C1C=[O+]CC1. Combining gives *OCC(O)C1C=[O+]CC1.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "On the left side of the figure there is an LnM group.",
+        "label": "perception",
+        "source": "On the left side of the figure there is an LnM group"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The LnM group is connected to an oxygen atom.",
+        "label": "perception",
+        "source": "The LnM group, connected to an oxygen atom"
+      },
+      {
+        "claim_id": 3,
+        "claim": "This oxygen atom continues to connect to a segment of carbon chain.",
+        "label": "perception",
+        "source": "This oxygen atom continues to connect to a segment of carbon chain"
+      },
+      {
+        "claim_id": 4,
+        "claim": "The carbon chain goes right through one carbon.",
+        "label": "perception",
+        "source": "After the carbon chain goes right through one carbon"
+      },
+      {
+        "claim_id": 5,
+        "claim": "The carbon chain reaches a carbon bearing a hydroxyl group.",
+        "label": "perception",
+        "source": "Reaches a carbon bearing a hydroxyl group"
+      },
+      {
+        "claim_id": 6,
+        "claim": "The hydroxyl group is drawn as O-H.",
+        "label": "perception",
+        "source": "The hydroxyl group is drawn as O-H"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The carbon bearing the hydroxyl group then connects further to the right to a ring carbon of a five-membered ring.",
+        "label": "perception",
+        "source": "Then connects further to the right to a ring carbon of a five-membered ring"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The starting ring carbon in the five-membered ring is connected downward to a carbon.",
+        "label": "perception",
+        "source": "In the five-membered ring, the starting ring carbon is connected downward to a carbon"
+      },
+      {
+        "claim_id": 9,
+        "claim": "This carbon forms a double-bond form C=[O+] with the positively charged oxygen at the lower right.",
+        "label": "perception",
+        "source": "This carbon forms a double-bond form C=[O+] with the positively charged oxygen at the lower right"
+      },
+      {
+        "claim_id": 10,
+        "claim": "The five-membered ring then returns to the starting ring carbon through two carbons.",
+        "label": "perception",
+        "source": "Then continue through two carbons back to the starting ring carbon"
+      },
+      {
+        "claim_id": 11,
+        "claim": "There are also curved arrows in the figure.",
+        "label": "perception",
+        "source": "There are also curved arrows and dashed-line interactions in the figure"
+      },
+      {
+        "claim_id": 12,
+        "claim": "There are also dashed-line interactions in the figure.",
+        "label": "perception",
+        "source": "There are also curved arrows and dashed-line interactions in the figure"
+      },
+      {
+        "claim_id": 13,
+        "claim": "This question requires ignoring the arrows.",
+        "label": "reasoning",
+        "source": "but the question requires ignoring the arrows"
+      },
+      {
+        "claim_id": 14,
+        "claim": "LnM is replaced with the wildcard atom *.",
+        "label": "reasoning",
+        "source": "According to the question and method, replace LnM with the wildcard atom *"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The main chain from left to right is *-O-C-C(OH)-C.",
+        "label": "reasoning",
+        "source": "The main chain from left to right is *-O-C-C(OH)-C"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The SMILES prefix is *OCC(O)C.",
+        "label": "reasoning",
+        "source": "That is, the SMILES prefix is *OCC(O)C"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The right-side five-membered ring is numbered as C1 starting from this connected carbon.",
+        "label": "reasoning",
+        "source": "The right-side five-membered ring is numbered as C1 starting from this connected carbon"
+      },
+      {
+        "claim_id": 18,
+        "claim": "Inside the ring, the sequence is C=[O+], C, C.",
+        "label": "reasoning",
+        "source": "Inside the ring, the sequence is C=[O+], C, C and closes back to 1"
+      },
+      {
+        "claim_id": 19,
+        "claim": "Inside the ring, it closes back to 1.",
+        "label": "reasoning",
+        "source": "Inside the ring, the sequence is C=[O+], C, C and closes back to 1"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The ring part is written as C1C=[O+]CC1.",
+        "label": "reasoning",
+        "source": "Therefore the ring part is written as C1C=[O+]CC1"
+      },
+      {
+        "claim_id": 21,
+        "claim": "Merging gives *OCC(O)C1C=[O+]CC1.",
+        "label": "reasoning",
+        "source": "Merging gives *OCC(O)C1C=[O+]CC1"
+      }
+    ],
+    "claim_count": 21,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "On the left side of the figure there is an LnM group.",
+          "label": "perception",
+          "source": "On the left side of the figure there is an LnM group"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The LnM group is connected to an oxygen atom.",
+          "label": "perception",
+          "source": "The LnM group, connected to an oxygen atom"
+        },
+        {
+          "claim_id": 3,
+          "claim": "This oxygen atom continues to connect to a segment of carbon chain.",
+          "label": "perception",
+          "source": "This oxygen atom continues to connect to a segment of carbon chain"
+        },
+        {
+          "claim_id": 4,
+          "claim": "The carbon chain goes right through one carbon.",
+          "label": "perception",
+          "source": "After the carbon chain goes right through one carbon"
+        },
+        {
+          "claim_id": 5,
+          "claim": "The carbon chain reaches a carbon bearing a hydroxyl group.",
+          "label": "perception",
+          "source": "Reaches a carbon bearing a hydroxyl group"
+        },
+        {
+          "claim_id": 6,
+          "claim": "The hydroxyl group is drawn as O-H.",
+          "label": "perception",
+          "source": "The hydroxyl group is drawn as O-H"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The carbon bearing the hydroxyl group then connects further to the right to a ring carbon of a five-membered ring.",
+          "label": "perception",
+          "source": "Then connects further to the right to a ring carbon of a five-membered ring"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The starting ring carbon in the five-membered ring is connected downward to a carbon.",
+          "label": "perception",
+          "source": "In the five-membered ring, the starting ring carbon is connected downward to a carbon"
+        },
+        {
+          "claim_id": 9,
+          "claim": "This carbon forms a double-bond form C=[O+] with the positively charged oxygen at the lower right.",
+          "label": "perception",
+          "source": "This carbon forms a double-bond form C=[O+] with the positively charged oxygen at the lower right"
+        },
+        {
+          "claim_id": 10,
+          "claim": "The five-membered ring then returns to the starting ring carbon through two carbons.",
+          "label": "perception",
+          "source": "Then continue through two carbons back to the starting ring carbon"
+        },
+        {
+          "claim_id": 11,
+          "claim": "There are also curved arrows in the figure.",
+          "label": "perception",
+          "source": "There are also curved arrows and dashed-line interactions in the figure"
+        },
+        {
+          "claim_id": 12,
+          "claim": "There are also dashed-line interactions in the figure.",
+          "label": "perception",
+          "source": "There are also curved arrows and dashed-line interactions in the figure"
+        },
+        {
+          "claim_id": 13,
+          "claim": "This question requires ignoring the arrows.",
+          "label": "reasoning",
+          "source": "but the question requires ignoring the arrows"
+        },
+        {
+          "claim_id": 14,
+          "claim": "LnM is replaced with the wildcard atom *.",
+          "label": "reasoning",
+          "source": "According to the question and method, replace LnM with the wildcard atom *"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The main chain from left to right is *-O-C-C(OH)-C.",
+          "label": "reasoning",
+          "source": "The main chain from left to right is *-O-C-C(OH)-C"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The SMILES prefix is *OCC(O)C.",
+          "label": "reasoning",
+          "source": "That is, the SMILES prefix is *OCC(O)C"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The right-side five-membered ring is numbered as C1 starting from this connected carbon.",
+          "label": "reasoning",
+          "source": "The right-side five-membered ring is numbered as C1 starting from this connected carbon"
+        },
+        {
+          "claim_id": 18,
+          "claim": "Inside the ring, the sequence is C=[O+], C, C.",
+          "label": "reasoning",
+          "source": "Inside the ring, the sequence is C=[O+], C, C and closes back to 1"
+        },
+        {
+          "claim_id": 19,
+          "claim": "Inside the ring, it closes back to 1.",
+          "label": "reasoning",
+          "source": "Inside the ring, the sequence is C=[O+], C, C and closes back to 1"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The ring part is written as C1C=[O+]CC1.",
+          "label": "reasoning",
+          "source": "Therefore the ring part is written as C1C=[O+]CC1"
+        },
+        {
+          "claim_id": 21,
+          "claim": "Merging gives *OCC(O)C1C=[O+]CC1.",
+          "label": "reasoning",
+          "source": "Merging gives *OCC(O)C1C=[O+]CC1"
+        }
+      ],
+      "coverage_notes": "已按 final_cot 的图像描述与推理顺序拆分为原子事实、任务性处理步骤、SMILES 片段构造和最终答案。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:24Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/chemistry/emma_chemistry/05878_chemistry_emma_chemistry_open_2921486652ce4fbf91362250_322b678aed.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/chemistry/emma_chemistry/00789_chemistry_emma_chemistry_open_2921486652ce4fbf91362250_322b678aed.json"
+  }
+}

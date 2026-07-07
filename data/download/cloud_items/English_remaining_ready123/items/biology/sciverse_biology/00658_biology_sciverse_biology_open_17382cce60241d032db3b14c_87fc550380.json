@@ -1,0 +1,834 @@
+{
+  "pack_index": 658,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv",
+    "included_difficulty_levels": [
+      "medium_low",
+      "simple"
+    ],
+    "excluded_datasets": [],
+    "mode": "with_biology_supplement/strict_pending_as_wrong"
+  },
+  "metadata": {
+    "sample_id": "biology/sciverse_biology:sciversebiology00023:sciverse_biology__open_17382cce60241d032db3b14c__b3a490796fcc",
+    "subject_dir": "biology",
+    "dataset_slug": "sciverse_biology",
+    "problem_id": "open_17382cce60241d032db3b14c",
+    "source_problem_id": "open_17382cce60241d032db3b14c",
+    "problem_run_key": "sciverse_biology__open_17382cce60241d032db3b14c__b3a490796fcc",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "gpt55_high_correct": "True",
+    "previously_translated": true
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/biology/sciverse_biology/samples/sciversebiology00023.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/biology/sciverse_biology/samples/sciversebiology00023.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/biology/sciverse_biology/samples/sciversebiology00023.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/biology/sciverse_biology/artifacts/images/sciversebiology00023.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": null,
+    "raw_answer_text": null,
+    "open_variant_id": "open_17382cce60241d032db3b14c",
+    "variant_index": 1,
+    "title": "SciVerse open question",
+    "split_role": "single",
+    "rewritten_question_text": "Suppose a couple (C and D) have a family history of a certain autosomal recessive genetic disease; what is the probability that their eldest son has the disease?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "0.3333",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_400bbecfd6dff6e38c637b78",
+        "problem_id": "prob_429ddd57e4b9d2f8abcbefb5",
+        "node_type": "answer_claim",
+        "canonical_value": "0.3333",
+        "surface_forms": [
+          "0.3333"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_ef6102bac6a6ca01664c6fa6"
+        ],
+        "evidence_refs": [
+          "asset_ef6102bac6a6ca01664c6fa6"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "0.3333"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-06T10:54:17Z",
+        "updated_at": "2026-04-06T10:54:17Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_17382cce60241d032db3b14c",
+      "parent_problem_id": "prob_429ddd57e4b9d2f8abcbefb5",
+      "variant_index": 1,
+      "title": "SciVerse open question",
+      "rewritten_question_text": "Suppose a couple (C and D) have a family history of a certain autosomal recessive genetic disease; what is the probability that their eldest son has the disease?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "0.3333",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "Suppose a couple (C and D) have a family history of a certain autosomal recessive genetic disease; what is the probability that their eldest son has the disease?",
+    "raw_answer": "0.3333",
+    "raw_standard_answer": "0.3333",
+    "resolved_question_text": "Suppose a couple (C and D) have a family history of a certain autosomal recessive genetic disease; what is the probability that their eldest son has the disease?",
+    "resolved_answer": "0.3333",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: This is a pedigree chart; squares represent males, circles represent females, and gray filling represents affected/being affected. In the family on the left, the individual labeled C is a gray-filled square, indicating that C is an affected male. In the family on the right, the individual labeled D is an unfilled circle, indicating that D is not affected; in the same family, a gray-filled sibling can be seen, indicating that D comes from a family with an affected sibling. Reasoning: The disease is autosomal recessive. The genotype of an affected individual must be aa, therefore C = aa. D is not affected, but her sibling is affected, indicating that D's parents must both be carriers Aa × Aa. Among the offspring of Aa × Aa, the genotype ratio is AA : Aa : aa = 1 : 2 : 1. It is known that D is not affected, that is, aa is excluded, so the probability that D is a carrier Aa under the condition of being unaffected is 2/(1+2)=2/3, and the probability that D is AA is 1/3. If D is Aa, when having offspring with C=aa, the probability that the offspring is affected aa is 1/2; if D is AA, then the probability that the offspring is affected is 0. Therefore, the total probability that the eldest son is affected = (2/3)×(1/2) + (1/3)×0 = 1/3 = 0.3333.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_17382cce60241d032db3b14c",
+      "problem_run_key": "sciverse_biology__open_17382cce60241d032db3b14c__b3a490796fcc",
+      "question_text": "Suppose a couple (C and D) have a family history of a certain autosomal recessive genetic disease; what is the probability that their eldest son has the disease?",
+      "standard_answer": "0.3333",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/biology/sciverse_biology/artifacts/images/sciversebiology00023.png"
+      ],
+      "initial_multi_solution_score": 0.4547,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "描述图像后推理：确认 C 是受累个体，因此 C 的基因型必为 aa。再确认 D 未患病但来自有受累同胞的常染色体隐性家系，所以 D 的父母应为 Aa×Aa；在 D 已知未患病的条件下，D 为 Aa 的概率是 2/3。若 D 为 Aa，则与 aa 的 C 生育子代患病概率为 1/2；若 D 为 AA，则为 0。因此总概率为 2/3×1/2=1/3，写成小数为 0.3333。",
+          "CoT_raw": "图像描述：这是一张系谱图，方形表示男性，圆形表示女性，灰色填充表示患病/受累。左侧家系中，标为 C 的个体是灰色填充的方形，说明 C 为受累男性。右侧家系中，标为 D 的个体是未填充圆形，说明 D 未患病；同一家系中可见一个灰色填充的同胞，说明 D 来自有受累同胞的家系。\n\n推理：该病为常染色体隐性遗传。受累个体的基因型必为 aa，因此 C = aa。D 未患病，但其同胞受累，说明 D 的父母必须都是携带者 Aa × Aa。在 Aa × Aa 子代中，基因型比例为 AA : Aa : aa = 1 : 2 : 1。已知 D 未患病，即排除 aa，因此 D 在未患病条件下为携带者 Aa 的概率是 2/(1+2)=2/3，D 为 AA 的概率是 1/3。若 D 为 Aa，与 C=aa 生育子代时，子代患病 aa 的概率为 1/2；若 D 为 AA，则子代患病概率为 0。因此长子患病总概率 = (2/3)×(1/2) + (1/3)×0 = 1/3 = 0.3333。",
+          "model_answer": "0.3333",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "0.3333",
+              "predicted_part": "0.3333",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：这是一张系谱图，方形表示男性，圆形表示女性，灰色填充表示患病/受累。左侧家系中，标为 C 的个体是灰色填充的方形，说明 C 为受累男性。右侧家系中，标为 D 的个体是未填充圆形，说明 D 未患病；同一家系中可见一个灰色填充的同胞，说明 D 来自有受累同胞的家系。\n\n推理：该病为常染色体隐性遗传。受累个体的基因型必为 aa，因此 C = aa。D 未患病，但其同胞受累，说明 D 的父母必须都是携带者 Aa × Aa。在 Aa × Aa 子代中，基因型比例为 AA : Aa : aa = 1 : 2 : 1。已知 D 未患病，即排除 aa，因此 D 在未患病条件下为携带者 Aa 的概率是 2/(1+2)=2/3，D 为 AA 的概率是 1/3。若 D 为 Aa，与 C=aa 生育子代时，子代患病 aa 的概率为 1/2；若 D 为 AA，则子代患病概率为 0。因此长子患病总概率 = (2/3)×(1/2) + (1/3)×0 = 1/3 = 0.3333。",
+          "answer_answer_check_final": "0.3333",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理链总体正确。图像描述先于推理，视觉声明与图中系谱一致：C 为灰色填充方形，D 为未填充圆形且有一个灰色填充同胞。遗传推理符合常染色体隐性疾病条件概率计算，并得到标准答案 0.3333。可微调之处是说明“灰色填充表示受累”主要依据题目/系谱惯例，但这不影响结论。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：这是一张系谱图，方形表示男性，圆形表示女性，灰色填充表示患病/受累。左侧家系中，标为 C 的个体是灰色填充的方形，说明 C 为受累男性。右侧家系中，标为 D 的个体是未填充圆形，说明 D 未患病；同一家系中可见一个灰色填充的同胞，说明 D 来自有受累同胞的家系。\n\n推理：该病为常染色体隐性遗传。受累个体的基因型必为 aa，因此 C = aa。D 未患病，但其同胞受累，说明 D 的父母必须都是携带者 Aa × Aa。在 Aa × Aa 子代中，基因型比例为 AA : Aa : aa = 1 : 2 : 1。已知 D 未患病，即排除 aa，因此 D 在未患病条件下为携带者 Aa 的概率是 2/(1+2)=2/3，D 为 AA 的概率是 1/3。若 D 为 Aa，与 C=aa 生育子代时，子代患病 aa 的概率为 1/2；若 D 为 AA，则子代患病概率为 0。因此长子患病总概率 = (2/3)×(1/2) + (1/3)×0 = 1/3 = 0.3333。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "直接从系谱图判定关键个体基因型并用条件概率相乘；这是最简洁的遗传推断路线。",
+            "image_role": "先读图：系谱中方形为男性、圆形为女性，灰色填充表示患病。C 是灰色方形，故为患病男性；D 是未填充圆形，她在右侧家庭中是未患病子代，且同胞中有患病个体，说明其父母均为携带者。",
+            "text_role": "文本给出疾病类型为常染色体隐性，并指定要求的是夫妇 C 和 D 的长子患该病的概率。",
+            "knowledge_role": "常染色体隐性病患者基因型为 aa；未患病的携带者父母 Aa×Aa 生出未患病子女时，该子女为携带者的条件概率为 2/3。aa 与 Aa 生育患病子女概率为 1/2。故长子患病概率为 (2/3)×(1/2)=1/3=0.3333。这里“长子”按已知为儿子处理，常染色体遗传与性别无关。"
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：这是一张系谱图，方形表示男性，圆形表示女性，灰色填充表示患病/受累。左侧家系中，标为 C 的个体是灰色填充的方形，说明 C 为受累男性。右侧家系中，标为 D 的个体是未填充圆形，说明 D 未患病；同一家系中可见一个灰色填充的同胞，说明 D 来自有受累同胞的家系。\n\n推理：该病为常染色体隐性遗传。受累个体的基因型必为 aa，因此 C = aa。D 未患病，但其同胞受累，说明 D 的父母必须都是携带者 Aa × Aa。在 Aa × Aa 子代中，基因型比例为 AA : Aa : aa = 1 : 2 : 1。已知 D 未患病，即排除 aa，因此 D 在未患病条件下为携带者 Aa 的概率是 2/(1+2)=2/3，D 为 AA 的概率是 1/3。若 D 为 Aa，与 C=aa 生育子代时，子代患病 aa 的概率为 1/2；若 D 为 AA，则子代患病概率为 0。因此长子患病总概率 = (2/3)×(1/2) + (1/3)×0 = 1/3 = 0.3333。",
+            "model_answer": "0.3333",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2722,
+              "completion_tokens": 779,
+              "total_tokens": 3501,
+              "cached_tokens": 0,
+              "reasoning_tokens": 404
+            },
+            "_llm_elapsed_seconds": 19.395,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理链总体正确。图像描述先于推理，视觉声明与图中系谱一致：C 为灰色填充方形，D 为未填充圆形且有一个灰色填充同胞。遗传推理符合常染色体隐性疾病条件概率计算，并得到标准答案 0.3333。可微调之处是说明“灰色填充表示受累”主要依据题目/系谱惯例，但这不影响结论。",
+              "major_failures": [],
+              "extractability_score": 0.98,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 19.859
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 55.451,
+              "usage_delta": {
+                "request_count": 1,
+                "successful_request_count": 1,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 2,
+                "prompt_tokens": 5444,
+                "completion_tokens": 1677,
+                "total_tokens": 7121,
+                "cached_tokens": 0,
+                "reasoning_tokens": 920,
+                "total_request_seconds": 54.937,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 43.655,
+              "usage_delta": {
+                "request_count": 1,
+                "successful_request_count": 1,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 2,
+                "prompt_tokens": 6434,
+                "completion_tokens": 1226,
+                "total_tokens": 7660,
+                "cached_tokens": 2816,
+                "reasoning_tokens": 917,
+                "total_request_seconds": 43.144,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "描述图像后推理：将 D 的可能基因型按其父母 Aa×Aa 枚举为 AA、Aa、aa，比例 1/4、1/2、1/4。由于图中 D 未患病，去掉 aa，并把 AA 与 Aa 重新归一化为 1/3 和 2/3。图中 C 患病，所以 C=aa。分别计算：若 D=AA，孩子不可能 aa；若 D=Aa，孩子有 1/2 概率 aa。按两种情况加权，得到 1/3×0+2/3×1/2=1/3=0.3333。",
+          "CoT_raw": "图像描述：图中是一个系谱图。左侧上一代 A 为阴影方形，B 为空心圆形；他们的子代中，标记为 C 的个体是阴影方形，表示患病。右侧上一代是一对未阴影的父母，他们有子代，其中 D 是未阴影圆形，另一个同胞为阴影圆形，表示该家系中存在患病个体。C 与 D 组成夫妇，图中还显示他们的子代。推理：该病为常染色体隐性遗传，患病基因型为 aa。图中 C 患病，所以 C=aa。D 的父母未患病但能生出患病子女，因此按 Aa×Aa 考虑，子代基因型比例为 AA: Aa: aa = 1/4 : 1/2 : 1/4。图中 D 未患病，所以排除 aa，并在 AA 与 Aa 中重新归一化：P(D=AA)=1/3，P(D=Aa)=2/3。若 D=AA，则 aa×AA 的孩子不可能患病，概率为 0；若 D=Aa，则 aa×Aa 的孩子有 1/2 概率为 aa 而患病。加权计算：1/3×0 + 2/3×1/2 = 1/3 = 0.3333。",
+          "model_answer": "0.3333",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "0.3333",
+              "predicted_part": "0.3333",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中是一个系谱图。左侧上一代 A 为阴影方形，B 为空心圆形；他们的子代中，标记为 C 的个体是阴影方形，表示患病。右侧上一代是一对未阴影的父母，他们有子代，其中 D 是未阴影圆形，另一个同胞为阴影圆形，表示该家系中存在患病个体。C 与 D 组成夫妇，图中还显示他们的子代。推理：该病为常染色体隐性遗传，患病基因型为 aa。图中 C 患病，所以 C=aa。D 的父母未患病但能生出患病子女，因此按 Aa×Aa 考虑，子代基因型比例为 AA: Aa: aa = 1/4 : 1/2 : 1/4。图中 D 未患病，所以排除 aa，并在 AA 与 Aa 中重新归一化：P(D=AA)=1/3，P(D=Aa)=2/3。若 D=AA，则 aa×AA 的孩子不可能患病，概率为 0；若 D=Aa，则 aa×Aa 的孩子有 1/2 概率为 aa 而患病。加权计算：1/3×0 + 2/3×1/2 = 1/3 = 0.3333。",
+          "answer_answer_check_final": "0.3333",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "该推理轨迹总体通过。它先描述图像再推理，视觉描述与图中系谱基本一致；遗传学推理符合常染色体隐性遗传、条件概率归一化和加权计算，最终答案与标准答案 0.3333 一致。仅需注意若要更严谨，可明确说明右侧 D 的同胞为患病个体，因此可推出 D 的父母均为携带者 Aa；并可避免把“长子”简化为“孩子”，不过常染色体隐性病的患病概率与性别无关，因此不影响结论。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中是一个系谱图。左侧上一代 A 为阴影方形，B 为空心圆形；他们的子代中，标记为 C 的个体是阴影方形，表示患病。右侧上一代是一对未阴影的父母，他们有子代，其中 D 是未阴影圆形，另一个同胞为阴影圆形，表示该家系中存在患病个体。C 与 D 组成夫妇，图中还显示他们的子代。推理：该病为常染色体隐性遗传，患病基因型为 aa。图中 C 患病，所以 C=aa。D 的父母未患病但能生出患病子女，因此按 Aa×Aa 考虑，子代基因型比例为 AA: Aa: aa = 1/4 : 1/2 : 1/4。图中 D 未患病，所以排除 aa，并在 AA 与 Aa 中重新归一化：P(D=AA)=1/3，P(D=Aa)=2/3。若 D=AA，则 aa×AA 的孩子不可能患病，概率为 0；若 D=Aa，则 aa×Aa 的孩子有 1/2 概率为 aa 而患病。加权计算：1/3×0 + 2/3×1/2 = 1/3 = 0.3333。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "用显式枚举/贝叶斯权重列出 D 在未患病条件下的可能基因型，再对每种情况计算子代风险；与方法1的直接口算路线相比，强调状态枚举和全概率公式。",
+            "image_role": "先读图：C 在系谱中被阴影标记，表示患病；D 无阴影，表示表型正常。右侧 D 的家庭显示无阴影父母有患病子女，因此 D 属于 Aa×Aa 父母所生、但本人未患病的同胞。",
+            "text_role": "文本提供要分析的对象是 C、D 这对夫妇以及疾病为常染色体隐性；答案需要输出数值概率。",
+            "knowledge_role": "Aa×Aa 的子代基因型比例为 AA:Aa:aa=1:2:1；在排除患病 aa 后，正常子女只剩 AA 和 Aa，权重为 1:2。常染色体隐性病只有 aa 患病；C 为 aa。利用全概率：P(患病子代)=P(D=Aa|正常)P(aa子代|C=aa,D=Aa)+P(D=AA|正常)P(aa子代|C=aa,D=AA)=2/3×1/2+1/3×0=1/3。"
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中是一个系谱图。左侧上一代 A 为阴影方形，B 为空心圆形；他们的子代中，标记为 C 的个体是阴影方形，表示患病。右侧上一代是一对未阴影的父母，他们有子代，其中 D 是未阴影圆形，另一个同胞为阴影圆形，表示该家系中存在患病个体。C 与 D 组成夫妇，图中还显示他们的子代。推理：该病为常染色体隐性遗传，患病基因型为 aa。图中 C 患病，所以 C=aa。D 的父母未患病但能生出患病子女，因此按 Aa×Aa 考虑，子代基因型比例为 AA: Aa: aa = 1/4 : 1/2 : 1/4。图中 D 未患病，所以排除 aa，并在 AA 与 Aa 中重新归一化：P(D=AA)=1/3，P(D=Aa)=2/3。若 D=AA，则 aa×AA 的孩子不可能患病，概率为 0；若 D=Aa，则 aa×Aa 的孩子有 1/2 概率为 aa 而患病。加权计算：1/3×0 + 2/3×1/2 = 1/3 = 0.3333。",
+            "model_answer": "0.3333",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2734,
+              "completion_tokens": 882,
+              "total_tokens": 3616,
+              "cached_tokens": 2304,
+              "reasoning_tokens": 516
+            },
+            "_llm_elapsed_seconds": 24.899,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "该推理轨迹总体通过。它先描述图像再推理，视觉描述与图中系谱基本一致；遗传学推理符合常染色体隐性遗传、条件概率归一化和加权计算，最终答案与标准答案 0.3333 一致。仅需注意若要更严谨，可明确说明右侧 D 的同胞为患病个体，因此可推出 D 的父母均为携带者 Aa；并可避免把“长子”简化为“孩子”，不过常染色体隐性病的患病概率与性别无关，因此不影响结论。",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.9,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 21.162
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 52.47,
+              "usage_delta": {
+                "request_count": 1,
+                "successful_request_count": 1,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 2,
+                "prompt_tokens": 5468,
+                "completion_tokens": 1722,
+                "total_tokens": 7190,
+                "cached_tokens": 2304,
+                "reasoning_tokens": 1032,
+                "total_request_seconds": 51.956,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 38.845,
+              "usage_delta": {
+                "request_count": 1,
+                "successful_request_count": 1,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 1,
+                "requests_with_usage": 2,
+                "prompt_tokens": 6444,
+                "completion_tokens": 1310,
+                "total_tokens": 7754,
+                "cached_tokens": 0,
+                "reasoning_tokens": 1019,
+                "total_request_seconds": 38.334,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 160.82,
+          "usage_delta": {
+            "request_count": 1,
+            "successful_request_count": 1,
+            "failed_request_count": 1,
+            "retry_count": 1,
+            "text_request_count": 0,
+            "multimodal_request_count": 1,
+            "requests_with_usage": 1,
+            "prompt_tokens": 2809,
+            "completion_tokens": 1496,
+            "total_tokens": 4305,
+            "cached_tokens": 0,
+            "reasoning_tokens": 592,
+            "total_request_seconds": 160.303,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "SciVerse",
+        "dataset_slug": "sciverse_biology",
+        "source_problem_id": "443",
+        "subject": "Biology",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/biology/sciverse_biology/samples/sciversebiology00023.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "multiple_choice",
+          "parent_problem_id": "prob_429ddd57e4b9d2f8abcbefb5",
+          "open_variant_count": 1,
+          "open_variant_id": "open_17382cce60241d032db3b14c",
+          "open_variant_index": 1,
+          "open_variant_title": "SciVerse 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "conservative",
+          "collection_risk_flags": []
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 351.274,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 5,
+        "retry_count": 5,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 9,
+        "prompt_tokens": 26599,
+        "completion_tokens": 7431,
+        "total_tokens": 34030,
+        "cached_tokens": 5120,
+        "reasoning_tokens": 4480,
+        "total_request_seconds": 348.674,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "假设一对夫妇（C 和 D）有某种常染色体隐性遗传疾病的家族史，他们的长子患有该疾病的概率是多少？",
+      "answer": "0.3333",
+      "final_cot": "Image description: This is a pedigree chart; squares represent males, circles represent females, and gray filling represents affected/being affected. In the family on the left, the individual labeled C is a gray-filled square, indicating that C is an affected male. In the family on the right, the individual labeled D is an unfilled circle, indicating that D is not affected; in the same family, a gray-filled sibling can be seen, indicating that D comes from a family with an affected sibling.\n\nReasoning: The disease is autosomal recessive. The genotype of an affected individual must be aa, therefore C = aa. D is not affected, but her sibling is affected, indicating that D's parents must both be carriers Aa × Aa. Among the offspring of Aa × Aa, the genotype ratio is AA : Aa : aa = 1 : 2 : 1. It is known that D is not affected, that is, aa is excluded, so the probability that D is a carrier Aa under the condition of being unaffected is 2/(1+2)=2/3, and the probability that D is AA is 1/3. If D is Aa, when having offspring with C=aa, the probability that the offspring is affected aa is 1/2; if D is AA, then the probability that the offspring is affected is 0. Therefore, the total probability that the eldest son is affected = (2/3)×(1/2) + (1/3)×0 = 1/3 = 0.3333.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理链总体正确。图像描述先于推理，视觉声明与图中系谱一致：C 为灰色填充方形，D 为未填充圆形且有一个灰色填充同胞。遗传推理符合常染色体隐性疾病条件概率计算，并得到标准答案 0.3333。可微调之处是说明“灰色填充表示受累”主要依据题目/系谱惯例，但这不影响结论。",
+          "major_failures": [],
+          "extractability_score": 0.98,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 19.859
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "该推理轨迹总体通过。它先描述图像再推理，视觉描述与图中系谱基本一致；遗传学推理符合常染色体隐性遗传、条件概率归一化和加权计算，最终答案与标准答案 0.3333 一致。仅需注意若要更严谨，可明确说明右侧 D 的同胞为患病个体，因此可推出 D 的父母均为携带者 Aa；并可避免把“长子”简化为“孩子”，不过常染色体隐性病的患病概率与性别无关，因此不影响结论。",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.9,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 21.162
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_guarded_tmux_20260504T0515Z",
+        "processed_index": 80,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "biology",
+        "dataset": "sciverse_biology",
+        "relative_dataset": "biology/sciverse_biology",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/biology/sciverse_biology/samples/sciversebiology00023.json",
+        "source_sample_filename": "sciversebiology00023.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/biology/sciverse_biology/samples/sciversebiology00023.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_guarded_tmux_20260504T0515Z.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_guarded_tmux_20260504T0515Z.events.jsonl",
+        "written_at": "2026-05-04T07:47:40Z",
+        "ready_id_migration": {
+          "migration_id": "ready2_id_migration_full_20260510T1438Z",
+          "migrated_at": "2026-05-10T14:38:33Z",
+          "reason": "current_ready_open_variant_id_changed_without_question_answer_change",
+          "old_problem_id": "prob_429ddd57e4b9d2f8abcbefb5",
+          "new_problem_id": "open_17382cce60241d032db3b14c",
+          "old_problem_run_key": "sciverse_biology__prob_429ddd57e4b9d2f8abcbefb5__e0ea50839885",
+          "new_problem_run_key": "sciverse_biology__open_17382cce60241d032db3b14c__b3a490796fcc",
+          "current_ready_output_rel": "biology/sciverse_biology/samples/sciversebiology00023.json",
+          "question_answer_verified": true
+        },
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:16Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_17382cce60241d032db3b14c",
+          "new_problem_id": "open_17382cce60241d032db3b14c",
+          "old_problem_run_key": "sciverse_biology__open_17382cce60241d032db3b14c__b3a490796fcc",
+          "new_problem_run_key": "sciverse_biology__open_17382cce60241d032db3b14c__b3a490796fcc",
+          "target_relpath": "biology/sciverse_biology/samples/sciversebiology00023.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_17382cce60241d032db3b14c",
+    "problem_run_key": "sciverse_biology__open_17382cce60241d032db3b14c__b3a490796fcc",
+    "raw_question_text": "Suppose a couple (C and D) have a family history of a certain autosomal recessive genetic disease; what is the probability that their eldest son has the disease?",
+    "raw_answer": "0.3333",
+    "raw_standard_answer": "0.3333",
+    "resolved_question_text": "Suppose a couple (C and D) have a family history of a certain autosomal recessive genetic disease; what is the probability that their eldest son has the disease?",
+    "resolved_answer": "0.3333",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: This is a pedigree chart; squares represent males, circles represent females, and gray filling represents affected/being affected. In the family on the left, the individual labeled C is a gray-filled square, indicating that C is an affected male. In the family on the right, the individual labeled D is an unfilled circle, indicating that D is not affected; in the same family, a gray-filled sibling can be seen, indicating that D comes from a family with an affected sibling.\n\nReasoning: The disease is autosomal recessive. The genotype of an affected individual must be aa, therefore C = aa. D is not affected, but her sibling is affected, indicating that D's parents must both be carriers Aa × Aa. Among the offspring of Aa × Aa, the genotype ratio is AA : Aa : aa = 1 : 2 : 1. It is known that D is not affected, that is, aa is excluded, so the probability that D is a carrier Aa under the condition of being unaffected is 2/(1+2)=2/3, and the probability that D is AA is 1/3. If D is Aa, when having offspring with C=aa, the probability that the offspring is affected aa is 1/2; if D is AA, then the probability that the offspring is affected is 0. Therefore, the total probability that the eldest son is affected = (2/3)×(1/2) + (1/3)×0 = 1/3 = 0.3333.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "This is a pedigree chart.",
+        "label": "perception",
+        "source": "This is a pedigree chart"
+      },
+      {
+        "claim_id": 2,
+        "claim": "Squares represent males.",
+        "label": "perception",
+        "source": "Squares represent males"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Circles represent females.",
+        "label": "perception",
+        "source": "Circles represent females"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Gray filling represents affected/being affected.",
+        "label": "perception",
+        "source": "Gray filling represents affected/being affected"
+      },
+      {
+        "claim_id": 5,
+        "claim": "In the family on the left, the individual labeled C is a gray-filled square.",
+        "label": "perception",
+        "source": "In the family on the left, the individual labeled C is a gray-filled square"
+      },
+      {
+        "claim_id": 6,
+        "claim": "C is an affected male.",
+        "label": "reasoning",
+        "source": "Indicating that C is an affected male"
+      },
+      {
+        "claim_id": 7,
+        "claim": "In the family on the right, the individual labeled D is an unfilled circle.",
+        "label": "perception",
+        "source": "In the pedigree on the right, the individual labeled D is an unfilled circle"
+      },
+      {
+        "claim_id": 8,
+        "claim": "D is not affected.",
+        "label": "reasoning",
+        "source": "This indicates that D is not affected"
+      },
+      {
+        "claim_id": 9,
+        "claim": "In the same pedigree as D, a gray-filled sibling can be seen.",
+        "label": "perception",
+        "source": "A gray-filled sibling can be seen in the same pedigree"
+      },
+      {
+        "claim_id": 10,
+        "claim": "D comes from a family with an affected sibling.",
+        "label": "reasoning",
+        "source": "This indicates that D comes from a family with an affected sibling"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The disease is autosomal recessive.",
+        "label": "reasoning",
+        "source": "The disease is autosomal recessive"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The genotype of an affected individual with an autosomal recessive disease must be aa.",
+        "label": "knowledge",
+        "source": "The genotype of an affected individual must be aa"
+      },
+      {
+        "claim_id": 13,
+        "claim": "C's genotype is aa.",
+        "label": "reasoning",
+        "source": "Therefore C = aa"
+      },
+      {
+        "claim_id": 14,
+        "claim": "D's parents' mating type is Aa × Aa.",
+        "label": "reasoning",
+        "source": "D's parents must both be carriers, Aa × Aa"
+      },
+      {
+        "claim_id": 15,
+        "claim": "Among the offspring of Aa × Aa, the genotype ratio is AA : Aa : aa = 1 : 2 : 1.",
+        "label": "knowledge",
+        "source": "Among the offspring of Aa × Aa, the genotype ratio is AA : Aa : aa = 1 : 2 : 1"
+      },
+      {
+        "claim_id": 16,
+        "claim": "When it is known that D is not affected, aa needs to be excluded.",
+        "label": "reasoning",
+        "source": "Given that D is not affected, that is, excluding aa"
+      },
+      {
+        "claim_id": 17,
+        "claim": "The probability that D is a carrier Aa under the condition of being unaffected is 2/3.",
+        "label": "reasoning",
+        "source": "The probability that D is a carrier Aa under the condition of being unaffected is 2/(1+2)=2/3"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The probability that D is AA is 1/3.",
+        "label": "reasoning",
+        "source": "The probability that D is AA is 1/3"
+      },
+      {
+        "claim_id": 19,
+        "claim": "If D is Aa, when having offspring with C=aa, the probability that the offspring is affected aa is 1/2.",
+        "label": "reasoning",
+        "source": "If D is Aa, when having offspring with C=aa, the probability that the offspring is affected aa is 1/2"
+      },
+      {
+        "claim_id": 20,
+        "claim": "If D is AA, then the probability that the offspring is affected is 0.",
+        "label": "reasoning",
+        "source": "If D is AA, then the probability that the offspring is affected is 0"
+      },
+      {
+        "claim_id": 21,
+        "claim": "The total probability that the eldest son is affected = (2/3)×(1/2) + (1/3)×0.",
+        "label": "reasoning",
+        "source": "Therefore the total probability that the eldest son is affected = (2/3)×(1/2) + (1/3)×0"
+      },
+      {
+        "claim_id": 22,
+        "claim": "The total probability that the eldest son is affected is 1/3.",
+        "label": "reasoning",
+        "source": "= 1/3 = 0.3333"
+      }
+    ],
+    "claim_count": 22,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "This is a pedigree chart.",
+          "label": "perception",
+          "source": "This is a pedigree chart"
+        },
+        {
+          "claim_id": 2,
+          "claim": "Squares represent males.",
+          "label": "perception",
+          "source": "Squares represent males"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Circles represent females.",
+          "label": "perception",
+          "source": "Circles represent females"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Gray filling represents affected/being affected.",
+          "label": "perception",
+          "source": "Gray filling represents affected/being affected"
+        },
+        {
+          "claim_id": 5,
+          "claim": "In the family on the left, the individual labeled C is a gray-filled square.",
+          "label": "perception",
+          "source": "In the family on the left, the individual labeled C is a gray-filled square"
+        },
+        {
+          "claim_id": 6,
+          "claim": "C is an affected male.",
+          "label": "reasoning",
+          "source": "Indicating that C is an affected male"
+        },
+        {
+          "claim_id": 7,
+          "claim": "In the family on the right, the individual labeled D is an unfilled circle.",
+          "label": "perception",
+          "source": "In the pedigree on the right, the individual labeled D is an unfilled circle"
+        },
+        {
+          "claim_id": 8,
+          "claim": "D is not affected.",
+          "label": "reasoning",
+          "source": "This indicates that D is not affected"
+        },
+        {
+          "claim_id": 9,
+          "claim": "In the same pedigree as D, a gray-filled sibling can be seen.",
+          "label": "perception",
+          "source": "A gray-filled sibling can be seen in the same pedigree"
+        },
+        {
+          "claim_id": 10,
+          "claim": "D comes from a family with an affected sibling.",
+          "label": "reasoning",
+          "source": "This indicates that D comes from a family with an affected sibling"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The disease is autosomal recessive.",
+          "label": "reasoning",
+          "source": "The disease is autosomal recessive"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The genotype of an affected individual with an autosomal recessive disease must be aa.",
+          "label": "knowledge",
+          "source": "The genotype of an affected individual must be aa"
+        },
+        {
+          "claim_id": 13,
+          "claim": "C's genotype is aa.",
+          "label": "reasoning",
+          "source": "Therefore C = aa"
+        },
+        {
+          "claim_id": 14,
+          "claim": "D's parents' mating type is Aa × Aa.",
+          "label": "reasoning",
+          "source": "D's parents must both be carriers, Aa × Aa"
+        },
+        {
+          "claim_id": 15,
+          "claim": "Among the offspring of Aa × Aa, the genotype ratio is AA : Aa : aa = 1 : 2 : 1.",
+          "label": "knowledge",
+          "source": "Among the offspring of Aa × Aa, the genotype ratio is AA : Aa : aa = 1 : 2 : 1"
+        },
+        {
+          "claim_id": 16,
+          "claim": "When it is known that D is not affected, aa needs to be excluded.",
+          "label": "reasoning",
+          "source": "Given that D is not affected, that is, excluding aa"
+        },
+        {
+          "claim_id": 17,
+          "claim": "The probability that D is a carrier Aa under the condition of being unaffected is 2/3.",
+          "label": "reasoning",
+          "source": "The probability that D is a carrier Aa under the condition of being unaffected is 2/(1+2)=2/3"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The probability that D is AA is 1/3.",
+          "label": "reasoning",
+          "source": "The probability that D is AA is 1/3"
+        },
+        {
+          "claim_id": 19,
+          "claim": "If D is Aa, when having offspring with C=aa, the probability that the offspring is affected aa is 1/2.",
+          "label": "reasoning",
+          "source": "If D is Aa, when having offspring with C=aa, the probability that the offspring is affected aa is 1/2"
+        },
+        {
+          "claim_id": 20,
+          "claim": "If D is AA, then the probability that the offspring is affected is 0.",
+          "label": "reasoning",
+          "source": "If D is AA, then the probability that the offspring is affected is 0"
+        },
+        {
+          "claim_id": 21,
+          "claim": "The total probability that the eldest son is affected = (2/3)×(1/2) + (1/3)×0.",
+          "label": "reasoning",
+          "source": "Therefore the total probability that the eldest son is affected = (2/3)×(1/2) + (1/3)×0"
+        },
+        {
+          "claim_id": 22,
+          "claim": "The total probability that the eldest son is affected is 1/3.",
+          "label": "reasoning",
+          "source": "= 1/3 = 0.3333"
+        }
+      ],
+      "coverage_notes": "已按 review 中 severity 为 fix 的问题删除原 claim 14（与原 claim 15 近重复），并对其余 claims 顺序保留后重新编号。"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-06-11T13:21:23Z",
+    "reused_from_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_target75_low_simple_ready123_english_gpt55_medium_20260611/items/biology/sciverse_biology/04435_biology_sciverse_biology_open_17382cce60241d032db3b14c_87fc550380.json",
+    "reused_for_source_item_path": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/allready1_6000_phys800_mathless_reuse_translated_ready123_20260614/items/biology/sciverse_biology/00658_biology_sciverse_biology_open_17382cce60241d032db3b14c_87fc550380.json"
+  }
+}

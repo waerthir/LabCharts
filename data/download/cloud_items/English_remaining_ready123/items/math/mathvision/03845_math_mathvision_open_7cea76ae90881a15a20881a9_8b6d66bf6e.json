@@ -1,0 +1,842 @@
+{
+  "pack_index": 3845,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mathvision:mathvision00853:mathvision__open_7cea76ae90881a15a20881a9__606625e164bf",
+    "subject_dir": "math",
+    "dataset_slug": "mathvision",
+    "problem_id": "open_7cea76ae90881a15a20881a9",
+    "source_problem_id": "open_7cea76ae90881a15a20881a9",
+    "problem_run_key": "mathvision__open_7cea76ae90881a15a20881a9__606625e164bf",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 5.0,
+    "difficulty_level": "simple",
+    "weighted_accuracy": 0.95,
+    "wrong_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 1,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00853.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00853.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mathvision/samples/mathvision00853.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00853.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "In the sum each letter stands for a different digit.\nWhat is the answer to the subtraction $ RN - KG $ ? <image1>",
+    "raw_answer_text": "11",
+    "open_variant_id": "open_7cea76ae90881a15a20881a9",
+    "variant_index": 1,
+    "title": "MathVision open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "In the sum shown in the image, each letter stands for a different digit. What is the answer to the subtraction $RN - KG$?",
+    "expected_answer_type": "numeric",
+    "expected_answer": "11",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_aabece52b00363cbb43d9b78",
+        "problem_id": "prob_7bbcd4e55f6f887303eb1972",
+        "node_type": "answer_claim",
+        "canonical_value": "11",
+        "surface_forms": [
+          "11"
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_e304bb4380e2f8923d25ef5b"
+        ],
+        "evidence_refs": [
+          "asset_e304bb4380e2f8923d25ef5b"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "numeric",
+        "normalized_value": {
+          "answer": "11"
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-04-07T01:44:29Z",
+        "updated_at": "2026-04-07T01:44:29Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_7cea76ae90881a15a20881a9",
+      "parent_problem_id": "prob_7bbcd4e55f6f887303eb1972",
+      "variant_index": 1,
+      "title": "MathVision open-ended problem",
+      "rewritten_question_text": "In the sum shown in the image, each letter stands for a different digit. What is the answer to the subtraction $RN - KG$?",
+      "expected_answer_type": "numeric",
+      "expected_answer": "11",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "In the sum shown in the image, each letter stands for a different digit. What is the answer to the subtraction $RN - KG$?",
+    "raw_answer": "11",
+    "raw_standard_answer": "11",
+    "resolved_question_text": "In the sum shown in the image, each letter stands for a different digit. What is the answer to the subtraction $RN - KG$?",
+    "resolved_answer": "11",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The image shows a vertical alphametic addition with KAN on the top row, +GA on the second row, a horizontal line, and ROO as the result. The GA is aligned under the tens and ones columns of KAN, so G is in the tens column and A is in the ones column. Each letter represents a different digit. Then reason: Let c be the carry from the ones column. The ones column gives N + A = O + 10c. In the hundreds column, K plus the carry from the tens column equals R. Since R and K are different digits, the carry from the tens column cannot be 0, so it must be 1, giving R = K + 1. Therefore the tens column is A + G + c = O + 10. Subtract the ones equation from the tens equation: (A + G + c) - (N + A) = 10 - 10c, so G + c - N = 10 - 10c. If c = 0, this would force G - N = 10, impossible for digits. Thus c = 1, and then G + 1 - N = 0, so N = G + 1. Therefore RN - KG = (10R + N) - (10K + G) = 10(R - K) + (N - G) = 10(1) + 1 = 11.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_7cea76ae90881a15a20881a9",
+      "problem_run_key": "mathvision__open_7cea76ae90881a15a20881a9__606625e164bf",
+      "question_text": "In the sum shown in the image, each letter stands for a different digit. What is the answer to the subtraction $RN - KG$?",
+      "standard_answer": "11",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/images/mathvision00853.png",
+        "/home/lijingyue/qiujianbo/ready/math/mathvision/artifacts/crops/mathvision00853.png"
+      ],
+      "initial_multi_solution_score": 0.3557,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Read the image as the vertical alphametic KAN + GA = ROO, with GA aligned under the tens and ones columns of KAN. From the text, use that every letter is a different digit. Work column-by-column with carries: in the hundreds column, R equals K plus the carry from the tens column; because R and K must be different, the tens carry must be 1, so R = K + 1. Let c be the carry from the ones column. Ones column gives N + A = O + 10c. Tens column gives A + G + c = O + 10, since the carry to hundreds is 1. Subtract the ones equation from the tens equation: G + c - N = 10 - 10c. If c = 0, this would force N = G - 10, impossible for digits; hence c = 1, so N = G + 1. Therefore RN - KG = (10R + N) - (10K + G) = 10(R-K) + (N-G) = 10(1)+1 = 11.",
+          "CoT_raw": "先描述图像：The image shows a vertical alphametic addition with KAN on the top row, +GA on the second row, a horizontal line, and ROO as the result. The GA is aligned under the tens and ones columns of KAN, so G is in the tens column and A is in the ones column. Each letter represents a different digit.\n\n再推理：Let c be the carry from the ones column. The ones column gives N + A = O + 10c. In the hundreds column, K plus the carry from the tens column equals R. Since R and K are different digits, the carry from the tens column cannot be 0, so it must be 1, giving R = K + 1. Therefore the tens column is A + G + c = O + 10. Subtract the ones equation from the tens equation: (A + G + c) - (N + A) = 10 - 10c, so G + c - N = 10 - 10c. If c = 0, this would force G - N = 10, impossible for digits. Thus c = 1, and then G + 1 - N = 0, so N = G + 1. Therefore RN - KG = (10R + N) - (10K + G) = 10(R - K) + (N - G) = 10(1) + 1 = 11.",
+          "model_answer": "11",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "11",
+              "predicted_part": "11",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：The image shows a vertical alphametic addition with KAN on the top row, +GA on the second row, a horizontal line, and ROO as the result. The GA is aligned under the tens and ones columns of KAN, so G is in the tens column and A is in the ones column. Each letter represents a different digit.\n\n再推理：Let c be the carry from the ones column. The ones column gives N + A = O + 10c. In the hundreds column, K plus the carry from the tens column equals R. Since R and K are different digits, the carry from the tens column cannot be 0, so it must be 1, giving R = K + 1. Therefore the tens column is A + G + c = O + 10. Subtract the ones equation from the tens equation: (A + G + c) - (N + A) = 10 - 10c, so G + c - N = 10 - 10c. If c = 0, this would force G - N = 10, impossible for digits. Thus c = 1, and then G + 1 - N = 0, so N = G + 1. Therefore RN - KG = (10R + N) - (10K + G) = 10(R - K) + (N - G) = 10(1) + 1 = 11.",
+          "answer_answer_check_final": "11",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace correctly describes the image first, then performs column-wise alphametic reasoning consistent with the assigned method draft and standard answer.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：The image shows a vertical alphametic addition with KAN on the top row, +GA on the second row, a horizontal line, and ROO as the result. The GA is aligned under the tens and ones columns of KAN, so G is in the tens column and A is in the ones column. Each letter represents a different digit.\n\n再推理：Let c be the carry from the ones column. The ones column gives N + A = O + 10c. In the hundreds column, K plus the carry from the tens column equals R. Since R and K are different digits, the carry from the tens column cannot be 0, so it must be 1, giving R = K + 1. Therefore the tens column is A + G + c = O + 10. Subtract the ones equation from the tens equation: (A + G + c) - (N + A) = 10 - 10c, so G + c - N = 10 - 10c. If c = 0, this would force G - N = 10, impossible for digits. Thus c = 1, and then G + 1 - N = 0, so N = G + 1. Therefore RN - KG = (10R + N) - (10K + G) = 10(R - K) + (N - G) = 10(1) + 1 = 11.",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is the standard direct column-carry route, using the ones, tens, and hundreds columns explicitly to derive only the digit differences needed.",
+            "image_role": "The image supplies the aligned addition layout: KAN on top, GA beneath it aligned as a two-digit addend in the tens/ones columns, and ROO as the result.",
+            "text_role": "The question states that each letter represents a different digit and asks for RN - KG.",
+            "knowledge_role": "Use base-10 column addition with carries and the rule that distinct letters cannot represent the same digit."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：The image shows a vertical alphametic addition with KAN on the top row, +GA on the second row, a horizontal line, and ROO as the result. The GA is aligned under the tens and ones columns of KAN, so G is in the tens column and A is in the ones column. Each letter represents a different digit.\n\n再推理：Let c be the carry from the ones column. The ones column gives N + A = O + 10c. In the hundreds column, K plus the carry from the tens column equals R. Since R and K are different digits, the carry from the tens column cannot be 0, so it must be 1, giving R = K + 1. Therefore the tens column is A + G + c = O + 10. Subtract the ones equation from the tens equation: (A + G + c) - (N + A) = 10 - 10c, so G + c - N = 10 - 10c. If c = 0, this would force G - N = 10, impossible for digits. Thus c = 1, and then G + 1 - N = 0, so N = G + 1. Therefore RN - KG = (10R + N) - (10K + G) = 10(R - K) + (N - G) = 10(1) + 1 = 11.",
+            "model_answer": "11",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2694,
+              "completion_tokens": 865,
+              "total_tokens": 3559,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 13.273,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace correctly describes the image first, then performs column-wise alphametic reasoning consistent with the assigned method draft and standard answer.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 8.415
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 13.289,
+              "usage_delta": {
+                "request_count": 14,
+                "successful_request_count": 16,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 14,
+                "requests_with_usage": 16,
+                "prompt_tokens": 42302,
+                "completion_tokens": 11968,
+                "total_tokens": 54270,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 236.207,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 8.431,
+              "usage_delta": {
+                "request_count": 12,
+                "successful_request_count": 12,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 12,
+                "requests_with_usage": 12,
+                "prompt_tokens": 28265,
+                "completion_tokens": 14423,
+                "total_tokens": 42688,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 276.418,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Read the image as the equation KAN + GA = ROO, where KAN, GA, ROO are decimal numbers. From the text, impose that all letters are distinct digits. First use only the hundreds-place structure: adding a two-digit number GA to the three-digit number KAN can leave the hundreds digit as K or increase it to K+1. Since R cannot equal K, it must be R = K + 1. Now avoid detailed carry equations by using the whole equation modulo 11. Because 100 ≡ 1 and 10 ≡ -1 mod 11, KAN + GA ≡ (K - A + N) + (-G + A) = K + N - G, while ROO ≡ R - O + O = R. Thus K + N - G ≡ R mod 11. Substitute R = K + 1 to get N - G ≡ 1 mod 11. Since N and G are digits, N - G lies between -9 and 9, so N - G = 1. Then RN - KG = 10(R-K) + (N-G) = 10·1 + 1 = 11.",
+          "CoT_raw": "图像中显示的是一个竖式加法：上面一行是三位数 KAN，下面一行是带加号的两位数 GA，横线下方的结果是三位数 ROO。因此等式为 KAN + GA = ROO，且题目说明每个字母代表不同的数字。\n\n只看百位：三位数 KAN 加上两位数 GA，百位要么仍为 K，要么因为进位变为 K+1。结果百位是 R，而 R 与 K 是不同字母、代表不同数字，所以不能是 R=K，只能是 R=K+1。\n\n再对整个等式模 11。因为 100 ≡ 1，10 ≡ -1 (mod 11)，所以 KAN + GA ≡ (K - A + N) + (-G + A) = K + N - G (mod 11)。而 ROO ≡ R - O + O = R (mod 11)。因此 K + N - G ≡ R (mod 11)。代入 R=K+1，得到 N - G ≡ 1 (mod 11)。由于 N 和 G 都是数字，N-G 在 -9 到 9 之间，所以只能有 N-G=1。\n\n所求 RN - KG = (10R+N) - (10K+G) = 10(R-K) + (N-G) = 10·1 + 1 = 11。",
+          "model_answer": "11",
+          "is_answer_match": true,
+          "answer_match_reason": "deterministic_match",
+          "answer_match_part_results": [
+            {
+              "standard_part": "11",
+              "predicted_part": "11",
+              "is_equivalent": true,
+              "reason": "deterministic_match"
+            }
+          ],
+          "CoT_answer_check_final": "图像中显示的是一个竖式加法：上面一行是三位数 KAN，下面一行是带加号的两位数 GA，横线下方的结果是三位数 ROO。因此等式为 KAN + GA = ROO，且题目说明每个字母代表不同的数字。\n\n只看百位：三位数 KAN 加上两位数 GA，百位要么仍为 K，要么因为进位变为 K+1。结果百位是 R，而 R 与 K 是不同字母、代表不同数字，所以不能是 R=K，只能是 R=K+1。\n\n再对整个等式模 11。因为 100 ≡ 1，10 ≡ -1 (mod 11)，所以 KAN + GA ≡ (K - A + N) + (-G + A) = K + N - G (mod 11)。而 ROO ≡ R - O + O = R (mod 11)。因此 K + N - G ≡ R (mod 11)。代入 R=K+1，得到 N - G ≡ 1 (mod 11)。由于 N 和 G 都是数字，N-G 在 -9 到 9 之间，所以只能有 N-G=1。\n\n所求 RN - KG = (10R+N) - (10K+G) = 10(R-K) + (N-G) = 10·1 + 1 = 11。",
+          "answer_answer_check_final": "11",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "No revision needed. The trace accurately describes the visual addition setup before reasoning, follows the assigned modulo-11 method, uses the distinct-letter condition correctly, and reaches the standard answer 11.",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像中显示的是一个竖式加法：上面一行是三位数 KAN，下面一行是带加号的两位数 GA，横线下方的结果是三位数 ROO。因此等式为 KAN + GA = ROO，且题目说明每个字母代表不同的数字。\n\n只看百位：三位数 KAN 加上两位数 GA，百位要么仍为 K，要么因为进位变为 K+1。结果百位是 R，而 R 与 K 是不同字母、代表不同数字，所以不能是 R=K，只能是 R=K+1。\n\n再对整个等式模 11。因为 100 ≡ 1，10 ≡ -1 (mod 11)，所以 KAN + GA ≡ (K - A + N) + (-G + A) = K + N - G (mod 11)。而 ROO ≡ R - O + O = R (mod 11)。因此 K + N - G ≡ R (mod 11)。代入 R=K+1，得到 N - G ≡ 1 (mod 11)。由于 N 和 G 都是数字，N-G 在 -9 到 9 之间，所以只能有 N-G=1。\n\n所求 RN - KG = (10R+N) - (10K+G) = 10(R-K) + (N-G) = 10·1 + 1 = 11。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This route is genuinely different from full column carry analysis: after identifying the hundreds carry, it uses a modulo-11 invariant of the entire alphametic to derive N-G directly.",
+            "image_role": "The image provides the exact alphametic expression and alignment needed to translate it into KAN + GA = ROO.",
+            "text_role": "The text provides the distinct-digit condition and identifies the requested subtraction RN - KG.",
+            "knowledge_role": "Use decimal place-value notation, the effect of adding a two-digit number to a three-digit number on the hundreds digit, and modular arithmetic modulo 11."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像中显示的是一个竖式加法：上面一行是三位数 KAN，下面一行是带加号的两位数 GA，横线下方的结果是三位数 ROO。因此等式为 KAN + GA = ROO，且题目说明每个字母代表不同的数字。\n\n只看百位：三位数 KAN 加上两位数 GA，百位要么仍为 K，要么因为进位变为 K+1。结果百位是 R，而 R 与 K 是不同字母、代表不同数字，所以不能是 R=K，只能是 R=K+1。\n\n再对整个等式模 11。因为 100 ≡ 1，10 ≡ -1 (mod 11)，所以 KAN + GA ≡ (K - A + N) + (-G + A) = K + N - G (mod 11)。而 ROO ≡ R - O + O = R (mod 11)。因此 K + N - G ≡ R (mod 11)。代入 R=K+1，得到 N - G ≡ 1 (mod 11)。由于 N 和 G 都是数字，N-G 在 -9 到 9 之间，所以只能有 N-G=1。\n\n所求 RN - KG = (10R+N) - (10K+G) = 10(R-K) + (N-G) = 10·1 + 1 = 11。",
+            "model_answer": "11",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 2708,
+              "completion_tokens": 884,
+              "total_tokens": 3592,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 16.185,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "No revision needed. The trace accurately describes the visual addition setup before reasoning, follows the assigned modulo-11 method, uses the distinct-letter condition correctly, and reaches the standard answer 11.",
+              "major_failures": [],
+              "extractability_score": 1.0,
+              "grounding_score": 1.0,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 18.223
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 16.198,
+              "usage_delta": {
+                "request_count": 21,
+                "successful_request_count": 26,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 21,
+                "requests_with_usage": 26,
+                "prompt_tokens": 65701,
+                "completion_tokens": 23032,
+                "total_tokens": 88733,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 439.137,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 0.0,
+              "usage_delta": {
+                "request_count": 0,
+                "successful_request_count": 0,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 0,
+                "requests_with_usage": 0,
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 0.0,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 18.239,
+              "usage_delta": {
+                "request_count": 10,
+                "successful_request_count": 13,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 10,
+                "requests_with_usage": 13,
+                "prompt_tokens": 32730,
+                "completion_tokens": 9009,
+                "total_tokens": 41739,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 278.054,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 40.752,
+          "usage_delta": {
+            "request_count": 40,
+            "successful_request_count": 32,
+            "failed_request_count": 0,
+            "retry_count": 0,
+            "text_request_count": 0,
+            "multimodal_request_count": 40,
+            "requests_with_usage": 32,
+            "prompt_tokens": 78252,
+            "completion_tokens": 27595,
+            "total_tokens": 105847,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 550.673,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MathVision",
+        "dataset_slug": "mathvision",
+        "source_problem_id": "1760",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00853.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_7bbcd4e55f6f887303eb1972",
+          "open_variant_count": 1,
+          "open_variant_id": "open_7cea76ae90881a15a20881a9",
+          "open_variant_index": 1,
+          "open_variant_title": "MathVision 开放题",
+          "expected_answer_type": "numeric",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "equation_structure is only present in the image and not transcribed in text",
+            "scoring is based on metadata and question wording without direct inspection of the image content"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 96.953,
+      "problem_usage": {
+        "request_count": 5,
+        "successful_request_count": 5,
+        "failed_request_count": 0,
+        "retry_count": 0,
+        "text_request_count": 0,
+        "multimodal_request_count": 5,
+        "requests_with_usage": 5,
+        "prompt_tokens": 14215,
+        "completion_tokens": 4983,
+        "total_tokens": 19198,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 96.821,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "In the sum shown in the image, each letter stands for a different digit. What is the answer to the subtraction $RN - KG$?",
+      "answer": "11",
+      "final_cot": "First describe the image: The image shows a vertical alphametic addition with KAN on the top row, +GA on the second row, a horizontal line, and ROO as the result. The GA is aligned under the tens and ones columns of KAN, so G is in the tens column and A is in the ones column. Each letter represents a different digit.\n\nThen reason: Let c be the carry from the ones column. The ones column gives N + A = O + 10c. In the hundreds column, K plus the carry from the tens column equals R. Since R and K are different digits, the carry from the tens column cannot be 0, so it must be 1, giving R = K + 1. Therefore the tens column is A + G + c = O + 10. Subtract the ones equation from the tens equation: (A + G + c) - (N + A) = 10 - 10c, so G + c - N = 10 - 10c. If c = 0, this would force G - N = 10, impossible for digits. Thus c = 1, and then G + 1 - N = 0, so N = G + 1. Therefore RN - KG = (10R + N) - (10K + G) = 10(R - K) + (N - G) = 10(1) + 1 = 11.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace correctly describes the image first, then performs column-wise alphametic reasoning consistent with the assigned method draft and standard answer.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 8.415
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "No revision needed. The trace accurately describes the visual addition setup before reasoning, follows the assigned modulo-11 method, uses the distinct-letter condition correctly, and reaches the standard answer 11.",
+          "major_failures": [],
+          "extractability_score": 1.0,
+          "grounding_score": 1.0,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 18.223
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_resume_25w_chatv1_keycfg_20260509T160817CST",
+        "processed_index": 1976,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mathvision",
+        "relative_dataset": "math/mathvision",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mathvision/samples/mathvision00853.json",
+        "source_sample_filename": "mathvision00853.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mathvision/samples/mathvision00853.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_resume_25w_chatv1_keycfg_20260509T160817CST.events.jsonl",
+        "written_at": "2026-05-09T15:57:55Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:20Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_7cea76ae90881a15a20881a9",
+          "new_problem_id": "open_7cea76ae90881a15a20881a9",
+          "old_problem_run_key": "mathvision__open_7cea76ae90881a15a20881a9__606625e164bf",
+          "new_problem_run_key": "mathvision__open_7cea76ae90881a15a20881a9__606625e164bf",
+          "target_relpath": "math/mathvision/samples/mathvision00853.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_7cea76ae90881a15a20881a9",
+    "problem_run_key": "mathvision__open_7cea76ae90881a15a20881a9__606625e164bf",
+    "raw_question_text": "In the sum shown in the image, each letter stands for a different digit. What is the answer to the subtraction $RN - KG$?",
+    "raw_answer": "11",
+    "raw_standard_answer": "11",
+    "resolved_question_text": "In the sum shown in the image, each letter stands for a different digit. What is the answer to the subtraction $RN - KG$?",
+    "resolved_answer": "11",
+    "resolved_from_fallback": false,
+    "final_cot": "First describe the image: The image shows a vertical alphametic addition with KAN on the top row, +GA on the second row, a horizontal line, and ROO as the result. The GA is aligned under the tens and ones columns of KAN, so G is in the tens column and A is in the ones column. Each letter represents a different digit.\n\nThen reason: Let c be the carry from the ones column. The ones column gives N + A = O + 10c. In the hundreds column, K plus the carry from the tens column equals R. Since R and K are different digits, the carry from the tens column cannot be 0, so it must be 1, giving R = K + 1. Therefore the tens column is A + G + c = O + 10. Subtract the ones equation from the tens equation: (A + G + c) - (N + A) = 10 - 10c, so G + c - N = 10 - 10c. If c = 0, this would force G - N = 10, impossible for digits. Thus c = 1, and then G + 1 - N = 0, so N = G + 1. Therefore RN - KG = (10R + N) - (10K + G) = 10(R - K) + (N - G) = 10(1) + 1 = 11.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "The image shows a vertical alphametic addition.",
+        "label": "perception",
+        "source": "The image shows a vertical alphametic addition"
+      },
+      {
+        "claim_id": 2,
+        "claim": "KAN is on the top row.",
+        "label": "perception",
+        "source": "with KAN on the top row"
+      },
+      {
+        "claim_id": 3,
+        "claim": "GA is on the second row.",
+        "label": "perception",
+        "source": "+GA on the second row"
+      },
+      {
+        "claim_id": 4,
+        "claim": "ROO is the result.",
+        "label": "perception",
+        "source": "and ROO as the result"
+      },
+      {
+        "claim_id": 5,
+        "claim": "GA is aligned under the tens and ones columns of KAN.",
+        "label": "perception",
+        "source": "The GA is aligned under the tens and ones columns of KAN"
+      },
+      {
+        "claim_id": 6,
+        "claim": "G is in the tens column.",
+        "label": "perception",
+        "source": "so G is in the tens column"
+      },
+      {
+        "claim_id": 7,
+        "claim": "A is in the ones column.",
+        "label": "perception",
+        "source": "and A is in the ones column"
+      },
+      {
+        "claim_id": 8,
+        "claim": "Each letter represents a different digit.",
+        "label": "perception",
+        "source": "Each letter represents a different digit."
+      },
+      {
+        "claim_id": 9,
+        "claim": "Let c be the carry from the ones column.",
+        "label": "reasoning",
+        "source": "Let c be the carry from the ones column."
+      },
+      {
+        "claim_id": 10,
+        "claim": "The ones column gives N + A = O + 10c.",
+        "label": "reasoning",
+        "source": "The ones column gives N + A = O + 10c."
+      },
+      {
+        "claim_id": 11,
+        "claim": "In the hundreds column, K plus the carry from the tens column equals R.",
+        "label": "reasoning",
+        "source": "In the hundreds column, K plus the carry from the tens column equals R."
+      },
+      {
+        "claim_id": 12,
+        "claim": "R and K are different digits.",
+        "label": "reasoning",
+        "source": "Since R and K are different digits"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The carry from the tens column cannot be 0.",
+        "label": "reasoning",
+        "source": "the carry from the tens column cannot be 0"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The carry from the tens column must be 1.",
+        "label": "reasoning",
+        "source": "so it must be 1"
+      },
+      {
+        "claim_id": 15,
+        "claim": "R = K + 1.",
+        "label": "reasoning",
+        "source": "giving R = K + 1."
+      },
+      {
+        "claim_id": 16,
+        "claim": "The tens column is A + G + c = O + 10.",
+        "label": "reasoning",
+        "source": "Therefore the tens column is A + G + c = O + 10."
+      },
+      {
+        "claim_id": 17,
+        "claim": "Subtracting the ones equation from the tens equation gives G + c - N = 10 - 10c.",
+        "label": "reasoning",
+        "source": "Subtract the ones equation from the tens equation: (A + G + c) - (N + A) = 10 - 10c, so G + c - N = 10 - 10c."
+      },
+      {
+        "claim_id": 18,
+        "claim": "If c = 0, then G - N = 10.",
+        "label": "reasoning",
+        "source": "If c = 0, this would force G - N = 10"
+      },
+      {
+        "claim_id": 19,
+        "claim": "G - N = 10 is impossible for digits.",
+        "label": "reasoning",
+        "source": "G - N = 10, impossible for digits."
+      },
+      {
+        "claim_id": 20,
+        "claim": "c = 1.",
+        "label": "reasoning",
+        "source": "Thus c = 1"
+      },
+      {
+        "claim_id": 21,
+        "claim": "When c = 1, G + 1 - N = 0.",
+        "label": "reasoning",
+        "source": "and then G + 1 - N = 0"
+      },
+      {
+        "claim_id": 22,
+        "claim": "N = G + 1.",
+        "label": "reasoning",
+        "source": "so N = G + 1."
+      },
+      {
+        "claim_id": 23,
+        "claim": "Using R - K = 1 and N - G = 1, RN - KG = 10(R - K) + (N - G) = 11.",
+        "label": "reasoning",
+        "source": "Therefore RN - KG = (10R + N) - (10K + G) = 10(R - K) + (N - G) = 10(1) + 1 = 11."
+      }
+    ],
+    "claim_count": 23,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The image shows a vertical alphametic addition.",
+          "label": "perception",
+          "source": "The image shows a vertical alphametic addition"
+        },
+        {
+          "claim_id": 2,
+          "claim": "KAN is on the top row.",
+          "label": "perception",
+          "source": "with KAN on the top row"
+        },
+        {
+          "claim_id": 3,
+          "claim": "GA is on the second row.",
+          "label": "perception",
+          "source": "+GA on the second row"
+        },
+        {
+          "claim_id": 4,
+          "claim": "ROO is the result.",
+          "label": "perception",
+          "source": "and ROO as the result"
+        },
+        {
+          "claim_id": 5,
+          "claim": "GA is aligned under the tens and ones columns of KAN.",
+          "label": "perception",
+          "source": "The GA is aligned under the tens and ones columns of KAN"
+        },
+        {
+          "claim_id": 6,
+          "claim": "G is in the tens column.",
+          "label": "perception",
+          "source": "so G is in the tens column"
+        },
+        {
+          "claim_id": 7,
+          "claim": "A is in the ones column.",
+          "label": "perception",
+          "source": "and A is in the ones column"
+        },
+        {
+          "claim_id": 8,
+          "claim": "Each letter represents a different digit.",
+          "label": "perception",
+          "source": "Each letter represents a different digit."
+        },
+        {
+          "claim_id": 9,
+          "claim": "Let c be the carry from the ones column.",
+          "label": "reasoning",
+          "source": "Let c be the carry from the ones column."
+        },
+        {
+          "claim_id": 10,
+          "claim": "The ones column gives N + A = O + 10c.",
+          "label": "reasoning",
+          "source": "The ones column gives N + A = O + 10c."
+        },
+        {
+          "claim_id": 11,
+          "claim": "In the hundreds column, K plus the carry from the tens column equals R.",
+          "label": "reasoning",
+          "source": "In the hundreds column, K plus the carry from the tens column equals R."
+        },
+        {
+          "claim_id": 12,
+          "claim": "R and K are different digits.",
+          "label": "reasoning",
+          "source": "Since R and K are different digits"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The carry from the tens column cannot be 0.",
+          "label": "reasoning",
+          "source": "the carry from the tens column cannot be 0"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The carry from the tens column must be 1.",
+          "label": "reasoning",
+          "source": "so it must be 1"
+        },
+        {
+          "claim_id": 15,
+          "claim": "R = K + 1.",
+          "label": "reasoning",
+          "source": "giving R = K + 1."
+        },
+        {
+          "claim_id": 16,
+          "claim": "The tens column is A + G + c = O + 10.",
+          "label": "reasoning",
+          "source": "Therefore the tens column is A + G + c = O + 10."
+        },
+        {
+          "claim_id": 17,
+          "claim": "Subtracting the ones equation from the tens equation gives G + c - N = 10 - 10c.",
+          "label": "reasoning",
+          "source": "Subtract the ones equation from the tens equation: (A + G + c) - (N + A) = 10 - 10c, so G + c - N = 10 - 10c."
+        },
+        {
+          "claim_id": 18,
+          "claim": "If c = 0, then G - N = 10.",
+          "label": "reasoning",
+          "source": "If c = 0, this would force G - N = 10"
+        },
+        {
+          "claim_id": 19,
+          "claim": "G - N = 10 is impossible for digits.",
+          "label": "reasoning",
+          "source": "G - N = 10, impossible for digits."
+        },
+        {
+          "claim_id": 20,
+          "claim": "c = 1.",
+          "label": "reasoning",
+          "source": "Thus c = 1"
+        },
+        {
+          "claim_id": 21,
+          "claim": "When c = 1, G + 1 - N = 0.",
+          "label": "reasoning",
+          "source": "and then G + 1 - N = 0"
+        },
+        {
+          "claim_id": 22,
+          "claim": "N = G + 1.",
+          "label": "reasoning",
+          "source": "so N = G + 1."
+        },
+        {
+          "claim_id": 23,
+          "claim": "Using R - K = 1 and N - G = 1, RN - KG = 10(R - K) + (N - G) = 11.",
+          "label": "reasoning",
+          "source": "Therefore RN - KG = (10R + N) - (10K + G) = 10(R - K) + (N - G) = 10(1) + 1 = 11."
+        }
+      ],
+      "coverage_notes": "Applied the fix-severity relabel operation for claim 12 from perception to reasoning. No changes were made for the no_fix over-split issue."
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-03T09:40:13Z",
+    "changed_target_fields": 5,
+    "remaining_target_fields_needing_translation": 0
+  }
+}

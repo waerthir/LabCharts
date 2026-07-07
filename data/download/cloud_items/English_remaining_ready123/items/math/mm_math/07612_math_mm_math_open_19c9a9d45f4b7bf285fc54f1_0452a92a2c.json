@@ -1,0 +1,917 @@
+{
+  "pack_index": 7612,
+  "pack_policy": {
+    "source_scores_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/strict_pending_as_wrong/scores.csv",
+    "included_difficulty_levels": [
+      "high",
+      "medium",
+      "medium_high",
+      "medium_low",
+      "simple",
+      "unknown"
+    ],
+    "excluded_datasets": [],
+    "mode": "remaining_ready123_excluding_English_6000_Chinese_6000"
+  },
+  "metadata": {
+    "sample_id": "math/mm_math:mmmath03606:mm_math__open_19c9a9d45f4b7bf285fc54f1__cc30ee290f61",
+    "subject_dir": "math",
+    "dataset_slug": "mm_math",
+    "problem_id": "open_19c9a9d45f4b7bf285fc54f1",
+    "source_problem_id": "open_19c9a9d45f4b7bf285fc54f1",
+    "problem_run_key": "mm_math__open_19c9a9d45f4b7bf285fc54f1__cc30ee290f61",
+    "ready_source_kind": "ready_exact_from_source_ready2",
+    "is_multiple_choice": false,
+    "difficulty_score": 25.0,
+    "difficulty_level": "medium_low",
+    "weighted_accuracy": 0.75,
+    "wrong_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_models": [
+      "qwen3_vl_72b_instruct",
+      "glm_4_1v_9b_thinking"
+    ],
+    "pending_reasons": [
+      "missing_open_answer_judge",
+      "missing_glm_judge"
+    ],
+    "pending_judge_count": 2,
+    "remaining_ready123_origin": "all_ready123_minus_existing_6000",
+    "score_source_csv": "/home/lijingyue/LiangEnRui/ready3_full_panel/run_20260530/full_run/difficulty_distribution_20260605/with_biology_supplement/geosqa_open_llm_success_intersection_20260608/scores.csv"
+  },
+  "paths": {
+    "ready1_sample_path": "/home/lijingyue/qiujianbo/ready/math/mm_math/samples/mmmath03606.json",
+    "ready2_sample_path": "/home/lijingyue/qiujianbo/ready2/math/mm_math/samples/mmmath03606.json",
+    "ready3_sample_path": "/home/lijingyue/qiujianbo/ready3/math/mm_math/samples/mmmath03606.json",
+    "image_paths": [
+      "/home/lijingyue/qiujianbo/ready/math/mm_math/artifacts/images/mmmath03606.png"
+    ]
+  },
+  "ready1_open_rewrite": {
+    "raw_question_text": "As shown in the figure, the four vertices of the square piece of paper \\(ABCD\\) lie on four parallel lines \\(l_1\\), \\(l_2\\), \\(l_3\\), and \\(l_4\\), respectively. The distances between each pair of adjacent lines among these four lines are \\(h_1\\), \\(h_2\\), and \\(h_3\\) sequentially (\\(h_1>0\\), \\(h_2>0\\), \\(h_3>0\\)). Given \\(h_1=5\\), \\(h_2=2\\), what is the area \\(S\\) of the square \\(ABCD\\)?",
+    "raw_answer_text": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$, $l_{3}$ at points E, F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$, $l_{2}$ at points G, H, respectively,\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ Quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+    "open_variant_id": "open_19c9a9d45f4b7bf285fc54f1",
+    "variant_index": 1,
+    "title": "MM-Math open-ended problem",
+    "split_role": "single",
+    "rewritten_question_text": "As shown in the figure, the four vertices of the square piece of paper \\(ABCD\\) lie on four parallel lines \\(l_1\\), \\(l_2\\), \\(l_3\\), and \\(l_4\\), respectively. The distances between each pair of adjacent lines among these four lines are \\(h_1\\), \\(h_2\\), and \\(h_3\\) sequentially (\\(h_1>0\\), \\(h_2>0\\), \\(h_3>0\\)). Given \\(h_1=5\\), \\(h_2=2\\), what is the area \\(S\\) of the square \\(ABCD\\)?",
+    "expected_answer_type": "set",
+    "expected_answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively. $\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$, $\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$, $\\because$ quadrilateral ABCD is a square, $\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$, $\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$, $\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$, $\\therefore$ BE=AF=$h_{1}+h_{2}$, $\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$, $\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+    "final_cot": "",
+    "claims": [
+      {
+        "node_id": "node_914bcc0a6824205416d35534",
+        "problem_id": "prob_95b3e574190920dcd4d8144c",
+        "node_type": "answer_claim",
+        "canonical_value": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+        "surface_forms": [
+          "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$."
+        ],
+        "origin_kind": "text",
+        "cognitive_level": "objective",
+        "source_refs": [
+          "asset_7dc9ad02d5babb0f35be2dcd"
+        ],
+        "evidence_refs": [
+          "asset_7dc9ad02d5babb0f35be2dcd"
+        ],
+        "upstream_node_ids": [],
+        "value_type": "set",
+        "normalized_value": {
+          "answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$."
+        },
+        "unit": null,
+        "confidence": 0.98,
+        "verifiability": "high",
+        "ambiguity_level": "none",
+        "is_direct_from_source": true,
+        "is_generated_by_system": false,
+        "is_reviewed_by_human": false,
+        "stage_created": "cleaning",
+        "status": "active",
+        "version": 1,
+        "created_at": "2026-05-02T19:58:55Z",
+        "updated_at": "2026-05-02T19:58:55Z"
+      }
+    ],
+    "claim_count": 1,
+    "matched_variant_raw": {
+      "open_variant_id": "open_19c9a9d45f4b7bf285fc54f1",
+      "parent_problem_id": "prob_95b3e574190920dcd4d8144c",
+      "variant_index": 1,
+      "title": "MM-Math open-ended problem",
+      "rewritten_question_text": "As shown in the figure, the four vertices of the square piece of paper \\(ABCD\\) lie on four parallel lines \\(l_1\\), \\(l_2\\), \\(l_3\\), and \\(l_4\\), respectively. The distances between each pair of adjacent lines among these four lines are \\(h_1\\), \\(h_2\\), and \\(h_3\\) sequentially (\\(h_1>0\\), \\(h_2>0\\), \\(h_3>0\\)). Given \\(h_1=5\\), \\(h_2=2\\), what is the area \\(S\\) of the square \\(ABCD\\)?",
+      "expected_answer_type": "set",
+      "expected_answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+      "split_role": "single"
+    }
+  },
+  "ready2_open_rewrite": {
+    "raw_question_text": "As shown in the figure, the four vertices of the square piece of paper \\(ABCD\\) lie on four parallel lines \\(l_1\\), \\(l_2\\), \\(l_3\\), and \\(l_4\\), respectively. The distances between each pair of adjacent lines among these four lines are \\(h_1\\), \\(h_2\\), and \\(h_3\\) sequentially (\\(h_1>0\\), \\(h_2>0\\), \\(h_3>0\\)). Given \\(h_1=5\\), \\(h_2=2\\), what is the area \\(S\\) of the square \\(ABCD\\)?",
+    "raw_answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+    "raw_standard_answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+    "resolved_question_text": "As shown in the figure, the four vertices of the square piece of paper \\(ABCD\\) lie on four parallel lines \\(l_1\\), \\(l_2\\), \\(l_3\\), and \\(l_4\\), respectively. The distances between each pair of adjacent lines among these four lines are \\(h_1\\), \\(h_2\\), and \\(h_3\\) sequentially (\\(h_1>0\\), \\(h_2>0\\), \\(h_3>0\\)). Given \\(h_1=5\\), \\(h_2=2\\), what is the area \\(S\\) of the square \\(ABCD\\)?",
+    "resolved_answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively. $\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$, $\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$, $\\because$ quadrilateral ABCD is a square, $\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$, $\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$, $\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$, $\\therefore$ BE=AF=$h_{1}+h_{2}$, $\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$, $\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: In the figure there are four horizontal parallel straight lines, labeled from top to bottom as l1, l2, l3, l4; point A is on l1, point B is on l2, point D is on l3, point C is on l4, and the four points are connected to form an inclined square ABCD. On the right side, the distances between adjacent parallel lines are marked in order as h1, h2, h3. Reasoning: As shown in the figure, draw auxiliary lines through A and C that are perpendicular to these parallel lines. Let the perpendicular line through A intersect l2 and l3 respectively at E and F; let the perpendicular line through C intersect l3 and l2 respectively at G and H. Because the four lines are parallel, the related angles formed are all right angles. Also because ABCD is a square, the four sides are equal and adjacent sides are perpendicular to each other, so the four outer right triangles ΔABE, ΔDAF, ΔCDG, ΔBCH are congruent. From the distances between the lines, it can be known that the two legs of these right triangles are respectively h1 and h1+h2, so the area of each triangle is (1/2)h1(h1+h2). The middle EFGH is a small square with side length h2, and its area is h2^2. Therefore the area of square ABCD is S = 4 × (1/2)h1(h1+h2) + h2^2. Substituting h1=5, h2=2, gives S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74.",
+    "claims": [],
+    "claim_count": 0,
+    "raw_record": {
+      "pipeline_extract": "pipeline2_final_cot_only",
+      "batch_id": "ready2_gpt55_high",
+      "problem_id": "open_19c9a9d45f4b7bf285fc54f1",
+      "problem_run_key": "mm_math__open_19c9a9d45f4b7bf285fc54f1__cc30ee290f61",
+      "question_text": "As shown in the figure, the four vertices of the square piece of paper \\(ABCD\\) lie on four parallel lines \\(l_1\\), \\(l_2\\), \\(l_3\\), and \\(l_4\\), respectively. The distances between each pair of adjacent lines among these four lines are \\(h_1\\), \\(h_2\\), and \\(h_3\\) sequentially (\\(h_1>0\\), \\(h_2>0\\), \\(h_3>0\\)). Given \\(h_1=5\\), \\(h_2=2\\), what is the area \\(S\\) of the square \\(ABCD\\)?",
+      "standard_answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+      "images": [
+        "/home/lijingyue/qiujianbo/ready/math/mm_math/artifacts/images/mmmath03606.png"
+      ],
+      "initial_multi_solution_score": 0.5717,
+      "method": [
+        {
+          "method_id": "1",
+          "method_draft": "Synthetic dissection route: First read the diagram as four horizontal parallel lines labeled l1 through l4, with A on l1, B on l2, D on l3, and C on l4, and the square ABCD tilted across them. Draw through A and C lines perpendicular to the parallels, meeting l2 and l3 to form a central small square/rectangle EFGH and four surrounding right triangles. Use the fact that all four sides of ABCD are equal and adjacent sides are perpendicular to prove the four right triangles are congruent. From the line spacings, each such right triangle has one leg h1 and the other leg h1+h2, while the middle square has side h2. Therefore compute S as four triangle areas plus the middle square: S = 4 * (1/2)h1(h1+h2) + h2^2. Substitute h1=5, h2=2 to get S=74.",
+          "CoT_raw": "图像描述：图中有四条水平的平行直线，从上到下标为 l1、l2、l3、l4；点 A 在 l1 上，点 B 在 l2 上，点 D 在 l3 上，点 C 在 l4 上，四点连成一个倾斜的正方形 ABCD。右侧标出相邻平行线间距依次为 h1、h2、h3。推理：按图作过 A、C 且垂直于这些平行线的辅助线。设过 A 的垂线与 l2、l3 分别交于 E、F；过 C 的垂线与 l3、l2 分别交于 G、H。因为四条线平行，所以形成的相关角都是直角。又因为 ABCD 是正方形，四边相等且相邻边互相垂直，可得四个外围直角三角形 ΔABE、ΔDAF、ΔCDG、ΔBCH 全等。由线间距可知这些直角三角形的两条直角边分别为 h1 和 h1+h2，因此每个三角形面积为 (1/2)h1(h1+h2)。中间的 EFGH 为边长 h2 的小正方形，面积为 h2^2。所以正方形 ABCD 的面积 S = 4 × (1/2)h1(h1+h2) + h2^2。代入 h1=5，h2=2，得 S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74。",
+          "model_answer": "74",
+          "is_answer_match": true,
+          "answer_match_reason": "The predicted answer is exactly 74, which matches the standard answer for the area of the square.",
+          "answer_match_part_results": [
+            {
+              "standard_part": "S = 74",
+              "predicted_part": "74",
+              "is_equivalent": true,
+              "reason": "Both give the same numerical area."
+            }
+          ],
+          "CoT_answer_check_final": "图像描述：图中有四条水平的平行直线，从上到下标为 l1、l2、l3、l4；点 A 在 l1 上，点 B 在 l2 上，点 D 在 l3 上，点 C 在 l4 上，四点连成一个倾斜的正方形 ABCD。右侧标出相邻平行线间距依次为 h1、h2、h3。推理：按图作过 A、C 且垂直于这些平行线的辅助线。设过 A 的垂线与 l2、l3 分别交于 E、F；过 C 的垂线与 l3、l2 分别交于 G、H。因为四条线平行，所以形成的相关角都是直角。又因为 ABCD 是正方形，四边相等且相邻边互相垂直，可得四个外围直角三角形 ΔABE、ΔDAF、ΔCDG、ΔBCH 全等。由线间距可知这些直角三角形的两条直角边分别为 h1 和 h1+h2，因此每个三角形面积为 (1/2)h1(h1+h2)。中间的 EFGH 为边长 h2 的小正方形，面积为 h2^2。所以正方形 ABCD 的面积 S = 4 × (1/2)h1(h1+h2) + h2^2。代入 h1=5，h2=2，得 S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74。",
+          "answer_answer_check_final": "74",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "整体推理与图像、标准答案和方法草案一致，最终答案 74 正确。可小幅改进之处：说明三角形直角边为 h1 与 h1+h2 时，不应仅说“由线间距可知”，更严谨地说应先由 AE=h1、AF=h1+h2，再结合四个直角三角形全等推出各三角形面积相同；同时补充说明 EFGH 的另一边也由全等关系推出为 h2，因此其为边长 h2 的正方形。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "图像描述：图中有四条水平的平行直线，从上到下标为 l1、l2、l3、l4；点 A 在 l1 上，点 B 在 l2 上，点 D 在 l3 上，点 C 在 l4 上，四点连成一个倾斜的正方形 ABCD。右侧标出相邻平行线间距依次为 h1、h2、h3。推理：按图作过 A、C 且垂直于这些平行线的辅助线。设过 A 的垂线与 l2、l3 分别交于 E、F；过 C 的垂线与 l3、l2 分别交于 G、H。因为四条线平行，所以形成的相关角都是直角。又因为 ABCD 是正方形，四边相等且相邻边互相垂直，可得四个外围直角三角形 ΔABE、ΔDAF、ΔCDG、ΔBCH 全等。由线间距可知这些直角三角形的两条直角边分别为 h1 和 h1+h2，因此每个三角形面积为 (1/2)h1(h1+h2)。中间的 EFGH 为边长 h2 的小正方形，面积为 h2^2。所以正方形 ABCD 的面积 S = 4 × (1/2)h1(h1+h2) + h2^2。代入 h1=5，h2=2，得 S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This is a geometric area-decomposition proof: it partitions the square into congruent right triangles plus a central square, rather than assigning coordinates or using vectors.",
+            "image_role": "Use the image to identify the relative placement of A, B, D, C on l1, l2, l3, l4 respectively, the tilted square shape, and the vertical/perpendicular gaps h1, h2, h3 between adjacent parallel lines.",
+            "text_role": "Use the text to confirm ABCD is a square, the four lines are parallel, the sequential distances are h1, h2, h3, and the given values are h1=5 and h2=2.",
+            "knowledge_role": "Use congruence of right triangles formed by perpendiculars to parallel lines and sides of a square, plus area addition: square area equals sum of the dissection pieces."
+          },
+          "solver_metadata": {
+            "cot_raw": "图像描述：图中有四条水平的平行直线，从上到下标为 l1、l2、l3、l4；点 A 在 l1 上，点 B 在 l2 上，点 D 在 l3 上，点 C 在 l4 上，四点连成一个倾斜的正方形 ABCD。右侧标出相邻平行线间距依次为 h1、h2、h3。推理：按图作过 A、C 且垂直于这些平行线的辅助线。设过 A 的垂线与 l2、l3 分别交于 E、F；过 C 的垂线与 l3、l2 分别交于 G、H。因为四条线平行，所以形成的相关角都是直角。又因为 ABCD 是正方形，四边相等且相邻边互相垂直，可得四个外围直角三角形 ΔABE、ΔDAF、ΔCDG、ΔBCH 全等。由线间距可知这些直角三角形的两条直角边分别为 h1 和 h1+h2，因此每个三角形面积为 (1/2)h1(h1+h2)。中间的 EFGH 为边长 h2 的小正方形，面积为 h2^2。所以正方形 ABCD 的面积 S = 4 × (1/2)h1(h1+h2) + h2^2。代入 h1=5，h2=2，得 S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74。",
+            "model_answer": "74",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 4476,
+              "completion_tokens": 1962,
+              "total_tokens": 6438,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 75.754,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "整体推理与图像、标准答案和方法草案一致，最终答案 74 正确。可小幅改进之处：说明三角形直角边为 h1 与 h1+h2 时，不应仅说“由线间距可知”，更严谨地说应先由 AE=h1、AF=h1+h2，再结合四个直角三角形全等推出各三角形面积相同；同时补充说明 EFGH 的另一边也由全等关系推出为 h2，因此其为边长 h2 的正方形。",
+              "major_failures": [],
+              "extractability_score": 0.9,
+              "grounding_score": 0.9,
+              "method_fidelity_score": 0.95,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 72.097
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 75.759,
+              "usage_delta": {
+                "request_count": 40,
+                "successful_request_count": 34,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 40,
+                "requests_with_usage": 34,
+                "prompt_tokens": 98737,
+                "completion_tokens": 30068,
+                "total_tokens": 128805,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 1401.003,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 8.037,
+              "usage_delta": {
+                "request_count": 4,
+                "successful_request_count": 4,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 4,
+                "requests_with_usage": 4,
+                "prompt_tokens": 7721,
+                "completion_tokens": 2986,
+                "total_tokens": 10707,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 152.705,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 72.103,
+              "usage_delta": {
+                "request_count": 44,
+                "successful_request_count": 48,
+                "failed_request_count": 5,
+                "retry_count": 4,
+                "text_request_count": 0,
+                "multimodal_request_count": 44,
+                "requests_with_usage": 48,
+                "prompt_tokens": 114932,
+                "completion_tokens": 31884,
+                "total_tokens": 146816,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 1684.995,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        },
+        {
+          "method_id": "2",
+          "method_draft": "Coordinate/vector projection route: Read the figure with the parallel lines treated as horizontal levels. Place l1 at y=0, l2 at y=-h1, and l3 at y=-(h1+h2). Since A lies on l1, B on l2, and D on l3, the vertical component of vector AB has magnitude h1 and the vertical component of vector AD has magnitude h1+h2. Because ABCD is a square, AD is a 90-degree rotation of AB, so the vertical component of AD equals the horizontal component of AB in magnitude. Hence the side length squared is |AB|^2 = h1^2 + (h1+h2)^2. Substitute h1=5, h2=2 to obtain S=5^2+7^2=74.",
+          "CoT_raw": "先描述图像：图中有四条互相平行的水平直线，从上到下标为 l1、l2、l3、l4，相邻距离依次为 h1、h2、h3。正方形 ABCD 倾斜放置，A 在 l1 上，B 在 l2 上，D 在 l3 上，C 在 l4 上。\n\n再推理：按坐标/向量投影法，把这些平行线看作水平线。设 l1 的纵坐标为 0，l2 的纵坐标为 -h1，l3 的纵坐标为 -(h1+h2)。因为 A 在 l1 上、B 在 l2 上，所以向量 AB 的竖直分量大小为 h1。因为 D 在 l3 上，所以向量 AD 的竖直分量大小为 h1+h2。ABCD 是正方形，因此 AD 可看作 AB 旋转 90°得到，故 AD 的竖直分量大小等于 AB 的水平分量大小。所以 AB 的水平分量大小为 h1+h2。于是正方形边长的平方为 |AB|^2 = h1^2 + (h1+h2)^2。代入 h1=5，h2=2，得 S=5^2+(5+2)^2=25+49=74。",
+          "model_answer": "74",
+          "is_answer_match": true,
+          "answer_match_reason": "The predicted answer gives the same area of the square as the standard answer, 74.",
+          "answer_match_part_results": [
+            {
+              "standard_part": "S = 74",
+              "predicted_part": "74",
+              "is_equivalent": true,
+              "reason": "Both state the area is 74."
+            }
+          ],
+          "CoT_answer_check_final": "先描述图像：图中有四条互相平行的水平直线，从上到下标为 l1、l2、l3、l4，相邻距离依次为 h1、h2、h3。正方形 ABCD 倾斜放置，A 在 l1 上，B 在 l2 上，D 在 l3 上，C 在 l4 上。\n\n再推理：按坐标/向量投影法，把这些平行线看作水平线。设 l1 的纵坐标为 0，l2 的纵坐标为 -h1，l3 的纵坐标为 -(h1+h2)。因为 A 在 l1 上、B 在 l2 上，所以向量 AB 的竖直分量大小为 h1。因为 D 在 l3 上，所以向量 AD 的竖直分量大小为 h1+h2。ABCD 是正方形，因此 AD 可看作 AB 旋转 90°得到，故 AD 的竖直分量大小等于 AB 的水平分量大小。所以 AB 的水平分量大小为 h1+h2。于是正方形边长的平方为 |AB|^2 = h1^2 + (h1+h2)^2。代入 h1=5，h2=2，得 S=5^2+(5+2)^2=25+49=74。",
+          "answer_answer_check_final": "74",
+          "CoT_verify_0": true,
+          "CoT_qualify_0": "推理轨迹整体正确，先描述图像再推理，符合图像题顺序要求；坐标/向量投影法与指定方法草稿一致，最终答案 74 与标准答案一致。可略微补充说明“取平行线为水平线不失一般性”，以及“AD 是 AB 的顺/逆时针 90°旋转，因此竖直分量与水平分量只在符号上可能不同，取大小即可”，以增强严谨性。",
+          "CoT_after_polish_1": "",
+          "CoT_verify_1": false,
+          "CoT_qualify_1": "",
+          "CoT_after_polish_2": "",
+          "CoT_verify_2": false,
+          "CoT_qualify_2": "",
+          "CoT_after_polish_3": "",
+          "CoT_verify_3": false,
+          "CoT_qualify_3": "",
+          "is_final_CoT_qualified": true,
+          "CoT_final": "先描述图像：图中有四条互相平行的水平直线，从上到下标为 l1、l2、l3、l4，相邻距离依次为 h1、h2、h3。正方形 ABCD 倾斜放置，A 在 l1 上，B 在 l2 上，D 在 l3 上，C 在 l4 上。\n\n再推理：按坐标/向量投影法，把这些平行线看作水平线。设 l1 的纵坐标为 0，l2 的纵坐标为 -h1，l3 的纵坐标为 -(h1+h2)。因为 A 在 l1 上、B 在 l2 上，所以向量 AB 的竖直分量大小为 h1。因为 D 在 l3 上，所以向量 AD 的竖直分量大小为 h1+h2。ABCD 是正方形，因此 AD 可看作 AB 旋转 90°得到，故 AD 的竖直分量大小等于 AB 的水平分量大小。所以 AB 的水平分量大小为 h1+h2。于是正方形边长的平方为 |AB|^2 = h1^2 + (h1+h2)^2。代入 h1=5，h2=2，得 S=5^2+(5+2)^2=25+49=74。",
+          "planner_metadata": {
+            "distinctiveness_rationale": "This method avoids cutting the square into pieces; it models the side as a vector and uses the 90-degree rotation relationship between adjacent sides to recover the missing horizontal projection.",
+            "image_role": "Use the image to see that the relevant perpendicular distances from A to B and from A to D across the parallel lines are h1 and h1+h2, respectively, with A on the top line, B on the second line, and D on the third line.",
+            "text_role": "Use the text to establish that ABCD is a square and that the distances between adjacent parallel lines are h1, h2, h3 with h1=5 and h2=2.",
+            "knowledge_role": "Use coordinate geometry and the fact that a 90-degree rotation swaps horizontal and vertical components in magnitude; the square area is the side length squared."
+          },
+          "solver_metadata": {
+            "cot_raw": "先描述图像：图中有四条互相平行的水平直线，从上到下标为 l1、l2、l3、l4，相邻距离依次为 h1、h2、h3。正方形 ABCD 倾斜放置，A 在 l1 上，B 在 l2 上，D 在 l3 上，C 在 l4 上。\n\n再推理：按坐标/向量投影法，把这些平行线看作水平线。设 l1 的纵坐标为 0，l2 的纵坐标为 -h1，l3 的纵坐标为 -(h1+h2)。因为 A 在 l1 上、B 在 l2 上，所以向量 AB 的竖直分量大小为 h1。因为 D 在 l3 上，所以向量 AD 的竖直分量大小为 h1+h2。ABCD 是正方形，因此 AD 可看作 AB 旋转 90°得到，故 AD 的竖直分量大小等于 AB 的水平分量大小。所以 AB 的水平分量大小为 h1+h2。于是正方形边长的平方为 |AB|^2 = h1^2 + (h1+h2)^2。代入 h1=5，h2=2，得 S=5^2+(5+2)^2=25+49=74。",
+            "model_answer": "74",
+            "method_following_score_self_report": 1.0,
+            "possible_risk_flags": [],
+            "_llm_usage": {
+              "prompt_tokens": 4447,
+              "completion_tokens": 865,
+              "total_tokens": 5312,
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "_llm_elapsed_seconds": 48.682,
+            "_llm_request_mode": "multimodal",
+            "_llm_endpoint_name": "primary"
+          },
+          "verify_reports": [
+            {
+              "round_index": 0,
+              "verify_pass": true,
+              "critic_suggestions": "推理轨迹整体正确，先描述图像再推理，符合图像题顺序要求；坐标/向量投影法与指定方法草稿一致，最终答案 74 与标准答案一致。可略微补充说明“取平行线为水平线不失一般性”，以及“AD 是 AB 的顺/逆时针 90°旋转，因此竖直分量与水平分量只在符号上可能不同，取大小即可”，以增强严谨性。",
+              "major_failures": [],
+              "extractability_score": 0.95,
+              "grounding_score": 0.95,
+              "method_fidelity_score": 1.0,
+              "llm_request_mode": "multimodal",
+              "llm_endpoint_name": "primary",
+              "llm_elapsed_seconds": 42.404
+            }
+          ],
+          "stage_metrics": {
+            "generate_cot": {
+              "wall_seconds": 48.687,
+              "usage_delta": {
+                "request_count": 18,
+                "successful_request_count": 21,
+                "failed_request_count": 0,
+                "retry_count": 0,
+                "text_request_count": 0,
+                "multimodal_request_count": 18,
+                "requests_with_usage": 21,
+                "prompt_tokens": 57823,
+                "completion_tokens": 14117,
+                "total_tokens": 71940,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 732.868,
+                "last_error": null
+              }
+            },
+            "answer_check": {
+              "wall_seconds": 13.777,
+              "usage_delta": {
+                "request_count": 3,
+                "successful_request_count": 5,
+                "failed_request_count": 1,
+                "retry_count": 1,
+                "text_request_count": 0,
+                "multimodal_request_count": 3,
+                "requests_with_usage": 5,
+                "prompt_tokens": 10370,
+                "completion_tokens": 2205,
+                "total_tokens": 12575,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 164.441,
+                "last_error": null
+              },
+              "repair_attempted": false
+            },
+            "verify_round_0": {
+              "wall_seconds": 42.412,
+              "usage_delta": {
+                "request_count": 8,
+                "successful_request_count": 12,
+                "failed_request_count": 2,
+                "retry_count": 2,
+                "text_request_count": 0,
+                "multimodal_request_count": 8,
+                "requests_with_usage": 12,
+                "prompt_tokens": 38625,
+                "completion_tokens": 13652,
+                "total_tokens": 52277,
+                "cached_tokens": 0,
+                "reasoning_tokens": 0,
+                "total_request_seconds": 708.111,
+                "last_error": null
+              },
+              "verify_pass": true
+            }
+          }
+        }
+      ],
+      "method_planning_metadata": {
+        "target_method_count_from_score": 2,
+        "actual_method_count": 2,
+        "planning_attempt_count": 1,
+        "met_target_method_count": true,
+        "shortfall_reason": "",
+        "attempt_summaries": [
+          {
+            "attempt_index": 1,
+            "requested_additional_method_count": 2,
+            "accepted_new_method_count": 2,
+            "accepted_total_method_count": 2
+          }
+        ]
+      },
+      "stage_metrics": {
+        "prepare_methods": {
+          "wall_seconds": 197.72,
+          "usage_delta": {
+            "request_count": 151,
+            "successful_request_count": 154,
+            "failed_request_count": 12,
+            "retry_count": 12,
+            "text_request_count": 0,
+            "multimodal_request_count": 151,
+            "requests_with_usage": 154,
+            "prompt_tokens": 389282,
+            "completion_tokens": 99107,
+            "total_tokens": 488389,
+            "cached_tokens": 2816,
+            "reasoning_tokens": 0,
+            "total_request_seconds": 5060.051,
+            "last_error": null
+          }
+        }
+      },
+      "input_context": {
+        "dataset_name": "MM-Math",
+        "dataset_slug": "mm_math",
+        "source_problem_id": "51419793.png",
+        "subject": "数学",
+        "requires_image": true,
+        "text_dominant": false,
+        "alignment_status": "good",
+        "solvability_score": 1.0,
+        "sample_path": "/home/lijingyue/qiujianbo/ready/math/mm_math/samples/mmmath03606.json",
+        "clean_pool_status": "ready_for_annotation",
+        "clean_decision": "pass",
+        "problem_metadata": {
+          "question_type": "open",
+          "parent_problem_id": "prob_95b3e574190920dcd4d8144c",
+          "open_variant_count": 1,
+          "open_variant_id": "open_19c9a9d45f4b7bf285fc54f1",
+          "open_variant_index": 1,
+          "open_variant_title": "MM-Math 开放题",
+          "expected_answer_type": "set",
+          "split_role": "single",
+          "question_answer_source": "open_ended_problem_variants",
+          "score_source": "problem_main_record",
+          "multi_solution_policy": "aggressive",
+          "collection_risk_flags": [
+            "answer_type_mismatch:set_vs_long_text",
+            "moderate_image_readability_0.5763",
+            "small_image_165x110"
+          ]
+        }
+      },
+      "final_cot_summary": {
+        "target_method_count_from_score": 2,
+        "planned_method_count": 2,
+        "qualified_method_count": 2,
+        "final_cot_ready": true
+      },
+      "problem_wall_seconds": 458.53,
+      "problem_usage": {
+        "request_count": 7,
+        "successful_request_count": 7,
+        "failed_request_count": 1,
+        "retry_count": 1,
+        "text_request_count": 0,
+        "multimodal_request_count": 7,
+        "requests_with_usage": 7,
+        "prompt_tokens": 25431,
+        "completion_tokens": 7682,
+        "total_tokens": 33113,
+        "cached_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_request_seconds": 456.439,
+        "last_error": null
+      },
+      "ready2_final_cot_schema": "ready2_final_cot_v1",
+      "ready2_run_status": "success",
+      "original_question": "As shown in the figure, the four vertices of the square piece of paper \\(ABCD\\) lie on four parallel lines \\(l_1\\), \\(l_2\\), \\(l_3\\), and \\(l_4\\), respectively. The distances between each pair of adjacent lines among these four lines are \\(h_1\\), \\(h_2\\), and \\(h_3\\) sequentially (\\(h_1>0\\), \\(h_2>0\\), \\(h_3>0\\)). Given \\(h_1=5\\), \\(h_2=2\\), what is the area \\(S\\) of the square \\(ABCD\\)?",
+      "answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+      "final_cot": "Image description: In the figure there are four horizontal parallel straight lines, labeled from top to bottom as l1, l2, l3, l4; point A is on l1, point B is on l2, point D is on l3, point C is on l4, and the four points are connected to form an inclined square ABCD. On the right side, the distances between adjacent parallel lines are marked in order as h1, h2, h3. Reasoning: As shown in the figure, draw auxiliary lines through A and C that are perpendicular to these parallel lines. Let the perpendicular line through A intersect l2 and l3 respectively at E and F; let the perpendicular line through C intersect l3 and l2 respectively at G and H. Because the four lines are parallel, the related angles formed are all right angles. Also because ABCD is a square, the four sides are equal and adjacent sides are perpendicular to each other, so the four outer right triangles ΔABE, ΔDAF, ΔCDG, ΔBCH are congruent. From the distances between the lines, it can be known that the two legs of these right triangles are respectively h1 and h1+h2, so the area of each triangle is (1/2)h1(h1+h2). The middle EFGH is a small square with side length h2, and its area is h2^2. Therefore the area of square ABCD is S = 4 × (1/2)h1(h1+h2) + h2^2. Substituting h1=5, h2=2, gives S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74.",
+      "primary_method_id": "1",
+      "critic_agent_reviews": [
+        {
+          "method_id": "1",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "整体推理与图像、标准答案和方法草案一致，最终答案 74 正确。可小幅改进之处：说明三角形直角边为 h1 与 h1+h2 时，不应仅说“由线间距可知”，更严谨地说应先由 AE=h1、AF=h1+h2，再结合四个直角三角形全等推出各三角形面积相同；同时补充说明 EFGH 的另一边也由全等关系推出为 h2，因此其为边长 h2 的正方形。",
+          "major_failures": [],
+          "extractability_score": 0.9,
+          "grounding_score": 0.9,
+          "method_fidelity_score": 0.95,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 72.097
+        },
+        {
+          "method_id": "2",
+          "round_index": 0,
+          "verify_pass": true,
+          "critic_suggestions": "推理轨迹整体正确，先描述图像再推理，符合图像题顺序要求；坐标/向量投影法与指定方法草稿一致，最终答案 74 与标准答案一致。可略微补充说明“取平行线为水平线不失一般性”，以及“AD 是 AB 的顺/逆时针 90°旋转，因此竖直分量与水平分量只在符号上可能不同，取大小即可”，以增强严谨性。",
+          "major_failures": [],
+          "extractability_score": 0.95,
+          "grounding_score": 0.95,
+          "method_fidelity_score": 1.0,
+          "llm_request_mode": "multimodal",
+          "llm_endpoint_name": "primary",
+          "llm_elapsed_seconds": 42.404
+        }
+      ],
+      "ready2_metadata": {
+        "run_id": "ready2_readyonly_30w_keye91_20260512T162607CST",
+        "processed_index": 117,
+        "ready_root": "/home/lijingyue/qiujianbo/ready",
+        "ready2_root": "/home/lijingyue/qiujianbo/ready2",
+        "subject": "math",
+        "dataset": "mm_math",
+        "relative_dataset": "math/mm_math",
+        "source_sample_path": "/home/lijingyue/qiujianbo/ready/math/mm_math/samples/mmmath03606.json",
+        "source_sample_filename": "mmmath03606.json",
+        "ready2_output_path": "/home/lijingyue/qiujianbo/ready2/math/mm_math/samples/mmmath03606.json",
+        "run_log_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_readyonly_30w_keye91_20260512T162607CST.log",
+        "run_events_path": "/home/lijingyue/qiujianbo/ready2/logs/ready2_readyonly_30w_keye91_20260512T162607CST.events.jsonl",
+        "written_at": "2026-05-12T09:08:58Z",
+        "ready2_reorganization": {
+          "reorganized_at": "2026-05-14T06:52:22Z",
+          "reason": "align_ready2_output_path_with_current_ready_variant_index",
+          "old_problem_id": "open_19c9a9d45f4b7bf285fc54f1",
+          "new_problem_id": "open_19c9a9d45f4b7bf285fc54f1",
+          "old_problem_run_key": "mm_math__open_19c9a9d45f4b7bf285fc54f1__cc30ee290f61",
+          "new_problem_run_key": "mm_math__open_19c9a9d45f4b7bf285fc54f1__cc30ee290f61",
+          "target_relpath": "math/mm_math/samples/mmmath03606.json"
+        }
+      }
+    }
+  },
+  "ready3_open_rewrite": {
+    "ready3_run_status": "success",
+    "problem_id": "open_19c9a9d45f4b7bf285fc54f1",
+    "problem_run_key": "mm_math__open_19c9a9d45f4b7bf285fc54f1__cc30ee290f61",
+    "raw_question_text": "As shown in the figure, the four vertices of the square piece of paper \\(ABCD\\) lie on four parallel lines \\(l_1\\), \\(l_2\\), \\(l_3\\), and \\(l_4\\), respectively. The distances between each pair of adjacent lines among these four lines are \\(h_1\\), \\(h_2\\), and \\(h_3\\) sequentially (\\(h_1>0\\), \\(h_2>0\\), \\(h_3>0\\)). Given \\(h_1=5\\), \\(h_2=2\\), what is the area \\(S\\) of the square \\(ABCD\\)?",
+    "raw_answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+    "raw_standard_answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively.\n\n$\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$,\n\n$\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$,\n\n$\\because$ quadrilateral ABCD is a square,\n\n$\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$,\n\n$\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$,\n\n$\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$,\n\n$\\therefore$ BE=AF=$h_{1}+h_{2}$,\n\n$\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$,\n\n$\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+    "resolved_question_text": "As shown in the figure, the four vertices of the square piece of paper \\(ABCD\\) lie on four parallel lines \\(l_1\\), \\(l_2\\), \\(l_3\\), and \\(l_4\\), respectively. The distances between each pair of adjacent lines among these four lines are \\(h_1\\), \\(h_2\\), and \\(h_3\\) sequentially (\\(h_1>0\\), \\(h_2>0\\), \\(h_3>0\\)). Given \\(h_1=5\\), \\(h_2=2\\), what is the area \\(S\\) of the square \\(ABCD\\)?",
+    "resolved_answer": "\\textbf{Solution:} As shown in the figure, draw AF $\\perp l_{3}$ through point A, intersecting $l_{2}$ and $l_{3}$ at points E and F, respectively, and draw CG $\\perp l_{3}$ through point C, intersecting $l_{3}$ and $l_{2}$ at points G and H, respectively. $\\because$ $l_{1}\\parallel l_{2}\\parallel l_{3}\\parallel l_{4}$, $\\therefore$ $\\angle AEB = \\angle AFD = \\angle DGC = \\angle BHC = 90^\\circ$, $\\because$ quadrilateral ABCD is a square, $\\therefore$ AB=BC=CD=DA, $\\angle BAD = \\angle ADC = \\angle DCB = \\angle CBA = 90^\\circ$, $\\therefore$ $\\angle ABE = \\angle DAF = \\angle CDG = \\angle BCH$, $\\therefore$ $\\Delta ABE \\cong \\Delta DAF \\cong \\Delta CDG \\cong \\Delta BCH$, $\\therefore$ BE=AF=$h_{1}+h_{2}$, $\\therefore$ $S_{\\Delta ABE} = S_{\\Delta DAF} = S_{\\Delta CDG} = S_{\\Delta BCH} = \\frac{1}{2}h_{1}(h_{1}+h_{2})$, $\\therefore$ $S = 4S_{\\Delta ABE} + S_{\\text{square }EFGH} = 4 \\times \\frac{1}{2}h_{1}(h_{1}+h_{2}) + h_{2}^2 = \\boxed{74}$.",
+    "resolved_from_fallback": false,
+    "final_cot": "Image description: In the figure there are four horizontal parallel straight lines, labeled from top to bottom as l1, l2, l3, l4; point A is on l1, point B is on l2, point D is on l3, point C is on l4, and the four points are connected to form an inclined square ABCD. On the right side, the distances between adjacent parallel lines are marked in order as h1, h2, h3. Reasoning: As shown in the figure, draw auxiliary lines through A and C that are perpendicular to these parallel lines. Let the perpendicular line through A intersect l2 and l3 respectively at E and F; let the perpendicular line through C intersect l3 and l2 respectively at G and H. Because the four lines are parallel, the related angles formed are all right angles. Also because ABCD is a square, the four sides are equal and adjacent sides are perpendicular to each other, so the four outer right triangles ΔABE, ΔDAF, ΔCDG, ΔBCH are congruent. From the distances between the lines, it can be known that the two legs of these right triangles are respectively h1 and h1+h2, so the area of each triangle is (1/2)h1(h1+h2). The middle EFGH is a small square with side length h2, and its area is h2^2. Therefore the area of square ABCD is S = 4 × (1/2)h1(h1+h2) + h2^2. Substituting h1=5, h2=2, gives S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74.",
+    "claims": [
+      {
+        "claim_id": 1,
+        "claim": "There are four horizontal parallel straight lines in the figure.",
+        "label": "perception",
+        "source": "There are four horizontal parallel straight lines in the figure"
+      },
+      {
+        "claim_id": 2,
+        "claim": "The four parallel straight lines are labeled from top to bottom as l1, l2, l3, l4.",
+        "label": "perception",
+        "source": "Labeled from top to bottom as l1, l2, l3, l4"
+      },
+      {
+        "claim_id": 3,
+        "claim": "Point A is on l1.",
+        "label": "perception",
+        "source": "Point A is on l1"
+      },
+      {
+        "claim_id": 4,
+        "claim": "Point B is on l2.",
+        "label": "perception",
+        "source": "Point B is on l2"
+      },
+      {
+        "claim_id": 5,
+        "claim": "Point D is on l3.",
+        "label": "perception",
+        "source": "Point D is on l3"
+      },
+      {
+        "claim_id": 6,
+        "claim": "Point C is on l4.",
+        "label": "perception",
+        "source": "Point C is on l4"
+      },
+      {
+        "claim_id": 7,
+        "claim": "The four points connect to form an inclined square ABCD.",
+        "label": "perception",
+        "source": "The four points connect to form an inclined square ABCD"
+      },
+      {
+        "claim_id": 8,
+        "claim": "The spacings between adjacent parallel lines are respectively h1, h2, h3.",
+        "label": "perception",
+        "source": "The distances between adjacent parallel lines are successively h1, h2, h3"
+      },
+      {
+        "claim_id": 9,
+        "claim": "Draw an auxiliary line passing through A and perpendicular to these parallel lines.",
+        "label": "reasoning",
+        "source": "As shown in the figure, draw auxiliary lines passing through A, C and perpendicular to these parallel lines"
+      },
+      {
+        "claim_id": 10,
+        "claim": "Draw an auxiliary line passing through C and perpendicular to these parallel lines.",
+        "label": "reasoning",
+        "source": "As shown in the figure, draw auxiliary lines passing through A, C and perpendicular to these parallel lines"
+      },
+      {
+        "claim_id": 11,
+        "claim": "The perpendicular line through A intersects l2 at E.",
+        "label": "reasoning",
+        "source": "Let the perpendicular line through A intersect l2 and l3 at E and F respectively"
+      },
+      {
+        "claim_id": 12,
+        "claim": "The perpendicular line through A intersects l3 at F.",
+        "label": "reasoning",
+        "source": "Let the perpendicular line through A intersect l2 and l3 at E and F respectively"
+      },
+      {
+        "claim_id": 13,
+        "claim": "The perpendicular line through C intersects l3 at G.",
+        "label": "reasoning",
+        "source": "The perpendicular line through C intersects l3 and l2 at G and H respectively"
+      },
+      {
+        "claim_id": 14,
+        "claim": "The perpendicular line through C intersects l2 at H.",
+        "label": "reasoning",
+        "source": "The perpendicular line through C intersects l3 and l2 at G and H respectively"
+      },
+      {
+        "claim_id": 15,
+        "claim": "The related angles formed are all right angles.",
+        "label": "reasoning",
+        "source": "Therefore the related angles formed are all right angles"
+      },
+      {
+        "claim_id": 16,
+        "claim": "The four sides of a square are equal.",
+        "label": "knowledge",
+        "source": "The four sides are equal and adjacent sides are perpendicular to each other"
+      },
+      {
+        "claim_id": 17,
+        "claim": "Adjacent sides of a square are perpendicular to each other.",
+        "label": "knowledge",
+        "source": "The four sides are equal and adjacent sides are perpendicular to each other"
+      },
+      {
+        "claim_id": 18,
+        "claim": "The four peripheral right triangles ΔABE, ΔDAF, ΔCDG, and ΔBCH are congruent.",
+        "label": "reasoning",
+        "source": "It can be obtained that the four peripheral right triangles ΔABE, ΔDAF, ΔCDG, and ΔBCH are congruent"
+      },
+      {
+        "claim_id": 19,
+        "claim": "One leg of these right triangles is h1.",
+        "label": "reasoning",
+        "source": "The two legs of these right triangles are respectively h1 and h1+h2"
+      },
+      {
+        "claim_id": 20,
+        "claim": "The other leg of these right triangles is h1+h2.",
+        "label": "reasoning",
+        "source": "The two legs of these right triangles are respectively h1 and h1+h2"
+      },
+      {
+        "claim_id": 21,
+        "claim": "The area of a right triangle equals half the product of the two legs.",
+        "label": "knowledge",
+        "source": "The area of each triangle is (1/2)h1(h1+h2)"
+      },
+      {
+        "claim_id": 22,
+        "claim": "The area of each triangle is (1/2)h1(h1+h2).",
+        "label": "reasoning",
+        "source": "Therefore, the area of each triangle is (1/2)h1(h1+h2)"
+      },
+      {
+        "claim_id": 23,
+        "claim": "The EFGH in the middle is a small square with side length h2.",
+        "label": "reasoning",
+        "source": "The EFGH in the middle is a small square with side length h2"
+      },
+      {
+        "claim_id": 24,
+        "claim": "The area of a square equals the square of its side length.",
+        "label": "knowledge",
+        "source": "The area is h2^2"
+      },
+      {
+        "claim_id": 25,
+        "claim": "The area of EFGH is h2^2.",
+        "label": "reasoning",
+        "source": "The area is h2^2"
+      },
+      {
+        "claim_id": 26,
+        "claim": "The area of square ABCD is S = 4 × (1/2)h1(h1+h2) + h2^2.",
+        "label": "reasoning",
+        "source": "So the area of square ABCD is S = 4 × (1/2)h1(h1+h2) + h2^2"
+      },
+      {
+        "claim_id": 27,
+        "claim": "h1=5。",
+        "label": "perception",
+        "source": "Substitute h1=5, h2=2"
+      },
+      {
+        "claim_id": 28,
+        "claim": "h2=2。",
+        "label": "perception",
+        "source": "Substitute h1=5, h2=2"
+      },
+      {
+        "claim_id": 29,
+        "claim": "Substitute h1=5, h2=2, obtaining S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74.",
+        "label": "reasoning",
+        "source": "Substitute h1=5, h2=2, obtaining S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74"
+      }
+    ],
+    "claim_count": 29,
+    "claim_split": {
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "There are four horizontal parallel straight lines in the figure.",
+          "label": "perception",
+          "source": "There are four horizontal parallel straight lines in the figure"
+        },
+        {
+          "claim_id": 2,
+          "claim": "The four parallel straight lines are labeled from top to bottom as l1, l2, l3, l4.",
+          "label": "perception",
+          "source": "Labeled from top to bottom as l1, l2, l3, l4"
+        },
+        {
+          "claim_id": 3,
+          "claim": "Point A is on l1.",
+          "label": "perception",
+          "source": "Point A is on l1"
+        },
+        {
+          "claim_id": 4,
+          "claim": "Point B is on l2.",
+          "label": "perception",
+          "source": "Point B is on l2"
+        },
+        {
+          "claim_id": 5,
+          "claim": "Point D is on l3.",
+          "label": "perception",
+          "source": "Point D is on l3"
+        },
+        {
+          "claim_id": 6,
+          "claim": "Point C is on l4.",
+          "label": "perception",
+          "source": "Point C is on l4"
+        },
+        {
+          "claim_id": 7,
+          "claim": "The four points connect to form an inclined square ABCD.",
+          "label": "perception",
+          "source": "The four points connect to form an inclined square ABCD"
+        },
+        {
+          "claim_id": 8,
+          "claim": "The spacings between adjacent parallel lines are respectively h1, h2, h3.",
+          "label": "perception",
+          "source": "The distances between adjacent parallel lines are successively h1, h2, h3"
+        },
+        {
+          "claim_id": 9,
+          "claim": "Draw an auxiliary line passing through A and perpendicular to these parallel lines.",
+          "label": "reasoning",
+          "source": "As shown in the figure, draw auxiliary lines passing through A, C and perpendicular to these parallel lines"
+        },
+        {
+          "claim_id": 10,
+          "claim": "Draw an auxiliary line passing through C and perpendicular to these parallel lines.",
+          "label": "reasoning",
+          "source": "As shown in the figure, draw auxiliary lines passing through A, C and perpendicular to these parallel lines"
+        },
+        {
+          "claim_id": 11,
+          "claim": "The perpendicular line through A intersects l2 at E.",
+          "label": "reasoning",
+          "source": "Let the perpendicular line through A intersect l2 and l3 at E and F respectively"
+        },
+        {
+          "claim_id": 12,
+          "claim": "The perpendicular line through A intersects l3 at F.",
+          "label": "reasoning",
+          "source": "Let the perpendicular line through A intersect l2 and l3 at E and F respectively"
+        },
+        {
+          "claim_id": 13,
+          "claim": "The perpendicular line through C intersects l3 at G.",
+          "label": "reasoning",
+          "source": "The perpendicular line through C intersects l3 and l2 at G and H respectively"
+        },
+        {
+          "claim_id": 14,
+          "claim": "The perpendicular line through C intersects l2 at H.",
+          "label": "reasoning",
+          "source": "The perpendicular line through C intersects l3 and l2 at G and H respectively"
+        },
+        {
+          "claim_id": 15,
+          "claim": "The related angles formed are all right angles.",
+          "label": "reasoning",
+          "source": "Therefore the related angles formed are all right angles"
+        },
+        {
+          "claim_id": 16,
+          "claim": "The four sides of a square are equal.",
+          "label": "knowledge",
+          "source": "The four sides are equal and adjacent sides are perpendicular to each other"
+        },
+        {
+          "claim_id": 17,
+          "claim": "Adjacent sides of a square are perpendicular to each other.",
+          "label": "knowledge",
+          "source": "The four sides are equal and adjacent sides are perpendicular to each other"
+        },
+        {
+          "claim_id": 18,
+          "claim": "The four peripheral right triangles ΔABE, ΔDAF, ΔCDG, and ΔBCH are congruent.",
+          "label": "reasoning",
+          "source": "It can be obtained that the four peripheral right triangles ΔABE, ΔDAF, ΔCDG, and ΔBCH are congruent"
+        },
+        {
+          "claim_id": 19,
+          "claim": "One leg of these right triangles is h1.",
+          "label": "reasoning",
+          "source": "The two legs of these right triangles are respectively h1 and h1+h2"
+        },
+        {
+          "claim_id": 20,
+          "claim": "The other leg of these right triangles is h1+h2.",
+          "label": "reasoning",
+          "source": "The two legs of these right triangles are respectively h1 and h1+h2"
+        },
+        {
+          "claim_id": 21,
+          "claim": "The area of a right triangle equals half the product of the two legs.",
+          "label": "knowledge",
+          "source": "The area of each triangle is (1/2)h1(h1+h2)"
+        },
+        {
+          "claim_id": 22,
+          "claim": "The area of each triangle is (1/2)h1(h1+h2).",
+          "label": "reasoning",
+          "source": "Therefore, the area of each triangle is (1/2)h1(h1+h2)"
+        },
+        {
+          "claim_id": 23,
+          "claim": "The EFGH in the middle is a small square with side length h2.",
+          "label": "reasoning",
+          "source": "The EFGH in the middle is a small square with side length h2"
+        },
+        {
+          "claim_id": 24,
+          "claim": "The area of a square equals the square of its side length.",
+          "label": "knowledge",
+          "source": "The area is h2^2"
+        },
+        {
+          "claim_id": 25,
+          "claim": "The area of EFGH is h2^2.",
+          "label": "reasoning",
+          "source": "The area is h2^2"
+        },
+        {
+          "claim_id": 26,
+          "claim": "The area of square ABCD is S = 4 × (1/2)h1(h1+h2) + h2^2.",
+          "label": "reasoning",
+          "source": "So the area of square ABCD is S = 4 × (1/2)h1(h1+h2) + h2^2"
+        },
+        {
+          "claim_id": 27,
+          "claim": "h1=5。",
+          "label": "perception",
+          "source": "Substitute h1=5, h2=2"
+        },
+        {
+          "claim_id": 28,
+          "claim": "h2=2。",
+          "label": "perception",
+          "source": "Substitute h1=5, h2=2"
+        },
+        {
+          "claim_id": 29,
+          "claim": "Substitute h1=5, h2=2, obtaining S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74.",
+          "label": "reasoning",
+          "source": "Substitute h1=5, h2=2, obtaining S = 4 × (1/2) × 5 × 7 + 2^2 = 70 + 4 = 74"
+        }
+      ],
+      "coverage_notes": "å·²æ review ä¸­ severity ä¸º fix çé®é¢å é¤éå¤ claim 15 å claim 17ï¼å¹¶å°å claim 31-35 åå¹¶ä¸ºä¸ä¸ªæç»ä»£å¥ä¸è®¡ç®çæ¨çå£°æï¼å¶ä½å£°æä¿æåæé¡ºåºå¹¶é¡ºåºéç¼å·ã"
+    }
+  },
+  "translation_metadata": {
+    "target_language": "English",
+    "model": "gpt-5.5",
+    "reasoning_effort": "medium",
+    "policy": "literal Chinese-to-English translation for question, answer, final_cot, and claims fields",
+    "translated_at": "2026-07-05T14:58:22Z",
+    "changed_target_fields": 117,
+    "remaining_target_fields_needing_translation": 0
+  }
+}
