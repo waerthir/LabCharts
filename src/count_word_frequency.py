@@ -90,6 +90,9 @@ STOPWORDS = {
     "would",
 }
 
+# 这个配置是用来创造原始词频表的
+STOPWORDS = {}
+
 
 def read_manifest(path):
     with open(path, "r", encoding="utf-8") as f:
