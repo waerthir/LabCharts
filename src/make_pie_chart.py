@@ -154,9 +154,9 @@ def radial_text_rotation(angle_deg, keep_upright):
     return rotation
 
 
-def svg_text(text, x, y, label_options, font_family, rotation=None, anchor="middle"):
+def svg_text_elements(text, x, y, label_options, font_family, element_id, rotation=None, anchor="middle"):
     if not text:
-        return ""
+        return []
 
     font_size = float(label_options["font_size"])
     fill = label_options.get("fill", "#222222")
@@ -168,22 +168,20 @@ def svg_text(text, x, y, label_options, font_family, rotation=None, anchor="midd
     lines = str(text).split("\n")
     line_height = font_size * 1.15
     first_y = y - line_height * (len(lines) - 1) / 2
-    tspans = []
-    for index, line in enumerate(lines):
-        tspan_dy = 0 if index == 0 else line_height
-        tspans.append(
-            f'<tspan x="{x:.3f}" dy="{tspan_dy:.3f}">{html.escape(line)}</tspan>'
-        )
-
     transform = ""
     if rotation is not None:
         transform = f' transform="rotate({rotation:.3f} {x:.3f} {y:.3f})"'
 
-    return (
-        f'<text x="{x:.3f}" y="{first_y:.3f}" text-anchor="{anchor}"'
-        f'{transform} font-family="{html.escape(font_family)}" '
-        f'font-size="{font_size}" fill="{fill}">{"".join(tspans)}</text>'
-    )
+    elements = []
+    for index, line in enumerate(lines):
+        line_y = first_y + line_height * index
+        line_id = f"{element_id}-line-{index + 1}"
+        elements.append(
+            f'<text id="{html.escape(line_id)}" x="{x:.3f}" y="{line_y:.3f}" '
+            f'text-anchor="{anchor}"{transform} font-family="{html.escape(font_family)}" '
+            f'font-size="{font_size}" fill="{fill}">{html.escape(line)}</text>'
+        )
+    return elements
 
 
 def svg_line(x1, y1, x2, y2, color, width):
@@ -329,12 +327,18 @@ def draw_labels(slice_meta, config, style, cx, cy, max_radius):
                             options.get("leader_line_width", 1.0),
                         )
                     )
-            label_svg = svg_text(text, x, y, options, font_family, rotation=rotation)
-
-            if label_svg:
-                labels.append(
-                    f'<g id="label-{position}-{item_id}-{label_index}">{label_svg}</g>'
+            label_id = f"text-{position}-{item_id}-{label_index}"
+            labels.extend(
+                svg_text_elements(
+                    text,
+                    x,
+                    y,
+                    options,
+                    font_family,
+                    label_id,
+                    rotation=rotation,
                 )
+            )
 
     return leaders, labels
 
@@ -381,11 +385,18 @@ def render_nested_donut(config, output_image):
 
     leaders, labels = draw_labels(inner_meta + outer_meta, config, style, cx, cy, max_radius)
 
-    title = ""
+    title = []
     title_options = get_label_options(config, "title")
     if title_options.get("enabled", True) and config.get("title"):
         title_y = scale * float(title_options.get("y", 0.32))
-        title = svg_text(config["title"], cx, title_y, title_options, style["font_family"])
+        title = svg_text_elements(
+            config["title"],
+            cx,
+            title_y,
+            title_options,
+            style["font_family"],
+            "text-title",
+        )
 
     svg = "\n".join(
         [
@@ -393,7 +404,7 @@ def render_nested_donut(config, output_image):
             f'<svg xmlns="http://www.w3.org/2000/svg" width="{figure["width"]}in" '
             f'height="{figure["height"]}in" viewBox="0 0 {width:.0f} {height:.0f}">',
             f'<rect width="100%" height="100%" fill="{figure["background_color"]}" />',
-            title,
+            *title,
             '<g id="outer-ring">',
             *outer_slices,
             "</g>",
@@ -403,9 +414,7 @@ def render_nested_donut(config, output_image):
             '<g id="leader-lines">',
             *leaders,
             "</g>",
-            '<g id="labels">',
             *labels,
-            "</g>",
             "</svg>",
         ]
     )
