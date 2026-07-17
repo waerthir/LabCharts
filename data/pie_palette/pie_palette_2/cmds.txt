@@ -1,0 +1,8 @@
+Get-ChildItem -Path data/pie_palette/pie_palette_2 -Filter 'pie_*.json' |
+Where-Object { $_.Name -ne 'pie_original.json' } |
+ForEach-Object {
+    & E:\TrashE\Miniconda3\envs\dag_env\python.exe src/make_pie_chart.py `
+    --config $_.FullName `
+    --output-image (Join-Path $_.DirectoryName "$($_.BaseName).svg") `
+    --dpi 300
+}
